@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AeroDiagnosis — 航空发动机故障诊断平台</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   AERODIAGNOSIS v5 — Light Premium Desktop UI
+   ============================================================ */
+:root {
+  --bg:        #f6f8fb;
+  --bg2:       #ffffff;
+  --bg3:       #eef1f6;
+  --border:    #e2e6ed;
+  --border2:   #d0d5de;
+  --text:      #10141e;
+  --text2:     #4a5368;
+  --text3:     #8a92a4;
+  --blue:      #2563eb;
+  --blue-bg:   #eff4ff;
+  --blue-bg2:  #dbe7fe;
+  --green:     #16a34a;
+  --green-bg:  #ecfdf5;
+  --red:       #dc2626;
+  --red-bg:    #fef2f2;
+  --amber:     #d97706;
+  --amber-bg:  #fffbeb;
+  --purple:    #7c3aed;
+  --purple-bg: #f5f3ff;
+  --radius: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.04);
+  --shadow: 0 1px 3px rgba(0,0,0,.06), 0 2px 12px rgba(0,0,0,.04);
+  --shadow-lg: 0 4px 24px rgba(0,0,0,.08);
+  --font: "Inter",-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  --sbw: 248px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{font-size:15px}
+body{font-family:var(--font);color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased;overflow:hidden;height:100vh}
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:#ccd4e0;border-radius:3px}
+.hidden{display:none!important}
+
+/* ============================================================
+   LOGIN
+   ============================================================ */
+.login-screen{display:flex;align-items:center;justify-content:center;width:100vw;height:100vh;background:linear-gradient(160deg,#eff3fb 0%,#dbe7fe 40%,#e0e7ff 100%);position:relative;overflow:hidden}
+.login-screen::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 20% 30%,rgba(37,99,235,.06) 0%,transparent 50%),radial-gradient(circle at 80% 60%,rgba(124,58,237,.05) 0%,transparent 50%)}
+.login-card{position:relative;z-index:1;width:420px;max-width:94vw;background:#fff;border-radius:20px;padding:48px 44px 40px;box-shadow:0 0 0 1px rgba(0,0,0,.04),0 8px 40px rgba(0,0,0,.1)}
+.login-brand{text-align:center;margin-bottom:36px}
+.login-logo{width:56px;height:56px;margin:0 auto 18px;background:linear-gradient(135deg,#2563eb,#7c3aed);border-radius:14px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,99,235,.2)}
+.login-logo svg{width:28px;height:28px;color:#fff}
+.login-brand h1{font-size:24px;font-weight:800;color:var(--text);letter-spacing:-.5px;margin-bottom:4px}
+.login-brand p{font-size:14px;color:var(--text3)}
+.login-field{margin-bottom:18px}
+.login-field label{display:block;font-size:12px;font-weight:600;color:var(--text2);margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px}
+.login-field .wrap{position:relative}
+.login-field .wrap svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:16px;height:16px;color:var(--text3)}
+.login-field input{width:100%;padding:12px 16px 12px 42px;background:var(--bg);border:1.5px solid var(--border2);border-radius:10px;font-size:15px;font-family:var(--font);color:var(--text);outline:none;transition:.15s}
+.login-field input:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,.1);background:#fff}
+.login-field input::placeholder{color:var(--text3)}
+.login-error{font-size:13px;color:var(--red);text-align:center;padding:8px;background:var(--red-bg);border-radius:8px;margin-bottom:16px;display:none}
+#loginBtn{width:100%;padding:13px;border:none;border-radius:10px;background:linear-gradient(135deg,#2563eb,#1d4ed8);color:#fff;font-size:15px;font-weight:700;font-family:var(--font);cursor:pointer;letter-spacing:1px;transition:.15s;box-shadow:0 2px 8px rgba(37,99,235,.2)}
+#loginBtn:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(37,99,235,.3)}
+.login-hint{text-align:center;margin-top:20px;font-size:13px;color:var(--text3)}
+
+/* ============================================================
+   APP LAYOUT
+   ============================================================ */
+.app-layout{display:flex;width:100vw;height:100vh;overflow:hidden}
+.sidebar{width:var(--sbw);min-width:var(--sbw);height:100vh;background:linear-gradient(180deg,#0f1a35 0%,#141f3d 100%);display:flex;flex-direction:column;z-index:50}
+.sb-brand{display:flex;align-items:center;gap:12px;padding:22px 20px 18px}
+.sb-brand .b-icon{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,#2563eb,#7c3aed);display:flex;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(37,99,235,.25)}
+.sb-brand .b-icon svg{width:18px;height:18px;color:#fff}
+.sb-brand .b-text{font-size:16px;font-weight:700;color:#fff;letter-spacing:-.3px}
+.sb-brand .b-ver{font-size:10px;color:#6b7a99;margin-left:auto;padding:2px 7px;background:rgba(255,255,255,.06);border-radius:4px}
+.sb-nav{flex:1;padding:12px 12px;display:flex;flex-direction:column;gap:1px}
+.sb-item{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:8px;color:#8a97b5;font-size:14px;font-weight:500;cursor:pointer;transition:.12s}
+.sb-item:hover{color:#c8d2e6;background:rgba(255,255,255,.04)}
+.sb-item.active{color:#fff;background:rgba(255,255,255,.08);font-weight:600}
+.sb-item.active svg{color:#7c9ff7}
+.sb-item svg{width:19px;height:19px;flex-shrink:0}
+.sb-divider{height:1px;background:rgba(255,255,255,.06);margin:8px 12px}
+.sb-footer{padding:14px 16px;border-top:1px solid rgba(255,255,255,.06)}
+.sb-user{display:flex;align-items:center;gap:10px}
+.sb-avatar{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.sb-userinfo{flex:1;min-width:0}
+.sb-username{font-size:13px;font-weight:600;color:#fff;line-height:1.3}
+.sb-role{font-size:11px;color:#6b7a99}
+.sb-logout{width:30px;height:30px;border:none;border-radius:6px;background:transparent;color:#6b7a99;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.sb-logout:hover{color:#f87171;background:rgba(248,113,113,.1)}
+
+/* ---- main ---- */
+.main{flex:1;overflow-y:auto;overflow-x:hidden;background:var(--bg)}
+.page{display:none}
+.page.active{display:block;padding:32px 36px}
+.pg-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:28px;flex-wrap:wrap}
+.pg-head h2{font-size:24px;font-weight:800;color:var(--text);letter-spacing:-.5px;margin-bottom:4px}
+.pg-head p{font-size:14px;color:var(--text3)}
+.badge{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:20px;font-size:12px;font-weight:600;background:var(--green-bg);color:var(--green);border:1px solid rgba(22,163,74,.15)}
+.badge .dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border:1.5px solid var(--border2);border-radius:8px;background:#fff;color:var(--text2);font-size:13px;font-weight:600;cursor:pointer;font-family:var(--font);transition:.12s}
+.btn:hover{background:var(--bg3);border-color:var(--text3);color:var(--text)}
+.btn svg{width:15px;height:15px}
+.btn-accent{background:var(--blue);color:#fff;border:none;font-weight:600;box-shadow:0 1px 3px rgba(37,99,235,.15)}
+.btn-accent:hover{background:#1d4ed8;box-shadow:0 2px 8px rgba(37,99,235,.25);transform:translateY(-1px)}
+
+/* ============================================================
+   CHAT
+   ============================================================ */
+.chat-panel{display:flex;flex-direction:column;height:calc(100vh - 100px);background:#fff;border:1.5px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:var(--shadow-sm)}
+.chat-msgs{flex:1;overflow-y:auto;padding:36px 40px;display:flex;flex-direction:column;gap:20px;scroll-behavior:smooth}
+.chat-hero{text-align:center;padding:60px 20px;margin:auto;max-width:700px}
+.hero-icon{width:64px;height:64px;margin:0 auto 20px;background:linear-gradient(135deg,#2563eb,#7c3aed);border-radius:16px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,99,235,.2)}
+.hero-icon svg{width:32px;height:32px;color:#fff}
+.chat-hero h2{font-size:26px;font-weight:800;color:var(--text);margin-bottom:10px;letter-spacing:-.5px}
+.hero-desc{font-size:15px;color:var(--text3);max-width:520px;margin:0 auto 32px;line-height:1.65}
+.hero-prompts{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;max-width:660px;margin:0 auto}
+.hero-chip{padding:9px 20px;border:1.5px solid var(--border);border-radius:22px;background:#fff;font-size:13px;font-family:var(--font);color:var(--text2);cursor:pointer;transition:.12s;white-space:nowrap}
+.hero-chip:hover{border-color:var(--blue);color:var(--blue);background:var(--blue-bg);box-shadow:var(--shadow-sm)}
+.c-msg{display:flex;gap:12px;animation:fadeIn .3s}
+.c-msg.user{flex-direction:row-reverse}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.cm-avatar{width:34px;height:34px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff}
+.c-msg.agent .cm-avatar{background:linear-gradient(135deg,#2563eb,#7c3aed)}
+.c-msg.user .cm-avatar{background:var(--text3)}
+.cm-body{max-width:74%;min-width:0}
+.cm-bubble{padding:12px 18px;border-radius:12px;font-size:14px;line-height:1.7;word-break:break-word}
+.c-msg.agent .cm-bubble{background:var(--bg);border:1.5px solid var(--border);border-top-left-radius:4px;color:var(--text)}
+.c-msg.user .cm-bubble{background:linear-gradient(135deg,#2563eb,#1d4ed8);color:#fff;border-top-right-radius:4px}
+.cm-bubble h2,.cm-bubble h3{font-size:16px;margin:14px 0 6px;color:#1d4ed8}
+.cm-bubble ul,.cm-bubble ol{padding-left:20px;margin:6px 0}
+.cm-bubble li{margin-bottom:3px}
+.cm-bubble p{margin:6px 0}
+.cm-bubble code{background:var(--blue-bg2);padding:2px 6px;border-radius:4px;font-size:13px;font-family:monospace;color:#1d4ed8}
+.c-msg.user .cm-bubble h2,.c-msg.user .cm-bubble h3,.c-msg.user .cm-bubble code{color:inherit}
+.cm-intent{display:inline-block;padding:2px 10px;border-radius:12px;font-size:11px;font-weight:700;background:var(--blue-bg);color:var(--blue);margin-top:8px}
+.cm-hyp{margin-top:8px;padding:12px 16px;border-radius:8px;background:var(--amber-bg);border:1px solid #fde68a;font-size:13px;line-height:1.6;color:#92400e}
+.cm-hyp strong{color:#78350f}
+.cm-src{margin-top:6px;font-size:11px;color:var(--text3);padding-top:6px;border-top:1px solid var(--border)}
+.cm-typing{display:flex;align-items:center;gap:6px;padding:6px 0;color:var(--text3);font-size:13px}
+.cm-typing .dot{width:6px;height:6px;border-radius:50%;background:var(--text3);animation:bounce 1.4s infinite}
+.cm-typing .dot:nth-child(2){animation-delay:.2s}
+.cm-typing .dot:nth-child(3){animation-delay:.4s}
+@keyframes bounce{0%,60%,100%{opacity:.2;transform:scale(.8)}30%{opacity:1;transform:scale(1)}}
+.chat-bar{display:flex;align-items:flex-end;gap:10px;padding:16px 20px;border-top:1.5px solid var(--border);background:#fff}
+.chat-bar textarea{flex:1;padding:11px 18px;border:1.5px solid var(--border2);border-radius:10px;font-size:14px;font-family:var(--font);color:var(--text);resize:none;outline:none;min-height:44px;max-height:130px;line-height:1.5;transition:.15s;background:var(--bg)}
+.chat-bar textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,.08);background:#fff}
+.chat-bar textarea::placeholder{color:var(--text3)}
+.chat-bar .send{width:44px;height:44px;border:none;border-radius:10px;background:linear-gradient(135deg,#2563eb,#1d4ed8);color:#fff;cursor:pointer;flex-shrink:0;transition:.12s;display:flex;align-items:center;justify-content:center}
+.chat-bar .send:hover{transform:scale(1.04);box-shadow:0 2px 12px rgba(37,99,235,.25)}
+.chat-bar .send:disabled{opacity:.35;cursor:not-allowed;transform:none;box-shadow:none}
+
+/* ============================================================
+   GRAPH
+   ============================================================ */
+.pg-actions{display:flex;align-items:center;gap:8px}
+.pg-search{position:relative}
+.pg-search svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:15px;height:15px;color:var(--text3)}
+.pg-search input{padding:8px 14px 8px 34px;border:1.5px solid var(--border2);border-radius:8px;font-size:14px;font-family:var(--font);color:var(--text);background:#fff;width:200px;outline:none;transition:.12s}
+.pg-search input:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,.06);width:260px}
+.pg-search input::placeholder{color:var(--text3)}
+.pg-legend{display:flex;gap:20px;margin-bottom:14px;flex-wrap:wrap}
+.pg-leg{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text3)}
+.pg-leg i{display:block;width:9px;height:9px;border-radius:2px}
+.pg-canvas{background:#fff;border:1.5px solid var(--border);border-radius:14px;overflow:hidden;position:relative;height:560px;box-shadow:var(--shadow-sm)}
+#graphCanvas{width:100%;height:100%}
+.pg-loading,.pg-empty{position:absolute;inset:0;background:rgba(255,255,255,.92);z-index:10;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px}
+.pg-loading p{font-size:14px;color:var(--text3)}
+.pg-empty p{font-size:15px;font-weight:600;color:var(--text2)}
+.pg-empty span{font-size:13px;color:var(--text3);max-width:460px;text-align:center;line-height:1.5}
+.pg-spin{width:30px;height:30px;border:2.5px solid var(--border2);border-top-color:var(--blue);border-radius:50%;animation:spin .7s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ============================================================
+   DRAWER
+   ============================================================ */
+.drawer-overlay{position:fixed;inset:0;background:rgba(0,0,0,.3);z-index:100;opacity:0;pointer-events:none;transition:.2s}
+.drawer-overlay.open{opacity:1;pointer-events:auto}
+.drawer{position:fixed;right:0;top:0;bottom:0;width:440px;max-width:94vw;background:#fff;border-left:1.5px solid var(--border);z-index:101;display:flex;flex-direction:column;transform:translateX(100%);transition:.25s cubic-bezier(.4,0,.2,1);box-shadow:-8px 0 40px rgba(0,0,0,.1)}
+.drawer.open{transform:translateX(0)}
+.drawer-head{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;border-bottom:1.5px solid var(--border)}
+.drawer-head h3{font-size:17px;font-weight:700;color:var(--text)}
+.drawer-x{width:32px;height:32px;border:none;border-radius:6px;background:transparent;color:var(--text3);cursor:pointer;display:flex;align-items:center;justify-content:center}
+.drawer-x:hover{background:var(--bg);color:var(--text)}
+.drawer-tabs{display:flex;gap:2px;padding:12px 22px;border-bottom:1.5px solid var(--border)}
+.dr-tab{padding:7px 18px;border:none;border-radius:6px;background:transparent;font-size:13px;font-weight:500;font-family:var(--font);color:var(--text3);cursor:pointer}
+.dr-tab:hover{background:var(--bg);color:var(--text2)}
+.dr-tab.active{background:var(--blue-bg);color:var(--blue);font-weight:600}
+.drawer-body{flex:1;overflow-y:auto;padding:20px 22px}
+.drawer-body table{width:100%;border-collapse:collapse}
+.drawer-body td{padding:8px 0;font-size:13px;border-bottom:1px solid var(--border)}
+.drawer-body td:first-child{font-weight:600;color:var(--text3);width:70px}
+.dr-neighbor{display:flex;align-items:center;justify-content:space-between;padding:9px 12px;margin-bottom:3px;border-radius:6px;background:var(--bg)}
+.dr-nb-name{font-weight:600;color:var(--text)}
+.dr-nb-type{font-size:11px;color:var(--text3);margin-left:8px}
+.dr-nb-rel{font-size:11px;color:var(--blue);font-weight:600}
+
+/* ============================================================
+   CONTEXT MENU — compact, fixed SVG size
+   ============================================================ */
+.ctxmenu{position:fixed;z-index:200;min-width:140px;background:#fff;border:1.5px solid var(--border2);border-radius:10px;padding:4px;opacity:0;pointer-events:none;transition:.1s;box-shadow:0 8px 32px rgba(0,0,0,.12)}
+.ctxmenu.open{opacity:1;pointer-events:auto}
+.ctx-row{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:6px;font-size:13px;cursor:pointer;color:var(--text2)}
+.ctx-row:hover{background:var(--bg)}
+.ctx-row svg{width:15px;height:15px;flex-shrink:0;color:var(--text3)}
+.ctx-row.danger{color:var(--red)}
+.ctx-row.danger svg{color:var(--red)}
+.ctx-row.danger:hover{background:var(--red-bg)}
+
+/* ============================================================
+   DOCS
+   ============================================================ */
+.docs-upload{border:2px dashed var(--border2);border-radius:14px;padding:52px 32px;text-align:center;cursor:pointer;transition:.15s;margin-bottom:20px;background:#fff}
+.docs-upload:hover{border-color:var(--blue);background:var(--blue-bg)}
+.docs-upload.drag-over{border-color:var(--blue);background:var(--blue-bg)}
+.docs-upload-inner{display:flex;flex-direction:column;align-items:center;gap:8px}
+.docs-upload-inner h3{font-size:16px;font-weight:600;color:var(--text)}
+.docs-upload-inner p{font-size:13px;color:var(--text3);margin-bottom:8px}
+.docs-progress{background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:14px 18px;margin-bottom:20px}
+.dp-top{display:flex;justify-content:space-between;margin-bottom:8px;font-size:13px;font-weight:600}
+.dp-track{height:4px;background:var(--border);border-radius:2px;overflow:hidden}
+.dp-fill{height:100%;background:var(--blue);border-radius:2px;transition:.3s;width:0%}
+.docs-table-wrap{background:#fff;border:1.5px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:var(--shadow-sm)}
+.docs-table{width:100%;border-collapse:collapse}
+.docs-table th{text-align:left;padding:12px 22px;font-size:11px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.6px;background:var(--bg);border-bottom:1.5px solid var(--border)}
+.docs-table th.r{text-align:right}
+.docs-table td{padding:13px 22px;font-size:14px;border-bottom:1px solid var(--border)}
+.docs-table td.r{text-align:right;color:var(--text2)}
+.docs-table tr:hover td{background:var(--bg)}
+.empty-cell{padding:56px!important;text-align:center}
+.empty-msg p{font-size:15px;font-weight:600;color:var(--text2);margin:10px 0 4px}
+.empty-msg span{font-size:13px;color:var(--text3)}
+.tag-ok{display:inline-block;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600;background:var(--green-bg);color:var(--green)}
+
+/* ============================================================
+   DASHBOARD
+   ============================================================ */
+.dash-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:20px}
+.dash-card{background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:24px 26px;position:relative;overflow:hidden;transition:.15s;box-shadow:var(--shadow-sm)}
+.dash-card:hover{border-color:var(--border2);box-shadow:var(--shadow)}
+.dc-num{font-size:38px;font-weight:800;color:var(--text);letter-spacing:-1px;line-height:1.1}
+.dc-label{font-size:13px;color:var(--text3);margin-top:4px;font-weight:600}
+.dc-icon{position:absolute;right:20px;bottom:16px;width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center}
+.dash-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.dash-panel{background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:22px 26px;box-shadow:var(--shadow-sm)}
+.dp-title{font-size:11px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:14px}
+.dp-row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--border);font-size:14px}
+.dp-row:last-child{border-bottom:none}
+.dp-row span{color:var(--text2)}
+.dp-row b{font-weight:600;color:var(--text)}
+.dp-row b.on{color:var(--green)}
+
+/* ============================================================
+   CASES
+   ============================================================ */
+.case-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px}
+.case-tag{padding:4px 12px;border:1.5px solid var(--border);border-radius:16px;font-size:12px;font-family:var(--font);color:var(--text2);cursor:pointer;transition:.12s;background:#fff}
+.case-tag:hover{border-color:var(--blue);color:var(--blue);background:var(--blue-bg)}
+.case-tag.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+
+.case-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.case-card{background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:22px 24px;box-shadow:var(--shadow-sm);transition:.15s;cursor:pointer}
+.case-card:hover{border-color:var(--border2);box-shadow:var(--shadow)}
+.case-card .cc-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:10px}
+.case-card .cc-title{font-size:15px;font-weight:700;color:var(--text);line-height:1.4}
+.case-card .cc-severity{padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700;flex-shrink:0}
+.cc-severity.严重{background:var(--red-bg);color:var(--red)}
+.cc-severity.中等{background:var(--amber-bg);color:var(--amber)}
+.cc-severity.轻微{background:var(--green-bg);color:var(--green)}
+.cc-severity.待评估{background:var(--bg);color:var(--text3)}
+.case-card .cc-model{font-size:12px;color:var(--blue);font-weight:600;margin-bottom:8px}
+.case-card .cc-symptoms{font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:10px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.case-card .cc-footer{display:flex;gap:6px;flex-wrap:wrap}
+.case-card .cc-tag{display:inline-block;padding:2px 8px;border-radius:8px;font-size:11px;font-weight:500;background:var(--bg3);color:var(--text3)}
+.case-card .cc-outcome{padding:2px 8px;border-radius:8px;font-size:11px;font-weight:600}
+.cc-outcome.confirmed{background:var(--green-bg);color:var(--green)}
+.cc-outcome.partial{background:var(--amber-bg);color:var(--amber)}
+.cc-outcome.pending{background:var(--bg);color:var(--text3)}
+
+.case-pagination{display:flex;align-items:center;justify-content:center;gap:4px;margin-top:20px}
+.case-pagination button{padding:6px 12px;border:1.5px solid var(--border2);border-radius:6px;background:#fff;font-size:13px;font-weight:500;font-family:var(--font);color:var(--text2);cursor:pointer}
+.case-pagination button:hover{border-color:var(--blue);color:var(--blue)}
+.case-pagination button.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+.case-pagination button:disabled{opacity:.3;cursor:not-allowed}
+
+/* case detail modal */
+.case-modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:150;display:none;align-items:center;justify-content:center}
+.case-modal-overlay.open{display:flex}
+.case-modal{width:660px;max-width:94vw;max-height:85vh;background:#fff;border-radius:16px;box-shadow:0 16px 48px rgba(0,0,0,.15);overflow-y:auto;padding:32px}
+.case-modal .cm-close{position:sticky;top:0;float:right;width:32px;height:32px;border:none;border-radius:6px;background:transparent;color:var(--text3);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px}
+.case-modal .cm-close:hover{background:var(--bg)}
+.case-modal h2{font-size:20px;font-weight:800;margin-bottom:8px}
+.case-modal .cm-meta{display:flex;gap:10px;margin-bottom:20px;flex-wrap:wrap}
+.case-modal .cm-section{margin-bottom:18px}
+.case-modal .cm-section h4{font-size:12px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}
+.case-modal .cm-section p{font-size:14px;color:var(--text);line-height:1.7}
+
+@media(max-width:900px){.case-grid{grid-template-columns:1fr}}
+@media(max-width:1200px){.dash-cards{grid-template-columns:repeat(2,1fr)}.dash-row{grid-template-columns:1fr}}
+@media(max-width:900px){.sidebar{width:56px;min-width:56px}.sb-brand .b-text,.sb-brand .b-ver,.sb-item{font-size:0;justify-content:center;padding:12px}.sb-userinfo{display:none}.main{padding:16px}.cm-body{max-width:90%}.chat-msgs{padding:20px}}
+</style>
+</head>
+<body>
+
+<svg style="display:none">
+  <symbol id="i-engine" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/><line x1="12" y1="22" x2="12" y2="15.5"/><polyline points="22 8.5 12 15.5 2 8.5"/><line x1="2" y1="15.5" x2="12" y2="8.5"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-.9 4A8.4 8.4 0 0 1 18.5 18a8.4 8.4 0 0 1-4 1.5h-.3c-1.2.1-2.4-.3-3.3-1l-4.9 2 1.3-3.7c-.8-1.5-1.1-3.2-.8-4.9A8.4 8.4 0 0 1 10.3 6a8.4 8.4 0 0 1 6.3-3h.7C19 3.1 20 4 20.5 5.2s.5 2.5.5 3.2v3.1Z"/></symbol>
+  <symbol id="i-graph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="5.6" y1="5.6" x2="8.4" y2="8.4"/><line x1="15.6" y1="15.6" x2="18.4" y2="18.4"/><line x1="5.6" y1="18.4" x2="8.4" y2="15.6"/><line x1="15.6" y1="8.4" x2="18.4" y2="5.6"/></symbol>
+  <symbol id="i-docs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><polyline points="14 2 14 8 20 8"/></symbol>
+  <symbol id="i-dash" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></symbol>
+  <symbol id="i-logout" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></symbol>
+  <symbol id="i-max" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></symbol>
+  <symbol id="i-upload" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><polyline points="14 2 14 8 20 8"/></symbol>
+  <symbol id="i-chip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><line x1="6" y1="6" x2="6" y2="18"/><line x1="18" y1="6" x2="18" y2="18"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+</svg>
+
+<!-- ═════════ LOGIN ═════════ -->
+<div id="loginScreen" class="login-screen">
+  <div class="login-card">
+    <div class="login-brand"><div class="login-logo"><svg><use href="#i-engine"/></svg></div><h1>AeroDiagnosis</h1><p>航空发动机气路故障多智能体协同诊断平台</p></div>
+    <form id="loginForm" autocomplete="off">
+      <div class="login-field"><label>用户名</label><div class="wrap"><svg><use href="#i-user"/></svg><input type="text" id="loginUser" placeholder="admin" autocomplete="off"></div></div>
+      <div class="login-field"><label>密码</label><div class="wrap"><svg><use href="#i-lock"/></svg><input type="password" id="loginPass" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;" autocomplete="off"></div></div>
+      <div class="login-error" id="loginError"></div>
+      <button type="submit" id="loginBtn">登 录 系 统</button>
+    </form>
+    <div class="login-hint">演示账号 admin / admin123</div>
+  </div>
+</div>
+
+<!-- ═════════ MAIN APP ═════════ -->
+<div id="app" class="app-layout hidden">
+  <aside class="sidebar">
+    <div class="sb-brand"><div class="b-icon"><svg><use href="#i-engine"/></svg></div><span class="b-text">AeroDiagnosis</span><span class="b-ver">v2</span></div>
+    <nav class="sb-nav">
+      <a class="sb-item active" data-page="chat"><svg><use href="#i-chat"/></svg>诊断对话</a>
+      <a class="sb-item" data-page="graph"><svg><use href="#i-graph"/></svg>知识图谱</a>
+      <a class="sb-item" data-page="docs"><svg><use href="#i-docs"/></svg>文档管理</a>
+      <div class="sb-divider"></div>
+      <a class="sb-item" data-page="cases"><svg><use href="#i-docs"/></svg>诊断案例库</a>
+      <a class="sb-item" data-page="dashboard"><svg><use href="#i-dash"/></svg>系统概览</a>
+    </nav>
+    <div class="sb-footer">
+      <div class="sb-user"><div class="sb-avatar" id="sidebarAvatar">A</div><div class="sb-userinfo"><div class="sb-username" id="sidebarUser">admin</div><div class="sb-role">Engineer</div></div></div>
+      <button class="sb-logout" id="logoutBtn"><svg><use href="#i-logout"/></svg></button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <!-- CHAT -->
+    <section class="page active" id="page-chat">
+      <div class="pg-head"><div><h2>诊断对话</h2><p>多智能体协同 &middot; 三路混合检索 &middot; 专家推理</p></div><div class="badge"><span class="dot"></span>就绪</div></div>
+      <div class="chat-panel">
+        <div class="chat-msgs" id="chatMessages">
+          <div class="chat-hero">
+            <div class="hero-icon"><svg><use href="#i-engine"/></svg></div>
+            <h2>航空发动机故障诊断助手</h2>
+            <p class="hero-desc">输入故障现象或诊断问题，系统将通过多智能体协同编排 + 向量/BM25/图谱三路混合检索进行专家诊断推理</p>
+            <div class="hero-prompts">
+              <button class="hero-chip" data-q="CFM56-7B发动机EGT超限的可能原因有哪些？">CFM56-7B EGT 超限原因</button>
+              <button class="hero-chip" data-q="高压压气机喘振的典型征兆和处置措施是什么？">HPC 喘振征兆与处置</button>
+              <button class="hero-chip" data-q="涡轮叶片烧蚀的故障传播路径是什么？">涡轮叶片烧蚀传播路径</button>
+              <button class="hero-chip" data-q="N1和N2转速不匹配通常指示什么故障？">N1/N2 转速不匹配</button>
+              <button class="hero-chip" data-q="发动机性能衰退如何通过气路参数诊断？">性能衰退气路诊断</button>
+              <button class="hero-chip" data-q="燃烧室出口温度分布异常的原因分析？">燃烧室温度分布异常</button>
+            </div>
+          </div>
+        </div>
+        <div class="chat-bar">
+          <textarea id="chatInput" rows="1" placeholder="输入故障现象或诊断问题，Ctrl + Enter 发送..."></textarea>
+          <button class="send" id="chatSendBtn"><svg><use href="#i-send"/></svg></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- GRAPH -->
+    <section class="page" id="page-graph">
+      <div class="pg-head"><div><h2>领域知识图谱</h2><p>航空发动机实体关系网络</p></div>
+        <div class="pg-actions"><div class="pg-search"><svg><use href="#i-search"/></svg><input type="text" id="graphSearch" placeholder="搜索实体..."></div><button class="btn" id="graphRefreshBtn"><svg><use href="#i-refresh"/></svg>刷新</button><button class="btn" id="graphFitBtn"><svg><use href="#i-max"/></svg>居中</button></div>
+      </div>
+      <div class="pg-legend"><span class="pg-leg"><i style="background:#2563eb"></i>部件/型号</span><span class="pg-leg"><i style="background:#ef4444"></i>故障/原因/征兆</span><span class="pg-leg"><i style="background:#16a34a"></i>维修/措施</span><span class="pg-leg"><i style="background:#9333ea"></i>传感器</span></div>
+      <div class="pg-canvas" id="graphContainer">
+        <div class="pg-loading" id="graphLoading"><div class="pg-spin"></div><p>正在加载图谱数据...</p></div>
+        <div class="pg-empty hidden" id="graphEmpty"><svg width="44" height="44" opacity=".3"><use href="#i-graph"/></svg><p>暂无图谱数据</p><span>上传航空发动机相关文档后，系统将自动抽取实体关系并构建知识图谱</span></div>
+        <div id="graphCanvas"></div>
+      </div>
+    </section>
+
+    <!-- DOCS -->
+    <section class="page" id="page-docs">
+      <div class="pg-head"><div><h2>文档管理</h2><p>上传技术文档，自动入库并构建知识库</p></div><button class="btn" id="docsRefreshBtn"><svg><use href="#i-refresh"/></svg>刷新</button></div>
+      <div class="docs-upload" id="uploadArea">
+        <div class="docs-upload-inner"><svg width="44" height="44" opacity=".35"><use href="#i-upload"/></svg><h3>拖拽文件到此处，或点击选择文件</h3><p>支持 PDF &middot; TXT &middot; DOCX &middot; Markdown &middot; CSV &middot; Excel</p><button class="btn btn-accent" id="uploadBtn">选择文件上传</button></div>
+        <input type="file" id="fileInput" accept=".pdf,.txt,.docx,.doc,.md,.html,.pptx,.csv,.xlsx,.xls" multiple hidden>
+      </div>
+      <div class="docs-progress hidden" id="uploadProgress"><div class="dp-top"><span id="progressLabel"></span><span id="progressText">0%</span></div><div class="dp-track"><div class="dp-fill" id="progressFill"></div></div></div>
+      <div class="docs-table-wrap"><table class="docs-table"><thead><tr><th>文件名</th><th class="r">大小</th><th class="r">上传时间</th><th class="r">状态</th></tr></thead><tbody id="docTableBody"><tr><td colspan="4" class="empty-cell"><div class="empty-msg"><svg width="36" height="36" opacity=".3"><use href="#i-file"/></svg><p>暂无文档</p><span>上传航空发动机知识文档以构建知识库</span></div></td></tr></tbody></table></div>
+    </section>
+
+    <!-- CASES -->
+    <section class="page" id="page-cases">
+      <div class="pg-head">
+        <div><h2>诊断案例库</h2><p>历史诊断案例检索与参考</p></div>
+        <div class="pg-actions">
+          <div class="pg-search"><svg><use href="#i-search"/></svg><input type="text" id="caseSearch" placeholder="搜索案例..."></div>
+          <button class="btn" id="caseRefreshBtn"><svg><use href="#i-refresh"/></svg>刷新</button>
+        </div>
+      </div>
+      <!-- tag filters -->
+      <div class="case-tags" id="caseTags"></div>
+      <!-- case grid -->
+      <div class="case-grid" id="caseGrid">
+        <div class="empty-msg" style="grid-column:1/-1;padding:60px;text-align:center">
+          <svg width="36" height="36" opacity=".3"><use href="#i-file"/></svg>
+          <p>加载中...</p>
+        </div>
+      </div>
+      <!-- pagination -->
+      <div class="case-pagination" id="casePagination"></div>
+    </section>
+
+    <!-- DASHBOARD -->
+    <section class="page" id="page-dashboard">
+      <div class="pg-head"><div><h2>系统概览</h2><p>知识库统计与服务运行状态</p></div><button class="btn" id="dashRefreshBtn"><svg><use href="#i-refresh"/></svg>刷新</button></div>
+      <div class="dash-cards">
+        <div class="dash-card"><div class="dc-num" id="statChunks">0</div><div class="dc-label">知识片段</div><div class="dc-icon" style="background:var(--blue-bg);color:var(--blue)"><svg><use href="#i-file"/></svg></div></div>
+        <div class="dash-card"><div class="dc-num" id="statEntities">0</div><div class="dc-label">图谱实体</div><div class="dc-icon" style="background:var(--green-bg);color:var(--green)"><svg><use href="#i-chip"/></svg></div></div>
+        <div class="dash-card"><div class="dc-num" id="statRelations">0</div><div class="dc-label">图谱关系</div><div class="dc-icon" style="background:var(--purple-bg);color:var(--purple)"><svg><use href="#i-link"/></svg></div></div>
+        <div class="dash-card"><div class="dc-num" id="statUptime">--</div><div class="dc-label">运行时长</div><div class="dc-icon" style="background:var(--red-bg);color:var(--red)"><svg><use href="#i-clock"/></svg></div></div>
+      </div>
+      <div class="dash-row">
+        <div class="dash-panel"><div class="dp-title">服务信息</div><div class="dp-row"><span>向量后端</span><b id="sysBackend">--</b></div><div class="dp-row"><span>Python 版本</span><b id="sysPython">--</b></div><div class="dp-row"><span>API 版本</span><b>v2.0.0</b></div><div class="dp-row"><span>运行状态</span><b class="on">&#9679; 运行中</b></div></div>
+        <div class="dash-panel"><div class="dp-title">诊断引擎</div><div class="dp-row"><span>意图识别 Agent</span><b class="on">&#9679; 就绪</b></div><div class="dp-row"><span>混合检索 Agent</span><b class="on">&#9679; 就绪</b></div><div class="dp-row"><span>诊断推理 Agent</span><b class="on">&#9679; 就绪</b></div><div class="dp-row"><span>自验证 Agent</span><b class="on">&#9679; 就绪</b></div></div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<div class="drawer" id="drawer">
+  <div class="drawer-head"><h3>实体详情</h3><button class="drawer-x" id="drawerClose"><svg><use href="#i-close"/></svg></button></div>
+  <div class="drawer-tabs"><button class="dr-tab active" data-tab="props">属性</button><button class="dr-tab" data-tab="meta">元数据</button><button class="dr-tab" data-tab="neighbors">关联</button></div>
+  <div class="drawer-body" id="drawerContent"></div>
+</div>
+<div class="ctxmenu" id="contextMenu">
+  <div class="ctx-row" data-action="detail"><svg><use href="#i-search"/></svg>查看详情</div>
+  <div class="ctx-row danger" data-action="delete"><svg><use href="#i-trash"/></svg>删除实体</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+<script src="/static/app.js"></script>
+</body>
+</html>
