@@ -1,0 +1,73 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "aerodiagnosis"
+version = "0.3.0a0"
+description = "Evidence-grounded adaptive diagnostic agent for aero-engine gas-path faults"
+readme = "README.md"
+requires-python = ">=3.13,<3.15"
+license = { file = "LICENSE" }
+authors = [{ name = "AeroDiagnosis contributors" }]
+dependencies = [
+  "fastapi>=0.115,<1",
+  "mcp>=2.2,<3",
+  "pydantic>=2.13.5,<3",
+  "uvicorn>=0.34,<1",
+]
+
+[project.scripts]
+aerodiagnosis-evaluate = "aerodiagnosis.evaluation:main"
+aerodiagnosis-ingest = "aerodiagnosis.cli:main"
+aerodiagnosis-mcp = "aerodiagnosis.adapters.mcp:main"
+aerodiagnosis-migrate-v2 = "aerodiagnosis.migration:main"
+aerodiagnosis-server = "aerodiagnosis.adapters.api:main"
+
+[dependency-groups]
+dev = [
+  "hatchling>=1.27,<2",
+  "mypy>=1.17,<2",
+  "pytest>=8.4,<9",
+  "pytest-cov>=6.2,<8",
+  "ruff>=0.12,<1",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/aerodiagnosis"]
+
+[tool.hatch.build]
+exclude = [
+  "/.runtime",
+  "/.test-tmp",
+  "/.uv-cache",
+  "/.venv",
+  "/dist",
+]
+
+[tool.pytest.ini_options]
+addopts = "-ra --strict-config --strict-markers"
+testpaths = ["tests"]
+
+[tool.coverage.run]
+branch = true
+source = ["aerodiagnosis"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+fail_under = 85
+
+[tool.ruff]
+target-version = "py313"
+line-length = 100
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+
+[tool.mypy]
+python_version = "3.13"
+strict = true
+packages = ["aerodiagnosis"]
+mypy_path = "src"

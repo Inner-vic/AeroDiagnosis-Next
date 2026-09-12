@@ -1,0 +1,20 @@
+{
+  "dataset_id": "aerodiagnosis-synthetic-smoke",
+  "version": "1.0.0",
+  "cases": [
+    {
+      "case_id": "egt-compressor-001",
+      "question": "EGT 上升且压气机效率下降，应该优先检查什么？",
+      "expected_status": "evidence_ready",
+      "required_claim_terms": ["压气机"],
+      "required_source_kinds": ["document_chunk"]
+    },
+    {
+      "case_id": "unknown-symptom-001",
+      "question": "没有任何可用资料时，确认一个未知故障。",
+      "expected_status": "insufficient_evidence",
+      "required_claim_terms": [],
+      "required_source_kinds": []
+    }
+  ]
+}

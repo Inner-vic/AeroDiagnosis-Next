@@ -103,9 +103,9 @@ async def lifespan(app: FastAPI):
     try:
         await knowledge_graph.init()
         kg_available = True
-        logger.info("KnowledgeGraph initialized — Neo4j connected")
+        logger.info("KnowledgeGraph initialized — %s", knowledge_graph.backend_name)
     except Exception:
-        logger.exception("KnowledgeGraph init failed — Neo4j may not be running. Data is NOT lost — persisted in Docker volume.")
+        logger.exception("KnowledgeGraph init failed for configured backend")
 
     # Build multi-agent supervisor with hybrid engine
     sv = get_supervisor()
@@ -435,7 +435,7 @@ async def get_system_info():
     hours, remainder = divmod(uptime_seconds, 3600)
     minutes, seconds = divmod(remainder, 60)
     return {
-        "backend": settings.vector_store_type,
+        "backend": vector_store.backend_name,
         "python_version": sys.version.split()[0],
         "api_version": "2.0.0",
         "uptime": f"{hours}h {minutes}m {seconds}s",

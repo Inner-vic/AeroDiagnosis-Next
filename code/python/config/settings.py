@@ -15,21 +15,19 @@ class Settings(BaseSettings):
     # Neo4j
     neo4j_uri: str = "bolt://localhost:7687"
     neo4j_user: str = "neo4j"
-    neo4j_password: str = "password"
+    neo4j_password: str = ""
 
-    # Vector Store
-    vector_store_type: str = "chroma"  # chroma | pgvector
+    # Persistence adapters. Embedded stores are the local default; Compose
+    # overrides these to chroma_http/neo4j.
+    vector_store_backend: str = "embedded"  # embedded | chroma_http
+    graph_store_backend: str = "sqlite"  # sqlite | neo4j
+    chroma_persist_dir: str = "./data/chroma"
     chroma_host: str = "localhost"
     chroma_port: int = 8000
-    pgvector_dsn: str = "postgresql://postgres:postgres@localhost:5432/knowledge"
-
-    # Kafka (CDC)
-    kafka_bootstrap_servers: str = "localhost:9092"
-    kafka_topic_doc_changes: str = "doc-changes"
-    kafka_topic_kg_updates: str = "kg-updates"
+    sqlite_graph_path: str = "./data/knowledge_graph.db"
 
     # API
-    api_host: str = "0.0.0.0"
+    api_host: str = "127.0.0.1"
     api_port: int = 8080
 
     # Document Store

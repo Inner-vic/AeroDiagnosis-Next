@@ -1,5 +1,5 @@
 """
-向量存储服务 — 支持 ChromaDB / PGVector 双后端
+向量存储服务 — 可配置 ChromaDB 嵌入式 / HTTP 后端
 
 职责:
   1. 文档块向量化 (Embedding)
@@ -33,14 +33,15 @@ def _create_embeddings():
 
 
 class VectorStoreService:
-    """向量库统一接口，底层可切换 ChromaDB / PGVector"""
+    """旧应用的兼容访问层；本机默认使用嵌入式持久化。"""
 
     COLLECTION_NAME = "knowledge_chunks"
 
     def __init__(self) -> None:
         self.embeddings = _create_embeddings()
         self._store: Any = None
-        self._backend = settings.vector_store_type
+        self._client: Any = None
+        self._backend = settings.vector_store_backend
 
     # ── initialization ───────────────────────────────────────
 
@@ -49,28 +50,26 @@ class VectorStoreService:
         return self._store is not None
 
     async def init(self) -> None:
-        if self._backend == "chroma":
-            await self._init_chroma()
-        else:
-            await self._init_pgvector()
+        await self._init_chroma()
 
     async def _init_chroma(self) -> None:
         import chromadb
-        import os
-        persist_dir = os.path.join(settings.upload_dir, "..", "chroma_data")
-        os.makedirs(persist_dir, exist_ok=True)
-        client = chromadb.PersistentClient(path=persist_dir)
-        self._store = client.get_or_create_collection(
+
+        if self._backend == "embedded":
+            import os
+
+            os.makedirs(settings.chroma_persist_dir, exist_ok=True)
+            self._client = chromadb.PersistentClient(path=settings.chroma_persist_dir)
+        elif self._backend == "chroma_http":
+            self._client = chromadb.HttpClient(
+                host=settings.chroma_host,
+                port=settings.chroma_port,
+            )
+        else:
+            raise ValueError(f"Unsupported vector store backend: {self._backend}")
+        self._store = self._client.get_or_create_collection(
             name=self.COLLECTION_NAME,
             metadata={"hnsw:space": "cosine"},
-        )
-
-    async def _init_pgvector(self) -> None:
-        from langchain_community.vectorstores import PGVector
-        self._store = PGVector(
-            connection_string=settings.pgvector_dsn,
-            collection_name=self.COLLECTION_NAME,
-            embedding_function=self.embeddings,
         )
 
     # ── CRUD ─────────────────────────────────────────────────
@@ -89,11 +88,8 @@ class VectorStoreService:
             for c in chunks
         ]
 
-        if self._backend == "chroma":
-            vectors = await self.embeddings.aembed_documents(texts)
-            self._store.upsert(ids=ids, embeddings=vectors, documents=texts, metadatas=metadatas)
-        else:
-            await self._store.aadd_texts(texts=texts, metadatas=metadatas, ids=ids)
+        vectors = await self.embeddings.aembed_documents(texts)
+        self._store.upsert(ids=ids, embeddings=vectors, documents=texts, metadatas=metadatas)
 
         return len(chunks)
 
@@ -101,41 +97,42 @@ class VectorStoreService:
         """语义搜索，返回 (文档, 分数) 列表"""
         if not await self._ready():
             return []
-        if self._backend == "chroma":
-            q_vec = await self.embeddings.aembed_query(query)
-            results = self._store.query(query_embeddings=[q_vec], n_results=top_k, include=["documents", "metadatas", "distances"])
-            out: list[tuple[dict, float]] = []
-            docs = results.get("documents", [[]])[0]
-            metas = results.get("metadatas", [[]])[0]
-            dists = results.get("distances", [[]])[0]
-            for doc, meta, dist in zip(docs, metas, dists):
-                score = 1.0 - dist  # cosine distance → similarity
-                out.append(({"content": doc, "source": meta.get("source", ""), "metadata": meta}, score))
-            return out
-        else:
-            results = await self._store.asimilarity_search_with_score(query, k=top_k)
-            return [
-                ({"content": doc.page_content, "source": doc.metadata.get("source", ""), "metadata": doc.metadata}, score)
-                for doc, score in results
-            ]
+        q_vec = await self.embeddings.aembed_query(query)
+        results = self._store.query(
+            query_embeddings=[q_vec],
+            n_results=top_k,
+            include=["documents", "metadatas", "distances"],
+        )
+        out: list[tuple[dict, float]] = []
+        docs = results.get("documents", [[]])[0]
+        metas = results.get("metadatas", [[]])[0]
+        dists = results.get("distances", [[]])[0]
+        for doc, meta, dist in zip(docs, metas, dists):
+            score = 1.0 - dist  # cosine distance → similarity
+            out.append(({"content": doc, "source": meta.get("source", ""), "metadata": meta}, score))
+        return out
 
     async def delete_by_doc_id(self, doc_id: str) -> int:
         """按 doc_id 删除所有相关向量"""
         if not await self._ready():
             return 0
-        if self._backend == "chroma":
-            existing = self._store.get(where={"doc_id": doc_id}, include=[])
-            ids = existing.get("ids", [])
-            if ids:
-                self._store.delete(ids=ids)
-            return len(ids)
-        return 0
+        existing = self._store.get(where={"doc_id": doc_id}, include=[])
+        ids = existing.get("ids", [])
+        if ids:
+            self._store.delete(ids=ids)
+        return len(ids)
 
     async def get_stats(self) -> dict:
         """获取向量库统计信息"""
         if not await self._ready():
             return {"backend": self._backend, "total_vectors": 0, "collection": self.COLLECTION_NAME}
-        if self._backend == "chroma":
-            count = self._store.count()
-            return {"backend": "chroma", "total_vectors": count, "collection": self.COLLECTION_NAME}
-        return {"backend": "pgvector", "collection": self.COLLECTION_NAME}
+        count = self._store.count()
+        return {
+            "backend": self._backend,
+            "total_vectors": count,
+            "collection": self.COLLECTION_NAME,
+        }
+
+    @property
+    def backend_name(self) -> str:
+        return self._backend

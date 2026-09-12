@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="night">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <title>AeroDiagnosis · 知识增强工作台</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <div class="app-shell module-diagnosis" id="appShell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div><strong>AeroDiagnosis</strong><small>EVIDENCE INTELLIGENCE</small></div>
+      </div>
+
+      <nav class="app-nav" aria-label="主功能">
+        <button class="active" data-module="diagnosis"><i>✦</i><span>知识问答</span></button>
+        <button data-module="rootcause"><i>◎</i><span>根因分析</span></button>
+        <button data-module="models"><i>▦</i><span>模型中心</span></button>
+        <button data-module="graph"><i>⌬</i><span>知识图谱</span></button>
+        <button data-module="cases"><i>▤</i><span>案例库</span></button>
+        <button data-module="knowledge"><i>▱</i><span>知识管理</span></button>
+      </nav>
+
+      <section class="session-zone" id="sessionZone">
+        <button class="primary-button full" id="newSession">＋ 新建问答</button>
+        <div class="section-label">近期会话</div>
+        <nav class="session-list" id="sessionList" aria-label="近期会话"></nav>
+      </section>
+
+      <div class="sidebar-footer">
+        <div class="theme-switcher" aria-label="页面主题">
+          <button data-theme-choice="night" title="深色科技">◐</button>
+          <button data-theme-choice="paper" title="论文浅色">☼</button>
+          <button data-theme-choice="lab" title="实验室蓝">◒</button>
+        </div>
+        <div class="connection"><i id="statusDot"></i><span id="statusText">正在连接本机服务</span></div>
+        <button class="ghost-button full" id="openSettings">模型与 API 设置</button>
+      </div>
+    </aside>
+
+    <main class="workspace">
+      <section class="page diagnosis-page active" id="page-diagnosis">
+        <header class="topbar">
+          <div><div class="eyebrow">KNOWLEDGE SESSION</div><h1 id="sessionTitle">未命名问答</h1></div>
+          <div class="top-actions">
+            <span class="pill" id="modelBadge">模型未配置</span>
+            <button class="icon-button" id="deleteSession" title="删除当前问答" aria-label="删除当前问答">⌫</button>
+          </div>
+        </header>
+
+        <section class="conversation" id="conversation">
+          <div class="welcome" id="welcome">
+            <div class="knowledge-orbit" aria-hidden="true"><span>文档</span><span>图谱</span><span>案例</span><b>AI</b></div>
+            <div class="eyebrow">KNOWLEDGE-ENHANCED ASSISTANT</div>
+            <h2>从知识中找到可靠答案。</h2>
+            <p>询问航空发动机相关概念、故障机理、排查思路或维修支持知识。回答会检索文档、知识图谱和案例，并标明证据不足的情况。</p>
+            <div class="prompt-grid">
+              <button data-prompt="什么是压气机喘振？通常应从哪些方向排查？"><b>压气机喘振</b><span>查询机理与排查知识</span></button>
+              <button data-prompt="EGT 异常升高可能和哪些系统有关？"><b>EGT 异常升高</b><span>检索关联部件与原因</span></button>
+              <button data-prompt="知识增强的故障诊断流程是怎样的？"><b>知识增强诊断</b><span>了解系统工作方式</span></button>
+            </div>
+          </div>
+          <div id="messages" class="messages"></div>
+        </section>
+
+        <section class="composer-wrap">
+          <form class="composer" id="diagnosisForm">
+            <div class="attachment-list" id="qaAttachmentList"></div>
+            <textarea id="question" rows="1" maxlength="1800" placeholder="输入你的知识问题…" required></textarea>
+            <div class="composer-actions">
+              <input class="hidden" id="qaAttachmentInput" type="file" accept=".txt,.md,.markdown,.csv,.json" multiple>
+              <button type="button" class="tool-button" id="attachQuestion" title="添加文本附件">＋ 附件</button>
+              <button type="button" class="tool-button" id="voiceQuestion" title="语音输入">◉ 语音</button>
+              <span id="composerHint">Enter 发送 · Shift+Enter 换行</span>
+              <button type="submit" class="send-button" id="sendButton">发送 <b>↗</b></button>
+            </div>
+          </form>
+          <p class="disclaimer">附件摘录会随当前短期会话保存；知识回答仅供学习与工程参考。</p>
+        </section>
+      </section>
+
+      <section class="page management-page" id="page-graph">
+        <header class="management-header">
+          <div><div class="eyebrow">KNOWLEDGE GRAPH</div><h1>故障传播知识图谱</h1><p>按症状、部件、故障模式、原因和措施组织可追溯知识。</p></div>
+          <div class="header-search"><input id="graphSearch" placeholder="搜索节点或描述"><button id="refreshGraph">搜索</button></div>
+        </header>
+        <div class="metric-row">
+          <article><span>节点</span><b id="graphNodeCount">0</b></article>
+          <article><span>关系</span><b id="graphEdgeCount">0</b></article>
+          <article><span>节点类型</span><b id="graphKindCount">0</b></article>
+        </div>
+        <div class="graph-workbench">
+          <div class="graph-canvas">
+            <div class="graph-canvas-toolbar"><span>滚轮缩放 · 拖拽平移 · 拖动节点</span><button id="resetGraph" type="button">重置视图</button></div>
+            <div id="graphChart" class="graph-chart" role="img" aria-label="航空发动机故障知识图谱"></div>
+            <div class="canvas-empty" id="graphEmpty">当前知识库尚无活动图谱数据。</div>
+          </div>
+          <aside class="detail-panel" id="graphDetail"><div class="eyebrow">NODE INSPECTOR</div><h3>选择一个节点</h3><p>点击图中的节点查看类型、描述、版本和来源。</p></aside>
+        </div>
+        <div class="graph-legend" id="graphLegend"></div>
+      </section>
+
+      <section class="page management-page" id="page-cases">
+        <header class="management-header">
+          <div><div class="eyebrow">CASE LIBRARY</div><h1>诊断案例库</h1><p>沉淀已确认的现象、诊断依据、处置过程与结果。</p></div>
+          <div class="header-search"><input id="caseSearch" placeholder="搜索症状、故障或标签"><button id="refreshCases">搜索</button></div>
+        </header>
+        <div class="metric-row">
+          <article><span>案例总数</span><b id="caseCount">0</b></article>
+          <article><span>当前筛选</span><b id="caseFilterCount">0</b></article>
+          <article><span>存储模式</span><b class="metric-text">VERSIONED</b></article>
+        </div>
+        <div class="case-grid" id="caseGrid"><div class="collection-empty">案例库当前为空。</div></div>
+      </section>
+
+      <section class="page management-page" id="page-knowledge">
+        <header class="management-header">
+          <div><div class="eyebrow">KNOWLEDGE OPERATIONS</div><h1>知识库管理</h1><p>上传手册与结构化资料，并通过不可变版本维护知识来源。</p></div>
+          <button class="primary-button" id="refreshKnowledge">刷新目录</button>
+        </header>
+        <div class="knowledge-layout">
+          <section class="upload-card">
+            <div class="upload-icon">⇧</div><h2>导入知识文件</h2>
+            <p>支持 TXT、Markdown 和 CSV。更新已有文档时会生成新版本，旧版本保留用于审计。</p>
+            <label>Operator Token<input id="operatorToken" type="password" autocomplete="off" placeholder="由本机启动配置提供"></label>
+            <label>更新目标<select id="documentTarget"><option value="">创建新的逻辑文档</option></select></label>
+            <div class="drop-zone" id="dropZone"><input id="knowledgeFile" type="file" accept=".txt,.md,.markdown,.csv"><b id="fileLabel">选择文件或拖放到这里</b><span>最大 10 MB · 原文件不会被移动或修改</span></div>
+            <button class="primary-button full" id="uploadKnowledge">解析并发布新版本</button>
+            <div class="operation-result" id="uploadResult"></div>
+          </section>
+          <section class="catalog-card">
+            <div class="catalog-head"><div><div class="eyebrow">VERSION CATALOG</div><h2>知识文档</h2></div><span class="pill" id="documentCount">0 DOCUMENTS</span></div>
+            <div class="document-list" id="documentList"><div class="collection-empty">知识库当前为空。</div></div>
+          </section>
+        </div>
+      </section>
+
+      <section class="page management-page root-cause-page" id="page-rootcause">
+        <header class="management-header">
+          <div><div class="eyebrow">KNOWLEDGE-ENHANCED RCA</div><h1>交互式故障根因分析</h1><p>诊断模型提供初步部件结果，多 Agent 结合知识与工程师反馈持续缩小根因范围。</p></div>
+          <button class="ghost-button" id="loadRcaSessions">历史会话</button>
+        </header>
+        <div class="metric-row">
+          <article><span>工作流状态</span><b class="metric-text" id="rcaStatus">WAITING</b></article>
+          <article><span>数据行数</span><b id="rcaRows">0</b></article>
+          <article><span>初步定位</span><b class="metric-text" id="rcaComponent">未运行</b></article>
+        </div>
+        <nav class="rca-steps" aria-label="根因分析阶段">
+          <button class="active" data-rca-stage="1"><span>01</span><b>数据与模型</b><small>上传并校验</small></button>
+          <button data-rca-stage="2"><span>02</span><b>初步定位</b><small>查看模型输出</small></button>
+          <button data-rca-stage="3"><span>03</span><b>交互排查</b><small>循环缩小根因</small></button>
+          <button data-rca-stage="4"><span>04</span><b>分析报告</b><small>汇总结论与限制</small></button>
+        </nav>
+        <div class="rca-stage-viewport">
+          <section class="rca-stage-panel active" data-rca-panel="1">
+            <div class="stage-intro"><span>STEP 01</span><div><h2>选择模型并上传对应数据</h2><p>系统先验证数据画像；只有与模型插件兼容的数据才能进入知识增强流程。</p></div></div>
+            <div class="rca-entry-grid">
+              <section class="upload-card rca-start-card">
+                <div class="upload-icon">↯</div><h2>上传诊断数据</h2>
+                <p>CSV 必须与所选模型的数据画像一致。上传数据会自动触发模型推理与根因分析 Loop。</p>
+                <label>诊断模型<select id="rcaModel"></select></label>
+                <div class="drop-zone" id="rcaDropZone"><input id="rcaFile" type="file" accept=".csv"><b id="rcaFileLabel">选择诊断 CSV</b><span>教学模型需要 fan_vibration、pressure_ratio、egt、n1</span></div>
+                <div class="button-row"><button class="ghost-button" id="useDemoData">载入风扇演示数据</button><button class="primary-button" id="startRca">开始知识增强诊断</button></div>
+                <div class="operation-result" id="rcaOperation"></div>
+              </section>
+              <section class="rca-history-card"><div class="eyebrow">RECENT RUNS</div><h2>历史根因会话</h2><p>点击任一记录可直接跳转到对应阶段并继续或回放。</p><div class="recent-rca" id="rcaSessionList"></div></section>
+            </div>
+          </section>
+          <section class="rca-stage-panel" data-rca-panel="2">
+            <div class="stage-intro"><span>STEP 02</span><div><h2>确认初步部件定位</h2><p>模型结果只是分析起点。查看概率、适用性与候选根因后再进入交互排查。</p></div><button class="primary-button" data-stage-next="3">进入交互排查 →</button></div>
+            <div class="agent-loop" id="agentLoop"><div class="collection-empty">上传数据后显示多 Agent 路由和循环轨迹。</div></div>
+            <div class="rca-columns">
+              <section class="rca-panel"><div class="eyebrow">MODEL OUTPUT</div><h2>初步模型结果</h2><div id="modelPredictions" class="prediction-list"><div class="collection-empty">等待模型推理。</div></div></section>
+              <section class="rca-panel"><div class="eyebrow">HYPOTHESES</div><h2>候选根因</h2><div id="hypothesisList" class="hypothesis-list"><div class="collection-empty">等待知识召回。</div></div></section>
+            </div>
+          </section>
+          <section class="rca-stage-panel" data-rca-panel="3">
+            <div class="stage-intro"><span>STEP 03</span><div><h2>根据现场反馈循环排查</h2><p>每次只处理一项最有区分度的检查，反馈后自动更新候选并规划下一步。</p></div></div>
+            <div class="loop-progress" id="loopProgress"></div>
+            <section class="inspection-card" id="inspectionCard"><div class="eyebrow">HUMAN IN THE LOOP</div><h2>等待下一项检查</h2><p>Agent 将根据候选根因选择需要工程师反馈的检查。</p></section>
+          </section>
+          <section class="rca-stage-panel" data-rca-panel="4">
+            <div class="stage-intro"><span>STEP 04</span><div><h2>知识增强分析报告</h2><p>报告只汇总冻结的模型结果、知识和工程师观察，并明确保留不确定性。</p></div></div>
+            <section class="rca-panel report-panel" id="rcaReport"><div class="eyebrow">KNOWLEDGE-ENHANCED REPORT</div><h2>根因分析与维修支持报告</h2><div id="rcaReportBody"><div class="collection-empty">完成交互排查后可生成报告。</div></div></section>
+          </section>
+        </div>
+      </section>
+
+      <section class="page management-page" id="page-models">
+        <header class="management-header">
+          <div><div class="eyebrow">MODEL REGISTRY</div><h1>诊断模型注册中心</h1><p>模型必须绑定数据集、字段画像、预处理、标签空间和适用边界。</p></div>
+          <button class="primary-button" id="refreshModels">刷新模型</button>
+        </header>
+        <div class="metric-row">
+          <article><span>已注册模型</span><b id="modelCount">0</b></article>
+          <article><span>活动模型</span><b id="activeModelCount">0</b></article>
+          <article><span>运行策略</span><b class="metric-text">DATASET-BOUND</b></article>
+        </div>
+        <div class="knowledge-layout model-layout">
+          <section class="catalog-card"><div class="catalog-head"><div><div class="eyebrow">PLUGIN CATALOG</div><h2>模型插件</h2></div></div><div class="model-grid" id="modelGrid"><div class="collection-empty">正在读取模型注册表。</div></div></section>
+          <section class="upload-card model-register-card">
+            <div class="upload-icon">＋</div><h2>注册声明式模型</h2>
+            <p>当前安全基线支持 linear_json_v1；深度模型后续通过 ONNX/TorchScript 适配同一协议。</p>
+            <label>Operator Token<input id="modelOperatorToken" type="password" autocomplete="off" placeholder="本机写操作令牌"></label>
+            <label>模型 Manifest<textarea id="modelManifest" rows="12" placeholder='{"model_id":"..."}'></textarea></label>
+            <button class="primary-button full" id="registerModel">校验并注册</button>
+            <div class="operation-result" id="modelOperation"></div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+  </div>
+
+  <dialog id="settingsDialog">
+    <form method="dialog" class="settings-card" id="settingsForm">
+      <div class="dialog-head"><div><div class="eyebrow">MODEL PROVIDER</div><h2>模型与 API 设置</h2></div><button value="cancel" class="icon-button">×</button></div>
+      <p>本机可配置一次默认模型；也可以只在当前浏览器标签页使用个人 API。</p>
+      <div class="provider-modes">
+        <label><input type="radio" name="providerMode" value="default" id="providerModeDefault"><span><b>本机默认模型</b><small id="defaultProviderState">正在检查配置</small></span></label>
+        <label><input type="radio" name="providerMode" value="personal" id="providerModePersonal"><span><b>个人 API</b><small>仅保存在当前标签页</small></span></label>
+      </div>
+      <div id="personalProviderFields">
+        <label>OpenAI-compatible Base URL<input id="baseUrl" type="url" placeholder="https://api.example.com/v1" autocomplete="off"></label>
+        <label>模型名称<input id="modelName" placeholder="provider-model-name" autocomplete="off"></label>
+        <label>API Key<input id="apiKey" type="password" placeholder="••••••••••••" autocomplete="off"></label>
+        <label>请求超时（秒）<input id="timeout" type="number" value="60" min="1" max="300"></label>
+      </div>
+      <div class="dialog-actions"><button value="cancel" class="ghost-button">取消</button><button value="default" class="primary-button" id="saveSettings">保存选择</button></div>
+    </form>
+  </dialog>
+
+  <script src="/assets/vendor/echarts.min.js" defer></script>
+  <script src="/assets/app.js" defer></script>
+</body>
+</html>

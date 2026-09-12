@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+.venv/
+venv/
+.runtime/
+.test-tmp/
+.runtime-path
+.uv-cache/
+
+# Runtime data
+.env
+.env.*
+!.env.example
+uploads/
+data/
+logs/
+chroma_data/
+neo4j-data/
+*.sqlite
+*.sqlite3
+*.db
+*.log
+*.pid.json
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Secrets
+env.txt
+*.pem
+*.key
+credentials.json
+secrets.yaml

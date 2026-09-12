@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">AeroDiagnosis</title>
+  <desc id="desc">航空发动机故障诊断模型与知识增强 Agent 协同工作的项目封面</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07131d"/>
+      <stop offset="0.55" stop-color="#0b2430"/>
+      <stop offset="1" stop-color="#103b42"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#5de0d8" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#5de0d8" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" fill="none" stroke="#58d6d0" stroke-opacity="0.07"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="420" rx="28" fill="url(#background)"/>
+  <rect width="1200" height="420" rx="28" fill="url(#grid)"/>
+  <circle cx="930" cy="210" r="260" fill="url(#glow)"/>
+  <g transform="translate(82 78)">
+    <text x="0" y="40" fill="#58d6d0" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="17" letter-spacing="5">KNOWLEDGE-ENHANCED DIAGNOSTIC AGENT</text>
+    <text x="0" y="112" fill="#f4f7f8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="58" font-weight="700">AeroDiagnosis</text>
+    <text x="0" y="164" fill="#b9c8ce" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="24">航空发动机气路故障 · 知识增强分析工作台</text>
+    <line x1="0" y1="202" x2="440" y2="202" stroke="#58d6d0" stroke-opacity="0.35"/>
+    <g transform="translate(0 232)" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15">
+      <rect width="116" height="38" rx="19" fill="#102d38" stroke="#58d6d0" stroke-opacity="0.55"/>
+      <text x="58" y="25" fill="#d8eeee" text-anchor="middle">模型插件</text>
+      <rect x="130" width="116" height="38" rx="19" fill="#102d38" stroke="#58d6d0" stroke-opacity="0.55"/>
+      <text x="188" y="25" fill="#d8eeee" text-anchor="middle">证据检索</text>
+      <rect x="260" width="116" height="38" rx="19" fill="#102d38" stroke="#58d6d0" stroke-opacity="0.55"/>
+      <text x="318" y="25" fill="#d8eeee" text-anchor="middle">根因 Loop</text>
+      <rect x="390" width="116" height="38" rx="19" fill="#102d38" stroke="#58d6d0" stroke-opacity="0.55"/>
+      <text x="448" y="25" fill="#d8eeee" text-anchor="middle">可追溯报告</text>
+    </g>
+  </g>
+  <g transform="translate(900 210)">
+    <circle r="132" fill="none" stroke="#58d6d0" stroke-opacity="0.2" stroke-width="2"/>
+    <circle r="98" fill="none" stroke="#58d6d0" stroke-opacity="0.32" stroke-width="2" stroke-dasharray="8 10"/>
+    <circle r="58" fill="#0d2631" stroke="#58d6d0" stroke-width="2"/>
+    <circle r="18" fill="#f2b85b"/>
+    <g fill="#58d6d0">
+      <path d="M0-84C23-70 35-49 31-28C15-43-4-49-23-43C-25-61-17-76 0-84Z"/>
+      <path d="M72-42C72-16 60 5 41 14C44-8 38-27 24-41C40-50 57-50 72-42Z"/>
+      <path d="M72 42C49 56 25 57 7 45C29 38 43 24 48 4C65 10 75 23 72 42Z"/>
+      <path d="M0 84C-23 70-35 49-31 28C-15 43 4 49 23 43C25 61 17 76 0 84Z"/>
+      <path d="M-72 42C-72 16-60-5-41-14C-44 8-38 27-24 41C-40 50-57 50-72 42Z"/>
+      <path d="M-72-42C-49-56-25-57-7-45C-29-38-43-24-48-4C-65-10-75-23-72-42Z"/>
+    </g>
+    <g fill="#f2b85b" stroke="#07131d" stroke-width="4">
+      <circle cx="-116" cy="-64" r="11"/>
+      <circle cx="130" cy="-48" r="11"/>
+      <circle cx="104" cy="92" r="11"/>
+    </g>
+    <g stroke="#f2b85b" stroke-width="2" stroke-opacity="0.7">
+      <path d="M-105-58L-73-40"/>
+      <path d="M119-44L77-29"/>
+      <path d="M95 84L61 54"/>
+    </g>
+    <circle r="144" fill="none" stroke="#58d6d0" stroke-opacity="0.16" stroke-width="12" filter="url(#shadow)"/>
+  </g>
+</svg>
