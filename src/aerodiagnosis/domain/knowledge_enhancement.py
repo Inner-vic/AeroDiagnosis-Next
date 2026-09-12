@@ -19,6 +19,11 @@ class RootCauseSessionStatus(StrEnum):
     COMPLETED = "completed"
 
 
+class CaseDraftStatus(StrEnum):
+    DRAFT = "draft"
+    PUBLISHED = "published"
+
+
 class FeatureSpecification(BaseModel):
     model_config = ConfigDict(extra="forbid", frozen=True)
 
@@ -168,6 +173,24 @@ class KnowledgeEnhancedReport(BaseModel):
     limitations: tuple[str, ...] = Field(min_length=1, max_length=10)
 
 
+class RootCauseCaseDraft(BaseModel):
+    """Reviewable case distilled from one completed root-cause session."""
+
+    model_config = ConfigDict(extra="forbid", frozen=True)
+
+    case_id: str = Field(min_length=8, max_length=80)
+    status: CaseDraftStatus = CaseDraftStatus.DRAFT
+    summary: str = Field(min_length=1, max_length=2000)
+    source_rca_id: str
+    initial_component: str
+    leading_root_cause: str
+    confidence: float = Field(ge=0.0, le=1.0)
+    observation_count: int = Field(ge=0)
+    tags: tuple[str, ...] = Field(max_length=20)
+    created_at: str
+    published_at: str | None = None
+
+
 class RootCauseSession(BaseModel):
     model_config = ConfigDict(extra="forbid", frozen=True)
 
@@ -180,6 +203,7 @@ class RootCauseSession(BaseModel):
     next_action: InspectionProposal | None
     trace: tuple[AgentTraceEvent, ...]
     report: KnowledgeEnhancedReport | None = None
+    case_draft: RootCauseCaseDraft | None = None
     created_at: str
     updated_at: str
 

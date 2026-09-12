@@ -209,6 +209,25 @@ def finalize_root_cause_session(
 
 
 @router.post(
+    "/root-cause-sessions/{rca_id}/case",
+    response_model=RootCauseSession,
+    tags=["root-cause"],
+)
+def publish_root_cause_case(
+    rca_id: str,
+    application: ApplicationDependency,
+) -> RootCauseSession:
+    try:
+        return application.knowledge_enhanced_diagnosis.publish_case(rca_id)
+    except KeyError as exc:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=str(exc)) from exc
+    except ValueError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail=str(exc)
+        ) from exc
+
+
+@router.post(
     "/documents",
     response_model=IngestDocumentResponse,
     status_code=status.HTTP_201_CREATED,

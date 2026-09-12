@@ -11,8 +11,8 @@
 [![CI](https://github.com/Inner-vic/AeroDiagnosis-Next/actions/workflows/ci.yml/badge.svg)](https://github.com/Inner-vic/AeroDiagnosis-Next/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/Python-3.13-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
-[![Tests](https://img.shields.io/badge/tests-95%20passed-2E8B57)](#质量与验证)
-[![Coverage](https://img.shields.io/badge/coverage-88.97%25-2E8B57)](#质量与验证)
+[![Tests](https://img.shields.io/badge/tests-96%20passed-2E8B57)](#质量与验证)
+[![Coverage](https://img.shields.io/badge/coverage-88.58%25-2E8B57)](#质量与验证)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 </div>
@@ -41,7 +41,9 @@ flowchart LR
     F --> G{工程师反馈}
     G -->|发现 / 未发现 / 不确定| E
     G -->|证据充分或人工结束| H[根因分析与维修支持报告]
-    H --> I[保存证据、轨迹与会话]
+    H --> I[生成待确认案例]
+    I -->|人工确认| J[发布到案例库]
+    J --> D
 ```
 
 ## 核心能力
@@ -53,6 +55,7 @@ flowchart LR
 | 模型插件中心 | 模型清单、数据集绑定、特征契约、标签空间与 OOD 拒绝 | ✅ |
 | 知识图谱 | 力导向布局、拖拽、缩放、平移、邻接高亮、详情与图片导出 | ✅ |
 | 案例库 | 保存现象、诊断依据、排查过程和结果，支持检索 | ✅ |
+| 诊断知识闭环 | 报告生成案例草稿，经确认后发布到案例库并参与后续检索 | ✅ |
 | 知识管理 | TXT、Markdown、CSV 上传与不可变版本管理 | ✅ |
 | 短期会话记忆 | 问答历史持久化、回放与显式删除 | ✅ |
 | 多模型接入 | 本机默认模型或使用者自己的 OpenAI-compatible API | ✅ |
@@ -71,6 +74,7 @@ flowchart LR
 6. 工程师反馈“发现、未发现、不确定或无法检查”。
 7. 系统更新候选分数和证据状态，进入下一轮。
 8. 报告 Agent 只基于冻结证据生成根因分析与维修支持参考。
+9. Case Curator 将完整轨迹整理成待确认案例，人工确认后进入案例库。
 
 整个过程保存模型结果、知识证据、候选变化、现场观察、Agent 轨迹与最终报告，可供回放和审计。
 
@@ -99,6 +103,7 @@ flowchart TB
         GEN[Generator]
         VERIFY[Verifier]
         REPORT[Report Agent]
+        CURATOR[Case Curator]
     end
 
     subgraph PORTS[Domain Ports]
@@ -247,6 +252,7 @@ AERODIAGNOSIS_LLM_API_KEY=your-api-key
 | `POST /api/root-cause-sessions` | 上传数据并启动根因分析 |
 | `POST /api/root-cause-sessions/{id}/observations` | 提交工程师观察并继续 Loop |
 | `POST /api/root-cause-sessions/{id}/finalize` | 生成并冻结分析报告 |
+| `POST /api/root-cause-sessions/{id}/case` | 确认案例草稿并发布到案例库 |
 
 ## 项目结构
 
@@ -279,8 +285,8 @@ code/python/                # 旧版原型，仅用于迁移期行为参考
 
 当前基线：
 
-- 95 项自动化测试通过；
-- 总覆盖率 88.97%；
+- 96 项自动化测试通过；
+- 总覆盖率 88.58%；
 - Ruff 静态检查通过；
 - mypy strict 类型检查通过；
 - wheel 与 source distribution 可重复构建；

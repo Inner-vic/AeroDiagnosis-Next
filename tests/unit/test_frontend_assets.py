@@ -43,6 +43,8 @@ def test_frontend_exposes_focused_knowledge_qa_and_progressive_root_cause_flow()
     assert "/graph?" in script
     assert "/cases?" in script
     assert "/root-cause-sessions" in script
+    assert "/case`" in script
+    assert "确认并发布到案例库" in script
     assert "/models" in script
     assert "demoRcaCsv" in script
     assert "addQaAttachments" in script

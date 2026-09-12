@@ -16,6 +16,7 @@ from pydantic import ValidationError
 
 from aerodiagnosis.domain import (
     AgentTraceEvent,
+    CaseDraftStatus,
     ClassSpecification,
     ComponentPrediction,
     DatasetProfile,
@@ -27,12 +28,19 @@ from aerodiagnosis.domain import (
     ModelPluginManifest,
     ModelPluginRecord,
     PluginStatus,
+    RootCauseCaseDraft,
     RootCauseCoordination,
     RootCauseHypothesis,
     RootCauseSession,
     RootCauseSessionStatus,
 )
-from aerodiagnosis.ports import KnowledgeEnhancementStore, LanguageModel, LanguageModelError
+from aerodiagnosis.ports import (
+    CaseRecord,
+    CaseStore,
+    KnowledgeEnhancementStore,
+    LanguageModel,
+    LanguageModelError,
+)
 
 
 @dataclass(frozen=True, slots=True)
@@ -224,8 +232,11 @@ def teaching_demo_manifest() -> ModelPluginManifest:
 
 
 class KnowledgeEnhancedDiagnosis:
-    def __init__(self, store: KnowledgeEnhancementStore) -> None:
+    def __init__(
+        self, store: KnowledgeEnhancementStore, case_store: CaseStore | None = None
+    ) -> None:
         self._store = store
+        self._case_store = case_store
         if store.get_model("teaching-linear-gaspath") is None:
             store.register_model(teaching_demo_manifest())
 
@@ -392,7 +403,28 @@ class KnowledgeEnhancedDiagnosis:
     def finalize(self, rca_id: str, language_model: LanguageModel) -> RootCauseSession:
         session = self.get(rca_id)
         if session.status is RootCauseSessionStatus.COMPLETED:
-            return session
+            if session.case_draft is not None:
+                return session
+            if session.report is None:
+                raise ValueError("completed root-cause session has no report")
+            now = datetime.now(UTC).isoformat()
+            updated = session.model_copy(
+                update={
+                    "case_draft": self._build_case_draft(session, session.report, now),
+                    "trace": (
+                        *session.trace,
+                        self._event(
+                            len(session.trace) + 1,
+                            "case_curator_agent",
+                            "case_draft_created",
+                            "已从冻结诊断轨迹生成待确认案例草稿。",
+                        ),
+                    ),
+                    "updated_at": now,
+                }
+            )
+            self._store.save_session(updated)
+            return updated
         knowledge = self._component_knowledge(session.model_result.predictions[0].component)
         raw = language_model.complete_json(
             "write_root_cause_report",
@@ -427,6 +459,7 @@ class KnowledgeEnhancedDiagnosis:
         if not mandatory_limitations.issubset(set(report.limitations)):
             raise LanguageModelError("root-cause report omitted mandatory safety limitations")
         now = datetime.now(UTC).isoformat()
+        case_draft = self._build_case_draft(session, report, now)
         trace = (
             *session.trace,
             self._event(
@@ -436,6 +469,12 @@ class KnowledgeEnhancedDiagnosis:
                 "已从冻结的模型结果、知识和工程师观察生成知识增强报告。",
                 status="completed",
             ),
+            self._event(
+                len(session.trace) + 2,
+                "case_curator_agent",
+                "case_draft_created",
+                "已从冻结诊断轨迹生成待确认案例草稿。",
+            ),
         )
         updated = session.model_copy(
             update={
@@ -443,11 +482,106 @@ class KnowledgeEnhancedDiagnosis:
                 "next_action": None,
                 "trace": trace,
                 "report": report,
+                "case_draft": case_draft,
                 "updated_at": now,
             }
         )
         self._store.save_session(updated)
         return updated
+
+    def publish_case(self, rca_id: str) -> RootCauseSession:
+        """Publish a reviewed RCA draft into the searchable case base, idempotently."""
+
+        session = self.get(rca_id)
+        if session.status is not RootCauseSessionStatus.COMPLETED or session.report is None:
+            raise ValueError("only completed root-cause sessions can publish a case")
+        if session.case_draft is None:
+            raise ValueError("root-cause session has no case draft")
+        if session.case_draft.status is CaseDraftStatus.PUBLISHED:
+            return session
+        if self._case_store is None:
+            raise RuntimeError("case publishing is unavailable")
+
+        draft = session.case_draft
+        leading = max(session.hypotheses, key=lambda item: item.score)
+        self._case_store.upsert(
+            CaseRecord(
+                case_id=draft.case_id,
+                version=1,
+                summary=draft.summary,
+                attributes={
+                    "source": "root_cause_session",
+                    "source_rca_id": session.rca_id,
+                    "dataset": session.dataset.display_name,
+                    "dataset_id": session.model_result.dataset_id,
+                    "model_id": session.model_result.model_id,
+                    "model_version": session.model_result.model_version,
+                    "initial_component": draft.initial_component,
+                    "leading_root_cause": draft.leading_root_cause,
+                    "confidence": round(draft.confidence, 4),
+                    "hypothesis_id": leading.hypothesis_id,
+                    "observations": [
+                        {
+                            "action_id": item.action_id,
+                            "outcome": item.outcome,
+                            "notes": item.notes,
+                        }
+                        for item in session.observations
+                    ],
+                    "root_cause_analysis": session.report.root_cause_analysis,
+                    "maintenance_support": list(session.report.maintenance_support),
+                    "limitations": list(session.report.limitations),
+                    "tags": list(draft.tags),
+                },
+            )
+        )
+        now = datetime.now(UTC).isoformat()
+        updated_draft = draft.model_copy(
+            update={"status": CaseDraftStatus.PUBLISHED, "published_at": now}
+        )
+        trace = (
+            *session.trace,
+            self._event(
+                len(session.trace) + 1,
+                "case_curator_agent",
+                "case_published",
+                f"案例 {draft.case_id} 已确认并发布到案例库。",
+                status="completed",
+            ),
+        )
+        updated = session.model_copy(
+            update={"case_draft": updated_draft, "trace": trace, "updated_at": now}
+        )
+        self._store.save_session(updated)
+        return updated
+
+    @staticmethod
+    def _build_case_draft(
+        session: RootCauseSession, report: KnowledgeEnhancedReport, created_at: str
+    ) -> RootCauseCaseDraft:
+        leading = max(session.hypotheses, key=lambda item: item.score)
+        initial = session.model_result.predictions[0]
+        summary = (
+            f"{session.dataset.display_name}：初步定位为{initial.label}；"
+            f"交互排查后优先根因为{leading.label}。{report.summary}"
+        )[:2000]
+        case_id = f"RCA-{session.rca_id.replace('-', '').upper()}"
+        return RootCauseCaseDraft(
+            case_id=case_id,
+            summary=summary,
+            source_rca_id=session.rca_id,
+            initial_component=initial.label,
+            leading_root_cause=leading.label,
+            confidence=leading.score,
+            observation_count=len(session.observations),
+            tags=(
+                initial.component,
+                session.model_result.dataset_id,
+                leading.hypothesis_id,
+                "knowledge_enhanced",
+            ),
+            created_at=created_at,
+        )
 
     @staticmethod
     def _profile_csv(

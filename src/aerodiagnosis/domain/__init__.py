@@ -21,6 +21,7 @@ from aerodiagnosis.domain.evidence import (
 )
 from aerodiagnosis.domain.knowledge_enhancement import (
     AgentTraceEvent,
+    CaseDraftStatus,
     ClassSpecification,
     ComponentPrediction,
     DatasetProfile,
@@ -32,6 +33,7 @@ from aerodiagnosis.domain.knowledge_enhancement import (
     ModelPluginManifest,
     ModelPluginRecord,
     PluginStatus,
+    RootCauseCaseDraft,
     RootCauseCoordination,
     RootCauseHypothesis,
     RootCauseSession,
@@ -40,6 +42,7 @@ from aerodiagnosis.domain.knowledge_enhancement import (
 
 __all__ = [
     "AgentTraceEvent",
+    "CaseDraftStatus",
     "ClassSpecification",
     "ComponentPrediction",
     "DatasetProfile",
@@ -59,6 +62,7 @@ __all__ = [
     "ModelPluginRecord",
     "ParameterObservation",
     "PluginStatus",
+    "RootCauseCaseDraft",
     "RootCauseCoordination",
     "RootCauseHypothesis",
     "RootCauseSession",

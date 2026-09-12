@@ -102,5 +102,7 @@ def bootstrap(settings: RuntimeSettings | None = None) -> Application:
             memory=memory,
             manifest_counts=manifest.counts,
         ),
-        knowledge_enhanced_diagnosis=KnowledgeEnhancedDiagnosis(knowledge_enhancement_store),
+        knowledge_enhanced_diagnosis=KnowledgeEnhancedDiagnosis(
+            knowledge_enhancement_store, case_store
+        ),
     )

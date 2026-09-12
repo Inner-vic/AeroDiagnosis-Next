@@ -80,8 +80,8 @@ fail-closed 语义。真实 provider 的诊断质量必须在用户提供 API �
 - SQLite：schema 6，vector=`sqlite_hashing`，graph=`sqlite_graph`；
 - Ruff：通过；
 - mypy strict：通过（55 个 source files）；
-- pytest：95 passed；
-- branch coverage：88.99%（门槛 85%）；
+- pytest：96 passed；
+- branch coverage：88.58%（门槛 85%）；
 - legacy compileall：通过；
 - sdist + wheel：构建通过，wheel 内含三项前端静态资源；
 - JavaScript：`node --check` 通过；
