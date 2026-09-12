@@ -5,7 +5,7 @@ from pathlib import Path
 from aerodiagnosis.adapters.persistence import SQLiteCaseStore
 from aerodiagnosis.adapters.persistence.sqlite_graph import SQLiteGraphStore
 from aerodiagnosis.adapters.persistence.sqlite_vector import SQLiteVectorStore
-from aerodiagnosis.domain import DiagnosisCommand, ParameterObservation
+from aerodiagnosis.domain import DiagnosisCommand, ParameterObservation, RetrievalStrategy
 from aerodiagnosis.ingestion import DocumentIngestionService, DocumentManifest
 from aerodiagnosis.ports import CaseRecord, GraphEdge, GraphNode
 from aerodiagnosis.tools.diagnostic import (
@@ -68,7 +68,8 @@ def test_four_domain_tools_return_typed_provenance(tmp_path: Path) -> None:
     )
     cases = SQLiteCaseStore(path)
     cases.upsert(CaseRecord("case-1", 1, "Compressor stall case with EGT rise."))
-    assert cases.list_cases()[0].case_id == "case-1"
+    cases.upsert(CaseRecord("case-2", 1, "A second compressor stall investigation."))
+    assert {item.case_id for item in cases.list_cases()} == {"case-1", "case-2"}
     tools = _tools(path)
     command = DiagnosisCommand(
         session_id="session",
@@ -117,14 +118,14 @@ def test_four_domain_tools_return_typed_provenance(tmp_path: Path) -> None:
     assert parameter_items[0].source_kind == "parameter_analysis"
     assert "above" in parameter_items[0].excerpt
     all_items = (*manual, *graph_items, *case_items, *parameter_items)
-    assert len({item.evidence_id for item in all_items}) == 4
+    assert len({item.evidence_id for item in all_items}) == 5
 
     hybrid = tools.hybrid_search(
         command=command,
         query="Compressor stall EGT",
         active_version_ids=active,
     )
-    assert hybrid.algorithm == "weighted_rrf@1"
+    assert hybrid.algorithm == "weighted_rrf@2"
     assert {route.route for route in hybrid.routes} == {"manual", "graph", "case"}
     assert all(route.included_count >= 1 for route in hybrid.routes)
     assert {hit.evidence.source_kind for hit in hybrid.hits} >= {
@@ -141,6 +142,48 @@ def test_four_domain_tools_return_typed_provenance(tmp_path: Path) -> None:
         active_version_ids=active,
     )
     assert fused_items == tuple(hit.evidence for hit in hybrid.hits)
+
+    manual_only = tools.hybrid_search(
+        command=command,
+        query="Compressor stall EGT",
+        active_version_ids=active,
+        strategy=RetrievalStrategy.MANUAL_ONLY,
+    )
+    assert manual_only.algorithm == "manual_only@1"
+    assert {hit.evidence.source_kind for hit in manual_only.hits} == {"document_chunk"}
+    assert not manual_only.route_coverage_enabled
+
+    rrf_k10 = tools.hybrid_search(
+        command=command,
+        query="Compressor stall EGT",
+        active_version_ids=active,
+        strategy=RetrievalStrategy.RRF,
+        rrf_k=10,
+        enforce_route_coverage=False,
+    )
+    rrf_k90 = tools.hybrid_search(
+        command=command,
+        query="Compressor stall EGT",
+        active_version_ids=active,
+        strategy=RetrievalStrategy.RRF,
+        rrf_k=90,
+        enforce_route_coverage=False,
+    )
+    assert rrf_k10.rrf_k == 10
+    assert rrf_k90.rrf_k == 90
+    rank_two_k10 = next(
+        part.reciprocal_rank_score
+        for hit in rrf_k10.hits
+        for part in hit.contributions
+        if part.route_rank == 2
+    )
+    rank_two_k90 = next(
+        part.reciprocal_rank_score
+        for hit in rrf_k90.hits
+        for part in hit.contributions
+        if part.route_rank == 2
+    )
+    assert rank_two_k10 < rank_two_k90
 
 
 def test_toolset_rejects_unknown_tool(tmp_path: Path) -> None:

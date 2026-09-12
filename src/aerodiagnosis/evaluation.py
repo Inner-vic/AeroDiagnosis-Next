@@ -109,6 +109,47 @@ def evaluate_retrieval(
     )
 
 
+def evidence_source_key(source_kind: str, source_ref: str) -> str:
+    """Return the stable, human-auditable key used by frozen retrieval judgments."""
+
+    return f"{source_kind}:{source_ref}"
+
+
+def evaluate_retrieval_sources(
+    result: HybridRetrievalResult,
+    relevant_source_keys: Set[str],
+) -> RetrievalMetrics:
+    """Score a ranked list using source identities that survive experiment reruns."""
+
+    if not relevant_source_keys:
+        raise ValueError("retrieval evaluation requires at least one relevant source key")
+    relevance = [
+        evidence_source_key(hit.evidence.source_kind, hit.evidence.source_ref)
+        in relevant_source_keys
+        for hit in result.hits
+    ]
+    retrieved_relevant = sum(relevance)
+    first_relevant = next((rank for rank, hit in enumerate(relevance, start=1) if hit), None)
+    dcg = sum(
+        1.0 / math.log2(rank + 1)
+        for rank, hit in enumerate(relevance, start=1)
+        if hit
+    )
+    ideal_hits = min(len(relevant_source_keys), result.top_k)
+    ideal_dcg = sum(1.0 / math.log2(rank + 1) for rank in range(1, ideal_hits + 1))
+    covered_routes = sum(route.included_count > 0 for route in result.routes)
+    return RetrievalMetrics(
+        top_k=result.top_k,
+        relevant_count=len(relevant_source_keys),
+        retrieved_relevant_count=retrieved_relevant,
+        precision_at_k=retrieved_relevant / result.top_k,
+        recall_at_k=min(1.0, retrieved_relevant / len(relevant_source_keys)),
+        reciprocal_rank=0.0 if first_relevant is None else 1.0 / first_relevant,
+        ndcg_at_k=0.0 if ideal_dcg == 0 else min(1.0, dcg / ideal_dcg),
+        source_coverage=covered_routes / len(result.routes),
+    )
+
+
 def _recall(required: tuple[str, ...], observed: set[str] | str) -> float:
     if not required:
         return 1.0

@@ -11,8 +11,8 @@
 [![CI](https://github.com/Inner-vic/AeroDiagnosis-Next/actions/workflows/ci.yml/badge.svg)](https://github.com/Inner-vic/AeroDiagnosis-Next/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/Python-3.13-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
-[![Tests](https://img.shields.io/badge/tests-99%20passed-2E8B57)](#质量与验证)
-[![Coverage](https://img.shields.io/badge/coverage-88.63%25-2E8B57)](#质量与验证)
+[![Tests](https://img.shields.io/badge/tests-102%20passed-2E8B57)](#质量与验证)
+[![Coverage](https://img.shields.io/badge/coverage-88.95%25-2E8B57)](#质量与验证)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 </div>
@@ -56,7 +56,7 @@ flowchart LR
 | 知识图谱 | 力导向布局、拖拽、缩放、平移、邻接高亮、详情与图片导出 | ✅ |
 | 案例库 | 保存现象、诊断依据、排查过程和结果，支持检索 | ✅ |
 | 诊断知识闭环 | 报告生成案例草稿，经确认后发布到案例库并参与后续检索 | ✅ |
-| 多路召回 | 知识文档、图谱和案例加权 RRF 融合，展示路由排名与分数组成 | ✅ |
+| 多路召回 | 知识文档、图谱和案例加权 RRF 融合，作为问答底层质量能力 | ✅ |
 | 知识管理 | TXT、Markdown、CSV 上传与不可变版本管理 | ✅ |
 | 短期会话记忆 | 问答历史持久化、回放与显式删除 | ✅ |
 | 多模型接入 | 本机默认模型或使用者自己的 OpenAI-compatible API | ✅ |
@@ -79,18 +79,28 @@ flowchart LR
 
 整个过程保存模型结果、知识证据、候选变化、现场观察、Agent 轨迹与最终报告，可供回放和审计。
 
-## 可解释的 Top K 多路召回
+## 面向质量的 Top K 多路召回
 
 知识文档、知识图谱和案例库的原始分数不在同一尺度上，不能直接放在一起排序。
-AeroDiagnosis 使用 `weighted_rrf@1` 执行以下过程：
+AeroDiagnosis 使用 `weighted_rrf@2` 执行以下过程：
 
 1. 每一路独立扩大候选集，并保留原始相关度和路由内排名；
 2. 使用加权 Reciprocal Rank Fusion 统一排名尺度；
 3. 当 Top K 足够时启用来源覆盖约束，防止单一路由占满结果；
-4. 返回每条证据的原始分、路由排名、权重、融合分和入选原因；
-5. 对带有人工相关性标注的数据计算 Precision@K、Recall@K、MRR、nDCG@K 和来源覆盖率。
+4. 在后台保留每条证据的原始分、路由排名、权重、融合分和入选原因；
+5. 使用冻结相关性标注计算 Precision@K、Recall@K、MRR、nDCG@K 和来源覆盖率。
 
-融合分只表示检索排序相关度，不表示故障发生概率或维修结论置信度。
+这项能力默认隐式服务于知识问答，不在主界面中呈现算法分析面板。融合分只表示检索排序相关度，不表示故障发生概率或维修结论置信度。
+
+## 论文级召回对照实验
+
+仓库提供与生产检索共用实现的离线实验入口，用同一冻结知识快照比较文档、图谱、案例单路召回，`RRF(k=10/30/60/90)`、加权 RRF、来源覆盖约束和归一化分数融合：
+
+```powershell
+.\scripts\Run-RetrievalExperiment.ps1
+```
+
+实验输出 `strategy_summary.csv`、`per_query.csv`、`pairwise.csv` 和带数据集 SHA-256 的 `summary.json`，可直接用于论文表格、逐查询显著性分析与实验复核。内置小型基准只用于贯通流程，不作为论文结论；正式研究必须扩充并冻结人工评测集。
 
 ## 系统架构
 
@@ -267,8 +277,8 @@ AERODIAGNOSIS_LLM_API_KEY=your-api-key
 | `POST /api/root-cause-sessions/{id}/observations` | 提交工程师观察并继续 Loop |
 | `POST /api/root-cause-sessions/{id}/finalize` | 生成并冻结分析报告 |
 | `POST /api/root-cause-sessions/{id}/case` | 确认案例草稿并发布到案例库 |
-| `POST /api/retrieval/hybrid` | 执行可解释的文档、图谱与案例多路召回 |
-| `POST /api/retrieval/evaluate` | 使用证据相关性标注计算 Top K 评测指标 |
+| `POST /api/retrieval/hybrid` | 开发/实验：执行可解释的文档、图谱与案例多路召回 |
+| `POST /api/retrieval/evaluate` | 开发/实验：使用相关性标注计算 Top K 指标 |
 
 ## 项目结构
 
@@ -301,8 +311,8 @@ code/python/                # 旧版原型，仅用于迁移期行为参考
 
 当前基线：
 
-- 99 项自动化测试通过；
-- 总覆盖率 88.63%；
+- 102 项自动化测试通过；
+- 总覆盖率 88.95%；
 - Ruff 静态检查通过；
 - mypy strict 类型检查通过；
 - wheel 与 source distribution 可重复构建；
@@ -334,6 +344,8 @@ code/python/                # 旧版原型，仅用于迁移期行为参考
 
 - [架构主干](docs/architecture/architecture-AeroDiagnosis-2026-09-12/ARCHITECTURE-SPINE.md)
 - [多路召回与 Top K 融合设计](docs/architecture/HYBRID-RETRIEVAL.md)
+- [多路召回对照实验方案](docs/experiments/RETRIEVAL-EXPERIMENT.md)
+- [领域数据集构建与标注协议](docs/experiments/DATASET-CONSTRUCTION.md)
 - [交互式根因分析方案](docs/upgrade/INTERACTIVE-RCA-AGENT-PLAN.md)
 - [部署、备份与故障排查](docs/DEPLOYMENT.md)
 - [当前实现状态](docs/STATUS.md)

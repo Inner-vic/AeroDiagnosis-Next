@@ -48,7 +48,7 @@ def test_mcp_exposes_read_only_shared_application_tools(tmp_path: Path) -> None:
             )
             assert hybrid_result.is_error is False
             assert hybrid_result.structured_content is not None
-            assert hybrid_result.structured_content["algorithm"] == "weighted_rrf@1"
+            assert hybrid_result.structured_content["algorithm"] == "weighted_rrf@2"
 
             result = await client.call_tool(
                 "search_manual_chunks",

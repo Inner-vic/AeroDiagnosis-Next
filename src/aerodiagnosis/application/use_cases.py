@@ -12,6 +12,7 @@ from aerodiagnosis.domain import (
     EvidenceItem,
     HybridRetrievalResult,
     ParameterObservation,
+    RetrievalStrategy,
 )
 from aerodiagnosis.ingestion import DocumentIngestionService, IngestionResult
 from aerodiagnosis.ingestion.manifest import DocumentCatalogRecord, DocumentManifest
@@ -218,6 +219,10 @@ class HybridRetrieval:
         *,
         top_k: int = 5,
         min_relevance: float = 0.05,
+        strategy: RetrievalStrategy = RetrievalStrategy.WEIGHTED_RRF,
+        rrf_k: int = 60,
+        route_weights: dict[str, float] | None = None,
+        enforce_route_coverage: bool = True,
     ) -> HybridRetrievalResult:
         command = DiagnosisCommand(
             session_id="hybrid-retrieval-analysis",
@@ -229,6 +234,10 @@ class HybridRetrieval:
             command=command,
             query=query,
             active_version_ids=self._active_versions(),
+            strategy=strategy,
+            rrf_k=rrf_k,
+            route_weights=route_weights,
+            enforce_route_coverage=enforce_route_coverage,
         )
 
 

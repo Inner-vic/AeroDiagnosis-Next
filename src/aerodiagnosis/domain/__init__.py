@@ -44,6 +44,7 @@ from aerodiagnosis.domain.retrieval import (
     HybridRetrievalResult,
     RetrievalContribution,
     RetrievalRouteSummary,
+    RetrievalStrategy,
 )
 
 __all__ = [
@@ -72,6 +73,7 @@ __all__ = [
     "PluginStatus",
     "RetrievalContribution",
     "RetrievalRouteSummary",
+    "RetrievalStrategy",
     "RootCauseCaseDraft",
     "RootCauseCoordination",
     "RootCauseHypothesis",

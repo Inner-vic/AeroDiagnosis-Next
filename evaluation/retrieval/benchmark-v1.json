@@ -1,0 +1,44 @@
+{
+  "dataset_id": "aerodiagnosis-retrieval-benchmark",
+  "version": "1.0.0",
+  "top_k": 5,
+  "judgment_protocol": "由领域问题、知识条目、图谱关系和案例语义进行人工二元相关性标注；未标注候选不视为相关。",
+  "cases": [
+    {
+      "case_id": "egt-compressor-001",
+      "query": "EGT 上升且压气机效率下降，应该优先检查什么？",
+      "relevant_source_keys": [
+        "document_chunk:0ebb150521bd1ed75e38d3ea5915056c2d188e8f8f76aef22b57ae8c7d663d70",
+        "knowledge_graph_path:demo-edge-1",
+        "case:DEMO-CASE-EGT-001:1"
+      ]
+    },
+    {
+      "case_id": "compressor-surge-002",
+      "query": "加速阶段压力波动与异常声响 压气机喘振 排查方向",
+      "relevant_source_keys": [
+        "document_chunk:0ebb150521bd1ed75e38d3ea5915056c2d188e8f8f76aef22b57ae8c7d663d70",
+        "knowledge_graph_path:demo-edge-4",
+        "case:DEMO-CASE-SURGE-002:1"
+      ]
+    },
+    {
+      "case_id": "fan-vibration-003",
+      "query": "风扇振动升高 叶片污染 测量链偏差 排查",
+      "relevant_source_keys": [
+        "document_chunk:0ebb150521bd1ed75e38d3ea5915056c2d188e8f8f76aef22b57ae8c7d663d70",
+        "knowledge_graph_path:demo-edge-3",
+        "case:DEMO-CASE-FAN-003:1"
+      ]
+    },
+    {
+      "case_id": "fuel-nozzle-004",
+      "query": "温度分布不均 加速品质变化 燃油喷嘴流量异常",
+      "relevant_source_keys": [
+        "document_chunk:0ebb150521bd1ed75e38d3ea5915056c2d188e8f8f76aef22b57ae8c7d663d70",
+        "knowledge_graph_path:demo-edge-2",
+        "case:DEMO-CASE-FUEL-004:1"
+      ]
+    }
+  ]
+}

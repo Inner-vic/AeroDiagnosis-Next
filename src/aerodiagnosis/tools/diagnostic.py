@@ -16,6 +16,7 @@ from aerodiagnosis.domain import (
     HybridRetrievalResult,
     RetrievalContribution,
     RetrievalRouteSummary,
+    RetrievalStrategy,
     SourceKind,
     make_evidence_id,
 )
@@ -26,7 +27,7 @@ GRAPH_TOOL = "traverse_fault_graph"
 CASE_TOOL = "find_similar_cases"
 PARAMETER_TOOL = "analyze_gas_path_parameters"
 HYBRID_TOOL = "hybrid_retrieve_evidence"
-HYBRID_ALGORITHM = "weighted_rrf@1"
+HYBRID_ALGORITHM = "weighted_rrf@2"
 
 _ROUTE_WEIGHTS = {"manual": 1.0, "graph": 0.88, "case": 0.94}
 _RRF_K = 60
@@ -99,19 +100,41 @@ class DiagnosticToolset:
         command: DiagnosisCommand,
         query: str,
         active_version_ids: frozenset[str],
+        strategy: RetrievalStrategy = RetrievalStrategy.WEIGHTED_RRF,
+        rrf_k: int = _RRF_K,
+        route_weights: Mapping[str, float] | None = None,
+        enforce_route_coverage: bool = True,
     ) -> HybridRetrievalResult:
-        """Fuse manual, graph and case evidence with explainable weighted RRF."""
+        """Rank evidence with one production policy or a controlled experiment policy."""
 
         cleaned = query.strip()
         if not cleaned:
             raise ValueError("hybrid retrieval query must not be empty")
+        if not 1 <= rrf_k <= 1000:
+            raise ValueError("rrf_k must be between 1 and 1000")
+        weights = dict(_ROUTE_WEIGHTS if route_weights is None else route_weights)
+        if set(weights) != set(_ROUTE_WEIGHTS) or any(
+            not 0 < value <= 1 for value in weights.values()
+        ):
+            raise ValueError("route_weights must define manual, graph and case in (0, 1]")
         candidate_limit = min(20, max(command.top_k, command.top_k * 3))
         expanded = command.model_copy(update={"top_k": candidate_limit})
-        route_items = {
+        all_route_items = {
             "manual": self._manual(expanded, cleaned, active_version_ids),
             "graph": self._graph_evidence(expanded, cleaned, active_version_ids),
             "case": self._case_evidence(expanded, cleaned),
         }
+        selected_route = {
+            RetrievalStrategy.MANUAL_ONLY: "manual",
+            RetrievalStrategy.GRAPH_ONLY: "graph",
+            RetrievalStrategy.CASE_ONLY: "case",
+        }.get(strategy)
+        route_items = (
+            {selected_route: all_route_items[selected_route]}
+            if selected_route is not None
+            else all_route_items
+        )
+        algorithm = f"{strategy.value}@{2 if strategy is RetrievalStrategy.WEIGHTED_RRF else 1}"
         candidates: dict[str, tuple[EvidenceItem, list[RetrievalContribution]]] = {}
         for route, items in route_items.items():
             for route_rank, evidence in enumerate(items, start=1):
@@ -121,8 +144,8 @@ class DiagnosticToolset:
                     route_rank=route_rank,
                     raw_score=evidence.score,
                     normalized_score=normalized,
-                    reciprocal_rank_score=(_RRF_K + 1) / (_RRF_K + route_rank),
-                    weight=_ROUTE_WEIGHTS[route],
+                    reciprocal_rank_score=(rrf_k + 1) / (rrf_k + route_rank),
+                    weight=1.0 if strategy is RetrievalStrategy.RRF else weights[route],
                 )
                 existing = candidates.get(evidence.evidence_id)
                 if existing is None:
@@ -133,18 +156,26 @@ class DiagnosticToolset:
         scored: list[tuple[EvidenceItem, float, tuple[RetrievalContribution, ...]]] = []
         for evidence, contribution_list in candidates.values():
             contributions = tuple(contribution_list)
-            route_scores = [
-                item.weight
-                * (0.75 * item.reciprocal_rank_score + 0.25 * item.normalized_score)
-                for item in contributions
-            ]
-            fused_score = min(1.0, max(route_scores) + 0.04 * (len(route_scores) - 1))
+            if selected_route is not None:
+                fused_score = contributions[0].normalized_score
+            elif strategy is RetrievalStrategy.NORMALIZED_SCORE:
+                fused_score = max(
+                    item.weight * item.normalized_score for item in contributions
+                )
+            else:
+                fused_score = min(
+                    1.0,
+                    sum(item.weight * item.reciprocal_rank_score for item in contributions),
+                )
             scored.append((evidence, fused_score, contributions))
         scored.sort(key=lambda item: (-item[1], item[0].evidence_id))
 
         selected: list[tuple[EvidenceItem, float, tuple[RetrievalContribution, ...], str]] = []
         selected_ids: set[str] = set()
-        if command.top_k >= len(route_items):
+        coverage_enabled = (
+            enforce_route_coverage and selected_route is None and command.top_k >= len(route_items)
+        )
+        if coverage_enabled:
             coverage = []
             for route in route_items:
                 best = next(
@@ -172,7 +203,8 @@ class DiagnosticToolset:
         hits = []
         for final_rank, (evidence, score, contributions, reason) in enumerate(selected, start=1):
             retrieval = {
-                "algorithm": HYBRID_ALGORITHM,
+                "algorithm": algorithm,
+                "rrf_k": rrf_k,
                 "selection_reason": reason,
                 "contributions": [item.model_dump(mode="json") for item in contributions],
             }
@@ -192,7 +224,7 @@ class DiagnosticToolset:
             route: sum(
                 any(part.route == route for part in hit.contributions) for hit in hits
             )
-            for route in route_items
+            for route in all_route_items
         }
         routes = tuple(
             RetrievalRouteSummary(
@@ -201,12 +233,15 @@ class DiagnosticToolset:
                 included_count=included_by_route[route],
                 top_raw_score=max((item.score for item in items), default=None),
             )
-            for route, items in route_items.items()
+            for route, items in all_route_items.items()
         )
         return HybridRetrievalResult(
             query=cleaned,
-            algorithm=HYBRID_ALGORITHM,
+            algorithm=algorithm,
             top_k=command.top_k,
+            rrf_k=rrf_k,
+            route_weights=weights,
+            route_coverage_enabled=coverage_enabled,
             candidate_count=len(candidates),
             hits=tuple(hits),
             routes=routes,

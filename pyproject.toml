@@ -22,6 +22,7 @@ aerodiagnosis-evaluate = "aerodiagnosis.evaluation:main"
 aerodiagnosis-ingest = "aerodiagnosis.cli:main"
 aerodiagnosis-mcp = "aerodiagnosis.adapters.mcp:main"
 aerodiagnosis-migrate-v2 = "aerodiagnosis.migration:main"
+aerodiagnosis-retrieval-experiment = "aerodiagnosis.retrieval_experiment:main"
 aerodiagnosis-server = "aerodiagnosis.adapters.api:main"
 
 [dependency-groups]

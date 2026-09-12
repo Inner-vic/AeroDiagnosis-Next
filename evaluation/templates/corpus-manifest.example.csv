@@ -1,0 +1,2 @@
+document_id,title,source_url,license_or_basis,retrieved_at,sha256,document_type,language,redistributable,notes
+DOC-0001,示例公开技术资料,https://example.invalid/source,需填写实际许可依据,2026-09-12,需填写原文件SHA-256,pdf,zh-CN,false,示例行不可作为真实语料记录

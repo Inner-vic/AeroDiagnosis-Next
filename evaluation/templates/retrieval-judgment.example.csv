@@ -1,0 +1,2 @@
+query_id,query,candidate_source_key,relevance,reason,annotator_id,review_status
+Q-0001,示例故障查询,document_chunk:replace-with-source-ref,2,直接回答查询且给出可核验依据,anonymous-annotator-a,unreviewed

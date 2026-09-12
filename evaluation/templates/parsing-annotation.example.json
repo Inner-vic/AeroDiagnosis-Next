@@ -1,0 +1,17 @@
+{
+  "annotation_id": "PARSE-0001",
+  "document_id": "DOC-0001",
+  "page": 1,
+  "source_sha256": "replace-with-source-file-sha256",
+  "blocks": [
+    {
+      "block_id": "p1-b1",
+      "kind": "heading",
+      "reading_order": 1,
+      "text": "示例标题",
+      "bbox": [0.1, 0.1, 0.9, 0.2]
+    }
+  ],
+  "annotator_id": "anonymous-annotator-a",
+  "review_status": "unreviewed"
+}

@@ -104,7 +104,7 @@ def test_retrieval_evaluation_reports_standard_ranking_metrics() -> None:
     )
     result = HybridRetrievalResult(
         query="compressor EGT",
-        algorithm="weighted_rrf@1",
+        algorithm="weighted_rrf@2",
         top_k=5,
         candidate_count=2,
         hits=(

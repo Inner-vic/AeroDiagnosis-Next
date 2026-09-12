@@ -42,6 +42,16 @@
 - 知识图谱已切换为本地 ECharts 力导向图，支持缩放、平移、节点拖拽、邻接高亮与详情查看；
 - wheel 已包含 HTML、CSS 和 JavaScript 前端资源。
 
+### 检索实验与数据集基础设施
+
+- 多路召回作为知识问答底层能力，主界面不再显示独立算法分析台；
+- 生产加权 RRF 与离线实验共用同一候选生成、排序和来源覆盖实现；
+- 支持文档、图谱、案例单路，RRF `k=10/30/60/90`、加权 RRF、覆盖约束和归一化分融合对照；
+- 冻结基准记录查询、相关来源、版本和 SHA-256，实验不调用 LLM 或外部 API；
+- 输出逐查询、策略汇总和两两比较 CSV，保留后续显著性分析所需材料；
+- 已提供领域语料清单、解析标注、知识抽取标注和检索相关性标注模板；
+- 已记录无专家条件下的候选生成、双人独立标注、分歧仲裁和专家抽样复核协议。
+
 ### 知识增强根因分析垂直切片
 
 - 系统定位固定为：故障诊断模型给出初步结果，LLM 结合受控知识、观察证据和历史状态提供根因分析与维修支持；
@@ -79,9 +89,9 @@ fail-closed 语义。真实 provider 的诊断质量必须在用户提供 API �
 - Python：uv 管理的 CPython 3.13.14；
 - SQLite：schema 6，vector=`sqlite_hashing`，graph=`sqlite_graph`；
 - Ruff：通过；
-- mypy strict：通过（57 个 source files）；
-- pytest：99 passed；
-- branch coverage：88.63%（门槛 85%）；
+- mypy strict：通过（58 个 source files）；
+- pytest：102 passed；
+- branch coverage：88.95%（门槛 85%）；
 - legacy compileall：通过；
 - sdist + wheel：构建通过，wheel 内含三项前端静态资源；
 - JavaScript：`node --check` 通过；

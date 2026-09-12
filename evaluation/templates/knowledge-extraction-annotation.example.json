@@ -1,0 +1,21 @@
+{
+  "annotation_id": "KE-0001",
+  "document_id": "DOC-0001",
+  "source_span": {
+    "page": 1,
+    "text": "示例原文证据跨度",
+    "start": 0,
+    "end": 8
+  },
+  "entities": [
+    {
+      "entity_id": "e1",
+      "type": "symptom",
+      "text": "示例症状",
+      "normalized_name": "示例症状"
+    }
+  ],
+  "relations": [],
+  "annotator_id": "anonymous-annotator-a",
+  "review_status": "unreviewed"
+}
