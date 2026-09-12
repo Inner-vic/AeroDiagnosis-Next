@@ -100,6 +100,23 @@ class MultiToolLanguageModel(FakeLanguageModel):
         return super().complete_json(task, payload)
 
 
+class RedundantHybridLanguageModel(FakeLanguageModel):
+    def complete_json(self, task: str, payload: Mapping[str, Any]) -> dict[str, Any]:
+        if task == "plan_evidence":
+            self.calls.append(task)
+            return {
+                "search_queries": ["compressor stall EGT"],
+                "tools": [
+                    "hybrid_retrieve_evidence",
+                    "search_manual_chunks",
+                    "traverse_fault_graph",
+                    "analyze_gas_path_parameters",
+                ],
+                "rationale": "The model redundantly selected hybrid and its subroutes.",
+            }
+        return super().complete_json(task, payload)
+
+
 def _settings(tmp_path: Path) -> RuntimeSettings:
     return RuntimeSettings(runtime_dir=tmp_path, database_path=tmp_path / "runtime.db")
 
@@ -319,3 +336,54 @@ def test_tool_call_budget_stops_oversized_model_plan(tmp_path: Path) -> None:
 
     assert report.status is DiagnosisReportStatus.INSUFFICIENT_EVIDENCE
     assert len(report.tool_executions) == 2
+
+
+def test_hybrid_plan_removes_redundant_subroute_calls(tmp_path: Path) -> None:
+    application = bootstrap(_settings(tmp_path))
+    session_id = application.conversation_sessions.create()
+    model = RedundantHybridLanguageModel()
+
+    report = application.run_diagnosis.start(
+        DiagnosisCommand(
+            session_id=session_id,
+            question="Analyze compressor stall with all available knowledge.",
+            parameters=(
+                ParameterObservation(
+                    name="EGT",
+                    value=760,
+                    expected_min=600,
+                    expected_max=720,
+                    unit="C",
+                ),
+            ),
+        ),
+        model,
+    )
+
+    assert report.status is DiagnosisReportStatus.EVIDENCE_READY
+    assert {execution.tool_name for execution in report.tool_executions} == {
+        "hybrid_retrieve_evidence",
+        "analyze_gas_path_parameters",
+    }
+
+
+def test_hybrid_plan_skips_parameter_tool_without_parameters(tmp_path: Path) -> None:
+    application = bootstrap(_settings(tmp_path))
+    session_id = application.conversation_sessions.create()
+    application.ingest_document.execute(
+        display_name="manual.txt",
+        content=b"Compressor stall can cause an exhaust gas temperature rise.",
+    )
+
+    report = application.run_diagnosis.start(
+        DiagnosisCommand(
+            session_id=session_id,
+            question="Analyze compressor stall with all available knowledge.",
+        ),
+        RedundantHybridLanguageModel(),
+    )
+
+    assert report.status is DiagnosisReportStatus.EVIDENCE_READY
+    assert {execution.tool_name for execution in report.tool_executions} == {
+        "hybrid_retrieve_evidence"
+    }

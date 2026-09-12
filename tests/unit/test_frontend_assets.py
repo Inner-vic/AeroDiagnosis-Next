@@ -27,6 +27,8 @@ def test_frontend_exposes_focused_knowledge_qa_and_progressive_root_cause_flow()
     assert 'data-module="rootcause"' in html
     assert 'data-module="models"' in html
     assert 'id="knowledgeFile"' in html
+    assert 'id="hybridQuery"' in html
+    assert 'id="retrievalResults"' in html
     assert 'id="rcaFile"' in html
     assert 'id="agentLoop"' in html
     assert 'id="modelGrid"' in html
@@ -40,6 +42,8 @@ def test_frontend_exposes_focused_knowledge_qa_and_progressive_root_cause_flow()
     assert "api_key:state.provider" not in script
     assert "/diagnoses" in script
     assert "/documents" in script
+    assert "/retrieval/hybrid" in script
+    assert "runHybridRetrieval" in script
     assert "/graph?" in script
     assert "/cases?" in script
     assert "/root-cause-sessions" in script

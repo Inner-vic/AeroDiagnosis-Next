@@ -34,12 +34,21 @@ def test_mcp_exposes_read_only_shared_application_tools(tmp_path: Path) -> None:
             tools = await client.list_tools()
             names = {tool.name for tool in tools.tools}
             assert names == {
+                "hybrid_retrieve_evidence",
                 "search_manual_chunks",
                 "traverse_fault_graph",
                 "find_similar_cases",
                 "analyze_gas_path_parameters",
                 "get_runtime_status",
             }
+
+            hybrid_result = await client.call_tool(
+                "hybrid_retrieve_evidence",
+                {"query": "compressor EGT", "top_k": 3},
+            )
+            assert hybrid_result.is_error is False
+            assert hybrid_result.structured_content is not None
+            assert hybrid_result.structured_content["algorithm"] == "weighted_rrf@1"
 
             result = await client.call_tool(
                 "search_manual_chunks",

@@ -5,13 +5,14 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import math
 import sys
-from collections.abc import Sequence
+from collections.abc import Sequence, Set
 from pathlib import Path
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from aerodiagnosis.domain import DiagnosisReport, DiagnosisReportStatus
+from aerodiagnosis.domain import DiagnosisReport, DiagnosisReportStatus, HybridRetrievalResult
 
 
 class EvaluationCase(BaseModel):
@@ -60,6 +61,52 @@ class EvaluationSummary(BaseModel):
     mean_claim_term_recall: float = Field(ge=0, le=1)
     mean_source_kind_recall: float = Field(ge=0, le=1)
     scores: tuple[CaseScore, ...]
+
+
+class RetrievalMetrics(BaseModel):
+    """Standard binary-relevance measures for one frozen retrieval query."""
+
+    model_config = ConfigDict(extra="forbid", frozen=True)
+
+    top_k: int = Field(ge=1)
+    relevant_count: int = Field(ge=1)
+    retrieved_relevant_count: int = Field(ge=0)
+    precision_at_k: float = Field(ge=0.0, le=1.0)
+    recall_at_k: float = Field(ge=0.0, le=1.0)
+    reciprocal_rank: float = Field(ge=0.0, le=1.0)
+    ndcg_at_k: float = Field(ge=0.0, le=1.0)
+    source_coverage: float = Field(ge=0.0, le=1.0)
+
+
+def evaluate_retrieval(
+    result: HybridRetrievalResult,
+    relevant_evidence_ids: Set[str],
+) -> RetrievalMetrics:
+    """Score one ranked list against explicit evidence-id relevance judgments."""
+
+    if not relevant_evidence_ids:
+        raise ValueError("retrieval evaluation requires at least one relevant evidence id")
+    relevance = [hit.evidence.evidence_id in relevant_evidence_ids for hit in result.hits]
+    retrieved_relevant = sum(relevance)
+    first_relevant = next((rank for rank, hit in enumerate(relevance, start=1) if hit), None)
+    dcg = sum(
+        1.0 / math.log2(rank + 1)
+        for rank, hit in enumerate(relevance, start=1)
+        if hit
+    )
+    ideal_hits = min(len(relevant_evidence_ids), result.top_k)
+    ideal_dcg = sum(1.0 / math.log2(rank + 1) for rank in range(1, ideal_hits + 1))
+    covered_routes = sum(route.included_count > 0 for route in result.routes)
+    return RetrievalMetrics(
+        top_k=result.top_k,
+        relevant_count=len(relevant_evidence_ids),
+        retrieved_relevant_count=retrieved_relevant,
+        precision_at_k=retrieved_relevant / result.top_k,
+        recall_at_k=retrieved_relevant / len(relevant_evidence_ids),
+        reciprocal_rank=0.0 if first_relevant is None else 1.0 / first_relevant,
+        ndcg_at_k=0.0 if ideal_dcg == 0 else dcg / ideal_dcg,
+        source_coverage=covered_routes / len(result.routes),
+    )
 
 
 def _recall(required: tuple[str, ...], observed: set[str] | str) -> float:

@@ -22,6 +22,7 @@ from aerodiagnosis.application.use_cases import (
     BrowseKnowledge,
     ConversationSessions,
     GetRuntimeStatus,
+    HybridRetrieval,
     IngestDocument,
     QueryDiagnosticTool,
     RunDiagnosis,
@@ -46,6 +47,7 @@ class Application:
     run_diagnosis: RunDiagnosis
     conversation_sessions: ConversationSessions
     search_evidence: SearchEvidence
+    hybrid_retrieval: HybridRetrieval
     get_runtime_status: GetRuntimeStatus
     knowledge_enhanced_diagnosis: KnowledgeEnhancedDiagnosis
 
@@ -95,6 +97,7 @@ def bootstrap(settings: RuntimeSettings | None = None) -> Application:
         run_diagnosis=RunDiagnosis(workflow_factory),
         conversation_sessions=ConversationSessions(memory),
         search_evidence=SearchEvidence(vector_store, manifest.active_version_ids),
+        hybrid_retrieval=HybridRetrieval(tools, manifest.active_version_ids),
         get_runtime_status=GetRuntimeStatus(
             vector_store=vector_store,
             graph_store=graph_store,

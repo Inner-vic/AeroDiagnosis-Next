@@ -11,6 +11,7 @@ from aerodiagnosis.ports import CaseRecord, GraphEdge, GraphNode
 from aerodiagnosis.tools.diagnostic import (
     CASE_TOOL,
     GRAPH_TOOL,
+    HYBRID_TOOL,
     MANUAL_TOOL,
     PARAMETER_TOOL,
     DiagnosticToolset,
@@ -117,6 +118,29 @@ def test_four_domain_tools_return_typed_provenance(tmp_path: Path) -> None:
     assert "above" in parameter_items[0].excerpt
     all_items = (*manual, *graph_items, *case_items, *parameter_items)
     assert len({item.evidence_id for item in all_items}) == 4
+
+    hybrid = tools.hybrid_search(
+        command=command,
+        query="Compressor stall EGT",
+        active_version_ids=active,
+    )
+    assert hybrid.algorithm == "weighted_rrf@1"
+    assert {route.route for route in hybrid.routes} == {"manual", "graph", "case"}
+    assert all(route.included_count >= 1 for route in hybrid.routes)
+    assert {hit.evidence.source_kind for hit in hybrid.hits} >= {
+        "document_chunk",
+        "knowledge_graph_path",
+        "case",
+    }
+    assert all(hit.evidence.locator["retrieval"] for hit in hybrid.hits)
+
+    fused_items = tools.execute(
+        HYBRID_TOOL,
+        command=command,
+        query="Compressor stall EGT",
+        active_version_ids=active,
+    )
+    assert fused_items == tuple(hit.evidence for hit in hybrid.hits)
 
 
 def test_toolset_rejects_unknown_tool(tmp_path: Path) -> None:

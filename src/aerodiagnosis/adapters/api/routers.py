@@ -17,9 +17,11 @@ from aerodiagnosis.bootstrap import Application
 from aerodiagnosis.domain import (
     DiagnosisCommand,
     DiagnosisReport,
+    HybridRetrievalResult,
     ModelPluginRecord,
     RootCauseSession,
 )
+from aerodiagnosis.evaluation import evaluate_retrieval
 from aerodiagnosis.ingestion import DocumentParseError, IngestionError
 from aerodiagnosis.ports import LanguageModelError
 from aerodiagnosis.version import __version__
@@ -32,11 +34,14 @@ from .schemas import (
     EvidenceHit,
     FinalizeRootCauseRequest,
     GraphOverviewResponse,
+    HybridRetrievalRequest,
     IngestDocumentRequest,
     IngestDocumentResponse,
     ProviderConfiguration,
     RegisterModelPluginRequest,
     ResumeDiagnosisRequest,
+    RetrievalEvaluationRequest,
+    RetrievalEvaluationResponse,
     RootCauseObservationRequest,
     RunDiagnosisRequest,
     SearchEvidenceRequest,
@@ -268,6 +273,46 @@ def search_evidence(
         )
         for match in matches
     ]
+
+
+@router.post("/retrieval/hybrid", tags=["retrieval"])
+def hybrid_retrieval(
+    request: HybridRetrievalRequest,
+    application: ApplicationDependency,
+) -> HybridRetrievalResult:
+    try:
+        return application.hybrid_retrieval.execute(
+            request.query,
+            top_k=request.top_k,
+            min_relevance=request.min_relevance,
+        )
+    except ValueError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail=str(exc)
+        ) from exc
+
+
+@router.post(
+    "/retrieval/evaluate",
+    response_model=RetrievalEvaluationResponse,
+    tags=["retrieval"],
+)
+def evaluate_hybrid_retrieval(
+    request: RetrievalEvaluationRequest,
+    application: ApplicationDependency,
+) -> RetrievalEvaluationResponse:
+    try:
+        retrieval = application.hybrid_retrieval.execute(
+            request.query,
+            top_k=request.top_k,
+            min_relevance=request.min_relevance,
+        )
+        metrics = evaluate_retrieval(retrieval, set(request.relevant_evidence_ids))
+        return RetrievalEvaluationResponse(retrieval=retrieval, metrics=metrics)
+    except ValueError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail=str(exc)
+        ) from exc
 
 
 @router.get(

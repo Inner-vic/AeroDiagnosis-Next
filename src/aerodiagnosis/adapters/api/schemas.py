@@ -4,7 +4,8 @@ from __future__ import annotations
 
 from pydantic import BaseModel, ConfigDict, Field, HttpUrl, SecretStr
 
-from aerodiagnosis.domain import DiagnosisCommand, ModelPluginManifest
+from aerodiagnosis.domain import DiagnosisCommand, HybridRetrievalResult, ModelPluginManifest
+from aerodiagnosis.evaluation import RetrievalMetrics
 
 
 class IngestDocumentRequest(BaseModel):
@@ -43,6 +44,25 @@ class EvidenceHit(BaseModel):
     content: str
     score: float
     locator: dict[str, object]
+
+
+class HybridRetrievalRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    query: str = Field(min_length=1, max_length=4000)
+    top_k: int = Field(default=5, ge=1, le=20)
+    min_relevance: float = Field(default=0.05, ge=0.0, le=1.0)
+
+
+class RetrievalEvaluationRequest(HybridRetrievalRequest):
+    relevant_evidence_ids: tuple[str, ...] = Field(min_length=1, max_length=100)
+
+
+class RetrievalEvaluationResponse(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    retrieval: HybridRetrievalResult
+    metrics: RetrievalMetrics
 
 
 class ProviderConfiguration(BaseModel):

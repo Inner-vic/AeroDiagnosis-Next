@@ -79,15 +79,17 @@ fail-closed 语义。真实 provider 的诊断质量必须在用户提供 API �
 - Python：uv 管理的 CPython 3.13.14；
 - SQLite：schema 6，vector=`sqlite_hashing`，graph=`sqlite_graph`；
 - Ruff：通过；
-- mypy strict：通过（55 个 source files）；
-- pytest：96 passed；
-- branch coverage：88.58%（门槛 85%）；
+- mypy strict：通过（57 个 source files）；
+- pytest：99 passed；
+- branch coverage：88.63%（门槛 85%）；
 - legacy compileall：通过；
 - sdist + wheel：构建通过，wheel 内含三项前端静态资源；
 - JavaScript：`node --check` 通过；
-- MCP：进程内客户端发现 5 个工具，并实际调用手册检索与参数分析；
-- API smoke：`/`、`/api/system`、`/api/documents`、`/api/graph`、`/api/cases` 均通过；
+- MCP：进程内客户端发现 6 个工具，并实际调用多路召回、手册检索与参数分析；
+- API smoke：`/`、`/api/system`、`/api/documents`、`/api/graph`、`/api/cases`、
+  `/api/retrieval/hybrid` 与 `/api/retrieval/evaluate` 均通过；
 - smoke 状态：schema 6，agent=`llm_orchestrated_v2`，本机默认模型=`deepseek-v4-flash`；
+- 真实 Planner 已只调用 `hybrid_retrieve_evidence`，返回 5 条带融合元数据的证据；
 - 合成参数证据的真实模型调用通过严格 `CandidateDiagnosis` 与
   `VerificationDecision` 校验，未向模型发送本地数据库内容；
 - 教学 CSV 的真实知识增强调用得到风扇初步定位、4 个候选根因、11 条角色轨迹和带强制限制的持久化报告；

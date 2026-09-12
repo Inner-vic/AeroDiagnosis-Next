@@ -12,6 +12,10 @@ from typing import Any
 from aerodiagnosis.domain import (
     DiagnosisCommand,
     EvidenceItem,
+    FusedEvidenceHit,
+    HybridRetrievalResult,
+    RetrievalContribution,
+    RetrievalRouteSummary,
     SourceKind,
     make_evidence_id,
 )
@@ -21,6 +25,11 @@ MANUAL_TOOL = "search_manual_chunks"
 GRAPH_TOOL = "traverse_fault_graph"
 CASE_TOOL = "find_similar_cases"
 PARAMETER_TOOL = "analyze_gas_path_parameters"
+HYBRID_TOOL = "hybrid_retrieve_evidence"
+HYBRID_ALGORITHM = "weighted_rrf@1"
+
+_ROUTE_WEIGHTS = {"manual": 1.0, "graph": 0.88, "case": 0.94}
+_RRF_K = 60
 
 
 def _hash(value: str) -> str:
@@ -53,6 +62,7 @@ class DiagnosticToolset:
             self._vector.backend_name,
             self._graph.backend_name,
             self._cases.backend_name,
+            HYBRID_ALGORITHM,
             "range_check@1",
         )
 
@@ -72,7 +82,135 @@ class DiagnosticToolset:
             return self._case_evidence(command, query)
         if tool_name == PARAMETER_TOOL:
             return self._parameter_evidence(command)
+        if tool_name == HYBRID_TOOL:
+            return tuple(
+                hit.evidence
+                for hit in self.hybrid_search(
+                    command=command,
+                    query=query,
+                    active_version_ids=active_version_ids,
+                ).hits
+            )
         raise KeyError(f"unknown diagnostic tool: {tool_name}")
+
+    def hybrid_search(
+        self,
+        *,
+        command: DiagnosisCommand,
+        query: str,
+        active_version_ids: frozenset[str],
+    ) -> HybridRetrievalResult:
+        """Fuse manual, graph and case evidence with explainable weighted RRF."""
+
+        cleaned = query.strip()
+        if not cleaned:
+            raise ValueError("hybrid retrieval query must not be empty")
+        candidate_limit = min(20, max(command.top_k, command.top_k * 3))
+        expanded = command.model_copy(update={"top_k": candidate_limit})
+        route_items = {
+            "manual": self._manual(expanded, cleaned, active_version_ids),
+            "graph": self._graph_evidence(expanded, cleaned, active_version_ids),
+            "case": self._case_evidence(expanded, cleaned),
+        }
+        candidates: dict[str, tuple[EvidenceItem, list[RetrievalContribution]]] = {}
+        for route, items in route_items.items():
+            for route_rank, evidence in enumerate(items, start=1):
+                normalized = max(0.0, min(1.0, evidence.score))
+                contribution = RetrievalContribution(
+                    route=route,
+                    route_rank=route_rank,
+                    raw_score=evidence.score,
+                    normalized_score=normalized,
+                    reciprocal_rank_score=(_RRF_K + 1) / (_RRF_K + route_rank),
+                    weight=_ROUTE_WEIGHTS[route],
+                )
+                existing = candidates.get(evidence.evidence_id)
+                if existing is None:
+                    candidates[evidence.evidence_id] = (evidence, [contribution])
+                else:
+                    existing[1].append(contribution)
+
+        scored: list[tuple[EvidenceItem, float, tuple[RetrievalContribution, ...]]] = []
+        for evidence, contribution_list in candidates.values():
+            contributions = tuple(contribution_list)
+            route_scores = [
+                item.weight
+                * (0.75 * item.reciprocal_rank_score + 0.25 * item.normalized_score)
+                for item in contributions
+            ]
+            fused_score = min(1.0, max(route_scores) + 0.04 * (len(route_scores) - 1))
+            scored.append((evidence, fused_score, contributions))
+        scored.sort(key=lambda item: (-item[1], item[0].evidence_id))
+
+        selected: list[tuple[EvidenceItem, float, tuple[RetrievalContribution, ...], str]] = []
+        selected_ids: set[str] = set()
+        if command.top_k >= len(route_items):
+            coverage = []
+            for route in route_items:
+                best = next(
+                    (
+                        item
+                        for item in scored
+                        if any(part.route == route for part in item[2])
+                    ),
+                    None,
+                )
+                if best is not None:
+                    coverage.append(best)
+            coverage.sort(key=lambda item: (-item[1], item[0].evidence_id))
+            for evidence, score, contributions in coverage:
+                if evidence.evidence_id in selected_ids or len(selected) >= command.top_k:
+                    continue
+                selected.append((evidence, score, contributions, "route_coverage"))
+                selected_ids.add(evidence.evidence_id)
+        for evidence, score, contributions in scored:
+            if evidence.evidence_id in selected_ids or len(selected) >= command.top_k:
+                continue
+            selected.append((evidence, score, contributions, "fused_score"))
+            selected_ids.add(evidence.evidence_id)
+
+        hits = []
+        for final_rank, (evidence, score, contributions, reason) in enumerate(selected, start=1):
+            retrieval = {
+                "algorithm": HYBRID_ALGORITHM,
+                "selection_reason": reason,
+                "contributions": [item.model_dump(mode="json") for item in contributions],
+            }
+            ranked_evidence = evidence.model_copy(
+                update={"score": score, "locator": {**evidence.locator, "retrieval": retrieval}}
+            )
+            hits.append(
+                FusedEvidenceHit(
+                    rank=final_rank,
+                    evidence=ranked_evidence,
+                    fused_score=score,
+                    selection_reason=reason,
+                    contributions=contributions,
+                )
+            )
+        included_by_route = {
+            route: sum(
+                any(part.route == route for part in hit.contributions) for hit in hits
+            )
+            for route in route_items
+        }
+        routes = tuple(
+            RetrievalRouteSummary(
+                route=route,
+                candidate_count=len(items),
+                included_count=included_by_route[route],
+                top_raw_score=max((item.score for item in items), default=None),
+            )
+            for route, items in route_items.items()
+        )
+        return HybridRetrievalResult(
+            query=cleaned,
+            algorithm=HYBRID_ALGORITHM,
+            top_k=command.top_k,
+            candidate_count=len(candidates),
+            hits=tuple(hits),
+            routes=routes,
+        )
 
     def _manual(
         self,

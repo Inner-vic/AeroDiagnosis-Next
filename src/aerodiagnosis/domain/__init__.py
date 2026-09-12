@@ -39,6 +39,12 @@ from aerodiagnosis.domain.knowledge_enhancement import (
     RootCauseSession,
     RootCauseSessionStatus,
 )
+from aerodiagnosis.domain.retrieval import (
+    FusedEvidenceHit,
+    HybridRetrievalResult,
+    RetrievalContribution,
+    RetrievalRouteSummary,
+)
 
 __all__ = [
     "AgentTraceEvent",
@@ -55,6 +61,8 @@ __all__ = [
     "EvidenceItem",
     "EvidenceLocator",
     "FeatureSpecification",
+    "FusedEvidenceHit",
+    "HybridRetrievalResult",
     "InspectionProposal",
     "KnowledgeEnhancedReport",
     "ModelInferenceResult",
@@ -62,6 +70,8 @@ __all__ = [
     "ModelPluginRecord",
     "ParameterObservation",
     "PluginStatus",
+    "RetrievalContribution",
+    "RetrievalRouteSummary",
     "RootCauseCaseDraft",
     "RootCauseCoordination",
     "RootCauseHypothesis",

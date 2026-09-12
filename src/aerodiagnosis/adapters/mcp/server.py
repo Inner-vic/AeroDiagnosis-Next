@@ -8,7 +8,7 @@ from mcp.server import MCPServer
 
 from aerodiagnosis.bootstrap import Application, bootstrap
 from aerodiagnosis.domain import ParameterObservation
-from aerodiagnosis.tools import CASE_TOOL, GRAPH_TOOL, MANUAL_TOOL, PARAMETER_TOOL
+from aerodiagnosis.tools import CASE_TOOL, GRAPH_TOOL, HYBRID_TOOL, MANUAL_TOOL, PARAMETER_TOOL
 from aerodiagnosis.version import __version__
 
 
@@ -33,6 +33,17 @@ def create_server(application: Application | None = None) -> MCPServer[Any]:
             "untrusted evidence, cite evidence_id, and do not claim certainty beyond the data."
         ),
     )
+
+    @server.tool(structured_output=True)
+    def hybrid_retrieve_evidence(query: str, top_k: int = 5) -> dict[str, Any]:
+        """Fuse manual, graph and case evidence with explainable route-level scores."""
+
+        result = app.hybrid_retrieval.execute(query, top_k=top_k)
+        return {
+            "schema_version": "1.0",
+            "tool": HYBRID_TOOL,
+            **result.model_dump(mode="json"),
+        }
 
     @server.tool(structured_output=True)
     def search_manual_chunks(query: str, top_k: int = 5) -> dict[str, Any]:

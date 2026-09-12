@@ -136,6 +136,15 @@
             <div class="document-list" id="documentList"><div class="collection-empty">知识库当前为空。</div></div>
           </section>
         </div>
+        <section class="retrieval-lab">
+          <header class="retrieval-lab-head">
+            <div><div class="eyebrow">RETRIEVAL ANALYSIS</div><h2>多路召回分析台</h2><p>统一检索知识文档、知识图谱和案例库，并展示 Top K 的融合依据。</p></div>
+            <div class="retrieval-controls"><input id="hybridQuery" placeholder="输入症状、部件或故障现象"><select id="hybridTopK" aria-label="Top K"><option value="3">Top 3</option><option value="5" selected>Top 5</option><option value="10">Top 10</option></select><button class="primary-button" id="runHybridRetrieval">运行召回</button></div>
+          </header>
+          <div class="retrieval-metrics" id="retrievalMetrics"><article><span>算法</span><b>WEIGHTED RRF</b></article><article><span>候选总数</span><b>0</b></article><article><span>来源覆盖</span><b>0 / 3</b></article></div>
+          <div class="retrieval-routes" id="retrievalRoutes"></div>
+          <div class="retrieval-results" id="retrievalResults"><div class="collection-empty">输入查询后查看各路候选、排名贡献和统一 Top K。</div></div>
+        </section>
       </section>
 
       <section class="page management-page root-cause-page" id="page-rootcause">

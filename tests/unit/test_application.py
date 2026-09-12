@@ -72,10 +72,13 @@ def test_application_browses_active_graph_and_case_catalog(tmp_path: Path) -> No
 
     overview = application.browse_graph.execute()
     cases = application.browse_cases.execute(query="compressor")
+    retrieval = application.hybrid_retrieval.execute("Compressor stall EGT", top_k=3)
 
     assert {node.node_id for node in overview.nodes} == {"stall", "egt"}
     assert overview.edges[0].relation == "CAUSES"
     assert cases[0].case_id == "case-1"
+    assert len(retrieval.hits) == 3
+    assert all(route.included_count == 1 for route in retrieval.routes)
 
 
 def test_search_rejects_empty_query_and_empty_corpus(tmp_path: Path) -> None:

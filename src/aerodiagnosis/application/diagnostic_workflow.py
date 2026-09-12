@@ -36,15 +36,17 @@ from aerodiagnosis.ports import (
 from aerodiagnosis.tools.diagnostic import (
     CASE_TOOL,
     GRAPH_TOOL,
+    HYBRID_TOOL,
     MANUAL_TOOL,
     PARAMETER_TOOL,
     DiagnosticToolset,
 )
 
-WORKFLOW_VERSION = "llm-evidence-workflow@2"
+WORKFLOW_VERSION = "llm-evidence-workflow@3"
 STATE_SCHEMA_VERSION = "2.0"
 MAX_REASONING_ROUNDS = 2
-AVAILABLE_TOOLS = (MANUAL_TOOL, GRAPH_TOOL, CASE_TOOL, PARAMETER_TOOL)
+AVAILABLE_TOOLS = (HYBRID_TOOL, MANUAL_TOOL, GRAPH_TOOL, CASE_TOOL, PARAMETER_TOOL)
+HYBRID_SUBROUTES = frozenset({MANUAL_TOOL, GRAPH_TOOL, CASE_TOOL})
 
 
 class WorkflowStage(StrEnum):
@@ -266,6 +268,12 @@ class DiagnosticWorkflow:
             "question": state.command.question,
             "parameters": [item.model_dump(mode="json") for item in state.command.parameters],
             "available_tools": AVAILABLE_TOOLS,
+            "retrieval_policy": (
+                f"Prefer {HYBRID_TOOL} when evidence may span manuals, graph paths and cases. "
+                "Never combine it with its manual, graph or case subroutes in the same plan. "
+                "Use a single-route tool only when the question explicitly requires that source. "
+                f"Select {PARAMETER_TOOL} only when parameters are supplied."
+            ),
             "previous_plans": [plan.model_dump(mode="json") for plan in state.plans],
             "verification_issues": (
                 list(state.verification.issues) if state.verification is not None else []
@@ -278,6 +286,19 @@ class DiagnosticWorkflow:
         unknown = set(plan.tools) - set(AVAILABLE_TOOLS)
         if unknown:
             raise LanguageModelError(f"planner selected unknown tools: {sorted(unknown)}")
+        normalized_tools = plan.tools
+        if HYBRID_TOOL in normalized_tools:
+            normalized_tools = tuple(
+                tool for tool in normalized_tools if tool not in HYBRID_SUBROUTES
+            )
+        if not state.command.parameters:
+            normalized_tools = tuple(
+                tool for tool in normalized_tools if tool != PARAMETER_TOOL
+            )
+        if not normalized_tools:
+            raise LanguageModelError("planner selected no applicable evidence tools")
+        if normalized_tools != plan.tools:
+            plan = plan.model_copy(update={"tools": normalized_tools})
         if state.plans and plan == state.plans[-1]:
             raise LanguageModelError("repair plan did not change retrieval actions")
         planned = self._updated(

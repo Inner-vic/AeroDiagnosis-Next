@@ -10,6 +10,7 @@ from aerodiagnosis.domain import (
     DiagnosisCommand,
     DiagnosisReport,
     EvidenceItem,
+    HybridRetrievalResult,
     ParameterObservation,
 )
 from aerodiagnosis.ingestion import DocumentIngestionService, IngestionResult
@@ -197,6 +198,37 @@ class SearchEvidence:
                 top_k=top_k,
                 active_version_ids=self._active_versions(),
             )
+        )
+
+
+class HybridRetrieval:
+    """Run the production multi-route retrieval policy without invoking an LLM."""
+
+    def __init__(
+        self,
+        tools: DiagnosticToolset,
+        active_versions: Callable[[], frozenset[str]],
+    ) -> None:
+        self._tools = tools
+        self._active_versions = active_versions
+
+    def execute(
+        self,
+        query: str,
+        *,
+        top_k: int = 5,
+        min_relevance: float = 0.05,
+    ) -> HybridRetrievalResult:
+        command = DiagnosisCommand(
+            session_id="hybrid-retrieval-analysis",
+            question=query,
+            top_k=top_k,
+            min_relevance=min_relevance,
+        )
+        return self._tools.hybrid_search(
+            command=command,
+            query=query,
+            active_version_ids=self._active_versions(),
         )
 
 
