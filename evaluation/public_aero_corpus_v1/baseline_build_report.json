@@ -1,16 +1,29 @@
 {
   "dataset_id": "public-aero-corpus-v1",
-  "version": "1.0.0",
-  "manifest_sha256": "a5fb355efb59ab9c2854686aa7d49d224ab82c5476df70b32d88c57b56dbe7ab",
-  "verified_artifact_count": 9,
-  "document_count": 5,
-  "chunk_count": 235,
+  "version": "1.1.0",
+  "manifest_sha256": "46b0ae72dbcd115fdb8b2e712cb697125164761aa82c47a05766ced42c43520e",
+  "verified_artifact_count": 17,
+  "document_count": 10,
+  "chunk_count": 536,
+  "media_type_counts": {
+    "application/json": 1,
+    "application/pdf": 6,
+    "application/xml": 3,
+    "text/csv": 1,
+    "text/html": 2,
+    "text/plain": 4
+  },
   "documents": [
-    {"document_id": "NASA-20140003941", "pdf_pages": 22, "chunk_count": 66, "token_f1": 0.9641839832},
-    {"document_id": "NASA-20080032563", "pdf_pages": 23, "chunk_count": 62, "token_f1": 0.9560303376},
-    {"document_id": "NASA-20120016533", "pdf_pages": 32, "chunk_count": 56, "token_f1": 0.9977163984},
-    {"document_id": "NASA-20150007677", "pdf_pages": 11, "chunk_count": 43, "token_f1": 0.9453822040},
-    {"document_id": "FAA-H-8083-32B-CH10", "pdf_pages": 65, "selected_pages": [59, 60, 61, 62, 63, 64, 65], "chunk_count": 8, "token_f1": null}
+    {"document_id": "NASA-20140003941", "chunk_count": 66, "token_f1": 0.9641839832},
+    {"document_id": "NASA-20080032563", "chunk_count": 62, "token_f1": 0.9560303376},
+    {"document_id": "NASA-20120016533", "chunk_count": 56, "token_f1": 0.9977163984},
+    {"document_id": "NASA-20150007677", "chunk_count": 43, "token_f1": 0.9453822040},
+    {"document_id": "FAA-H-8083-32B-CH10", "chunk_count": 8, "token_f1": null},
+    {"document_id": "NTSB-DCA18MA142", "chunk_count": 8, "token_f1": null},
+    {"document_id": "FR-2022-11926", "chunk_count": 14, "html_to_xml_token_f1": 0.9848484848, "text_wrapper_to_xml_token_f1": 0.9860834990},
+    {"document_id": "PMC9407329", "chunk_count": 48, "xml_table_count": 7},
+    {"document_id": "PMC9573422", "chunk_count": 55, "xml_table_count": 10},
+    {"document_id": "FAA-SDR-2024-ENGINE-SAMPLE", "chunk_count": 176, "source_rows": 66079, "engine_system_rows": 1997, "sample_rows": 225}
   ],
-  "interpretation": "NASA fulltext is a machine reference, not human ground truth. FAA has no paired reference."
+  "interpretation": "Machine-to-machine overlap is a regression signal, not human ground truth. PDF, JATS tables and CSV free text still require manual gold annotations."
 }

@@ -1,6 +1,6 @@
 {
   "dataset_id": "public-aero-corpus-v1",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "retrieved_at": "2026-09-13",
   "raw_storage": ".runtime/datasets/public-aero-corpus-v1/raw",
   "documents": [
@@ -14,6 +14,7 @@
       "rights": "PUBLIC_USE_PERMITTED",
       "export_control": "NO",
       "redistributable": true,
+      "processor": "ntrs_pdf_with_text_reference",
       "artifacts": [
         {
           "name": "nasa-20140003941.pdf",
@@ -41,6 +42,7 @@
       "rights": "PUBLIC_USE_PERMITTED",
       "export_control": "NO",
       "redistributable": true,
+      "processor": "ntrs_pdf_with_text_reference",
       "artifacts": [
         {
           "name": "nasa-20080032563.pdf",
@@ -68,6 +70,7 @@
       "rights": "GOV_PUBLIC_USE_PERMITTED",
       "export_control": "NO",
       "redistributable": true,
+      "processor": "ntrs_pdf_with_text_reference",
       "artifacts": [
         {
           "name": "nasa-20120016533.pdf",
@@ -95,6 +98,7 @@
       "rights": "CC BY 3.0 US; NTRS PUBLIC_USE_PERMITTED",
       "export_control": "NO",
       "redistributable": true,
+      "processor": "ntrs_pdf_with_text_reference",
       "artifacts": [
         {
           "name": "nasa-20150007677.pdf",
@@ -122,6 +126,7 @@
       "rights": "Official U.S. government publication; FAA reproduction/modification responsibility notice applies",
       "export_control": "NO",
       "redistributable": true,
+      "processor": "pdf_pages",
       "artifacts": [
         {
           "name": "faa-h-8083-32b-ch10.pdf",
@@ -132,6 +137,146 @@
         }
       ],
       "selected_pages": [59, 60, 61, 62, 63, 64, 65]
+    },
+    {
+      "document_id": "NTSB-DCA18MA142",
+      "title": "Aviation Investigation Final Report DCA18MA142",
+      "publisher": "National Transportation Safety Board",
+      "publication_date": "2020-03-10",
+      "landing_url": "https://data.ntsb.gov/Docket?ProjectID=97056",
+      "distribution": "PUBLIC",
+      "rights": "Official U.S. federal government investigation report; public-domain government work",
+      "export_control": "NO",
+      "redistributable": true,
+      "processor": "pdf_pages",
+      "artifacts": [
+        {
+          "name": "ntsb-dca18ma142.pdf",
+          "url": "https://data.ntsb.gov/carol-repgen/api/Aviation/ReportMain/GenerateNewestReport/97056/pdf",
+          "media_type": "application/pdf",
+          "bytes": 813807,
+          "sha256": "f7df3fb9196af6b22b09e2379697e4043716db40d2298ba2331633f0e51234bd"
+        }
+      ]
+    },
+    {
+      "document_id": "FR-2022-11926",
+      "title": "Airworthiness Directives; CFM International, S.A. Turbofan Engines",
+      "publisher": "Office of the Federal Register / Federal Aviation Administration",
+      "publication_date": "2022-06-03",
+      "landing_url": "https://www.federalregister.gov/documents/2022/06/03/2022-11926/airworthiness-directives-cfm-international-sa-turbofan-engines",
+      "distribution": "PUBLIC",
+      "rights": "Official U.S. federal government rulemaking text; public-domain government work",
+      "export_control": "NO",
+      "redistributable": true,
+      "processor": "parallel_markup",
+      "artifacts": [
+        {
+          "name": "fr-2022-11926.xml",
+          "url": "https://www.federalregister.gov/documents/full_text/xml/2022/06/03/2022-11926.xml",
+          "media_type": "application/xml",
+          "bytes": 24566,
+          "sha256": "64731bcf935fb64cbbf01fe640f6a91bd2a8b061906edc9c9f88755246494b8d"
+        },
+        {
+          "name": "fr-2022-11926.html",
+          "url": "https://www.federalregister.gov/documents/full_text/html/2022/06/03/2022-11926.html",
+          "media_type": "text/html",
+          "bytes": 30992,
+          "sha256": "a0f34a0f1e58450705b09da80070cf736ea99e8224b9e07bbce652097fe185dc"
+        },
+        {
+          "name": "fr-2022-11926.txt",
+          "url": "https://www.federalregister.gov/documents/full_text/text/2022/06/03/2022-11926.txt",
+          "media_type": "text/html",
+          "bytes": 21030,
+          "sha256": "07463760848fb5a0e93738708de53686856d468ff5d5a67461afed113a2f4055"
+        },
+        {
+          "name": "fr-2022-11926.json",
+          "url": "https://www.federalregister.gov/api/v1/documents/2022-11926.json",
+          "media_type": "application/json",
+          "bytes": 4620,
+          "sha256": "a64cf6db5fd5db29c1437f5dc6431705555492aacad1566eb6e47617242fd21e"
+        }
+      ]
+    },
+    {
+      "document_id": "PMC9407329",
+      "title": "Predicting the Performance Deterioration of a Three-Shaft Industrial Gas Turbine",
+      "publisher": "Entropy / Europe PMC",
+      "publication_date": "2022-07-31",
+      "landing_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9407329/",
+      "distribution": "OPEN_ACCESS",
+      "rights": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "export_control": "NO",
+      "redistributable": true,
+      "processor": "jats_xml",
+      "artifacts": [
+        {
+          "name": "pmc9407329.xml",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9407329/fullTextXML",
+          "media_type": "application/xml",
+          "bytes": 165571,
+          "sha256": "d902db5f7b512a0376da99913713fff09e6ed26e74069c5819fa9790ea558074"
+        }
+      ]
+    },
+    {
+      "document_id": "PMC9573422",
+      "title": "The Effect of Physical Faults on a Three-Shaft Gas Turbine Performance at Full- and Part-Load Operation",
+      "publisher": "Sensors / Europe PMC",
+      "publication_date": "2022-09-21",
+      "landing_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9573422/",
+      "distribution": "OPEN_ACCESS",
+      "rights": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "export_control": "NO",
+      "redistributable": true,
+      "processor": "jats_xml",
+      "artifacts": [
+        {
+          "name": "pmc9573422.xml",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9573422/fullTextXML",
+          "media_type": "application/xml",
+          "bytes": 167886,
+          "sha256": "a05dc213e22a4f4a4cd757c65e352d87d78b46e3a937ff4a66ece52eb8bac718"
+        }
+      ]
+    },
+    {
+      "document_id": "FAA-SDR-2024-ENGINE-SAMPLE",
+      "title": "FAA Service Difficulty Reports 2024 - Engine-System Stratified Sample",
+      "publisher": "Federal Aviation Administration",
+      "publication_date": "2024-12-31",
+      "landing_url": "https://www.faa.gov/av-info/download_SDR",
+      "distribution": "PUBLIC",
+      "rights": "Official U.S. federal government public data",
+      "export_control": "NO",
+      "redistributable": true,
+      "processor": "faa_sdr_csv",
+      "sampling": {
+        "jasc_prefixes": ["71", "72", "73", "74", "75", "76", "77", "78", "79"],
+        "maximum_per_prefix": 25,
+        "sort_fields": ["JASCCode", "OperatorControlNumber"],
+        "excluded_identifier_fields": [
+          "OperatorDesignator",
+          "SubmitterDesignator",
+          "RegistryNNumber",
+          "AircraftSerialNumber",
+          "EngineSerialNumber",
+          "PartSerialNumber",
+          "ComponentSerialNumber"
+        ]
+      },
+      "artifacts": [
+        {
+          "name": "faa-sdr-2024.csv",
+          "url": "https://external.apic4e.faa.gov/sdrs/retrieve/SDR-2024.csv",
+          "media_type": "text/csv",
+          "bytes": 33746911,
+          "sha256": "80a2d209092d8aab8a3fd96cddf226418105c62f13a5457ce261b8c780df808e"
+        }
+      ]
     }
   ],
   "excluded_sources": [
@@ -139,6 +284,16 @@
       "title": "CMAPSS Jet Engine Simulated Data",
       "url": "https://data.nasa.gov/dataset/cmapss-jet-engine-simulated-data",
       "reason": "NASA portal marks accessLevel public but states License not specified; metadata retained, payload not redistributed in this corpus."
+    },
+    {
+      "title": "Application of Reinforcement Learning Algorithm Model in Gas Path Fault Intelligent Diagnosis of Gas Turbine",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8464420/",
+      "reason": "Europe PMC JATS metadata marks the article as retracted; excluded from evidence and evaluation assets."
+    },
+    {
+      "title": "Engine gas path component fault diagnosis based on a sparse deep stacking network",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10468384/",
+      "reason": "The article uses CC BY-NC-ND 4.0; excluded from derived-text distribution to keep the corpus transformation rights unambiguous."
     }
   ]
 }

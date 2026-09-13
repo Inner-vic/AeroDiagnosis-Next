@@ -104,18 +104,18 @@ AeroDiagnosis 使用 `weighted_rrf@2` 执行以下过程：
 
 ## 小规模公开研究语料
 
-仓库提供 `public-aero-corpus-v1` 的可复现构建入口。当前资产由 4 份 NASA NTRS 文献和 FAA 发动机维护手册章节组成，共 5 份 PDF、4 份 NASA 官方机器全文和 235 个确定性文本块，并附带：
+仓库提供 `public-aero-corpus-v1.1` 的可复现构建入口。当前资产汇集 NASA 技术文献、FAA 维护手册与故障记录、NTSB 调查报告、Federal Register 适航指令和 Europe PMC 开放论文，共 10 份文档或数据源、17 个原始文件，覆盖 PDF、TXT、HTML、XML、JSON 和 CSV 六类媒体格式，形成 536 个确定性文本块，并附带：
 
-- 8 个文档解析评测样本；
-- 12 条带来源定位的知识抽取候选；
-- 15 个带分级相关性初标的检索问题；
+- 16 个文档解析评测样本；
+- 24 条带来源定位的知识抽取候选；
+- 30 个带分级相关性初标的检索问题；
 - 来源 URL、许可依据、文件字节数、SHA-256 和解析基线报告。
 
 ```powershell
 .\scripts\Build-PublicCorpus.ps1
 ```
 
-原始文件与派生全文保存在被 Git 忽略的 `.runtime/datasets/public-aero-corpus-v1/`；仓库只提交来源清单、获取脚本、标注初稿和数据卡，既控制仓库体积，也能从官方来源复建并验证资产。当前标签全部是待人工复核的候选或解析样本，不宣称为领域金标准。详见 [Public Aero Corpus v1 数据卡](evaluation/public_aero_corpus_v1/DATA_CARD.md)。
+原始文件与派生全文保存在被 Git 忽略的 `.runtime/datasets/public-aero-corpus-v1/`；仓库只提交来源清单、获取脚本、标注初稿和数据卡，既控制仓库体积，也能从官方来源复建并验证资产。当前标签全部是待人工复核的候选或解析样本，不宣称为领域金标准。详见 [Public Aero Corpus v1.1 数据卡](evaluation/public_aero_corpus_v1/DATA_CARD.md)。
 
 ## 系统架构
 

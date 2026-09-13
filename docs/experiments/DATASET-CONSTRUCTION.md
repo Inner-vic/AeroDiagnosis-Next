@@ -64,6 +64,6 @@
 
 ## 已落地的起步资产
 
-`evaluation/public_aero_corpus_v1/` 已按上述原则落地一份可复现的小规模资产。它包含 5 份 NASA/FAA 官方公开文档的来源清单与哈希、8 个解析样本、12 条知识抽取候选、15 个文档级检索问题和解析对照基线；原始文件及 235 个派生文本块由 `scripts/Build-PublicCorpus.ps1` 下载到 `.runtime/`，不直接进入 Git。
+`evaluation/public_aero_corpus_v1/` 已按上述原则落地一份可复现的小规模资产。它包含 10 份公开文档或数据源、17 个原始文件的来源清单与哈希、16 个解析样本、24 条知识抽取候选、30 个文档级检索问题和解析对照基线；来源覆盖 NASA、FAA、NTSB、Federal Register 与 Europe PMC，原始文件横跨 PDF、TXT、HTML、XML、JSON、CSV 六类格式，536 个派生文本块由 `scripts/Build-PublicCorpus.ps1` 下载或生成到 `.runtime/`，不直接进入 Git。
 
-该资产的作用是让解析、抽取、召回和标注流程先运行起来。知识与检索标签仍是 `machine_candidate`，FAA 复杂表格样本仍是 `needs_manual_gold`，正式论文实验必须先按本协议完成双人独立标注、分歧仲裁和专家抽样复核。许可边界、来源偏差和排除项见 [数据卡](../../evaluation/public_aero_corpus_v1/DATA_CARD.md)。
+该资产的作用是让解析、抽取、召回和标注流程先运行起来。知识与检索标签仍是 `machine_candidate`，FAA/NTSB 复杂版面、JATS 表格与 SDR 自由文本仍需人工金标，正式论文实验必须先按本协议完成双人独立标注、分歧仲裁和专家抽样复核。许可边界、来源偏差和排除项见 [数据卡](../../evaluation/public_aero_corpus_v1/DATA_CARD.md)。

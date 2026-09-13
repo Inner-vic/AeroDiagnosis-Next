@@ -6,3 +6,11 @@
 {"sample_id":"parse-nasa-2015-p4","document_id":"NASA-20150007677","page":4,"layout_type":"dense_table","reference":"ntrs_official_machine_fulltext","review_status":"machine_candidate"}
 {"sample_id":"parse-faa-p60","document_id":"FAA-H-8083-32B-CH10","page":60,"layout_type":"three_column_troubleshooting_table","reference":null,"review_status":"needs_manual_gold"}
 {"sample_id":"parse-faa-p64","document_id":"FAA-H-8083-32B-CH10","page":64,"layout_type":"two_column_text_with_image","reference":null,"review_status":"needs_manual_gold"}
+{"sample_id":"parse-ntsb-p1","document_id":"NTSB-DCA18MA142","page":1,"layout_type":"branded_header_metadata_and_narrative","reference":null,"review_status":"needs_manual_gold"}
+{"sample_id":"parse-ntsb-p2","document_id":"NTSB-DCA18MA142","page":2,"layout_type":"probable_cause_and_findings_table","reference":null,"review_status":"needs_manual_gold"}
+{"sample_id":"parse-fr-html","document_id":"FR-2022-11926","artifact":"fr-2022-11926.html","layout_type":"regulatory_html","reference":"fr-2022-11926.xml","review_status":"machine_candidate"}
+{"sample_id":"parse-fr-xml","document_id":"FR-2022-11926","artifact":"fr-2022-11926.xml","layout_type":"regulatory_xml","reference":"fr-2022-11926.txt","review_status":"machine_candidate"}
+{"sample_id":"parse-fr-json","document_id":"FR-2022-11926","artifact":"fr-2022-11926.json","layout_type":"regulatory_metadata_json","reference":null,"review_status":"needs_manual_gold"}
+{"sample_id":"parse-pmc940-table1","document_id":"PMC9407329","artifact":"pmc9407329.xml","locator":"entropy-24-01052-t001","layout_type":"jats_table","reference":null,"review_status":"needs_manual_gold"}
+{"sample_id":"parse-pmc957-table1","document_id":"PMC9573422","artifact":"pmc9573422.xml","locator":"sensors-22-07150-t001","layout_type":"jats_table","reference":null,"review_status":"needs_manual_gold"}
+{"sample_id":"parse-sdr-csv","document_id":"FAA-SDR-2024-ENGINE-SAMPLE","artifact":"faa-sdr-2024.csv","layout_type":"wide_quoted_csv_with_free_text","reference":"processed/faa-sdr-2024-engine-sample.csv","review_status":"machine_candidate"}
