@@ -1,0 +1,16 @@
+{
+  "dataset_id": "public-aero-corpus-v1",
+  "version": "1.0.0",
+  "manifest_sha256": "a5fb355efb59ab9c2854686aa7d49d224ab82c5476df70b32d88c57b56dbe7ab",
+  "verified_artifact_count": 9,
+  "document_count": 5,
+  "chunk_count": 235,
+  "documents": [
+    {"document_id": "NASA-20140003941", "pdf_pages": 22, "chunk_count": 66, "token_f1": 0.9641839832},
+    {"document_id": "NASA-20080032563", "pdf_pages": 23, "chunk_count": 62, "token_f1": 0.9560303376},
+    {"document_id": "NASA-20120016533", "pdf_pages": 32, "chunk_count": 56, "token_f1": 0.9977163984},
+    {"document_id": "NASA-20150007677", "pdf_pages": 11, "chunk_count": 43, "token_f1": 0.9453822040},
+    {"document_id": "FAA-H-8083-32B-CH10", "pdf_pages": 65, "selected_pages": [59, 60, 61, 62, 63, 64, 65], "chunk_count": 8, "token_f1": null}
+  ],
+  "interpretation": "NASA fulltext is a machine reference, not human ground truth. FAA has no paired reference."
+}

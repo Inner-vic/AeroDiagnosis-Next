@@ -1,6 +1,6 @@
 # 实现状态与验证记录
 
-更新日期：2026-09-12
+更新日期：2026-09-13
 
 ## 已完成里程碑
 
@@ -51,6 +51,10 @@
 - 输出逐查询、策略汇总和两两比较 CSV，保留后续显著性分析所需材料；
 - 已提供领域语料清单、解析标注、知识抽取标注和检索相关性标注模板；
 - 已记录无专家条件下的候选生成、双人独立标注、分歧仲裁和专家抽样复核协议。
+- 已构建 `public-aero-corpus-v1`：5 份 NASA/FAA 官方公开文档、9 个原始文件、235 个确定性文本块；
+- 构建器支持官方来源下载、字节数与 SHA-256 校验、PDF 加密检查、指定页提取及离线复验；
+- 已形成 8 个解析样本、12 条知识抽取候选和 15 个检索问题，全部显式标记为非金标准；
+- NASA PDF 解析与官方机器全文的 token overlap 已记录为退化检测基线，不冒充人工解析准确率。
 
 ### 知识增强根因分析垂直切片
 
@@ -90,7 +94,7 @@ fail-closed 语义。真实 provider 的诊断质量必须在用户提供 API �
 - SQLite：schema 6，vector=`sqlite_hashing`，graph=`sqlite_graph`；
 - Ruff：通过；
 - mypy strict：通过（58 个 source files）；
-- pytest：102 passed；
+- pytest：104 passed；
 - branch coverage：88.95%（门槛 85%）；
 - legacy compileall：通过；
 - sdist + wheel：构建通过，wheel 内含三项前端静态资源；

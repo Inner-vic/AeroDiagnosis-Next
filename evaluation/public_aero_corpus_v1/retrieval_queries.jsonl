@@ -1,0 +1,15 @@
+{"query_id":"rq-001","query":"What is gas path diagnostics intended to detect and isolate?","qrels":{"NASA-20120016533":2,"NASA-20140003941":1},"intent":"definition","review_status":"machine_candidate"}
+{"query_id":"rq-002","query":"Which public benchmark can compare aircraft engine gas path diagnostic methods?","qrels":{"NASA-20140003941":2,"NASA-20080032563":2},"intent":"benchmark_identification","review_status":"machine_candidate"}
+{"query_id":"rq-003","query":"What fault types are represented in the public gas path benchmark?","qrels":{"NASA-20080032563":2,"NASA-20140003941":1},"intent":"fault_taxonomy","review_status":"machine_candidate"}
+{"query_id":"rq-004","query":"How are blind test cases used to assess diagnostic algorithms?","qrels":{"NASA-20140003941":2,"NASA-20080032563":1},"intent":"evaluation_method","review_status":"machine_candidate"}
+{"query_id":"rq-005","query":"Why are common datasets important for prognostic benchmarking?","qrels":{"NASA-20150007677":2},"intent":"research_motivation","review_status":"machine_candidate"}
+{"query_id":"rq-006","query":"How can operating conditions hide turbofan degradation signatures?","qrels":{"NASA-20150007677":2},"intent":"confounding_factor","review_status":"machine_candidate"}
+{"query_id":"rq-007","query":"What is C-MAPSS and what type of engine does it simulate?","qrels":{"NASA-20150007677":2,"NASA-20080032563":1},"intent":"dataset_context","review_status":"machine_candidate"}
+{"query_id":"rq-008","query":"Which measurements are useful when troubleshooting high exhaust gas temperature?","qrels":{"FAA-H-8083-32B-CH10":2},"intent":"maintenance_support","review_status":"machine_candidate"}
+{"query_id":"rq-009","query":"High EGT low rpm and high fuel flow point toward which candidate fault?","qrels":{"FAA-H-8083-32B-CH10":2},"intent":"symptom_to_cause","review_status":"machine_candidate"}
+{"query_id":"rq-010","query":"If only EGT is high while other parameters are normal what should be checked?","qrels":{"FAA-H-8083-32B-CH10":2},"intent":"differential_diagnosis","review_status":"machine_candidate"}
+{"query_id":"rq-011","query":"What can cause turbine engine vibration at high rpm?","qrels":{"FAA-H-8083-32B-CH10":2},"intent":"symptom_to_cause","review_status":"machine_candidate"}
+{"query_id":"rq-012","query":"How should an EGT thermocouple system be troubleshot?","qrels":{"FAA-H-8083-32B-CH10":2},"intent":"inspection_procedure","review_status":"machine_candidate"}
+{"query_id":"rq-013","query":"What NASA research areas combine propulsion controls and engine health management?","qrels":{"NASA-20120016533":2},"intent":"research_overview","review_status":"machine_candidate"}
+{"query_id":"rq-014","query":"What lessons were learned from public gas path diagnostic benchmarking?","qrels":{"NASA-20140003941":2,"NASA-20080032563":1},"intent":"benchmark_analysis","review_status":"machine_candidate"}
+{"query_id":"rq-015","query":"Why should results from different C-MAPSS subsets not be compared directly?","qrels":{"NASA-20150007677":2},"intent":"dataset_limitations","review_status":"machine_candidate"}

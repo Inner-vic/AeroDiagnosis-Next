@@ -12,7 +12,9 @@ license = { file = "LICENSE" }
 authors = [{ name = "AeroDiagnosis contributors" }]
 dependencies = [
   "fastapi>=0.115,<1",
+  "fonttools>=4.59,<5",
   "mcp>=2.2,<3",
+  "pypdf>=6.10,<7",
   "pydantic>=2.13.5,<3",
   "uvicorn>=0.34,<1",
 ]

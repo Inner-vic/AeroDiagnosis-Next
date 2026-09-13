@@ -1,0 +1,8 @@
+{"sample_id":"parse-nasa-2014-p7","document_id":"NASA-20140003941","page":7,"layout_type":"two_column_text","reference":"ntrs_official_machine_fulltext","review_status":"machine_candidate"}
+{"sample_id":"parse-nasa-2014-p10","document_id":"NASA-20140003941","page":10,"layout_type":"table_and_text","reference":"ntrs_official_machine_fulltext","review_status":"machine_candidate"}
+{"sample_id":"parse-nasa-2008-p6","document_id":"NASA-20080032563","page":6,"layout_type":"two_column_text","reference":"ntrs_official_machine_fulltext","review_status":"machine_candidate"}
+{"sample_id":"parse-nasa-2008-p12","document_id":"NASA-20080032563","page":12,"layout_type":"figure_and_text","reference":"ntrs_official_machine_fulltext","review_status":"machine_candidate"}
+{"sample_id":"parse-nasa-2012-p8","document_id":"NASA-20120016533","page":8,"layout_type":"diagram_and_text","reference":"ntrs_official_machine_fulltext","review_status":"machine_candidate"}
+{"sample_id":"parse-nasa-2015-p4","document_id":"NASA-20150007677","page":4,"layout_type":"dense_table","reference":"ntrs_official_machine_fulltext","review_status":"machine_candidate"}
+{"sample_id":"parse-faa-p60","document_id":"FAA-H-8083-32B-CH10","page":60,"layout_type":"three_column_troubleshooting_table","reference":null,"review_status":"needs_manual_gold"}
+{"sample_id":"parse-faa-p64","document_id":"FAA-H-8083-32B-CH10","page":64,"layout_type":"two_column_text_with_image","reference":null,"review_status":"needs_manual_gold"}

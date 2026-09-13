@@ -11,7 +11,7 @@
 [![CI](https://github.com/Inner-vic/AeroDiagnosis-Next/actions/workflows/ci.yml/badge.svg)](https://github.com/Inner-vic/AeroDiagnosis-Next/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/Python-3.13-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
-[![Tests](https://img.shields.io/badge/tests-102%20passed-2E8B57)](#质量与验证)
+[![Tests](https://img.shields.io/badge/tests-104%20passed-2E8B57)](#质量与验证)
 [![Coverage](https://img.shields.io/badge/coverage-88.95%25-2E8B57)](#质量与验证)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
@@ -101,6 +101,21 @@ AeroDiagnosis 使用 `weighted_rrf@2` 执行以下过程：
 ```
 
 实验输出 `strategy_summary.csv`、`per_query.csv`、`pairwise.csv` 和带数据集 SHA-256 的 `summary.json`，可直接用于论文表格、逐查询显著性分析与实验复核。内置小型基准只用于贯通流程，不作为论文结论；正式研究必须扩充并冻结人工评测集。
+
+## 小规模公开研究语料
+
+仓库提供 `public-aero-corpus-v1` 的可复现构建入口。当前资产由 4 份 NASA NTRS 文献和 FAA 发动机维护手册章节组成，共 5 份 PDF、4 份 NASA 官方机器全文和 235 个确定性文本块，并附带：
+
+- 8 个文档解析评测样本；
+- 12 条带来源定位的知识抽取候选；
+- 15 个带分级相关性初标的检索问题；
+- 来源 URL、许可依据、文件字节数、SHA-256 和解析基线报告。
+
+```powershell
+.\scripts\Build-PublicCorpus.ps1
+```
+
+原始文件与派生全文保存在被 Git 忽略的 `.runtime/datasets/public-aero-corpus-v1/`；仓库只提交来源清单、获取脚本、标注初稿和数据卡，既控制仓库体积，也能从官方来源复建并验证资产。当前标签全部是待人工复核的候选或解析样本，不宣称为领域金标准。详见 [Public Aero Corpus v1 数据卡](evaluation/public_aero_corpus_v1/DATA_CARD.md)。
 
 ## 系统架构
 
@@ -311,7 +326,7 @@ code/python/                # 旧版原型，仅用于迁移期行为参考
 
 当前基线：
 
-- 102 项自动化测试通过；
+- 104 项自动化测试通过；
 - 总覆盖率 88.95%；
 - Ruff 静态检查通过；
 - mypy strict 类型检查通过；

@@ -1,0 +1,144 @@
+{
+  "dataset_id": "public-aero-corpus-v1",
+  "version": "1.0.0",
+  "retrieved_at": "2026-09-13",
+  "raw_storage": ".runtime/datasets/public-aero-corpus-v1/raw",
+  "documents": [
+    {
+      "document_id": "NASA-20140003941",
+      "title": "Aircraft Engine Gas Path Diagnostic Methods: Public Benchmarking Results",
+      "publisher": "NASA Glenn Research Center",
+      "publication_date": "2013-11-01",
+      "landing_url": "https://ntrs.nasa.gov/citations/20140003941",
+      "distribution": "PUBLIC",
+      "rights": "PUBLIC_USE_PERMITTED",
+      "export_control": "NO",
+      "redistributable": true,
+      "artifacts": [
+        {
+          "name": "nasa-20140003941.pdf",
+          "url": "https://ntrs.nasa.gov/api/citations/20140003941/downloads/20140003941.pdf",
+          "media_type": "application/pdf",
+          "bytes": 541430,
+          "sha256": "121c48d29831aeaa49fd513efa46277833aff709694e1967a04310f09b2d1a39"
+        },
+        {
+          "name": "nasa-20140003941.txt",
+          "url": "https://ntrs.nasa.gov/api/citations/20140003941/downloads/20140003941.txt",
+          "media_type": "text/plain",
+          "bytes": 68587,
+          "sha256": "8568c0f896259b33d5bf87b7c7c6341cc00571ae62e1f216fbb747a1e431ed89"
+        }
+      ]
+    },
+    {
+      "document_id": "NASA-20080032563",
+      "title": "Benchmarking Gas Path Diagnostic Methods: A Public Approach",
+      "publisher": "NASA Technical Reports Server",
+      "publication_date": "2008-07-01",
+      "landing_url": "https://ntrs.nasa.gov/citations/20080032563",
+      "distribution": "PUBLIC",
+      "rights": "PUBLIC_USE_PERMITTED",
+      "export_control": "NO",
+      "redistributable": true,
+      "artifacts": [
+        {
+          "name": "nasa-20080032563.pdf",
+          "url": "https://ntrs.nasa.gov/api/citations/20080032563/downloads/20080032563.pdf",
+          "media_type": "application/pdf",
+          "bytes": 550302,
+          "sha256": "7984d775078df850dc95b5d1bf2bf59d54392beb57bcced6091eeb9eabf7b330"
+        },
+        {
+          "name": "nasa-20080032563.txt",
+          "url": "https://ntrs.nasa.gov/api/citations/20080032563/downloads/20080032563.txt",
+          "media_type": "text/plain",
+          "bytes": 62689,
+          "sha256": "0ec922fb9ca565d2c21ccc52bc80bc31a2b83215ede83d6bde3de99b12befa99"
+        }
+      ]
+    },
+    {
+      "document_id": "NASA-20120016533",
+      "title": "Overview of Propulsion Controls and Diagnostics Research at NASA Glenn",
+      "publisher": "NASA Glenn Research Center",
+      "publication_date": "2012-10-01",
+      "landing_url": "https://ntrs.nasa.gov/citations/20120016533",
+      "distribution": "PUBLIC",
+      "rights": "GOV_PUBLIC_USE_PERMITTED",
+      "export_control": "NO",
+      "redistributable": true,
+      "artifacts": [
+        {
+          "name": "nasa-20120016533.pdf",
+          "url": "https://ntrs.nasa.gov/api/citations/20120016533/downloads/20120016533.pdf",
+          "media_type": "application/pdf",
+          "bytes": 6603080,
+          "sha256": "2931dcc97db328adf4aa0ec28e3cabeb24de07b59f8e62afd54001ee1bcde817"
+        },
+        {
+          "name": "nasa-20120016533.txt",
+          "url": "https://ntrs.nasa.gov/api/citations/20120016533/downloads/20120016533.txt",
+          "media_type": "text/plain",
+          "bytes": 61631,
+          "sha256": "f246ec6130e09a7622898de9bf6706b14246f4250445d93dfcab1f8237ecf43c"
+        }
+      ]
+    },
+    {
+      "document_id": "NASA-20150007677",
+      "title": "Review and Analysis of Algorithmic Approaches Developed for Prognostics on CMAPSS Dataset",
+      "publisher": "NASA Technical Reports Server",
+      "publication_date": "2014-09-28",
+      "landing_url": "https://ntrs.nasa.gov/citations/20150007677",
+      "distribution": "PUBLIC",
+      "rights": "CC BY 3.0 US; NTRS PUBLIC_USE_PERMITTED",
+      "export_control": "NO",
+      "redistributable": true,
+      "artifacts": [
+        {
+          "name": "nasa-20150007677.pdf",
+          "url": "https://ntrs.nasa.gov/api/citations/20150007677/downloads/20150007677.pdf",
+          "media_type": "application/pdf",
+          "bytes": 177310,
+          "sha256": "5b42232526e3f3ffb7167a712f609c5ebc49b58d58d4536929ec18ffbc466c74"
+        },
+        {
+          "name": "nasa-20150007677.txt",
+          "url": "https://ntrs.nasa.gov/api/citations/20150007677/downloads/20150007677.txt",
+          "media_type": "text/plain",
+          "bytes": 53724,
+          "sha256": "1d5914d17697aba77c7ee882abc2ea4bd6f73c10298add675d818465d81655dc"
+        }
+      ]
+    },
+    {
+      "document_id": "FAA-H-8083-32B-CH10",
+      "title": "Aviation Maintenance Technician Handbook - Powerplant, Chapter 10",
+      "publisher": "Federal Aviation Administration",
+      "publication_date": "2023-07-13",
+      "landing_url": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/faa-h-8083-32b-chapter-10-engine-maintenance",
+      "distribution": "PUBLIC",
+      "rights": "Official U.S. government publication; FAA reproduction/modification responsibility notice applies",
+      "export_control": "NO",
+      "redistributable": true,
+      "artifacts": [
+        {
+          "name": "faa-h-8083-32b-ch10.pdf",
+          "url": "https://www.faa.gov/sites/faa.gov/files/12_amtp_ch10_0.pdf",
+          "media_type": "application/pdf",
+          "bytes": 14227775,
+          "sha256": "55964e589d96f657812938d932280d0502d9055c387ea07707cbc9777d3cfec8"
+        }
+      ],
+      "selected_pages": [59, 60, 61, 62, 63, 64, 65]
+    }
+  ],
+  "excluded_sources": [
+    {
+      "title": "CMAPSS Jet Engine Simulated Data",
+      "url": "https://data.nasa.gov/dataset/cmapss-jet-engine-simulated-data",
+      "reason": "NASA portal marks accessLevel public but states License not specified; metadata retained, payload not redistributed in this corpus."
+    }
+  ]
+}
