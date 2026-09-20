@@ -8,6 +8,7 @@ from typing import Annotated, Any
 from fastapi import APIRouter, Depends, HTTPException, status
 
 from aerodiagnosis.adapters.llm import OpenAICompatibleLanguageModel
+from aerodiagnosis.adapters.persistence import ExternalStoreOutbox
 from aerodiagnosis.adapters.persistence.sqlite import LATEST_SCHEMA_VERSION
 from aerodiagnosis.application.diagnostic_workflow import (
     DiagnosisRunNotFound,
@@ -62,6 +63,7 @@ def health() -> dict[str, str]:
 @router.get("/system", tags=["system"])
 def system(application: ApplicationDependency) -> dict[str, Any]:
     state = application.get_runtime_status.execute()
+    outbox = ExternalStoreOutbox(application.settings.database_path).counts()
     return {
         "version": __version__,
         "mode": "application",
@@ -86,6 +88,10 @@ def system(application: ApplicationDependency) -> dict[str, Any]:
         "memory": {
             "sessions": state.session_count,
             "messages": state.message_count,
+        },
+        "external_sync": {
+            "mode": "transactional_outbox",
+            "events": outbox,
         },
         "knowledge_enhancement": {
             "positioning": "model_result_plus_knowledge_root_cause_support",

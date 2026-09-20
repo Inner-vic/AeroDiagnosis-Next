@@ -19,6 +19,12 @@ dependencies = [
   "uvicorn>=0.34,<1",
 ]
 
+[project.optional-dependencies]
+external-stores = [
+  "chromadb>=1.5.9,<2",
+  "neo4j>=5.26,<7",
+]
+
 [project.scripts]
 aerodiagnosis-evaluate = "aerodiagnosis.evaluation:main"
 aerodiagnosis-ingest = "aerodiagnosis.cli:main"
@@ -26,6 +32,7 @@ aerodiagnosis-mcp = "aerodiagnosis.adapters.mcp:main"
 aerodiagnosis-migrate-v2 = "aerodiagnosis.migration:main"
 aerodiagnosis-retrieval-experiment = "aerodiagnosis.retrieval_experiment:main"
 aerodiagnosis-server = "aerodiagnosis.adapters.api:main"
+aerodiagnosis-sync = "aerodiagnosis.sync:main"
 
 [dependency-groups]
 dev = [
@@ -74,3 +81,7 @@ python_version = "3.13"
 strict = true
 packages = ["aerodiagnosis"]
 mypy_path = "src"
+
+[[tool.mypy.overrides]]
+module = ["chromadb", "neo4j"]
+ignore_missing_imports = true

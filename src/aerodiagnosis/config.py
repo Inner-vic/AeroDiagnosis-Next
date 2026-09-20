@@ -39,6 +39,16 @@ class RuntimeSettings(BaseModel):
     database_path: Path
     vector_backend: str = Field(default="sqlite", pattern=r"^(sqlite|chroma_http)$")
     graph_backend: str = Field(default="sqlite", pattern=r"^(sqlite|neo4j)$")
+    chroma_host: str = "127.0.0.1"
+    chroma_port: int = Field(default=8000, ge=1, le=65535)
+    chroma_ssl: bool = False
+    chroma_collection: str = "aerodiagnosis_chunks"
+    neo4j_uri: str = "bolt://127.0.0.1:7687"
+    neo4j_user: str = "neo4j"
+    neo4j_password: SecretStr | None = None
+    neo4j_database: str = "neo4j"
+    sync_batch_size: int = Field(default=50, ge=1, le=500)
+    sync_max_attempts: int = Field(default=12, ge=1, le=100)
     api_host: str = "127.0.0.1"
     api_port: int = Field(default=8080, ge=1, le=65535)
     operator_token: str | None = None
@@ -71,6 +81,7 @@ class RuntimeSettings(BaseModel):
         ).expanduser()
         token = value("AERODIAGNOSIS_OPERATOR_TOKEN") or None
         llm_key = value("AERODIAGNOSIS_LLM_API_KEY") or None
+        neo4j_password = value("AERODIAGNOSIS_NEO4J_PASSWORD") or None
         key_file = value("AERODIAGNOSIS_LLM_API_KEY_FILE") or None
         if llm_key is None and key_file is not None:
             key_path = Path(key_file).expanduser().resolve(strict=True)
@@ -82,6 +93,19 @@ class RuntimeSettings(BaseModel):
             database_path=database_path,
             vector_backend=value("AERODIAGNOSIS_VECTOR_BACKEND", "sqlite"),
             graph_backend=value("AERODIAGNOSIS_GRAPH_BACKEND", "sqlite"),
+            chroma_host=value("AERODIAGNOSIS_CHROMA_HOST", "127.0.0.1"),
+            chroma_port=int(value("AERODIAGNOSIS_CHROMA_PORT", "8000")),
+            chroma_ssl=value("AERODIAGNOSIS_CHROMA_SSL", "false").lower()
+            in {"1", "true", "yes", "on"},
+            chroma_collection=value(
+                "AERODIAGNOSIS_CHROMA_COLLECTION", "aerodiagnosis_chunks"
+            ),
+            neo4j_uri=value("AERODIAGNOSIS_NEO4J_URI", "bolt://127.0.0.1:7687"),
+            neo4j_user=value("AERODIAGNOSIS_NEO4J_USER", "neo4j"),
+            neo4j_password=SecretStr(neo4j_password) if neo4j_password else None,
+            neo4j_database=value("AERODIAGNOSIS_NEO4J_DATABASE", "neo4j"),
+            sync_batch_size=int(value("AERODIAGNOSIS_SYNC_BATCH_SIZE", "50")),
+            sync_max_attempts=int(value("AERODIAGNOSIS_SYNC_MAX_ATTEMPTS", "12")),
             api_host=value("AERODIAGNOSIS_API_HOST", "127.0.0.1"),
             api_port=int(value("AERODIAGNOSIS_API_PORT", "8080")),
             operator_token=token,

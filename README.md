@@ -11,8 +11,8 @@
 [![CI](https://github.com/Inner-vic/AeroDiagnosis-Next/actions/workflows/ci.yml/badge.svg)](https://github.com/Inner-vic/AeroDiagnosis-Next/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/Python-3.13-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
-[![Tests](https://img.shields.io/badge/tests-104%20passed-2E8B57)](#质量与验证)
-[![Coverage](https://img.shields.io/badge/coverage-88.95%25-2E8B57)](#质量与验证)
+[![Tests](https://img.shields.io/badge/tests-116%20passed-2E8B57)](#质量与验证)
+[![Coverage](https://img.shields.io/badge/coverage-88.38%25-2E8B57)](#质量与验证)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 </div>
@@ -224,6 +224,32 @@ Set-Location .\AeroDiagnosis-Next
 
 虚拟环境、SQLite 数据、缓存和日志默认位于仓库内的 `.runtime/`，不会污染系统 Python 环境。
 
+### Docker / Podman 部署
+
+在允许 Linux 容器的个人电脑或服务器上，可用仓库根目录的 v3 Compose 清单启动同一应用：
+
+```powershell
+docker compose up --build -d
+docker compose ps
+```
+
+Podman 环境可使用兼容的 Compose provider 执行同一份 `compose.yaml`。Web 工作台仍位于
+<http://127.0.0.1:8080/>；SQLite、会话、案例和诊断状态保存在名为
+`aerodiagnosis-runtime` 的持久化卷中。容器默认以非 root 用户运行、只读挂载应用层，且只在
+宿主机回环地址开放端口。详见 [部署文档](docs/DEPLOYMENT.md)。
+
+需要 Neo4j、Chroma 和增量同步 Worker 时，使用完整部署清单：
+
+```powershell
+$env:NEO4J_PASSWORD = "replace-with-a-strong-password"
+docker compose -f compose.yaml -f compose.full.yaml up --build -d --wait
+```
+
+完整模式不是脆弱的三库同步写入：SQLite 继续承担权威版本、checkpoint 与本地索引；每次向量、
+节点、关系的变更与本地写入在同一事务中进入 Outbox，再由 `aerodiagnosis-sync` 增量复制到
+Chroma 和 Neo4j。外部服务短时不可用时事件保留并退避重试，在线查询自动回退本地索引。
+同步协议和故障语义见 [外部索引增量同步设计](docs/architecture/EXTERNAL-STORE-SYNC.md)。
+
 ## LLM API 配置
 
 ### 方式一：每位使用者在前端配置
@@ -315,6 +341,10 @@ evaluation/                 # 版本化评测数据集与评分器
 tests/                      # 单元、契约、迁移和特征测试
 scripts/                    # Windows 初始化、检查、启动和停止脚本
 docs/                       # 架构、升级、部署和状态文档
+Dockerfile                  # v3 非 root 生产镜像
+compose.yaml                # v3 本地/服务器持久化部署
+compose.full.yaml           # Neo4j + Chroma + CDC/Outbox 完整部署
+.github/workflows/ci.yml    # 代码与容器双重验证
 code/python/                # 旧版原型，仅用于迁移期行为参考
 ```
 
@@ -326,8 +356,8 @@ code/python/                # 旧版原型，仅用于迁移期行为参考
 
 当前基线：
 
-- 104 项自动化测试通过；
-- 总覆盖率 88.95%；
+- 116 项自动化测试通过；
+- 总覆盖率 88.38%；
 - Ruff 静态检查通过；
 - mypy strict 类型检查通过；
 - wheel 与 source distribution 可重复构建；

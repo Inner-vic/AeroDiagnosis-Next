@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 from collections.abc import Sequence
 from datetime import UTC, datetime
@@ -9,13 +10,15 @@ from pathlib import Path
 
 from aerodiagnosis.ports import GraphEdge, GraphNode, Neighbor
 
+from .outbox import ExternalStoreOutbox
 from .sqlite import SQLiteDatabase
 
 
 class SQLiteGraphStore:
-    def __init__(self, path: Path) -> None:
+    def __init__(self, path: Path, *, outbox: ExternalStoreOutbox | None = None) -> None:
         self._database = SQLiteDatabase(path)
         self._database.migrate()
+        self._outbox = outbox
 
     @property
     def backend_name(self) -> str:
@@ -68,6 +71,29 @@ class SQLiteGraphStore:
                 """,
                 records,
             )
+            if self._outbox is not None:
+                ExternalStoreOutbox.enqueue_in_transaction(
+                    connection,
+                    stream="graph",
+                    operation="upsert_nodes",
+                    aggregate_id=hashlib.sha256(
+                        "\0".join(sorted(node.node_id for node in nodes)).encode()
+                    ).hexdigest(),
+                    payload={
+                        "nodes": [
+                            {
+                                "node_id": node.node_id,
+                                "name": node.name,
+                                "kind": node.kind,
+                                "description": node.description,
+                                "source_ref": node.source_ref,
+                                "version_id": node.version_id,
+                                "properties": dict(node.properties),
+                            }
+                            for node in nodes
+                        ]
+                    },
+                )
             connection.commit()
         return len(records)
 
@@ -123,6 +149,30 @@ class SQLiteGraphStore:
                 """,
                 records,
             )
+            if self._outbox is not None:
+                ExternalStoreOutbox.enqueue_in_transaction(
+                    connection,
+                    stream="graph",
+                    operation="upsert_edges",
+                    aggregate_id=hashlib.sha256(
+                        "\0".join(sorted(edge.edge_id for edge in edges)).encode()
+                    ).hexdigest(),
+                    payload={
+                        "edges": [
+                            {
+                                "edge_id": edge.edge_id,
+                                "source_id": edge.source_id,
+                                "target_id": edge.target_id,
+                                "relation": edge.relation,
+                                "source_ref": edge.source_ref,
+                                "version_id": edge.version_id,
+                                "confidence": edge.confidence,
+                                "properties": dict(edge.properties),
+                            }
+                            for edge in edges
+                        ]
+                    },
+                )
             connection.commit()
         return len(records)
 
@@ -279,6 +329,14 @@ class SQLiteGraphStore:
             node_cursor = connection.execute(
                 "DELETE FROM graph_nodes WHERE source_ref = ?", (source_ref,)
             )
+            if self._outbox is not None:
+                ExternalStoreOutbox.enqueue_in_transaction(
+                    connection,
+                    stream="graph",
+                    operation="delete_source",
+                    aggregate_id=source_ref,
+                    payload={"source_ref": source_ref},
+                )
             connection.commit()
             return node_cursor.rowcount, edge_cursor.rowcount
 

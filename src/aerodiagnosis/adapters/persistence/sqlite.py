@@ -8,7 +8,7 @@ from contextlib import closing, contextmanager
 from dataclasses import dataclass
 from pathlib import Path
 
-LATEST_SCHEMA_VERSION = 6
+LATEST_SCHEMA_VERSION = 7
 
 
 @dataclass(frozen=True, slots=True)
@@ -207,6 +207,30 @@ MIGRATIONS = (
         );
         CREATE INDEX IF NOT EXISTS idx_root_cause_sessions_updated
             ON root_cause_sessions(updated_at DESC);
+        """,
+    ),
+    Migration(
+        7,
+        "external_store_outbox",
+        """
+        CREATE TABLE IF NOT EXISTS external_store_outbox (
+            event_id TEXT PRIMARY KEY,
+            stream TEXT NOT NULL CHECK(stream IN ('vector', 'graph')),
+            operation TEXT NOT NULL,
+            aggregate_id TEXT NOT NULL,
+            payload_json TEXT NOT NULL,
+            status TEXT NOT NULL CHECK(status IN ('pending', 'processing', 'applied', 'dead')),
+            attempts INTEGER NOT NULL DEFAULT 0,
+            available_at TEXT NOT NULL,
+            locked_at TEXT,
+            last_error TEXT,
+            created_at TEXT NOT NULL,
+            updated_at TEXT NOT NULL
+        );
+        CREATE INDEX IF NOT EXISTS idx_external_store_outbox_ready
+            ON external_store_outbox(status, available_at, created_at);
+        CREATE INDEX IF NOT EXISTS idx_external_store_outbox_stream
+            ON external_store_outbox(stream, status);
         """,
     ),
 )

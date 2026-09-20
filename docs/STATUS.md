@@ -1,13 +1,13 @@
 # 实现状态与验证记录
 
-更新日期：2026-09-13
+更新日期：2026-09-20
 
 ## 已完成里程碑
 
 ### 自顶向下应用框架与数据主干
 
 - 单一 `bootstrap` 组合根，HTTP、CLI 与 MCP 复用框架无关应用用例；
-- SQLite schema v1–v6 前向迁移，默认承载清单、向量、图、案例、checkpoint、会话、模型注册、根因分析会话和迁移账本；
+- SQLite schema v1–v7 前向迁移，默认承载清单、向量、图、案例、checkpoint、会话、模型注册、根因分析会话、迁移账本和外部索引 Outbox；
 - TXT、Markdown、CSV 确定性解析及明确格式白名单；
 - 文档逻辑 ID、不可变 version/chunk/evidence 身份和 active-only 原子发布；
 - SQLite hashing 向量基线和两跳双向图遍历；
@@ -42,6 +42,18 @@
 - 知识图谱已切换为本地 ECharts 力导向图，支持缩放、平移、节点拖拽、邻接高亮与详情查看；
 - wheel 已包含 HTML、CSS 和 JavaScript 前端资源。
 
+### Windows 原生与容器双运行模式
+
+- 当前企业电脑继续使用 Windows + Python 3.13 + SQLite 原生运行，不要求 Docker 或 Podman；
+- 仓库根目录已提供 v3 `Dockerfile` 与 `compose.yaml`，不再把迁移期 v2 Compose 当作默认部署；
+- v3 镜像使用锁定依赖、非 root 用户、只读应用层、回环端口和独立持久化运行卷；
+- 轻量容器只启用 SQLite；完整 Compose 提供真实 Chroma HTTP、Neo4j 适配器和独立同步 Worker；
+- SQLite schema 7 事务 Outbox 记录向量、图节点、关系与删除事件，支持稳定事件 ID、租约回收、
+  退避重试、死信状态、启动回填和外部故障时本地读取回退；
+- GitHub Actions 在 Linux runner 中验证 Compose、构建并启动镜像、探测健康接口与首页，并在
+  `main` 成功后发布 GHCR 镜像；
+- 允许容器的另一台电脑可从仓库根目录执行 `docker compose up --build -d`，本机开发路径不变。
+
 ### 检索实验与数据集基础设施
 
 - 多路召回作为知识问答底层能力，主界面不再显示独立算法分析台；
@@ -72,7 +84,7 @@
 ## 仍未完成且不得宣传为已实现
 
 - 领域专家标注的论文级金标准、真实模型基线/消融实验及诊断准确率提升；
-- Chroma HTTP 与 Neo4j v3 适配器，以及对应外部索引迁移；
+- 旧 v2 Chroma/Neo4j 数据的直接导入工具，以及外部副本的大规模压测与灾难恢复演练；
 - PDF/Office 摄取、持久 ingestion worker、SSE 流式进度和人工审批动作；
 - ONNX/TorchScript 深度模型运行时、可信模型包签名以及真实数据集/模型适配；
 - 根因知识仍是受控教学包，尚未接入型号手册审核库或形成论文级根因准确率结论；
@@ -90,23 +102,24 @@
 所有自动化测试默认不访问真实 LLM 或外部数据库；工作流测试使用受控模型替身验证路由和
 fail-closed 语义。真实 provider 的诊断质量必须在用户提供 API 与合法领域数据后单独评测。
 
-### 2026-09-12 本机最终验证
+### 2026-09-20 本机最终验证
 
 - Python：uv 管理的 CPython 3.13.14；
-- SQLite：schema 6，vector=`sqlite_hashing`，graph=`sqlite_graph`；
+- SQLite：schema 7，默认 vector=`sqlite_hashing`、graph=`sqlite_graph`，完整模式为
+  `chroma_http_cdc` 与 `neo4j_cdc`；
 - Ruff：通过；
-- mypy strict：通过（58 个 source files）；
-- pytest：104 passed；
-- branch coverage：88.95%（门槛 85%）；
+- mypy strict：通过（63 个 source files）；
+- pytest：116 passed；
+- branch coverage：88.38%（门槛 85%）；
 - legacy compileall：通过；
 - sdist + wheel：构建通过，wheel 内含三项前端静态资源；
 - JavaScript：`node --check` 通过；
 - MCP：进程内客户端发现 6 个工具，并实际调用多路召回、手册检索与参数分析；
 - API smoke：`/`、`/api/system`、`/api/documents`、`/api/graph`、`/api/cases`、
   `/api/retrieval/hybrid` 与 `/api/retrieval/evaluate` 均通过；
-- smoke 状态：schema 6，agent=`llm_orchestrated_v2`，本机默认模型=`deepseek-v4-flash`；
+- smoke 状态：schema 7，agent=`llm_orchestrated_v2`，本机默认模型=`deepseek-v4-flash`；
 - 真实 Planner 已只调用 `hybrid_retrieve_evidence`，返回 5 条带融合元数据的证据；
 - 合成参数证据的真实模型调用通过严格 `CandidateDiagnosis` 与
   `VerificationDecision` 校验，未向模型发送本地数据库内容；
-- 教学 CSV 的真实知识增强调用得到风扇初步定位、4 个候选根因、11 条角色轨迹和带强制限制的持久化报告；
+- 合成 CSV 的真实知识增强调用得到风扇初步定位、4 个候选根因、11 条角色轨迹和带强制限制的持久化报告；
 - 当前开发服务运行于 `http://127.0.0.1:8080/`，运行数据保留在 `.runtime`。

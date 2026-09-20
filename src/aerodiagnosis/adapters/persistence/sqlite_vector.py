@@ -13,6 +13,7 @@ from pathlib import Path
 
 from aerodiagnosis.ports import VectorChunk, VectorMatch
 
+from .outbox import ExternalStoreOutbox
 from .sqlite import SQLiteDatabase
 
 
@@ -58,10 +59,17 @@ def _cosine(left: Sequence[float], right: Sequence[float]) -> float:
 class SQLiteVectorStore:
     """Portable embedded vector index with an intentionally replaceable port."""
 
-    def __init__(self, path: Path, embedder: HashingEmbedder | None = None) -> None:
+    def __init__(
+        self,
+        path: Path,
+        embedder: HashingEmbedder | None = None,
+        *,
+        outbox: ExternalStoreOutbox | None = None,
+    ) -> None:
         self._database = SQLiteDatabase(path)
         self._database.migrate()
         self._embedder = embedder or HashingEmbedder()
+        self._outbox = outbox
 
     @property
     def backend_name(self) -> str:
@@ -106,6 +114,27 @@ class SQLiteVectorStore:
                 """,
                 records,
             )
+            if self._outbox is not None:
+                ExternalStoreOutbox.enqueue_in_transaction(
+                    connection,
+                    stream="vector",
+                    operation="upsert_chunks",
+                    aggregate_id=hashlib.sha256(
+                        "\n".join(chunk.chunk_id for chunk in chunks).encode("utf-8")
+                    ).hexdigest(),
+                    payload={
+                        "chunks": [
+                            {
+                                "chunk_id": chunk.chunk_id,
+                                "document_id": chunk.document_id,
+                                "version_id": chunk.version_id,
+                                "content": chunk.content,
+                                "metadata": dict(chunk.metadata),
+                            }
+                            for chunk in chunks
+                        ]
+                    },
+                )
             connection.commit()
         return len(records)
 
@@ -151,6 +180,14 @@ class SQLiteVectorStore:
             cursor = connection.execute(
                 "DELETE FROM vector_chunks WHERE document_id = ?", (document_id,)
             )
+            if self._outbox is not None:
+                ExternalStoreOutbox.enqueue_in_transaction(
+                    connection,
+                    stream="vector",
+                    operation="delete_document",
+                    aggregate_id=document_id,
+                    payload={"document_id": document_id},
+                )
             connection.commit()
             return cursor.rowcount
 

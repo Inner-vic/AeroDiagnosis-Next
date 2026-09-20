@@ -1,0 +1,48 @@
+name: aerodiagnosis
+
+services:
+  app:
+    image: ${AERODIAGNOSIS_IMAGE:-ghcr.io/inner-vic/aerodiagnosis-next:latest}
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    init: true
+    ports:
+      - "127.0.0.1:${AERODIAGNOSIS_PORT:-8080}:8080"
+    environment:
+      AERODIAGNOSIS_RUNTIME_DIR: /app/runtime
+      AERODIAGNOSIS_DATABASE_PATH: /app/runtime/data/aerodiagnosis.db
+      AERODIAGNOSIS_VECTOR_BACKEND: sqlite
+      AERODIAGNOSIS_GRAPH_BACKEND: sqlite
+      AERODIAGNOSIS_API_HOST: 127.0.0.1
+      AERODIAGNOSIS_API_PORT: 8080
+      AERODIAGNOSIS_SEED_DEMO_CONTENT: ${AERODIAGNOSIS_SEED_DEMO_CONTENT:-true}
+      AERODIAGNOSIS_OPERATOR_TOKEN: ${AERODIAGNOSIS_OPERATOR_TOKEN:-}
+      AERODIAGNOSIS_LLM_BASE_URL: ${AERODIAGNOSIS_LLM_BASE_URL:-}
+      AERODIAGNOSIS_LLM_MODEL: ${AERODIAGNOSIS_LLM_MODEL:-}
+      AERODIAGNOSIS_LLM_API_KEY: ${AERODIAGNOSIS_LLM_API_KEY:-}
+    volumes:
+      - aerodiagnosis_runtime:/app/runtime
+    read_only: true
+    tmpfs:
+      - /tmp:size=128m,mode=1777
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/api/health', timeout=2).read()"
+      interval: 10s
+      timeout: 3s
+      start_period: 15s
+      retries: 5
+    stop_grace_period: 15s
+
+volumes:
+  aerodiagnosis_runtime:
+    name: aerodiagnosis-runtime

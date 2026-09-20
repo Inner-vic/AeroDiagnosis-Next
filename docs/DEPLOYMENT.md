@@ -59,25 +59,66 @@ provider；`AERODIAGNOSIS_LLM_API_KEY_FILE` 可引用单独的密钥文件，避
 知识管理写入仍要求 `AERODIAGNOSIS_OPERATOR_TOKEN`，并在页面当前标签页输入，以阻止其他网页
 静默修改本机知识库。会话问题和压缩后的诊断回复会写入 SQLite，可用会话 DELETE 接口清除。
 
-## 2. 可选 Docker / 学校服务器方案
+## 2. 可选容器部署
 
-`code/docker-compose.yml` 当前部署的是迁移期 v2 应用及 Chroma HTTP、Neo4j。它适合在合规学校服务器或允许 Docker 的个人电脑上复现旧原型，不是 v3 本机开发前提：
+### 2.1 v3 默认 Compose
+
+仓库根目录的 `Dockerfile` 和 `compose.yaml` 部署最新版 v3。适用于允许 Docker Engine、
+Docker Desktop 或 Podman 的个人电脑、学校服务器和 CI；当前企业电脑继续使用第 1 节的
+Windows 原生方式，不需要容器运行时。
 
 ```powershell
-Set-Location .\code
-Copy-Item .env.example .env
-# 编辑 .env：配置合规 OpenAI-compatible API 和强 Neo4j 密码
 docker compose up --build -d
 docker compose ps
 ```
 
-默认 Compose 只把 API 和 Neo4j Browser 绑定到回环地址。开发覆盖文件额外开放回环地址上的 Chroma 和 Bolt，并挂载旧源码：
+打开 <http://127.0.0.1:8080/>。停止或更新时：
 
 ```powershell
-docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build
+docker compose down
+git pull --ff-only
+docker compose up --build -d
 ```
 
-重要边界：v3 的 `chroma_http` 与 `neo4j` 工厂目前会显式拒绝启动，因为相应的新端口适配器尚未实现。不要通过捕获异常后返回空结果来伪造兼容性。完成适配器、契约测试和数据迁移器之后，才会把这两个后端接到 v3。
+`down` 不删除名为 `aerodiagnosis-runtime` 的持久化卷；不要使用 `down -v`，除非明确要删除
+全部 v3 数据。镜像以 UID/GID 10001 的非 root 用户运行，应用文件系统只读，只有运行卷和
+`/tmp` 可写，端口只绑定宿主机 `127.0.0.1`。
+
+默认 Compose 只启用 SQLite 向量、图、案例、checkpoint 和会话后端，适合轻量部署。需要完整
+外部存储时，叠加 `compose.full.yaml`：
+
+```powershell
+$env:NEO4J_PASSWORD = "replace-with-a-strong-password"
+docker compose -f compose.yaml -f compose.full.yaml up --build -d --wait
+docker compose -f compose.yaml -f compose.full.yaml ps
+```
+
+完整模式启动 Chroma HTTP、Neo4j 和 `aerodiagnosis-sync`。SQLite 是权威数据源；向量块、图节点、
+关系和删除操作通过 schema 7 的事务 Outbox 增量复制。事件具有稳定 ID、租约、失败退避、最大
+尝试次数和启动回填，外部服务不可用时读取自动回退 SQLite，而不是返回伪造的空结果。
+外部存储 Python 客户端属于 `external-stores` 可选依赖；容器镜像已包含它们，Windows 原生轻量
+环境不会因此安装 Chroma 的整套服务端依赖。
+
+LLM API 仍推荐每位使用者在前端填写。如果需要服务器默认 provider，应在启动 Compose 的
+受控环境中注入 `AERODIAGNOSIS_LLM_BASE_URL`、`AERODIAGNOSIS_LLM_MODEL` 和
+`AERODIAGNOSIS_LLM_API_KEY`，不得写入 `compose.yaml` 或提交到 Git。
+
+GitHub Actions 会在 Linux runner 中校验两种 Compose、构建镜像、分别启动轻量模式和完整模式，
+并访问健康接口与首页；
+`main` 分支成功后发布 `ghcr.io/inner-vic/aerodiagnosis-next:latest` 和提交 SHA 标签。因此本机
+没有容器权限时，仍可获得真实 Linux 容器构建证据。
+
+### 2.2 迁移期 v2 Compose
+
+`code/docker-compose.yml` 仅用于复现旧 v2 原型及其 Chroma、Neo4j 数据，不是默认部署入口：
+
+```powershell
+Set-Location .\code
+docker compose up --build -d
+```
+
+不要把根目录 v3 Compose 与 `code/` 下的 v2 Compose 混用。v2 数据迁移完成并验收前保留其卷；
+新部署应始终从仓库根目录执行命令。
 
 不要在公司电脑安装未授权 Docker、Neo4j Desktop 或其他常驻服务。外部 LLM 只能使用用户自行配置的合规 OpenAI-compatible API；密钥只放环境或未提交的 `.env`。
 
@@ -97,13 +138,20 @@ Copy-Item -LiteralPath D:\AeroDiagnosisRuntime\data\aerodiagnosis.db `
 
 `.venv` 和 `uv-cache` 可由锁文件重建，不是首要备份对象。应优先保护 SQLite、上传原件、实验配置、逐样本结果和未推送源码。SQLite 现在包含会话消息；备份、共享或提交前应按数据治理要求脱敏。API Key 不在数据库内。
 
+### v3 Docker 命名卷
+
+容器部署的 SQLite 位于 `aerodiagnosis-runtime` 卷。完整模式还使用
+`aerodiagnosis-chroma` 和 `aerodiagnosis-neo4j` 卷。备份时先停止写入，再将卷内容导出到受控
+备份目录；恢复前先保留当前卷的回滚副本。`docker compose down` 保留卷，`docker compose
+down -v` 会删除卷。不同电脑之间迁移时，不要只复制镜像而遗漏该数据卷。
+
 ### v2 Docker 命名卷
 
 v2 的 Neo4j、Chroma 和上传文件在 Docker 命名卷中。`docker compose down` 保留卷；不要随手使用 `down -v` 或 `docker system prune --volumes`。备份和恢复应使用 Docker 官方命名卷流程，并在备份后校验可读性。
 
 ## 4. 旧数据迁移
 
-v3 SQLite schema 已支持 `PRAGMA user_version` 1 → 5 的前向迁移。旧上传目录迁移器默认只预检，
+v3 SQLite schema 已支持 `PRAGMA user_version` 1 → 7 的前向迁移。旧上传目录迁移器默认只预检，
 `--apply` 时先在线备份数据库，再用持久账本幂等导入 TXT/Markdown/CSV；原文件不会被移动、
 修改或删除：
 
@@ -113,7 +161,7 @@ v3 SQLite schema 已支持 `PRAGMA user_version` 1 → 5 的前向迁移。旧�
 ```
 
 出现失败时保留旧文件、迁移前备份和逐文件错误；恢复只需停止服务并换回报告中的
-`backup_path`。以下外部存储迁移仍未实现：
+`backup_path`。以下旧 v2 外部存储的直接导入仍未实现：
 
 - Chroma collection 到 v3 active-version 过滤模型；
 - Neo4j 实体/关系到带 `source_ref/version_id` 的 SQLite 图；
@@ -178,7 +226,9 @@ Get-Content .\.runtime\logs\server.stdout.log -Tail 100
 
 ### 选择外部后端后启动失败
 
-这是预期的显式保护。把 `AERODIAGNOSIS_VECTOR_BACKEND` 和 `AERODIAGNOSIS_GRAPH_BACKEND` 恢复为 `sqlite`。v3 外部适配器完成前，Docker 仅用于独立的 v2 迁移期部署。
+先查看 `sync`、Chroma 和 Neo4j 容器日志。完整模式会把失败事件留在 Outbox 并回退 SQLite；
+如需临时停用外部副本，把 `AERODIAGNOSIS_VECTOR_BACKEND` 和
+`AERODIAGNOSIS_GRAPH_BACKEND` 恢复为 `sqlite`。不得手工删除待同步事件来制造“已同步”状态。
 
 ## 8. 卸载
 

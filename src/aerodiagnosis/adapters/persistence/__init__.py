@@ -5,6 +5,10 @@ from __future__ import annotations
 from aerodiagnosis.config import RuntimeSettings
 from aerodiagnosis.ports import GraphStore, VectorStore
 
+from .chroma_vector import ChromaHttpVectorStore
+from .neo4j_graph import Neo4jGraphStore
+from .outbox import ExternalStoreOutbox
+from .replicated import ExternalStoreSync, ReplicatedGraphStore, ReplicatedVectorStore
 from .sqlite_cases import SQLiteCaseStore
 from .sqlite_checkpoint import SQLiteCheckpointStore
 from .sqlite_graph import SQLiteGraphStore
@@ -20,22 +24,89 @@ class UnsupportedBackendError(ValueError):
 def create_vector_store(settings: RuntimeSettings) -> VectorStore:
     if settings.vector_backend == "sqlite":
         return SQLiteVectorStore(settings.database_path)
-    raise UnsupportedBackendError(
-        "chroma_http is an optional deployment adapter and is not part of the "
-        "local foundation runtime; use sqlite or install the external-store adapter"
+    outbox = ExternalStoreOutbox(settings.database_path)
+    primary = SQLiteVectorStore(settings.database_path, outbox=outbox)
+    replica = ChromaHttpVectorStore(
+        host=settings.chroma_host,
+        port=settings.chroma_port,
+        ssl=settings.chroma_ssl,
+        collection_name=settings.chroma_collection,
+    )
+    sync = ExternalStoreSync(
+        database_path=settings.database_path,
+        outbox=outbox,
+        vector_replica=replica,
+        max_attempts=settings.sync_max_attempts,
+    )
+    sync.enqueue_backfill(("vector",))
+    return ReplicatedVectorStore(
+        primary, replica, sync, batch_size=settings.sync_batch_size
     )
 
 
 def create_graph_store(settings: RuntimeSettings) -> GraphStore:
     if settings.graph_backend == "sqlite":
         return SQLiteGraphStore(settings.database_path)
-    raise UnsupportedBackendError(
-        "neo4j is an optional deployment adapter and is not part of the local "
-        "foundation runtime; use sqlite or install the external-store adapter"
+    if settings.neo4j_password is None:
+        raise UnsupportedBackendError(
+            "AERODIAGNOSIS_NEO4J_PASSWORD is required when graph backend is neo4j"
+        )
+    outbox = ExternalStoreOutbox(settings.database_path)
+    primary = SQLiteGraphStore(settings.database_path, outbox=outbox)
+    replica = Neo4jGraphStore(
+        uri=settings.neo4j_uri,
+        user=settings.neo4j_user,
+        password=settings.neo4j_password.get_secret_value(),
+        database=settings.neo4j_database,
+    )
+    sync = ExternalStoreSync(
+        database_path=settings.database_path,
+        outbox=outbox,
+        graph_replica=replica,
+        max_attempts=settings.sync_max_attempts,
+    )
+    sync.enqueue_backfill(("graph",))
+    return ReplicatedGraphStore(primary, replica, sync, batch_size=settings.sync_batch_size)
+
+
+def create_external_sync(settings: RuntimeSettings) -> ExternalStoreSync:
+    outbox = ExternalStoreOutbox(settings.database_path)
+    vector_replica: VectorStore | None = None
+    graph_replica: GraphStore | None = None
+    if settings.vector_backend == "chroma_http":
+        vector_replica = ChromaHttpVectorStore(
+            host=settings.chroma_host,
+            port=settings.chroma_port,
+            ssl=settings.chroma_ssl,
+            collection_name=settings.chroma_collection,
+        )
+    if settings.graph_backend == "neo4j":
+        if settings.neo4j_password is None:
+            raise UnsupportedBackendError(
+                "AERODIAGNOSIS_NEO4J_PASSWORD is required when graph backend is neo4j"
+            )
+        graph_replica = Neo4jGraphStore(
+            uri=settings.neo4j_uri,
+            user=settings.neo4j_user,
+            password=settings.neo4j_password.get_secret_value(),
+            database=settings.neo4j_database,
+        )
+    return ExternalStoreSync(
+        database_path=settings.database_path,
+        outbox=outbox,
+        vector_replica=vector_replica,
+        graph_replica=graph_replica,
+        max_attempts=settings.sync_max_attempts,
     )
 
 
 __all__ = [
+    "ChromaHttpVectorStore",
+    "ExternalStoreOutbox",
+    "ExternalStoreSync",
+    "Neo4jGraphStore",
+    "ReplicatedGraphStore",
+    "ReplicatedVectorStore",
     "SQLiteCaseStore",
     "SQLiteCheckpointStore",
     "SQLiteConversationMemory",
@@ -43,6 +114,7 @@ __all__ = [
     "SQLiteKnowledgeEnhancementStore",
     "SQLiteVectorStore",
     "UnsupportedBackendError",
+    "create_external_sync",
     "create_graph_store",
     "create_vector_store",
 ]

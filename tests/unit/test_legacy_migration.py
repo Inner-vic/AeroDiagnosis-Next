@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from aerodiagnosis.adapters.persistence.sqlite import SQLiteDatabase
+from aerodiagnosis.adapters.persistence.sqlite import LATEST_SCHEMA_VERSION, SQLiteDatabase
 from aerodiagnosis.bootstrap import bootstrap
 from aerodiagnosis.config import RuntimeSettings
 from aerodiagnosis.migration import LegacyUploadMigrator
@@ -57,7 +57,7 @@ def test_legacy_migration_tracks_failed_files_and_schema_backup_guard(tmp_path: 
     assert result.skipped == 1
     assert len(result.failures) == 1
     database = SQLiteDatabase(settings.database_path)
-    assert database.schema_version() == 6
+    assert database.schema_version() == LATEST_SCHEMA_VERSION
     try:
         database.backup_to(settings.database_path)
     except ValueError as exc:

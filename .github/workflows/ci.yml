@@ -29,3 +29,98 @@ jobs:
         run: uv run python -m compileall -q code/python
       - name: Build distributions
         run: uv run --no-sync python -m hatchling build
+
+  container:
+    runs-on: ubuntu-latest
+    needs: foundation
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v6
+      - uses: docker/setup-buildx-action@v3
+      - name: Validate Compose manifest
+        shell: bash
+        run: |
+          docker compose config --quiet
+          NEO4J_PASSWORD=ci-neo4j-password \
+            docker compose -f compose.yaml -f compose.full.yaml config --quiet
+      - name: Build v3 image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          load: true
+          tags: aerodiagnosis-next:ci
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+      - name: Start container
+        run: >-
+          docker run --detach --name aerodiagnosis-smoke
+          --publish 127.0.0.1:18080:8080
+          --tmpfs /tmp:size=128m
+          --volume aerodiagnosis-ci-runtime:/app/runtime
+          aerodiagnosis-next:ci
+      - name: Verify health and frontend
+        shell: bash
+        run: |
+          for attempt in {1..30}; do
+            if curl --fail --silent http://127.0.0.1:18080/api/health >/dev/null \
+              && curl --fail --silent http://127.0.0.1:18080/ >/dev/null; then
+              exit 0
+            fi
+            sleep 1
+          done
+          docker logs aerodiagnosis-smoke
+          exit 1
+      - name: Stop default smoke container
+        run: docker rm --force aerodiagnosis-smoke
+      - name: Start Chroma, Neo4j and CDC deployment
+        env:
+          AERODIAGNOSIS_IMAGE: aerodiagnosis-next:ci
+          AERODIAGNOSIS_PORT: "18081"
+          CHROMA_PORT: "18082"
+          NEO4J_HTTP_PORT: "17474"
+          NEO4J_BOLT_PORT: "17687"
+          NEO4J_PASSWORD: ci-neo4j-password
+        run: >-
+          docker compose -f compose.yaml -f compose.full.yaml
+          up --detach --no-build --wait
+      - name: Verify external-store runtime
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          import urllib.request
+
+          with urllib.request.urlopen("http://127.0.0.1:18081/api/system", timeout=10) as response:
+              status = json.load(response)
+          assert status["database_schema"] == 7
+          assert status["vector"]["backend"] == "chroma_http_cdc"
+          assert status["graph"]["backend"] == "neo4j_cdc"
+          assert status["vector"]["chunks"] > 0
+          assert status["graph"]["nodes"] > 0
+          PY
+      - name: Log in to GitHub Container Registry
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Publish main image
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        shell: bash
+        run: |
+          docker tag aerodiagnosis-next:ci ghcr.io/inner-vic/aerodiagnosis-next:latest
+          docker tag aerodiagnosis-next:ci ghcr.io/inner-vic/aerodiagnosis-next:${GITHUB_SHA}
+          docker push ghcr.io/inner-vic/aerodiagnosis-next:latest
+          docker push ghcr.io/inner-vic/aerodiagnosis-next:${GITHUB_SHA}
+      - name: Clean up smoke container
+        if: always()
+        env:
+          AERODIAGNOSIS_IMAGE: aerodiagnosis-next:ci
+          NEO4J_PASSWORD: ci-neo4j-password
+        run: |
+          docker rm --force aerodiagnosis-smoke || true
+          docker volume rm aerodiagnosis-ci-runtime || true
+          docker compose -f compose.yaml -f compose.full.yaml down --volumes || true

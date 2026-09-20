@@ -4,6 +4,7 @@ import asyncio
 from pathlib import Path
 
 import pytest
+from pydantic import SecretStr
 
 from aerodiagnosis.adapters.api import create_app
 from aerodiagnosis.adapters.persistence import (
@@ -29,11 +30,19 @@ def test_default_factories_select_embedded_backends(tmp_path: Path) -> None:
     assert create_graph_store(settings).backend_name == "sqlite_graph"
 
 
-def test_optional_backends_fail_explicitly_when_adapter_is_absent(tmp_path: Path) -> None:
-    with pytest.raises(UnsupportedBackendError, match="chroma_http"):
-        create_vector_store(_settings(tmp_path, vector_backend="chroma_http"))
-    with pytest.raises(UnsupportedBackendError, match="neo4j"):
+def test_optional_backends_are_local_first_replicas(tmp_path: Path) -> None:
+    vector = create_vector_store(_settings(tmp_path, vector_backend="chroma_http"))
+    assert vector.backend_name == "chroma_http_cdc"
+    with pytest.raises(UnsupportedBackendError, match="NEO4J_PASSWORD"):
         create_graph_store(_settings(tmp_path, graph_backend="neo4j"))
+    graph = create_graph_store(
+        _settings(
+            tmp_path,
+            graph_backend="neo4j",
+            neo4j_password=SecretStr("test-password"),
+        )
+    )
+    assert graph.backend_name == "neo4j_cdc"
 
 
 def test_api_surface_is_honest_about_current_application_status(tmp_path: Path) -> None:

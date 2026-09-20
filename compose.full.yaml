@@ -1,0 +1,93 @@
+services:
+  app:
+    environment:
+      AERODIAGNOSIS_VECTOR_BACKEND: chroma_http
+      AERODIAGNOSIS_GRAPH_BACKEND: neo4j
+      AERODIAGNOSIS_CHROMA_HOST: chromadb
+      AERODIAGNOSIS_CHROMA_PORT: 8000
+      AERODIAGNOSIS_NEO4J_URI: bolt://neo4j:7687
+      AERODIAGNOSIS_NEO4J_USER: neo4j
+      AERODIAGNOSIS_NEO4J_PASSWORD: ${NEO4J_PASSWORD:?Set NEO4J_PASSWORD}
+      AERODIAGNOSIS_NEO4J_DATABASE: neo4j
+    depends_on:
+      chromadb:
+        condition: service_healthy
+      neo4j:
+        condition: service_healthy
+
+  sync:
+    image: ${AERODIAGNOSIS_IMAGE:-ghcr.io/inner-vic/aerodiagnosis-next:latest}
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    init: true
+    command: ["aerodiagnosis-sync", "--forever", "--interval", "2"]
+    environment:
+      AERODIAGNOSIS_RUNTIME_DIR: /app/runtime
+      AERODIAGNOSIS_DATABASE_PATH: /app/runtime/data/aerodiagnosis.db
+      AERODIAGNOSIS_VECTOR_BACKEND: chroma_http
+      AERODIAGNOSIS_GRAPH_BACKEND: neo4j
+      AERODIAGNOSIS_CHROMA_HOST: chromadb
+      AERODIAGNOSIS_CHROMA_PORT: 8000
+      AERODIAGNOSIS_NEO4J_URI: bolt://neo4j:7687
+      AERODIAGNOSIS_NEO4J_USER: neo4j
+      AERODIAGNOSIS_NEO4J_PASSWORD: ${NEO4J_PASSWORD:?Set NEO4J_PASSWORD}
+      AERODIAGNOSIS_NEO4J_DATABASE: neo4j
+    volumes:
+      - aerodiagnosis_runtime:/app/runtime
+    read_only: true
+    tmpfs:
+      - /tmp:size=128m,mode=1777
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    depends_on:
+      chromadb:
+        condition: service_healthy
+      neo4j:
+        condition: service_healthy
+
+  chromadb:
+    image: chromadb/chroma:1.5.9
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:${CHROMA_PORT:-8000}:8000"
+    environment:
+      ANONYMIZED_TELEMETRY: "false"
+    volumes:
+      - chroma_data:/chroma/chroma
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/v2/heartbeat', timeout=2).read()"
+      interval: 10s
+      timeout: 5s
+      start_period: 20s
+      retries: 10
+
+  neo4j:
+    image: neo4j:5.26.30-community
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:${NEO4J_HTTP_PORT:-7474}:7474"
+      - "127.0.0.1:${NEO4J_BOLT_PORT:-7687}:7687"
+    environment:
+      NEO4J_AUTH: neo4j/${NEO4J_PASSWORD:?Set NEO4J_PASSWORD}
+    volumes:
+      - neo4j_data:/data
+    healthcheck:
+      test: ["CMD", "neo4j", "status"]
+      interval: 10s
+      timeout: 5s
+      start_period: 30s
+      retries: 10
+
+volumes:
+  chroma_data:
+    name: aerodiagnosis-chroma
+  neo4j_data:
+    name: aerodiagnosis-neo4j
