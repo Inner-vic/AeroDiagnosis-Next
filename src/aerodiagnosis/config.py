@@ -39,6 +39,9 @@ class RuntimeSettings(BaseModel):
     database_path: Path
     vector_backend: str = Field(default="sqlite", pattern=r"^(sqlite|chroma_http)$")
     graph_backend: str = Field(default="sqlite", pattern=r"^(sqlite|neo4j)$")
+    external_store_mode: str = Field(
+        default="local-first", pattern=r"^(local-first|external-primary)$"
+    )
     chroma_host: str = "127.0.0.1"
     chroma_port: int = Field(default=8000, ge=1, le=65535)
     chroma_ssl: bool = False
@@ -93,6 +96,7 @@ class RuntimeSettings(BaseModel):
             database_path=database_path,
             vector_backend=value("AERODIAGNOSIS_VECTOR_BACKEND", "sqlite"),
             graph_backend=value("AERODIAGNOSIS_GRAPH_BACKEND", "sqlite"),
+            external_store_mode=value("AERODIAGNOSIS_EXTERNAL_STORE_MODE", "local-first"),
             chroma_host=value("AERODIAGNOSIS_CHROMA_HOST", "127.0.0.1"),
             chroma_port=int(value("AERODIAGNOSIS_CHROMA_PORT", "8000")),
             chroma_ssl=value("AERODIAGNOSIS_CHROMA_SSL", "false").lower()
