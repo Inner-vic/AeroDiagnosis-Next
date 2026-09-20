@@ -84,13 +84,18 @@ jobs:
           NEO4J_PASSWORD: ci-neo4j-password
         run: >-
           docker compose -f compose.yaml -f compose.full.yaml
-          up --detach --no-build --wait --wait-timeout 180
+          up --detach --no-build
       - name: Verify external database readiness
         shell: bash
+        env:
+          AERODIAGNOSIS_IMAGE: aerodiagnosis-next:ci
+          NEO4J_PASSWORD: ci-neo4j-password
         run: |
           for attempt in {1..60}; do
             if curl --fail --silent http://127.0.0.1:18082/api/v2/heartbeat >/dev/null \
-              && curl --fail --silent http://127.0.0.1:17474/ >/dev/null; then
+              && curl --fail --silent http://127.0.0.1:17474/ >/dev/null \
+              && curl --fail --silent http://127.0.0.1:18081/api/health >/dev/null \
+              && test "$(docker inspect --format '{{.State.Status}}' aerodiagnosis-sync-1 2>/dev/null)" = "running"; then
               exit 0
             fi
             sleep 2
