@@ -29,7 +29,7 @@ class SQLiteOperationLedger:
     ) -> OperationRecord:
         canonical = json.dumps(payload, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
         operation_id = hashlib.sha256(
-            f"model:{run_id}:{task}:{canonical}".encode("utf-8")
+            f"model:{run_id}:{task}:{canonical}".encode()
         ).hexdigest()
         result_json = None if error else json.dumps(result, ensure_ascii=False, sort_keys=True)
         return self._record(
@@ -61,9 +61,9 @@ class SQLiteOperationLedger:
             separators=(",", ":"),
         )
         operation_id = hashlib.sha256(
-            f"tool:{run_id}:{call_id}:{canonical}".encode("utf-8")
+            f"tool:{run_id}:{call_id}:{canonical}".encode()
         ).hexdigest()
-        result = {"evidence_count": evidence_count}
+        result: dict[str, Any] = {"evidence_count": evidence_count}
         if error is not None:
             result["error"] = error
         return self._record(
