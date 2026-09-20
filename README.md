@@ -242,7 +242,8 @@ Podman 环境可使用兼容的 Compose provider 执行同一份 `compose.yaml`�
 
 ```powershell
 $env:NEO4J_PASSWORD = "replace-with-a-strong-password"
-docker compose -f compose.yaml -f compose.full.yaml up --build -d --wait
+docker compose -f compose.yaml -f compose.full.yaml up --build -d
+docker compose -f compose.yaml -f compose.full.yaml ps
 ```
 
 完整模式不是脆弱的三库同步写入：SQLite 继续承担权威版本、checkpoint 与本地索引；每次向量、

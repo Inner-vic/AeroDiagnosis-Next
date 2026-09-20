@@ -46,7 +46,7 @@ flowchart LR
 
 ```powershell
 $env:NEO4J_PASSWORD = "replace-with-a-strong-password"
-docker compose -f compose.yaml -f compose.full.yaml up --build -d --wait
+docker compose -f compose.yaml -f compose.full.yaml up --build -d
 docker compose -f compose.yaml -f compose.full.yaml ps
 ```
 
