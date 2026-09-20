@@ -1,5 +1,12 @@
 # Neo4j / Chroma 增量同步设计
 
+当前实现支持两种外部库模式：
+
+- `local-first`：SQLite 是向量和图数据权威源，Neo4j、Chroma 是 Outbox 派生的外部索引；
+  本文描述这一模式。
+- `external-primary`：Neo4j 和 ChromaDB 是图与向量主库，由应用直接读写；SQLite 只保留
+  清单、案例、会话和 checkpoint 元数据。生产 Compose 通过 `compose.production.yaml` 启用。
+
 ## 目标
 
 完整部署保留 Neo4j 的图遍历能力和 Chroma 的向量检索能力，同时避免把 SQLite、Chroma、
