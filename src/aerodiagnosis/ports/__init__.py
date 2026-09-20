@@ -8,6 +8,7 @@ from .language_model import (
     LanguageModel,
     LanguageModelError,
 )
+from .ledger import OperationLedger, OperationRecord
 from .memory import ConversationMemoryStore, ConversationMessage, MessageRole
 from .vector import VectorChunk, VectorMatch, VectorStore
 
@@ -27,6 +28,8 @@ __all__ = [
     "LanguageModelError",
     "MessageRole",
     "Neighbor",
+    "OperationLedger",
+    "OperationRecord",
     "VectorChunk",
     "VectorMatch",
     "VectorStore",
