@@ -9,8 +9,8 @@ def test_v3_container_runs_locked_package_as_non_root() -> None:
     assert "FROM ${PYTHON_BASE_IMAGE}" in dockerfile
     assert "uv sync --frozen --no-dev --no-editable" in dockerfile
     assert "USER aerodiagnosis" in dockerfile
-    assert "aerodiagnosis.adapters.api:app" in dockerfile
-    assert "--host\", \"0.0.0.0" in dockerfile
+    assert "aerodiagnosis.docker_entrypoint" in dockerfile
+    assert "aerodiagnosis.docker_entrypoint" in dockerfile
     assert "HEALTHCHECK" in dockerfile
     assert "COPY . ." not in dockerfile
 
