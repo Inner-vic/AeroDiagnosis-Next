@@ -15,6 +15,7 @@ from aerodiagnosis.application.diagnostic_workflow import (
     IncompatibleWorkflowError,
 )
 from aerodiagnosis.bootstrap import Application
+from aerodiagnosis.config import RuntimeSettings
 from aerodiagnosis.domain import (
     DiagnosisCommand,
     DiagnosisReport,
@@ -55,6 +56,16 @@ ApplicationDependency = Annotated[Application, Depends(get_application)]
 OperatorDependency = Annotated[Application, Depends(require_operator)]
 
 
+def _external_sync_status(settings: RuntimeSettings) -> dict[str, Any]:
+    if settings.external_store_mode == "external-primary":
+        return {
+            "mode": "direct_external_primary",
+            "events": {"applied": 0, "pending": 0, "dead": 0},
+        }
+    outbox = ExternalStoreOutbox(settings.database_path).counts()
+    return {"mode": "transactional_outbox", "events": outbox}
+
+
 @router.get("/health", tags=["system"])
 def health() -> dict[str, str]:
     return {"status": "ok", "service": "AeroDiagnosis", "version": __version__}
@@ -63,7 +74,7 @@ def health() -> dict[str, str]:
 @router.get("/system", tags=["system"])
 def system(application: ApplicationDependency) -> dict[str, Any]:
     state = application.get_runtime_status.execute()
-    outbox = ExternalStoreOutbox(application.settings.database_path).counts()
+    external_sync = _external_sync_status(application.settings)
     return {
         "version": __version__,
         "mode": "application",
@@ -89,10 +100,7 @@ def system(application: ApplicationDependency) -> dict[str, Any]:
             "sessions": state.session_count,
             "messages": state.message_count,
         },
-        "external_sync": {
-            "mode": "transactional_outbox",
-            "events": outbox,
-        },
+        "external_sync": external_sync,
         "knowledge_enhancement": {
             "positioning": "model_result_plus_knowledge_root_cause_support",
             "models": len(application.knowledge_enhanced_diagnosis.list_models()),
