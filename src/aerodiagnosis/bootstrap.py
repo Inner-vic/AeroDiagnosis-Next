@@ -14,6 +14,7 @@ from aerodiagnosis.adapters.persistence import (
     create_vector_store,
 )
 from aerodiagnosis.adapters.persistence.sqlite import SQLiteDatabase
+from aerodiagnosis.application.case_verification import RecordCaseVerification
 from aerodiagnosis.application.demo_content import seed_demo_content
 from aerodiagnosis.application.diagnostic_workflow import DiagnosticWorkflow
 from aerodiagnosis.application.knowledge_enhancement import KnowledgeEnhancedDiagnosis
@@ -46,6 +47,7 @@ class Application:
     browse_cases: BrowseCases
     query_diagnostic_tool: QueryDiagnosticTool
     run_diagnosis: RunDiagnosis
+    record_case_verification: RecordCaseVerification
     conversation_sessions: ConversationSessions
     search_evidence: SearchEvidence
     hybrid_retrieval: HybridRetrieval
@@ -98,6 +100,7 @@ def bootstrap(settings: RuntimeSettings | None = None) -> Application:
         browse_cases=BrowseCases(case_store),
         query_diagnostic_tool=QueryDiagnosticTool(tools, manifest.active_version_ids),
         run_diagnosis=RunDiagnosis(workflow_factory),
+        record_case_verification=RecordCaseVerification(case_store),
         conversation_sessions=ConversationSessions(memory),
         search_evidence=SearchEvidence(vector_store, manifest.active_version_ids),
         hybrid_retrieval=HybridRetrieval(tools, manifest.active_version_ids),
