@@ -22,6 +22,7 @@ from aerodiagnosis.application.use_cases import (
     BrowseCases,
     BrowseGraph,
     BrowseKnowledge,
+    BrowseOperations,
     ConversationSessions,
     GetRuntimeStatus,
     HybridRetrieval,
@@ -48,6 +49,7 @@ class Application:
     query_diagnostic_tool: QueryDiagnosticTool
     run_diagnosis: RunDiagnosis
     record_case_verification: RecordCaseVerification
+    browse_operations: BrowseOperations
     conversation_sessions: ConversationSessions
     search_evidence: SearchEvidence
     hybrid_retrieval: HybridRetrieval
@@ -101,6 +103,7 @@ def bootstrap(settings: RuntimeSettings | None = None) -> Application:
         query_diagnostic_tool=QueryDiagnosticTool(tools, manifest.active_version_ids),
         run_diagnosis=RunDiagnosis(workflow_factory),
         record_case_verification=RecordCaseVerification(case_store),
+        browse_operations=BrowseOperations(operation_ledger),
         conversation_sessions=ConversationSessions(memory),
         search_evidence=SearchEvidence(vector_store, manifest.active_version_ids),
         hybrid_retrieval=HybridRetrieval(tools, manifest.active_version_ids),

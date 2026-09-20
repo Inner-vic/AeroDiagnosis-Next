@@ -189,6 +189,21 @@ class CaseVerificationRequest(BaseModel):
     notes: str = Field(default="", max_length=2000)
 
 
+class OperationRecordResponse(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    operation_id: str
+    run_id: str
+    call_id: str
+    kind: str
+    name: str
+    status: str
+    request_hash: str
+    result_json: str | None
+    created_at: str
+    updated_at: str
+
+
 class SessionCreatedResponse(BaseModel):
     model_config = ConfigDict(extra="forbid")
 

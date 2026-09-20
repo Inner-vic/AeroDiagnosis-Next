@@ -41,6 +41,7 @@ from .schemas import (
     HybridRetrievalRequest,
     IngestDocumentRequest,
     IngestDocumentResponse,
+    OperationRecordResponse,
     ProviderConfiguration,
     RegisterModelPluginRequest,
     ResumeDiagnosisRequest,
@@ -405,6 +406,21 @@ def verify_case(
             detail=str(exc),
         ) from exc
     return CaseResponse.model_validate(asdict(updated))
+
+
+@router.get(
+    "/runs/{run_id}/operations",
+    response_model=list[OperationRecordResponse],
+    tags=["audit"],
+)
+def list_run_operations(
+    run_id: str,
+    application: ApplicationDependency,
+) -> list[OperationRecordResponse]:
+    return [
+        OperationRecordResponse.model_validate(asdict(operation))
+        for operation in application.browse_operations.execute(run_id)
+    ]
 
 
 @router.post("/diagnoses", response_model=DiagnosisReport, tags=["diagnosis"])

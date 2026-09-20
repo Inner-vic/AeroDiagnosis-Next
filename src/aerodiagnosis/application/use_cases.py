@@ -25,6 +25,8 @@ from aerodiagnosis.ports import (
     GraphNode,
     GraphStore,
     LanguageModel,
+    OperationLedger,
+    OperationRecord,
     VectorMatch,
     VectorStore,
 )
@@ -179,6 +181,14 @@ class ConversationSessions:
 
     def delete(self, session_id: str) -> bool:
         return self._memory.delete_session(session_id)
+
+
+class BrowseOperations:
+    def __init__(self, ledger: OperationLedger) -> None:
+        self._ledger = ledger
+
+    def execute(self, run_id: str) -> tuple[OperationRecord, ...]:
+        return self._ledger.list_run(run_id)
 
 
 class SearchEvidence:
