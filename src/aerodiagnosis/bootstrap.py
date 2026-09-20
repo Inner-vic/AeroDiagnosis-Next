@@ -9,6 +9,7 @@ from aerodiagnosis.adapters.persistence import (
     SQLiteCheckpointStore,
     SQLiteConversationMemory,
     SQLiteKnowledgeEnhancementStore,
+    SQLiteOperationLedger,
     create_graph_store,
     create_vector_store,
 )
@@ -63,6 +64,7 @@ def bootstrap(settings: RuntimeSettings | None = None) -> Application:
     case_store = SQLiteCaseStore(configured.database_path)
     checkpoints = SQLiteCheckpointStore(configured.database_path)
     memory = SQLiteConversationMemory(configured.database_path)
+    operation_ledger = SQLiteOperationLedger(configured.database_path)
     knowledge_enhancement_store = SQLiteKnowledgeEnhancementStore(configured.database_path)
     ingestion = DocumentIngestionService(manifest, vector_store)
     if configured.seed_demo_content:
@@ -85,6 +87,7 @@ def bootstrap(settings: RuntimeSettings | None = None) -> Application:
             active_versions=manifest.active_version_ids,
             checkpoints=checkpoints,
             memory=memory,
+            ledger=operation_ledger,
         )
 
     return Application(

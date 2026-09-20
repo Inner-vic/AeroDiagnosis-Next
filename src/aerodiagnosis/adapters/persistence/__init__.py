@@ -14,6 +14,7 @@ from .sqlite_checkpoint import SQLiteCheckpointStore
 from .sqlite_graph import SQLiteGraphStore
 from .sqlite_knowledge_enhancement import SQLiteKnowledgeEnhancementStore
 from .sqlite_memory import SQLiteConversationMemory
+from .sqlite_operation_ledger import SQLiteOperationLedger
 from .sqlite_vector import SQLiteVectorStore
 
 
@@ -114,6 +115,7 @@ __all__ = [
     "SQLiteConversationMemory",
     "SQLiteGraphStore",
     "SQLiteKnowledgeEnhancementStore",
+    "SQLiteOperationLedger",
     "SQLiteVectorStore",
     "UnsupportedBackendError",
     "create_external_sync",

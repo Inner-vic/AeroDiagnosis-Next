@@ -12,6 +12,9 @@ from aerodiagnosis.adapters.persistence import (
     SQLiteConversationMemory,
 )
 from aerodiagnosis.adapters.persistence.sqlite_graph import SQLiteGraphStore
+from aerodiagnosis.adapters.persistence.sqlite_operation_ledger import (
+    SQLiteOperationLedger,
+)
 from aerodiagnosis.adapters.persistence.sqlite_vector import SQLiteVectorStore
 from aerodiagnosis.application.diagnostic_workflow import (
     STATE_SCHEMA_VERSION,
@@ -134,6 +137,7 @@ def _workflow(settings: RuntimeSettings, model: FakeLanguageModel) -> Diagnostic
         active_versions=frozenset,
         checkpoints=SQLiteCheckpointStore(settings.database_path),
         memory=memory,
+        ledger=SQLiteOperationLedger(settings.database_path),
     )
 
 
@@ -165,6 +169,41 @@ def test_workflow_uses_llm_planner_generator_verifier_and_persists_memory(
     assert model.calls == ["plan_evidence", "generate_diagnosis", "verify_diagnosis"]
     assert resumed == report
     assert [message.role for message in messages] == ["user", "assistant"]
+
+
+def test_workflow_records_model_and_tool_operations(tmp_path: Path) -> None:
+    settings = _settings(tmp_path)
+    ledger = SQLiteOperationLedger(settings.database_path)
+    application = bootstrap(settings)
+    session_id = application.conversation_sessions.create()
+    application.ingest_document.execute(
+        display_name="manual.txt",
+        content=b"Compressor stall may cause an exhaust gas temperature rise.",
+    )
+    model = FakeLanguageModel()
+
+    report = application.run_diagnosis.start(
+        DiagnosisCommand(
+            session_id=session_id,
+            question="Does compressor stall cause temperature rise?",
+            min_relevance=0,
+        ),
+        model,
+    )
+    operations = ledger.list_run(report.run_id)
+
+    assert [item.kind for item in operations] == [
+        "model",
+        "tool",
+        "model",
+        "model",
+    ]
+    assert [item.name for item in operations] == [
+        "plan_evidence",
+        "search_manual_chunks",
+        "generate_diagnosis",
+        "verify_diagnosis",
+    ]
 
 
 def test_workflow_changes_plan_then_refuses_when_no_evidence_exists(tmp_path: Path) -> None:

@@ -32,6 +32,7 @@ from aerodiagnosis.ports import (
     LanguageModel,
     LanguageModelError,
     MessageRole,
+    OperationLedger,
 )
 from aerodiagnosis.tools.diagnostic import (
     CASE_TOOL,
@@ -125,12 +126,14 @@ class DiagnosticWorkflow:
         active_versions: Callable[[], frozenset[str]],
         checkpoints: CheckpointStore,
         memory: ConversationMemoryStore,
+        ledger: OperationLedger,
     ) -> None:
         self._tools = tools
         self._model = language_model
         self._active_versions = active_versions
         self._checkpoints = checkpoints
         self._memory = memory
+        self._ledger = ledger
 
     def start(self, command: DiagnosisCommand) -> DiagnosisReport:
         active_versions = tuple(sorted(self._active_versions()))
@@ -219,14 +222,40 @@ class DiagnosticWorkflow:
 
     def _model_output(
         self,
+        run_id: str,
         task: str,
         payload: dict[str, Any],
         model: type[BaseModel],
     ) -> BaseModel:
         try:
-            return model.model_validate(self._model.complete_json(task, payload))
+            raw = self._model.complete_json(task, payload)
+        except Exception as exc:
+            self._ledger.record_model(
+                run_id=run_id,
+                task=task,
+                payload=payload,
+                result={},
+                error=f"{type(exc).__name__}: {exc}",
+            )
+            raise
+        try:
+            output = model.model_validate(raw)
         except ValidationError as exc:
+            self._ledger.record_model(
+                run_id=run_id,
+                task=task,
+                payload=payload,
+                result=dict(raw) if isinstance(raw, dict) else {},
+                error=str(exc),
+            )
             raise LanguageModelError(f"invalid structured output for {task}") from exc
+        self._ledger.record_model(
+            run_id=run_id,
+            task=task,
+            payload=payload,
+            result=output.model_dump(mode="json"),
+        )
+        return output
 
     def _execute(self, state: DiagnosisWorkflowState) -> DiagnosisReport:
         while True:
@@ -281,7 +310,7 @@ class DiagnosticWorkflow:
             "evidence_ids": [item.evidence_id for item in state.evidence],
             "conversation": [item.model_dump(mode="json") for item in state.memory_context],
         }
-        plan = self._model_output(task, payload, EvidencePlan)
+        plan = self._model_output(state.run_id, task, payload, EvidencePlan)
         assert isinstance(plan, EvidencePlan)
         unknown = set(plan.tools) - set(AVAILABLE_TOOLS)
         if unknown:
@@ -331,6 +360,18 @@ class DiagnosticWorkflow:
                         active_version_ids=active_versions,
                     )
                 except Exception as exc:  # tool failures are recorded and remain fail-closed
+                    call_id = hashlib.sha256(
+                        f"{tool_name}:{query}:{len(trace)}".encode()
+                    ).hexdigest()
+                    self._ledger.record_tool(
+                        run_id=retrieving.run_id,
+                        call_id=call_id,
+                        tool_name=tool_name,
+                        query=query,
+                        status=ToolExecutionStatus.ERROR.value,
+                        evidence_count=0,
+                        error=f"{type(exc).__name__}: {exc}",
+                    )
                     trace.append(
                         ToolExecution(
                             tool_name=tool_name,
@@ -341,11 +382,25 @@ class DiagnosticWorkflow:
                         )
                     )
                     continue
+                call_id = hashlib.sha256(
+                    f"{tool_name}:{query}:{len(trace)}".encode()
+                ).hexdigest()
+                execution_status = (
+                    ToolExecutionStatus.OK if items else ToolExecutionStatus.EMPTY
+                )
+                self._ledger.record_tool(
+                    run_id=retrieving.run_id,
+                    call_id=call_id,
+                    tool_name=tool_name,
+                    query=query,
+                    status=execution_status.value,
+                    evidence_count=len(items),
+                )
                 trace.append(
                     ToolExecution(
                         tool_name=tool_name,
                         query=query,
-                        status=ToolExecutionStatus.OK if items else ToolExecutionStatus.EMPTY,
+                        status=execution_status,
                         evidence_count=len(items),
                     )
                 )
@@ -366,6 +421,7 @@ class DiagnosticWorkflow:
 
     def _generate(self, state: DiagnosisWorkflowState) -> DiagnosisWorkflowState:
         output = self._model_output(
+            state.run_id,
             "generate_diagnosis",
             {
                 "question": state.command.question,
@@ -387,6 +443,7 @@ class DiagnosticWorkflow:
         if state.candidate is None:  # pragma: no cover - guarded by stage transition
             raise RuntimeError("candidate is required before verification")
         output = self._model_output(
+            state.run_id,
             "verify_diagnosis",
             {
                 "question": state.command.question,
