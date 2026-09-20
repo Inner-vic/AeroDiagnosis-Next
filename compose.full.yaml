@@ -11,7 +11,7 @@ services:
       AERODIAGNOSIS_NEO4J_DATABASE: neo4j
     depends_on:
       chromadb:
-        condition: service_healthy
+        condition: service_started
       neo4j:
         condition: service_healthy
 
@@ -45,7 +45,7 @@ services:
       - no-new-privileges:true
     depends_on:
       chromadb:
-        condition: service_healthy
+        condition: service_started
       neo4j:
         condition: service_healthy
 
@@ -58,12 +58,6 @@ services:
       ANONYMIZED_TELEMETRY: "false"
     volumes:
       - chroma_data:/data
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://127.0.0.1:8000/api/v2/heartbeat"]
-      interval: 10s
-      timeout: 5s
-      start_period: 20s
-      retries: 10
 
   neo4j:
     image: neo4j:5.26.30-community
