@@ -1,5 +1,8 @@
 from __future__ import annotations
 
+import json
+from pathlib import Path
+
 from aerodiagnosis.diagnostic_evaluation import (
     DiagnosisEvalCase,
     evaluate_diagnosis,
@@ -90,3 +93,13 @@ def test_diagnostic_evaluation_summarizes_metrics() -> None:
     assert summary["solution_accuracy"] == 1.0
     assert summary["causal_completeness"] == 1.0
     assert summary["mrr"] == 1.0
+
+
+def test_frozen_diagnostic_cases_are_valid() -> None:
+    path = Path(__file__).resolve().parents[2] / "evaluation" / "diagnosis_cases.json"
+    cases = json.loads(path.read_text(encoding="utf-8"))
+
+    assert len(cases) == 4
+    assert all(case["case_id"].startswith("AERO-DIAG-") for case in cases)
+    assert all(case["expected_cause_keywords"] for case in cases)
+    assert all(case["expected_solution_keywords"] for case in cases)

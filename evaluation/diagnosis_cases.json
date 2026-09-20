@@ -1,0 +1,38 @@
+[
+  {
+    "case_id": "AERO-DIAG-001",
+    "question": "EGT 在同工况下持续升高，最可能是什么原因？下一步应检查什么？",
+    "difficulty": "easy",
+    "category": "气路性能",
+    "expected_cause_keywords": ["压气机", "效率", "积垢", "燃油喷嘴"],
+    "expected_solution_keywords": ["趋势复核", "孔探", "检查"],
+    "min_causal_hops": 2
+  },
+  {
+    "case_id": "AERO-DIAG-002",
+    "question": "压气机出现压力波动和异常声响，可能是什么原因？",
+    "difficulty": "medium",
+    "category": "喘振",
+    "expected_cause_keywords": ["喘振", "稳定裕度", "进气", "叶片"],
+    "expected_solution_keywords": ["检查", "孔探", "趋势复核"],
+    "min_causal_hops": 2
+  },
+  {
+    "case_id": "AERO-DIAG-003",
+    "question": "风扇振动趋势异常升高，如何判断是否与叶片污染有关？",
+    "difficulty": "medium",
+    "category": "振动",
+    "expected_cause_keywords": ["积垢", "污染", "不平衡", "叶片"],
+    "expected_solution_keywords": ["目视", "孔探", "检查"],
+    "min_causal_hops": 2
+  },
+  {
+    "case_id": "AERO-DIAG-004",
+    "question": "温度分布不均且加速品质变化，是否可能是燃油喷嘴问题？",
+    "difficulty": "medium",
+    "category": "燃油系统",
+    "expected_cause_keywords": ["燃油喷嘴", "流量", "雾化", "点火"],
+    "expected_solution_keywords": ["交叉验证", "检查", "供油"],
+    "min_causal_hops": 3
+  }
+]
