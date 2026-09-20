@@ -31,6 +31,8 @@ def test_v3_compose_is_local_only_and_persistent() -> None:
     full = (PROJECT_ROOT / "compose.full.yaml").read_text(encoding="utf-8")
     assert "chromadb/chroma:1.5.9" in full
     assert "neo4j:5.26.30-community" in full
+    assert '["CMD", "curl", "-f", "http://127.0.0.1:8000/api/v2/heartbeat"]' in full
+    assert "chroma_data:/data" in full
     assert 'command: ["aerodiagnosis-sync", "--forever", "--interval", "2"]' in full
     assert "AERODIAGNOSIS_VECTOR_BACKEND: chroma_http" in full
     assert "AERODIAGNOSIS_GRAPH_BACKEND: neo4j" in full

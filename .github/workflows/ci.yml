@@ -84,7 +84,7 @@ jobs:
           NEO4J_PASSWORD: ci-neo4j-password
         run: >-
           docker compose -f compose.yaml -f compose.full.yaml
-          up --detach --no-build --wait
+          up --detach --no-build --wait --wait-timeout 180
       - name: Verify external-store runtime
         shell: bash
         run: |
@@ -115,6 +115,14 @@ jobs:
           docker tag aerodiagnosis-next:ci ghcr.io/inner-vic/aerodiagnosis-next:${GITHUB_SHA}
           docker push ghcr.io/inner-vic/aerodiagnosis-next:latest
           docker push ghcr.io/inner-vic/aerodiagnosis-next:${GITHUB_SHA}
+      - name: Log full stack on failure
+        if: failure()
+        env:
+          AERODIAGNOSIS_IMAGE: aerodiagnosis-next:ci
+          NEO4J_PASSWORD: ci-neo4j-password
+        run: |
+          docker compose -f compose.yaml -f compose.full.yaml ps || true
+          docker compose -f compose.yaml -f compose.full.yaml logs --no-color --tail 200 || true
       - name: Clean up smoke container
         if: always()
         env:
