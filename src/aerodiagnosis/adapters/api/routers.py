@@ -2,10 +2,13 @@
 
 from __future__ import annotations
 
+import asyncio
+import json
 from dataclasses import asdict
 from typing import Annotated, Any
 
 from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi.responses import StreamingResponse
 
 from aerodiagnosis.adapters.llm import OpenAICompatibleLanguageModel
 from aerodiagnosis.adapters.persistence import ExternalStoreOutbox
@@ -436,6 +439,49 @@ def run_diagnosis(
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=str(exc)) from exc
     except LanguageModelError as exc:
         raise HTTPException(status_code=status.HTTP_502_BAD_GATEWAY, detail=str(exc)) from exc
+
+
+@router.post("/diagnoses/stream", tags=["diagnosis"])
+async def stream_diagnosis(
+    request: RunDiagnosisRequest,
+    application: ApplicationDependency,
+) -> StreamingResponse:
+    model = _provider_model(request.provider, application)
+    command = DiagnosisCommand.model_validate(request.model_dump(exclude={"provider"}))
+    queue: asyncio.Queue[tuple[str, dict[str, Any]] | None] = asyncio.Queue()
+    loop = asyncio.get_running_loop()
+
+    def emit(event: str, payload: dict[str, Any]) -> None:
+        loop.call_soon_threadsafe(queue.put_nowait, (event, payload))
+
+    def run() -> None:
+        try:
+            report = application.run_diagnosis.start_streaming(command, model, emit)
+            emit(
+                "report_ready",
+                {
+                    "run_id": report.run_id,
+                    "status": report.status.value,
+                    "summary": report.summary,
+                },
+            )
+        except Exception as exc:
+            emit("run_failed", {"error": f"{type(exc).__name__}: {exc}"})
+        finally:
+            loop.call_soon_threadsafe(queue.put_nowait, None)
+
+    task = asyncio.create_task(asyncio.to_thread(run))
+
+    async def event_stream() -> Any:
+        while True:
+            item = await queue.get()
+            if item is None:
+                break
+            event, payload = item
+            yield f"event: {event}\ndata: {json.dumps(payload, ensure_ascii=False)}\n\n"
+        await task
+
+    return StreamingResponse(event_stream(), media_type="text/event-stream")
 
 
 @router.post(

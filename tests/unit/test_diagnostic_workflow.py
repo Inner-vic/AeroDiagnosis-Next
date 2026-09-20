@@ -206,6 +206,34 @@ def test_workflow_records_model_and_tool_operations(tmp_path: Path) -> None:
     ]
 
 
+def test_streaming_workflow_emits_agent_events(tmp_path: Path) -> None:
+    settings = _settings(tmp_path)
+    application = bootstrap(settings)
+    session_id = application.conversation_sessions.create()
+    application.ingest_document.execute(
+        display_name="manual.txt",
+        content=b"Compressor stall may cause an exhaust gas temperature rise.",
+    )
+    events: list[tuple[str, object]] = []
+
+    report = application.run_diagnosis.start_streaming(
+        DiagnosisCommand(
+            session_id=session_id,
+            question="Does compressor stall cause temperature rise?",
+            min_relevance=0,
+        ),
+        FakeLanguageModel(),
+        lambda event, payload: events.append((event, payload)),
+    )
+
+    assert report.status is DiagnosisReportStatus.EVIDENCE_READY
+    event_names = [event for event, _payload in events]
+    assert "run_started" in event_names
+    assert "model_call_started" in event_names
+    assert "tool_call_started" in event_names
+    assert "report_ready" in event_names
+
+
 def test_workflow_changes_plan_then_refuses_when_no_evidence_exists(tmp_path: Path) -> None:
     application = bootstrap(_settings(tmp_path))
     session_id = application.conversation_sessions.create()

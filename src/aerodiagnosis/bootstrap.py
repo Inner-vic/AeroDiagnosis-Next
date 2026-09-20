@@ -14,6 +14,7 @@ from aerodiagnosis.adapters.persistence import (
     create_vector_store,
 )
 from aerodiagnosis.adapters.persistence.sqlite import SQLiteDatabase
+from aerodiagnosis.application.agent_events import AgentEventSink
 from aerodiagnosis.application.case_verification import RecordCaseVerification
 from aerodiagnosis.application.demo_content import seed_demo_content
 from aerodiagnosis.application.diagnostic_workflow import DiagnosticWorkflow
@@ -84,7 +85,10 @@ def bootstrap(settings: RuntimeSettings | None = None) -> Application:
         case_store=case_store,
     )
 
-    def workflow_factory(model: LanguageModel) -> DiagnosticWorkflow:
+    def workflow_factory(
+        model: LanguageModel,
+        event_sink: AgentEventSink | None = None,
+    ) -> DiagnosticWorkflow:
         return DiagnosticWorkflow(
             tools=tools,
             language_model=model,
@@ -92,6 +96,7 @@ def bootstrap(settings: RuntimeSettings | None = None) -> Application:
             checkpoints=checkpoints,
             memory=memory,
             ledger=operation_ledger,
+            event_sink=event_sink,
         )
 
     return Application(

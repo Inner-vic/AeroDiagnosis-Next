@@ -11,6 +11,7 @@ from typing import Any, Self
 
 from pydantic import BaseModel, ConfigDict, Field, ValidationError, model_validator
 
+from aerodiagnosis.application.agent_events import AgentEventSink
 from aerodiagnosis.application.agent_models import (
     CandidateDiagnosis,
     EvidencePlan,
@@ -127,6 +128,7 @@ class DiagnosticWorkflow:
         checkpoints: CheckpointStore,
         memory: ConversationMemoryStore,
         ledger: OperationLedger,
+        event_sink: AgentEventSink | None = None,
     ) -> None:
         self._tools = tools
         self._model = language_model
@@ -134,6 +136,11 @@ class DiagnosticWorkflow:
         self._checkpoints = checkpoints
         self._memory = memory
         self._ledger = ledger
+        self._event_sink = event_sink
+
+    def _emit(self, event: str, payload: dict[str, Any]) -> None:
+        if self._event_sink is not None:
+            self._event_sink(event, payload)
 
     def start(self, command: DiagnosisCommand) -> DiagnosisReport:
         active_versions = tuple(sorted(self._active_versions()))
@@ -159,6 +166,14 @@ class DiagnosticWorkflow:
             model_identity=self._model.identity,
             command=command,
             memory_context=memory_context,
+        )
+        self._emit(
+            "run_started",
+            {
+                "run_id": state.run_id,
+                "session_id": state.command.session_id,
+                "snapshot_id": state.snapshot_id,
+            },
         )
         self._save(state)
         return self._execute(state)
@@ -227,9 +242,21 @@ class DiagnosticWorkflow:
         payload: dict[str, Any],
         model: type[BaseModel],
     ) -> BaseModel:
+        self._emit(
+            "model_call_started",
+            {"run_id": run_id, "task": task, "payload": payload},
+        )
         try:
             raw = self._model.complete_json(task, payload)
         except Exception as exc:
+            self._emit(
+                "model_call_failed",
+                {
+                    "run_id": run_id,
+                    "task": task,
+                    "error": f"{type(exc).__name__}: {exc}",
+                },
+            )
             self._ledger.record_model(
                 run_id=run_id,
                 task=task,
@@ -241,6 +268,14 @@ class DiagnosticWorkflow:
         try:
             output = model.model_validate(raw)
         except ValidationError as exc:
+            self._emit(
+                "model_call_failed",
+                {
+                    "run_id": run_id,
+                    "task": task,
+                    "error": str(exc),
+                },
+            )
             self._ledger.record_model(
                 run_id=run_id,
                 task=task,
@@ -254,6 +289,14 @@ class DiagnosticWorkflow:
             task=task,
             payload=payload,
             result=output.model_dump(mode="json"),
+        )
+        self._emit(
+            "model_call_completed",
+            {
+                "run_id": run_id,
+                "task": task,
+                "result": output.model_dump(mode="json"),
+            },
         )
         return output
 
@@ -352,6 +395,14 @@ class DiagnosticWorkflow:
                 if len(trace) >= retrieving.command.max_tool_calls:
                     budget_exhausted = True
                     break
+                self._emit(
+                    "tool_call_started",
+                    {
+                        "run_id": retrieving.run_id,
+                        "tool_name": tool_name,
+                        "query": query,
+                    },
+                )
                 try:
                     items = self._tools.execute(
                         tool_name,
@@ -360,6 +411,15 @@ class DiagnosticWorkflow:
                         active_version_ids=active_versions,
                     )
                 except Exception as exc:  # tool failures are recorded and remain fail-closed
+                    self._emit(
+                        "tool_call_failed",
+                        {
+                            "run_id": retrieving.run_id,
+                            "tool_name": tool_name,
+                            "query": query,
+                            "error": f"{type(exc).__name__}: {exc}",
+                        },
+                    )
                     call_id = hashlib.sha256(
                         f"{tool_name}:{query}:{len(trace)}".encode()
                     ).hexdigest()
@@ -395,6 +455,15 @@ class DiagnosticWorkflow:
                     query=query,
                     status=execution_status.value,
                     evidence_count=len(items),
+                )
+                self._emit(
+                    "tool_call_completed",
+                    {
+                        "run_id": retrieving.run_id,
+                        "tool_name": tool_name,
+                        "query": query,
+                        "evidence_count": len(items),
+                    },
                 )
                 trace.append(
                     ToolExecution(
@@ -513,6 +582,14 @@ class DiagnosticWorkflow:
             content=self._memory_content(report),
         )
         self._save(completed)
+        self._emit(
+            "report_ready",
+            {
+                "run_id": report.run_id,
+                "status": report.status.value,
+                "summary": report.summary,
+            },
+        )
         return report
 
     def _refuse(self, state: DiagnosisWorkflowState) -> DiagnosisReport:
@@ -541,4 +618,12 @@ class DiagnosticWorkflow:
             content=self._memory_content(report),
         )
         self._save(refused)
+        self._emit(
+            "report_ready",
+            {
+                "run_id": report.run_id,
+                "status": report.status.value,
+                "summary": report.summary,
+            },
+        )
         return report

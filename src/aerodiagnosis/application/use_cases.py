@@ -32,6 +32,7 @@ from aerodiagnosis.ports import (
 )
 from aerodiagnosis.tools import DiagnosticToolset
 
+from .agent_events import AgentEventSink
 from .diagnostic_workflow import DiagnosticWorkflow
 
 
@@ -123,15 +124,25 @@ class BrowseCases:
 class RunDiagnosis:
     def __init__(
         self,
-        workflow_factory: Callable[[LanguageModel], DiagnosticWorkflow],
+        workflow_factory: Callable[
+            [LanguageModel, AgentEventSink | None], DiagnosticWorkflow
+        ],
     ) -> None:
         self._workflow_factory = workflow_factory
 
     def start(self, command: DiagnosisCommand, language_model: LanguageModel) -> DiagnosisReport:
-        return self._workflow_factory(language_model).start(command)
+        return self._workflow_factory(language_model, None).start(command)
+
+    def start_streaming(
+        self,
+        command: DiagnosisCommand,
+        language_model: LanguageModel,
+        event_sink: AgentEventSink,
+    ) -> DiagnosisReport:
+        return self._workflow_factory(language_model, event_sink).start(command)
 
     def resume(self, run_id: str, language_model: LanguageModel) -> DiagnosisReport:
-        return self._workflow_factory(language_model).resume(run_id)
+        return self._workflow_factory(language_model, None).resume(run_id)
 
 
 class QueryDiagnosticTool:
