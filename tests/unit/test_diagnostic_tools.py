@@ -5,7 +5,12 @@ from pathlib import Path
 from aerodiagnosis.adapters.persistence import SQLiteCaseStore
 from aerodiagnosis.adapters.persistence.sqlite_graph import SQLiteGraphStore
 from aerodiagnosis.adapters.persistence.sqlite_vector import SQLiteVectorStore
-from aerodiagnosis.domain import DiagnosisCommand, ParameterObservation, RetrievalStrategy
+from aerodiagnosis.domain import (
+    DiagnosisCommand,
+    EvidenceItem,
+    ParameterObservation,
+    RetrievalStrategy,
+)
 from aerodiagnosis.ingestion import DocumentIngestionService, DocumentManifest
 from aerodiagnosis.ports import CaseRecord, GraphEdge, GraphNode
 from aerodiagnosis.tools.diagnostic import (
@@ -242,3 +247,34 @@ def test_graph_tool_uses_canonical_causal_paths(tmp_path: Path) -> None:
 
     assert evidence[0].locator["kind"] == "causal_graph_path"
     assert "Inspect blades" in evidence[0].excerpt
+
+
+def test_external_tools_are_exposed_and_executed(tmp_path: Path) -> None:
+    external_evidence = EvidenceItem(
+        evidence_id="e" * 64,
+        source_kind="external_tool",
+        source_ref="external-ping",
+        document_id="external",
+        version_id="v1",
+        content_hash="f" * 64,
+        excerpt="External tool evidence",
+        locator={"kind": "external", "coordinates": {"tool": "external_ping"}},
+        score=1.0,
+    )
+    tools = DiagnosticToolset(
+        vector_store=SQLiteVectorStore(tmp_path / "runtime.db"),
+        graph_store=SQLiteGraphStore(tmp_path / "runtime.db"),
+        case_store=SQLiteCaseStore(tmp_path / "runtime.db"),
+        external_tools={
+            "external_ping": lambda _command, _query, _active: (external_evidence,)
+        },
+    )
+    command = DiagnosisCommand(session_id="session", question="External tool")
+
+    assert "external_ping" in tools.available_tools
+    assert tools.execute(
+        "external_ping",
+        command=command,
+        query="ping",
+        active_version_ids=frozenset(),
+    )[0].source_kind == "external_tool"

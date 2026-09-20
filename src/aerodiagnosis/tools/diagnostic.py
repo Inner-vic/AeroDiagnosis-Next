@@ -6,7 +6,7 @@ import hashlib
 import json
 import re
 import unicodedata
-from collections.abc import Mapping
+from collections.abc import Callable, Mapping
 from typing import Any
 
 from aerodiagnosis.application.fault_graph import FaultGraphPath, FaultGraphReasoner
@@ -29,6 +29,10 @@ CASE_TOOL = "find_similar_cases"
 PARAMETER_TOOL = "analyze_gas_path_parameters"
 HYBRID_TOOL = "hybrid_retrieve_evidence"
 HYBRID_ALGORITHM = "weighted_rrf@2"
+
+ExternalToolHandler = Callable[
+    [DiagnosisCommand, str, frozenset[str]], tuple[EvidenceItem, ...]
+]
 
 _ROUTE_WEIGHTS = {"manual": 1.0, "graph": 0.88, "case": 0.94}
 _RRF_K = 60
@@ -53,10 +57,23 @@ class DiagnosticToolset:
         vector_store: VectorStore,
         graph_store: GraphStore,
         case_store: CaseStore,
+        external_tools: Mapping[str, ExternalToolHandler] | None = None,
     ) -> None:
         self._vector = vector_store
         self._graph = graph_store
         self._cases = case_store
+        self._external_tools = dict(external_tools or {})
+
+    @property
+    def available_tools(self) -> tuple[str, ...]:
+        return (
+            HYBRID_TOOL,
+            MANUAL_TOOL,
+            GRAPH_TOOL,
+            CASE_TOOL,
+            PARAMETER_TOOL,
+            *sorted(self._external_tools),
+        )
 
     @property
     def backend_identity(self) -> tuple[str, ...]:
@@ -76,6 +93,12 @@ class DiagnosticToolset:
         query: str,
         active_version_ids: frozenset[str],
     ) -> tuple[EvidenceItem, ...]:
+        if tool_name in self._external_tools:
+            return self._external_tools[tool_name](
+                command,
+                query,
+                active_version_ids,
+            )
         if tool_name == MANUAL_TOOL:
             return self._manual(command, query, active_version_ids)
         if tool_name == GRAPH_TOOL:

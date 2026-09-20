@@ -339,7 +339,7 @@ class DiagnosticWorkflow:
         payload = {
             "question": state.command.question,
             "parameters": [item.model_dump(mode="json") for item in state.command.parameters],
-            "available_tools": AVAILABLE_TOOLS,
+            "available_tools": self._tools.available_tools,
             "retrieval_policy": (
                 f"Prefer {HYBRID_TOOL} when evidence may span manuals, graph paths and cases. "
                 "Never combine it with its manual, graph or case subroutes in the same plan. "
@@ -355,7 +355,7 @@ class DiagnosticWorkflow:
         }
         plan = self._model_output(state.run_id, task, payload, EvidencePlan)
         assert isinstance(plan, EvidencePlan)
-        unknown = set(plan.tools) - set(AVAILABLE_TOOLS)
+        unknown = set(plan.tools) - set(self._tools.available_tools)
         if unknown:
             raise LanguageModelError(f"planner selected unknown tools: {sorted(unknown)}")
         normalized_tools = plan.tools
