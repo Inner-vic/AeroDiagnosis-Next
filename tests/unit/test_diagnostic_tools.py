@@ -200,3 +200,45 @@ def test_toolset_rejects_unknown_tool(tmp_path: Path) -> None:
         assert "unknown diagnostic tool" in str(exc)
     else:  # pragma: no cover - assertion guard
         raise AssertionError("unknown tool was accepted")
+
+
+def test_graph_tool_uses_canonical_causal_paths(tmp_path: Path) -> None:
+    path = tmp_path / "runtime.db"
+    graph = SQLiteGraphStore(path)
+    version = "v1"
+    graph.upsert_nodes(
+        (
+            GraphNode("engine", "Aero Engine", "Equipment", "Engine", "manual", version),
+            GraphNode("compressor", "Compressor", "Component", "Compressor", "manual", version),
+            GraphNode("egt", "EGT high", "Symptom", "High exhaust temperature", "manual", version),
+            GraphNode("stall", "Compressor stall", "Cause", "Stability loss", "manual", version),
+            GraphNode(
+                "inspect",
+                "Inspect blades",
+                "Solution",
+                "Borescope inspection",
+                "manual",
+                version,
+            ),
+        )
+    )
+    graph.upsert_edges(
+        (
+            GraphEdge("e1", "engine", "compressor", "HAS_COMPONENT", "manual", version),
+            GraphEdge("e2", "compressor", "egt", "HAS_SYMPTOM", "manual", version),
+            GraphEdge("e3", "egt", "stall", "CAUSED_BY", "manual", version, 0.9),
+            GraphEdge("e4", "stall", "inspect", "SOLVED_BY", "manual", version, 0.8),
+        )
+    )
+    tools = _tools(path)
+    command = DiagnosisCommand(session_id="session", question="Why is EGT high?")
+
+    evidence = tools.execute(
+        GRAPH_TOOL,
+        command=command,
+        query="EGT high",
+        active_version_ids=frozenset({version}),
+    )
+
+    assert evidence[0].locator["kind"] == "causal_graph_path"
+    assert "Inspect blades" in evidence[0].excerpt

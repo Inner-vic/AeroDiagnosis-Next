@@ -21,7 +21,7 @@ def test_demo_content_is_seeded_idempotently_when_enabled(tmp_path: Path) -> Non
     assert status.version_count == 1
     assert status.vector_chunks >= 1
     assert status.graph_nodes == 10
-    assert status.graph_edges == 9
+    assert status.graph_edges == 10
     assert status.case_count == 4
     assert {case.case_id for case in first.browse_cases.execute()} == {
         "DEMO-CASE-EGT-001",

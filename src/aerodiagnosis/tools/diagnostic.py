@@ -9,6 +9,7 @@ import unicodedata
 from collections.abc import Mapping
 from typing import Any
 
+from aerodiagnosis.application.fault_graph import FaultGraphPath, FaultGraphReasoner
 from aerodiagnosis.domain import (
     DiagnosisCommand,
     EvidenceItem,
@@ -308,6 +309,21 @@ class DiagnosticToolset:
         query: str,
         active_version_ids: frozenset[str],
     ) -> tuple[EvidenceItem, ...]:
+        causal_paths = [
+            path
+            for path in FaultGraphReasoner(self._graph).reason(
+                query,
+                active_version_ids=active_version_ids,
+                limit=command.top_k,
+            )
+            if path.causes or path.solutions
+        ]
+        if causal_paths:
+            return tuple(
+                self._causal_path_item(path)
+                for path in causal_paths[: command.top_k]
+            )
+
         nodes: dict[str, GraphNode] = {}
         for keyword in _keywords(query):
             for node in self._graph.search_nodes(keyword, limit=command.top_k):
@@ -361,6 +377,44 @@ class DiagnosticToolset:
                 )
             )
         return tuple(evidence)
+
+    @staticmethod
+    def _causal_path_item(path: FaultGraphPath) -> EvidenceItem:
+        parts = [path.symptom.name]
+        if path.component is not None:
+            parts.append(f"{path.component.name} has symptom")
+        for cause in path.causes:
+            parts.append(cause.name)
+        for solution in path.solutions:
+            parts.append(solution.name)
+        excerpt = " -> ".join(parts)[:600]
+        source_ref = path.symptom.node_id
+        locator = {
+            "kind": "causal_graph_path",
+            "coordinates": {
+                "symptom": path.symptom.node_id,
+                "component": path.component.node_id if path.component else None,
+                "equipment": path.equipment.node_id if path.equipment else None,
+                "causes": [cause.node_id for cause in path.causes],
+                "solutions": [solution.node_id for solution in path.solutions],
+                "hops": path.hops,
+            },
+        }
+        return EvidenceItem(
+            evidence_id=make_evidence_id(
+                SourceKind.KNOWLEDGE_GRAPH_PATH,
+                source_ref,
+                locator,
+            ),
+            source_kind=SourceKind.KNOWLEDGE_GRAPH_PATH,
+            source_ref=source_ref,
+            document_id=path.symptom.source_ref,
+            version_id=path.symptom.version_id,
+            content_hash=_hash(excerpt),
+            excerpt=excerpt,
+            locator=locator,
+            score=path.score,
+        )
 
     def _case_evidence(
         self,
