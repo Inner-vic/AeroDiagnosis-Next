@@ -10,6 +10,7 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from aerodiagnosis.adapters.llm import OpenAICompatibleLanguageModel
 from aerodiagnosis.adapters.persistence import ExternalStoreOutbox
 from aerodiagnosis.adapters.persistence.sqlite import LATEST_SCHEMA_VERSION
+from aerodiagnosis.application.capability_boundary import capability_boundaries
 from aerodiagnosis.application.diagnostic_workflow import (
     DiagnosisRunNotFound,
     IncompatibleWorkflowError,
@@ -31,6 +32,7 @@ from aerodiagnosis.version import __version__
 from .dependencies import get_application, require_operator
 from .schemas import (
     CaseResponse,
+    CaseVerificationRequest,
     ConversationMessageResponse,
     DocumentCatalogResponse,
     EvidenceHit,
@@ -101,6 +103,9 @@ def system(application: ApplicationDependency) -> dict[str, Any]:
             "messages": state.message_count,
         },
         "external_sync": external_sync,
+        "capability_boundaries": [
+            asdict(boundary) for boundary in capability_boundaries()
+        ],
         "knowledge_enhancement": {
             "positioning": "model_result_plus_knowledge_root_cause_support",
             "models": len(application.knowledge_enhanced_diagnosis.list_models()),
@@ -372,6 +377,34 @@ def browse_cases(
         CaseResponse.model_validate(asdict(case))
         for case in application.browse_cases.execute(query=query, limit=limit)
     ]
+
+
+@router.post(
+    "/cases/{case_id}/verification",
+    response_model=CaseResponse,
+    tags=["knowledge"],
+)
+def verify_case(
+    case_id: str,
+    request: CaseVerificationRequest,
+    application: ApplicationDependency,
+) -> CaseResponse:
+    try:
+        updated = application.record_case_verification.execute(
+            case_id=case_id,
+            outcome=request.outcome,
+            actual_cause=request.actual_cause,
+            actual_fault_ids=request.actual_fault_ids,
+            notes=request.notes,
+        )
+    except KeyError as exc:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=str(exc)) from exc
+    except ValueError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail=str(exc),
+        ) from exc
+    return CaseResponse.model_validate(asdict(updated))
 
 
 @router.post("/diagnoses", response_model=DiagnosisReport, tags=["diagnosis"])

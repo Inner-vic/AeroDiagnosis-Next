@@ -180,6 +180,15 @@ class CaseResponse(BaseModel):
     attributes: dict[str, object]
 
 
+class CaseVerificationRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    outcome: str = Field(pattern=r"^(correct|partial|wrong)$")
+    actual_cause: str = Field(default="", max_length=2000)
+    actual_fault_ids: tuple[str, ...] = Field(default=(), max_length=100)
+    notes: str = Field(default="", max_length=2000)
+
+
 class SessionCreatedResponse(BaseModel):
     model_config = ConfigDict(extra="forbid")
 

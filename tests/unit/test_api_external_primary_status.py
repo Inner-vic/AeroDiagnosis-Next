@@ -3,6 +3,7 @@ from __future__ import annotations
 from pathlib import Path
 
 from aerodiagnosis.adapters.api.routers import _external_sync_status
+from aerodiagnosis.application.capability_boundary import capability_boundaries
 from aerodiagnosis.config import RuntimeSettings
 
 
@@ -19,3 +20,10 @@ def test_external_primary_status_does_not_report_cdc(tmp_path: Path) -> None:
         "mode": "direct_external_primary",
         "events": {"applied": 0, "pending": 0, "dead": 0},
     }
+
+
+def test_capability_boundaries_are_explicit() -> None:
+    boundaries = capability_boundaries()
+
+    assert boundaries
+    assert all(boundary.id and boundary.status and boundary.statement for boundary in boundaries)
