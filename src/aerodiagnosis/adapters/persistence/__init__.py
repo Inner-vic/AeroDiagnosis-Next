@@ -21,17 +21,36 @@ class UnsupportedBackendError(ValueError):
     """Raised when optional infrastructure was selected but is not installed."""
 
 
-def create_vector_store(settings: RuntimeSettings) -> VectorStore:
-    if settings.vector_backend == "sqlite":
-        return SQLiteVectorStore(settings.database_path)
-    outbox = ExternalStoreOutbox(settings.database_path)
-    primary = SQLiteVectorStore(settings.database_path, outbox=outbox)
-    replica = ChromaHttpVectorStore(
+def _chroma_vector_store(settings: RuntimeSettings) -> ChromaHttpVectorStore:
+    return ChromaHttpVectorStore(
         host=settings.chroma_host,
         port=settings.chroma_port,
         ssl=settings.chroma_ssl,
         collection_name=settings.chroma_collection,
     )
+
+
+def _neo4j_graph_store(settings: RuntimeSettings) -> Neo4jGraphStore:
+    if settings.neo4j_password is None:
+        raise UnsupportedBackendError(
+            "AERODIAGNOSIS_NEO4J_PASSWORD is required when graph backend is neo4j"
+        )
+    return Neo4jGraphStore(
+        uri=settings.neo4j_uri,
+        user=settings.neo4j_user,
+        password=settings.neo4j_password.get_secret_value(),
+        database=settings.neo4j_database,
+    )
+
+
+def create_vector_store(settings: RuntimeSettings) -> VectorStore:
+    if settings.vector_backend == "sqlite":
+        return SQLiteVectorStore(settings.database_path)
+    if settings.external_store_mode == "external-primary":
+        return _chroma_vector_store(settings)
+    outbox = ExternalStoreOutbox(settings.database_path)
+    primary = SQLiteVectorStore(settings.database_path, outbox=outbox)
+    replica = _chroma_vector_store(settings)
     sync = ExternalStoreSync(
         database_path=settings.database_path,
         outbox=outbox,
@@ -47,18 +66,11 @@ def create_vector_store(settings: RuntimeSettings) -> VectorStore:
 def create_graph_store(settings: RuntimeSettings) -> GraphStore:
     if settings.graph_backend == "sqlite":
         return SQLiteGraphStore(settings.database_path)
-    if settings.neo4j_password is None:
-        raise UnsupportedBackendError(
-            "AERODIAGNOSIS_NEO4J_PASSWORD is required when graph backend is neo4j"
-        )
+    if settings.external_store_mode == "external-primary":
+        return _neo4j_graph_store(settings)
     outbox = ExternalStoreOutbox(settings.database_path)
     primary = SQLiteGraphStore(settings.database_path, outbox=outbox)
-    replica = Neo4jGraphStore(
-        uri=settings.neo4j_uri,
-        user=settings.neo4j_user,
-        password=settings.neo4j_password.get_secret_value(),
-        database=settings.neo4j_database,
-    )
+    replica = _neo4j_graph_store(settings)
     sync = ExternalStoreSync(
         database_path=settings.database_path,
         outbox=outbox,
@@ -70,27 +82,17 @@ def create_graph_store(settings: RuntimeSettings) -> GraphStore:
 
 
 def create_external_sync(settings: RuntimeSettings) -> ExternalStoreSync:
+    if settings.external_store_mode == "external-primary":
+        raise UnsupportedBackendError(
+            "external sync is disabled in external-primary mode"
+        )
     outbox = ExternalStoreOutbox(settings.database_path)
     vector_replica: VectorStore | None = None
     graph_replica: GraphStore | None = None
     if settings.vector_backend == "chroma_http":
-        vector_replica = ChromaHttpVectorStore(
-            host=settings.chroma_host,
-            port=settings.chroma_port,
-            ssl=settings.chroma_ssl,
-            collection_name=settings.chroma_collection,
-        )
+        vector_replica = _chroma_vector_store(settings)
     if settings.graph_backend == "neo4j":
-        if settings.neo4j_password is None:
-            raise UnsupportedBackendError(
-                "AERODIAGNOSIS_NEO4J_PASSWORD is required when graph backend is neo4j"
-            )
-        graph_replica = Neo4jGraphStore(
-            uri=settings.neo4j_uri,
-            user=settings.neo4j_user,
-            password=settings.neo4j_password.get_secret_value(),
-            database=settings.neo4j_database,
-        )
+        graph_replica = _neo4j_graph_store(settings)
     return ExternalStoreSync(
         database_path=settings.database_path,
         outbox=outbox,

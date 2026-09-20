@@ -9,6 +9,7 @@ from pydantic import SecretStr
 from aerodiagnosis.adapters.api import create_app
 from aerodiagnosis.adapters.persistence import (
     UnsupportedBackendError,
+    create_external_sync,
     create_graph_store,
     create_vector_store,
 )
@@ -43,6 +44,40 @@ def test_optional_backends_are_local_first_replicas(tmp_path: Path) -> None:
         )
     )
     assert graph.backend_name == "neo4j_cdc"
+
+
+def test_external_primary_selects_direct_external_stores(tmp_path: Path) -> None:
+    vector = create_vector_store(
+        _settings(
+            tmp_path,
+            vector_backend="chroma_http",
+            external_store_mode="external-primary",
+        )
+    )
+    graph = create_graph_store(
+        _settings(
+            tmp_path,
+            graph_backend="neo4j",
+            external_store_mode="external-primary",
+            neo4j_password=SecretStr("test-password"),
+        )
+    )
+
+    assert vector.backend_name == "chroma_http_hashing"
+    assert graph.backend_name == "neo4j"
+
+
+def test_external_primary_disables_cdc_sync(tmp_path: Path) -> None:
+    with pytest.raises(UnsupportedBackendError, match="external-primary"):
+        create_external_sync(
+            _settings(
+                tmp_path,
+                vector_backend="chroma_http",
+                graph_backend="neo4j",
+                external_store_mode="external-primary",
+                neo4j_password=SecretStr("test-password"),
+            )
+        )
 
 
 def test_api_surface_is_honest_about_current_application_status(tmp_path: Path) -> None:
