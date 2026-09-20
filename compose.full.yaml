@@ -11,7 +11,7 @@ services:
       AERODIAGNOSIS_NEO4J_DATABASE: neo4j
     depends_on:
       chromadb:
-        condition: service_started
+        condition: service_healthy
       neo4j:
         condition: service_healthy
 
@@ -43,9 +43,11 @@ services:
       - ALL
     security_opt:
       - no-new-privileges:true
+    healthcheck:
+      disable: true
     depends_on:
       chromadb:
-        condition: service_started
+        condition: service_healthy
       neo4j:
         condition: service_healthy
 

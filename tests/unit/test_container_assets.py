@@ -32,7 +32,8 @@ def test_v3_compose_is_local_only_and_persistent() -> None:
     assert "chromadb/chroma:1.5.9" in full
     assert "neo4j:5.26.30-community" in full
     assert "chroma_data:/data" in full
-    assert "condition: service_started" in full
+    assert "condition: service_healthy" in full
+    assert "disable: true" in full
     assert 'command: ["aerodiagnosis-sync", "--forever", "--interval", "2"]' in full
     assert "AERODIAGNOSIS_VECTOR_BACKEND: chroma_http" in full
     assert "AERODIAGNOSIS_GRAPH_BACKEND: neo4j" in full
