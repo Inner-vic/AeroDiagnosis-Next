@@ -4,8 +4,14 @@ from __future__ import annotations
 
 from pydantic import BaseModel, ConfigDict, Field, HttpUrl, SecretStr
 
-from aerodiagnosis.domain import DiagnosisCommand, HybridRetrievalResult, ModelPluginManifest
+from aerodiagnosis.domain import (
+    DiagnosisCommand,
+    DiagnosisReport,
+    HybridRetrievalResult,
+    ModelPluginManifest,
+)
 from aerodiagnosis.evaluation import RetrievalMetrics
+from aerodiagnosis.generation_quality import GenerationQualityMetrics, LLMJudgeVerdict
 
 
 class IngestDocumentRequest(BaseModel):
@@ -63,6 +69,21 @@ class RetrievalEvaluationResponse(BaseModel):
 
     retrieval: HybridRetrievalResult
     metrics: RetrievalMetrics
+
+
+class GenerationQualityRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    report: DiagnosisReport
+    relevant_evidence_ids: tuple[str, ...] = Field(default=(), max_length=100)
+    provider: ProviderConfiguration | None = None
+
+
+class GenerationQualityResponse(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    metrics: GenerationQualityMetrics
+    judge: LLMJudgeVerdict
 
 
 class ProviderConfiguration(BaseModel):

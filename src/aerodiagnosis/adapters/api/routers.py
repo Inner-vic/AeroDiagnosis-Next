@@ -28,6 +28,10 @@ from aerodiagnosis.domain import (
     RootCauseSession,
 )
 from aerodiagnosis.evaluation import evaluate_retrieval
+from aerodiagnosis.generation_quality import (
+    evaluate_generation_quality,
+    judge_generation_quality,
+)
 from aerodiagnosis.ingestion import DocumentParseError, IngestionError
 from aerodiagnosis.ports import LanguageModelError
 from aerodiagnosis.version import __version__
@@ -41,6 +45,8 @@ from .schemas import (
     DocumentCatalogResponse,
     EvidenceHit,
     FinalizeRootCauseRequest,
+    GenerationQualityRequest,
+    GenerationQualityResponse,
     GraphOverviewResponse,
     HybridRetrievalRequest,
     IngestDocumentRequest,
@@ -341,6 +347,30 @@ def evaluate_hybrid_retrieval(
         )
         metrics = evaluate_retrieval(retrieval, set(request.relevant_evidence_ids))
         return RetrievalEvaluationResponse(retrieval=retrieval, metrics=metrics)
+    except ValueError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail=str(exc)
+        ) from exc
+
+
+@router.post(
+    "/evaluations/generation",
+    response_model=GenerationQualityResponse,
+    tags=["evaluation"],
+)
+def evaluate_generation_quality_endpoint(
+    request: GenerationQualityRequest,
+    application: ApplicationDependency,
+    _rate_limit: DiagnosisRateLimitDependency,
+) -> GenerationQualityResponse:
+    try:
+        model = _provider_model(request.provider, application)
+        relevant = set(request.relevant_evidence_ids)
+        metrics = evaluate_generation_quality(request.report, relevant)
+        judge = judge_generation_quality(request.report, model, relevant)
+        return GenerationQualityResponse(metrics=metrics, judge=judge)
+    except LanguageModelError as exc:
+        raise HTTPException(status_code=status.HTTP_502_BAD_GATEWAY, detail=str(exc)) from exc
     except ValueError as exc:
         raise HTTPException(
             status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail=str(exc)
