@@ -2,8 +2,9 @@ from __future__ import annotations
 
 import re
 import unicodedata
-from collections import defaultdict
+from collections import defaultdict, deque
 from dataclasses import dataclass
+from datetime import UTC, datetime
 
 from aerodiagnosis.ports import GraphEdge, GraphNode, GraphStore
 
@@ -12,6 +13,19 @@ _SOLUTION_RELATIONS = {"SOLVED_BY", "solved_by", "建议检查", "建议核验",
 _COMPONENT_RELATIONS = {"HAS_SYMPTOM", "has_symptom", "发生于", "影响"}
 _EQUIPMENT_RELATIONS = {"HAS_COMPONENT", "has_component", "OCCURS_ON", "occurs_on"}
 _ROOT_CAUSE_RELATIONS = {"RELATED_TO", "related_to"}
+
+
+def _edge_is_active(edge: GraphEdge) -> bool:
+    if edge.properties.get("deprecated") is True:
+        return False
+    valid_to = edge.properties.get("valid_to")
+    if isinstance(valid_to, str):
+        try:
+            expires_at = datetime.fromisoformat(valid_to.replace("Z", "+00:00"))
+            return expires_at.tzinfo is not None and expires_at >= datetime.now(UTC)
+        except ValueError:
+            return False
+    return True
 
 
 @dataclass(frozen=True, slots=True)
@@ -48,9 +62,12 @@ class FaultGraphReasoner:
         *,
         active_version_ids: frozenset[str] | None = None,
         limit: int = 10,
+        max_hops: int = 3,
     ) -> list[FaultGraphPath]:
         if limit < 1:
             raise ValueError("limit must be positive")
+        if not 1 <= max_hops <= 8:
+            raise ValueError("max_hops must be between 1 and 8")
         nodes, edges = self._graph_store.snapshot(
             active_version_ids=active_version_ids,
             limit=2000,
@@ -69,11 +86,12 @@ class FaultGraphReasoner:
         paths: list[FaultGraphPath] = []
 
         for symptom in candidates:
-            causes = self._linked_nodes(
+            causes = self._causal_nodes(
                 symptom,
                 outgoing,
+                incoming,
                 nodes_by_id,
-                _CAUSE_RELATIONS,
+                max_hops=max_hops,
             )
             solutions: list[GraphNode] = []
             for cause in causes:
@@ -135,6 +153,48 @@ class FaultGraphReasoner:
         paths.sort(key=lambda path: (-path.score, path.symptom.node_id))
         return paths[:limit]
 
+    @classmethod
+    def _causal_nodes(
+        cls,
+        symptom: GraphNode,
+        outgoing: dict[str, list[GraphEdge]],
+        incoming: dict[str, list[GraphEdge]],
+        nodes_by_id: dict[str, GraphNode],
+        *,
+        max_hops: int,
+    ) -> list[GraphNode]:
+        reached: dict[str, tuple[int, float]] = {}
+        queue = deque([(symptom.node_id, 0, 1.0)])
+        seen = {symptom.node_id}
+        while queue:
+            current_id, depth, confidence = queue.popleft()
+            if depth >= max_hops:
+                continue
+            for edge in [*outgoing.get(current_id, []), *incoming.get(current_id, [])]:
+                if edge.relation not in _CAUSE_RELATIONS:
+                    continue
+                if not _edge_is_active(edge):
+                    continue
+                other_id = (
+                    edge.target_id
+                    if edge.source_id == current_id
+                    else edge.source_id
+                )
+                if other_id in seen or other_id not in nodes_by_id:
+                    continue
+                seen.add(other_id)
+                path_confidence = confidence * edge.confidence
+                reached[other_id] = (depth + 1, path_confidence)
+                queue.append((other_id, depth + 1, path_confidence))
+        ordered = sorted(
+            (
+                (nodes_by_id[node_id], depth, path_confidence)
+                for node_id, (depth, path_confidence) in reached.items()
+            ),
+            key=lambda item: (item[1], -item[2], item[0].node_id),
+        )
+        return [node for node, _depth, _confidence in ordered]
+
     @staticmethod
     def _linked_nodes(
         source: GraphNode,
@@ -148,7 +208,11 @@ class FaultGraphReasoner:
         for edge in adjacency.get(source.node_id, []):
             other_id = edge.source_id if incoming else edge.target_id
             target = nodes_by_id.get(other_id)
-            if target is not None and edge.relation in relations:
+            if (
+                target is not None
+                and edge.relation in relations
+                and _edge_is_active(edge)
+            ):
                 found.append(target)
         return found
 
@@ -162,9 +226,17 @@ class FaultGraphReasoner:
     ) -> float:
         related_ids = {symptom.node_id, *(node.node_id for node in causes + solutions)}
         confidences: list[float] = []
-        for edge in [*outgoing[symptom.node_id], *incoming[symptom.node_id]]:
-            if edge.source_id in related_ids or edge.target_id in related_ids:
-                confidences.append(edge.confidence)
+        for node_id in related_ids:
+            for edge in [*outgoing.get(node_id, []), *incoming.get(node_id, [])]:
+                if edge.relation not in _CAUSE_RELATIONS:
+                    continue
+                if (
+                    edge.source_id in related_ids
+                    or edge.target_id in related_ids
+                ):
+                    confidences.append(edge.confidence)
+            if confidences:
+                break
         if not confidences:
             return 0.0
         return sum(confidences) / len(confidences)
