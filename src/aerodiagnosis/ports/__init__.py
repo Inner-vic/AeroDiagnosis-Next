@@ -10,7 +10,7 @@ from .language_model import (
 )
 from .ledger import OperationLedger, OperationRecord
 from .memory import ConversationMemoryStore, ConversationMessage, MessageRole
-from .vector import VectorChunk, VectorMatch, VectorStore
+from .vector import EmbeddingProvider, VectorChunk, VectorMatch, VectorStore
 
 __all__ = [
     "CaseMatch",
@@ -20,6 +20,7 @@ __all__ = [
     "CheckpointStore",
     "ConversationMemoryStore",
     "ConversationMessage",
+    "EmbeddingProvider",
     "GraphEdge",
     "GraphNode",
     "GraphStore",

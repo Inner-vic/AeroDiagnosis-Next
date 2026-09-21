@@ -11,7 +11,7 @@ from collections.abc import Iterable, Sequence
 from datetime import UTC, datetime
 from pathlib import Path
 
-from aerodiagnosis.ports import VectorChunk, VectorMatch
+from aerodiagnosis.ports import EmbeddingProvider, VectorChunk, VectorMatch
 
 from .outbox import ExternalStoreOutbox
 from .sqlite import SQLiteDatabase
@@ -63,12 +63,15 @@ class SQLiteVectorStore:
         self,
         path: Path,
         embedder: HashingEmbedder | None = None,
+        embedding_provider: EmbeddingProvider | None = None,
         *,
         outbox: ExternalStoreOutbox | None = None,
     ) -> None:
         self._database = SQLiteDatabase(path)
         self._database.migrate()
-        self._embedder = embedder or HashingEmbedder()
+        if embedder is not None and embedding_provider is not None:
+            raise ValueError("embedder and embedding_provider cannot both be set")
+        self._embedder = embedding_provider or embedder or HashingEmbedder()
         self._outbox = outbox
 
     @property

@@ -1,18 +1,6 @@
 from __future__ import annotations
 
-from typing import Protocol
-
 from aerodiagnosis.adapters.persistence.sqlite_vector import HashingEmbedder
-
-
-class EmbeddingProvider(Protocol):
-    @property
-    def name(self) -> str: ...
-
-    @property
-    def dimensions(self) -> int: ...
-
-    def embed(self, text: str) -> tuple[float, ...]: ...
 
 
 class HashingEmbeddingProvider:

@@ -6,7 +6,7 @@ import json
 from collections.abc import Mapping, Sequence
 from typing import Any
 
-from aerodiagnosis.ports import VectorChunk, VectorMatch
+from aerodiagnosis.ports import EmbeddingProvider, VectorChunk, VectorMatch
 
 from .sqlite_vector import HashingEmbedder
 
@@ -22,8 +22,11 @@ class ChromaHttpVectorStore:
         ssl: bool,
         collection_name: str,
         embedder: HashingEmbedder | None = None,
+        embedding_provider: EmbeddingProvider | None = None,
     ) -> None:
-        self._embedder = embedder or HashingEmbedder()
+        if embedder is not None and embedding_provider is not None:
+            raise ValueError("embedder and embedding_provider cannot both be set")
+        self._embedder = embedding_provider or embedder or HashingEmbedder()
         self._host = host
         self._port = port
         self._ssl = ssl
