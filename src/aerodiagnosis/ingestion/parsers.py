@@ -9,6 +9,8 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Protocol
 
+from pypdf import PdfReader
+
 from aerodiagnosis.domain import EvidenceLocator
 
 
@@ -157,6 +159,161 @@ class CsvParser:
         )
 
 
+class PdfParser:
+    parser_version = "pdf@1"
+
+    def parse(self, content: bytes) -> ParsedDocument:
+        try:
+            reader = PdfReader(io.BytesIO(content))
+        except Exception as exc:
+            raise DocumentParseError("invalid PDF content") from exc
+        chunks: list[ParsedChunk] = []
+        texts: list[str] = []
+        for page_number, page in enumerate(reader.pages, start=1):
+            text = (page.extract_text() or "").strip()
+            if not text:
+                continue
+            texts.append(text)
+            chunks.append(
+                ParsedChunk(
+                    content=text,
+                    locator=EvidenceLocator(
+                        kind="pdf_page",
+                        coordinates={"page": page_number},
+                    ),
+                )
+            )
+        if not chunks:
+            raise DocumentParseError("PDF contains no extractable text")
+        return ParsedDocument(
+            parser_version=self.parser_version,
+            media_type="application/pdf",
+            canonical_content="\n\n".join(texts).encode("utf-8"),
+            chunks=tuple(chunks),
+        )
+
+
+class DocxParser:
+    parser_version = "docx@1"
+
+    def parse(self, content: bytes) -> ParsedDocument:
+        from docx import Document as DocxDocument
+
+        try:
+            document = DocxDocument(io.BytesIO(content))
+        except Exception as exc:
+            raise DocumentParseError("invalid DOCX content") from exc
+        parts: list[str] = [
+            paragraph.text.strip()
+            for paragraph in document.paragraphs
+            if paragraph.text.strip()
+        ]
+        for table in document.tables:
+            for row in table.rows:
+                values = [cell.text.strip() for cell in row.cells]
+                if any(values):
+                    parts.append("\t".join(values))
+        canonical = "\n".join(parts)
+        if not canonical.strip():
+            raise DocumentParseError("DOCX contains no text")
+        return ParsedDocument(
+            parser_version=self.parser_version,
+            media_type=(
+                "application/vnd.openxmlformats-officedocument."
+                "wordprocessingml.document"
+            ),
+            canonical_content=canonical.encode("utf-8"),
+            chunks=(
+                ParsedChunk(
+                    content=canonical,
+                    locator=EvidenceLocator(
+                        kind="docx_document",
+                        coordinates={"parts": len(parts)},
+                    ),
+                ),
+            ),
+        )
+
+
+class XlsxParser:
+    parser_version = "xlsx@1"
+
+    def parse(self, content: bytes) -> ParsedDocument:
+        from openpyxl import load_workbook
+
+        try:
+            workbook = load_workbook(io.BytesIO(content), read_only=True, data_only=True)
+        except Exception as exc:
+            raise DocumentParseError("invalid XLSX content") from exc
+        chunks: list[ParsedChunk] = []
+        sheet_texts: list[str] = []
+        for worksheet in workbook.worksheets:
+            lines: list[str] = []
+            for row in worksheet.iter_rows(values_only=True):
+                if any(value is not None and str(value).strip() for value in row):
+                    lines.append(
+                        " | ".join("" if value is None else str(value) for value in row)
+                    )
+            text = "\n".join(lines)
+            if text.strip():
+                chunks.append(
+                    ParsedChunk(
+                        content=text,
+                        locator=EvidenceLocator(
+                            kind="xlsx_sheet",
+                            coordinates={
+                                "sheet": worksheet.title,
+                                "rows": len(lines),
+                            },
+                        ),
+                    )
+                )
+                sheet_texts.append(text)
+        if not chunks:
+            raise DocumentParseError("XLSX contains no rows")
+        return ParsedDocument(
+            parser_version=self.parser_version,
+            media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            canonical_content="\n\n".join(sheet_texts).encode("utf-8"),
+            chunks=tuple(chunks),
+        )
+
+
+class HtmlParser:
+    parser_version = "html@1"
+
+    def parse(self, content: bytes) -> ParsedDocument:
+        from bs4 import BeautifulSoup
+
+        try:
+            soup = BeautifulSoup(content, "lxml")
+        except Exception as exc:
+            raise DocumentParseError("invalid HTML content") from exc
+        for element in soup(["script", "style", "noscript"]):
+            element.decompose()
+        text = "\n".join(
+            line.strip()
+            for line in soup.get_text("\n").splitlines()
+            if line.strip()
+        )
+        if not text:
+            raise DocumentParseError("HTML contains no text")
+        return ParsedDocument(
+            parser_version=self.parser_version,
+            media_type="text/html",
+            canonical_content=text.encode("utf-8"),
+            chunks=(
+                ParsedChunk(
+                    content=text,
+                    locator=EvidenceLocator(
+                        kind="html_document",
+                        coordinates={"lines": len(text.splitlines())},
+                    ),
+                ),
+            ),
+        )
+
+
 class ParserRegistry:
     def __init__(self, parsers: Mapping[str, DocumentParser] | None = None) -> None:
         defaults: dict[str, DocumentParser] = {
@@ -164,6 +321,11 @@ class ParserRegistry:
             ".md": PlainTextParser(),
             ".markdown": PlainTextParser(),
             ".csv": CsvParser(),
+            ".pdf": PdfParser(),
+            ".docx": DocxParser(),
+            ".xlsx": XlsxParser(),
+            ".html": HtmlParser(),
+            ".htm": HtmlParser(),
         }
         self._parsers = {key.lower(): value for key, value in (parsers or defaults).items()}
 

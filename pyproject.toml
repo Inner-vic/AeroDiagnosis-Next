@@ -17,6 +17,9 @@ dependencies = [
   "pypdf>=6.10,<7",
   "pydantic>=2.13.5,<3",
   "uvicorn>=0.34,<1",
+  "python-docx>=1.2.0",
+  "openpyxl>=3.1.5",
+  "beautifulsoup4>=4.15.0",
 ]
 
 [project.optional-dependencies]
@@ -83,5 +86,5 @@ packages = ["aerodiagnosis"]
 mypy_path = "src"
 
 [[tool.mypy.overrides]]
-module = ["chromadb", "neo4j"]
+module = ["chromadb", "neo4j", "openpyxl", "docx", "bs4"]
 ignore_missing_imports = true

@@ -48,10 +48,20 @@ def test_csv_header_only_and_invalid_csv_have_explicit_results() -> None:
 def test_parser_registry_only_advertises_verified_formats() -> None:
     registry = ParserRegistry()
 
-    assert registry.supported_extensions == (".csv", ".markdown", ".md", ".txt")
+    assert registry.supported_extensions == (
+        ".csv",
+        ".docx",
+        ".htm",
+        ".html",
+        ".markdown",
+        ".md",
+        ".pdf",
+        ".txt",
+        ".xlsx",
+    )
     assert registry.parse("notes.MD", b"fault isolation").media_type == "text/plain"
     with pytest.raises(DocumentParseError, match="unsupported document extension"):
-        registry.parse("manual.pdf", b"not a PDF")
+        registry.parse("manual.xyz", b"not a supported document")
 
 
 @pytest.mark.parametrize(
