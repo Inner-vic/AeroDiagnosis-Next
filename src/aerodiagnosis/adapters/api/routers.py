@@ -33,6 +33,7 @@ from aerodiagnosis.ports import LanguageModelError
 from aerodiagnosis.version import __version__
 
 from .dependencies import get_application, require_operator
+from .rate_limit import require_diagnosis_rate_limit
 from .schemas import (
     CaseResponse,
     CaseVerificationRequest,
@@ -60,6 +61,7 @@ from .schemas import (
 router = APIRouter(prefix="/api")
 ApplicationDependency = Annotated[Application, Depends(get_application)]
 OperatorDependency = Annotated[Application, Depends(require_operator)]
+DiagnosisRateLimitDependency = Annotated[None, Depends(require_diagnosis_rate_limit)]
 
 
 def _external_sync_status(settings: RuntimeSettings) -> dict[str, Any]:
@@ -175,6 +177,7 @@ def get_root_cause_session(
 def start_root_cause_session(
     request: StartRootCauseRequest,
     application: ApplicationDependency,
+    _rate_limit: DiagnosisRateLimitDependency,
 ) -> RootCauseSession:
     model = _provider_model(request.provider, application)
     try:
@@ -201,6 +204,7 @@ def observe_root_cause_session(
     rca_id: str,
     request: RootCauseObservationRequest,
     application: ApplicationDependency,
+    _rate_limit: DiagnosisRateLimitDependency,
 ) -> RootCauseSession:
     model = _provider_model(request.provider, application)
     try:
@@ -230,6 +234,7 @@ def finalize_root_cause_session(
     rca_id: str,
     request: FinalizeRootCauseRequest,
     application: ApplicationDependency,
+    _rate_limit: DiagnosisRateLimitDependency,
 ) -> RootCauseSession:
     model = _provider_model(request.provider, application)
     try:
@@ -434,6 +439,7 @@ def list_run_operations(
 def run_diagnosis(
     request: RunDiagnosisRequest,
     application: ApplicationDependency,
+    _rate_limit: DiagnosisRateLimitDependency,
 ) -> DiagnosisReport:
     model = _provider_model(request.provider, application)
     command = DiagnosisCommand.model_validate(request.model_dump(exclude={"provider"}))
@@ -449,6 +455,7 @@ def run_diagnosis(
 async def stream_diagnosis(
     request: RunDiagnosisRequest,
     application: ApplicationDependency,
+    _rate_limit: DiagnosisRateLimitDependency,
 ) -> StreamingResponse:
     model = _provider_model(request.provider, application)
     command = DiagnosisCommand.model_validate(request.model_dump(exclude={"provider"}))

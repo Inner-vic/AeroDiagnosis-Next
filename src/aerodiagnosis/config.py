@@ -62,6 +62,8 @@ class RuntimeSettings(BaseModel):
     api_host: str = "127.0.0.1"
     api_port: int = Field(default=8080, ge=1, le=65535)
     operator_token: str | None = None
+    rate_limit_enabled: bool = True
+    rate_limit_diagnosis_per_minute: int = Field(default=30, ge=1, le=600)
     default_llm_base_url: str | None = None
     default_llm_model: str | None = None
     default_llm_api_key: SecretStr | None = None
@@ -154,6 +156,11 @@ class RuntimeSettings(BaseModel):
             api_host=value("AERODIAGNOSIS_API_HOST", "127.0.0.1"),
             api_port=int(value("AERODIAGNOSIS_API_PORT", "8080")),
             operator_token=token,
+            rate_limit_enabled=value("AERODIAGNOSIS_RATE_LIMIT_ENABLED", "true").lower()
+            in {"1", "true", "yes", "on"},
+            rate_limit_diagnosis_per_minute=int(
+                value("AERODIAGNOSIS_RATE_LIMIT_DIAGNOSIS_PER_MINUTE", "30")
+            ),
             default_llm_base_url=value("AERODIAGNOSIS_LLM_BASE_URL") or None,
             default_llm_model=value("AERODIAGNOSIS_LLM_MODEL") or None,
             default_llm_api_key=SecretStr(llm_key) if llm_key else None,

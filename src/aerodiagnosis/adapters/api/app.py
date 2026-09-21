@@ -15,6 +15,7 @@ from aerodiagnosis.bootstrap import bootstrap
 from aerodiagnosis.config import RuntimeSettings
 from aerodiagnosis.version import __version__
 
+from .rate_limit import RateLimiter
 from .routers import router
 
 
@@ -24,6 +25,13 @@ def create_app(settings: RuntimeSettings | None = None) -> FastAPI:
     @asynccontextmanager
     async def lifespan(app: FastAPI) -> AsyncIterator[None]:
         app.state.application = bootstrap(configured)
+        app.state.rate_limiter = (
+            RateLimiter(
+                requests_per_minute=configured.rate_limit_diagnosis_per_minute
+            )
+            if configured.rate_limit_enabled
+            else None
+        )
         yield
 
     application = FastAPI(
