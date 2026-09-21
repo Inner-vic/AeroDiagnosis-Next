@@ -221,6 +221,7 @@
       <nav class="inspector-tabs" aria-label="检查面板">
         <button class="active" data-inspector-tab="trace">轨迹</button>
         <button data-inspector-tab="evidence">证据</button>
+        <button data-inspector-tab="quality">评测</button>
         <button data-inspector-tab="boundary">边界</button>
       </nav>
       <div class="inspector-body">
@@ -230,6 +231,9 @@
         </section>
         <section class="tab-panel" data-inspector-panel="evidence">
           <div id="agentEvidence"><div class="empty-panel">尚无已绑定证据。</div></div>
+        </section>
+        <section class="tab-panel" data-inspector-panel="quality">
+          <div id="generationQuality"><div class="empty-panel">诊断完成后可查看生成质量评测。</div></div>
         </section>
         <section class="tab-panel" data-inspector-panel="boundary">
           <div id="capabilityBoundaries"><div class="empty-panel">正在读取系统能力边界。</div></div>
