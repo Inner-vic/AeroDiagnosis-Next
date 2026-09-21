@@ -55,6 +55,16 @@ class FakeLanguageModel:
                 "tools": ["search_manual_chunks"],
                 "rationale": "Change the query after insufficient evidence.",
             }
+        if task == "rerank_evidence":
+            return {
+                "ordered_keys": [
+                    candidate["key"]
+                    for candidate in sorted(
+                        payload["candidates"],
+                        key=lambda item: (-item["score"], item["key"]),
+                    )
+                ]
+            }
         if task == "generate_diagnosis":
             evidence = payload["evidence"]
             return {
@@ -166,7 +176,12 @@ def test_workflow_uses_llm_planner_generator_verifier_and_persists_memory(
 
     assert report.status is DiagnosisReportStatus.EVIDENCE_READY
     assert report.claims[0].verification_method == "llm_verifier@1"
-    assert model.calls == ["plan_evidence", "generate_diagnosis", "verify_diagnosis"]
+    assert model.calls == [
+        "plan_evidence",
+        "rerank_evidence",
+        "generate_diagnosis",
+        "verify_diagnosis",
+    ]
     assert resumed == report
     assert [message.role for message in messages] == ["user", "assistant"]
 

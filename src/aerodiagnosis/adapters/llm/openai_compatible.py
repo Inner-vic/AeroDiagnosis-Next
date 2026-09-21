@@ -60,6 +60,11 @@ _TASK_INSTRUCTIONS = {
         "Use only supplied evidence IDs and claims. Flag unsupported claims or missing relevant "
         "evidence. Do not add keys."
     ),
+    "rerank_evidence": (
+        "Reorder the supplied evidence candidates by relevance to the query. Return exactly: "
+        '{"ordered_keys":["key1","key2"]}. '
+        "Use every candidate key exactly once and never invent a key. Do not add keys."
+    ),
 }
 
 

@@ -35,6 +35,7 @@ from aerodiagnosis.application.use_cases import (
 from aerodiagnosis.config import RuntimeSettings
 from aerodiagnosis.ingestion import DocumentIngestionService, DocumentManifest
 from aerodiagnosis.ports import LanguageModel
+from aerodiagnosis.retrieval.reranker import LLMReranker
 from aerodiagnosis.tools import DiagnosticToolset
 
 
@@ -90,7 +91,12 @@ def bootstrap(settings: RuntimeSettings | None = None) -> Application:
         event_sink: AgentEventSink | None = None,
     ) -> DiagnosticWorkflow:
         return DiagnosticWorkflow(
-            tools=tools,
+            tools=DiagnosticToolset(
+                vector_store=vector_store,
+                graph_store=graph_store,
+                case_store=case_store,
+                reranker=LLMReranker(model),
+            ),
             language_model=model,
             active_versions=manifest.active_version_ids,
             checkpoints=checkpoints,

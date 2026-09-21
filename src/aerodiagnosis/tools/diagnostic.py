@@ -87,6 +87,7 @@ class DiagnosticToolset:
             self._cases.backend_name,
             HYBRID_ALGORITHM,
             "range_check@1",
+            self._reranker.identity,
         )
 
     def execute(
