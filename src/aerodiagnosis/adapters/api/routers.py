@@ -460,15 +460,7 @@ async def stream_diagnosis(
 
     def run() -> None:
         try:
-            report = application.run_diagnosis.start_streaming(command, model, emit)
-            emit(
-                "report_ready",
-                {
-                    "run_id": report.run_id,
-                    "status": report.status.value,
-                    "summary": report.summary,
-                },
-            )
+            application.run_diagnosis.start_streaming(command, model, emit)
         except Exception as exc:
             emit("run_failed", {"error": f"{type(exc).__name__}: {exc}"})
         finally:

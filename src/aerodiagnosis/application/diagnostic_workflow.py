@@ -588,6 +588,7 @@ class DiagnosticWorkflow:
                 "run_id": report.run_id,
                 "status": report.status.value,
                 "summary": report.summary,
+                "report": report.model_dump(mode="json"),
             },
         )
         return report
@@ -624,6 +625,7 @@ class DiagnosticWorkflow:
                 "run_id": report.run_id,
                 "status": report.status.value,
                 "summary": report.summary,
+                "report": report.model_dump(mode="json"),
             },
         )
         return report
