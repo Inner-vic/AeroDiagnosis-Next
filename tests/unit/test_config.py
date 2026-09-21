@@ -36,6 +36,31 @@ def test_settings_reject_non_loopback_binding(tmp_path: Path) -> None:
         )
 
 
+def test_settings_default_to_local_first_external_store_mode(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    monkeypatch.delenv("AERODIAGNOSIS_EXTERNAL_STORE_MODE", raising=False)
+    settings = RuntimeSettings.from_env(tmp_path)
+    assert settings.external_store_mode == "local-first"
+
+
+def test_settings_read_external_primary_store_mode(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    monkeypatch.setenv("AERODIAGNOSIS_EXTERNAL_STORE_MODE", "external-primary")
+    settings = RuntimeSettings.from_env(tmp_path)
+    assert settings.external_store_mode == "external-primary"
+
+
+def test_settings_reject_unknown_external_store_mode(tmp_path: Path) -> None:
+    with pytest.raises(ValidationError, match="external_store_mode"):
+        RuntimeSettings(
+            runtime_dir=tmp_path,
+            database_path=tmp_path / "runtime.db",
+            external_store_mode="not-a-mode",
+        )
+
+
 def test_prepare_creates_runtime_and_database_parent(tmp_path: Path) -> None:
     settings = RuntimeSettings(
         runtime_dir=tmp_path / "runtime",

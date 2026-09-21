@@ -108,6 +108,21 @@ GitHub Actions 会在 Linux runner 中校验两种 Compose、构建镜像、分�
 `main` 分支成功后发布 `ghcr.io/inner-vic/aerodiagnosis-next:latest` 和提交 SHA 标签。因此本机
 没有容器权限时，仍可获得真实 Linux 容器构建证据。
 
+### 2.1.1 外部库主库生产模式
+
+需要把 Neo4j 和 ChromaDB 作为图与向量主库、由应用直接读写时，使用生产叠加文件：
+
+```powershell
+$env:NEO4J_PASSWORD = "replace-with-a-strong-password"
+docker compose -f compose.yaml -f compose.production.yaml up --build -d
+docker compose -f compose.yaml -f compose.production.yaml ps
+```
+
+该模式设置 `AERODIAGNOSIS_EXTERNAL_STORE_MODE=external-primary`，不启动
+`aerodiagnosis-sync`。SQLite 只保留文档清单、版本可见性、案例、会话和 checkpoint 元数据；
+知识图谱直接写入 Neo4j，向量块直接写入 ChromaDB。服务端状态接口会将向量后端报告为
+`chroma_http_hashing`、图后端报告为 `neo4j`，不再使用 `_cdc` 后缀。
+
 ### 2.2 迁移期 v2 Compose
 
 `code/docker-compose.yml` 仅用于复现旧 v2 原型及其 Chroma、Neo4j 数据，不是默认部署入口：

@@ -32,6 +32,8 @@ def test_composition_root_drives_ingestion_search_and_status(tmp_path: Path) -> 
     assert status.document_count == 1
     assert status.vector_chunks == 1
     assert status.graph_backend == "sqlite_graph"
+    assert status.graph_nodes >= 1
+    assert status.graph_edges >= 1
     assert application.browse_knowledge.execute()[0].active_version_id == ingested.version_id
 
 
@@ -74,8 +76,8 @@ def test_application_browses_active_graph_and_case_catalog(tmp_path: Path) -> No
     cases = application.browse_cases.execute(query="compressor")
     retrieval = application.hybrid_retrieval.execute("Compressor stall EGT", top_k=3)
 
-    assert {node.node_id for node in overview.nodes} == {"stall", "egt"}
-    assert overview.edges[0].relation == "CAUSES"
+    assert {"stall", "egt"} <= {node.node_id for node in overview.nodes}
+    assert any(edge.relation == "CAUSES" for edge in overview.edges)
     assert cases[0].case_id == "case-1"
     assert len(retrieval.hits) == 3
     assert all(route.included_count == 1 for route in retrieval.routes)

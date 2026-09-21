@@ -25,17 +25,21 @@ from aerodiagnosis.ports import (
     GraphNode,
     GraphStore,
     LanguageModel,
+    OperationLedger,
+    OperationRecord,
     VectorMatch,
     VectorStore,
 )
 from aerodiagnosis.tools import DiagnosticToolset
 
+from .agent_events import AgentEventSink
 from .diagnostic_workflow import DiagnosticWorkflow
 
 
 @dataclass(frozen=True, slots=True)
 class RuntimeStatus:
     vector_backend: str
+    vector_embedding_identity: str
     vector_chunks: int
     graph_backend: str
     graph_nodes: int
@@ -121,15 +125,25 @@ class BrowseCases:
 class RunDiagnosis:
     def __init__(
         self,
-        workflow_factory: Callable[[LanguageModel], DiagnosticWorkflow],
+        workflow_factory: Callable[
+            [LanguageModel, AgentEventSink | None], DiagnosticWorkflow
+        ],
     ) -> None:
         self._workflow_factory = workflow_factory
 
     def start(self, command: DiagnosisCommand, language_model: LanguageModel) -> DiagnosisReport:
-        return self._workflow_factory(language_model).start(command)
+        return self._workflow_factory(language_model, None).start(command)
+
+    def start_streaming(
+        self,
+        command: DiagnosisCommand,
+        language_model: LanguageModel,
+        event_sink: AgentEventSink,
+    ) -> DiagnosisReport:
+        return self._workflow_factory(language_model, event_sink).start(command)
 
     def resume(self, run_id: str, language_model: LanguageModel) -> DiagnosisReport:
-        return self._workflow_factory(language_model).resume(run_id)
+        return self._workflow_factory(language_model, None).resume(run_id)
 
 
 class QueryDiagnosticTool:
@@ -179,6 +193,14 @@ class ConversationSessions:
 
     def delete(self, session_id: str) -> bool:
         return self._memory.delete_session(session_id)
+
+
+class BrowseOperations:
+    def __init__(self, ledger: OperationLedger) -> None:
+        self._ledger = ledger
+
+    def execute(self, run_id: str) -> tuple[OperationRecord, ...]:
+        return self._ledger.list_run(run_id)
 
 
 class SearchEvidence:
@@ -263,6 +285,7 @@ class GetRuntimeStatus:
         sessions, messages = self._memory.counts()
         return RuntimeStatus(
             vector_backend=self._vector_store.backend_name,
+            vector_embedding_identity=self._vector_store.embedding_identity,
             vector_chunks=self._vector_store.count(),
             graph_backend=self._graph_store.backend_name,
             graph_nodes=nodes,

@@ -73,7 +73,7 @@ def test_api_uses_per_request_provider_without_persisting_credential(
         ),
     )
 
-    report = run_diagnosis(request, application)
+    report = run_diagnosis(request, application, None)
 
     assert report.status == "evidence_ready"
     assert b"credential-that-must-never-be-persisted" not in settings.database_path.read_bytes()

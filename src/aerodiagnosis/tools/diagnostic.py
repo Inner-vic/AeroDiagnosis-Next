@@ -6,9 +6,10 @@ import hashlib
 import json
 import re
 import unicodedata
-from collections.abc import Mapping
+from collections.abc import Callable, Mapping
 from typing import Any
 
+from aerodiagnosis.application.fault_graph import FaultGraphPath, FaultGraphReasoner
 from aerodiagnosis.domain import (
     DiagnosisCommand,
     EvidenceItem,
@@ -21,6 +22,7 @@ from aerodiagnosis.domain import (
     make_evidence_id,
 )
 from aerodiagnosis.ports import CaseStore, GraphNode, GraphStore, VectorMatch, VectorStore
+from aerodiagnosis.retrieval.reranker import LexicalReranker, RankedText, Reranker
 
 MANUAL_TOOL = "search_manual_chunks"
 GRAPH_TOOL = "traverse_fault_graph"
@@ -28,6 +30,10 @@ CASE_TOOL = "find_similar_cases"
 PARAMETER_TOOL = "analyze_gas_path_parameters"
 HYBRID_TOOL = "hybrid_retrieve_evidence"
 HYBRID_ALGORITHM = "weighted_rrf@2"
+
+ExternalToolHandler = Callable[
+    [DiagnosisCommand, str, frozenset[str]], tuple[EvidenceItem, ...]
+]
 
 _ROUTE_WEIGHTS = {"manual": 1.0, "graph": 0.88, "case": 0.94}
 _RRF_K = 60
@@ -52,19 +58,36 @@ class DiagnosticToolset:
         vector_store: VectorStore,
         graph_store: GraphStore,
         case_store: CaseStore,
+        external_tools: Mapping[str, ExternalToolHandler] | None = None,
+        reranker: Reranker | None = None,
     ) -> None:
         self._vector = vector_store
         self._graph = graph_store
         self._cases = case_store
+        self._external_tools = dict(external_tools or {})
+        self._reranker = reranker or LexicalReranker()
+
+    @property
+    def available_tools(self) -> tuple[str, ...]:
+        return (
+            HYBRID_TOOL,
+            MANUAL_TOOL,
+            GRAPH_TOOL,
+            CASE_TOOL,
+            PARAMETER_TOOL,
+            *sorted(self._external_tools),
+        )
 
     @property
     def backend_identity(self) -> tuple[str, ...]:
         return (
             self._vector.backend_name,
+            self._vector.embedding_identity,
             self._graph.backend_name,
             self._cases.backend_name,
             HYBRID_ALGORITHM,
             "range_check@1",
+            self._reranker.identity,
         )
 
     def execute(
@@ -75,6 +98,12 @@ class DiagnosticToolset:
         query: str,
         active_version_ids: frozenset[str],
     ) -> tuple[EvidenceItem, ...]:
+        if tool_name in self._external_tools:
+            return self._external_tools[tool_name](
+                command,
+                query,
+                active_version_ids,
+            )
         if tool_name == MANUAL_TOOL:
             return self._manual(command, query, active_version_ids)
         if tool_name == GRAPH_TOOL:
@@ -258,6 +287,22 @@ class DiagnosticToolset:
             top_k=command.top_k,
             active_version_ids=active_version_ids,
         )
+        match_by_id = {match.chunk.chunk_id: match for match in matches}
+        reranked = self._reranker.rerank(
+            query,
+            [
+                RankedText(
+                    key=match.chunk.chunk_id,
+                    text=match.chunk.content,
+                    score=match.score,
+                )
+                for match in matches
+            ],
+        )
+        matches = [
+            VectorMatch(chunk=match_by_id[item.key].chunk, score=item.score)
+            for item in reranked
+        ]
         evidence = []
         for match in matches:
             item = self._manual_item(match, command.min_relevance)
@@ -308,6 +353,21 @@ class DiagnosticToolset:
         query: str,
         active_version_ids: frozenset[str],
     ) -> tuple[EvidenceItem, ...]:
+        causal_paths = [
+            path
+            for path in FaultGraphReasoner(self._graph).reason(
+                query,
+                active_version_ids=active_version_ids,
+                limit=command.top_k,
+            )
+            if path.causes or path.solutions
+        ]
+        if causal_paths:
+            return tuple(
+                self._causal_path_item(path)
+                for path in causal_paths[: command.top_k]
+            )
+
         nodes: dict[str, GraphNode] = {}
         for keyword in _keywords(query):
             for node in self._graph.search_nodes(keyword, limit=command.top_k):
@@ -361,6 +421,44 @@ class DiagnosticToolset:
                 )
             )
         return tuple(evidence)
+
+    @staticmethod
+    def _causal_path_item(path: FaultGraphPath) -> EvidenceItem:
+        parts = [path.symptom.name]
+        if path.component is not None:
+            parts.append(f"{path.component.name} has symptom")
+        for cause in path.causes:
+            parts.append(cause.name)
+        for solution in path.solutions:
+            parts.append(solution.name)
+        excerpt = " -> ".join(parts)[:600]
+        source_ref = path.symptom.node_id
+        locator = {
+            "kind": "causal_graph_path",
+            "coordinates": {
+                "symptom": path.symptom.node_id,
+                "component": path.component.node_id if path.component else None,
+                "equipment": path.equipment.node_id if path.equipment else None,
+                "causes": [cause.node_id for cause in path.causes],
+                "solutions": [solution.node_id for solution in path.solutions],
+                "hops": path.hops,
+            },
+        }
+        return EvidenceItem(
+            evidence_id=make_evidence_id(
+                SourceKind.KNOWLEDGE_GRAPH_PATH,
+                source_ref,
+                locator,
+            ),
+            source_kind=SourceKind.KNOWLEDGE_GRAPH_PATH,
+            source_ref=source_ref,
+            document_id=path.symptom.source_ref,
+            version_id=path.symptom.version_id,
+            content_hash=_hash(excerpt),
+            excerpt=excerpt,
+            locator=locator,
+            score=path.score,
+        )
 
     def _case_evidence(
         self,

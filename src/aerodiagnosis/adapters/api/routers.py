@@ -2,19 +2,24 @@
 
 from __future__ import annotations
 
+import asyncio
+import json
 from dataclasses import asdict
 from typing import Annotated, Any
 
 from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi.responses import StreamingResponse
 
 from aerodiagnosis.adapters.llm import OpenAICompatibleLanguageModel
 from aerodiagnosis.adapters.persistence import ExternalStoreOutbox
 from aerodiagnosis.adapters.persistence.sqlite import LATEST_SCHEMA_VERSION
+from aerodiagnosis.application.capability_boundary import capability_boundaries
 from aerodiagnosis.application.diagnostic_workflow import (
     DiagnosisRunNotFound,
     IncompatibleWorkflowError,
 )
 from aerodiagnosis.bootstrap import Application
+from aerodiagnosis.config import RuntimeSettings
 from aerodiagnosis.domain import (
     DiagnosisCommand,
     DiagnosisReport,
@@ -23,21 +28,30 @@ from aerodiagnosis.domain import (
     RootCauseSession,
 )
 from aerodiagnosis.evaluation import evaluate_retrieval
+from aerodiagnosis.generation_quality import (
+    evaluate_generation_quality,
+    judge_generation_quality,
+)
 from aerodiagnosis.ingestion import DocumentParseError, IngestionError
 from aerodiagnosis.ports import LanguageModelError
 from aerodiagnosis.version import __version__
 
 from .dependencies import get_application, require_operator
+from .rate_limit import require_diagnosis_rate_limit
 from .schemas import (
     CaseResponse,
+    CaseVerificationRequest,
     ConversationMessageResponse,
     DocumentCatalogResponse,
     EvidenceHit,
     FinalizeRootCauseRequest,
+    GenerationQualityRequest,
+    GenerationQualityResponse,
     GraphOverviewResponse,
     HybridRetrievalRequest,
     IngestDocumentRequest,
     IngestDocumentResponse,
+    OperationRecordResponse,
     ProviderConfiguration,
     RegisterModelPluginRequest,
     ResumeDiagnosisRequest,
@@ -53,6 +67,17 @@ from .schemas import (
 router = APIRouter(prefix="/api")
 ApplicationDependency = Annotated[Application, Depends(get_application)]
 OperatorDependency = Annotated[Application, Depends(require_operator)]
+DiagnosisRateLimitDependency = Annotated[None, Depends(require_diagnosis_rate_limit)]
+
+
+def _external_sync_status(settings: RuntimeSettings) -> dict[str, Any]:
+    if settings.external_store_mode == "external-primary":
+        return {
+            "mode": "direct_external_primary",
+            "events": {"applied": 0, "pending": 0, "dead": 0},
+        }
+    outbox = ExternalStoreOutbox(settings.database_path).counts()
+    return {"mode": "transactional_outbox", "events": outbox}
 
 
 @router.get("/health", tags=["system"])
@@ -63,7 +88,7 @@ def health() -> dict[str, str]:
 @router.get("/system", tags=["system"])
 def system(application: ApplicationDependency) -> dict[str, Any]:
     state = application.get_runtime_status.execute()
-    outbox = ExternalStoreOutbox(application.settings.database_path).counts()
+    external_sync = _external_sync_status(application.settings)
     return {
         "version": __version__,
         "mode": "application",
@@ -74,7 +99,11 @@ def system(application: ApplicationDependency) -> dict[str, Any]:
             "model": application.settings.default_llm_model,
         },
         "database_schema": LATEST_SCHEMA_VERSION,
-        "vector": {"backend": state.vector_backend, "chunks": state.vector_chunks},
+        "vector": {
+            "backend": state.vector_backend,
+            "embedding": state.vector_embedding_identity,
+            "chunks": state.vector_chunks,
+        },
         "graph": {
             "backend": state.graph_backend,
             "nodes": state.graph_nodes,
@@ -89,10 +118,10 @@ def system(application: ApplicationDependency) -> dict[str, Any]:
             "sessions": state.session_count,
             "messages": state.message_count,
         },
-        "external_sync": {
-            "mode": "transactional_outbox",
-            "events": outbox,
-        },
+        "external_sync": external_sync,
+        "capability_boundaries": [
+            asdict(boundary) for boundary in capability_boundaries()
+        ],
         "knowledge_enhancement": {
             "positioning": "model_result_plus_knowledge_root_cause_support",
             "models": len(application.knowledge_enhanced_diagnosis.list_models()),
@@ -154,6 +183,7 @@ def get_root_cause_session(
 def start_root_cause_session(
     request: StartRootCauseRequest,
     application: ApplicationDependency,
+    _rate_limit: DiagnosisRateLimitDependency,
 ) -> RootCauseSession:
     model = _provider_model(request.provider, application)
     try:
@@ -180,6 +210,7 @@ def observe_root_cause_session(
     rca_id: str,
     request: RootCauseObservationRequest,
     application: ApplicationDependency,
+    _rate_limit: DiagnosisRateLimitDependency,
 ) -> RootCauseSession:
     model = _provider_model(request.provider, application)
     try:
@@ -209,6 +240,7 @@ def finalize_root_cause_session(
     rca_id: str,
     request: FinalizeRootCauseRequest,
     application: ApplicationDependency,
+    _rate_limit: DiagnosisRateLimitDependency,
 ) -> RootCauseSession:
     model = _provider_model(request.provider, application)
     try:
@@ -321,6 +353,30 @@ def evaluate_hybrid_retrieval(
         ) from exc
 
 
+@router.post(
+    "/evaluations/generation",
+    response_model=GenerationQualityResponse,
+    tags=["evaluation"],
+)
+def evaluate_generation_quality_endpoint(
+    request: GenerationQualityRequest,
+    application: ApplicationDependency,
+    _rate_limit: DiagnosisRateLimitDependency,
+) -> GenerationQualityResponse:
+    try:
+        model = _provider_model(request.provider, application)
+        relevant = set(request.relevant_evidence_ids)
+        metrics = evaluate_generation_quality(request.report, relevant)
+        judge = judge_generation_quality(request.report, model, relevant)
+        return GenerationQualityResponse(metrics=metrics, judge=judge)
+    except LanguageModelError as exc:
+        raise HTTPException(status_code=status.HTTP_502_BAD_GATEWAY, detail=str(exc)) from exc
+    except ValueError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail=str(exc)
+        ) from exc
+
+
 @router.get(
     "/documents",
     response_model=list[DocumentCatalogResponse],
@@ -366,10 +422,54 @@ def browse_cases(
     ]
 
 
+@router.post(
+    "/cases/{case_id}/verification",
+    response_model=CaseResponse,
+    tags=["knowledge"],
+)
+def verify_case(
+    case_id: str,
+    request: CaseVerificationRequest,
+    application: ApplicationDependency,
+) -> CaseResponse:
+    try:
+        updated = application.record_case_verification.execute(
+            case_id=case_id,
+            outcome=request.outcome,
+            actual_cause=request.actual_cause,
+            actual_fault_ids=request.actual_fault_ids,
+            notes=request.notes,
+        )
+    except KeyError as exc:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=str(exc)) from exc
+    except ValueError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail=str(exc),
+        ) from exc
+    return CaseResponse.model_validate(asdict(updated))
+
+
+@router.get(
+    "/runs/{run_id}/operations",
+    response_model=list[OperationRecordResponse],
+    tags=["audit"],
+)
+def list_run_operations(
+    run_id: str,
+    application: ApplicationDependency,
+) -> list[OperationRecordResponse]:
+    return [
+        OperationRecordResponse.model_validate(asdict(operation))
+        for operation in application.browse_operations.execute(run_id)
+    ]
+
+
 @router.post("/diagnoses", response_model=DiagnosisReport, tags=["diagnosis"])
 def run_diagnosis(
     request: RunDiagnosisRequest,
     application: ApplicationDependency,
+    _rate_limit: DiagnosisRateLimitDependency,
 ) -> DiagnosisReport:
     model = _provider_model(request.provider, application)
     command = DiagnosisCommand.model_validate(request.model_dump(exclude={"provider"}))
@@ -379,6 +479,42 @@ def run_diagnosis(
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=str(exc)) from exc
     except LanguageModelError as exc:
         raise HTTPException(status_code=status.HTTP_502_BAD_GATEWAY, detail=str(exc)) from exc
+
+
+@router.post("/diagnoses/stream", tags=["diagnosis"])
+async def stream_diagnosis(
+    request: RunDiagnosisRequest,
+    application: ApplicationDependency,
+    _rate_limit: DiagnosisRateLimitDependency,
+) -> StreamingResponse:
+    model = _provider_model(request.provider, application)
+    command = DiagnosisCommand.model_validate(request.model_dump(exclude={"provider"}))
+    queue: asyncio.Queue[tuple[str, dict[str, Any]] | None] = asyncio.Queue()
+    loop = asyncio.get_running_loop()
+
+    def emit(event: str, payload: dict[str, Any]) -> None:
+        loop.call_soon_threadsafe(queue.put_nowait, (event, payload))
+
+    def run() -> None:
+        try:
+            application.run_diagnosis.start_streaming(command, model, emit)
+        except Exception as exc:
+            emit("run_failed", {"error": f"{type(exc).__name__}: {exc}"})
+        finally:
+            loop.call_soon_threadsafe(queue.put_nowait, None)
+
+    task = asyncio.create_task(asyncio.to_thread(run))
+
+    async def event_stream() -> Any:
+        while True:
+            item = await queue.get()
+            if item is None:
+                break
+            event, payload = item
+            yield f"event: {event}\ndata: {json.dumps(payload, ensure_ascii=False)}\n\n"
+        await task
+
+    return StreamingResponse(event_stream(), media_type="text/event-stream")
 
 
 @router.post(

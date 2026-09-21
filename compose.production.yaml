@@ -1,0 +1,52 @@
+services:
+  app:
+    environment:
+      AERODIAGNOSIS_VECTOR_BACKEND: chroma_http
+      AERODIAGNOSIS_GRAPH_BACKEND: neo4j
+      AERODIAGNOSIS_EMBEDDING_BACKEND: chroma_default
+      AERODIAGNOSIS_EXTERNAL_STORE_MODE: external-primary
+      AERODIAGNOSIS_CHROMA_HOST: chromadb
+      AERODIAGNOSIS_CHROMA_PORT: 8000
+      AERODIAGNOSIS_CHROMA_COLLECTION: aerodiagnosis_chunks_semantic_v1
+      AERODIAGNOSIS_NEO4J_URI: bolt://neo4j:7687
+      AERODIAGNOSIS_NEO4J_USER: neo4j
+      AERODIAGNOSIS_NEO4J_PASSWORD: ${NEO4J_PASSWORD:?Set NEO4J_PASSWORD}
+      AERODIAGNOSIS_NEO4J_DATABASE: neo4j
+    depends_on:
+      chromadb:
+        condition: service_started
+      neo4j:
+        condition: service_healthy
+
+  chromadb:
+    image: ${AERODIAGNOSIS_CHROMA_IMAGE:-docker.m.daocloud.io/chromadb/chroma:1.5.9}
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:${CHROMA_PORT:-8000}:8000"
+    environment:
+      ANONYMIZED_TELEMETRY: "false"
+    volumes:
+      - chroma_data:/data
+
+  neo4j:
+    image: ${AERODIAGNOSIS_NEO4J_IMAGE:-docker.1ms.run/library/neo4j:5.26.30-community}
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:${NEO4J_HTTP_PORT:-7474}:7474"
+      - "127.0.0.1:${NEO4J_BOLT_PORT:-7687}:7687"
+    environment:
+      NEO4J_AUTH: neo4j/${NEO4J_PASSWORD:?Set NEO4J_PASSWORD}
+    volumes:
+      - neo4j_data:/data
+    healthcheck:
+      test: ["CMD", "neo4j", "status"]
+      interval: 10s
+      timeout: 5s
+      start_period: 30s
+      retries: 10
+
+volumes:
+  chroma_data:
+    name: aerodiagnosis-chroma
+  neo4j_data:
+    name: aerodiagnosis-neo4j

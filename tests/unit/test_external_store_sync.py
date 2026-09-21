@@ -23,6 +23,10 @@ class MemoryVectorReplica:
     def backend_name(self) -> str:
         return "memory-vector"
 
+    @property
+    def embedding_identity(self) -> str:
+        return "memory-embedding"
+
     def upsert(self, chunks: Sequence[VectorChunk]) -> int:
         if self.fail:
             raise RuntimeError("replica unavailable")

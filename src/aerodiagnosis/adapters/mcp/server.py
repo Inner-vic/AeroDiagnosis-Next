@@ -86,6 +86,7 @@ def create_server(application: Application | None = None) -> MCPServer[Any]:
         return {
             "schema_version": "1.0",
             "vector_backend": status.vector_backend,
+            "vector_embedding": status.vector_embedding_identity,
             "vector_chunks": status.vector_chunks,
             "graph_backend": status.graph_backend,
             "graph_nodes": status.graph_nodes,

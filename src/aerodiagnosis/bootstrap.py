@@ -9,10 +9,13 @@ from aerodiagnosis.adapters.persistence import (
     SQLiteCheckpointStore,
     SQLiteConversationMemory,
     SQLiteKnowledgeEnhancementStore,
+    SQLiteOperationLedger,
     create_graph_store,
     create_vector_store,
 )
 from aerodiagnosis.adapters.persistence.sqlite import SQLiteDatabase
+from aerodiagnosis.application.agent_events import AgentEventSink
+from aerodiagnosis.application.case_verification import RecordCaseVerification
 from aerodiagnosis.application.demo_content import seed_demo_content
 from aerodiagnosis.application.diagnostic_workflow import DiagnosticWorkflow
 from aerodiagnosis.application.knowledge_enhancement import KnowledgeEnhancedDiagnosis
@@ -20,6 +23,7 @@ from aerodiagnosis.application.use_cases import (
     BrowseCases,
     BrowseGraph,
     BrowseKnowledge,
+    BrowseOperations,
     ConversationSessions,
     GetRuntimeStatus,
     HybridRetrieval,
@@ -31,6 +35,7 @@ from aerodiagnosis.application.use_cases import (
 from aerodiagnosis.config import RuntimeSettings
 from aerodiagnosis.ingestion import DocumentIngestionService, DocumentManifest
 from aerodiagnosis.ports import LanguageModel
+from aerodiagnosis.retrieval.reranker import LLMReranker
 from aerodiagnosis.tools import DiagnosticToolset
 
 
@@ -45,6 +50,8 @@ class Application:
     browse_cases: BrowseCases
     query_diagnostic_tool: QueryDiagnosticTool
     run_diagnosis: RunDiagnosis
+    record_case_verification: RecordCaseVerification
+    browse_operations: BrowseOperations
     conversation_sessions: ConversationSessions
     search_evidence: SearchEvidence
     hybrid_retrieval: HybridRetrieval
@@ -63,28 +70,44 @@ def bootstrap(settings: RuntimeSettings | None = None) -> Application:
     case_store = SQLiteCaseStore(configured.database_path)
     checkpoints = SQLiteCheckpointStore(configured.database_path)
     memory = SQLiteConversationMemory(configured.database_path)
+    operation_ledger = SQLiteOperationLedger(configured.database_path)
     knowledge_enhancement_store = SQLiteKnowledgeEnhancementStore(configured.database_path)
-    ingestion = DocumentIngestionService(manifest, vector_store)
+    seed_ingestion = DocumentIngestionService(manifest, vector_store)
     if configured.seed_demo_content:
         seed_demo_content(
-            ingestion=ingestion,
+            ingestion=seed_ingestion,
             manifest=manifest,
             graph_store=graph_store,
             case_store=case_store,
         )
+    ingestion = DocumentIngestionService(
+        manifest,
+        vector_store,
+        graph_store=graph_store,
+    )
     tools = DiagnosticToolset(
         vector_store=vector_store,
         graph_store=graph_store,
         case_store=case_store,
     )
 
-    def workflow_factory(model: LanguageModel) -> DiagnosticWorkflow:
+    def workflow_factory(
+        model: LanguageModel,
+        event_sink: AgentEventSink | None = None,
+    ) -> DiagnosticWorkflow:
         return DiagnosticWorkflow(
-            tools=tools,
+            tools=DiagnosticToolset(
+                vector_store=vector_store,
+                graph_store=graph_store,
+                case_store=case_store,
+                reranker=LLMReranker(model),
+            ),
             language_model=model,
             active_versions=manifest.active_version_ids,
             checkpoints=checkpoints,
             memory=memory,
+            ledger=operation_ledger,
+            event_sink=event_sink,
         )
 
     return Application(
@@ -95,6 +118,8 @@ def bootstrap(settings: RuntimeSettings | None = None) -> Application:
         browse_cases=BrowseCases(case_store),
         query_diagnostic_tool=QueryDiagnosticTool(tools, manifest.active_version_ids),
         run_diagnosis=RunDiagnosis(workflow_factory),
+        record_case_verification=RecordCaseVerification(case_store),
+        browse_operations=BrowseOperations(operation_ledger),
         conversation_sessions=ConversationSessions(memory),
         search_evidence=SearchEvidence(vector_store, manifest.active_version_ids),
         hybrid_retrieval=HybridRetrieval(tools, manifest.active_version_ids),

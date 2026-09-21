@@ -213,6 +213,34 @@
       </section>
     </main>
 
+    <aside class="inspector" id="agentInspector" aria-label="Agent 运行检查">
+      <header>
+        <div><i class="live-dot"></i><b>AGENT AUDIT</b></div>
+        <small id="inspectorRun">等待诊断运行</small>
+      </header>
+      <nav class="inspector-tabs" aria-label="检查面板">
+        <button class="active" data-inspector-tab="trace">轨迹</button>
+        <button data-inspector-tab="evidence">证据</button>
+        <button data-inspector-tab="quality">评测</button>
+        <button data-inspector-tab="boundary">边界</button>
+      </nav>
+      <div class="inspector-body">
+        <section class="tab-panel active" data-inspector-panel="trace">
+          <div id="agentTrace"><div class="empty-panel">诊断开始后显示工具调用与模型验证轨迹。</div></div>
+          <div class="operation-list" id="operationHistory"></div>
+        </section>
+        <section class="tab-panel" data-inspector-panel="evidence">
+          <div id="agentEvidence"><div class="empty-panel">尚无已绑定证据。</div></div>
+        </section>
+        <section class="tab-panel" data-inspector-panel="quality">
+          <div id="generationQuality"><div class="empty-panel">诊断完成后可查看生成质量评测。</div></div>
+        </section>
+        <section class="tab-panel" data-inspector-panel="boundary">
+          <div id="capabilityBoundaries"><div class="empty-panel">正在读取系统能力边界。</div></div>
+        </section>
+      </div>
+    </aside>
+
   </div>
 
   <dialog id="settingsDialog">

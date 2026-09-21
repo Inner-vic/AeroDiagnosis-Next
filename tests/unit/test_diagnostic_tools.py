@@ -5,7 +5,12 @@ from pathlib import Path
 from aerodiagnosis.adapters.persistence import SQLiteCaseStore
 from aerodiagnosis.adapters.persistence.sqlite_graph import SQLiteGraphStore
 from aerodiagnosis.adapters.persistence.sqlite_vector import SQLiteVectorStore
-from aerodiagnosis.domain import DiagnosisCommand, ParameterObservation, RetrievalStrategy
+from aerodiagnosis.domain import (
+    DiagnosisCommand,
+    EvidenceItem,
+    ParameterObservation,
+    RetrievalStrategy,
+)
 from aerodiagnosis.ingestion import DocumentIngestionService, DocumentManifest
 from aerodiagnosis.ports import CaseRecord, GraphEdge, GraphNode
 from aerodiagnosis.tools.diagnostic import (
@@ -24,6 +29,14 @@ def _tools(path: Path) -> DiagnosticToolset:
         graph_store=SQLiteGraphStore(path),
         case_store=SQLiteCaseStore(path),
     )
+
+
+def test_toolset_snapshot_identity_includes_vector_embedding_identity(
+    tmp_path: Path,
+) -> None:
+    tools = _tools(tmp_path / "runtime.db")
+
+    assert "sqlite_hashing@256" in tools.backend_identity
 
 
 def test_four_domain_tools_return_typed_provenance(tmp_path: Path) -> None:
@@ -200,3 +213,76 @@ def test_toolset_rejects_unknown_tool(tmp_path: Path) -> None:
         assert "unknown diagnostic tool" in str(exc)
     else:  # pragma: no cover - assertion guard
         raise AssertionError("unknown tool was accepted")
+
+
+def test_graph_tool_uses_canonical_causal_paths(tmp_path: Path) -> None:
+    path = tmp_path / "runtime.db"
+    graph = SQLiteGraphStore(path)
+    version = "v1"
+    graph.upsert_nodes(
+        (
+            GraphNode("engine", "Aero Engine", "Equipment", "Engine", "manual", version),
+            GraphNode("compressor", "Compressor", "Component", "Compressor", "manual", version),
+            GraphNode("egt", "EGT high", "Symptom", "High exhaust temperature", "manual", version),
+            GraphNode("stall", "Compressor stall", "Cause", "Stability loss", "manual", version),
+            GraphNode(
+                "inspect",
+                "Inspect blades",
+                "Solution",
+                "Borescope inspection",
+                "manual",
+                version,
+            ),
+        )
+    )
+    graph.upsert_edges(
+        (
+            GraphEdge("e1", "engine", "compressor", "HAS_COMPONENT", "manual", version),
+            GraphEdge("e2", "compressor", "egt", "HAS_SYMPTOM", "manual", version),
+            GraphEdge("e3", "egt", "stall", "CAUSED_BY", "manual", version, 0.9),
+            GraphEdge("e4", "stall", "inspect", "SOLVED_BY", "manual", version, 0.8),
+        )
+    )
+    tools = _tools(path)
+    command = DiagnosisCommand(session_id="session", question="Why is EGT high?")
+
+    evidence = tools.execute(
+        GRAPH_TOOL,
+        command=command,
+        query="EGT high",
+        active_version_ids=frozenset({version}),
+    )
+
+    assert evidence[0].locator["kind"] == "causal_graph_path"
+    assert "Inspect blades" in evidence[0].excerpt
+
+
+def test_external_tools_are_exposed_and_executed(tmp_path: Path) -> None:
+    external_evidence = EvidenceItem(
+        evidence_id="e" * 64,
+        source_kind="external_tool",
+        source_ref="external-ping",
+        document_id="external",
+        version_id="v1",
+        content_hash="f" * 64,
+        excerpt="External tool evidence",
+        locator={"kind": "external", "coordinates": {"tool": "external_ping"}},
+        score=1.0,
+    )
+    tools = DiagnosticToolset(
+        vector_store=SQLiteVectorStore(tmp_path / "runtime.db"),
+        graph_store=SQLiteGraphStore(tmp_path / "runtime.db"),
+        case_store=SQLiteCaseStore(tmp_path / "runtime.db"),
+        external_tools={
+            "external_ping": lambda _command, _query, _active: (external_evidence,)
+        },
+    )
+    command = DiagnosisCommand(session_id="session", question="External tool")
+
+    assert "external_ping" in tools.available_tools
+    assert tools.execute(
+        "external_ping",
+        command=command,
+        query="ping",
+        active_version_ids=frozenset(),
+    )[0].source_kind == "external_tool"

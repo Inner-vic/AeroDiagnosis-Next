@@ -24,6 +24,7 @@ services:
       AERODIAGNOSIS_LLM_API_KEY: ${AERODIAGNOSIS_LLM_API_KEY:-}
     volumes:
       - aerodiagnosis_runtime:/app/runtime
+      - aerodiagnosis_model_cache:/app/.cache
     read_only: true
     tmpfs:
       - /tmp:size=128m,mode=1777
@@ -46,3 +47,5 @@ services:
 volumes:
   aerodiagnosis_runtime:
     name: aerodiagnosis-runtime
+  aerodiagnosis_model_cache:
+    name: aerodiagnosis-model-cache

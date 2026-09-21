@@ -11,6 +11,7 @@ from typing import Any, Self
 
 from pydantic import BaseModel, ConfigDict, Field, ValidationError, model_validator
 
+from aerodiagnosis.application.agent_events import AgentEventSink
 from aerodiagnosis.application.agent_models import (
     CandidateDiagnosis,
     EvidencePlan,
@@ -32,6 +33,7 @@ from aerodiagnosis.ports import (
     LanguageModel,
     LanguageModelError,
     MessageRole,
+    OperationLedger,
 )
 from aerodiagnosis.tools.diagnostic import (
     CASE_TOOL,
@@ -125,12 +127,20 @@ class DiagnosticWorkflow:
         active_versions: Callable[[], frozenset[str]],
         checkpoints: CheckpointStore,
         memory: ConversationMemoryStore,
+        ledger: OperationLedger,
+        event_sink: AgentEventSink | None = None,
     ) -> None:
         self._tools = tools
         self._model = language_model
         self._active_versions = active_versions
         self._checkpoints = checkpoints
         self._memory = memory
+        self._ledger = ledger
+        self._event_sink = event_sink
+
+    def _emit(self, event: str, payload: dict[str, Any]) -> None:
+        if self._event_sink is not None:
+            self._event_sink(event, payload)
 
     def start(self, command: DiagnosisCommand) -> DiagnosisReport:
         active_versions = tuple(sorted(self._active_versions()))
@@ -156,6 +166,14 @@ class DiagnosticWorkflow:
             model_identity=self._model.identity,
             command=command,
             memory_context=memory_context,
+        )
+        self._emit(
+            "run_started",
+            {
+                "run_id": state.run_id,
+                "session_id": state.command.session_id,
+                "snapshot_id": state.snapshot_id,
+            },
         )
         self._save(state)
         return self._execute(state)
@@ -219,14 +237,68 @@ class DiagnosticWorkflow:
 
     def _model_output(
         self,
+        run_id: str,
         task: str,
         payload: dict[str, Any],
         model: type[BaseModel],
     ) -> BaseModel:
+        self._emit(
+            "model_call_started",
+            {"run_id": run_id, "task": task, "payload": payload},
+        )
         try:
-            return model.model_validate(self._model.complete_json(task, payload))
+            raw = self._model.complete_json(task, payload)
+        except Exception as exc:
+            self._emit(
+                "model_call_failed",
+                {
+                    "run_id": run_id,
+                    "task": task,
+                    "error": f"{type(exc).__name__}: {exc}",
+                },
+            )
+            self._ledger.record_model(
+                run_id=run_id,
+                task=task,
+                payload=payload,
+                result={},
+                error=f"{type(exc).__name__}: {exc}",
+            )
+            raise
+        try:
+            output = model.model_validate(raw)
         except ValidationError as exc:
+            self._emit(
+                "model_call_failed",
+                {
+                    "run_id": run_id,
+                    "task": task,
+                    "error": str(exc),
+                },
+            )
+            self._ledger.record_model(
+                run_id=run_id,
+                task=task,
+                payload=payload,
+                result=dict(raw) if isinstance(raw, dict) else {},
+                error=str(exc),
+            )
             raise LanguageModelError(f"invalid structured output for {task}") from exc
+        self._ledger.record_model(
+            run_id=run_id,
+            task=task,
+            payload=payload,
+            result=output.model_dump(mode="json"),
+        )
+        self._emit(
+            "model_call_completed",
+            {
+                "run_id": run_id,
+                "task": task,
+                "result": output.model_dump(mode="json"),
+            },
+        )
+        return output
 
     def _execute(self, state: DiagnosisWorkflowState) -> DiagnosisReport:
         while True:
@@ -267,7 +339,7 @@ class DiagnosticWorkflow:
         payload = {
             "question": state.command.question,
             "parameters": [item.model_dump(mode="json") for item in state.command.parameters],
-            "available_tools": AVAILABLE_TOOLS,
+            "available_tools": self._tools.available_tools,
             "retrieval_policy": (
                 f"Prefer {HYBRID_TOOL} when evidence may span manuals, graph paths and cases. "
                 "Never combine it with its manual, graph or case subroutes in the same plan. "
@@ -281,9 +353,9 @@ class DiagnosticWorkflow:
             "evidence_ids": [item.evidence_id for item in state.evidence],
             "conversation": [item.model_dump(mode="json") for item in state.memory_context],
         }
-        plan = self._model_output(task, payload, EvidencePlan)
+        plan = self._model_output(state.run_id, task, payload, EvidencePlan)
         assert isinstance(plan, EvidencePlan)
-        unknown = set(plan.tools) - set(AVAILABLE_TOOLS)
+        unknown = set(plan.tools) - set(self._tools.available_tools)
         if unknown:
             raise LanguageModelError(f"planner selected unknown tools: {sorted(unknown)}")
         normalized_tools = plan.tools
@@ -323,6 +395,14 @@ class DiagnosticWorkflow:
                 if len(trace) >= retrieving.command.max_tool_calls:
                     budget_exhausted = True
                     break
+                self._emit(
+                    "tool_call_started",
+                    {
+                        "run_id": retrieving.run_id,
+                        "tool_name": tool_name,
+                        "query": query,
+                    },
+                )
                 try:
                     items = self._tools.execute(
                         tool_name,
@@ -331,6 +411,27 @@ class DiagnosticWorkflow:
                         active_version_ids=active_versions,
                     )
                 except Exception as exc:  # tool failures are recorded and remain fail-closed
+                    self._emit(
+                        "tool_call_failed",
+                        {
+                            "run_id": retrieving.run_id,
+                            "tool_name": tool_name,
+                            "query": query,
+                            "error": f"{type(exc).__name__}: {exc}",
+                        },
+                    )
+                    call_id = hashlib.sha256(
+                        f"{tool_name}:{query}:{len(trace)}".encode()
+                    ).hexdigest()
+                    self._ledger.record_tool(
+                        run_id=retrieving.run_id,
+                        call_id=call_id,
+                        tool_name=tool_name,
+                        query=query,
+                        status=ToolExecutionStatus.ERROR.value,
+                        evidence_count=0,
+                        error=f"{type(exc).__name__}: {exc}",
+                    )
                     trace.append(
                         ToolExecution(
                             tool_name=tool_name,
@@ -341,11 +442,34 @@ class DiagnosticWorkflow:
                         )
                     )
                     continue
+                call_id = hashlib.sha256(
+                    f"{tool_name}:{query}:{len(trace)}".encode()
+                ).hexdigest()
+                execution_status = (
+                    ToolExecutionStatus.OK if items else ToolExecutionStatus.EMPTY
+                )
+                self._ledger.record_tool(
+                    run_id=retrieving.run_id,
+                    call_id=call_id,
+                    tool_name=tool_name,
+                    query=query,
+                    status=execution_status.value,
+                    evidence_count=len(items),
+                )
+                self._emit(
+                    "tool_call_completed",
+                    {
+                        "run_id": retrieving.run_id,
+                        "tool_name": tool_name,
+                        "query": query,
+                        "evidence_count": len(items),
+                    },
+                )
                 trace.append(
                     ToolExecution(
                         tool_name=tool_name,
                         query=query,
-                        status=ToolExecutionStatus.OK if items else ToolExecutionStatus.EMPTY,
+                        status=execution_status,
                         evidence_count=len(items),
                     )
                 )
@@ -366,6 +490,7 @@ class DiagnosticWorkflow:
 
     def _generate(self, state: DiagnosisWorkflowState) -> DiagnosisWorkflowState:
         output = self._model_output(
+            state.run_id,
             "generate_diagnosis",
             {
                 "question": state.command.question,
@@ -387,6 +512,7 @@ class DiagnosticWorkflow:
         if state.candidate is None:  # pragma: no cover - guarded by stage transition
             raise RuntimeError("candidate is required before verification")
         output = self._model_output(
+            state.run_id,
             "verify_diagnosis",
             {
                 "question": state.command.question,
@@ -456,6 +582,15 @@ class DiagnosticWorkflow:
             content=self._memory_content(report),
         )
         self._save(completed)
+        self._emit(
+            "report_ready",
+            {
+                "run_id": report.run_id,
+                "status": report.status.value,
+                "summary": report.summary,
+                "report": report.model_dump(mode="json"),
+            },
+        )
         return report
 
     def _refuse(self, state: DiagnosisWorkflowState) -> DiagnosisReport:
@@ -484,4 +619,13 @@ class DiagnosticWorkflow:
             content=self._memory_content(report),
         )
         self._save(refused)
+        self._emit(
+            "report_ready",
+            {
+                "run_id": report.run_id,
+                "status": report.status.value,
+                "summary": report.summary,
+                "report": report.model_dump(mode="json"),
+            },
+        )
         return report

@@ -11,7 +11,7 @@ from collections.abc import Iterable, Sequence
 from datetime import UTC, datetime
 from pathlib import Path
 
-from aerodiagnosis.ports import VectorChunk, VectorMatch
+from aerodiagnosis.ports import EmbeddingProvider, VectorChunk, VectorMatch
 
 from .outbox import ExternalStoreOutbox
 from .sqlite import SQLiteDatabase
@@ -28,6 +28,10 @@ class HashingEmbedder:
         if dimensions < 32:
             raise ValueError("dimensions must be at least 32")
         self.dimensions = dimensions
+
+    @property
+    def name(self) -> str:
+        return f"hashing@{self.dimensions}"
 
     @staticmethod
     def _tokens(text: str) -> Iterable[str]:
@@ -63,17 +67,24 @@ class SQLiteVectorStore:
         self,
         path: Path,
         embedder: HashingEmbedder | None = None,
+        embedding_provider: EmbeddingProvider | None = None,
         *,
         outbox: ExternalStoreOutbox | None = None,
     ) -> None:
         self._database = SQLiteDatabase(path)
         self._database.migrate()
-        self._embedder = embedder or HashingEmbedder()
+        if embedder is not None and embedding_provider is not None:
+            raise ValueError("embedder and embedding_provider cannot both be set")
+        self._embedder = embedding_provider or embedder or HashingEmbedder()
         self._outbox = outbox
 
     @property
     def backend_name(self) -> str:
-        return "sqlite_hashing"
+        return f"sqlite_{self.embedding_identity}"
+
+    @property
+    def embedding_identity(self) -> str:
+        return self._embedder.name
 
     def upsert(self, chunks: Sequence[VectorChunk]) -> int:
         now = datetime.now(UTC).isoformat()

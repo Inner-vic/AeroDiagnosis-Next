@@ -5,6 +5,7 @@ from __future__ import annotations
 import hashlib
 from dataclasses import dataclass
 
+from aerodiagnosis.application.knowledge_graph_extractor import KnowledgeGraphExtractor
 from aerodiagnosis.domain import (
     SourceKind,
     create_document_id,
@@ -12,7 +13,7 @@ from aerodiagnosis.domain import (
     make_evidence_id,
     make_version_id,
 )
-from aerodiagnosis.ports import VectorChunk, VectorStore
+from aerodiagnosis.ports import GraphStore, VectorChunk, VectorStore
 
 from .manifest import DocumentManifest, VersionStatus
 from .parsers import ParsedDocument, ParserRegistry
@@ -38,6 +39,8 @@ class DocumentIngestionService:
         self,
         manifest: DocumentManifest,
         vector_store: VectorStore,
+        graph_store: GraphStore | None = None,
+        graph_extractor: KnowledgeGraphExtractor | None = None,
         parsers: ParserRegistry | None = None,
         *,
         max_bytes: int = 10 * 1024 * 1024,
@@ -46,6 +49,8 @@ class DocumentIngestionService:
             raise ValueError("max_bytes must be positive")
         self._manifest = manifest
         self._vector_store = vector_store
+        self._graph_store = graph_store
+        self._graph_extractor = graph_extractor or KnowledgeGraphExtractor()
         self._parsers = parsers or ParserRegistry()
         self._max_bytes = max_bytes
 
@@ -96,6 +101,7 @@ class DocumentIngestionService:
         display_name: str,
         content: bytes,
         document_id: str | None = None,
+        force_vector_upsert: bool = False,
     ) -> IngestionResult:
         safe_name = self._validate_display_name(display_name)
         if len(content) > self._max_bytes:
@@ -114,6 +120,8 @@ class DocumentIngestionService:
         existing = self._manifest.get_version(version_id)
         if existing is not None:
             if existing.status is VersionStatus.ACTIVE:
+                if force_vector_upsert:
+                    self._vector_store.upsert(chunks)
                 return IngestionResult(
                     document_id=logical_id,
                     version_id=version_id,
@@ -144,6 +152,14 @@ class DocumentIngestionService:
                 )
             self._manifest.transition(version_id, VersionStatus.STAGED)
             active = self._manifest.activate(version_id)
+            if self._graph_store is not None:
+                nodes, edges = self._graph_extractor.extract(
+                    source_ref=f"document:{logical_id}",
+                    version_id=version_id,
+                    chunks=tuple(chunk.content for chunk in chunks),
+                )
+                self._graph_store.upsert_nodes(nodes)
+                self._graph_store.upsert_edges(edges)
         except Exception:
             current = self._manifest.get_version(version_id)
             if current is not None and current.status in {

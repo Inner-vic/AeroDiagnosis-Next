@@ -52,6 +52,22 @@ class SQLiteCaseStore:
             )
             connection.commit()
 
+    def get_case(self, case_id: str) -> CaseRecord | None:
+        with self._database.connect() as connection:
+            row = connection.execute(
+                "SELECT * FROM cases WHERE case_id = ? ORDER BY version DESC LIMIT 1",
+                (case_id,),
+            ).fetchone()
+        if row is None:
+            return None
+        payload = json.loads(row["payload_json"])
+        return CaseRecord(
+            case_id=row["case_id"],
+            version=int(row["version"]),
+            summary=str(payload["summary"]),
+            attributes=payload.get("attributes", {}),
+        )
+
     def search(self, query: str, *, limit: int = 5) -> list[CaseMatch]:
         if limit < 1:
             raise ValueError("limit must be positive")

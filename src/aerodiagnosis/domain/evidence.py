@@ -20,6 +20,7 @@ class SourceKind(StrEnum):
     KNOWLEDGE_GRAPH_PATH = "knowledge_graph_path"
     CASE = "case"
     PARAMETER_ANALYSIS = "parameter_analysis"
+    EXTERNAL_TOOL = "external_tool"
 
 
 def _canonical_json(value: Mapping[str, Any]) -> str:

@@ -52,6 +52,19 @@ _TASK_INSTRUCTIONS = {
         '"limitations":["mandatory limitation"]}. '
         "Preserve uncertainty, include all mandatory limitations, and do not add keys."
     ),
+    "judge_diagnosis_quality": (
+        "Audit the supplied diagnosis report against the supplied evidence and deterministic "
+        "metrics. Return exactly: "
+        '{"faithfulness":0.9,"context_precision":0.9,"context_recall":0.9,'
+        '"issues":["specific issue"],"human_review_required":false}. '
+        "Use only supplied evidence IDs and claims. Flag unsupported claims or missing relevant "
+        "evidence. Do not add keys."
+    ),
+    "rerank_evidence": (
+        "Reorder the supplied evidence candidates by relevance to the query. Return exactly: "
+        '{"ordered_keys":["key1","key2"]}. '
+        "Use every candidate key exactly once and never invent a key. Do not add keys."
+    ),
 }
 
 
