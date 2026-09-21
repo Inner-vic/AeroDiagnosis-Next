@@ -52,9 +52,13 @@ def _first_match(text: str, mapping: Mapping[str, Sequence[str]]) -> tuple[str, 
     return None
 
 
-def _stable_id(prefix: str, source_ref: str, version_id: str, label: str) -> str:
+def _entity_id(kind: str, label: str) -> str:
+    return hashlib.sha256(f"{kind}\0{label}".encode()).hexdigest()
+
+
+def _edge_id(relation: str, source_id: str, target_id: str) -> str:
     return hashlib.sha256(
-        f"{prefix}\0{source_ref}\0{version_id}\0{label}".encode()
+        f"{relation}\0{source_id}\0{target_id}".encode()
     ).hexdigest()
 
 
@@ -185,7 +189,7 @@ class KnowledgeGraphExtractor:
         description: str,
         nodes: dict[str, GraphNode],
     ) -> GraphNode:
-        node_id = _stable_id(prefix, source_ref, version_id, name)
+        node_id = _entity_id(kind, name)
         node = GraphNode(
             node_id=node_id,
             name=name,
@@ -193,7 +197,7 @@ class KnowledgeGraphExtractor:
             description=description,
             source_ref=source_ref,
             version_id=version_id,
-            properties={"extraction": "lexical@1"},
+            properties={"extraction": "lexical@1", "normalized": True},
         )
         nodes[node_id] = node
         return node
@@ -209,7 +213,7 @@ class KnowledgeGraphExtractor:
         confidence: float,
         edges: dict[str, GraphEdge],
     ) -> None:
-        edge_id = _stable_id(prefix, source_ref, version_id, f"{source_id}->{target_id}")
+        edge_id = _edge_id(relation, source_id, target_id)
         edges[edge_id] = GraphEdge(
             edge_id=edge_id,
             source_id=source_id,
@@ -218,5 +222,5 @@ class KnowledgeGraphExtractor:
             source_ref=source_ref,
             version_id=version_id,
             confidence=confidence,
-            properties={"extraction": "lexical@1"},
+            properties={"extraction": "lexical@1", "normalized": True},
         )

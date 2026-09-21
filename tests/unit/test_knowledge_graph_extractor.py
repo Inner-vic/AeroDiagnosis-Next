@@ -46,3 +46,24 @@ def test_knowledge_graph_extractor_is_idempotent() -> None:
     )
 
     assert first == second
+
+
+def test_knowledge_graph_extractor_aligns_synonyms_across_sources() -> None:
+    extractor = KnowledgeGraphExtractor()
+
+    english = extractor.extract(
+        source_ref="document:doc-english",
+        version_id="version-english",
+        chunks=("Compressor surge can cause an EGT rise.",),
+    )
+    chinese = extractor.extract(
+        source_ref="document:doc-chinese",
+        version_id="version-chinese",
+        chunks=("压气机喘振可能引起排气温度升高。",),
+    )
+
+    english_symptom = next(node for node in english[0] if node.kind == "Symptom")
+    chinese_symptom = next(node for node in chinese[0] if node.kind == "Symptom")
+
+    assert english_symptom.node_id == chinese_symptom.node_id
+    assert english_symptom.name == chinese_symptom.name == "压气机喘振"
