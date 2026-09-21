@@ -22,6 +22,7 @@ from aerodiagnosis.domain import (
     make_evidence_id,
 )
 from aerodiagnosis.ports import CaseStore, GraphNode, GraphStore, VectorMatch, VectorStore
+from aerodiagnosis.retrieval.reranker import LexicalReranker, RankedText, Reranker
 
 MANUAL_TOOL = "search_manual_chunks"
 GRAPH_TOOL = "traverse_fault_graph"
@@ -58,11 +59,13 @@ class DiagnosticToolset:
         graph_store: GraphStore,
         case_store: CaseStore,
         external_tools: Mapping[str, ExternalToolHandler] | None = None,
+        reranker: Reranker | None = None,
     ) -> None:
         self._vector = vector_store
         self._graph = graph_store
         self._cases = case_store
         self._external_tools = dict(external_tools or {})
+        self._reranker = reranker or LexicalReranker()
 
     @property
     def available_tools(self) -> tuple[str, ...]:
@@ -282,6 +285,22 @@ class DiagnosticToolset:
             top_k=command.top_k,
             active_version_ids=active_version_ids,
         )
+        match_by_id = {match.chunk.chunk_id: match for match in matches}
+        reranked = self._reranker.rerank(
+            query,
+            [
+                RankedText(
+                    key=match.chunk.chunk_id,
+                    text=match.chunk.content,
+                    score=match.score,
+                )
+                for match in matches
+            ],
+        )
+        matches = [
+            VectorMatch(chunk=match_by_id[item.key].chunk, score=item.score)
+            for item in reranked
+        ]
         evidence = []
         for match in matches:
             item = self._manual_item(match, command.min_relevance)
