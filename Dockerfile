@@ -32,8 +32,8 @@ COPY src ./src
 
 RUN sed -i "s#https://files.pythonhosted.org#${PYPI_PACKAGE_MIRROR_URL}#g" uv.lock \
     && uv sync --frozen --no-dev --no-editable --extra external-stores \
-    && mkdir -p /app/runtime/data \
-    && chown -R aerodiagnosis:aerodiagnosis /app/runtime
+    && mkdir -p /app/runtime/data /app/.cache \
+    && chown -R aerodiagnosis:aerodiagnosis /app/runtime /app/.cache
 
 USER aerodiagnosis
 

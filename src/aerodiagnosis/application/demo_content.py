@@ -55,6 +55,7 @@ def seed_demo_content(
         display_name="航空发动机气路故障通用知识.md",
         content=_DEMO_KNOWLEDGE.encode("utf-8"),
         document_id=DEMO_DOCUMENT_ID,
+        force_vector_upsert=True,
     )
     version_id = result.version_id
     graph_store.delete_source(DEMO_SOURCE)

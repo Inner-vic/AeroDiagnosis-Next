@@ -96,6 +96,7 @@ class DocumentIngestionService:
         display_name: str,
         content: bytes,
         document_id: str | None = None,
+        force_vector_upsert: bool = False,
     ) -> IngestionResult:
         safe_name = self._validate_display_name(display_name)
         if len(content) > self._max_bytes:
@@ -114,6 +115,8 @@ class DocumentIngestionService:
         existing = self._manifest.get_version(version_id)
         if existing is not None:
             if existing.status is VersionStatus.ACTIVE:
+                if force_vector_upsert:
+                    self._vector_store.upsert(chunks)
                 return IngestionResult(
                     document_id=logical_id,
                     version_id=version_id,

@@ -43,6 +43,16 @@ def test_ingestion_publishes_stable_evidence_and_is_idempotent(tmp_path: Path) -
     assert vectors.count() == 1
     assert matches[0].chunk.metadata["evidence_id"] == created.evidence_ids[0]
 
+    forced = service.ingest(
+        display_name="manual.md",
+        content=b"compressor stall warning",
+        document_id=created.document_id,
+        force_vector_upsert=True,
+    )
+
+    assert forced.reused is True
+    assert vectors.count() == 1
+
 
 def test_new_revision_supersedes_old_visibility_without_deleting_history(tmp_path: Path) -> None:
     database = tmp_path / "runtime.db"
