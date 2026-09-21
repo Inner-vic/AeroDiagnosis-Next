@@ -31,6 +31,14 @@ def _tools(path: Path) -> DiagnosticToolset:
     )
 
 
+def test_toolset_snapshot_identity_includes_vector_embedding_identity(
+    tmp_path: Path,
+) -> None:
+    tools = _tools(tmp_path / "runtime.db")
+
+    assert "sqlite_hashing@256" in tools.backend_identity
+
+
 def test_four_domain_tools_return_typed_provenance(tmp_path: Path) -> None:
     path = tmp_path / "runtime.db"
     manifest = DocumentManifest(path)

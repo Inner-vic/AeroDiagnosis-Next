@@ -29,6 +29,10 @@ class HashingEmbedder:
             raise ValueError("dimensions must be at least 32")
         self.dimensions = dimensions
 
+    @property
+    def name(self) -> str:
+        return f"hashing@{self.dimensions}"
+
     @staticmethod
     def _tokens(text: str) -> Iterable[str]:
         normalized = unicodedata.normalize("NFKC", text).lower()
@@ -76,7 +80,11 @@ class SQLiteVectorStore:
 
     @property
     def backend_name(self) -> str:
-        return "sqlite_hashing"
+        return f"sqlite_{self.embedding_identity}"
+
+    @property
+    def embedding_identity(self) -> str:
+        return self._embedder.name
 
     def upsert(self, chunks: Sequence[VectorChunk]) -> int:
         now = datetime.now(UTC).isoformat()

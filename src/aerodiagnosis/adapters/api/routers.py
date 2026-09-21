@@ -91,7 +91,11 @@ def system(application: ApplicationDependency) -> dict[str, Any]:
             "model": application.settings.default_llm_model,
         },
         "database_schema": LATEST_SCHEMA_VERSION,
-        "vector": {"backend": state.vector_backend, "chunks": state.vector_chunks},
+        "vector": {
+            "backend": state.vector_backend,
+            "embedding": state.vector_embedding_identity,
+            "chunks": state.vector_chunks,
+        },
         "graph": {
             "backend": state.graph_backend,
             "nodes": state.graph_nodes,

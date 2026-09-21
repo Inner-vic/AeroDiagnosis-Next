@@ -82,6 +82,7 @@ class DiagnosticToolset:
     def backend_identity(self) -> tuple[str, ...]:
         return (
             self._vector.backend_name,
+            self._vector.embedding_identity,
             self._graph.backend_name,
             self._cases.backend_name,
             HYBRID_ALGORITHM,

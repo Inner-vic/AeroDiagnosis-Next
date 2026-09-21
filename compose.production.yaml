@@ -3,6 +3,7 @@ services:
     environment:
       AERODIAGNOSIS_VECTOR_BACKEND: chroma_http
       AERODIAGNOSIS_GRAPH_BACKEND: neo4j
+      AERODIAGNOSIS_EMBEDDING_BACKEND: chroma_default
       AERODIAGNOSIS_EXTERNAL_STORE_MODE: external-primary
       AERODIAGNOSIS_CHROMA_HOST: chromadb
       AERODIAGNOSIS_CHROMA_PORT: 8000

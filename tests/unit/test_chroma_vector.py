@@ -80,6 +80,48 @@ class FakeClient:
         return self.collection
 
 
+class ServerEmbeddingCollection:
+    def __init__(self) -> None:
+        self.records: dict[str, tuple[str, Mapping[str, Any]]] = {}
+        self.last_query: dict[str, Any] = {}
+
+    def upsert(
+        self,
+        *,
+        ids: Sequence[str],
+        documents: Sequence[str],
+        metadatas: Sequence[Mapping[str, Any]],
+        embeddings: Sequence[Sequence[float]] | None = None,
+    ) -> None:
+        assert embeddings is None
+        self.records.update(
+            (chunk_id, (document, metadata))
+            for chunk_id, document, metadata in zip(
+                ids, documents, metadatas, strict=True
+            )
+        )
+
+    def query(self, **kwargs: Any) -> Mapping[str, Any]:
+        assert "query_texts" in kwargs
+        assert "query_embeddings" not in kwargs
+        self.last_query = kwargs
+        return {
+            "ids": [list(self.records)],
+            "documents": [[document for document, _metadata in self.records.values()]],
+            "metadatas": [[metadata for _document, metadata in self.records.values()]],
+            "distances": [[0.05 for _record in self.records]],
+        }
+
+    def get(self, **kwargs: Any) -> Mapping[str, Any]:
+        return {"ids": []}
+
+    def delete(self, *, ids: Sequence[str]) -> None:
+        del ids
+
+    def count(self) -> int:
+        return len(self.records)
+
+
 def test_chroma_adapter_round_trips_v3_identity(monkeypatch: pytest.MonkeyPatch) -> None:
     collection = FakeCollection()
     monkeypatch.setitem(
@@ -98,7 +140,7 @@ def test_chroma_adapter_round_trips_v3_identity(monkeypatch: pytest.MonkeyPatch)
         VectorChunk("two", "doc", "v2", "fan fault", {"page": 2}),
     )
 
-    assert store.backend_name == "chroma_http_hashing"
+    assert store.backend_name == "chroma_http_hashing@256"
     assert store.upsert(chunks) == 2
     assert store.count() == 2
     matches = store.search("compressor", top_k=2, active_version_ids=frozenset({"v1"}))
@@ -124,3 +166,32 @@ def test_chroma_adapter_rejects_invalid_requests(monkeypatch: pytest.MonkeyPatch
         store.upsert((VectorChunk("", "doc", "v1", "content"),))
     with pytest.raises(ValueError, match="positive"):
         store.search("query", top_k=0)
+
+
+def test_chroma_server_embeddings_delegate_to_chroma_default_function(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    collection = ServerEmbeddingCollection()
+    monkeypatch.setitem(
+        sys.modules,
+        "chromadb",
+        SimpleNamespace(
+            HttpClient=lambda **kwargs: SimpleNamespace(
+                get_or_create_collection=lambda **_kwargs: collection
+            )
+        ),
+    )
+    store = ChromaHttpVectorStore(
+        host="chroma",
+        port=8000,
+        ssl=False,
+        collection_name="test-collection",
+        use_server_embeddings=True,
+    )
+
+    assert store.backend_name == "chroma_http_chroma_server_default"
+    store.upsert((VectorChunk("one", "doc", "v1", "compressor fault"),))
+    store.search("compressor", active_version_ids=frozenset({"v1"}))
+
+    assert collection.last_query["query_texts"] == ["compressor"]
+    assert "query_embeddings" not in collection.last_query

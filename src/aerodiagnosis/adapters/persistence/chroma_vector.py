@@ -23,10 +23,14 @@ class ChromaHttpVectorStore:
         collection_name: str,
         embedder: HashingEmbedder | None = None,
         embedding_provider: EmbeddingProvider | None = None,
+        use_server_embeddings: bool = False,
     ) -> None:
         if embedder is not None and embedding_provider is not None:
             raise ValueError("embedder and embedding_provider cannot both be set")
+        if use_server_embeddings and (embedder is not None or embedding_provider is not None):
+            raise ValueError("server embeddings cannot be combined with a client provider")
         self._embedder = embedding_provider or embedder or HashingEmbedder()
+        self._use_server_embeddings = use_server_embeddings
         self._host = host
         self._port = port
         self._ssl = ssl
@@ -50,7 +54,13 @@ class ChromaHttpVectorStore:
 
     @property
     def backend_name(self) -> str:
-        return "chroma_http_hashing"
+        return f"chroma_http_{self.embedding_identity}"
+
+    @property
+    def embedding_identity(self) -> str:
+        if self._use_server_embeddings:
+            return "chroma_server_default"
+        return self._embedder.name
 
     @staticmethod
     def _metadata(chunk: VectorChunk) -> dict[str, str]:
@@ -87,12 +97,19 @@ class ChromaHttpVectorStore:
                 for value in (chunk.chunk_id, chunk.document_id, chunk.version_id, chunk.content)
             ):
                 raise ValueError("vector chunk identity and content must not be empty")
-        self._collection.upsert(
-            ids=[chunk.chunk_id for chunk in chunks],
-            embeddings=[list(self._embedder.embed(chunk.content)) for chunk in chunks],
-            documents=[chunk.content for chunk in chunks],
-            metadatas=[self._metadata(chunk) for chunk in chunks],
-        )
+        if self._use_server_embeddings:
+            self._collection.upsert(
+                ids=[chunk.chunk_id for chunk in chunks],
+                documents=[chunk.content for chunk in chunks],
+                metadatas=[self._metadata(chunk) for chunk in chunks],
+            )
+        else:
+            self._collection.upsert(
+                ids=[chunk.chunk_id for chunk in chunks],
+                embeddings=[list(self._embedder.embed(chunk.content)) for chunk in chunks],
+                documents=[chunk.content for chunk in chunks],
+                metadatas=[self._metadata(chunk) for chunk in chunks],
+            )
         return len(chunks)
 
     def search(
@@ -117,12 +134,16 @@ class ChromaHttpVectorStore:
                 if len(ordered) == 1
                 else {"version_id": {"$in": ordered}}
             )
-        result: Mapping[str, Any] = self._collection.query(
-            query_embeddings=[list(self._embedder.embed(query))],
-            n_results=min(top_k, count),
-            where=where,
-            include=["documents", "metadatas", "distances"],
-        )
+        query_options: dict[str, Any] = {
+            "n_results": min(top_k, count),
+            "where": where,
+            "include": ["documents", "metadatas", "distances"],
+        }
+        if self._use_server_embeddings:
+            query_options["query_texts"] = [query]
+        else:
+            query_options["query_embeddings"] = [list(self._embedder.embed(query))]
+        result: Mapping[str, Any] = self._collection.query(**query_options)
         ids = (result.get("ids") or [[]])[0]
         documents = (result.get("documents") or [[]])[0]
         metadatas = (result.get("metadatas") or [[]])[0]

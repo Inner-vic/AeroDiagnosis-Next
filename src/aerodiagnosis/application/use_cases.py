@@ -39,6 +39,7 @@ from .diagnostic_workflow import DiagnosticWorkflow
 @dataclass(frozen=True, slots=True)
 class RuntimeStatus:
     vector_backend: str
+    vector_embedding_identity: str
     vector_chunks: int
     graph_backend: str
     graph_nodes: int
@@ -284,6 +285,7 @@ class GetRuntimeStatus:
         sessions, messages = self._memory.counts()
         return RuntimeStatus(
             vector_backend=self._vector_store.backend_name,
+            vector_embedding_identity=self._vector_store.embedding_identity,
             vector_chunks=self._vector_store.count(),
             graph_backend=self._graph_store.backend_name,
             graph_nodes=nodes,

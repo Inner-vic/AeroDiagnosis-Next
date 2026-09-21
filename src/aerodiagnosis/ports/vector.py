@@ -26,6 +26,9 @@ class VectorStore(Protocol):
     @property
     def backend_name(self) -> str: ...
 
+    @property
+    def embedding_identity(self) -> str: ...
+
     def upsert(self, chunks: Sequence[VectorChunk]) -> int: ...
 
     def search(

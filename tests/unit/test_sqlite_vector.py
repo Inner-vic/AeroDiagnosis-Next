@@ -40,7 +40,7 @@ def test_vector_store_persists_ranks_and_filters_versions(tmp_path: Path) -> Non
     reopened = SQLiteVectorStore(path, HashingEmbedder(64))
     matches = reopened.search("EGT 压气机", top_k=2)
 
-    assert reopened.backend_name == "sqlite_hashing"
+    assert reopened.backend_name == "sqlite_hashing@64"
     assert reopened.count() == 2
     assert matches[0].chunk.chunk_id == "chunk-1"
     assert (

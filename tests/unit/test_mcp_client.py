@@ -29,7 +29,7 @@ def test_mcp_client_discovers_and_calls_server_tools(tmp_path: Path) -> None:
             name="get_runtime_status",
             arguments={},
         )
-        assert result["vector_backend"] == "sqlite_hashing"
+        assert result["vector_backend"] == "sqlite_hashing@256"
 
     asyncio.run(exercise())
 

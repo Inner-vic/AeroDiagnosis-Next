@@ -27,7 +27,7 @@ def _settings(tmp_path: Path, **updates: str) -> RuntimeSettings:
 def test_default_factories_select_embedded_backends(tmp_path: Path) -> None:
     settings = _settings(tmp_path)
 
-    assert create_vector_store(settings).backend_name == "sqlite_hashing"
+    assert create_vector_store(settings).backend_name == "sqlite_hashing@256"
     assert create_graph_store(settings).backend_name == "sqlite_graph"
 
 
@@ -63,7 +63,7 @@ def test_external_primary_selects_direct_external_stores(tmp_path: Path) -> None
         )
     )
 
-    assert vector.backend_name == "chroma_http_hashing"
+    assert vector.backend_name == "chroma_http_hashing@256"
     assert graph.backend_name == "neo4j"
 
 
@@ -105,7 +105,7 @@ def test_api_lifespan_initializes_embedded_stores(tmp_path: Path) -> None:
     async def exercise() -> None:
         async with app.router.lifespan_context(app):
             state = app.state.application.get_runtime_status.execute()
-            assert state.vector_backend == "sqlite_hashing"
+            assert state.vector_backend == "sqlite_hashing@256"
             assert state.graph_backend == "sqlite_graph"
 
     asyncio.run(exercise())

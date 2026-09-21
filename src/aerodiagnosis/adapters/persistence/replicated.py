@@ -259,6 +259,10 @@ class ReplicatedVectorStore:
     def backend_name(self) -> str:
         return "chroma_http_cdc"
 
+    @property
+    def embedding_identity(self) -> str:
+        return self._primary.embedding_identity
+
     def _flush(self) -> bool:
         report = self._sync.flush(limit=self._batch_size)
         return report.failed == 0 and report.pending == 0

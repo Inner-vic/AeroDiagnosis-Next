@@ -6,7 +6,7 @@ import os
 from pathlib import Path
 from typing import Self
 
-from pydantic import BaseModel, ConfigDict, Field, SecretStr, field_validator
+from pydantic import BaseModel, ConfigDict, Field, SecretStr, field_validator, model_validator
 
 
 def _local_environment(root: Path) -> dict[str, str]:
@@ -39,6 +39,13 @@ class RuntimeSettings(BaseModel):
     database_path: Path
     vector_backend: str = Field(default="sqlite", pattern=r"^(sqlite|chroma_http)$")
     graph_backend: str = Field(default="sqlite", pattern=r"^(sqlite|neo4j)$")
+    embedding_backend: str = Field(
+        default="hashing", pattern=r"^(hashing|openai_compatible|chroma_default)$"
+    )
+    embedding_dimensions: int = Field(default=256, ge=32, le=8192)
+    embedding_base_url: str | None = None
+    embedding_model: str | None = None
+    embedding_api_key: SecretStr | None = None
     external_store_mode: str = Field(
         default="local-first", pattern=r"^(local-first|external-primary)$"
     )
@@ -66,6 +73,31 @@ class RuntimeSettings(BaseModel):
         if value not in {"127.0.0.1", "localhost", "::1"}:
             raise ValueError("non-loopback API binding requires a future hardened deployment mode")
         return value
+
+    @model_validator(mode="after")
+    def validate_embedding_configuration(self) -> Self:
+        if self.embedding_backend == "openai_compatible":
+            missing = [
+                name
+                for name, value in (
+                    ("base_url", self.embedding_base_url),
+                    ("model", self.embedding_model),
+                    ("api_key", self.embedding_api_key),
+                )
+                if value is None
+            ]
+            if missing:
+                raise ValueError(
+                    "openai_compatible embeddings require base_url, model and api_key"
+                )
+        if self.embedding_backend == "chroma_default":
+            if self.vector_backend != "chroma_http":
+                raise ValueError("chroma_default embeddings require vector_backend=chroma_http")
+            if self.external_store_mode != "external-primary":
+                raise ValueError(
+                    "chroma_default embeddings require external-primary store mode"
+                )
+        return self
 
     @classmethod
     def from_env(cls, project_root: Path | None = None) -> Self:
@@ -96,6 +128,15 @@ class RuntimeSettings(BaseModel):
             database_path=database_path,
             vector_backend=value("AERODIAGNOSIS_VECTOR_BACKEND", "sqlite"),
             graph_backend=value("AERODIAGNOSIS_GRAPH_BACKEND", "sqlite"),
+            embedding_backend=value("AERODIAGNOSIS_EMBEDDING_BACKEND", "hashing"),
+            embedding_dimensions=int(value("AERODIAGNOSIS_EMBEDDING_DIMENSIONS", "256")),
+            embedding_base_url=value("AERODIAGNOSIS_EMBEDDING_BASE_URL") or None,
+            embedding_model=value("AERODIAGNOSIS_EMBEDDING_MODEL") or None,
+            embedding_api_key=(
+                SecretStr(value("AERODIAGNOSIS_EMBEDDING_API_KEY"))
+                if value("AERODIAGNOSIS_EMBEDDING_API_KEY")
+                else None
+            ),
             external_store_mode=value("AERODIAGNOSIS_EXTERNAL_STORE_MODE", "local-first"),
             chroma_host=value("AERODIAGNOSIS_CHROMA_HOST", "127.0.0.1"),
             chroma_port=int(value("AERODIAGNOSIS_CHROMA_PORT", "8000")),
