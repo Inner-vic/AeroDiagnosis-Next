@@ -72,14 +72,19 @@ def bootstrap(settings: RuntimeSettings | None = None) -> Application:
     memory = SQLiteConversationMemory(configured.database_path)
     operation_ledger = SQLiteOperationLedger(configured.database_path)
     knowledge_enhancement_store = SQLiteKnowledgeEnhancementStore(configured.database_path)
-    ingestion = DocumentIngestionService(manifest, vector_store)
+    seed_ingestion = DocumentIngestionService(manifest, vector_store)
     if configured.seed_demo_content:
         seed_demo_content(
-            ingestion=ingestion,
+            ingestion=seed_ingestion,
             manifest=manifest,
             graph_store=graph_store,
             case_store=case_store,
         )
+    ingestion = DocumentIngestionService(
+        manifest,
+        vector_store,
+        graph_store=graph_store,
+    )
     tools = DiagnosticToolset(
         vector_store=vector_store,
         graph_store=graph_store,
