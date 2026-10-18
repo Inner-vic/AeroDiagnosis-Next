@@ -1,0 +1,29 @@
+{
+  "source": "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\.runtime\\controlled-scenario-v1\\test-summary.json",
+  "source_sha256": "7ba7738222b42fff170461abe634579523b6d9acc95e5aa4a6ad89ed593039ad",
+  "matplotlib": "3.10.3",
+  "width_inches": 14,
+  "height_inches": 6.6,
+  "dpi": 300,
+  "font": "Microsoft YaHei",
+  "font_file": "C:\\Windows\\Fonts\\msyh.ttc",
+  "normalization": "complete evidence@5 proportion *100; no exclusions or smoothing",
+  "uncertainty": "descriptive fixed test counts only; paired template-bootstrap interval separately in report",
+  "template_clusters": 8,
+  "min_cell_text_contrast": 7.379273362407273,
+  "journal_requirements": "Not specified; provisional general manuscript figure, verify publisher requirements before submission",
+  "alt_text_zh": "八方法总体Top5完整率从47.22%到68.06%。三路68.06%、双文本66.67%。条件组合各方法均零；三边链图谱单路100%、三路8.33%。全部方法和零值均展示。",
+  "files": {
+    "figure-data.json": "13b4a8ee56809e4bcd963d5deb17d6a8d36933df8d42a0c813ccf0bbb91f26a3",
+    "plot_controlled_scenario_v1.py": "9efda668d429663d297a7303a046ad468fb687f970744d5ee30de8ad4d598805",
+    "results.png": "3741f18d6a290355e75967e7944709f28d9d6da046813c5c5c80975d54a9f0cc",
+    "results.svg": "0158304bcbcbf7b1408c083de0e9f07faa44063c94259df655308595d70130a9"
+  },
+  "visual_inspection": {
+    "inspected": true,
+    "all_methods_and_zero_values_retained": true,
+    "labels_readable": true,
+    "no_visible_clipping": true,
+    "unit": "provisional manuscript draft, journal format pending"
+  }
+}

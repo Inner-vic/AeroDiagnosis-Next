@@ -1,0 +1,55 @@
+{
+  "title": "自建航空发动机场景评测集",
+  "schema": "controlled-scenario@1",
+  "seed": 20261017,
+  "provenance": "synthetic_rule_generated",
+  "model_generated": false,
+  "expert_reviewed": false,
+  "construction_zh": "程序化构造的虚拟试验台场景。部件术语来自航空发动机背景，各因果边、阈值和记录均为本实验明示设定，未逐条获得真实试验确认，不是维修记录或事故调查数据。",
+  "graph_zh": "图只由文本中的主链和监测因果规则子集直接编译，每条边有对应原始证据记录；图不覆盖参数、适用条件和逆推边界记录，通道覆盖不等。评价结构正确的因果规则图辅助上界，不测试真实自动抽取能力。",
+  "evidence_unit_zh": "每条规则为独立证据记录，统一按记录级检索；没有可检索的场景总摘要。场景容器可汇总全部记录，但不是检索单位。本实验研究人为控制的证据分散，不冒充真实文档严格跨块来源认证。",
+  "split_zh": "按12个不同机理模板划分：4模板开发、8模板测试，每模板3个参数化实例，每实例6题。同模板实例与共享链前缀题相关，统计按模板聚类。测试为受控模板留出，不是现实维修外部验证。",
+  "intended_strata": [
+    "exact",
+    "paraphrase",
+    "conditions",
+    "chain2",
+    "chain3",
+    "boundary"
+  ],
+  "methods": [
+    "B",
+    "D",
+    "G",
+    "BD",
+    "BG",
+    "DG",
+    "BDG",
+    "BDG_entity"
+  ],
+  "budgets": {
+    "total_candidates": 150,
+    "fused_pool": 50,
+    "final_chunks": 10,
+    "per_document": 5,
+    "context_tokens": 4096
+  },
+  "dev_weight_grid": [
+    0.25,
+    0.5,
+    1.0,
+    2.0
+  ],
+  "selection": "development complete@5, then complete reciprocal rank@10, then lower graph/dense weight; no test-based adjustment",
+  "statistics": "Template-cluster bootstrap20000, seed20261017; confirmatory only for this declared controlled population. Primary BDG vs tuned BD complete@5; other contrasts descriptive. No claim that three>two>one must hold.",
+  "metrics": "Finite rule-world relevance: necessary-record recall, precision,nDCG,first-relevant MRR and complete-support MRR, complete evidence@1/3/5/10. Not generated-answer accuracy.",
+  "leakage": "Retriever receives query and common active versions only, never question kind, template ID, supports, hops, answer or split.",
+  "background_inspiration_only": [
+    "https://ntrs.nasa.gov/citations/20040086786",
+    "https://aeroenginesafety.tugraz.at/doku.php?id=7:71:712:712"
+  ],
+  "paid_api_calls": 0,
+  "production_changes": false,
+  "budget_interpretation": "150为通道请求/截断候选预算；各通道实际返回量及图遍历工作量不同，不宣称相同实际计算量或服务延迟。",
+  "split_limit": "开发测试共享同一问题/规则语法，按机理词汇模板留出；并非完全生成过程独立。"
+}

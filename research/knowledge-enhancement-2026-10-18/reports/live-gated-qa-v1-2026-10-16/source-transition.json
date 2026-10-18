@@ -1,0 +1,11 @@
+{
+  "reason": "User-authorized live QA integration after completed frozen benchmark; original files preserved for reproduction",
+  "frozen_originals": {
+    "src/aerodiagnosis/adapters/api/app.py": "4508f6a3ebe7c1c4da29ba06e83dae568a3fba3d2d823ca071dd3c97b566b9ed",
+    "src/aerodiagnosis/adapters/llm/openai_compatible.py": "7a23c87f193d78ed7186749938811233a2bdcb2dd9af96cb3e0d3acce2358238",
+    "src/aerodiagnosis/adapters/web/static/app.js": "c323b5cb1e5864127c4ddb5d1b9480bcd1c51a7d6fd6ec893e2528a2b92318e2",
+    "src/aerodiagnosis/adapters/web/static/index.html": "53c9cb51926a2850848660996e095265c296b3a6e8ecd603d5fd325979ac6663",
+    "tests/unit/frontend_knowledge_behavior.cjs": "265a52d9ac7be4649ab3a45d8b6fa24470d279dc497871d4b0f456459bd0a2a8"
+  },
+  "benchmark_data_and_predictions_modified": false
+}

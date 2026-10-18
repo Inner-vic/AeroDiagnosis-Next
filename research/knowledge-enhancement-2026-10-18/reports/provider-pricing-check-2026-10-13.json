@@ -1,0 +1,17 @@
+{
+  "checked_date": "2026-10-13",
+  "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+  "verification": "official documentation retrieved through web search; authenticated model listing not possible without environment credential",
+  "primary_requested_model": "deepseek-flash",
+  "documented_model_version": "DeepSeek-V4.1-Flash",
+  "peak_cny_per_million_tokens": {
+    "input_uncached": 2,
+    "input_cached": 0.04,
+    "output": 8
+  },
+  "budget_policy": "reserve using peak prices; these are upper estimates, not provider invoices",
+  "credential_environment_configured": false,
+  "paid_calls_this_execution": 0,
+  "spent_this_execution_cny": 0,
+  "existing_provider_check": "historical .runtime check is not evidence current process has an active fresh credential"
+}

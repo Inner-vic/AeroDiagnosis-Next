@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-18",
+  "export_counts": {
+    "documents": 9,
+    "chunks": 82,
+    "lexical_chunks": 82,
+    "parent_contexts": 80,
+    "graph_nodes": 144,
+    "graph_edges": 72,
+    "metadata_only_documents": 3
+  },
+  "controlled_v1_v2": "AI-assisted authored templates and deterministic programmatic rule-world expansion, not actual maintenance observations",
+  "answer_evaluation": "12 fresh questions on seen FAA sources plus12 sampled seen controlled chain3 questions,48 paired answers,independent method-blinded AI nonexpert review; no pooled real-world accuracy",
+  "historical": "question annotations/protocols/source manifests are historical seen material; not a new holdout",
+  "rights": "Repository MIT applies to implementation; third-party government text retains its source status and exclusions; do not apply MIT to publisher works; original images/PDF captures omitted",
+  "graph": {
+    "verified": true,
+    "backend": "Neo4j external-primary",
+    "all_nodes": 1594,
+    "all_edges": 797,
+    "export_node_ids_equal_mirror": false,
+    "export_edge_ids_equal_mirror": false,
+    "export_source": "external primary snapshot; SQLite mirror discrepancy recorded, not silently substituted"
+  }
+}

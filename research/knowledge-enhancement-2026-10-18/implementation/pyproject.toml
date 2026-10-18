@@ -1,0 +1,107 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "aerodiagnosis"
+version = "0.3.0a0"
+description = "Evidence-grounded adaptive diagnostic agent for aero-engine gas-path faults"
+readme = "README.md"
+requires-python = ">=3.13,<3.15"
+license = { file = "LICENSE" }
+authors = [{ name = "AeroDiagnosis contributors" }]
+dependencies = [
+  "fastapi>=0.115,<1",
+  "fonttools>=4.59,<5",
+  "mcp>=2.2,<3",
+  "pypdf>=6.10,<7",
+  "pydantic>=2.13.5,<3",
+  "uvicorn>=0.34,<1",
+  "python-docx>=1.2.0",
+  "openpyxl>=3.1.5",
+  "beautifulsoup4>=4.15.0",
+]
+
+[project.optional-dependencies]
+local-semantic = [
+  "onnxruntime==1.31.0",
+  "tokenizers==0.23.3",
+  "numpy==2.5.4",
+]
+upstream = [
+  "docling-slim[convert-core,format-html,format-office,format-pdf,models-local]==2.138.0",
+  "docling-core[chunking]==2.101.1",
+  "langextract==1.7.1",
+  "opencv-python-headless>=4.12,<5",
+]
+external-stores = [
+  "chromadb>=1.5.9,<2",
+  "neo4j>=5.26,<7",
+]
+
+[project.scripts]
+aerodiagnosis-evaluate = "aerodiagnosis.evaluation:main"
+aerodiagnosis-ingest = "aerodiagnosis.cli:main"
+aerodiagnosis-mcp = "aerodiagnosis.adapters.mcp:main"
+aerodiagnosis-migrate-v2 = "aerodiagnosis.migration:main"
+aerodiagnosis-retrieval-benchmark = "aerodiagnosis.retrieval_benchmark:main"
+aerodiagnosis-retrieval-experiment = "aerodiagnosis.retrieval_experiment:main"
+aerodiagnosis-server = "aerodiagnosis.adapters.api:main"
+aerodiagnosis-sync = "aerodiagnosis.sync:main"
+
+[dependency-groups]
+dev = [
+  "hatchling>=1.27,<2",
+  "mypy>=1.17,<2",
+  "pytest>=8.4,<9",
+  "pytest-cov>=6.2,<8",
+  "ruff>=0.12,<1",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/aerodiagnosis"]
+
+[tool.hatch.build]
+exclude = [
+  "/.runtime",
+  "/.test-tmp",
+  "/.uv-cache",
+  "/.venv",
+  "/dist",
+]
+
+[tool.pytest.ini_options]
+addopts = "-ra --strict-config --strict-markers"
+testpaths = ["tests"]
+
+[tool.coverage.run]
+branch = true
+source = ["aerodiagnosis"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+fail_under = 85
+
+[tool.ruff]
+target-version = "py313"
+line-length = 100
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+
+[tool.mypy]
+python_version = "3.13"
+strict = true
+packages = ["aerodiagnosis"]
+mypy_path = "src"
+
+[[tool.mypy.overrides]]
+module = ["chromadb", "neo4j", "openpyxl", "docx", "bs4"]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["docling.*", "docling_core.*", "langextract.*", "transformers.*"]
+follow_imports = "skip"
+ignore_missing_imports = true

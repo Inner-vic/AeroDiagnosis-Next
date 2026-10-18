@@ -1,0 +1,1146 @@
+{
+  "results": [
+    {
+      "name": "source_fact",
+      "seconds": 2.918,
+      "citation_checks": 5,
+      "response": {
+        "kind": "grounded_qa",
+        "run_id": "9e817b9a-bda1-4e30-81bb-07fa13097f75",
+        "question": "压气机叶片损坏可能由什么引起？",
+        "evidence": [
+          {
+            "id": "28a2d84f11f96e9202ce2a06dbcdedefaf4a3a95ccef177efdc808918521658b",
+            "chunk_id": "28a2d84f11f96e9202ce2a06dbcdedefaf4a3a95ccef177efdc808918521658b",
+            "document_id": "prebuilt-compressor-cleaning",
+            "version_id": "fee5cf715c45112a849c12350ac1d44023d5e8af047d641c2590ae3e14893326",
+            "title": "压气机污染与清洗（资料节选）.pdf",
+            "text": "压气机部分\n压气机（即冷端）的维护之所以值得关注，是因为叶片损坏可能导致发动机失效。叶片的大部分损坏源于外来物被吸入涡轮发动机进气道。近地面的大气中充满了微小的灰尘、油、烟灰及其他外来物颗粒。大量空气被引入压气机，离心力将灰尘颗粒向外甩出，使其积聚形成涂层，附着在机匣、叶片和压气机叶片上。压气机叶片上灰尘的积聚降低了叶片的空气动力学效率，从而导致发动机性能下降。灰尘沉积对叶片效率的损害方式类似于飞机机翼在结冰条件下的情况。压气机部件上的外来沉积物可导致加速不良和排气温度过高。\n如果允许外来颗粒积聚到足够数量，最终结果将是效率低下。该状况可通过定期检查、清洁和修理压气机部件来补救。",
+            "text_sha256": "ae5338d9b6f2fc4f9b3341c23d7c259ff5336babfbca64b7b8c925b32350341a",
+            "text_kind": "chinese_translation",
+            "locator": {
+              "coordinates": {
+                "canonical_sha256": "29a9224bfdeb9f135da13e521f74489c4b04c5e34a73627074dada0bba21f6c4",
+                "contains_table": false,
+                "docling_refs": [
+                  "#/texts/1",
+                  "#/texts/2"
+                ],
+                "end": 1163,
+                "headings": [
+                  "Compressor Section"
+                ],
+                "original_sha256": "b5e083871ef120602cb6078d40ed5fc7e5d3d655d5cb25eefe670c7820a2023c",
+                "pages": [
+                  1
+                ],
+                "provenance": [
+                  {
+                    "bbox": {
+                      "b": 518.7655269230769,
+                      "coord_origin": "BOTTOMLEFT",
+                      "l": 54.0,
+                      "r": 291.1050000000003,
+                      "t": 714.8397
+                    },
+                    "charspan": [
+                      0,
+                      935
+                    ],
+                    "page_no": 1
+                  },
+                  {
+                    "bbox": {
+                      "b": 456.2655269230769,
+                      "coord_origin": "BOTTOMLEFT",
+                      "l": 54.0,
+                      "r": 291.02500000000003,
+                      "t": 502.3397
+                    },
+                    "charspan": [
+                      0,
+                      208
+                    ],
+                    "page_no": 1
+                  }
+                ],
+                "start": 0
+              },
+              "kind": "docling_chunk"
+            },
+            "source_url": "https://www.faa.gov/sites/faa.gov/files/12_amtp_ch10_0.pdf",
+            "score": 1.0000000000000002,
+            "route_ranks": {
+              "B": 1,
+              "D": 1
+            },
+            "applicability_status": "not_checked"
+          },
+          {
+            "id": "418ea34d63e5c8fb160d612d5ae061318c0da5f21d58618e95d90cc8f2ecf2f6",
+            "chunk_id": "418ea34d63e5c8fb160d612d5ae061318c0da5f21d58618e95d90cc8f2ecf2f6",
+            "document_id": "prebuilt-compressor-cleaning",
+            "version_id": "fee5cf715c45112a849c12350ac1d44023d5e8af047d641c2590ae3e14893326",
+            "title": "压气机污染与清洗（资料节选）.pdf",
+            "text": "叶片损坏的原因\n松散物体常常意外地或由于疏忽而进入发动机。外来物损伤（FOD），如铅笔、工具和手电筒，常常被吸入发动机，并可能对风扇叶片造成损坏。[图10-59] 在运转的涡轮发动机周围工作时，不要将任何物体放在口袋里。\n留在进气口中的工具可能会在后续启动时被吸入发动机，从而对压气机转子造成无法修复的损坏。这个问题的简单解决办法是，对照工具清单检查工具。在启动涡轮发动机之前，对发动机进气道进行仔细检查，以确保在工作完成后没有将螺母、螺栓、锁线或工具等物品留在那里。\n图10-60显示了轴流式发动机叶片损坏的一些示例。叶片损坏的描述和可能原因见图10-61。如果点蚀在允许公差范围内，则轴流式发动机压气机静子叶片上的腐蚀点蚀不被认为是严重的。不要试图通过校直、钎焊、焊接或软钎焊来修理任何叶片。使用克罗克斯布、细锉和油石，通过去除最少的材料并留下与新零件相当的表面光洁度来修整损伤。这种修整的目的是尽量减少在凹痕、划痕或裂纹处集中的应力。",
+            "text_sha256": "aa2b4a6dc7026f862dd2ab7f55fa7a7e85f84dd5086b5984e9b5f28764ccfbdb",
+            "text_kind": "chinese_translation",
+            "locator": {
+              "coordinates": {
+                "canonical_sha256": "29a9224bfdeb9f135da13e521f74489c4b04c5e34a73627074dada0bba21f6c4",
+                "contains_table": false,
+                "docling_refs": [
+                  "#/texts/8",
+                  "#/texts/9",
+                  "#/texts/10"
+                ],
+                "end": 5039,
+                "headings": [
+                  "Causes of Blade Damage"
+                ],
+                "original_sha256": "b5e083871ef120602cb6078d40ed5fc7e5d3d655d5cb25eefe670c7820a2023c",
+                "pages": [
+                  1
+                ],
+                "provenance": [
+                  {
+                    "bbox": {
+                      "b": 456.6122269230769,
+                      "coord_origin": "BOTTOMLEFT",
+                      "l": 303.0,
+                      "r": 540.083,
+                      "t": 527.6864
+                    },
+                    "charspan": [
+                      0,
+                      322
+                    ],
+                    "page_no": 1
+                  },
+                  {
+                    "bbox": {
+                      "b": 356.6122269230769,
+                      "coord_origin": "BOTTOMLEFT",
+                      "l": 303.0,
+                      "r": 540.0229999999995,
+                      "t": 440.1864
+                    },
+                    "charspan": [
+                      0,
+                      427
+                    ],
+                    "page_no": 1
+                  },
+                  {
+                    "bbox": {
+                      "b": 206.61222692307695,
+                      "coord_origin": "BOTTOMLEFT",
+                      "l": 303.0,
+                      "r": 540.1399999999999,
+                      "t": 340.1864
+                    },
+                    "charspan": [
+                      0,
+                      647
+                    ],
+                    "page_no": 1
+                  }
+                ],
+                "start": 3618
+              },
+              "kind": "docling_chunk"
+            },
+            "source_url": "https://www.faa.gov/sites/faa.gov/files/12_amtp_ch10_0.pdf",
+            "score": 0.980747567844342,
+            "route_ranks": {
+              "B": 2,
+              "D": 3
+            },
+            "applicability_status": "not_checked"
+          },
+          {
+            "id": "c4a27b47c01318637298d71d26ee9d21e91d763f2cb265adf8bb40aaa5d6c161",
+            "chunk_id": "c4a27b47c01318637298d71d26ee9d21e91d763f2cb265adf8bb40aaa5d6c161",
+            "document_id": "prebuilt-compressor-cleaning",
+            "version_id": "fee5cf715c45112a849c12350ac1d44023d5e8af047d641c2590ae3e14893326",
+            "title": "压气机污染与清洗（资料节选）.pdf",
+            "text": "检查与清洁\n只要有可能，叶片上的磨石修整和局部返工应平行于叶片的长度方向进行。返工必须用手工完成，使用磨石、锉刀或砂布。不要使用电动工具对整个叶片区域进行抛光。修复区域的表面光洁度必须与新叶片相当。在离心式发动机上，如果不先拆下进气滤网，就很难检查压气机导流叶轮。拆下滤网后，清洁压气机导流叶轮并用强光检查。缓慢转动压气机，检查每个叶片是否有裂纹。查看前缘是否有裂纹。裂纹通常是部件报废的原因。压气机导流叶轮通常是在发动机运行期间因外来物撞击而损坏的部件。\n压气机导流叶轮的修复方法是，如果关键带（距外缘1 1/2至2 1/2英寸）内的刻痕或凹痕深度不超过发动机制造商的服务或大修说明手册中规定的值，则通过磨石修整并过渡修整这些刻痕和凹痕。通过磨石修整去除超出损伤深度的材料以去除由此产生的冷作金属，从而修复刻痕。必须在过渡修整的边缘施加足够大的圆角。刻痕过渡修整后，应使用细砂布将其平滑。在导流叶轮叶片侧面发现的点蚀刻痕或腐蚀也以类似方式通过过渡修整去除。",
+            "text_sha256": "54942ea28eb462f940e8acc00eb9fb3f31f2433adbf1a0d93f0a39033e69b929",
+            "text_kind": "chinese_translation",
+            "locator": {
+              "coordinates": {
+                "canonical_sha256": "29a9224bfdeb9f135da13e521f74489c4b04c5e34a73627074dada0bba21f6c4",
+                "contains_table": false,
+                "docling_refs": [
+                  "#/texts/5",
+                  "#/texts/6"
+                ],
+                "end": 3616,
+                "headings": [
+                  "Inspection & Cleaning"
+                ],
+                "original_sha256": "b5e083871ef120602cb6078d40ed5fc7e5d3d655d5cb25eefe670c7820a2023c",
+                "pages": [
+                  1
+                ],
+                "provenance": [
+                  {
+                    "bbox": {
+                      "b": 68.26552692307689,
+                      "coord_origin": "BOTTOMLEFT",
+                      "l": 54.0,
+                      "r": 291.0179999999999,
+                      "t": 214.3397
+                    },
+                    "charspan": [
+                      0,
+                      714
+                    ],
+                    "page_no": 1
+                  },
+                  {
+                    "bbox": {
+                      "b": 707.612226923077,
+                      "coord_origin": "BOTTOMLEFT",
+                      "l": 303.0,
+                      "r": 539.9199999999996,
+                      "t": 728.6864
+                    },
+                    "charspan": [
+                      715,
+                      827
+                    ],
+                    "page_no": 1
+                  },
+                  {
+                    "bbox": {
+                      "b": 557.612226923077,
+                      "coord_origin": "BOTTOMLEFT",
+                      "l": 303.0,
+                      "r": 540.0990000000012,
+                      "t": 691.1864
+                    },
+                    "charspan": [
+                      0,
+                      630
+                    ],
+                    "page_no": 1
+                  }
+                ],
+                "start": 2136
+              },
+              "kind": "docling_chunk"
+            },
+            "source_url": "https://www.faa.gov/sites/faa.gov/files/12_amtp_ch10_0.pdf",
+            "score": 0.9652281746031747,
+            "route_ranks": {
+              "B": 3,
+              "D": 4
+            },
+            "applicability_status": "not_checked"
+          },
+          {
+            "id": "c27603351467e6de583e89b8462ac7ae393317ff530b7482490e0791f7009785",
+            "chunk_id": "c27603351467e6de583e89b8462ac7ae393317ff530b7482490e0791f7009785",
+            "document_id": "prebuilt-compressor-cleaning",
+            "version_id": "fee5cf715c45112a849c12350ac1d44023d5e8af047d641c2590ae3e14893326",
+            "title": "压气机污染与清洗（资料节选）.pdf",
+            "text": "叶片损坏的原因\n对离心式发动机的进气导流叶片、旋流叶片和滤网进行检查和修理时，必须使用强光。检查滤网组件是否有断裂、撕裂或孔洞。如果金属丝没有磨损得过细，滤网可以浸锡以收紧金属丝网。如果框架条或凸耳已与滤网框架分离，可能需要重新钎焊。\n检查导流叶片和旋流叶片是否松动。检查导流叶片的外缘，特别注意\n图10-57. 典型的压气机叶片修理极限。\n图10-58. 损坏叶片修理示例。",
+            "text_sha256": "405a17ede3ca956fc972ff2f611b5c03a464e0b539dc13ff405742b4102ad1cc",
+            "text_kind": "chinese_translation",
+            "locator": {
+              "coordinates": {
+                "canonical_sha256": "29a9224bfdeb9f135da13e521f74489c4b04c5e34a73627074dada0bba21f6c4",
+                "contains_table": false,
+                "docling_refs": [
+                  "#/texts/11",
+                  "#/texts/12",
+                  "#/texts/14",
+                  "#/texts/81"
+                ],
+                "end": 5683,
+                "headings": [
+                  "Causes of Blade Damage"
+                ],
+                "original_sha256": "b5e083871ef120602cb6078d40ed5fc7e5d3d655d5cb25eefe670c7820a2023c",
+                "pages": [
+                  1,
+                  2
+                ],
+                "provenance": [
+                  {
+                    "bbox": {
+                      "b": 106.61222692307695,
+                      "coord_origin": "BOTTOMLEFT",
+                      "l": 303.0,
+                      "r": 540.0899999999999,
+                      "t": 190.18640000000005
+                    },
+                    "charspan": [
+                      0,
+                      388
+                    ],
+                    "page_no": 1
+                  },
+                  {
+                    "bbox": {
+                      "b": 69.11222692307695,
+                      "coord_origin": "BOTTOMLEFT",
+                      "l": 303.0,
+                      "r": 540.0179999999996,
+                      "t": 90.18640000000005
+                    },
+                    "charspan": [
+                      0,
+                      123
+                    ],
+                    "page_no": 1
+                  },
+                  {
+                    "bbox": {
+                      "b": 318.2614848484848,
+                      "coord_origin": "BOTTOMLEFT",
+                      "l": 54.0,
+                      "r": 247.01320000000013,
+                      "t": 326.259
+                    },
+                    "charspan": [
+                      0,
+                      53
+                    ],
+                    "page_no": 2
+                  },
+                  {
+                    "bbox": {
+                      "b": 63.39148484848488,
+                      "coord_origin": "BOTTOMLEFT",
+                      "l": 54.0,
+                      "r": 250.2550000000001,
+                      "t": 71.38900000000001
+                    },
+                    "charspan": [
+                      0,
+                      52
+                    ],
+                    "page_no": 2
+                  }
+                ],
+                "start": 5041
+              },
+              "kind": "docling_chunk"
+            },
+            "source_url": "https://www.faa.gov/sites/faa.gov/files/12_amtp_ch10_0.pdf",
+            "score": 0.9592741935483872,
+            "route_ranks": {
+              "B": 4,
+              "D": 2
+            },
+            "applicability_status": "not_checked"
+          },
+          {
+            "id": "2184a113bdfaa8091e5bf913c80b817aa6d28b7950762bd04e7cbaf9fc3f61ff",
+            "chunk_id": "2184a113bdfaa8091e5bf913c80b817aa6d28b7950762bd04e7cbaf9fc3f61ff",
+            "document_id": "prebuilt-compressor-cleaning",
+            "version_id": "fee5cf715c45112a849c12350ac1d44023d5e8af047d641c2590ae3e14893326",
+            "title": "压气机污染与清洗（资料节选）.pdf",
+            "text": "检查与清洁\n如果能够在不超出制造商规定的允许限值的情况下去除损伤，则轴流式发动机压气机叶片的轻微损伤可以修复。典型的压气机叶片修复限值如图10-57所示。如果叶片前缘和后缘的圆滑损伤在叶片另一侧明显可见，且损伤仅位于叶片外半部分，并且压痕不超过发动机制造商的服务和翻修指导手册中规定的值，则通常可接受而无需返工。当处理叶片内半部分时，必须极其谨慎地处理损伤。修复后的压气机叶片通过磁粉或荧光渗透检查方法进行检查，以确保所有损伤痕迹已被去除。所有修复必须良好过渡，使表面光滑。[图10-58] 任何区域都不允许有任何程度的裂纹。",
+            "text_sha256": "d9b7762506def1bf287dd16100f95782d69e05c9f09072a6547ec33409215d75",
+            "text_kind": "chinese_translation",
+            "locator": {
+              "coordinates": {
+                "canonical_sha256": "29a9224bfdeb9f135da13e521f74489c4b04c5e34a73627074dada0bba21f6c4",
+                "contains_table": false,
+                "docling_refs": [
+                  "#/texts/4"
+                ],
+                "end": 2134,
+                "headings": [
+                  "Inspection & Cleaning"
+                ],
+                "original_sha256": "b5e083871ef120602cb6078d40ed5fc7e5d3d655d5cb25eefe670c7820a2023c",
+                "pages": [
+                  1
+                ],
+                "provenance": [
+                  {
+                    "bbox": {
+                      "b": 230.7655269230769,
+                      "coord_origin": "BOTTOMLEFT",
+                      "l": 54.0,
+                      "r": 291.08599999999956,
+                      "t": 426.8397
+                    },
+                    "charspan": [
+                      0,
+                      947
+                    ],
+                    "page_no": 1
+                  }
+                ],
+                "start": 1165
+              },
+              "kind": "docling_chunk"
+            },
+            "source_url": "https://www.faa.gov/sites/faa.gov/files/12_amtp_ch10_0.pdf",
+            "score": 0.9384615384615386,
+            "route_ranks": {
+              "B": 5,
+              "D": 5
+            },
+            "applicability_status": "not_checked"
+          }
+        ],
+        "paths": [],
+        "retrieval": {
+          "policy": "live-source-scoped-gated-bdg@1",
+          "graph_enabled": false,
+          "reason": "no_verified_path",
+          "scope_versions": [
+            "fee5cf715c45112a849c12350ac1d44023d5e8af047d641c2590ae3e14893326"
+          ],
+          "weights": {
+            "B": 1.0,
+            "D": 0.25,
+            "G": 0.25
+          },
+          "requested_per_route": 50,
+          "graph_errors": [],
+          "path_rejections": {
+            "shape": 4
+          },
+          "context_tokens": 1211,
+          "source_duplicates_skipped": 0,
+          "document_cap_skipped": 0,
+          "route_counts": {
+            "B": 5,
+            "D": 5
+          },
+          "verified_path_count": 0,
+          "complete_selected_paths": 0,
+          "missing_path_context": false,
+          "elapsed_ms": 38.37
+        },
+        "status": "evidence_ready",
+        "claims": [
+          {
+            "text": "叶片的大部分损坏源于外来物被吸入涡轮发动机进气道。",
+            "support_span_ids": [
+              "07ff7c913d34af2170c51af3d33925914011e3fc4b6e865fd6fc2ce7bcab4788"
+            ],
+            "evidence_ids": [
+              "28a2d84f11f96e9202ce2a06dbcdedefaf4a3a95ccef177efdc808918521658b"
+            ],
+            "citations": [
+              {
+                "span_id": "07ff7c913d34af2170c51af3d33925914011e3fc4b6e865fd6fc2ce7bcab4788",
+                "evidence_id": "28a2d84f11f96e9202ce2a06dbcdedefaf4a3a95ccef177efdc808918521658b",
+                "start": 42,
+                "end": 67,
+                "text_sha256": "ae5338d9b6f2fc4f9b3341c23d7c259ff5336babfbca64b7b8c925b32350341a",
+                "text_kind": "provided_display_text",
+                "support_quote": "叶片的大部分损坏源于外来物被吸入涡轮发动机进气道。",
+                "chunk_id": "28a2d84f11f96e9202ce2a06dbcdedefaf4a3a95ccef177efdc808918521658b"
+              }
+            ]
+          },
+          {
+            "text": "外来物损伤（FOD），如铅笔、工具和手电筒，常常被吸入发动机，并可能对风扇叶片造成损坏。",
+            "support_span_ids": [
+              "c60f0aff1ca5d5e50b51e2e00f54f815123c79f4bda276de1ad9092676ee53f7"
+            ],
+            "evidence_ids": [
+              "418ea34d63e5c8fb160d612d5ae061318c0da5f21d58618e95d90cc8f2ecf2f6"
+            ],
+            "citations": [
+              {
+                "span_id": "c60f0aff1ca5d5e50b51e2e00f54f815123c79f4bda276de1ad9092676ee53f7",
+                "evidence_id": "418ea34d63e5c8fb160d612d5ae061318c0da5f21d58618e95d90cc8f2ecf2f6",
+                "start": 29,
+                "end": 73,
+                "text_sha256": "aa2b4a6dc7026f862dd2ab7f55fa7a7e85f84dd5086b5984e9b5f28764ccfbdb",
+                "text_kind": "provided_display_text",
+                "support_quote": "外来物损伤（FOD），如铅笔、工具和手电筒，常常被吸入发动机，并可能对风扇叶片造成损坏。",
+                "chunk_id": "418ea34d63e5c8fb160d612d5ae061318c0da5f21d58618e95d90cc8f2ecf2f6"
+              }
+            ]
+          },
+          {
+            "text": "留在进气口中的工具可能会在后续启动时被吸入发动机，从而对压气机转子造成无法修复的损坏。",
+            "support_span_ids": [
+              "4b25d5a22ef85a37cc1125b0a273d676ad5f9cb48b713dd4237b095bdd14e10e"
+            ],
+            "evidence_ids": [
+              "418ea34d63e5c8fb160d612d5ae061318c0da5f21d58618e95d90cc8f2ecf2f6"
+            ],
+            "citations": [
+              {
+                "span_id": "4b25d5a22ef85a37cc1125b0a273d676ad5f9cb48b713dd4237b095bdd14e10e",
+                "evidence_id": "418ea34d63e5c8fb160d612d5ae061318c0da5f21d58618e95d90cc8f2ecf2f6",
+                "start": 111,
+                "end": 154,
+                "text_sha256": "aa2b4a6dc7026f862dd2ab7f55fa7a7e85f84dd5086b5984e9b5f28764ccfbdb",
+                "text_kind": "provided_display_text",
+                "support_quote": "留在进气口中的工具可能会在后续启动时被吸入发动机，从而对压气机转子造成无法修复的损坏。",
+                "chunk_id": "418ea34d63e5c8fb160d612d5ae061318c0da5f21d58618e95d90cc8f2ecf2f6"
+              }
+            ]
+          },
+          {
+            "text": "压气机导流叶轮通常是在发动机运行期间因外来物撞击而损坏的部件。",
+            "support_span_ids": [
+              "6a62a6ecace2cedb96cb9e56772646143c14870bf1daa2ecff9883c8f3a8446d"
+            ],
+            "evidence_ids": [
+              "c4a27b47c01318637298d71d26ee9d21e91d763f2cb265adf8bb40aaa5d6c161"
+            ],
+            "citations": [
+              {
+                "span_id": "6a62a6ecace2cedb96cb9e56772646143c14870bf1daa2ecff9883c8f3a8446d",
+                "evidence_id": "c4a27b47c01318637298d71d26ee9d21e91d763f2cb265adf8bb40aaa5d6c161",
+                "start": 197,
+                "end": 228,
+                "text_sha256": "54942ea28eb462f940e8acc00eb9fb3f31f2433adbf1a0d93f0a39033e69b929",
+                "text_kind": "provided_display_text",
+                "support_quote": "压气机导流叶轮通常是在发动机运行期间因外来物撞击而损坏的部件。",
+                "chunk_id": "c4a27b47c01318637298d71d26ee9d21e91d763f2cb265adf8bb40aaa5d6c161"
+              }
+            ]
+          },
+          {
+            "text": "松散物体常常意外地或由于疏忽而进入发动机。",
+            "support_span_ids": [
+              "5aee57b941d2ca1244efeaa44ae6b94d2ca153c7d13568f04527967c7d153ed0"
+            ],
+            "evidence_ids": [
+              "418ea34d63e5c8fb160d612d5ae061318c0da5f21d58618e95d90cc8f2ecf2f6"
+            ],
+            "citations": [
+              {
+                "span_id": "5aee57b941d2ca1244efeaa44ae6b94d2ca153c7d13568f04527967c7d153ed0",
+                "evidence_id": "418ea34d63e5c8fb160d612d5ae061318c0da5f21d58618e95d90cc8f2ecf2f6",
+                "start": 8,
+                "end": 29,
+                "text_sha256": "aa2b4a6dc7026f862dd2ab7f55fa7a7e85f84dd5086b5984e9b5f28764ccfbdb",
+                "text_kind": "provided_display_text",
+                "support_quote": "松散物体常常意外地或由于疏忽而进入发动机。",
+                "chunk_id": "418ea34d63e5c8fb160d612d5ae061318c0da5f21d58618e95d90cc8f2ecf2f6"
+              }
+            ]
+          }
+        ],
+        "answer": "叶片的大部分损坏源于外来物被吸入涡轮发动机进气道。\n外来物损伤（FOD），如铅笔、工具和手电筒，常常被吸入发动机，并可能对风扇叶片造成损坏。\n留在进气口中的工具可能会在后续启动时被吸入发动机，从而对压气机转子造成无法修复的损坏。\n压气机导流叶轮通常是在发动机运行期间因外来物撞击而损坏的部件。\n松散物体常常意外地或由于疏忽而进入发动机。",
+        "insufficient_evidence": false,
+        "reason": "",
+        "generation": {
+          "model_calls": 2,
+          "context_chunk_ids": [
+            "28a2d84f11f96e9202ce2a06dbcdedefaf4a3a95ccef177efdc808918521658b",
+            "418ea34d63e5c8fb160d612d5ae061318c0da5f21d58618e95d90cc8f2ecf2f6",
+            "c4a27b47c01318637298d71d26ee9d21e91d763f2cb265adf8bb40aaa5d6c161",
+            "c27603351467e6de583e89b8462ac7ae393317ff530b7482490e0791f7009785",
+            "2184a113bdfaa8091e5bf913c80b817aa6d28b7950762bd04e7cbaf9fc3f61ff"
+          ],
+          "context_tokens": 2610,
+          "verification": "span_uncertainty_and_model_support_checked"
+        }
+      }
+    },
+    {
+      "name": "uncertainty_boundary",
+      "seconds": 2.528,
+      "citation_checks": 4,
+      "response": {
+        "kind": "grounded_qa",
+        "run_id": "b2717aa7-d21c-400a-87bd-7401f69ba1a8",
+        "question": "仅凭排气温度升高，是否一定能确定压气机叶片损坏？",
+        "evidence": [
+          {
+            "id": "28a2d84f11f96e9202ce2a06dbcdedefaf4a3a95ccef177efdc808918521658b",
+            "chunk_id": "28a2d84f11f96e9202ce2a06dbcdedefaf4a3a95ccef177efdc808918521658b",
+            "document_id": "prebuilt-compressor-cleaning",
+            "version_id": "fee5cf715c45112a849c12350ac1d44023d5e8af047d641c2590ae3e14893326",
+            "title": "压气机污染与清洗（资料节选）.pdf",
+            "text": "压气机部分\n压气机（即冷端）的维护之所以值得关注，是因为叶片损坏可能导致发动机失效。叶片的大部分损坏源于外来物被吸入涡轮发动机进气道。近地面的大气中充满了微小的灰尘、油、烟灰及其他外来物颗粒。大量空气被引入压气机，离心力将灰尘颗粒向外甩出，使其积聚形成涂层，附着在机匣、叶片和压气机叶片上。压气机叶片上灰尘的积聚降低了叶片的空气动力学效率，从而导致发动机性能下降。灰尘沉积对叶片效率的损害方式类似于飞机机翼在结冰条件下的情况。压气机部件上的外来沉积物可导致加速不良和排气温度过高。\n如果允许外来颗粒积聚到足够数量，最终结果将是效率低下。该状况可通过定期检查、清洁和修理压气机部件来补救。",
+            "text_sha256": "ae5338d9b6f2fc4f9b3341c23d7c259ff5336babfbca64b7b8c925b32350341a",
+            "text_kind": "chinese_translation",
+            "locator": {
+              "coordinates": {
+                "canonical_sha256": "29a9224bfdeb9f135da13e521f74489c4b04c5e34a73627074dada0bba21f6c4",
+                "contains_table": false,
+                "docling_refs": [
+                  "#/texts/1",
+                  "#/texts/2"
+                ],
+                "end": 1163,
+                "headings": [
+                  "Compressor Section"
+                ],
+                "original_sha256": "b5e083871ef120602cb6078d40ed5fc7e5d3d655d5cb25eefe670c7820a2023c",
+                "pages": [
+                  1
+                ],
+                "provenance": [
+                  {
+                    "bbox": {
+                      "b": 518.7655269230769,
+                      "coord_origin": "BOTTOMLEFT",
+                      "l": 54.0,
+                      "r": 291.1050000000003,
+                      "t": 714.8397
+                    },
+                    "charspan": [
+                      0,
+                      935
+                    ],
+                    "page_no": 1
+                  },
+                  {
+                    "bbox": {
+                      "b": 456.2655269230769,
+                      "coord_origin": "BOTTOMLEFT",
+                      "l": 54.0,
+                      "r": 291.02500000000003,
+                      "t": 502.3397
+                    },
+                    "charspan": [
+                      0,
+                      208
+                    ],
+                    "page_no": 1
+                  }
+                ],
+                "start": 0
+              },
+              "kind": "docling_chunk"
+            },
+            "source_url": "https://www.faa.gov/sites/faa.gov/files/12_amtp_ch10_0.pdf",
+            "score": 1.0000000000000002,
+            "route_ranks": {
+              "B": 1,
+              "D": 1
+            },
+            "applicability_status": "not_checked"
+          },
+          {
+            "id": "2184a113bdfaa8091e5bf913c80b817aa6d28b7950762bd04e7cbaf9fc3f61ff",
+            "chunk_id": "2184a113bdfaa8091e5bf913c80b817aa6d28b7950762bd04e7cbaf9fc3f61ff",
+            "document_id": "prebuilt-compressor-cleaning",
+            "version_id": "fee5cf715c45112a849c12350ac1d44023d5e8af047d641c2590ae3e14893326",
+            "title": "压气机污染与清洗（资料节选）.pdf",
+            "text": "检查与清洁\n如果能够在不超出制造商规定的允许限值的情况下去除损伤，则轴流式发动机压气机叶片的轻微损伤可以修复。典型的压气机叶片修复限值如图10-57所示。如果叶片前缘和后缘的圆滑损伤在叶片另一侧明显可见，且损伤仅位于叶片外半部分，并且压痕不超过发动机制造商的服务和翻修指导手册中规定的值，则通常可接受而无需返工。当处理叶片内半部分时，必须极其谨慎地处理损伤。修复后的压气机叶片通过磁粉或荧光渗透检查方法进行检查，以确保所有损伤痕迹已被去除。所有修复必须良好过渡，使表面光滑。[图10-58] 任何区域都不允许有任何程度的裂纹。",
+            "text_sha256": "d9b7762506def1bf287dd16100f95782d69e05c9f09072a6547ec33409215d75",
+            "text_kind": "chinese_translation",
+            "locator": {
+              "coordinates": {
+                "canonical_sha256": "29a9224bfdeb9f135da13e521f74489c4b04c5e34a73627074dada0bba21f6c4",
+                "contains_table": false,
+                "docling_refs": [
+                  "#/texts/4"
+                ],
+                "end": 2134,
+                "headings": [
+                  "Inspection & Cleaning"
+                ],
+                "original_sha256": "b5e083871ef120602cb6078d40ed5fc7e5d3d655d5cb25eefe670c7820a2023c",
+                "pages": [
+                  1
+                ],
+                "provenance": [
+                  {
+                    "bbox": {
+                      "b": 230.7655269230769,
+                      "coord_origin": "BOTTOMLEFT",
+                      "l": 54.0,
+                      "r": 291.08599999999956,
+                      "t": 426.8397
+                    },
+                    "charspan": [
+                      0,
+                      947
+                    ],
+                    "page_no": 1
+                  }
+                ],
+                "start": 1165
+              },
+              "kind": "docling_chunk"
+            },
+            "source_url": "https://www.faa.gov/sites/faa.gov/files/12_amtp_ch10_0.pdf",
+            "score": 0.9747890818858561,
+            "route_ranks": {
+              "B": 2,
+              "D": 5
+            },
+            "applicability_status": "not_checked"
+          },
+          {
+            "id": "c27603351467e6de583e89b8462ac7ae393317ff530b7482490e0791f7009785",
+            "chunk_id": "c27603351467e6de583e89b8462ac7ae393317ff530b7482490e0791f7009785",
+            "document_id": "prebuilt-compressor-cleaning",
+            "version_id": "fee5cf715c45112a849c12350ac1d44023d5e8af047d641c2590ae3e14893326",
+            "title": "压气机污染与清洗（资料节选）.pdf",
+            "text": "叶片损坏的原因\n对离心式发动机的进气导流叶片、旋流叶片和滤网进行检查和修理时，必须使用强光。检查滤网组件是否有断裂、撕裂或孔洞。如果金属丝没有磨损得过细，滤网可以浸锡以收紧金属丝网。如果框架条或凸耳已与滤网框架分离，可能需要重新钎焊。\n检查导流叶片和旋流叶片是否松动。检查导流叶片的外缘，特别注意\n图10-57. 典型的压气机叶片修理极限。\n图10-58. 损坏叶片修理示例。",
+            "text_sha256": "405a17ede3ca956fc972ff2f611b5c03a464e0b539dc13ff405742b4102ad1cc",
+            "text_kind": "chinese_translation",
+            "locator": {
+              "coordinates": {
+                "canonical_sha256": "29a9224bfdeb9f135da13e521f74489c4b04c5e34a73627074dada0bba21f6c4",
+                "contains_table": false,
+                "docling_refs": [
+                  "#/texts/11",
+                  "#/texts/12",
+                  "#/texts/14",
+                  "#/texts/81"
+                ],
+                "end": 5683,
+                "headings": [
+                  "Causes of Blade Damage"
+                ],
+                "original_sha256": "b5e083871ef120602cb6078d40ed5fc7e5d3d655d5cb25eefe670c7820a2023c",
+                "pages": [
+                  1,
+                  2
+                ],
+                "provenance": [
+                  {
+                    "bbox": {
+                      "b": 106.61222692307695,
+                      "coord_origin": "BOTTOMLEFT",
+                      "l": 303.0,
+                      "r": 540.0899999999999,
+                      "t": 190.18640000000005
+                    },
+                    "charspan": [
+                      0,
+                      388
+                    ],
+                    "page_no": 1
+                  },
+                  {
+                    "bbox": {
+                      "b": 69.11222692307695,
+                      "coord_origin": "BOTTOMLEFT",
+                      "l": 303.0,
+                      "r": 540.0179999999996,
+                      "t": 90.18640000000005
+                    },
+                    "charspan": [
+                      0,
+                      123
+                    ],
+                    "page_no": 1
+                  },
+                  {
+                    "bbox": {
+                      "b": 318.2614848484848,
+                      "coord_origin": "BOTTOMLEFT",
+                      "l": 54.0,
+                      "r": 247.01320000000013,
+                      "t": 326.259
+                    },
+                    "charspan": [
+                      0,
+                      53
+                    ],
+                    "page_no": 2
+                  },
+                  {
+                    "bbox": {
+                      "b": 63.39148484848488,
+                      "coord_origin": "BOTTOMLEFT",
+                      "l": 54.0,
+                      "r": 250.2550000000001,
+                      "t": 71.38900000000001
+                    },
+                    "charspan": [
+                      0,
+                      52
+                    ],
+                    "page_no": 2
+                  }
+                ],
+                "start": 5041
+              },
+              "kind": "docling_chunk"
+            },
+            "source_url": "https://www.faa.gov/sites/faa.gov/files/12_amtp_ch10_0.pdf",
+            "score": 0.9652281746031747,
+            "route_ranks": {
+              "B": 3,
+              "D": 4
+            },
+            "applicability_status": "not_checked"
+          },
+          {
+            "id": "c4a27b47c01318637298d71d26ee9d21e91d763f2cb265adf8bb40aaa5d6c161",
+            "chunk_id": "c4a27b47c01318637298d71d26ee9d21e91d763f2cb265adf8bb40aaa5d6c161",
+            "document_id": "prebuilt-compressor-cleaning",
+            "version_id": "fee5cf715c45112a849c12350ac1d44023d5e8af047d641c2590ae3e14893326",
+            "title": "压气机污染与清洗（资料节选）.pdf",
+            "text": "检查与清洁\n只要有可能，叶片上的磨石修整和局部返工应平行于叶片的长度方向进行。返工必须用手工完成，使用磨石、锉刀或砂布。不要使用电动工具对整个叶片区域进行抛光。修复区域的表面光洁度必须与新叶片相当。在离心式发动机上，如果不先拆下进气滤网，就很难检查压气机导流叶轮。拆下滤网后，清洁压气机导流叶轮并用强光检查。缓慢转动压气机，检查每个叶片是否有裂纹。查看前缘是否有裂纹。裂纹通常是部件报废的原因。压气机导流叶轮通常是在发动机运行期间因外来物撞击而损坏的部件。\n压气机导流叶轮的修复方法是，如果关键带（距外缘1 1/2至2 1/2英寸）内的刻痕或凹痕深度不超过发动机制造商的服务或大修说明手册中规定的值，则通过磨石修整并过渡修整这些刻痕和凹痕。通过磨石修整去除超出损伤深度的材料以去除由此产生的冷作金属，从而修复刻痕。必须在过渡修整的边缘施加足够大的圆角。刻痕过渡修整后，应使用细砂布将其平滑。在导流叶轮叶片侧面发现的点蚀刻痕或腐蚀也以类似方式通过过渡修整去除。",
+            "text_sha256": "54942ea28eb462f940e8acc00eb9fb3f31f2433adbf1a0d93f0a39033e69b929",
+            "text_kind": "chinese_translation",
+            "locator": {
+              "coordinates": {
+                "canonical_sha256": "29a9224bfdeb9f135da13e521f74489c4b04c5e34a73627074dada0bba21f6c4",
+                "contains_table": false,
+                "docling_refs": [
+                  "#/texts/5",
+                  "#/texts/6"
+                ],
+                "end": 3616,
+                "headings": [
+                  "Inspection & Cleaning"
+                ],
+                "original_sha256": "b5e083871ef120602cb6078d40ed5fc7e5d3d655d5cb25eefe670c7820a2023c",
+                "pages": [
+                  1
+                ],
+                "provenance": [
+                  {
+                    "bbox": {
+                      "b": 68.26552692307689,
+                      "coord_origin": "BOTTOMLEFT",
+                      "l": 54.0,
+                      "r": 291.0179999999999,
+                      "t": 214.3397
+                    },
+                    "charspan": [
+                      0,
+                      714
+                    ],
+                    "page_no": 1
+                  },
+                  {
+                    "bbox": {
+                      "b": 707.612226923077,
+                      "coord_origin": "BOTTOMLEFT",
+                      "l": 303.0,
+                      "r": 539.9199999999996,
+                      "t": 728.6864
+                    },
+                    "charspan": [
+                      715,
+                      827
+                    ],
+                    "page_no": 1
+                  },
+                  {
+                    "bbox": {
+                      "b": 557.612226923077,
+                      "coord_origin": "BOTTOMLEFT",
+                      "l": 303.0,
+                      "r": 540.0990000000012,
+                      "t": 691.1864
+                    },
+                    "charspan": [
+                      0,
+                      630
+                    ],
+                    "page_no": 1
+                  }
+                ],
+                "start": 2136
+              },
+              "kind": "docling_chunk"
+            },
+            "source_url": "https://www.faa.gov/sites/faa.gov/files/12_amtp_ch10_0.pdf",
+            "score": 0.9561507936507937,
+            "route_ranks": {
+              "B": 4,
+              "D": 3
+            },
+            "applicability_status": "not_checked"
+          },
+          {
+            "id": "418ea34d63e5c8fb160d612d5ae061318c0da5f21d58618e95d90cc8f2ecf2f6",
+            "chunk_id": "418ea34d63e5c8fb160d612d5ae061318c0da5f21d58618e95d90cc8f2ecf2f6",
+            "document_id": "prebuilt-compressor-cleaning",
+            "version_id": "fee5cf715c45112a849c12350ac1d44023d5e8af047d641c2590ae3e14893326",
+            "title": "压气机污染与清洗（资料节选）.pdf",
+            "text": "叶片损坏的原因\n松散物体常常意外地或由于疏忽而进入发动机。外来物损伤（FOD），如铅笔、工具和手电筒，常常被吸入发动机，并可能对风扇叶片造成损坏。[图10-59] 在运转的涡轮发动机周围工作时，不要将任何物体放在口袋里。\n留在进气口中的工具可能会在后续启动时被吸入发动机，从而对压气机转子造成无法修复的损坏。这个问题的简单解决办法是，对照工具清单检查工具。在启动涡轮发动机之前，对发动机进气道进行仔细检查，以确保在工作完成后没有将螺母、螺栓、锁线或工具等物品留在那里。\n图10-60显示了轴流式发动机叶片损坏的一些示例。叶片损坏的描述和可能原因见图10-61。如果点蚀在允许公差范围内，则轴流式发动机压气机静子叶片上的腐蚀点蚀不被认为是严重的。不要试图通过校直、钎焊、焊接或软钎焊来修理任何叶片。使用克罗克斯布、细锉和油石，通过去除最少的材料并留下与新零件相当的表面光洁度来修整损伤。这种修整的目的是尽量减少在凹痕、划痕或裂纹处集中的应力。",
+            "text_sha256": "aa2b4a6dc7026f862dd2ab7f55fa7a7e85f84dd5086b5984e9b5f28764ccfbdb",
+            "text_kind": "chinese_translation",
+            "locator": {
+              "coordinates": {
+                "canonical_sha256": "29a9224bfdeb9f135da13e521f74489c4b04c5e34a73627074dada0bba21f6c4",
+                "contains_table": false,
+                "docling_refs": [
+                  "#/texts/8",
+                  "#/texts/9",
+                  "#/texts/10"
+                ],
+                "end": 5039,
+                "headings": [
+                  "Causes of Blade Damage"
+                ],
+                "original_sha256": "b5e083871ef120602cb6078d40ed5fc7e5d3d655d5cb25eefe670c7820a2023c",
+                "pages": [
+                  1
+                ],
+                "provenance": [
+                  {
+                    "bbox": {
+                      "b": 456.6122269230769,
+                      "coord_origin": "BOTTOMLEFT",
+                      "l": 303.0,
+                      "r": 540.083,
+                      "t": 527.6864
+                    },
+                    "charspan": [
+                      0,
+                      322
+                    ],
+                    "page_no": 1
+                  },
+                  {
+                    "bbox": {
+                      "b": 356.6122269230769,
+                      "coord_origin": "BOTTOMLEFT",
+                      "l": 303.0,
+                      "r": 540.0229999999995,
+                      "t": 440.1864
+                    },
+                    "charspan": [
+                      0,
+                      427
+                    ],
+                    "page_no": 1
+                  },
+                  {
+                    "bbox": {
+                      "b": 206.61222692307695,
+                      "coord_origin": "BOTTOMLEFT",
+                      "l": 303.0,
+                      "r": 540.1399999999999,
+                      "t": 340.1864
+                    },
+                    "charspan": [
+                      0,
+                      647
+                    ],
+                    "page_no": 1
+                  }
+                ],
+                "start": 3618
+              },
+              "kind": "docling_chunk"
+            },
+            "source_url": "https://www.faa.gov/sites/faa.gov/files/12_amtp_ch10_0.pdf",
+            "score": 0.947543424317618,
+            "route_ranks": {
+              "B": 5,
+              "D": 2
+            },
+            "applicability_status": "not_checked"
+          }
+        ],
+        "paths": [],
+        "retrieval": {
+          "policy": "live-source-scoped-gated-bdg@1",
+          "graph_enabled": false,
+          "reason": "noncausal_or_boundary",
+          "scope_versions": [
+            "fee5cf715c45112a849c12350ac1d44023d5e8af047d641c2590ae3e14893326"
+          ],
+          "weights": {
+            "B": 1.0,
+            "D": 0.25,
+            "G": 0.25
+          },
+          "requested_per_route": 50,
+          "graph_errors": [],
+          "path_rejections": {
+            "noncausal_or_boundary": 1
+          },
+          "context_tokens": 1211,
+          "source_duplicates_skipped": 0,
+          "document_cap_skipped": 0,
+          "route_counts": {
+            "B": 5,
+            "D": 5
+          },
+          "verified_path_count": 0,
+          "complete_selected_paths": 0,
+          "missing_path_context": false,
+          "elapsed_ms": 28.63
+        },
+        "status": "insufficient_evidence",
+        "claims": [
+          {
+            "text": "压气机部件上的外来沉积物可导致加速不良和排气温度过高。",
+            "support_span_ids": [
+              "9927849456a68311f98070e4a1c6b86d0f188a8deb9e8bd658a2ed94d5f0269a"
+            ],
+            "evidence_ids": [
+              "28a2d84f11f96e9202ce2a06dbcdedefaf4a3a95ccef177efdc808918521658b"
+            ],
+            "citations": [
+              {
+                "span_id": "9927849456a68311f98070e4a1c6b86d0f188a8deb9e8bd658a2ed94d5f0269a",
+                "evidence_id": "28a2d84f11f96e9202ce2a06dbcdedefaf4a3a95ccef177efdc808918521658b",
+                "start": 213,
+                "end": 240,
+                "text_sha256": "ae5338d9b6f2fc4f9b3341c23d7c259ff5336babfbca64b7b8c925b32350341a",
+                "text_kind": "provided_display_text",
+                "support_quote": "压气机部件上的外来沉积物可导致加速不良和排气温度过高。",
+                "chunk_id": "28a2d84f11f96e9202ce2a06dbcdedefaf4a3a95ccef177efdc808918521658b"
+              }
+            ]
+          },
+          {
+            "text": "压气机叶片上灰尘的积聚降低了叶片的空气动力学效率，从而导致发动机性能下降。",
+            "support_span_ids": [
+              "d4aadcc053f8ba36386179a7b52917c4d7eeeb021a55710373ee295c91d8bb71"
+            ],
+            "evidence_ids": [
+              "28a2d84f11f96e9202ce2a06dbcdedefaf4a3a95ccef177efdc808918521658b"
+            ],
+            "citations": [
+              {
+                "span_id": "d4aadcc053f8ba36386179a7b52917c4d7eeeb021a55710373ee295c91d8bb71",
+                "evidence_id": "28a2d84f11f96e9202ce2a06dbcdedefaf4a3a95ccef177efdc808918521658b",
+                "start": 145,
+                "end": 182,
+                "text_sha256": "ae5338d9b6f2fc4f9b3341c23d7c259ff5336babfbca64b7b8c925b32350341a",
+                "text_kind": "provided_display_text",
+                "support_quote": "压气机叶片上灰尘的积聚降低了叶片的空气动力学效率，从而导致发动机性能下降。",
+                "chunk_id": "28a2d84f11f96e9202ce2a06dbcdedefaf4a3a95ccef177efdc808918521658b"
+              }
+            ]
+          },
+          {
+            "text": "如果允许外来颗粒积聚到足够数量，最终结果将是效率低下。",
+            "support_span_ids": [
+              "e841faa6e678eff4d8498ceb9e35357163c9e95392319d973c76682c8e6c3a1f"
+            ],
+            "evidence_ids": [
+              "28a2d84f11f96e9202ce2a06dbcdedefaf4a3a95ccef177efdc808918521658b"
+            ],
+            "citations": [
+              {
+                "span_id": "e841faa6e678eff4d8498ceb9e35357163c9e95392319d973c76682c8e6c3a1f",
+                "evidence_id": "28a2d84f11f96e9202ce2a06dbcdedefaf4a3a95ccef177efdc808918521658b",
+                "start": 241,
+                "end": 268,
+                "text_sha256": "ae5338d9b6f2fc4f9b3341c23d7c259ff5336babfbca64b7b8c925b32350341a",
+                "text_kind": "provided_display_text",
+                "support_quote": "如果允许外来颗粒积聚到足够数量，最终结果将是效率低下。",
+                "chunk_id": "28a2d84f11f96e9202ce2a06dbcdedefaf4a3a95ccef177efdc808918521658b"
+              }
+            ]
+          },
+          {
+            "text": "该状况可通过定期检查、清洁和修理压气机部件来补救。",
+            "support_span_ids": [
+              "e41b872f182357e07e700a9082d37064de637dc971b3a858d43c078572a0e8fb"
+            ],
+            "evidence_ids": [
+              "28a2d84f11f96e9202ce2a06dbcdedefaf4a3a95ccef177efdc808918521658b"
+            ],
+            "citations": [
+              {
+                "span_id": "e41b872f182357e07e700a9082d37064de637dc971b3a858d43c078572a0e8fb",
+                "evidence_id": "28a2d84f11f96e9202ce2a06dbcdedefaf4a3a95ccef177efdc808918521658b",
+                "start": 268,
+                "end": 293,
+                "text_sha256": "ae5338d9b6f2fc4f9b3341c23d7c259ff5336babfbca64b7b8c925b32350341a",
+                "text_kind": "provided_display_text",
+                "support_quote": "该状况可通过定期检查、清洁和修理压气机部件来补救。",
+                "chunk_id": "28a2d84f11f96e9202ce2a06dbcdedefaf4a3a95ccef177efdc808918521658b"
+              }
+            ]
+          }
+        ],
+        "answer": "压气机部件上的外来沉积物可导致加速不良和排气温度过高。\n压气机叶片上灰尘的积聚降低了叶片的空气动力学效率，从而导致发动机性能下降。\n如果允许外来颗粒积聚到足够数量，最终结果将是效率低下。\n该状况可通过定期检查、清洁和修理压气机部件来补救。\n现有证据不足以完整回答该问题。",
+        "insufficient_evidence": true,
+        "reason": "所给证据仅说明外来沉积物可导致排气温度过高，未提供任何说明排气温度升高是否必然由压气机叶片损坏引起、或能否据此确定叶片损坏的陈述，因此无法回答‘仅凭排气温度升高是否一定能确定压气机叶片损坏’。",
+        "generation": {
+          "model_calls": 2,
+          "context_chunk_ids": [
+            "28a2d84f11f96e9202ce2a06dbcdedefaf4a3a95ccef177efdc808918521658b",
+            "2184a113bdfaa8091e5bf913c80b817aa6d28b7950762bd04e7cbaf9fc3f61ff",
+            "c27603351467e6de583e89b8462ac7ae393317ff530b7482490e0791f7009785",
+            "c4a27b47c01318637298d71d26ee9d21e91d763f2cb265adf8bb40aaa5d6c161",
+            "418ea34d63e5c8fb160d612d5ae061318c0da5f21d58618e95d90cc8f2ecf2f6"
+          ],
+          "context_tokens": 2618,
+          "verification": "span_uncertainty_and_model_support_checked"
+        }
+      }
+    },
+    {
+      "name": "unknown_source",
+      "seconds": 0.027,
+      "citation_checks": 0,
+      "response": {
+        "kind": "grounded_qa",
+        "run_id": "da0ecb11-3adf-4b15-8676-2250f88b3301",
+        "question": "QB-99999999的机理路径是什么？",
+        "evidence": [],
+        "paths": [],
+        "retrieval": {
+          "policy": "live-source-scoped-gated-bdg@1",
+          "graph_enabled": false,
+          "reason": "no_active_sources",
+          "scope_versions": [],
+          "weights": {
+            "B": 1.0,
+            "D": 0.25,
+            "G": 0.25
+          },
+          "requested_per_route": 50,
+          "graph_errors": [],
+          "path_rejections": {}
+        },
+        "status": "insufficient_evidence",
+        "claims": [],
+        "answer": "现有证据不足以完整回答该问题。",
+        "insufficient_evidence": true,
+        "reason": "未找到当前筛选条件下的证据。",
+        "generation": {
+          "model_calls": 0
+        }
+      }
+    },
+    {
+      "name": "document_scope_empty",
+      "seconds": 0.007,
+      "citation_checks": 0,
+      "response": {
+        "kind": "grounded_qa",
+        "run_id": "1e69e768-8927-4ffd-a529-eee37d02797a",
+        "question": "压气机效率降低的原因？",
+        "evidence": [],
+        "paths": [],
+        "retrieval": {
+          "policy": "live-source-scoped-gated-bdg@1",
+          "graph_enabled": false,
+          "reason": "no_active_sources",
+          "scope_versions": [],
+          "weights": {
+            "B": 1.0,
+            "D": 0.25,
+            "G": 0.25
+          },
+          "requested_per_route": 50,
+          "graph_errors": [],
+          "path_rejections": {}
+        },
+        "status": "insufficient_evidence",
+        "claims": [],
+        "answer": "现有证据不足以完整回答该问题。",
+        "insufficient_evidence": true,
+        "reason": "未找到当前筛选条件下的证据。",
+        "generation": {
+          "model_calls": 0
+        }
+      }
+    }
+  ],
+  "budget_after": {
+    "calls": 6449,
+    "upper_cny": 41.477348,
+    "unresolved": 15
+  }
+}

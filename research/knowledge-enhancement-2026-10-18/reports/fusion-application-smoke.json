@@ -1,0 +1,33 @@
+{
+  "ingestion": {
+    "document_id": "fusion-faa-ch10-page45",
+    "version_id": "8f48b8315e6746b5d9a8e7190598e7b722944d46796209b47588a7f47075c005",
+    "revision": 1,
+    "status": "active",
+    "chunk_count": 5,
+    "evidence_ids": [
+      "420d9721592d961f6157bb0c52809dc2263baac61bf704111e9cd1d484c97232",
+      "8efbcd3650bd457f92f0445182b7cdc3493fe320b2f55d32c340ea2c42d0c9e2",
+      "8de0bd21ebe77523c9c849af1d1185dc7ba8e0a6defa5891e9f6d8a3b9884b05",
+      "1954ef0001ef3c73ea1101ef8fdad3c6c06bc5dbf69226c889f7a010f35e726b",
+      "2b89903e1f3ab97f9b9b3504139fdb90f45bc4a92ee7591c921466cbf83f4407"
+    ],
+    "reused": false
+  },
+  "original_roundtrip": true,
+  "structure_status": 200,
+  "graph_node_count": 14,
+  "graph_edge_count": 7,
+  "diagnosis_status": 200,
+  "report_status": "evidence_ready",
+  "verified_claim_count": 5,
+  "evidence_count": 5,
+  "shared_budget": {
+    "provider_call_count": 30,
+    "budget_upper_estimate_cny": 0.226411,
+    "cap_cny": 5.0,
+    "pending_or_unknown_calls": 0
+  },
+  "scope": "derived single FAA page; integration smoke, not frozen benchmark results",
+  "source_review": "machine candidates; not expert-reviewed"
+}

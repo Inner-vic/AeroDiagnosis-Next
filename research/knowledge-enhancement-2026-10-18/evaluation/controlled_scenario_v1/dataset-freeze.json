@@ -1,0 +1,21 @@
+{
+  "before_any_rankings": true,
+  "hashes": {
+    "evaluation/controlled_scenario_v1/corpus.json": "68425375336456c03a91acdea87269d58fa514eabdeaa3ad63ffb9feeb01dc2a",
+    "evaluation/controlled_scenario_v1/graph-freeze.json": "a61e5bd954f9d2ff85e869dd0d7a1bbe79ff011aafc0e422a7498a498617b1cf",
+    "evaluation/controlled_scenario_v1/graph.json": "089925944867dc635d41383dac9af09998bb4aaac244802b5ec0a061434ccd05",
+    "evaluation/controlled_scenario_v1/protocol.json": "dbf2dd515ca866b2040e1160eee457500dc6b954e4802d7bcf1b1f16dc26fe3b",
+    "evaluation/controlled_scenario_v1/questions-dev.jsonl": "8309376644a7b9685c3121e28a0783d1c2728741106da87aae3d59cc6a3c4f66",
+    "evaluation/controlled_scenario_v1/questions-test.jsonl": "0da900020a12337baf852ad09f6917b55b3dbf4a89b3582eb883a6bee0756381",
+    "evaluation/controlled_scenario_v1/README.md": "767e85b56673d850d52685930519f79d6346f5f6ecfb6cdac01400997891b403",
+    "evaluation/controlled_scenario_v1/review-amendment.json": "8425ce5144e880dae03bded62f61c0b3c8135a222a952a25994aaf455210e50a"
+  },
+  "dev_questions": 72,
+  "test_questions": 144,
+  "paid_api_calls": 0,
+  "pre_ranking_review_amendment": {
+    "before_any_rankings": true,
+    "reason": "Independent source-only review: correct graph coverage and equal-compute wording; add provenance and freeze guards. Corpus, graph and all216 questions unchanged.",
+    "origin": "synthetic_rule_generated"
+  }
+}

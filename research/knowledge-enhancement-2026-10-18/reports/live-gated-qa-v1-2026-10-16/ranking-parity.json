@@ -1,0 +1,1522 @@
+{
+  "n": 216,
+  "all_exact_top10_equal": true,
+  "graph_open": 72,
+  "with_complete_display_path": 72,
+  "seconds": 0.6906575000029989,
+  "candidate_source": "Frozen original BM25 and E5 caches; live GraphPathCandidates and live gate/fusion code; no LLM",
+  "rows": [
+    {
+      "sample_id": "new2-00-0:exact",
+      "kind": "exact",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-00-0:paraphrase",
+      "kind": "paraphrase",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-00-0:conditions",
+      "kind": "conditions",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-00-0:chain2",
+      "kind": "chain2",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-00-0:chain3",
+      "kind": "chain3",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-00-0:boundary",
+      "kind": "boundary",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-00-1:exact",
+      "kind": "exact",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-00-1:paraphrase",
+      "kind": "paraphrase",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-00-1:conditions",
+      "kind": "conditions",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-00-1:chain2",
+      "kind": "chain2",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-00-1:chain3",
+      "kind": "chain3",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-00-1:boundary",
+      "kind": "boundary",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-00-2:exact",
+      "kind": "exact",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-00-2:paraphrase",
+      "kind": "paraphrase",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-00-2:conditions",
+      "kind": "conditions",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-00-2:chain2",
+      "kind": "chain2",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-00-2:chain3",
+      "kind": "chain3",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-00-2:boundary",
+      "kind": "boundary",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-06-0:exact",
+      "kind": "exact",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-06-0:paraphrase",
+      "kind": "paraphrase",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-06-0:conditions",
+      "kind": "conditions",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-06-0:chain2",
+      "kind": "chain2",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-06-0:chain3",
+      "kind": "chain3",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-06-0:boundary",
+      "kind": "boundary",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-06-1:exact",
+      "kind": "exact",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-06-1:paraphrase",
+      "kind": "paraphrase",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-06-1:conditions",
+      "kind": "conditions",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-06-1:chain2",
+      "kind": "chain2",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-06-1:chain3",
+      "kind": "chain3",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-06-1:boundary",
+      "kind": "boundary",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-06-2:exact",
+      "kind": "exact",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-06-2:paraphrase",
+      "kind": "paraphrase",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-06-2:conditions",
+      "kind": "conditions",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-06-2:chain2",
+      "kind": "chain2",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-06-2:chain3",
+      "kind": "chain3",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-06-2:boundary",
+      "kind": "boundary",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-08-0:exact",
+      "kind": "exact",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-08-0:paraphrase",
+      "kind": "paraphrase",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-08-0:conditions",
+      "kind": "conditions",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-08-0:chain2",
+      "kind": "chain2",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-08-0:chain3",
+      "kind": "chain3",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-08-0:boundary",
+      "kind": "boundary",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-08-1:exact",
+      "kind": "exact",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-08-1:paraphrase",
+      "kind": "paraphrase",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-08-1:conditions",
+      "kind": "conditions",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-08-1:chain2",
+      "kind": "chain2",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-08-1:chain3",
+      "kind": "chain3",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-08-1:boundary",
+      "kind": "boundary",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-08-2:exact",
+      "kind": "exact",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-08-2:paraphrase",
+      "kind": "paraphrase",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-08-2:conditions",
+      "kind": "conditions",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-08-2:chain2",
+      "kind": "chain2",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-08-2:chain3",
+      "kind": "chain3",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-08-2:boundary",
+      "kind": "boundary",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-11-0:exact",
+      "kind": "exact",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-11-0:paraphrase",
+      "kind": "paraphrase",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-11-0:conditions",
+      "kind": "conditions",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-11-0:chain2",
+      "kind": "chain2",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-11-0:chain3",
+      "kind": "chain3",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-11-0:boundary",
+      "kind": "boundary",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-11-1:exact",
+      "kind": "exact",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-11-1:paraphrase",
+      "kind": "paraphrase",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-11-1:conditions",
+      "kind": "conditions",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-11-1:chain2",
+      "kind": "chain2",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-11-1:chain3",
+      "kind": "chain3",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-11-1:boundary",
+      "kind": "boundary",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-11-2:exact",
+      "kind": "exact",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-11-2:paraphrase",
+      "kind": "paraphrase",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-11-2:conditions",
+      "kind": "conditions",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-11-2:chain2",
+      "kind": "chain2",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-11-2:chain3",
+      "kind": "chain3",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-11-2:boundary",
+      "kind": "boundary",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-01-0:exact",
+      "kind": "exact",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-01-0:paraphrase",
+      "kind": "paraphrase",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-01-0:conditions",
+      "kind": "conditions",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-01-0:chain2",
+      "kind": "chain2",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-01-0:chain3",
+      "kind": "chain3",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-01-0:boundary",
+      "kind": "boundary",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-01-1:exact",
+      "kind": "exact",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-01-1:paraphrase",
+      "kind": "paraphrase",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-01-1:conditions",
+      "kind": "conditions",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-01-1:chain2",
+      "kind": "chain2",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-01-1:chain3",
+      "kind": "chain3",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-01-1:boundary",
+      "kind": "boundary",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-01-2:exact",
+      "kind": "exact",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-01-2:paraphrase",
+      "kind": "paraphrase",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-01-2:conditions",
+      "kind": "conditions",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-01-2:chain2",
+      "kind": "chain2",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-01-2:chain3",
+      "kind": "chain3",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-01-2:boundary",
+      "kind": "boundary",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-02-0:exact",
+      "kind": "exact",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-02-0:paraphrase",
+      "kind": "paraphrase",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-02-0:conditions",
+      "kind": "conditions",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-02-0:chain2",
+      "kind": "chain2",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-02-0:chain3",
+      "kind": "chain3",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-02-0:boundary",
+      "kind": "boundary",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-02-1:exact",
+      "kind": "exact",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-02-1:paraphrase",
+      "kind": "paraphrase",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-02-1:conditions",
+      "kind": "conditions",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-02-1:chain2",
+      "kind": "chain2",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-02-1:chain3",
+      "kind": "chain3",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-02-1:boundary",
+      "kind": "boundary",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-02-2:exact",
+      "kind": "exact",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-02-2:paraphrase",
+      "kind": "paraphrase",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-02-2:conditions",
+      "kind": "conditions",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-02-2:chain2",
+      "kind": "chain2",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-02-2:chain3",
+      "kind": "chain3",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-02-2:boundary",
+      "kind": "boundary",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-03-0:exact",
+      "kind": "exact",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-03-0:paraphrase",
+      "kind": "paraphrase",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-03-0:conditions",
+      "kind": "conditions",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-03-0:chain2",
+      "kind": "chain2",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-03-0:chain3",
+      "kind": "chain3",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-03-0:boundary",
+      "kind": "boundary",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-03-1:exact",
+      "kind": "exact",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-03-1:paraphrase",
+      "kind": "paraphrase",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-03-1:conditions",
+      "kind": "conditions",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-03-1:chain2",
+      "kind": "chain2",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-03-1:chain3",
+      "kind": "chain3",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-03-1:boundary",
+      "kind": "boundary",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-03-2:exact",
+      "kind": "exact",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-03-2:paraphrase",
+      "kind": "paraphrase",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-03-2:conditions",
+      "kind": "conditions",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-03-2:chain2",
+      "kind": "chain2",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-03-2:chain3",
+      "kind": "chain3",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-03-2:boundary",
+      "kind": "boundary",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-04-0:exact",
+      "kind": "exact",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-04-0:paraphrase",
+      "kind": "paraphrase",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-04-0:conditions",
+      "kind": "conditions",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-04-0:chain2",
+      "kind": "chain2",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-04-0:chain3",
+      "kind": "chain3",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-04-0:boundary",
+      "kind": "boundary",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-04-1:exact",
+      "kind": "exact",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-04-1:paraphrase",
+      "kind": "paraphrase",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-04-1:conditions",
+      "kind": "conditions",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-04-1:chain2",
+      "kind": "chain2",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-04-1:chain3",
+      "kind": "chain3",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-04-1:boundary",
+      "kind": "boundary",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-04-2:exact",
+      "kind": "exact",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-04-2:paraphrase",
+      "kind": "paraphrase",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-04-2:conditions",
+      "kind": "conditions",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-04-2:chain2",
+      "kind": "chain2",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-04-2:chain3",
+      "kind": "chain3",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-04-2:boundary",
+      "kind": "boundary",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-05-0:exact",
+      "kind": "exact",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-05-0:paraphrase",
+      "kind": "paraphrase",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-05-0:conditions",
+      "kind": "conditions",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-05-0:chain2",
+      "kind": "chain2",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-05-0:chain3",
+      "kind": "chain3",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-05-0:boundary",
+      "kind": "boundary",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-05-1:exact",
+      "kind": "exact",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-05-1:paraphrase",
+      "kind": "paraphrase",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-05-1:conditions",
+      "kind": "conditions",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-05-1:chain2",
+      "kind": "chain2",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-05-1:chain3",
+      "kind": "chain3",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-05-1:boundary",
+      "kind": "boundary",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-05-2:exact",
+      "kind": "exact",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-05-2:paraphrase",
+      "kind": "paraphrase",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-05-2:conditions",
+      "kind": "conditions",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-05-2:chain2",
+      "kind": "chain2",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-05-2:chain3",
+      "kind": "chain3",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-05-2:boundary",
+      "kind": "boundary",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-07-0:exact",
+      "kind": "exact",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-07-0:paraphrase",
+      "kind": "paraphrase",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-07-0:conditions",
+      "kind": "conditions",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-07-0:chain2",
+      "kind": "chain2",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-07-0:chain3",
+      "kind": "chain3",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-07-0:boundary",
+      "kind": "boundary",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-07-1:exact",
+      "kind": "exact",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-07-1:paraphrase",
+      "kind": "paraphrase",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-07-1:conditions",
+      "kind": "conditions",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-07-1:chain2",
+      "kind": "chain2",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-07-1:chain3",
+      "kind": "chain3",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-07-1:boundary",
+      "kind": "boundary",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-07-2:exact",
+      "kind": "exact",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-07-2:paraphrase",
+      "kind": "paraphrase",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-07-2:conditions",
+      "kind": "conditions",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-07-2:chain2",
+      "kind": "chain2",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-07-2:chain3",
+      "kind": "chain3",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-07-2:boundary",
+      "kind": "boundary",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-09-0:exact",
+      "kind": "exact",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-09-0:paraphrase",
+      "kind": "paraphrase",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-09-0:conditions",
+      "kind": "conditions",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-09-0:chain2",
+      "kind": "chain2",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-09-0:chain3",
+      "kind": "chain3",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-09-0:boundary",
+      "kind": "boundary",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-09-1:exact",
+      "kind": "exact",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-09-1:paraphrase",
+      "kind": "paraphrase",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-09-1:conditions",
+      "kind": "conditions",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-09-1:chain2",
+      "kind": "chain2",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-09-1:chain3",
+      "kind": "chain3",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-09-1:boundary",
+      "kind": "boundary",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-09-2:exact",
+      "kind": "exact",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-09-2:paraphrase",
+      "kind": "paraphrase",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-09-2:conditions",
+      "kind": "conditions",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-09-2:chain2",
+      "kind": "chain2",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-09-2:chain3",
+      "kind": "chain3",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-09-2:boundary",
+      "kind": "boundary",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-10-0:exact",
+      "kind": "exact",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-10-0:paraphrase",
+      "kind": "paraphrase",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-10-0:conditions",
+      "kind": "conditions",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-10-0:chain2",
+      "kind": "chain2",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-10-0:chain3",
+      "kind": "chain3",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-10-0:boundary",
+      "kind": "boundary",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-10-1:exact",
+      "kind": "exact",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-10-1:paraphrase",
+      "kind": "paraphrase",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-10-1:conditions",
+      "kind": "conditions",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-10-1:chain2",
+      "kind": "chain2",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-10-1:chain3",
+      "kind": "chain3",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-10-1:boundary",
+      "kind": "boundary",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-10-2:exact",
+      "kind": "exact",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-10-2:paraphrase",
+      "kind": "paraphrase",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-10-2:conditions",
+      "kind": "conditions",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    },
+    {
+      "sample_id": "new2-10-2:chain2",
+      "kind": "chain2",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-10-2:chain3",
+      "kind": "chain3",
+      "hits_equal_frozen": true,
+      "graph_enabled": true,
+      "complete_paths": 1
+    },
+    {
+      "sample_id": "new2-10-2:boundary",
+      "kind": "boundary",
+      "hits_equal_frozen": true,
+      "graph_enabled": false,
+      "complete_paths": 0
+    }
+  ]
+}

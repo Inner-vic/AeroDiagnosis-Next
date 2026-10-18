@@ -1,0 +1,9 @@
+{
+  "budget_after": {
+    "provider_calls": 6521,
+    "upper_cny": 41.861267,
+    "unresolved_calls": 15
+  },
+  "predictions_sha256": "d6db18e380a7f72a1f464e52f8d0a794b0d279503cd32e3a360bd14e62a955f9",
+  "no_runtime_or_question_changes": true
+}

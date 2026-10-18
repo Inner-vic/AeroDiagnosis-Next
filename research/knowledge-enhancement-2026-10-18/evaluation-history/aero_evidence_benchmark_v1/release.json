@@ -1,0 +1,21 @@
+{
+  "benchmark_id": "aero-evidence-benchmark-v1",
+  "protocol_sha256": "7ad1a93a8edd48caf7354434f2c85b22fe5ff74e8db32f54c4e5144f038353ea",
+  "files": {
+    "ANNOTATION_PROTOCOL.md": "6201662e4f7c1243f69bb8766f6fcdd2387aaca9c9d6b202dbfa74ca03471d88",
+    "annotation_provenance.json": "330f807c6b798616a70bac9f51eeac37ad6caedc0eaef8d32160571de7067a12",
+    "corpus_manifest.json": "88dd76896f02a9e522c166a15824fba21ffc889ff6fb3dafd38f6208632ad728",
+    "DATA_CARD.md": "169188b9ce45530a007eb6de818cad4ef870ed95d6f6cea73edb230990172c5b",
+    "DEFENSE_NOTES.md": "5d8f8306b81671826c868f23b2c51537d678aa0da058a3a957797084059e6c96",
+    "graph_claims.jsonl": "5184ac1bba6598bfbf84faf7cbc6c8edb87ee15de51b12a41f8cb8fa5be23ac6",
+    "method_audit.json": "13f5b29ec43c22a787496b5af6bc9caa46a8ff18adbb5a526bccdc8bc57b80b0",
+    "protocol.json": "7ad1a93a8edd48caf7354434f2c85b22fe5ff74e8db32f54c4e5144f038353ea",
+    "quality_audit.json": "4d9221a2481a6cf563cecb87f724cf7d6c02b786d923e87df03115eefcba2476",
+    "queries.jsonl": "dacb91fcbf6e5f7ccef769c61bd4619e923a1f8abc90337be50496cffa0d7134",
+    "review_ledger.jsonl": "731b952d5a7924516ab84c099b47bd94a75ad6742735635aca11eb12cd3bcfed",
+    "validation_report.json": "10319380bf372fc9f6365be8085c3b8fffd7ef4c66b81edd32f8215c61b175c7"
+  },
+  "builder_sha256": "f717a4848802a7eafa58c730d1c1a7f5327b7b64f0857e8b913ac701fbc60b93",
+  "review_status": "ai_cross_source_verified",
+  "human_expert_reviewed": false
+}

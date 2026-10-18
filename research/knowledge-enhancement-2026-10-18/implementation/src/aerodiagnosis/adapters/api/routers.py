@@ -1,0 +1,723 @@
+"""Thin HTTP mappings onto application use cases."""
+
+from __future__ import annotations
+
+import asyncio
+import base64
+import binascii
+import json
+from dataclasses import asdict
+from typing import Annotated, Any
+
+from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi.responses import FileResponse, StreamingResponse
+
+from aerodiagnosis.adapters.llm import OpenAICompatibleLanguageModel
+from aerodiagnosis.adapters.llm.research_client import ResearchCallError
+from aerodiagnosis.adapters.persistence import ExternalStoreOutbox
+from aerodiagnosis.adapters.persistence.sqlite import LATEST_SCHEMA_VERSION
+from aerodiagnosis.application.capability_boundary import capability_boundaries
+from aerodiagnosis.application.diagnostic_workflow import (
+    DiagnosisRunNotFound,
+    IncompatibleWorkflowError,
+)
+from aerodiagnosis.application.knowledge_applicability import assess_applicability
+from aerodiagnosis.bootstrap import Application
+from aerodiagnosis.config import RuntimeSettings
+from aerodiagnosis.domain import (
+    DiagnosisCommand,
+    DiagnosisReport,
+    HybridRetrievalResult,
+    ModelPluginRecord,
+    RootCauseSession,
+)
+from aerodiagnosis.evaluation import evaluate_retrieval
+from aerodiagnosis.generation_quality import (
+    evaluate_generation_quality,
+    judge_generation_quality,
+)
+from aerodiagnosis.ingestion import DocumentParseError, IngestionError
+from aerodiagnosis.ports import LanguageModel, LanguageModelError
+from aerodiagnosis.version import __version__
+
+from .dependencies import get_application, require_operator
+from .rate_limit import require_diagnosis_rate_limit
+from .schemas import (
+    CaseResponse,
+    CaseVerificationRequest,
+    ConversationMessageResponse,
+    DocumentCatalogResponse,
+    EvidenceHit,
+    FinalizeRootCauseRequest,
+    GenerationQualityRequest,
+    GenerationQualityResponse,
+    GraphOverviewResponse,
+    HybridRetrievalRequest,
+    IngestBinaryDocumentRequest,
+    IngestDocumentRequest,
+    IngestDocumentResponse,
+    OperationRecordResponse,
+    ProviderConfiguration,
+    RegisterModelPluginRequest,
+    ResumeDiagnosisRequest,
+    RetrievalEvaluationRequest,
+    RetrievalEvaluationResponse,
+    RootCauseObservationRequest,
+    RunDiagnosisRequest,
+    SearchEvidenceRequest,
+    SessionCreatedResponse,
+    StartRootCauseRequest,
+)
+
+router = APIRouter(prefix="/api")
+ApplicationDependency = Annotated[Application, Depends(get_application)]
+OperatorDependency = Annotated[Application, Depends(require_operator)]
+DiagnosisRateLimitDependency = Annotated[None, Depends(require_diagnosis_rate_limit)]
+
+
+def _external_sync_status(settings: RuntimeSettings) -> dict[str, Any]:
+    if settings.external_store_mode == "external-primary":
+        return {
+            "mode": "direct_external_primary",
+            "events": {"applied": 0, "pending": 0, "dead": 0},
+        }
+    outbox = ExternalStoreOutbox(settings.database_path).counts()
+    return {"mode": "transactional_outbox", "events": outbox}
+
+
+@router.get("/health", tags=["system"])
+def health() -> dict[str, str]:
+    return {"status": "ok", "service": "AeroDiagnosis", "version": __version__}
+
+
+@router.get("/system", tags=["system"])
+def system(application: ApplicationDependency) -> dict[str, Any]:
+    state = application.get_runtime_status.execute()
+    external_sync = _external_sync_status(application.settings)
+    return {
+        "version": __version__,
+        "mode": "application",
+        "diagnostic_agent": "llm_orchestrated_v2",
+        "provider_configuration": "per_request_not_persisted",
+        "default_provider": {
+            "available": application.settings.default_provider_available,
+            "model": application.settings.default_llm_model,
+        },
+        "database_schema": LATEST_SCHEMA_VERSION,
+        "vector": {
+            "backend": state.vector_backend,
+            "embedding": state.vector_embedding_identity,
+            "chunks": state.vector_chunks,
+        },
+        "graph": {
+            "backend": state.graph_backend,
+            "nodes": state.graph_nodes,
+            "edges": state.graph_edges,
+        },
+        "cases": {"backend": state.case_backend, "cases": state.case_count},
+        "documents": {
+            "parser_backend": application.settings.knowledge_parser_backend,
+            "extractor_backend": application.settings.knowledge_extractor_backend,
+            "documents": state.document_count,
+            "versions": state.version_count,
+        },
+        "memory": {
+            "sessions": state.session_count,
+            "messages": state.message_count,
+        },
+        "external_sync": external_sync,
+        "capability_boundaries": [asdict(boundary) for boundary in capability_boundaries()],
+        "knowledge_enhancement": {
+            "positioning": "model_result_plus_knowledge_root_cause_support",
+            "models": len(application.knowledge_enhanced_diagnosis.list_models()),
+            "root_cause_sessions": len(
+                application.knowledge_enhanced_diagnosis.list_sessions(limit=500)
+            ),
+        },
+    }
+
+
+@router.get("/models", response_model=list[ModelPluginRecord], tags=["models"])
+def list_model_plugins(application: ApplicationDependency) -> list[ModelPluginRecord]:
+    return list(application.knowledge_enhanced_diagnosis.list_models())
+
+
+@router.post(
+    "/models",
+    response_model=ModelPluginRecord,
+    status_code=status.HTTP_201_CREATED,
+    tags=["models"],
+)
+def register_model_plugin(
+    request: RegisterModelPluginRequest,
+    application: OperatorDependency,
+) -> ModelPluginRecord:
+    return application.knowledge_enhanced_diagnosis.register_model(request.manifest)
+
+
+@router.get("/root-cause-sessions", response_model=list[RootCauseSession], tags=["root-cause"])
+def list_root_cause_sessions(
+    application: ApplicationDependency,
+    limit: int = 50,
+) -> list[RootCauseSession]:
+    try:
+        return list(application.knowledge_enhanced_diagnosis.list_sessions(limit=limit))
+    except ValueError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail=str(exc)
+        ) from exc
+
+
+@router.get("/root-cause-sessions/{rca_id}", response_model=RootCauseSession, tags=["root-cause"])
+def get_root_cause_session(
+    rca_id: str,
+    application: ApplicationDependency,
+) -> RootCauseSession:
+    try:
+        return application.knowledge_enhanced_diagnosis.get(rca_id)
+    except KeyError as exc:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=str(exc)) from exc
+
+
+@router.post(
+    "/root-cause-sessions",
+    response_model=RootCauseSession,
+    status_code=status.HTTP_201_CREATED,
+    tags=["root-cause"],
+)
+def start_root_cause_session(
+    request: StartRootCauseRequest,
+    application: ApplicationDependency,
+    _rate_limit: DiagnosisRateLimitDependency,
+) -> RootCauseSession:
+    model = _provider_model(request.provider, application)
+    try:
+        return application.knowledge_enhanced_diagnosis.start(
+            display_name=request.display_name,
+            csv_content=request.csv_content,
+            model_id=request.model_id,
+            language_model=model,
+        )
+    except ValueError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail=str(exc)
+        ) from exc
+    except LanguageModelError as exc:
+        raise HTTPException(status_code=status.HTTP_502_BAD_GATEWAY, detail=str(exc)) from exc
+
+
+@router.post(
+    "/root-cause-sessions/{rca_id}/observations",
+    response_model=RootCauseSession,
+    tags=["root-cause"],
+)
+def observe_root_cause_session(
+    rca_id: str,
+    request: RootCauseObservationRequest,
+    application: ApplicationDependency,
+    _rate_limit: DiagnosisRateLimitDependency,
+) -> RootCauseSession:
+    model = _provider_model(request.provider, application)
+    try:
+        return application.knowledge_enhanced_diagnosis.observe(
+            rca_id,
+            action_id=request.action_id,
+            outcome=request.outcome,
+            notes=request.notes,
+            language_model=model,
+        )
+    except KeyError as exc:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=str(exc)) from exc
+    except ValueError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail=str(exc)
+        ) from exc
+    except LanguageModelError as exc:
+        raise HTTPException(status_code=status.HTTP_502_BAD_GATEWAY, detail=str(exc)) from exc
+
+
+@router.post(
+    "/root-cause-sessions/{rca_id}/finalize",
+    response_model=RootCauseSession,
+    tags=["root-cause"],
+)
+def finalize_root_cause_session(
+    rca_id: str,
+    request: FinalizeRootCauseRequest,
+    application: ApplicationDependency,
+    _rate_limit: DiagnosisRateLimitDependency,
+) -> RootCauseSession:
+    model = _provider_model(request.provider, application)
+    try:
+        return application.knowledge_enhanced_diagnosis.finalize(rca_id, model)
+    except KeyError as exc:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=str(exc)) from exc
+    except LanguageModelError as exc:
+        raise HTTPException(status_code=status.HTTP_502_BAD_GATEWAY, detail=str(exc)) from exc
+
+
+@router.post(
+    "/root-cause-sessions/{rca_id}/case",
+    response_model=RootCauseSession,
+    tags=["root-cause"],
+)
+def publish_root_cause_case(
+    rca_id: str,
+    application: ApplicationDependency,
+) -> RootCauseSession:
+    try:
+        return application.knowledge_enhanced_diagnosis.publish_case(rca_id)
+    except KeyError as exc:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=str(exc)) from exc
+    except ValueError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail=str(exc)
+        ) from exc
+
+
+@router.post(
+    "/documents",
+    response_model=IngestDocumentResponse,
+    status_code=status.HTTP_201_CREATED,
+    tags=["evidence"],
+)
+def ingest_document(
+    request: IngestDocumentRequest,
+    application: OperatorDependency,
+) -> IngestDocumentResponse:
+    try:
+        result = application.ingest_document.execute(
+            display_name=request.display_name,
+            content=request.content.encode("utf-8"),
+            document_id=request.document_id,
+            metadata=request.metadata,
+        )
+    except ResearchCallError as exc:
+        raise HTTPException(status_code=503, detail=str(exc)) from None
+    except (DocumentParseError, IngestionError, ValueError) as exc:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail=str(exc),
+        ) from exc
+    return IngestDocumentResponse.model_validate(asdict(result))
+
+
+@router.post(
+    "/documents/upload", response_model=IngestDocumentResponse, status_code=201, tags=["evidence"]
+)
+def upload_document(
+    request: IngestBinaryDocumentRequest, application: OperatorDependency
+) -> IngestDocumentResponse:
+    try:
+        content = base64.b64decode(request.content_base64, validate=True)
+        if not content or len(content) > 10 * 1024 * 1024:
+            raise ValueError("Document must contain 1 byte to 10 MB")
+        result = application.ingest_document.execute(
+            display_name=request.display_name,
+            content=content,
+            document_id=request.document_id,
+            metadata=request.metadata,
+        )
+        return IngestDocumentResponse.model_validate(asdict(result))
+    except ResearchCallError as exc:
+        raise HTTPException(status_code=503, detail=str(exc)) from None
+    except (DocumentParseError, IngestionError, ValueError, binascii.Error) as exc:
+        raise HTTPException(status_code=422, detail=str(exc)) from None
+
+
+@router.get("/documents/{document_id}/versions/{version_id}/source", tags=["evidence"])
+def download_document_source(
+    document_id: str, version_id: str, application: OperatorDependency, kind: str = "original"
+) -> FileResponse:
+    documents = application.browse_knowledge.execute()
+    allowed = any(
+        d.document_id == document_id
+        and any(
+            v.version_id == version_id and v.status.value not in {"deleted", "deleting"}
+            for v in d.versions
+        )
+        for d in documents
+    )
+    if not allowed:
+        raise HTTPException(status_code=404, detail="Unknown document version")
+    try:
+        path, filename = application.source_archive.get(version_id, kind)
+    except FileNotFoundError:
+        raise HTTPException(
+            status_code=404, detail="Source artifact unavailable for this version"
+        ) from None
+    except ValueError as exc:
+        raise HTTPException(status_code=422, detail=str(exc)) from None
+    return FileResponse(
+        path,
+        filename=filename,
+        media_type="application/octet-stream",
+        headers={"X-Content-Type-Options": "nosniff"},
+    )
+
+
+@router.post("/evidence/search", response_model=list[EvidenceHit], tags=["evidence"])
+def search_evidence(
+    request: SearchEvidenceRequest,
+    application: ApplicationDependency,
+) -> list[EvidenceHit]:
+    matches = application.search_evidence.execute(
+        request.query,
+        top_k=request.top_k,
+        knowledge_context=request.knowledge_context,
+    )
+    return [
+        EvidenceHit(
+            evidence_id=str(match.chunk.metadata["evidence_id"]),
+            document_id=match.chunk.document_id,
+            version_id=match.chunk.version_id,
+            content=match.chunk.content,
+            display_content=match.chunk.metadata.get("display_content_zh"),
+            retrieval=dict(match.chunk.metadata.get("retrieval", {})),
+            score=match.score,
+            locator=dict(match.chunk.metadata["locator"]),
+            document_metadata=match.chunk.metadata.get("document_metadata", {}),
+            applicability_status=assess_applicability(
+                match.chunk.metadata.get("document_metadata"),
+                request.knowledge_context,
+            ),
+        )
+        for match in matches
+    ]
+
+
+@router.post("/retrieval/hybrid", tags=["retrieval"])
+def hybrid_retrieval(
+    request: HybridRetrievalRequest,
+    application: ApplicationDependency,
+) -> HybridRetrievalResult:
+    try:
+        return application.hybrid_retrieval.execute(
+            request.query,
+            top_k=request.top_k,
+            min_relevance=request.min_relevance,
+            knowledge_context=request.knowledge_context,
+        )
+    except ValueError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail=str(exc)
+        ) from exc
+
+
+@router.post(
+    "/retrieval/evaluate",
+    response_model=RetrievalEvaluationResponse,
+    tags=["retrieval"],
+)
+def evaluate_hybrid_retrieval(
+    request: RetrievalEvaluationRequest,
+    application: ApplicationDependency,
+) -> RetrievalEvaluationResponse:
+    try:
+        retrieval = application.hybrid_retrieval.execute(
+            request.query,
+            top_k=request.top_k,
+            min_relevance=request.min_relevance,
+            knowledge_context=request.knowledge_context,
+        )
+        metrics = evaluate_retrieval(retrieval, set(request.relevant_evidence_ids))
+        return RetrievalEvaluationResponse(retrieval=retrieval, metrics=metrics)
+    except ValueError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail=str(exc)
+        ) from exc
+
+
+@router.post(
+    "/evaluations/generation",
+    response_model=GenerationQualityResponse,
+    tags=["evaluation"],
+)
+def evaluate_generation_quality_endpoint(
+    request: GenerationQualityRequest,
+    application: ApplicationDependency,
+    _rate_limit: DiagnosisRateLimitDependency,
+) -> GenerationQualityResponse:
+    try:
+        model = _provider_model(request.provider, application)
+        relevant = set(request.relevant_evidence_ids)
+        metrics = evaluate_generation_quality(request.report, relevant)
+        judge = judge_generation_quality(request.report, model, relevant)
+        return GenerationQualityResponse(metrics=metrics, judge=judge)
+    except LanguageModelError as exc:
+        raise HTTPException(status_code=status.HTTP_502_BAD_GATEWAY, detail=str(exc)) from exc
+    except ValueError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail=str(exc)
+        ) from exc
+
+
+@router.get(
+    "/documents",
+    response_model=list[DocumentCatalogResponse],
+    tags=["knowledge"],
+)
+def list_documents(application: ApplicationDependency) -> list[DocumentCatalogResponse]:
+    return [
+        DocumentCatalogResponse.model_validate(asdict(document))
+        for document in application.browse_knowledge.execute()
+    ]
+
+
+@router.get("/graph", response_model=GraphOverviewResponse, tags=["knowledge"])
+def browse_graph(
+    application: ApplicationDependency,
+    query: str = "",
+    limit: int = 300,
+) -> GraphOverviewResponse:
+    try:
+        overview = application.browse_graph.execute(query=query, limit=limit)
+    except ValueError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail=str(exc),
+        ) from exc
+    return GraphOverviewResponse.model_validate(asdict(overview))
+
+
+@router.get("/cases", response_model=list[CaseResponse], tags=["knowledge"])
+def browse_cases(
+    application: ApplicationDependency,
+    query: str = "",
+    limit: int = 100,
+) -> list[CaseResponse]:
+    if limit < 1 or limit > 500:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail="case limit must be between 1 and 500",
+        )
+    return [
+        CaseResponse.model_validate(asdict(case))
+        for case in application.browse_cases.execute(query=query, limit=limit)
+    ]
+
+
+@router.post(
+    "/cases/{case_id}/verification",
+    response_model=CaseResponse,
+    tags=["knowledge"],
+)
+def verify_case(
+    case_id: str,
+    request: CaseVerificationRequest,
+    application: ApplicationDependency,
+) -> CaseResponse:
+    try:
+        updated = application.record_case_verification.execute(
+            case_id=case_id,
+            outcome=request.outcome,
+            actual_cause=request.actual_cause,
+            actual_fault_ids=request.actual_fault_ids,
+            notes=request.notes,
+        )
+    except KeyError as exc:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=str(exc)) from exc
+    except ValueError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail=str(exc),
+        ) from exc
+    return CaseResponse.model_validate(asdict(updated))
+
+
+@router.get(
+    "/runs/{run_id}/operations",
+    response_model=list[OperationRecordResponse],
+    tags=["audit"],
+)
+def list_run_operations(
+    run_id: str,
+    application: ApplicationDependency,
+) -> list[OperationRecordResponse]:
+    return [
+        OperationRecordResponse.model_validate(asdict(operation))
+        for operation in application.browse_operations.execute(run_id)
+    ]
+
+
+@router.post("/diagnoses", response_model=DiagnosisReport, tags=["diagnosis"])
+def run_diagnosis(
+    request: RunDiagnosisRequest,
+    application: ApplicationDependency,
+    _rate_limit: DiagnosisRateLimitDependency,
+) -> DiagnosisReport:
+    model = _provider_model(request.provider, application)
+    command = DiagnosisCommand.model_validate(request.model_dump(exclude={"provider"}))
+    try:
+        return application.run_diagnosis.start(command, model)
+    except KeyError as exc:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=str(exc)) from exc
+    except LanguageModelError as exc:
+        raise HTTPException(status_code=status.HTTP_502_BAD_GATEWAY, detail=str(exc)) from exc
+
+
+@router.post("/diagnoses/stream", tags=["diagnosis"])
+async def stream_diagnosis(
+    request: RunDiagnosisRequest,
+    application: ApplicationDependency,
+    _rate_limit: DiagnosisRateLimitDependency,
+) -> StreamingResponse:
+    model = _provider_model(request.provider, application)
+    command = DiagnosisCommand.model_validate(request.model_dump(exclude={"provider"}))
+    queue: asyncio.Queue[tuple[str, dict[str, Any]] | None] = asyncio.Queue()
+    loop = asyncio.get_running_loop()
+
+    def emit(event: str, payload: dict[str, Any]) -> None:
+        loop.call_soon_threadsafe(queue.put_nowait, (event, payload))
+
+    def run() -> None:
+        try:
+            application.run_diagnosis.start_streaming(command, model, emit)
+        except Exception as exc:
+            emit("run_failed", {"error": f"{type(exc).__name__}: {exc}"})
+        finally:
+            loop.call_soon_threadsafe(queue.put_nowait, None)
+
+    task = asyncio.create_task(asyncio.to_thread(run))
+
+    async def event_stream() -> Any:
+        while True:
+            item = await queue.get()
+            if item is None:
+                break
+            event, payload = item
+            yield f"event: {event}\ndata: {json.dumps(payload, ensure_ascii=False)}\n\n"
+        await task
+
+    return StreamingResponse(event_stream(), media_type="text/event-stream")
+
+
+@router.post(
+    "/diagnoses/{run_id}/resume",
+    response_model=DiagnosisReport,
+    tags=["diagnosis"],
+)
+def resume_diagnosis(
+    run_id: str,
+    request: ResumeDiagnosisRequest,
+    application: ApplicationDependency,
+) -> DiagnosisReport:
+    model = _provider_model(request.provider, application)
+    try:
+        return application.run_diagnosis.resume(run_id, model)
+    except DiagnosisRunNotFound as exc:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=str(exc)) from exc
+    except IncompatibleWorkflowError as exc:
+        raise HTTPException(status_code=status.HTTP_409_CONFLICT, detail=str(exc)) from exc
+    except LanguageModelError as exc:
+        raise HTTPException(status_code=status.HTTP_502_BAD_GATEWAY, detail=str(exc)) from exc
+
+
+def _provider_model(
+    configuration: ProviderConfiguration | None,
+    application: Application,
+) -> LanguageModel:
+    if configuration is None:
+        settings = application.settings
+        if not settings.default_provider_available:
+            raise HTTPException(
+                status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+                detail="configure a personal provider or a local default LLM provider",
+            )
+        assert settings.default_llm_base_url is not None
+        assert settings.default_llm_model is not None
+        assert settings.default_llm_api_key is not None
+        if settings.knowledge_extractor_backend == "langextract":
+            from aerodiagnosis.adapters.llm.budgeted import BudgetedLanguageModel
+            from aerodiagnosis.adapters.llm.research_client import ResearchClient
+
+            return BudgetedLanguageModel(
+                ResearchClient(
+                    api_key=settings.default_llm_api_key.get_secret_value(),
+                    runtime=settings.knowledge_budget_runtime,
+                    model=settings.default_llm_model,
+                    cap_cny=5 if settings.knowledge_extraction_stage == "pilot" else 100,
+                ),
+                stage="pilot"
+                if settings.knowledge_extraction_stage == "pilot"
+                else "generation_evaluation",
+            )
+        return OpenAICompatibleLanguageModel(
+            base_url=settings.default_llm_base_url,
+            api_key=settings.default_llm_api_key.get_secret_value(),
+            model=settings.default_llm_model,
+        )
+    if application.settings.knowledge_extractor_backend == "langextract":
+        if str(configuration.base_url).rstrip("/") not in {
+            "https://api.deepseek.com",
+            "https://api.deepseek.com/v1",
+        } or configuration.model not in {"deepseek-flash", "deepseek-v4-pro"}:
+            raise HTTPException(
+                status_code=422,
+                detail="Fusion profile requires a budget-registered DeepSeek provider",
+            )
+        from aerodiagnosis.adapters.llm.budgeted import BudgetedLanguageModel
+        from aerodiagnosis.adapters.llm.research_client import ResearchClient
+
+        return BudgetedLanguageModel(
+            ResearchClient(
+                api_key=configuration.api_key.get_secret_value(),
+                runtime=application.settings.knowledge_budget_runtime,
+                model=configuration.model,
+                cap_cny=5 if application.settings.knowledge_extraction_stage == "pilot" else 100,
+            ),
+            stage="pilot"
+            if application.settings.knowledge_extraction_stage == "pilot"
+            else "generation_evaluation",
+        )
+    return OpenAICompatibleLanguageModel(
+        base_url=str(configuration.base_url),
+        api_key=configuration.api_key.get_secret_value(),
+        model=configuration.model,
+        timeout_seconds=configuration.timeout_seconds,
+    )
+
+
+@router.post(
+    "/sessions",
+    response_model=SessionCreatedResponse,
+    status_code=status.HTTP_201_CREATED,
+    tags=["memory"],
+)
+def create_session(application: ApplicationDependency) -> SessionCreatedResponse:
+    return SessionCreatedResponse(session_id=application.conversation_sessions.create())
+
+
+@router.get(
+    "/sessions/{session_id}/messages",
+    response_model=list[ConversationMessageResponse],
+    tags=["memory"],
+)
+def get_session_messages(
+    session_id: str,
+    application: ApplicationDependency,
+    limit: int = 20,
+) -> list[ConversationMessageResponse]:
+    try:
+        messages = application.conversation_sessions.messages(session_id, limit=limit)
+    except KeyError as exc:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=str(exc)) from exc
+    except ValueError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail=str(exc),
+        ) from exc
+    return [ConversationMessageResponse.model_validate(asdict(message)) for message in messages]
+
+
+@router.delete(
+    "/sessions/{session_id}",
+    status_code=status.HTTP_204_NO_CONTENT,
+    tags=["memory"],
+)
+def delete_session(session_id: str, application: ApplicationDependency) -> None:
+    if not application.conversation_sessions.delete(session_id):
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"unknown conversation session: {session_id}",
+        )

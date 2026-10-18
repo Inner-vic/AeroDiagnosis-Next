@@ -1,0 +1,48 @@
+{
+  "status": "ready_for_freeze_after_source_only_quality_adjudication",
+  "date": "2026-10-14",
+  "questions": 120,
+  "primary_source_text": 95,
+  "summary_auxiliary": 25,
+  "required_atomic_facts": 225,
+  "arms": [
+    "text_only",
+    "text_plus_graph"
+  ],
+  "top_k": 5,
+  "evidence_token_budget": 2048,
+  "budget_counts": "whole catalogue including IDs and source metadata",
+  "case_route": false,
+  "ranking_policy": "grounded_source_rank@3",
+  "concept_policy": "source-scoped-concepts@1",
+  "citation_policy": "source-span-and-uncertainty@1",
+  "generation_model": "deepseek-flash",
+  "judge_model": "deepseek-v4-pro",
+  "temperature": 0,
+  "paired_task_set": "same generation_queries.jsonl; only sample_id/query/query_language",
+  "gold_access": "scoring_only after all paired generation",
+  "source_scope": "explicit source reference parsed from query only; same active document in both arms",
+  "test_tuning_prohibited": true,
+  "interval_method": "paired whole-source cluster bootstrap",
+  "bootstrap_repetitions": 10000,
+  "bootstrap_seed": 20261014,
+  "statistical_units": [
+    "source_cluster",
+    "conservative_correlation_group"
+  ],
+  "question_weighted_effect": "strict correct proportion graph minus text",
+  "bounded_source_only_gate_repair": 1,
+  "cumulative_cap_cny": 35,
+  "ledger_reset": false,
+  "limitations": [
+    "AI nonexpert source reconstruction and visible-label reconciliation before predictions",
+    "source scoped; not cross-document source discovery",
+    "95 questions from 19 primary sources, not 95 independent samples",
+    "25 saved-summary questions analyzed separately",
+    "new project sources; not globally unseen by pretrained models",
+    "NASA and MIT related to earlier background topics",
+    "captured or derived text, figures and formula completeness not fully restored",
+    "single response per arm; separate model same-provider blind judge",
+    "concept membership discovers original sources, does not compose causal paths"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "created_before_questions": true,
+  "documents": 53,
+  "chunks": 813,
+  "families": 40,
+  "source_only": true,
+  "source_catalog_sha256": "4011968a7c6542fa7113e091cbc6fc82bcaf522c8da5884a4c66586e76a0f10b",
+  "selection_sha256": "60d41dd16543c2278a723dc4bf52d6d71f52d2fb17d92302104d74746a340f41",
+  "fusion_policy_sha256": "d34c309b98cc804daca5c58a6e4822870f07c95a71c285a492f10236ff3b4875"
+}

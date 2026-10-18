@@ -1,0 +1,155 @@
+{
+  "checked_date": "2026-10-13",
+  "all_connector_content_matches_git_blob": true,
+  "repositories": [
+    {
+      "repository": "docling-project/docling",
+      "commit_sha": "e017a6ff95f09869e3af2c1f8c7774c548d3a084",
+      "commit_date": "2026-10-13T07:23:45Z",
+      "reviewed_date": "2026-10-13",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/docling-project/docling/blob/e017a6ff95f09869e3af2c1f8c7774c548d3a084/LICENSE",
+          "blob_sha1": "6684a401bf0f700fd37104ab7c8da340036f7166",
+          "sha256": "edb765d1e3e60d0c7a7d5fba5f2bb2c3c29f7465cecb5c22cf1185c884954e4c"
+        },
+        {
+          "path": "pyproject.toml",
+          "url": "https://github.com/docling-project/docling/blob/e017a6ff95f09869e3af2c1f8c7774c548d3a084/pyproject.toml",
+          "blob_sha1": "dba203d68657a991db70a45ac332ed962ae9d835",
+          "sha256": "4f85b430e60bf31044bae9c98efc537abdf813609941d19cc9b105c34fa39320"
+        },
+        {
+          "path": "docs/concepts/docling_document.md",
+          "url": "https://github.com/docling-project/docling/blob/e017a6ff95f09869e3af2c1f8c7774c548d3a084/docs/concepts/docling_document.md",
+          "blob_sha1": "4b20b7f7c4c2be72fcf9188307f0a2e90ad0d8f3",
+          "sha256": "9225bdfee28b8ddc40049e0975d83825ba08b284d8e32737aadeb4a9b96a5ddf"
+        },
+        {
+          "path": "docling/document_converter.py",
+          "url": "https://github.com/docling-project/docling/blob/e017a6ff95f09869e3af2c1f8c7774c548d3a084/docling/document_converter.py",
+          "blob_sha1": "b901fab72309b2a77ce55c3947d1153cfa26fa6f",
+          "sha256": "0e1837b982295a379411d6a3720182b048551df4b0de96be8c5c90f9b3f8140a"
+        }
+      ]
+    },
+    {
+      "repository": "docling-project/docling-graph",
+      "commit_sha": "bbcd0e4846fadfcadac2800784783e59cd2722a9",
+      "commit_date": "2026-09-24T11:10:52Z",
+      "reviewed_date": "2026-10-13",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/docling-project/docling-graph/blob/bbcd0e4846fadfcadac2800784783e59cd2722a9/LICENSE",
+          "blob_sha1": "9c6eee6f28efa3e4e1aaff82ee6fe0c484c46161",
+          "sha256": "1cee981f9a09f58ce811ee27dcbd08798f0ab95335aa593854d130dba540d6a0"
+        },
+        {
+          "path": "pyproject.toml",
+          "url": "https://github.com/docling-project/docling-graph/blob/bbcd0e4846fadfcadac2800784783e59cd2722a9/pyproject.toml",
+          "blob_sha1": "d6786d4c3b25ed8993d5a5defcedf53131d66bec",
+          "sha256": "bcaf30d478eaa7dfd7bc8e6db8e2bdafcf2a255797a7ab1de54b55b35178f41e"
+        },
+        {
+          "path": "docs/usage/api/index.md",
+          "url": "https://github.com/docling-project/docling-graph/blob/bbcd0e4846fadfcadac2800784783e59cd2722a9/docs/usage/api/index.md",
+          "blob_sha1": "4af21d7d4624488c669e065a9f747ff288a3c3bb",
+          "sha256": "2d5d6315303c39ceb218865292f5351b712ad93320c830fa6be9eba70ee16176"
+        },
+        {
+          "path": "docling_graph/pipeline/orchestrator.py",
+          "url": "https://github.com/docling-project/docling-graph/blob/bbcd0e4846fadfcadac2800784783e59cd2722a9/docling_graph/pipeline/orchestrator.py",
+          "blob_sha1": "40d3f5417c8b78622ba0e11d6adbc3b5402219c2",
+          "sha256": "4a9ef438fb1286faa74bf7f39a37d5a14597e35175a4fba48bf612b2a3c6ce50"
+        }
+      ]
+    },
+    {
+      "repository": "google/langextract",
+      "commit_sha": "f6dc772b738a44cd6f77d0858d6ce3afa16acd15",
+      "commit_date": "2026-10-12T01:11:07Z",
+      "reviewed_date": "2026-10-13",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/google/langextract/blob/f6dc772b738a44cd6f77d0858d6ce3afa16acd15/LICENSE",
+          "blob_sha1": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "path": "pyproject.toml",
+          "url": "https://github.com/google/langextract/blob/f6dc772b738a44cd6f77d0858d6ce3afa16acd15/pyproject.toml",
+          "blob_sha1": "95ac093f8ff915ebd9e99149be72c84a27062f9b",
+          "sha256": "3f1cb85f94185c10778732b915ad88153a68ca9ccfa749880d55a1f68dc404a2"
+        },
+        {
+          "path": "langextract/resolver.py",
+          "url": "https://github.com/google/langextract/blob/f6dc772b738a44cd6f77d0858d6ce3afa16acd15/langextract/resolver.py",
+          "blob_sha1": "bf37e9a0dc73ab742068b04cf12a127c9252ad19",
+          "sha256": "d176e5cdada24b526e0ab559f9388e35df5057ca194a2552195dd101112b7f4b"
+        },
+        {
+          "path": "langextract/core/data.py",
+          "url": "https://github.com/google/langextract/blob/f6dc772b738a44cd6f77d0858d6ce3afa16acd15/langextract/core/data.py",
+          "blob_sha1": "3d680c8e093f49196213c552c05cf53462552145",
+          "sha256": "1bdd05d75387858d38b0bb6975a7b7753e957b855ce4e694dabe2985cf0fc8a3"
+        },
+        {
+          "path": "langextract/providers/openai.py",
+          "url": "https://github.com/google/langextract/blob/f6dc772b738a44cd6f77d0858d6ce3afa16acd15/langextract/providers/openai.py",
+          "blob_sha1": "889f06884ea38325ff567e84cd1d70b80122f876",
+          "sha256": "4710a8286f35931e38dec6fa7e294ccc2f7000e9c2c988b776965cf0095d0009"
+        }
+      ]
+    },
+    {
+      "repository": "HKUDS/LightRAG",
+      "commit_sha": "4d0afc1bc36e6a34d4a5895b68efe9413748627a",
+      "commit_date": "2026-10-12T01:55:27Z",
+      "reviewed_date": "2026-10-13",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/HKUDS/LightRAG/blob/4d0afc1bc36e6a34d4a5895b68efe9413748627a/LICENSE",
+          "blob_sha1": "ff0c29b4790f767e8abdc14f43ca0495330e89e4",
+          "sha256": "0c16924564059e493c86854574660a47ed1dcc2a476ba7b5f949d3f2f73a1984"
+        },
+        {
+          "path": "pyproject.toml",
+          "url": "https://github.com/HKUDS/LightRAG/blob/4d0afc1bc36e6a34d4a5895b68efe9413748627a/pyproject.toml",
+          "blob_sha1": "d9321e1247be06355a0f70551a628abfac0227d2",
+          "sha256": "cbeb6e6e201a36913d73597e4f9b6148c152751666a9cecc4a2b0301916f5ab0"
+        },
+        {
+          "path": "docs/ProgramingWithCore.md",
+          "url": "https://github.com/HKUDS/LightRAG/blob/4d0afc1bc36e6a34d4a5895b68efe9413748627a/docs/ProgramingWithCore.md",
+          "blob_sha1": "1bc57e8037c3ab477dddcf67db751c7a440a53c4",
+          "sha256": "563344a9f6ee056ea932a95e0973d04c56dda9c18900fa3c3d2e3b3da7cb0b05"
+        }
+      ]
+    },
+    {
+      "repository": "microsoft/graphrag",
+      "commit_sha": "5faaaf4f5685fa2056fa8c3bf9342cb089f2942f",
+      "commit_date": "2026-10-08T18:24:13Z",
+      "reviewed_date": "2026-10-13",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/microsoft/graphrag/blob/5faaaf4f5685fa2056fa8c3bf9342cb089f2942f/LICENSE",
+          "blob_sha1": "9e841e7a26e4eb057b24511e7b92d42b257a80e5",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        },
+        {
+          "path": "packages/graphrag/graphrag/query/structured_search/local_search/mixed_context.py",
+          "url": "https://github.com/microsoft/graphrag/blob/5faaaf4f5685fa2056fa8c3bf9342cb089f2942f/packages/graphrag/graphrag/query/structured_search/local_search/mixed_context.py",
+          "blob_sha1": "ad5d2888b9687b754d78f4e3559c01d912231467",
+          "sha256": "93c019de4fbce62e7c4031eeb161d06f58818ed1660c6b4122770fba26c08287"
+        }
+      ]
+    }
+  ],
+  "snapshot_path": ".runtime/upstream-review-20261013/source-snapshots.json"
+}

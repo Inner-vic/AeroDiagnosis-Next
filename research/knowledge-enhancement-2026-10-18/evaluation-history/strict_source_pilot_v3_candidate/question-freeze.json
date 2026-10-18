@@ -1,0 +1,8 @@
+{
+  "questions_sha256": "3a359ba67e3fb077531075c9f0c5895878accb779cf47a6687ceef9099daf4f7",
+  "graph_freeze_sha256": "39473a9338ca2cc9ecd95cfad84a6202d1974066d7782242b9bc6da5ca54fd51",
+  "author_gold_not_used": true,
+  "all_labels_validated_before_predictions": true,
+  "questions": 6,
+  "clusters": 1
+}

@@ -1,0 +1,210 @@
+{
+  "schema": "retrieval-capability-design@1",
+  "status": "design_preserved_development60_completed",
+  "created_at_utc": "2026-10-15T06:21:24.991267+00:00",
+  "purpose": "Test channel complementarity by question capability, not manufacture a monotonic ordering",
+  "paid_api_cap_cny": 36,
+  "paid_api_calls_this_phase": 0,
+  "budget_remaining_cny": 0.619809,
+  "old_v1_to_v5": "historical evidence and development only; unchanged",
+  "taxonomy": [
+    {
+      "id": "S1_exact",
+      "name": "精确事实与型号标识",
+      "test_target": 40,
+      "dev_target": 10,
+      "minimum_support_units": 1
+    },
+    {
+      "id": "S2_paraphrase",
+      "name": "单证据语义改写",
+      "test_target": 40,
+      "dev_target": 10,
+      "minimum_support_units": 1
+    },
+    {
+      "id": "S3_constraints",
+      "name": "多条件交集与适用范围",
+      "test_target": 40,
+      "dev_target": 10,
+      "minimum_support_units": 1
+    },
+    {
+      "id": "S4_bridge2",
+      "name": "真正两跳跨证据桥接",
+      "test_target": 40,
+      "dev_target": 10,
+      "minimum_support_units": 2
+    },
+    {
+      "id": "S5_chain3",
+      "name": "三跳与跨段机制链",
+      "test_target": 40,
+      "dev_target": 10,
+      "minimum_support_units": 3
+    },
+    {
+      "id": "S6_counterevidence",
+      "name": "否定、冲突与资料不足",
+      "test_target": 40,
+      "dev_target": 10,
+      "minimum_support_units": null
+    }
+  ],
+  "initial_targets": {
+    "dev_questions": 60,
+    "test_questions": 240,
+    "test_source_clusters_minimum": 40,
+    "per_type_source_clusters_target": 15,
+    "source_overlap_between_dev_and_test": false,
+    "final_sample_size": "Determine before test freeze using dev discordance and source ICC sensitivity;240 is not a power guarantee; if larger size unaffordable reduce claim, not filter failures"
+  },
+  "primary_hypothesis": "Three-route source-grounded path retrieval improves complete necessary evidence on independently verified S4/S5 versus dual retrieval under matched source-candidate/context budgets",
+  "secondary_hypotheses": [
+    "Dual improves over the stronger single retriever selected on dev, on the fixed answerable capability mixture",
+    "Graph path constraints reduce invalid direction, source/model mismatch and certainty inflation",
+    "Predicted-intent routing preserves simple-query quality and avoids graph cost"
+  ],
+  "global_ordering_rule": "Only claim triple>dual>single if both paired contrasts pass on the SAME predeclared population and fixed weighting; different type subsets cannot establish a global order",
+  "methods": [
+    {
+      "id": "bm25",
+      "candidate_budget": 150
+    },
+    {
+      "id": "dense_zh",
+      "candidate_budget": 150
+    },
+    {
+      "id": "dual",
+      "budgets": {
+        "bm25": 75,
+        "dense_zh": 75
+      }
+    },
+    {
+      "id": "triple_entity_control",
+      "budgets": {
+        "bm25": 50,
+        "dense_zh": 50,
+        "graph_entity_lookup": 50
+      }
+    },
+    {
+      "id": "triple_path",
+      "budgets": {
+        "bm25": 50,
+        "dense_zh": 50,
+        "graph_path": 50
+      },
+      "path_max_hops": 3
+    },
+    {
+      "id": "iterative_dual_control",
+      "rounds": 3,
+      "per_round_budgets": {
+        "bm25": 25,
+        "dense_zh": 25
+      }
+    },
+    {
+      "id": "triple_path_routed",
+      "same_maximum_budget_as": "triple_path",
+      "router": "question-only, trained/fixed on dev, never gold task type"
+    }
+  ],
+  "common_controls": {
+    "source_candidate_budget": 150,
+    "source_candidate_counts_include_all_rounds": true,
+    "graph_neighbor_visits_separately_bounded_and_logged": true,
+    "post_fusion_source_pool": 50,
+    "final_k": [
+      5,
+      10
+    ],
+    "context_token_budget": 4096,
+    "generator_and_prompt": "same across arms in later paid answer stage",
+    "reranker": "same identity in primary retrieval comparison",
+    "no_test_label_to_retriever": true,
+    "no_answer_dependent_candidate_injection": true,
+    "same_corpus_and_chinese_translation_for_all": true,
+    "no_forced_graph_slot": true,
+    "max_per_document": 5,
+    "expand_parent_context": false,
+    "count_each_path_source_chunk_individually": true,
+    "no_oracle_gold_hop_count_to_retriever": true
+  },
+  "metrics": {
+    "primary": "complete_necessary_evidence@5 on independently verified S4+S5",
+    "secondary": [
+      "complete_necessary_evidence@10",
+      "best_sufficient_support_set_unit_coverage@5/@10",
+      "first_complete_support_MRR@10",
+      "valid directed/qualified explanation chain rate (requires adjudicated generated chain)",
+      "answer factual support and citation correctness (separate generation stage)",
+      "abstention and certainty preservation on S6",
+      "latency,candidate visits,indexing/translation cost",
+      "Minimum original-chunk support size / shortcut audit; a quality metric, not a retrieval success score"
+    ],
+    "not_available_without_judgments": [
+      "semantic precision",
+      "exhaustive relevance Recall",
+      "nDCG"
+    ],
+    "current_software": "scripts/capability_metrics.py"
+  },
+  "inference": {
+    "unit": "source-event bundle / connected source family; not individual question",
+    "paired_cluster_bootstrap_resamples": 10000,
+    "seed": 20261015,
+    "confidence": 0.95,
+    "primary_single_comparison": "triple_path vs dual on S4+S5",
+    "multiple_confirmatory_comparisons": "If a global ordered claim is preregistered, control its paired contrast family with Holm; keep per-type intervals descriptive unless separately powered",
+    "no_significance_claim_for_blueprints_or_synthetic_metric_tests": true
+  },
+  "graph_pipeline_gate": [
+    "Source-only extraction and provenance validated before authoring test questions",
+    "Mention-to-canonical-entity links require same source scope and explicit coreference/role evidence; equal names are insufficient",
+    "Keep engine/component roles, negation, uncertainty and revision boundaries",
+    "At least genuine two/three-hop chains exist and every edge has source evidence",
+    "Freeze graph and source representations before test authoring; do not insert gold paths into the normal graph index"
+  ],
+  "benchmark_integrity": [
+    "Question rewriting and source-verified annotation correction permitted with version history",
+    "No question deletion/reweighting based on method wins or losses",
+    "Do not split naturally self-contained passages merely to force graph dependence",
+    "Accept all verified alternative sufficient evidence sets",
+    "Every claimed hop must pass single-unit/bridge necessity review",
+    "Source-only manually curated graph is a disclosed upper-bound diagnostic, separate from automatic-graph main result",
+    "Semantic hop count and minimum required original retrieval-chunk count are separate labels",
+    "S4 requires at least2, S5 at least3 necessary original stable chunks; three annotated sentences within one chunk do not satisfy S5",
+    "If any verified alternative sufficient set collapses the retrieval task, relabel complexity before rankings; do not discard based on method performance"
+  ],
+  "current_completion": {
+    "theory_and_structure_audit": true,
+    "question_blueprints": 12,
+    "metric_software_ready": true,
+    "new_test_sources_collected": 0,
+    "new_gold_questions_accepted": 0,
+    "new_performance_results": false,
+    "production_graph_modified": false
+  },
+  "development_execution": {
+    "freeze": "development-freeze.json",
+    "actual_groups": {
+      "S1_exact": 10,
+      "S2_paraphrase": 10,
+      "S3_constraints": 10,
+      "S4_two_support": 10,
+      "S5_three_support": 10,
+      "S6_counterevidence": 10
+    },
+    "strict_chain_counts": {
+      "S4_two_support": 6,
+      "S5_three_support": 2
+    },
+    "manual_graph_upper_bound": true,
+    "independent_test_completed": false,
+    "report": "docs/upgrade/execution/CAPABILITY-DEV60-PATH-RETRIEVAL-2026-10-15.md"
+  }
+}

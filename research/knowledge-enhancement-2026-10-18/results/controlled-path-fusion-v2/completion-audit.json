@@ -1,0 +1,12 @@
+{
+  "rows": 2592,
+  "questions": 216,
+  "atomic_insertions": 144,
+  "source_quotes_verified": true,
+  "all_metrics_recomputed": true,
+  "all_frozen_inputs_unchanged": true,
+  "index_unchanged": true,
+  "predictions_sha256": "e765ba67b2943cd8114fdce6817fc3084b5442b1db8120e672a697c760d6efa9",
+  "api_calls": 0,
+  "production_promoted": false
+}

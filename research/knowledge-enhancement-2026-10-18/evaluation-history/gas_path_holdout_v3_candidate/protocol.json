@@ -1,0 +1,61 @@
+{
+  "status": "ready_for_freeze",
+  "questions": 120,
+  "primary_source_text": 90,
+  "summary_auxiliary": 30,
+  "primary_sources": 18,
+  "auxiliary_sources": 6,
+  "required_atomic_facts": 149,
+  "task_types": {
+    "mechanism": 23,
+    "chain": 25,
+    "condition": 24,
+    "uncertainty": 24,
+    "counterexample": 24
+  },
+  "arms": [
+    "text_only",
+    "text_plus_graph"
+  ],
+  "top_k": 5,
+  "evidence_token_budget": 2048,
+  "budget_counts": "whole evidence catalogue including selectors and source metadata",
+  "ranking_policy": "grounded_source_rank@4",
+  "embedding": "multilingual-e5-small pinned ONNX CPU",
+  "citation_policy": "source-span-and-uncertainty@2",
+  "coverage": "independent verifier plus index guards",
+  "bounded_source_only_gate_repair": 1,
+  "bounded_source_only_coverage_repair": 1,
+  "primary_judge": "all 240 answers reviewed by anonymous independent nonexpert AI with original source",
+  "paid_pro_audit": "first question per source; 24 pairs; auxiliary grading cross-check only",
+  "generation_model": "deepseek-flash",
+  "temperature": 0,
+  "case_route": false,
+  "source_scope": "explicit document reference in query; same scope in both arms",
+  "bootstrap_repetitions": 10000,
+  "bootstrap_seed": 20261014,
+  "interval_method": "paired whole-source cluster bootstrap",
+  "conservative_correlation_groups": "NASA six abstracts together; AAIB two icing sources together",
+  "test_tuning_prohibited": true,
+  "cumulative_cap_cny": 35,
+  "ledger_reset": false,
+  "algorithm_contract_sha256": "c15e102ced9483c6b506933e5a64915cb85a0827ce976a33545488d3e32017e3",
+  "analysis_helpers_sha256": {
+    "prepare_quality_scoring.py": "dc50e98fba02496b68f11df4db6342f25a5a785c7b4e8d073960fdbb3d6c8029",
+    "finalize_quality_annotations.py": "edb129e36577ca00ff7002c7d37c05ecb2aa1a984dbf0ce6ebcdeee9ab966644",
+    "prepare_quality_review.py": "d52fe12ecbe91a0fbe767ad9dcdd20b7365b8b04eb2773d34b59422aa24bcd6c",
+    "summarize_quality_comparison.py": "1eac204b0835c412e43d639c1ddc182abd62fe0fef3656cdf77c6e7053aed080",
+    "validate_quality_annotations.py": "d45093ecd4c8036e4988dd9896726b18e66785253d2d1f3a12cb604234807d82",
+    "adopt_quality_review.py": "f9e868481248228d4c185ce743d2b49c743887e0b28b132141620d145235b501"
+  },
+  "limitations": [
+    "curated 18 primary sources; 90 questions are not 90 independent samples",
+    "30 NASA publisher abstracts separate from full-source-text analysis",
+    "new project sources, not guaranteed absent from model pretraining",
+    "source scope selected before questions; figures/formulas not fully reconstructed",
+    "AI nonexpert source review, not real maintenance diagnostic accuracy",
+    "single generation per arm; model calls can vary even for identical contexts",
+    "related NASA and icing sources receive conservative grouped sensitivity",
+    "graph extends source candidates; no causal path composition"
+  ]
+}

@@ -1,0 +1,4363 @@
+[
+  {
+    "submission_id": "df705ea3412762",
+    "question_id": "sq-04",
+    "group": "controlled",
+    "question": "QB-42465设定下，QB-42465的压气机静子表面沉积最终怎样演变到QB-42465的级效率监控下降？请补全机理路径。",
+    "answerable": true,
+    "required_points": [
+      "本记录只陈述虚拟试验台QB-42465的一条设定规则：当QB-42465的压气机静子表面沉积发生时，引起QB-42465的静子流道粗糙度升高。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-42465的一条设定规则：当QB-42465的静子流道粗糙度升高发生时，引起QB-42465的叶栅流动损失增加。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-42465的一条设定规则：当QB-42465的叶栅流动损失增加发生时，引起QB-42465的级效率监控下降。本条不陈述其他后续环节。"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "ac822e62330a5e2a9335d2db8a943c1043701eb578ca02b668391ea4107f0464",
+        "start": 0,
+        "end": 83,
+        "anchor": "本记录只陈述虚拟试验台QB-42465的一条设定规则：当QB-42465的压气机静子表面沉积发生时，引起QB-42465的静子流道粗糙度升高。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "9a2c1c33b8942fd1f2c6a7beda8035e4b054fa90e53a6de727856ac106e0f7f7",
+        "start": 0,
+        "end": 82,
+        "anchor": "本记录只陈述虚拟试验台QB-42465的一条设定规则：当QB-42465的静子流道粗糙度升高发生时，引起QB-42465的叶栅流动损失增加。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "a8096576c2cfdaf3777aa95a7678f0518f8d5b2dcad194c173a01dad5dc72011",
+        "start": 0,
+        "end": 80,
+        "anchor": "本记录只陈述虚拟试验台QB-42465的一条设定规则：当QB-42465的叶栅流动损失增加发生时，引起QB-42465的级效率监控下降。本条不陈述其他后续环节。"
+      }
+    ],
+    "completed": true,
+    "status": "insufficient_evidence",
+    "insufficient_evidence": true,
+    "answer": "现有证据不足以完整回答该问题。",
+    "reason": "现有证据未通过回答支持性或问题覆盖检查，无法给出完整结论。",
+    "claims": []
+  },
+  {
+    "submission_id": "4e097e6ab2be16",
+    "question_id": "cq-12",
+    "group": "real",
+    "question": "这份指导资料能否直接给出所有发动机统一适用的允许转子不平衡量具体数值？",
+    "answerable": false,
+    "required_points": [
+      "不能给出所有发动机统一数值",
+      "可接受限值通常在生产规范或发动机手册中确定"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "777f4e92735ee3734eb129ed847698971a4b1a5ba124368f724f6b1529ace56e",
+        "start": 117,
+        "end": 146,
+        "anchor": "转子不平衡的可接受限值通常在生产规范和/或发动机手册中确定"
+      }
+    ],
+    "completed": true,
+    "status": "insufficient_evidence",
+    "insufficient_evidence": true,
+    "answer": "现有证据不足以完整回答该问题。",
+    "reason": "现有证据未通过回答支持性或问题覆盖检查，无法给出完整结论。",
+    "claims": []
+  },
+  {
+    "submission_id": "a063888cd7e147",
+    "question_id": "sq-11",
+    "group": "controlled",
+    "question": "QB-57868设定下，QB-57868的供气调压器阀芯粘滞最终怎样演变到QB-57868的执行端到位延迟？请补全机理路径。",
+    "answerable": true,
+    "required_points": [
+      "本记录只陈述虚拟试验台QB-57868的一条设定规则：当QB-57868的供气调压器阀芯粘滞发生时，引起QB-57868的供气调压滞后。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-57868的一条设定规则：当QB-57868的供气调压滞后发生时，引起QB-57868的气动执行端压力偏离。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-57868的一条设定规则：当QB-57868的气动执行端压力偏离发生时，引起QB-57868的执行端到位延迟。本条不陈述其他后续环节。"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "9b2edccf19c256198e0a67048156bfcac44a8be2c0d1a127003067cb2876f37c",
+        "start": 0,
+        "end": 80,
+        "anchor": "本记录只陈述虚拟试验台QB-57868的一条设定规则：当QB-57868的供气调压器阀芯粘滞发生时，引起QB-57868的供气调压滞后。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "e65b2599494cc43b541741d1c5830709b444a129a2355e750b5fc6ee112f0db4",
+        "start": 0,
+        "end": 80,
+        "anchor": "本记录只陈述虚拟试验台QB-57868的一条设定规则：当QB-57868的供气调压滞后发生时，引起QB-57868的气动执行端压力偏离。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "5095d114ad87658adefa7b3af8dc7244ef3345b5b00753cd5be9d754f4009506",
+        "start": 0,
+        "end": 81,
+        "anchor": "本记录只陈述虚拟试验台QB-57868的一条设定规则：当QB-57868的气动执行端压力偏离发生时，引起QB-57868的执行端到位延迟。本条不陈述其他后续环节。"
+      }
+    ],
+    "completed": true,
+    "status": "evidence_ready",
+    "insufficient_evidence": false,
+    "answer": "当QB-57868的供气调压器阀芯粘滞发生时，引起QB-57868的供气调压滞后。\n当QB-57868的供气调压滞后发生时，引起QB-57868的气动执行端压力偏离。\n当QB-57868的气动执行端压力偏离发生时，引起QB-57868的执行端到位延迟。\n仅观察到QB-57868的执行端到位延迟，不足以确定QB-57868的供气调压器阀芯粘滞已经发生；其他未列出的原因仍可能产生相同末端指示。\n该逆推不是充分条件。",
+    "reason": "",
+    "claims": [
+      {
+        "text": "当QB-57868的供气调压器阀芯粘滞发生时，引起QB-57868的供气调压滞后。",
+        "support_span_ids": [
+          "08bfd00b53f33876e88e65ec302820cac6d3ea0252e330f8710ef276d4b04e0f"
+        ],
+        "evidence_ids": [
+          "9b2edccf19c256198e0a67048156bfcac44a8be2c0d1a127003067cb2876f37c"
+        ],
+        "citations": [
+          {
+            "span_id": "08bfd00b53f33876e88e65ec302820cac6d3ea0252e330f8710ef276d4b04e0f",
+            "evidence_id": "9b2edccf19c256198e0a67048156bfcac44a8be2c0d1a127003067cb2876f37c",
+            "start": 0,
+            "end": 68,
+            "text_sha256": "bf0c76072165b9e4e35d573d3acdc3c9097dbc53b90bf0d8733058641fc3faa9",
+            "text_kind": "provided_display_text",
+            "support_quote": "本记录只陈述虚拟试验台QB-57868的一条设定规则：当QB-57868的供气调压器阀芯粘滞发生时，引起QB-57868的供气调压滞后。",
+            "chunk_id": "9b2edccf19c256198e0a67048156bfcac44a8be2c0d1a127003067cb2876f37c"
+          }
+        ]
+      },
+      {
+        "text": "当QB-57868的供气调压滞后发生时，引起QB-57868的气动执行端压力偏离。",
+        "support_span_ids": [
+          "fe7fb836a97fbe01298bce38b0d7f9185366fc0d35dcd960924ef09dcdabf72c"
+        ],
+        "evidence_ids": [
+          "e65b2599494cc43b541741d1c5830709b444a129a2355e750b5fc6ee112f0db4"
+        ],
+        "citations": [
+          {
+            "span_id": "fe7fb836a97fbe01298bce38b0d7f9185366fc0d35dcd960924ef09dcdabf72c",
+            "evidence_id": "e65b2599494cc43b541741d1c5830709b444a129a2355e750b5fc6ee112f0db4",
+            "start": 0,
+            "end": 68,
+            "text_sha256": "3846ab119973079d6fe5cf4d601cbc6bdb82e8ec7fc2bf59774e4b3a4d135055",
+            "text_kind": "provided_display_text",
+            "support_quote": "本记录只陈述虚拟试验台QB-57868的一条设定规则：当QB-57868的供气调压滞后发生时，引起QB-57868的气动执行端压力偏离。",
+            "chunk_id": "e65b2599494cc43b541741d1c5830709b444a129a2355e750b5fc6ee112f0db4"
+          }
+        ]
+      },
+      {
+        "text": "当QB-57868的气动执行端压力偏离发生时，引起QB-57868的执行端到位延迟。",
+        "support_span_ids": [
+          "34308c86f8c0ce10ef598a2339a9fcf343e15c46c4d6574f45e2002cf3888af6"
+        ],
+        "evidence_ids": [
+          "5095d114ad87658adefa7b3af8dc7244ef3345b5b00753cd5be9d754f4009506"
+        ],
+        "citations": [
+          {
+            "span_id": "34308c86f8c0ce10ef598a2339a9fcf343e15c46c4d6574f45e2002cf3888af6",
+            "evidence_id": "5095d114ad87658adefa7b3af8dc7244ef3345b5b00753cd5be9d754f4009506",
+            "start": 0,
+            "end": 69,
+            "text_sha256": "4babc163dcfef1f1b84728d57205734ca8a9caa771630b68ecef3032587125b3",
+            "text_kind": "provided_display_text",
+            "support_quote": "本记录只陈述虚拟试验台QB-57868的一条设定规则：当QB-57868的气动执行端压力偏离发生时，引起QB-57868的执行端到位延迟。",
+            "chunk_id": "5095d114ad87658adefa7b3af8dc7244ef3345b5b00753cd5be9d754f4009506"
+          }
+        ]
+      },
+      {
+        "text": "仅观察到QB-57868的执行端到位延迟，不足以确定QB-57868的供气调压器阀芯粘滞已经发生；其他未列出的原因仍可能产生相同末端指示。",
+        "support_span_ids": [
+          "170716c1f153430d0222021aec0975b976b005f1a2a07d95fbebc6de0d5c6853"
+        ],
+        "evidence_ids": [
+          "118ce77bc5f3646449cdfe968b2d2a56cda3c2b279ce88bada4c042521c43aa1"
+        ],
+        "citations": [
+          {
+            "span_id": "170716c1f153430d0222021aec0975b976b005f1a2a07d95fbebc6de0d5c6853",
+            "evidence_id": "118ce77bc5f3646449cdfe968b2d2a56cda3c2b279ce88bada4c042521c43aa1",
+            "start": 0,
+            "end": 95,
+            "text_sha256": "cc3b6114bd805624dd7219a75bbee3ce602ae0026a9f4cff4a4e0e19f7bc24ca",
+            "text_kind": "provided_display_text",
+            "support_quote": "边界记录：本场景明确规定，虚拟试验台QB-57868仅观察到QB-57868的执行端到位延迟，不足以确定QB-57868的供气调压器阀芯粘滞已经发生；其他未列出的原因仍可能产生相同末端指示。",
+            "chunk_id": "118ce77bc5f3646449cdfe968b2d2a56cda3c2b279ce88bada4c042521c43aa1"
+          }
+        ]
+      },
+      {
+        "text": "该逆推不是充分条件。",
+        "support_span_ids": [
+          "842c805ed1fb7327ea211c876795d912dd0810d317fc4ef8aad00569ece79c5a"
+        ],
+        "evidence_ids": [
+          "118ce77bc5f3646449cdfe968b2d2a56cda3c2b279ce88bada4c042521c43aa1"
+        ],
+        "citations": [
+          {
+            "span_id": "842c805ed1fb7327ea211c876795d912dd0810d317fc4ef8aad00569ece79c5a",
+            "evidence_id": "118ce77bc5f3646449cdfe968b2d2a56cda3c2b279ce88bada4c042521c43aa1",
+            "start": 95,
+            "end": 105,
+            "text_sha256": "cc3b6114bd805624dd7219a75bbee3ce602ae0026a9f4cff4a4e0e19f7bc24ca",
+            "text_kind": "provided_display_text",
+            "support_quote": "该逆推不是充分条件。",
+            "chunk_id": "118ce77bc5f3646449cdfe968b2d2a56cda3c2b279ce88bada4c042521c43aa1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "submission_id": "ddd3ae78de6879",
+    "question_id": "sq-05",
+    "group": "controlled",
+    "question": "QB-32054设定下，QB-32054的可调静子连杆间隙增大最终怎样演变到QB-32054的级间匹配告警？请补全机理路径。",
+    "answerable": true,
+    "required_points": [
+      "本记录只陈述虚拟试验台QB-32054的一条设定规则：当QB-32054的可调静子连杆间隙增大发生时，引起QB-32054的静子角度同步性降低。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-32054的一条设定规则：当QB-32054的静子角度同步性降低发生时，引起QB-32054的周向入射分布偏离。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-32054的一条设定规则：当QB-32054的周向入射分布偏离发生时，引起QB-32054的级间匹配告警。本条不陈述其他后续环节。"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "ac964215481bbb8f0bd0415011a3e3597edab27abb806018fa185ba8b773c130",
+        "start": 0,
+        "end": 84,
+        "anchor": "本记录只陈述虚拟试验台QB-32054的一条设定规则：当QB-32054的可调静子连杆间隙增大发生时，引起QB-32054的静子角度同步性降低。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "5a8ab56a1c398107f608f0ba62984b5224da9867451c7fd66167876dc841af02",
+        "start": 0,
+        "end": 82,
+        "anchor": "本记录只陈述虚拟试验台QB-32054的一条设定规则：当QB-32054的静子角度同步性降低发生时，引起QB-32054的周向入射分布偏离。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "aa88d5f54620277230a8086a1fc05bb59d8afe0404862f93aed20b2379a01813",
+        "start": 0,
+        "end": 79,
+        "anchor": "本记录只陈述虚拟试验台QB-32054的一条设定规则：当QB-32054的周向入射分布偏离发生时，引起QB-32054的级间匹配告警。本条不陈述其他后续环节。"
+      }
+    ],
+    "completed": true,
+    "status": "evidence_ready",
+    "insufficient_evidence": false,
+    "answer": "当QB-32054的可调静子连杆间隙增大发生时，引起QB-32054的静子角度同步性降低。\n当QB-32054的静子角度同步性降低发生时，引起QB-32054的周向入射分布偏离。\n当QB-32054的周向入射分布偏离发生时，引起QB-32054的级间匹配告警。\n仅观察到QB-32054的级间匹配告警，不足以确定QB-32054的可调静子连杆间隙增大已经发生；其他未列出的原因仍可能产生相同末端指示。\n该逆推不是充分条件。",
+    "reason": "",
+    "claims": [
+      {
+        "text": "当QB-32054的可调静子连杆间隙增大发生时，引起QB-32054的静子角度同步性降低。",
+        "support_span_ids": [
+          "7bca7fc157bebdce22a0da6fba58ef53ca293379517f0f23811225ce61116ec4"
+        ],
+        "evidence_ids": [
+          "ac964215481bbb8f0bd0415011a3e3597edab27abb806018fa185ba8b773c130"
+        ],
+        "citations": [
+          {
+            "span_id": "7bca7fc157bebdce22a0da6fba58ef53ca293379517f0f23811225ce61116ec4",
+            "evidence_id": "ac964215481bbb8f0bd0415011a3e3597edab27abb806018fa185ba8b773c130",
+            "start": 0,
+            "end": 72,
+            "text_sha256": "133241d96957a7718eb6ddb5cee5778121476e0fe4409552b69732267cd78730",
+            "text_kind": "provided_display_text",
+            "support_quote": "本记录只陈述虚拟试验台QB-32054的一条设定规则：当QB-32054的可调静子连杆间隙增大发生时，引起QB-32054的静子角度同步性降低。",
+            "chunk_id": "ac964215481bbb8f0bd0415011a3e3597edab27abb806018fa185ba8b773c130"
+          }
+        ]
+      },
+      {
+        "text": "当QB-32054的静子角度同步性降低发生时，引起QB-32054的周向入射分布偏离。",
+        "support_span_ids": [
+          "03fe0d5fbe6b6ba445bb706361b99f2314cb96c4bd1338e65dc2229686a32a34"
+        ],
+        "evidence_ids": [
+          "5a8ab56a1c398107f608f0ba62984b5224da9867451c7fd66167876dc841af02"
+        ],
+        "citations": [
+          {
+            "span_id": "03fe0d5fbe6b6ba445bb706361b99f2314cb96c4bd1338e65dc2229686a32a34",
+            "evidence_id": "5a8ab56a1c398107f608f0ba62984b5224da9867451c7fd66167876dc841af02",
+            "start": 0,
+            "end": 70,
+            "text_sha256": "a3c37a641652486430e47b238882120b65fb4f934154505f2fd5d7c8c1202ebf",
+            "text_kind": "provided_display_text",
+            "support_quote": "本记录只陈述虚拟试验台QB-32054的一条设定规则：当QB-32054的静子角度同步性降低发生时，引起QB-32054的周向入射分布偏离。",
+            "chunk_id": "5a8ab56a1c398107f608f0ba62984b5224da9867451c7fd66167876dc841af02"
+          }
+        ]
+      },
+      {
+        "text": "当QB-32054的周向入射分布偏离发生时，引起QB-32054的级间匹配告警。",
+        "support_span_ids": [
+          "f188287a85ad6b7193bb4805ed1d9e0dbaee21a7eda75c43727f959298ebc6d8"
+        ],
+        "evidence_ids": [
+          "aa88d5f54620277230a8086a1fc05bb59d8afe0404862f93aed20b2379a01813"
+        ],
+        "citations": [
+          {
+            "span_id": "f188287a85ad6b7193bb4805ed1d9e0dbaee21a7eda75c43727f959298ebc6d8",
+            "evidence_id": "aa88d5f54620277230a8086a1fc05bb59d8afe0404862f93aed20b2379a01813",
+            "start": 0,
+            "end": 67,
+            "text_sha256": "ebd5720cdc6bac41673afe45936770da42eb8bc8f587b17a78cfbd0c932c263d",
+            "text_kind": "provided_display_text",
+            "support_quote": "本记录只陈述虚拟试验台QB-32054的一条设定规则：当QB-32054的周向入射分布偏离发生时，引起QB-32054的级间匹配告警。",
+            "chunk_id": "aa88d5f54620277230a8086a1fc05bb59d8afe0404862f93aed20b2379a01813"
+          }
+        ]
+      },
+      {
+        "text": "仅观察到QB-32054的级间匹配告警，不足以确定QB-32054的可调静子连杆间隙增大已经发生；其他未列出的原因仍可能产生相同末端指示。",
+        "support_span_ids": [
+          "c86f04974c6072b918c21f398bfcb4a6a3b262a0abf32fe93be0614e9898902b"
+        ],
+        "evidence_ids": [
+          "e2b4cb3503861d2b686b0a6b2e8efe3bbab805facdd67cb401be94aafbff6820"
+        ],
+        "citations": [
+          {
+            "span_id": "c86f04974c6072b918c21f398bfcb4a6a3b262a0abf32fe93be0614e9898902b",
+            "evidence_id": "e2b4cb3503861d2b686b0a6b2e8efe3bbab805facdd67cb401be94aafbff6820",
+            "start": 0,
+            "end": 95,
+            "text_sha256": "f58caeb03af041e7e0e7498472b2f4fd1599bdf643df91eac96db25fabf10450",
+            "text_kind": "provided_display_text",
+            "support_quote": "边界记录：本场景明确规定，虚拟试验台QB-32054仅观察到QB-32054的级间匹配告警，不足以确定QB-32054的可调静子连杆间隙增大已经发生；其他未列出的原因仍可能产生相同末端指示。",
+            "chunk_id": "e2b4cb3503861d2b686b0a6b2e8efe3bbab805facdd67cb401be94aafbff6820"
+          }
+        ]
+      },
+      {
+        "text": "该逆推不是充分条件。",
+        "support_span_ids": [
+          "881ee98e4f3f09a3f759818b25d9230c70a40149b28264296fb0f48d31dff3fa"
+        ],
+        "evidence_ids": [
+          "e2b4cb3503861d2b686b0a6b2e8efe3bbab805facdd67cb401be94aafbff6820"
+        ],
+        "citations": [
+          {
+            "span_id": "881ee98e4f3f09a3f759818b25d9230c70a40149b28264296fb0f48d31dff3fa",
+            "evidence_id": "e2b4cb3503861d2b686b0a6b2e8efe3bbab805facdd67cb401be94aafbff6820",
+            "start": 95,
+            "end": 105,
+            "text_sha256": "f58caeb03af041e7e0e7498472b2f4fd1599bdf643df91eac96db25fabf10450",
+            "text_kind": "provided_display_text",
+            "support_quote": "该逆推不是充分条件。",
+            "chunk_id": "e2b4cb3503861d2b686b0a6b2e8efe3bbab805facdd67cb401be94aafbff6820"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "submission_id": "cac1664cf567cb",
+    "question_id": "cq-04",
+    "group": "real",
+    "question": "清洗燃油喷嘴时，为什么不应使用硬质工具刮擦或钢丝刷擦拭？",
+    "answerable": true,
+    "required_points": [
+      "喷嘴喷雾特性可能受损",
+      "不应使用硬工具刮擦或钢丝刷"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "9d4bc15dbf2bf78eff18fc28a01b86e9172d92fc876c3b737a2dbde0bcf7af7e",
+        "start": 101,
+        "end": 115,
+        "anchor": "由于喷嘴的喷雾特性可能会受损"
+      }
+    ],
+    "completed": true,
+    "status": "evidence_ready",
+    "insufficient_evidence": false,
+    "answer": "由于喷嘴的喷雾特性可能会受损，不应尝试用硬质工具刮擦或用钢丝刷擦拭来清洁喷嘴。\n清洗喷嘴应使用发动机制造商批准的清洗液，清除所有积碳，并用软毛刷清除软化的沉积物。\n在清洗过程中，最好让过滤后的空气通过喷嘴，以便在沉积物松动时将其带走。",
+    "reason": "",
+    "claims": [
+      {
+        "text": "由于喷嘴的喷雾特性可能会受损，不应尝试用硬质工具刮擦或用钢丝刷擦拭来清洁喷嘴。",
+        "support_span_ids": [
+          "b8e38ccab4d9c4c0acf06dd035bc8733748ef9398c24119063084f7a4a447516"
+        ],
+        "evidence_ids": [
+          "9d4bc15dbf2bf78eff18fc28a01b86e9172d92fc876c3b737a2dbde0bcf7af7e"
+        ],
+        "citations": [
+          {
+            "span_id": "b8e38ccab4d9c4c0acf06dd035bc8733748ef9398c24119063084f7a4a447516",
+            "evidence_id": "9d4bc15dbf2bf78eff18fc28a01b86e9172d92fc876c3b737a2dbde0bcf7af7e",
+            "start": 101,
+            "end": 140,
+            "text_sha256": "f9036586d7b52dc65522c73650a8418796b9809b9be10bdab90ef0df292e2e9b",
+            "text_kind": "provided_display_text",
+            "support_quote": "由于喷嘴的喷雾特性可能会受损，不应尝试用硬质工具刮擦或用钢丝刷擦拭来清洁喷嘴。",
+            "chunk_id": "9d4bc15dbf2bf78eff18fc28a01b86e9172d92fc876c3b737a2dbde0bcf7af7e"
+          }
+        ]
+      },
+      {
+        "text": "清洗喷嘴应使用发动机制造商批准的清洗液，清除所有积碳，并用软毛刷清除软化的沉积物。",
+        "support_span_ids": [
+          "5833bbb7cc286121bd8e24ffc894e8175a32ee27b6e5d4a0d66047ce75d4630a"
+        ],
+        "evidence_ids": [
+          "9d4bc15dbf2bf78eff18fc28a01b86e9172d92fc876c3b737a2dbde0bcf7af7e"
+        ],
+        "citations": [
+          {
+            "span_id": "5833bbb7cc286121bd8e24ffc894e8175a32ee27b6e5d4a0d66047ce75d4630a",
+            "evidence_id": "9d4bc15dbf2bf78eff18fc28a01b86e9172d92fc876c3b737a2dbde0bcf7af7e",
+            "start": 0,
+            "end": 40,
+            "text_sha256": "f9036586d7b52dc65522c73650a8418796b9809b9be10bdab90ef0df292e2e9b",
+            "text_kind": "provided_display_text",
+            "support_quote": "使用发动机制造商批准的清洗液清洗喷嘴，清除所有积碳，并用软毛刷清除软化的沉积物。",
+            "chunk_id": "9d4bc15dbf2bf78eff18fc28a01b86e9172d92fc876c3b737a2dbde0bcf7af7e"
+          }
+        ]
+      },
+      {
+        "text": "在清洗过程中，最好让过滤后的空气通过喷嘴，以便在沉积物松动时将其带走。",
+        "support_span_ids": [
+          "011c874b992e9d30f6b3fa0746d2ebb718ff86c941565c469515de7c97ade802"
+        ],
+        "evidence_ids": [
+          "9d4bc15dbf2bf78eff18fc28a01b86e9172d92fc876c3b737a2dbde0bcf7af7e"
+        ],
+        "citations": [
+          {
+            "span_id": "011c874b992e9d30f6b3fa0746d2ebb718ff86c941565c469515de7c97ade802",
+            "evidence_id": "9d4bc15dbf2bf78eff18fc28a01b86e9172d92fc876c3b737a2dbde0bcf7af7e",
+            "start": 41,
+            "end": 76,
+            "text_sha256": "f9036586d7b52dc65522c73650a8418796b9809b9be10bdab90ef0df292e2e9b",
+            "text_kind": "provided_display_text",
+            "support_quote": "在清洗过程中，最好让过滤后的空气通过喷嘴，以便在沉积物松动时将其带走。",
+            "chunk_id": "9d4bc15dbf2bf78eff18fc28a01b86e9172d92fc876c3b737a2dbde0bcf7af7e"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "submission_id": "25e1f646d2a4c3",
+    "question_id": "cq-03",
+    "group": "real",
+    "question": "这份资料能否给出所有发动机空心叶片凹痕统一适用的最大允许深度毫米数？",
+    "answerable": false,
+    "required_points": [
+      "明确不能从本资料确定统一数值",
+      "应依据特定制造商适用资料而非编造毫米值"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "d2b833ff870427e931c65e697b8ee34f92c03e7a7cb1eed7a7b113c9100e1060",
+        "start": 239,
+        "end": 253,
+        "anchor": "始终使用特定制造商的最新信息"
+      }
+    ],
+    "completed": true,
+    "status": "insufficient_evidence",
+    "insufficient_evidence": true,
+    "answer": "现有证据不足以完整回答该问题。",
+    "reason": "现有证据未通过回答支持性或问题覆盖检查，无法给出完整结论。",
+    "claims": []
+  },
+  {
+    "submission_id": "e98cab8589e0f8",
+    "question_id": "sq-01",
+    "group": "controlled",
+    "question": "QB-10726设定下，QB-10726的燃油滤芯污堵最终怎样演变到QB-10726的燃油洁净度指示变差？请补全机理路径。",
+    "answerable": true,
+    "required_points": [
+      "本记录只陈述虚拟试验台QB-10726的一条设定规则：当QB-10726的燃油滤芯污堵发生时，引起QB-10726的滤芯压差升高。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-10726的一条设定规则：当QB-10726的滤芯压差升高发生时，引起QB-10726的旁通供油比例增加。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-10726的一条设定规则：当QB-10726的旁通供油比例增加发生时，引起QB-10726的燃油洁净度指示变差。本条不陈述其他后续环节。"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "582617b3e5a9f11d5443f4d2d440667171f0d0476724bfff9e9a9be2d49ca65a",
+        "start": 0,
+        "end": 77,
+        "anchor": "本记录只陈述虚拟试验台QB-10726的一条设定规则：当QB-10726的燃油滤芯污堵发生时，引起QB-10726的滤芯压差升高。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "3b50f005334c464cd9fb2614dc192b0b6c46f5ad363227b686939e6fa4066a5d",
+        "start": 0,
+        "end": 79,
+        "anchor": "本记录只陈述虚拟试验台QB-10726的一条设定规则：当QB-10726的滤芯压差升高发生时，引起QB-10726的旁通供油比例增加。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "3dd106ed0f63a59bbb7e48a1384418863e9abf5d0712868900667cd485a52326",
+        "start": 0,
+        "end": 82,
+        "anchor": "本记录只陈述虚拟试验台QB-10726的一条设定规则：当QB-10726的旁通供油比例增加发生时，引起QB-10726的燃油洁净度指示变差。本条不陈述其他后续环节。"
+      }
+    ],
+    "completed": true,
+    "status": "evidence_ready",
+    "insufficient_evidence": false,
+    "answer": "当QB-10726的燃油滤芯污堵发生时，引起QB-10726的滤芯压差升高。\n当QB-10726的滤芯压差升高发生时，引起QB-10726的旁通供油比例增加。\n当QB-10726的旁通供油比例增加发生时，引起QB-10726的燃油洁净度指示变差。\n仅观察到QB-10726的燃油洁净度指示变差，不足以确定QB-10726的燃油滤芯污堵已经发生；其他未列出的原因仍可能产生相同末端指示。\n该逆推不是充分条件。",
+    "reason": "",
+    "claims": [
+      {
+        "text": "当QB-10726的燃油滤芯污堵发生时，引起QB-10726的滤芯压差升高。",
+        "support_span_ids": [
+          "9d058b500a59926d17bd67538af7559f0fe6860235c09c09ac0cd16d0b9453ec"
+        ],
+        "evidence_ids": [
+          "582617b3e5a9f11d5443f4d2d440667171f0d0476724bfff9e9a9be2d49ca65a"
+        ],
+        "citations": [
+          {
+            "span_id": "9d058b500a59926d17bd67538af7559f0fe6860235c09c09ac0cd16d0b9453ec",
+            "evidence_id": "582617b3e5a9f11d5443f4d2d440667171f0d0476724bfff9e9a9be2d49ca65a",
+            "start": 0,
+            "end": 65,
+            "text_sha256": "fbda9cf334b61962a347cba4c866f2438bb72ef06a54254da23b60c600c138ef",
+            "text_kind": "provided_display_text",
+            "support_quote": "本记录只陈述虚拟试验台QB-10726的一条设定规则：当QB-10726的燃油滤芯污堵发生时，引起QB-10726的滤芯压差升高。",
+            "chunk_id": "582617b3e5a9f11d5443f4d2d440667171f0d0476724bfff9e9a9be2d49ca65a"
+          }
+        ]
+      },
+      {
+        "text": "当QB-10726的滤芯压差升高发生时，引起QB-10726的旁通供油比例增加。",
+        "support_span_ids": [
+          "b37bc836d9679455e8a0e7488a11c1c091fc48b6ebd9e6ddb46284d93d53da01"
+        ],
+        "evidence_ids": [
+          "3b50f005334c464cd9fb2614dc192b0b6c46f5ad363227b686939e6fa4066a5d"
+        ],
+        "citations": [
+          {
+            "span_id": "b37bc836d9679455e8a0e7488a11c1c091fc48b6ebd9e6ddb46284d93d53da01",
+            "evidence_id": "3b50f005334c464cd9fb2614dc192b0b6c46f5ad363227b686939e6fa4066a5d",
+            "start": 0,
+            "end": 67,
+            "text_sha256": "f28b7d79fed8253ae1272c27d450b55b31d8518bf3ef5d6714797a958510eefc",
+            "text_kind": "provided_display_text",
+            "support_quote": "本记录只陈述虚拟试验台QB-10726的一条设定规则：当QB-10726的滤芯压差升高发生时，引起QB-10726的旁通供油比例增加。",
+            "chunk_id": "3b50f005334c464cd9fb2614dc192b0b6c46f5ad363227b686939e6fa4066a5d"
+          }
+        ]
+      },
+      {
+        "text": "当QB-10726的旁通供油比例增加发生时，引起QB-10726的燃油洁净度指示变差。",
+        "support_span_ids": [
+          "7712cb6a20320a43c51da5a7bfe01458baf87d66760f62c3433b577f405e9b5d"
+        ],
+        "evidence_ids": [
+          "3dd106ed0f63a59bbb7e48a1384418863e9abf5d0712868900667cd485a52326"
+        ],
+        "citations": [
+          {
+            "span_id": "7712cb6a20320a43c51da5a7bfe01458baf87d66760f62c3433b577f405e9b5d",
+            "evidence_id": "3dd106ed0f63a59bbb7e48a1384418863e9abf5d0712868900667cd485a52326",
+            "start": 0,
+            "end": 70,
+            "text_sha256": "70c1fb5d773b211aed0afafee9183daa4ff311255377b0108f7f5c69784c5c4e",
+            "text_kind": "provided_display_text",
+            "support_quote": "本记录只陈述虚拟试验台QB-10726的一条设定规则：当QB-10726的旁通供油比例增加发生时，引起QB-10726的燃油洁净度指示变差。",
+            "chunk_id": "3dd106ed0f63a59bbb7e48a1384418863e9abf5d0712868900667cd485a52326"
+          }
+        ]
+      },
+      {
+        "text": "仅观察到QB-10726的燃油洁净度指示变差，不足以确定QB-10726的燃油滤芯污堵已经发生；其他未列出的原因仍可能产生相同末端指示。",
+        "support_span_ids": [
+          "488bf9f2b3c9053bde484db623a8b3ff9233dd93c1b4bdd7d8a45370f1973ea5"
+        ],
+        "evidence_ids": [
+          "a3bd6871fd1b5f9decad59b357248fb201033e3a86a026958eb656ce2d5cbca2"
+        ],
+        "citations": [
+          {
+            "span_id": "488bf9f2b3c9053bde484db623a8b3ff9233dd93c1b4bdd7d8a45370f1973ea5",
+            "evidence_id": "a3bd6871fd1b5f9decad59b357248fb201033e3a86a026958eb656ce2d5cbca2",
+            "start": 0,
+            "end": 94,
+            "text_sha256": "f1b66f6d21c8a5e151207063335c503fecfaeeb7937b0cb8f3f63117e646e401",
+            "text_kind": "provided_display_text",
+            "support_quote": "边界记录：本场景明确规定，虚拟试验台QB-10726仅观察到QB-10726的燃油洁净度指示变差，不足以确定QB-10726的燃油滤芯污堵已经发生；其他未列出的原因仍可能产生相同末端指示。",
+            "chunk_id": "a3bd6871fd1b5f9decad59b357248fb201033e3a86a026958eb656ce2d5cbca2"
+          }
+        ]
+      },
+      {
+        "text": "该逆推不是充分条件。",
+        "support_span_ids": [
+          "f9ea6cf8fd95a8efff1dc55d35752700e431a09d378c4bd1e2dabb0977b47368"
+        ],
+        "evidence_ids": [
+          "a3bd6871fd1b5f9decad59b357248fb201033e3a86a026958eb656ce2d5cbca2"
+        ],
+        "citations": [
+          {
+            "span_id": "f9ea6cf8fd95a8efff1dc55d35752700e431a09d378c4bd1e2dabb0977b47368",
+            "evidence_id": "a3bd6871fd1b5f9decad59b357248fb201033e3a86a026958eb656ce2d5cbca2",
+            "start": 94,
+            "end": 104,
+            "text_sha256": "f1b66f6d21c8a5e151207063335c503fecfaeeb7937b0cb8f3f63117e646e401",
+            "text_kind": "provided_display_text",
+            "support_quote": "该逆推不是充分条件。",
+            "chunk_id": "a3bd6871fd1b5f9decad59b357248fb201033e3a86a026958eb656ce2d5cbca2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "submission_id": "bfe01da7527f7a",
+    "question_id": "sq-10",
+    "group": "controlled",
+    "question": "QB-39610设定下，QB-39610的热电偶接线接触不良最终怎样演变到QB-39610的温控指令频繁变化？请补全机理路径。",
+    "answerable": true,
+    "required_points": [
+      "本记录只陈述虚拟试验台QB-39610的一条设定规则：当QB-39610的热电偶接线接触不良发生时，引起QB-39610的温度信号间歇波动。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-39610的一条设定规则：当QB-39610的温度信号间歇波动发生时，引起QB-39610的温控输入不稳定。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-39610的一条设定规则：当QB-39610的温控输入不稳定发生时，引起QB-39610的温控指令频繁变化。本条不陈述其他后续环节。"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "a9bae5efb8a8a76b38ebcfa4fa4f815fb054e8bbc6aeb5aa9933848053c08ff0",
+        "start": 0,
+        "end": 82,
+        "anchor": "本记录只陈述虚拟试验台QB-39610的一条设定规则：当QB-39610的热电偶接线接触不良发生时，引起QB-39610的温度信号间歇波动。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "61a54792a734fe61ff1bbc71e69043b0facb8f67444e6ec96c4adb452ac204b5",
+        "start": 0,
+        "end": 80,
+        "anchor": "本记录只陈述虚拟试验台QB-39610的一条设定规则：当QB-39610的温度信号间歇波动发生时，引起QB-39610的温控输入不稳定。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "b25988b135b00602164bc36cf97addaeea5028dd037cbf48cefa8cebc6476584",
+        "start": 0,
+        "end": 80,
+        "anchor": "本记录只陈述虚拟试验台QB-39610的一条设定规则：当QB-39610的温控输入不稳定发生时，引起QB-39610的温控指令频繁变化。本条不陈述其他后续环节。"
+      }
+    ],
+    "completed": true,
+    "status": "evidence_ready",
+    "insufficient_evidence": false,
+    "answer": "当QB-39610的热电偶接线接触不良发生时，引起QB-39610的温度信号间歇波动。\n当QB-39610的温度信号间歇波动发生时，引起QB-39610的温控输入不稳定。\n当QB-39610的温控输入不稳定发生时，引起QB-39610的温控指令频繁变化。\n仅观察到QB-39610的温控指令频繁变化，不足以确定QB-39610的热电偶接线接触不良已经发生；其他未列出的原因仍可能产生相同末端指示。\n该逆推不是充分条件。",
+    "reason": "",
+    "claims": [
+      {
+        "text": "当QB-39610的热电偶接线接触不良发生时，引起QB-39610的温度信号间歇波动。",
+        "support_span_ids": [
+          "73dd373763f2f597f7e65a7eb4a4bcdafba235b162a86b4f1ca256677fad4cf9"
+        ],
+        "evidence_ids": [
+          "a9bae5efb8a8a76b38ebcfa4fa4f815fb054e8bbc6aeb5aa9933848053c08ff0"
+        ],
+        "citations": [
+          {
+            "span_id": "73dd373763f2f597f7e65a7eb4a4bcdafba235b162a86b4f1ca256677fad4cf9",
+            "evidence_id": "a9bae5efb8a8a76b38ebcfa4fa4f815fb054e8bbc6aeb5aa9933848053c08ff0",
+            "start": 0,
+            "end": 70,
+            "text_sha256": "f9ed4a8aea5ddc5553eaab52673aa1d37bc1e06c3933305cfab7c7dcabc4d674",
+            "text_kind": "provided_display_text",
+            "support_quote": "本记录只陈述虚拟试验台QB-39610的一条设定规则：当QB-39610的热电偶接线接触不良发生时，引起QB-39610的温度信号间歇波动。",
+            "chunk_id": "a9bae5efb8a8a76b38ebcfa4fa4f815fb054e8bbc6aeb5aa9933848053c08ff0"
+          }
+        ]
+      },
+      {
+        "text": "当QB-39610的温度信号间歇波动发生时，引起QB-39610的温控输入不稳定。",
+        "support_span_ids": [
+          "34da1db00cc2b158a7141f5747bef753a041c76de27beb65a13768b6d84556c1"
+        ],
+        "evidence_ids": [
+          "61a54792a734fe61ff1bbc71e69043b0facb8f67444e6ec96c4adb452ac204b5"
+        ],
+        "citations": [
+          {
+            "span_id": "34da1db00cc2b158a7141f5747bef753a041c76de27beb65a13768b6d84556c1",
+            "evidence_id": "61a54792a734fe61ff1bbc71e69043b0facb8f67444e6ec96c4adb452ac204b5",
+            "start": 0,
+            "end": 68,
+            "text_sha256": "cbbef2071573a0b0530ae85223dd773aa12d3314c4d8f74d003ef05d44347ecd",
+            "text_kind": "provided_display_text",
+            "support_quote": "本记录只陈述虚拟试验台QB-39610的一条设定规则：当QB-39610的温度信号间歇波动发生时，引起QB-39610的温控输入不稳定。",
+            "chunk_id": "61a54792a734fe61ff1bbc71e69043b0facb8f67444e6ec96c4adb452ac204b5"
+          }
+        ]
+      },
+      {
+        "text": "当QB-39610的温控输入不稳定发生时，引起QB-39610的温控指令频繁变化。",
+        "support_span_ids": [
+          "8894e020b5112e275d95291641490fe77d4490c98c36aba633d6a06861ccd73d"
+        ],
+        "evidence_ids": [
+          "b25988b135b00602164bc36cf97addaeea5028dd037cbf48cefa8cebc6476584"
+        ],
+        "citations": [
+          {
+            "span_id": "8894e020b5112e275d95291641490fe77d4490c98c36aba633d6a06861ccd73d",
+            "evidence_id": "b25988b135b00602164bc36cf97addaeea5028dd037cbf48cefa8cebc6476584",
+            "start": 0,
+            "end": 68,
+            "text_sha256": "6691107702ccd5793b10da46ca40bb4f52c7cce1d8ab4903f89e6a45fb2ad626",
+            "text_kind": "provided_display_text",
+            "support_quote": "本记录只陈述虚拟试验台QB-39610的一条设定规则：当QB-39610的温控输入不稳定发生时，引起QB-39610的温控指令频繁变化。",
+            "chunk_id": "b25988b135b00602164bc36cf97addaeea5028dd037cbf48cefa8cebc6476584"
+          }
+        ]
+      },
+      {
+        "text": "仅观察到QB-39610的温控指令频繁变化，不足以确定QB-39610的热电偶接线接触不良已经发生；其他未列出的原因仍可能产生相同末端指示。",
+        "support_span_ids": [
+          "0fadbaa009d166b613f1de21104b045b578e8bb14f5db129a1f712ab2317080e"
+        ],
+        "evidence_ids": [
+          "aa3eb03d17cdd7ce3fa2f392c0af066efcbf10917c7cd2096a401556b0abaaea"
+        ],
+        "citations": [
+          {
+            "span_id": "0fadbaa009d166b613f1de21104b045b578e8bb14f5db129a1f712ab2317080e",
+            "evidence_id": "aa3eb03d17cdd7ce3fa2f392c0af066efcbf10917c7cd2096a401556b0abaaea",
+            "start": 0,
+            "end": 96,
+            "text_sha256": "8ab7c8e4909f9ed40904ef3d71354db05d4b1b81c2a929d7a59727a08862eecd",
+            "text_kind": "provided_display_text",
+            "support_quote": "边界记录：本场景明确规定，虚拟试验台QB-39610仅观察到QB-39610的温控指令频繁变化，不足以确定QB-39610的热电偶接线接触不良已经发生；其他未列出的原因仍可能产生相同末端指示。",
+            "chunk_id": "aa3eb03d17cdd7ce3fa2f392c0af066efcbf10917c7cd2096a401556b0abaaea"
+          }
+        ]
+      },
+      {
+        "text": "该逆推不是充分条件。",
+        "support_span_ids": [
+          "3a702c96e8ca88621baec4f02d2da285d1726406d220493048445a0662841df6"
+        ],
+        "evidence_ids": [
+          "aa3eb03d17cdd7ce3fa2f392c0af066efcbf10917c7cd2096a401556b0abaaea"
+        ],
+        "citations": [
+          {
+            "span_id": "3a702c96e8ca88621baec4f02d2da285d1726406d220493048445a0662841df6",
+            "evidence_id": "aa3eb03d17cdd7ce3fa2f392c0af066efcbf10917c7cd2096a401556b0abaaea",
+            "start": 96,
+            "end": 106,
+            "text_sha256": "8ab7c8e4909f9ed40904ef3d71354db05d4b1b81c2a929d7a59727a08862eecd",
+            "text_kind": "provided_display_text",
+            "support_quote": "该逆推不是充分条件。",
+            "chunk_id": "aa3eb03d17cdd7ce3fa2f392c0af066efcbf10917c7cd2096a401556b0abaaea"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "submission_id": "95dd148a22f516",
+    "question_id": "cq-10",
+    "group": "real",
+    "question": "转子质量不平衡与转子质心、旋转轴线之间有什么关系，会产生哪种频率特征的振动？",
+    "answerable": true,
+    "required_points": [
+      "质心相对于旋转轴线偏心",
+      "在转子转速频率下的同步振动"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "777f4e92735ee3734eb129ed847698971a4b1a5ba124368f724f6b1529ace56e",
+        "start": 19,
+        "end": 39,
+        "anchor": "是由于转子质心相对于其旋转轴线的偏心所致"
+      },
+      {
+        "chunk_id": "777f4e92735ee3734eb129ed847698971a4b1a5ba124368f724f6b1529ace56e",
+        "start": 102,
+        "end": 115,
+        "anchor": "在转子转速频率下的同步振动"
+      }
+    ],
+    "completed": true,
+    "status": "evidence_ready",
+    "insufficient_evidence": false,
+    "answer": "转子质量不平衡（通常称为不平衡）是由于转子质心相对于其旋转轴线的偏心所致。\n旋转质量不平衡会导致在转子转速频率下的同步振动。\n这种不平衡通常是转子制造和装配的结果，尽管不可避免，但可以通过补偿技术减少。\n需要限制转子不平衡，因为旋转质量不平衡会导致在转子转速频率下的同步振动。",
+    "reason": "",
+    "claims": [
+      {
+        "text": "转子质量不平衡（通常称为不平衡）是由于转子质心相对于其旋转轴线的偏心所致。",
+        "support_span_ids": [
+          "f5944a43ccbd99ef39374d673111b2d2ac91a30ef8b58c67ae0adb265e3cadb8"
+        ],
+        "evidence_ids": [
+          "777f4e92735ee3734eb129ed847698971a4b1a5ba124368f724f6b1529ace56e"
+        ],
+        "citations": [
+          {
+            "span_id": "f5944a43ccbd99ef39374d673111b2d2ac91a30ef8b58c67ae0adb265e3cadb8",
+            "evidence_id": "777f4e92735ee3734eb129ed847698971a4b1a5ba124368f724f6b1529ace56e",
+            "start": 3,
+            "end": 40,
+            "text_sha256": "0dfaf02295cd65d9cc64224c6839d4faee17bea442f21f8605b25711c387930b",
+            "text_kind": "provided_display_text",
+            "support_quote": "转子质量不平衡，通常称为不平衡，是由于转子质心相对于其旋转轴线的偏心所致。",
+            "chunk_id": "777f4e92735ee3734eb129ed847698971a4b1a5ba124368f724f6b1529ace56e"
+          }
+        ]
+      },
+      {
+        "text": "旋转质量不平衡会导致在转子转速频率下的同步振动。",
+        "support_span_ids": [
+          "655a0813ba9c63a91507afe9c063c3c17789071f333e3175cf4b03fe7caa5a91"
+        ],
+        "evidence_ids": [
+          "777f4e92735ee3734eb129ed847698971a4b1a5ba124368f724f6b1529ace56e"
+        ],
+        "citations": [
+          {
+            "span_id": "655a0813ba9c63a91507afe9c063c3c17789071f333e3175cf4b03fe7caa5a91",
+            "evidence_id": "777f4e92735ee3734eb129ed847698971a4b1a5ba124368f724f6b1529ace56e",
+            "start": 80,
+            "end": 116,
+            "text_sha256": "0dfaf02295cd65d9cc64224c6839d4faee17bea442f21f8605b25711c387930b",
+            "text_kind": "provided_display_text",
+            "support_quote": "需要限制转子不平衡，因为旋转质量不平衡会导致在转子转速频率下的同步振动。",
+            "chunk_id": "777f4e92735ee3734eb129ed847698971a4b1a5ba124368f724f6b1529ace56e"
+          }
+        ]
+      },
+      {
+        "text": "这种不平衡通常是转子制造和装配的结果，尽管不可避免，但可以通过补偿技术减少。",
+        "support_span_ids": [
+          "3ea108eebbfe90177a9ff17b7b067bb754bae1030ac863ae2556aceb5738ccc4"
+        ],
+        "evidence_ids": [
+          "777f4e92735ee3734eb129ed847698971a4b1a5ba124368f724f6b1529ace56e"
+        ],
+        "citations": [
+          {
+            "span_id": "3ea108eebbfe90177a9ff17b7b067bb754bae1030ac863ae2556aceb5738ccc4",
+            "evidence_id": "777f4e92735ee3734eb129ed847698971a4b1a5ba124368f724f6b1529ace56e",
+            "start": 41,
+            "end": 79,
+            "text_sha256": "0dfaf02295cd65d9cc64224c6839d4faee17bea442f21f8605b25711c387930b",
+            "text_kind": "provided_display_text",
+            "support_quote": "这种不平衡通常是转子制造和装配的结果，尽管不可避免，但可以通过补偿技术减少。",
+            "chunk_id": "777f4e92735ee3734eb129ed847698971a4b1a5ba124368f724f6b1529ace56e"
+          }
+        ]
+      },
+      {
+        "text": "需要限制转子不平衡，因为旋转质量不平衡会导致在转子转速频率下的同步振动。",
+        "support_span_ids": [
+          "655a0813ba9c63a91507afe9c063c3c17789071f333e3175cf4b03fe7caa5a91"
+        ],
+        "evidence_ids": [
+          "777f4e92735ee3734eb129ed847698971a4b1a5ba124368f724f6b1529ace56e"
+        ],
+        "citations": [
+          {
+            "span_id": "655a0813ba9c63a91507afe9c063c3c17789071f333e3175cf4b03fe7caa5a91",
+            "evidence_id": "777f4e92735ee3734eb129ed847698971a4b1a5ba124368f724f6b1529ace56e",
+            "start": 80,
+            "end": 116,
+            "text_sha256": "0dfaf02295cd65d9cc64224c6839d4faee17bea442f21f8605b25711c387930b",
+            "text_kind": "provided_display_text",
+            "support_quote": "需要限制转子不平衡，因为旋转质量不平衡会导致在转子转速频率下的同步振动。",
+            "chunk_id": "777f4e92735ee3734eb129ed847698971a4b1a5ba124368f724f6b1529ace56e"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "submission_id": "55d02f5297eca6",
+    "question_id": "sq-02",
+    "group": "controlled",
+    "question": "QB-49712设定下，QB-49712的计量活门开度不足最终怎样演变到QB-49712的转速建立延迟？请补全机理路径。",
+    "answerable": true,
+    "required_points": [
+      "本记录只陈述虚拟试验台QB-49712的一条设定规则：当QB-49712的计量活门开度不足发生时，引起QB-49712的计量截面减小。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-49712的一条设定规则：当QB-49712的计量截面减小发生时，引起QB-49712的供油响应受限。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-49712的一条设定规则：当QB-49712的供油响应受限发生时，引起QB-49712的转速建立延迟。本条不陈述其他后续环节。"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "bd3a2b19cab68b46076147e733730513348125e24301a841e6d2356b78010120",
+        "start": 0,
+        "end": 79,
+        "anchor": "本记录只陈述虚拟试验台QB-49712的一条设定规则：当QB-49712的计量活门开度不足发生时，引起QB-49712的计量截面减小。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "079fb20bfc611f43c8e2e56be03e300ee388e7fd67134b9bbe36df8c5745f73b",
+        "start": 0,
+        "end": 77,
+        "anchor": "本记录只陈述虚拟试验台QB-49712的一条设定规则：当QB-49712的计量截面减小发生时，引起QB-49712的供油响应受限。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "7e28c5020bb94f1d163adf273cfdaba5a7694eb1e92992e982e8c327a0f34c77",
+        "start": 0,
+        "end": 77,
+        "anchor": "本记录只陈述虚拟试验台QB-49712的一条设定规则：当QB-49712的供油响应受限发生时，引起QB-49712的转速建立延迟。本条不陈述其他后续环节。"
+      }
+    ],
+    "completed": true,
+    "status": "evidence_ready",
+    "insufficient_evidence": false,
+    "answer": "当QB-49712的计量活门开度不足发生时，引起QB-49712的计量截面减小。\n当QB-49712的计量截面减小发生时，引起QB-49712的供油响应受限。\n当QB-49712的供油响应受限发生时，引起QB-49712的转速建立延迟。\n仅观察到QB-49712的转速建立延迟，不足以确定QB-49712的计量活门开度不足已经发生；其他未列出的原因仍可能产生相同末端指示。\n该逆推不是充分条件。",
+    "reason": "",
+    "claims": [
+      {
+        "text": "当QB-49712的计量活门开度不足发生时，引起QB-49712的计量截面减小。",
+        "support_span_ids": [
+          "61660e7520af1a4698de1518758c1258c85679561f1fd197eba203627ea91cad"
+        ],
+        "evidence_ids": [
+          "bd3a2b19cab68b46076147e733730513348125e24301a841e6d2356b78010120"
+        ],
+        "citations": [
+          {
+            "span_id": "61660e7520af1a4698de1518758c1258c85679561f1fd197eba203627ea91cad",
+            "evidence_id": "bd3a2b19cab68b46076147e733730513348125e24301a841e6d2356b78010120",
+            "start": 0,
+            "end": 67,
+            "text_sha256": "3a30d3b9c9be6399012522ec0b7e6f8ca3b50d848c9b56c6c14ac1893eb64e45",
+            "text_kind": "provided_display_text",
+            "support_quote": "本记录只陈述虚拟试验台QB-49712的一条设定规则：当QB-49712的计量活门开度不足发生时，引起QB-49712的计量截面减小。",
+            "chunk_id": "bd3a2b19cab68b46076147e733730513348125e24301a841e6d2356b78010120"
+          }
+        ]
+      },
+      {
+        "text": "当QB-49712的计量截面减小发生时，引起QB-49712的供油响应受限。",
+        "support_span_ids": [
+          "64ec04ce3e6554934b5066603a17fee221d521186d1b64e6ff04a4025d105439"
+        ],
+        "evidence_ids": [
+          "079fb20bfc611f43c8e2e56be03e300ee388e7fd67134b9bbe36df8c5745f73b"
+        ],
+        "citations": [
+          {
+            "span_id": "64ec04ce3e6554934b5066603a17fee221d521186d1b64e6ff04a4025d105439",
+            "evidence_id": "079fb20bfc611f43c8e2e56be03e300ee388e7fd67134b9bbe36df8c5745f73b",
+            "start": 0,
+            "end": 65,
+            "text_sha256": "dda5b09f791125d4c2e6af7c9702f14ffc2c438de4be906b49918366cfbb2937",
+            "text_kind": "provided_display_text",
+            "support_quote": "本记录只陈述虚拟试验台QB-49712的一条设定规则：当QB-49712的计量截面减小发生时，引起QB-49712的供油响应受限。",
+            "chunk_id": "079fb20bfc611f43c8e2e56be03e300ee388e7fd67134b9bbe36df8c5745f73b"
+          }
+        ]
+      },
+      {
+        "text": "当QB-49712的供油响应受限发生时，引起QB-49712的转速建立延迟。",
+        "support_span_ids": [
+          "e8e40fadc68753636888298f135e1ef61c93079325184414f2569fecde056aed"
+        ],
+        "evidence_ids": [
+          "7e28c5020bb94f1d163adf273cfdaba5a7694eb1e92992e982e8c327a0f34c77"
+        ],
+        "citations": [
+          {
+            "span_id": "e8e40fadc68753636888298f135e1ef61c93079325184414f2569fecde056aed",
+            "evidence_id": "7e28c5020bb94f1d163adf273cfdaba5a7694eb1e92992e982e8c327a0f34c77",
+            "start": 0,
+            "end": 65,
+            "text_sha256": "4f59daafa80693ea2dda261497de64718963432ef6b72e6b061d0591f81930ec",
+            "text_kind": "provided_display_text",
+            "support_quote": "本记录只陈述虚拟试验台QB-49712的一条设定规则：当QB-49712的供油响应受限发生时，引起QB-49712的转速建立延迟。",
+            "chunk_id": "7e28c5020bb94f1d163adf273cfdaba5a7694eb1e92992e982e8c327a0f34c77"
+          }
+        ]
+      },
+      {
+        "text": "仅观察到QB-49712的转速建立延迟，不足以确定QB-49712的计量活门开度不足已经发生；其他未列出的原因仍可能产生相同末端指示。",
+        "support_span_ids": [
+          "d080e46623431ae61176c07cd66500f06e7b8282344d672b8fd63cf98b09dcdc"
+        ],
+        "evidence_ids": [
+          "e4be7cf91eb67e73f5458b5d51f6980e5fdf469252576401ceead3d9def80023"
+        ],
+        "citations": [
+          {
+            "span_id": "d080e46623431ae61176c07cd66500f06e7b8282344d672b8fd63cf98b09dcdc",
+            "evidence_id": "e4be7cf91eb67e73f5458b5d51f6980e5fdf469252576401ceead3d9def80023",
+            "start": 0,
+            "end": 93,
+            "text_sha256": "7f3a7eb2013731aad980dac873172db93dc2d08ab759dc52c73a37dee658e815",
+            "text_kind": "provided_display_text",
+            "support_quote": "边界记录：本场景明确规定，虚拟试验台QB-49712仅观察到QB-49712的转速建立延迟，不足以确定QB-49712的计量活门开度不足已经发生；其他未列出的原因仍可能产生相同末端指示。",
+            "chunk_id": "e4be7cf91eb67e73f5458b5d51f6980e5fdf469252576401ceead3d9def80023"
+          }
+        ]
+      },
+      {
+        "text": "该逆推不是充分条件。",
+        "support_span_ids": [
+          "23540e207d87a509f12fc00944b7f6eb6ba7a619036f47bc0b9fc4df3070bf9b"
+        ],
+        "evidence_ids": [
+          "e4be7cf91eb67e73f5458b5d51f6980e5fdf469252576401ceead3d9def80023"
+        ],
+        "citations": [
+          {
+            "span_id": "23540e207d87a509f12fc00944b7f6eb6ba7a619036f47bc0b9fc4df3070bf9b",
+            "evidence_id": "e4be7cf91eb67e73f5458b5d51f6980e5fdf469252576401ceead3d9def80023",
+            "start": 93,
+            "end": 103,
+            "text_sha256": "7f3a7eb2013731aad980dac873172db93dc2d08ab759dc52c73a37dee658e815",
+            "text_kind": "provided_display_text",
+            "support_quote": "该逆推不是充分条件。",
+            "chunk_id": "e4be7cf91eb67e73f5458b5d51f6980e5fdf469252576401ceead3d9def80023"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "submission_id": "ac68f29fd5f820",
+    "question_id": "sq-09",
+    "group": "controlled",
+    "question": "QB-28700设定下，QB-28700的回油管路局部阻塞最终怎样演变到QB-28700的腔压监控异常？请补全机理路径。",
+    "answerable": true,
+    "required_points": [
+      "本记录只陈述虚拟试验台QB-28700的一条设定规则：当QB-28700的回油管路局部阻塞发生时，引起QB-28700的回油排出能力降低。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-28700的一条设定规则：当QB-28700的回油排出能力降低发生时，引起QB-28700的轴承腔油量积聚。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-28700的一条设定规则：当QB-28700的轴承腔油量积聚发生时，引起QB-28700的腔压监控异常。本条不陈述其他后续环节。"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "a41db7d9c8e182e41d96d7aaac60df89c056114d16779d03fd7b5062cd2cb3ff",
+        "start": 0,
+        "end": 81,
+        "anchor": "本记录只陈述虚拟试验台QB-28700的一条设定规则：当QB-28700的回油管路局部阻塞发生时，引起QB-28700的回油排出能力降低。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "c7251e8b2056a1cf6a1d7e98458524e6c1030cd4e33c651dec087908c4af8b88",
+        "start": 0,
+        "end": 80,
+        "anchor": "本记录只陈述虚拟试验台QB-28700的一条设定规则：当QB-28700的回油排出能力降低发生时，引起QB-28700的轴承腔油量积聚。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "dd703779ac0000784ebfa464a60b4f1fbdcbb5e769297aebbd0d2d0ee5e704c7",
+        "start": 0,
+        "end": 78,
+        "anchor": "本记录只陈述虚拟试验台QB-28700的一条设定规则：当QB-28700的轴承腔油量积聚发生时，引起QB-28700的腔压监控异常。本条不陈述其他后续环节。"
+      }
+    ],
+    "completed": true,
+    "status": "insufficient_evidence",
+    "insufficient_evidence": true,
+    "answer": "现有证据不足以完整回答该问题。",
+    "reason": "现有证据未通过回答支持性或问题覆盖检查，无法给出完整结论。",
+    "claims": []
+  },
+  {
+    "submission_id": "d4e740cfe62bdb",
+    "question_id": "cq-05",
+    "group": "real",
+    "question": "燃烧室衬筒前部从气孔发出的裂纹，允许接受的前提是什么，发生分叉或相连时又应如何处理？",
+    "answerable": true,
+    "required_points": [
+      "不超过允许极限时可接受",
+      "分叉或与其他裂纹相连必须修理"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44",
+        "start": 277,
+        "end": 294,
+        "anchor": "前衬筒中从气孔发出的裂纹是可接受的"
+      },
+      {
+        "chunk_id": "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44",
+        "start": 309,
+        "end": 325,
+        "anchor": "如果此类裂纹分叉或与其他裂纹相连"
+      }
+    ],
+    "completed": true,
+    "status": "evidence_ready",
+    "insufficient_evidence": false,
+    "answer": "前衬筒中从气孔发出的裂纹是可接受的，前提是它们不超过允许极限。\n如果此类裂纹分叉或与其他裂纹相连，则必须修理衬筒。\n如果从同一气孔发出的两条裂纹正好相对，则该衬筒是可接受的。",
+    "reason": "",
+    "claims": [
+      {
+        "text": "前衬筒中从气孔发出的裂纹是可接受的，前提是它们不超过允许极限。",
+        "support_span_ids": [
+          "d098ab33b572606cad4c70842f51ecb1c2bd1593a58ba5980c374e6f04eb0d59"
+        ],
+        "evidence_ids": [
+          "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44"
+        ],
+        "citations": [
+          {
+            "span_id": "d098ab33b572606cad4c70842f51ecb1c2bd1593a58ba5980c374e6f04eb0d59",
+            "evidence_id": "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44",
+            "start": 277,
+            "end": 308,
+            "text_sha256": "89f0056f4e42d2c940c8b086a5eb08ef185b5c07f62e04f08ee74494be859867",
+            "text_kind": "provided_display_text",
+            "support_quote": "前衬筒中从气孔发出的裂纹是可接受的，前提是它们不超过允许极限。",
+            "chunk_id": "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44"
+          }
+        ]
+      },
+      {
+        "text": "如果此类裂纹分叉或与其他裂纹相连，则必须修理衬筒。",
+        "support_span_ids": [
+          "d55c0f4f3a77cfce724870b02d1eccf71b7c17e73f4a254db9c5255a3076a6b7"
+        ],
+        "evidence_ids": [
+          "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44"
+        ],
+        "citations": [
+          {
+            "span_id": "d55c0f4f3a77cfce724870b02d1eccf71b7c17e73f4a254db9c5255a3076a6b7",
+            "evidence_id": "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44",
+            "start": 309,
+            "end": 334,
+            "text_sha256": "89f0056f4e42d2c940c8b086a5eb08ef185b5c07f62e04f08ee74494be859867",
+            "text_kind": "provided_display_text",
+            "support_quote": "如果此类裂纹分叉或与其他裂纹相连，则必须修理衬筒。",
+            "chunk_id": "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44"
+          }
+        ]
+      },
+      {
+        "text": "如果从同一气孔发出的两条裂纹正好相对，则该衬筒是可接受的。",
+        "support_span_ids": [
+          "50d4043bd4c62cf27a7a0cce759b3a28d5c70f145b1ce82ef774cf678a0525bd"
+        ],
+        "evidence_ids": [
+          "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44"
+        ],
+        "citations": [
+          {
+            "span_id": "50d4043bd4c62cf27a7a0cce759b3a28d5c70f145b1ce82ef774cf678a0525bd",
+            "evidence_id": "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44",
+            "start": 335,
+            "end": 364,
+            "text_sha256": "89f0056f4e42d2c940c8b086a5eb08ef185b5c07f62e04f08ee74494be859867",
+            "text_kind": "provided_display_text",
+            "support_quote": "如果从同一气孔发出的两条裂纹正好相对，则该衬筒是可接受的。",
+            "chunk_id": "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "submission_id": "8ec4e7db347e54",
+    "question_id": "cq-04",
+    "group": "real",
+    "question": "清洗燃油喷嘴时，为什么不应使用硬质工具刮擦或钢丝刷擦拭？",
+    "answerable": true,
+    "required_points": [
+      "喷嘴喷雾特性可能受损",
+      "不应使用硬工具刮擦或钢丝刷"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "9d4bc15dbf2bf78eff18fc28a01b86e9172d92fc876c3b737a2dbde0bcf7af7e",
+        "start": 101,
+        "end": 115,
+        "anchor": "由于喷嘴的喷雾特性可能会受损"
+      }
+    ],
+    "completed": true,
+    "status": "evidence_ready",
+    "insufficient_evidence": false,
+    "answer": "由于喷嘴的喷雾特性可能会受损，不应尝试用硬质工具刮擦或用钢丝刷擦拭来清洁喷嘴。\n清洗喷嘴应使用发动机制造商批准的清洗液，清除所有积碳，并用软毛刷清除软化的沉积物。\n在清洗过程中，最好让过滤后的空气通过喷嘴，以便在沉积物松动时将其带走。",
+    "reason": "",
+    "claims": [
+      {
+        "text": "由于喷嘴的喷雾特性可能会受损，不应尝试用硬质工具刮擦或用钢丝刷擦拭来清洁喷嘴。",
+        "support_span_ids": [
+          "b8e38ccab4d9c4c0acf06dd035bc8733748ef9398c24119063084f7a4a447516"
+        ],
+        "evidence_ids": [
+          "9d4bc15dbf2bf78eff18fc28a01b86e9172d92fc876c3b737a2dbde0bcf7af7e"
+        ],
+        "citations": [
+          {
+            "span_id": "b8e38ccab4d9c4c0acf06dd035bc8733748ef9398c24119063084f7a4a447516",
+            "evidence_id": "9d4bc15dbf2bf78eff18fc28a01b86e9172d92fc876c3b737a2dbde0bcf7af7e",
+            "start": 101,
+            "end": 140,
+            "text_sha256": "f9036586d7b52dc65522c73650a8418796b9809b9be10bdab90ef0df292e2e9b",
+            "text_kind": "provided_display_text",
+            "support_quote": "由于喷嘴的喷雾特性可能会受损，不应尝试用硬质工具刮擦或用钢丝刷擦拭来清洁喷嘴。",
+            "chunk_id": "9d4bc15dbf2bf78eff18fc28a01b86e9172d92fc876c3b737a2dbde0bcf7af7e"
+          }
+        ]
+      },
+      {
+        "text": "清洗喷嘴应使用发动机制造商批准的清洗液，清除所有积碳，并用软毛刷清除软化的沉积物。",
+        "support_span_ids": [
+          "5833bbb7cc286121bd8e24ffc894e8175a32ee27b6e5d4a0d66047ce75d4630a"
+        ],
+        "evidence_ids": [
+          "9d4bc15dbf2bf78eff18fc28a01b86e9172d92fc876c3b737a2dbde0bcf7af7e"
+        ],
+        "citations": [
+          {
+            "span_id": "5833bbb7cc286121bd8e24ffc894e8175a32ee27b6e5d4a0d66047ce75d4630a",
+            "evidence_id": "9d4bc15dbf2bf78eff18fc28a01b86e9172d92fc876c3b737a2dbde0bcf7af7e",
+            "start": 0,
+            "end": 40,
+            "text_sha256": "f9036586d7b52dc65522c73650a8418796b9809b9be10bdab90ef0df292e2e9b",
+            "text_kind": "provided_display_text",
+            "support_quote": "使用发动机制造商批准的清洗液清洗喷嘴，清除所有积碳，并用软毛刷清除软化的沉积物。",
+            "chunk_id": "9d4bc15dbf2bf78eff18fc28a01b86e9172d92fc876c3b737a2dbde0bcf7af7e"
+          }
+        ]
+      },
+      {
+        "text": "在清洗过程中，最好让过滤后的空气通过喷嘴，以便在沉积物松动时将其带走。",
+        "support_span_ids": [
+          "011c874b992e9d30f6b3fa0746d2ebb718ff86c941565c469515de7c97ade802"
+        ],
+        "evidence_ids": [
+          "9d4bc15dbf2bf78eff18fc28a01b86e9172d92fc876c3b737a2dbde0bcf7af7e"
+        ],
+        "citations": [
+          {
+            "span_id": "011c874b992e9d30f6b3fa0746d2ebb718ff86c941565c469515de7c97ade802",
+            "evidence_id": "9d4bc15dbf2bf78eff18fc28a01b86e9172d92fc876c3b737a2dbde0bcf7af7e",
+            "start": 41,
+            "end": 76,
+            "text_sha256": "f9036586d7b52dc65522c73650a8418796b9809b9be10bdab90ef0df292e2e9b",
+            "text_kind": "provided_display_text",
+            "support_quote": "在清洗过程中，最好让过滤后的空气通过喷嘴，以便在沉积物松动时将其带走。",
+            "chunk_id": "9d4bc15dbf2bf78eff18fc28a01b86e9172d92fc876c3b737a2dbde0bcf7af7e"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "submission_id": "693996a05c74dc",
+    "question_id": "sq-12",
+    "group": "controlled",
+    "question": "QB-63476设定下，QB-63476的防冰分配支路受阻最终怎样演变到QB-63476的表面结冰监控触发？请补全机理路径。",
+    "answerable": true,
+    "required_points": [
+      "本记录只陈述虚拟试验台QB-63476的一条设定规则：当QB-63476的防冰分配支路受阻发生时，引起QB-63476的防冰热气分配减少。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-63476的一条设定规则：当QB-63476的防冰热气分配减少发生时，引起QB-63476的受保护表面温度降低。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-63476的一条设定规则：当QB-63476的受保护表面温度降低发生时，引起QB-63476的表面结冰监控触发。本条不陈述其他后续环节。"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "d5868e450b72d5b6364ad6ae93771a2d4f1ce2071048cafd22cf297cce71f4f9",
+        "start": 0,
+        "end": 81,
+        "anchor": "本记录只陈述虚拟试验台QB-63476的一条设定规则：当QB-63476的防冰分配支路受阻发生时，引起QB-63476的防冰热气分配减少。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "2dec9061ad9f451c06a2c7fe436fe75b56dde804dd78ac3ba9ca145922104d26",
+        "start": 0,
+        "end": 82,
+        "anchor": "本记录只陈述虚拟试验台QB-63476的一条设定规则：当QB-63476的防冰热气分配减少发生时，引起QB-63476的受保护表面温度降低。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "38492b404dd8ad0d6185774ac2d6b91000599dda3d470952b5af9021d67ed21e",
+        "start": 0,
+        "end": 82,
+        "anchor": "本记录只陈述虚拟试验台QB-63476的一条设定规则：当QB-63476的受保护表面温度降低发生时，引起QB-63476的表面结冰监控触发。本条不陈述其他后续环节。"
+      }
+    ],
+    "completed": true,
+    "status": "evidence_ready",
+    "insufficient_evidence": false,
+    "answer": "当QB-63476的防冰分配支路受阻发生时，引起QB-63476的防冰热气分配减少。\n当QB-63476的防冰热气分配减少发生时，引起QB-63476的受保护表面温度降低。\n当QB-63476的受保护表面温度降低发生时，引起QB-63476的表面结冰监控触发。\n仅观察到QB-63476的表面结冰监控触发，不足以确定QB-63476的防冰分配支路受阻已经发生；其他未列出的原因仍可能产生相同末端指示。\n该逆推不是充分条件。",
+    "reason": "",
+    "claims": [
+      {
+        "text": "当QB-63476的防冰分配支路受阻发生时，引起QB-63476的防冰热气分配减少。",
+        "support_span_ids": [
+          "5b5b4fd5dd584ba51da33e207793446010fba8ef66527da6daaa97bc4dc43375"
+        ],
+        "evidence_ids": [
+          "d5868e450b72d5b6364ad6ae93771a2d4f1ce2071048cafd22cf297cce71f4f9"
+        ],
+        "citations": [
+          {
+            "span_id": "5b5b4fd5dd584ba51da33e207793446010fba8ef66527da6daaa97bc4dc43375",
+            "evidence_id": "d5868e450b72d5b6364ad6ae93771a2d4f1ce2071048cafd22cf297cce71f4f9",
+            "start": 0,
+            "end": 69,
+            "text_sha256": "19429b6d7f6acd706f85facfc9d3c1cf140c7198778b69a91603d52637ed2c34",
+            "text_kind": "provided_display_text",
+            "support_quote": "本记录只陈述虚拟试验台QB-63476的一条设定规则：当QB-63476的防冰分配支路受阻发生时，引起QB-63476的防冰热气分配减少。",
+            "chunk_id": "d5868e450b72d5b6364ad6ae93771a2d4f1ce2071048cafd22cf297cce71f4f9"
+          }
+        ]
+      },
+      {
+        "text": "当QB-63476的防冰热气分配减少发生时，引起QB-63476的受保护表面温度降低。",
+        "support_span_ids": [
+          "e7a111b5f591737e3ac460f7508b7b865c726e8d3cded88a31b10fb332e287a0"
+        ],
+        "evidence_ids": [
+          "2dec9061ad9f451c06a2c7fe436fe75b56dde804dd78ac3ba9ca145922104d26"
+        ],
+        "citations": [
+          {
+            "span_id": "e7a111b5f591737e3ac460f7508b7b865c726e8d3cded88a31b10fb332e287a0",
+            "evidence_id": "2dec9061ad9f451c06a2c7fe436fe75b56dde804dd78ac3ba9ca145922104d26",
+            "start": 0,
+            "end": 70,
+            "text_sha256": "c16bf7dfef5f50ef7644408ad3aaa9e6fde32348b7b8ca221f03e29c76cbc625",
+            "text_kind": "provided_display_text",
+            "support_quote": "本记录只陈述虚拟试验台QB-63476的一条设定规则：当QB-63476的防冰热气分配减少发生时，引起QB-63476的受保护表面温度降低。",
+            "chunk_id": "2dec9061ad9f451c06a2c7fe436fe75b56dde804dd78ac3ba9ca145922104d26"
+          }
+        ]
+      },
+      {
+        "text": "当QB-63476的受保护表面温度降低发生时，引起QB-63476的表面结冰监控触发。",
+        "support_span_ids": [
+          "dfe707dc905c8b4a8430fb7bd0fb556f41a905bd4e03f26c8386c2ef35e0fe93"
+        ],
+        "evidence_ids": [
+          "38492b404dd8ad0d6185774ac2d6b91000599dda3d470952b5af9021d67ed21e"
+        ],
+        "citations": [
+          {
+            "span_id": "dfe707dc905c8b4a8430fb7bd0fb556f41a905bd4e03f26c8386c2ef35e0fe93",
+            "evidence_id": "38492b404dd8ad0d6185774ac2d6b91000599dda3d470952b5af9021d67ed21e",
+            "start": 0,
+            "end": 70,
+            "text_sha256": "9904b3b67ecbacb26078c43e70436e54e06f5ed7f42e05b62c7a017ecbe962f3",
+            "text_kind": "provided_display_text",
+            "support_quote": "本记录只陈述虚拟试验台QB-63476的一条设定规则：当QB-63476的受保护表面温度降低发生时，引起QB-63476的表面结冰监控触发。",
+            "chunk_id": "38492b404dd8ad0d6185774ac2d6b91000599dda3d470952b5af9021d67ed21e"
+          }
+        ]
+      },
+      {
+        "text": "仅观察到QB-63476的表面结冰监控触发，不足以确定QB-63476的防冰分配支路受阻已经发生；其他未列出的原因仍可能产生相同末端指示。",
+        "support_span_ids": [
+          "979fb7ad7142124134881508cc160f4cf25079f4ef0481a79ccb22e62226e5f6"
+        ],
+        "evidence_ids": [
+          "a9ccf825fcf4280f77e1bf3dff2316169340d126e32ef69e54b4561200b78e28"
+        ],
+        "citations": [
+          {
+            "span_id": "979fb7ad7142124134881508cc160f4cf25079f4ef0481a79ccb22e62226e5f6",
+            "evidence_id": "a9ccf825fcf4280f77e1bf3dff2316169340d126e32ef69e54b4561200b78e28",
+            "start": 0,
+            "end": 95,
+            "text_sha256": "a6d9e3d38b9f5fdc313e85ffe5b781af174e1b75b78cfd5de4826876941d2799",
+            "text_kind": "provided_display_text",
+            "support_quote": "边界记录：本场景明确规定，虚拟试验台QB-63476仅观察到QB-63476的表面结冰监控触发，不足以确定QB-63476的防冰分配支路受阻已经发生；其他未列出的原因仍可能产生相同末端指示。",
+            "chunk_id": "a9ccf825fcf4280f77e1bf3dff2316169340d126e32ef69e54b4561200b78e28"
+          }
+        ]
+      },
+      {
+        "text": "该逆推不是充分条件。",
+        "support_span_ids": [
+          "a17ba6d659a6500be7dd6b289959615813e1912c5b30efddccf5e94ca674ab3e"
+        ],
+        "evidence_ids": [
+          "a9ccf825fcf4280f77e1bf3dff2316169340d126e32ef69e54b4561200b78e28"
+        ],
+        "citations": [
+          {
+            "span_id": "a17ba6d659a6500be7dd6b289959615813e1912c5b30efddccf5e94ca674ab3e",
+            "evidence_id": "a9ccf825fcf4280f77e1bf3dff2316169340d126e32ef69e54b4561200b78e28",
+            "start": 95,
+            "end": 105,
+            "text_sha256": "a6d9e3d38b9f5fdc313e85ffe5b781af174e1b75b78cfd5de4826876941d2799",
+            "text_kind": "provided_display_text",
+            "support_quote": "该逆推不是充分条件。",
+            "chunk_id": "a9ccf825fcf4280f77e1bf3dff2316169340d126e32ef69e54b4561200b78e28"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "submission_id": "781b9208fc1523",
+    "question_id": "sq-06",
+    "group": "controlled",
+    "question": "QB-64942设定下，QB-64942的机匣局部变形最终怎样演变到QB-64942的压比波动监控触发？请补全机理路径。",
+    "answerable": true,
+    "required_points": [
+      "本记录只陈述虚拟试验台QB-64942的一条设定规则：当QB-64942的机匣局部变形发生时，引起QB-64942的叶尖间隙分布偏斜。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-64942的一条设定规则：当QB-64942的叶尖间隙分布偏斜发生时，引起QB-64942的间隙泄漏分布不均。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-64942的一条设定规则：当QB-64942的间隙泄漏分布不均发生时，引起QB-64942的压比波动监控触发。本条不陈述其他后续环节。"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "a835d8c6aade2eb1c524d0816e3149763ce4d18dc23823299150c2f00d13f71b",
+        "start": 0,
+        "end": 79,
+        "anchor": "本记录只陈述虚拟试验台QB-64942的一条设定规则：当QB-64942的机匣局部变形发生时，引起QB-64942的叶尖间隙分布偏斜。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "76cf3b672327366560e8dfdedb1663b60e3d026fe76bd736c30860e16a2ab548",
+        "start": 0,
+        "end": 81,
+        "anchor": "本记录只陈述虚拟试验台QB-64942的一条设定规则：当QB-64942的叶尖间隙分布偏斜发生时，引起QB-64942的间隙泄漏分布不均。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "70d0c19ca4ffd09587d0b6b9564b6a9d14e806b053634e472da1a33f148023d1",
+        "start": 0,
+        "end": 81,
+        "anchor": "本记录只陈述虚拟试验台QB-64942的一条设定规则：当QB-64942的间隙泄漏分布不均发生时，引起QB-64942的压比波动监控触发。本条不陈述其他后续环节。"
+      }
+    ],
+    "completed": true,
+    "status": "insufficient_evidence",
+    "insufficient_evidence": true,
+    "answer": "现有证据不足以完整回答该问题。",
+    "reason": "现有证据未通过回答支持性或问题覆盖检查，无法给出完整结论。",
+    "claims": []
+  },
+  {
+    "submission_id": "379e07b84c41ef",
+    "question_id": "cq-06",
+    "group": "real",
+    "question": "仅根据这份资料，能否给出某一未指定发动机燃烧室衬筒裂纹允许长度的具体毫米值？",
+    "answerable": false,
+    "required_points": [
+      "不能确定具体毫米值",
+      "需要相应发动机制造商规定及具体对象"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44",
+        "start": 95,
+        "end": 115,
+        "anchor": "应遵循相应发动机制造商大修说明书中的程序"
+      }
+    ],
+    "completed": true,
+    "status": "insufficient_evidence",
+    "insufficient_evidence": true,
+    "answer": "资料要求前衬筒中从气孔发出的裂纹可接受的前提是不超过允许极限，但未给出该极限的具体毫米值。\n资料要求从互连器和火花点火器凸台延伸出的径向裂纹可接受的前提是不超过允许极限，且不分叉或与其他裂纹相连，但未给出具体毫米值。\n资料指出可见裂纹长度可能从十六分之一英寸向上不等，但这是针对涡轮叶片应力断裂裂纹的描述，并非燃烧室衬筒裂纹的允许长度。\n资料说明修理燃烧室衬筒应遵循相应发动机制造商大修说明书中的程序，未在本文给出具体尺寸限值。\n现有证据不足以完整回答该问题。",
+    "reason": "所给资料未提供任何燃烧室衬筒裂纹允许长度的具体毫米数值；仅提及“允许极限”但未量化，且十六分之一英寸的描述针对涡轮叶片而非衬筒。",
+    "claims": [
+      {
+        "text": "资料要求前衬筒中从气孔发出的裂纹可接受的前提是不超过允许极限，但未给出该极限的具体毫米值。",
+        "support_span_ids": [
+          "d098ab33b572606cad4c70842f51ecb1c2bd1593a58ba5980c374e6f04eb0d59"
+        ],
+        "evidence_ids": [
+          "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44"
+        ],
+        "citations": [
+          {
+            "span_id": "d098ab33b572606cad4c70842f51ecb1c2bd1593a58ba5980c374e6f04eb0d59",
+            "evidence_id": "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44",
+            "start": 277,
+            "end": 308,
+            "text_sha256": "89f0056f4e42d2c940c8b086a5eb08ef185b5c07f62e04f08ee74494be859867",
+            "text_kind": "provided_display_text",
+            "support_quote": "前衬筒中从气孔发出的裂纹是可接受的，前提是它们不超过允许极限。",
+            "chunk_id": "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44"
+          }
+        ]
+      },
+      {
+        "text": "资料要求从互连器和火花点火器凸台延伸出的径向裂纹可接受的前提是不超过允许极限，且不分叉或与其他裂纹相连，但未给出具体毫米值。",
+        "support_span_ids": [
+          "0fd7cdc8b9732ee87913686937c3a498e9c0cd91a407715f3d10f652eacedbcf"
+        ],
+        "evidence_ids": [
+          "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44"
+        ],
+        "citations": [
+          {
+            "span_id": "0fd7cdc8b9732ee87913686937c3a498e9c0cd91a407715f3d10f652eacedbcf",
+            "evidence_id": "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44",
+            "start": 365,
+            "end": 422,
+            "text_sha256": "89f0056f4e42d2c940c8b086a5eb08ef185b5c07f62e04f08ee74494be859867",
+            "text_kind": "provided_display_text",
+            "support_quote": "从互连器和火花点火器凸台延伸出的径向裂纹是可接受的，前提是它们不超过允许极限，并且此类裂纹不分叉或与其他裂纹相连。",
+            "chunk_id": "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44"
+          }
+        ]
+      },
+      {
+        "text": "资料指出可见裂纹长度可能从十六分之一英寸向上不等，但这是针对涡轮叶片应力断裂裂纹的描述，并非燃烧室衬筒裂纹的允许长度。",
+        "support_span_ids": [
+          "928eabbb4fd9ac78395b1e434afc770eea07fb021a72274e9d5277b99c8dc86f",
+          "d1b8e461664a20970b67cb439782e78e6e44efc154ef1c0817addb0f097d73fc"
+        ],
+        "evidence_ids": [
+          "a084be163eb497f6682949629388a96047c35eae9f896641ed90b9e117bdcdc7"
+        ],
+        "citations": [
+          {
+            "span_id": "928eabbb4fd9ac78395b1e434afc770eea07fb021a72274e9d5277b99c8dc86f",
+            "evidence_id": "a084be163eb497f6682949629388a96047c35eae9f896641ed90b9e117bdcdc7",
+            "start": 103,
+            "end": 147,
+            "text_sha256": "7ddfcb6b4c38da8f37303a1f2977e9b7b7e54dfe507d0c2792f8aa50532fec50",
+            "text_kind": "provided_display_text",
+            "support_quote": "应力断裂裂纹通常表现为在前缘或后缘上或横跨前缘或后缘的微小发丝状裂纹，与边缘长度成直角。",
+            "chunk_id": "a084be163eb497f6682949629388a96047c35eae9f896641ed90b9e117bdcdc7"
+          },
+          {
+            "span_id": "d1b8e461664a20970b67cb439782e78e6e44efc154ef1c0817addb0f097d73fc",
+            "evidence_id": "a084be163eb497f6682949629388a96047c35eae9f896641ed90b9e117bdcdc7",
+            "start": 148,
+            "end": 170,
+            "text_sha256": "7ddfcb6b4c38da8f37303a1f2977e9b7b7e54dfe507d0c2792f8aa50532fec50",
+            "text_kind": "provided_display_text",
+            "support_quote": "可见裂纹的长度可能从十六分之一英寸向上不等。",
+            "chunk_id": "a084be163eb497f6682949629388a96047c35eae9f896641ed90b9e117bdcdc7"
+          }
+        ]
+      },
+      {
+        "text": "资料说明修理燃烧室衬筒应遵循相应发动机制造商大修说明书中的程序，未在本文给出具体尺寸限值。",
+        "support_span_ids": [
+          "de7f87fcc752a9d005ca9119651a266b2dfc71a28abcafc8bec01dd0917329bd"
+        ],
+        "evidence_ids": [
+          "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44"
+        ],
+        "citations": [
+          {
+            "span_id": "de7f87fcc752a9d005ca9119651a266b2dfc71a28abcafc8bec01dd0917329bd",
+            "evidence_id": "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44",
+            "start": 86,
+            "end": 116,
+            "text_sha256": "89f0056f4e42d2c940c8b086a5eb08ef185b5c07f62e04f08ee74494be859867",
+            "text_kind": "provided_display_text",
+            "support_quote": "修理燃烧室衬筒时，应遵循相应发动机制造商大修说明书中的程序。",
+            "chunk_id": "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "submission_id": "e10e3b451c37b7",
+    "question_id": "cq-07",
+    "group": "real",
+    "question": "空气涡轮起动机可以由哪些气源供气？",
+    "answerable": true,
+    "required_points": [
+      "地面车",
+      "APU",
+      "另一台正在工作的机上发动机"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "536ad4238811bc30cfedc2cfbef37ca4294474fb154c4d2ec19eb57d1537e243",
+        "start": 13,
+        "end": 37,
+        "anchor": "由地面车、APU或另一台正在工作的机上发动机供气"
+      }
+    ],
+    "completed": true,
+    "status": "evidence_ready",
+    "insufficient_evidence": false,
+    "answer": "空气涡轮起动机由地面车、APU或另一台正在工作的机上发动机供气。",
+    "reason": "",
+    "claims": [
+      {
+        "text": "空气涡轮起动机由地面车、APU或另一台正在工作的机上发动机供气。",
+        "support_span_ids": [
+          "47c2012a4fa42767d8cf2c5f30c0276e239f062f24aea5c7b557516c5c9aa96e"
+        ],
+        "evidence_ids": [
+          "536ad4238811bc30cfedc2cfbef37ca4294474fb154c4d2ec19eb57d1537e243"
+        ],
+        "citations": [
+          {
+            "span_id": "47c2012a4fa42767d8cf2c5f30c0276e239f062f24aea5c7b557516c5c9aa96e",
+            "evidence_id": "536ad4238811bc30cfedc2cfbef37ca4294474fb154c4d2ec19eb57d1537e243",
+            "start": 6,
+            "end": 38,
+            "text_sha256": "e20df06fcba8b69117d9b10e3c33b915a7fdfa171fe60167dfce8e8d7f1c6a44",
+            "text_kind": "provided_display_text",
+            "support_quote": "空气涡轮起动机由地面车、APU或另一台正在工作的机上发动机供气。",
+            "chunk_id": "536ad4238811bc30cfedc2cfbef37ca4294474fb154c4d2ec19eb57d1537e243"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "submission_id": "9d5ddb7774499c",
+    "question_id": "sq-07",
+    "group": "controlled",
+    "question": "QB-75997设定下，QB-75997的喷油器雾化孔磨损最终怎样演变到QB-75997的燃烧稳定监控异常？请补全机理路径。",
+    "answerable": true,
+    "required_points": [
+      "本记录只陈述虚拟试验台QB-75997的一条设定规则：当QB-75997的喷油器雾化孔磨损发生时，引起QB-75997的雾滴尺度分布变宽。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-75997的一条设定规则：当QB-75997的雾滴尺度分布变宽发生时，引起QB-75997的蒸发完成位置后移。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-75997的一条设定规则：当QB-75997的蒸发完成位置后移发生时，引起QB-75997的燃烧稳定监控异常。本条不陈述其他后续环节。"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "1782c87e04d8f9dd6880ebd1b071a4ce17e6d6f78c7f998ac3cacbcbc0bc1fe1",
+        "start": 0,
+        "end": 81,
+        "anchor": "本记录只陈述虚拟试验台QB-75997的一条设定规则：当QB-75997的喷油器雾化孔磨损发生时，引起QB-75997的雾滴尺度分布变宽。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "73c86138b8ffe09c7f16ab6b49afc2b923d25043b061f06f2be458ad32f5185c",
+        "start": 0,
+        "end": 81,
+        "anchor": "本记录只陈述虚拟试验台QB-75997的一条设定规则：当QB-75997的雾滴尺度分布变宽发生时，引起QB-75997的蒸发完成位置后移。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "3f115a815a9a15b42deac3e8ddb82250ddf93820680a7c37c34311c524e1a6d4",
+        "start": 0,
+        "end": 81,
+        "anchor": "本记录只陈述虚拟试验台QB-75997的一条设定规则：当QB-75997的蒸发完成位置后移发生时，引起QB-75997的燃烧稳定监控异常。本条不陈述其他后续环节。"
+      }
+    ],
+    "completed": true,
+    "status": "insufficient_evidence",
+    "insufficient_evidence": true,
+    "answer": "现有证据不足以完整回答该问题。",
+    "reason": "现有证据未通过回答支持性或问题覆盖检查，无法给出完整结论。",
+    "claims": []
+  },
+  {
+    "submission_id": "ea17d9f7790fd2",
+    "question_id": "cq-01",
+    "group": "real",
+    "question": "在叶片维护术语中，金属粘着的外观特征是什么，常见原因是什么？",
+    "answerable": true,
+    "required_points": [
+      "金属从一个表面转移到另一个表面",
+      "严重摩擦"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "13c9ba29cc34f9e419f0bf01ab8647535dde9910566f75e9519b927b15a060cf",
+        "start": 42,
+        "end": 57,
+        "anchor": "金属从一个表面转移到另一个表面"
+      },
+      {
+        "chunk_id": "13c9ba29cc34f9e419f0bf01ab8647535dde9910566f75e9519b927b15a060cf",
+        "start": 63,
+        "end": 67,
+        "anchor": "严重摩擦"
+      }
+    ],
+    "completed": true,
+    "status": "evidence_ready",
+    "insufficient_evidence": false,
+    "answer": "金属粘着的外观特征是金属从一个表面转移到另一个表面。\n金属粘着的常见原因是严重摩擦。",
+    "reason": "",
+    "claims": [
+      {
+        "text": "金属粘着的外观特征是金属从一个表面转移到另一个表面。",
+        "support_span_ids": [
+          "f11ae16819a4239fdbb9cdc7728f217ea73a2f331aa841550189241edaccee19"
+        ],
+        "evidence_ids": [
+          "13c9ba29cc34f9e419f0bf01ab8647535dde9910566f75e9519b927b15a060cf"
+        ],
+        "citations": [
+          {
+            "span_id": "f11ae16819a4239fdbb9cdc7728f217ea73a2f331aa841550189241edaccee19",
+            "evidence_id": "13c9ba29cc34f9e419f0bf01ab8647535dde9910566f75e9519b927b15a060cf",
+            "start": 31,
+            "end": 58,
+            "text_sha256": "1fd40537dc89f9bf895b28581ce42f1206b0b2f9bd35f871a17a88c44b8871a3",
+            "text_kind": "provided_display_text",
+            "support_quote": "• 金属粘着 | • 金属从一个表面转移到另一个表面。",
+            "chunk_id": "13c9ba29cc34f9e419f0bf01ab8647535dde9910566f75e9519b927b15a060cf"
+          }
+        ]
+      },
+      {
+        "text": "金属粘着的常见原因是严重摩擦。",
+        "support_span_ids": [
+          "8b9d7cc287b76629155634734152ec65c2ad60fd3f52e80a254ecab23bc30b0e"
+        ],
+        "evidence_ids": [
+          "13c9ba29cc34f9e419f0bf01ab8647535dde9910566f75e9519b927b15a060cf"
+        ],
+        "citations": [
+          {
+            "span_id": "8b9d7cc287b76629155634734152ec65c2ad60fd3f52e80a254ecab23bc30b0e",
+            "evidence_id": "13c9ba29cc34f9e419f0bf01ab8647535dde9910566f75e9519b927b15a060cf",
+            "start": 59,
+            "end": 68,
+            "text_sha256": "1fd40537dc89f9bf895b28581ce42f1206b0b2f9bd35f871a17a88c44b8871a3",
+            "text_kind": "provided_display_text",
+            "support_quote": "| • 严重摩擦。",
+            "chunk_id": "13c9ba29cc34f9e419f0bf01ab8647535dde9910566f75e9519b927b15a060cf"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "submission_id": "96303dab52c254",
+    "question_id": "cq-02",
+    "group": "real",
+    "question": "对于空心叶片，小而浅的凹痕在什么形状和材料状态条件下才可接受？",
+    "answerable": true,
+    "required_points": [
+      "圆形或渐变轮廓而非尖锐或V型",
+      "没有叶片材料开裂或撕裂迹象"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "d2b833ff870427e931c65e697b8ee34f92c03e7a7cb1eed7a7b113c9100e1060",
+        "start": 41,
+        "end": 50,
+        "anchor": "圆形或渐变轮廓类型"
+      },
+      {
+        "chunk_id": "d2b833ff870427e931c65e697b8ee34f92c03e7a7cb1eed7a7b113c9100e1060",
+        "start": 65,
+        "end": 79,
+        "anchor": "没有叶片材料开裂或撕裂的迹象"
+      }
+    ],
+    "completed": true,
+    "status": "insufficient_evidence",
+    "insufficient_evidence": true,
+    "answer": "由于空心叶片的薄板结构，包括前缘在内的凹面和凸面上的打磨修整受到限制。\n如果损伤为圆形或渐变轮廓类型，而非尖锐或V型，并且损伤区域没有叶片材料开裂或撕裂的迹象，则小的、浅的凹痕是可接受的。\n现有证据不足以完整回答该问题。",
+    "reason": "所给证据仅说明空心叶片打磨修整受限，以及小浅凹痕在圆形或渐变轮廓、无开裂或撕裂迹象时可接受；但未明确该凹痕可接受条件是否专门适用于空心叶片，缺少将凹痕可接受条件与空心叶片直接关联的证据。",
+    "claims": [
+      {
+        "text": "由于空心叶片的薄板结构，包括前缘在内的凹面和凸面上的打磨修整受到限制。",
+        "support_span_ids": [
+          "0fecddb1503d32019a18450fd7d783f5c1f64e5f43b30ef11a08f133f007de7a"
+        ],
+        "evidence_ids": [
+          "d2b833ff870427e931c65e697b8ee34f92c03e7a7cb1eed7a7b113c9100e1060"
+        ],
+        "citations": [
+          {
+            "span_id": "0fecddb1503d32019a18450fd7d783f5c1f64e5f43b30ef11a08f133f007de7a",
+            "evidence_id": "d2b833ff870427e931c65e697b8ee34f92c03e7a7cb1eed7a7b113c9100e1060",
+            "start": 0,
+            "end": 35,
+            "text_sha256": "da0de2d50a71bb22c7b5dc8e4dfc86c3234812a2c2b6fb2fd30848f719ff6871",
+            "text_kind": "provided_display_text",
+            "support_quote": "由于空心叶片的薄板结构，包括前缘在内的凹面和凸面上的打磨修整受到限制。",
+            "chunk_id": "d2b833ff870427e931c65e697b8ee34f92c03e7a7cb1eed7a7b113c9100e1060"
+          }
+        ]
+      },
+      {
+        "text": "如果损伤为圆形或渐变轮廓类型，而非尖锐或V型，并且损伤区域没有叶片材料开裂或撕裂的迹象，则小的、浅的凹痕是可接受的。",
+        "support_span_ids": [
+          "6c873d3049f0bb9b6aef4e0e9d75ca4f9aa215b90ce4c3e78bda20aaac49c632"
+        ],
+        "evidence_ids": [
+          "d2b833ff870427e931c65e697b8ee34f92c03e7a7cb1eed7a7b113c9100e1060"
+        ],
+        "citations": [
+          {
+            "span_id": "6c873d3049f0bb9b6aef4e0e9d75ca4f9aa215b90ce4c3e78bda20aaac49c632",
+            "evidence_id": "d2b833ff870427e931c65e697b8ee34f92c03e7a7cb1eed7a7b113c9100e1060",
+            "start": 36,
+            "end": 94,
+            "text_sha256": "da0de2d50a71bb22c7b5dc8e4dfc86c3234812a2c2b6fb2fd30848f719ff6871",
+            "text_kind": "provided_display_text",
+            "support_quote": "如果损伤为圆形或渐变轮廓类型，而非尖锐或V型，并且损伤区域没有叶片材料开裂或撕裂的迹象，则小的、浅的凹痕是可接受的。",
+            "chunk_id": "d2b833ff870427e931c65e697b8ee34f92c03e7a7cb1eed7a7b113c9100e1060"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "submission_id": "414341bf54a667",
+    "question_id": "cq-08",
+    "group": "real",
+    "question": "起动机运转但发动机不转动时，指南列出的可能原因与处置是什么？若联轴器在异常短周期内持续断裂，还应怎样处理？",
+    "answerable": true,
+    "required_points": [
+      "可能为驱动联轴器剪切断裂而非确定诊断",
+      "拆下起动机并更换驱动联轴器",
+      "异常短周期持续断裂时拆下并更换起动机"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "31f970f79593afe086f83955e9e76111c7d573295db582124cf185d2a4a9f66a",
+        "start": 162,
+        "end": 175,
+        "anchor": "起动机运转，但发动机不转动"
+      },
+      {
+        "chunk_id": "31f970f79593afe086f83955e9e76111c7d573295db582124cf185d2a4a9f66a",
+        "start": 269,
+        "end": 286,
+        "anchor": "如果联轴器在异常短的周期内持续断裂"
+      }
+    ],
+    "completed": true,
+    "status": "evidence_ready",
+    "insufficient_evidence": false,
+    "answer": "故障现象为“起动机运转，但发动机不转动”。\n可能原因为驱动联轴器剪切断裂。\n补救措施为拆下起动机并更换驱动联轴器。\n如果联轴器在异常短的周期内持续断裂，则拆下并更换起动机。",
+    "reason": "",
+    "claims": [
+      {
+        "text": "故障现象为“起动机运转，但发动机不转动”。",
+        "support_span_ids": [
+          "a87eccfeeb00e2f216ae8244ca85d8993fc6ab1212110a0820b8d4fd28b7f9f7",
+          "52a103a2416027525bb10c8036a305900138ab866e3fb3a7ea704183e4143d71"
+        ],
+        "evidence_ids": [
+          "31f970f79593afe086f83955e9e76111c7d573295db582124cf185d2a4a9f66a"
+        ],
+        "citations": [
+          {
+            "span_id": "a87eccfeeb00e2f216ae8244ca85d8993fc6ab1212110a0820b8d4fd28b7f9f7",
+            "evidence_id": "31f970f79593afe086f83955e9e76111c7d573295db582124cf185d2a4a9f66a",
+            "start": 160,
+            "end": 176,
+            "text_sha256": "bdc40f0ca88d159d2d079fb91a86157dc37479cc123a986b91bfbb0a1679cb56",
+            "text_kind": "provided_display_text",
+            "support_quote": "• 起动机运转，但发动机不转动。",
+            "chunk_id": "31f970f79593afe086f83955e9e76111c7d573295db582124cf185d2a4a9f66a"
+          },
+          {
+            "span_id": "52a103a2416027525bb10c8036a305900138ab866e3fb3a7ea704183e4143d71",
+            "evidence_id": "31f970f79593afe086f83955e9e76111c7d573295db582124cf185d2a4a9f66a",
+            "start": 213,
+            "end": 229,
+            "text_sha256": "bdc40f0ca88d159d2d079fb91a86157dc37479cc123a986b91bfbb0a1679cb56",
+            "text_kind": "provided_display_text",
+            "support_quote": "• 起动机运转，但发动机不转动。",
+            "chunk_id": "31f970f79593afe086f83955e9e76111c7d573295db582124cf185d2a4a9f66a"
+          }
+        ]
+      },
+      {
+        "text": "可能原因为驱动联轴器剪切断裂。",
+        "support_span_ids": [
+          "1a139354ce438146ccf152cdf851fe40cc773190a08820a111ff05ff5cae8560"
+        ],
+        "evidence_ids": [
+          "31f970f79593afe086f83955e9e76111c7d573295db582124cf185d2a4a9f66a"
+        ],
+        "citations": [
+          {
+            "span_id": "1a139354ce438146ccf152cdf851fe40cc773190a08820a111ff05ff5cae8560",
+            "evidence_id": "31f970f79593afe086f83955e9e76111c7d573295db582124cf185d2a4a9f66a",
+            "start": 193,
+            "end": 212,
+            "text_sha256": "bdc40f0ca88d159d2d079fb91a86157dc37479cc123a986b91bfbb0a1679cb56",
+            "text_kind": "provided_display_text",
+            "support_quote": "可能原因 = • 驱动联轴器剪切断裂。",
+            "chunk_id": "31f970f79593afe086f83955e9e76111c7d573295db582124cf185d2a4a9f66a"
+          }
+        ]
+      },
+      {
+        "text": "补救措施为拆下起动机并更换驱动联轴器。",
+        "support_span_ids": [
+          "a2252d4f15ce846206f36f436d7e753558f0d0137303073c8577a1c5fbe0c873"
+        ],
+        "evidence_ids": [
+          "31f970f79593afe086f83955e9e76111c7d573295db582124cf185d2a4a9f66a"
+        ],
+        "citations": [
+          {
+            "span_id": "a2252d4f15ce846206f36f436d7e753558f0d0137303073c8577a1c5fbe0c873",
+            "evidence_id": "31f970f79593afe086f83955e9e76111c7d573295db582124cf185d2a4a9f66a",
+            "start": 246,
+            "end": 269,
+            "text_sha256": "bdc40f0ca88d159d2d079fb91a86157dc37479cc123a986b91bfbb0a1679cb56",
+            "text_kind": "provided_display_text",
+            "support_quote": "补救措施 = • 拆下起动机并更换驱动联轴器。",
+            "chunk_id": "31f970f79593afe086f83955e9e76111c7d573295db582124cf185d2a4a9f66a"
+          }
+        ]
+      },
+      {
+        "text": "如果联轴器在异常短的周期内持续断裂，则拆下并更换起动机。",
+        "support_span_ids": [
+          "f33f9473c215aa1b56b39834f6ab7e0d21876e69f4beb30ced8843d28f1aa7e5"
+        ],
+        "evidence_ids": [
+          "31f970f79593afe086f83955e9e76111c7d573295db582124cf185d2a4a9f66a"
+        ],
+        "citations": [
+          {
+            "span_id": "f33f9473c215aa1b56b39834f6ab7e0d21876e69f4beb30ced8843d28f1aa7e5",
+            "evidence_id": "31f970f79593afe086f83955e9e76111c7d573295db582124cf185d2a4a9f66a",
+            "start": 269,
+            "end": 297,
+            "text_sha256": "bdc40f0ca88d159d2d079fb91a86157dc37479cc123a986b91bfbb0a1679cb56",
+            "text_kind": "provided_display_text",
+            "support_quote": "如果联轴器在异常短的周期内持续断裂，则拆下并更换起动机。",
+            "chunk_id": "31f970f79593afe086f83955e9e76111c7d573295db582124cf185d2a4a9f66a"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "submission_id": "367d31aeb38dbf",
+    "question_id": "sq-04",
+    "group": "controlled",
+    "question": "QB-42465设定下，QB-42465的压气机静子表面沉积最终怎样演变到QB-42465的级效率监控下降？请补全机理路径。",
+    "answerable": true,
+    "required_points": [
+      "本记录只陈述虚拟试验台QB-42465的一条设定规则：当QB-42465的压气机静子表面沉积发生时，引起QB-42465的静子流道粗糙度升高。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-42465的一条设定规则：当QB-42465的静子流道粗糙度升高发生时，引起QB-42465的叶栅流动损失增加。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-42465的一条设定规则：当QB-42465的叶栅流动损失增加发生时，引起QB-42465的级效率监控下降。本条不陈述其他后续环节。"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "ac822e62330a5e2a9335d2db8a943c1043701eb578ca02b668391ea4107f0464",
+        "start": 0,
+        "end": 83,
+        "anchor": "本记录只陈述虚拟试验台QB-42465的一条设定规则：当QB-42465的压气机静子表面沉积发生时，引起QB-42465的静子流道粗糙度升高。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "9a2c1c33b8942fd1f2c6a7beda8035e4b054fa90e53a6de727856ac106e0f7f7",
+        "start": 0,
+        "end": 82,
+        "anchor": "本记录只陈述虚拟试验台QB-42465的一条设定规则：当QB-42465的静子流道粗糙度升高发生时，引起QB-42465的叶栅流动损失增加。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "a8096576c2cfdaf3777aa95a7678f0518f8d5b2dcad194c173a01dad5dc72011",
+        "start": 0,
+        "end": 80,
+        "anchor": "本记录只陈述虚拟试验台QB-42465的一条设定规则：当QB-42465的叶栅流动损失增加发生时，引起QB-42465的级效率监控下降。本条不陈述其他后续环节。"
+      }
+    ],
+    "completed": true,
+    "status": "evidence_ready",
+    "insufficient_evidence": false,
+    "answer": "当QB-42465的压气机静子表面沉积发生时，引起QB-42465的静子流道粗糙度升高。\n当QB-42465的静子流道粗糙度升高发生时，引起QB-42465的叶栅流动损失增加。\n当QB-42465的叶栅流动损失增加发生时，引起QB-42465的级效率监控下降。\n仅观察到QB-42465的级效率监控下降，不足以确定QB-42465的压气机静子表面沉积已经发生；其他未列出的原因仍可能产生相同末端指示。\n该逆推不是充分条件。",
+    "reason": "",
+    "claims": [
+      {
+        "text": "当QB-42465的压气机静子表面沉积发生时，引起QB-42465的静子流道粗糙度升高。",
+        "support_span_ids": [
+          "583612c3d1e1f4fd88e1803938b856fb5d00e19c631e6c2b36f0e006e6ff29bc"
+        ],
+        "evidence_ids": [
+          "ac822e62330a5e2a9335d2db8a943c1043701eb578ca02b668391ea4107f0464"
+        ],
+        "citations": [
+          {
+            "span_id": "583612c3d1e1f4fd88e1803938b856fb5d00e19c631e6c2b36f0e006e6ff29bc",
+            "evidence_id": "ac822e62330a5e2a9335d2db8a943c1043701eb578ca02b668391ea4107f0464",
+            "start": 0,
+            "end": 71,
+            "text_sha256": "d24a7dddc14dd1deaf088524da97edda0d895b689e1943346b3dff4ddf9a6d0a",
+            "text_kind": "provided_display_text",
+            "support_quote": "本记录只陈述虚拟试验台QB-42465的一条设定规则：当QB-42465的压气机静子表面沉积发生时，引起QB-42465的静子流道粗糙度升高。",
+            "chunk_id": "ac822e62330a5e2a9335d2db8a943c1043701eb578ca02b668391ea4107f0464"
+          }
+        ]
+      },
+      {
+        "text": "当QB-42465的静子流道粗糙度升高发生时，引起QB-42465的叶栅流动损失增加。",
+        "support_span_ids": [
+          "086d6aa2c41d4608d78b48d93eb4ffd3c3faccda6c27223fed940135227e0749"
+        ],
+        "evidence_ids": [
+          "9a2c1c33b8942fd1f2c6a7beda8035e4b054fa90e53a6de727856ac106e0f7f7"
+        ],
+        "citations": [
+          {
+            "span_id": "086d6aa2c41d4608d78b48d93eb4ffd3c3faccda6c27223fed940135227e0749",
+            "evidence_id": "9a2c1c33b8942fd1f2c6a7beda8035e4b054fa90e53a6de727856ac106e0f7f7",
+            "start": 0,
+            "end": 70,
+            "text_sha256": "c1d5696b38aa5dc205e6c80ada4533028e3052753e245ef9c08623219618891f",
+            "text_kind": "provided_display_text",
+            "support_quote": "本记录只陈述虚拟试验台QB-42465的一条设定规则：当QB-42465的静子流道粗糙度升高发生时，引起QB-42465的叶栅流动损失增加。",
+            "chunk_id": "9a2c1c33b8942fd1f2c6a7beda8035e4b054fa90e53a6de727856ac106e0f7f7"
+          }
+        ]
+      },
+      {
+        "text": "当QB-42465的叶栅流动损失增加发生时，引起QB-42465的级效率监控下降。",
+        "support_span_ids": [
+          "be988f57a1020d65eade8454dae5ddbaea8053e02eca7a5794f1ee9b0288cc4e"
+        ],
+        "evidence_ids": [
+          "a8096576c2cfdaf3777aa95a7678f0518f8d5b2dcad194c173a01dad5dc72011"
+        ],
+        "citations": [
+          {
+            "span_id": "be988f57a1020d65eade8454dae5ddbaea8053e02eca7a5794f1ee9b0288cc4e",
+            "evidence_id": "a8096576c2cfdaf3777aa95a7678f0518f8d5b2dcad194c173a01dad5dc72011",
+            "start": 0,
+            "end": 68,
+            "text_sha256": "83133111f4c45c47d898144b3e9cbc8806c9326f10a0388b6af8329b222e5011",
+            "text_kind": "provided_display_text",
+            "support_quote": "本记录只陈述虚拟试验台QB-42465的一条设定规则：当QB-42465的叶栅流动损失增加发生时，引起QB-42465的级效率监控下降。",
+            "chunk_id": "a8096576c2cfdaf3777aa95a7678f0518f8d5b2dcad194c173a01dad5dc72011"
+          }
+        ]
+      },
+      {
+        "text": "仅观察到QB-42465的级效率监控下降，不足以确定QB-42465的压气机静子表面沉积已经发生；其他未列出的原因仍可能产生相同末端指示。",
+        "support_span_ids": [
+          "86c53d3774b54511c79111714e369704a33cdb86595fc1419b416c1e435d6f32"
+        ],
+        "evidence_ids": [
+          "ec59dba55d3ad7190d50bdd65a8ffb395a54ef01fa59c4785ceac499252328fc"
+        ],
+        "citations": [
+          {
+            "span_id": "86c53d3774b54511c79111714e369704a33cdb86595fc1419b416c1e435d6f32",
+            "evidence_id": "ec59dba55d3ad7190d50bdd65a8ffb395a54ef01fa59c4785ceac499252328fc",
+            "start": 0,
+            "end": 95,
+            "text_sha256": "3157f3460a0ce1db57a73faf53c443db1b5f49e5552fc85542be10621feb6b74",
+            "text_kind": "provided_display_text",
+            "support_quote": "边界记录：本场景明确规定，虚拟试验台QB-42465仅观察到QB-42465的级效率监控下降，不足以确定QB-42465的压气机静子表面沉积已经发生；其他未列出的原因仍可能产生相同末端指示。",
+            "chunk_id": "ec59dba55d3ad7190d50bdd65a8ffb395a54ef01fa59c4785ceac499252328fc"
+          }
+        ]
+      },
+      {
+        "text": "该逆推不是充分条件。",
+        "support_span_ids": [
+          "c6f4c9da6abd8aa74e7a92290b6ccb49656a3c060353f9bec4c654ee43d99208"
+        ],
+        "evidence_ids": [
+          "ec59dba55d3ad7190d50bdd65a8ffb395a54ef01fa59c4785ceac499252328fc"
+        ],
+        "citations": [
+          {
+            "span_id": "c6f4c9da6abd8aa74e7a92290b6ccb49656a3c060353f9bec4c654ee43d99208",
+            "evidence_id": "ec59dba55d3ad7190d50bdd65a8ffb395a54ef01fa59c4785ceac499252328fc",
+            "start": 95,
+            "end": 105,
+            "text_sha256": "3157f3460a0ce1db57a73faf53c443db1b5f49e5552fc85542be10621feb6b74",
+            "text_kind": "provided_display_text",
+            "support_quote": "该逆推不是充分条件。",
+            "chunk_id": "ec59dba55d3ad7190d50bdd65a8ffb395a54ef01fa59c4785ceac499252328fc"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "submission_id": "818ba9d732d1c7",
+    "question_id": "sq-03",
+    "group": "controlled",
+    "question": "QB-64182设定下，QB-64182的引气管路接头松动最终怎样演变到QB-64182的气源监控告警？请补全机理路径。",
+    "answerable": true,
+    "required_points": [
+      "本记录只陈述虚拟试验台QB-64182的一条设定规则：当QB-64182的引气管路接头松动发生时，引起QB-64182的管路漏气增大。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-64182的一条设定规则：当QB-64182的管路漏气增大发生时，引起QB-64182的用气端压力下降。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-64182的一条设定规则：当QB-64182的用气端压力下降发生时，引起QB-64182的气源监控告警。本条不陈述其他后续环节。"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "8662ab342c9470d339599087f8bc0345b11db288d5487e3f3554e85a2562b048",
+        "start": 0,
+        "end": 79,
+        "anchor": "本记录只陈述虚拟试验台QB-64182的一条设定规则：当QB-64182的引气管路接头松动发生时，引起QB-64182的管路漏气增大。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "9eb18f1b62768ddaa89c1a63eb3cf8264c9b7671d5a40efaddaf5aa01e5eadac",
+        "start": 0,
+        "end": 78,
+        "anchor": "本记录只陈述虚拟试验台QB-64182的一条设定规则：当QB-64182的管路漏气增大发生时，引起QB-64182的用气端压力下降。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "64b25b9388e79e90f8ed63ab7883e6f921d6f3b4732b9cc907cf7a978a417a35",
+        "start": 0,
+        "end": 78,
+        "anchor": "本记录只陈述虚拟试验台QB-64182的一条设定规则：当QB-64182的用气端压力下降发生时，引起QB-64182的气源监控告警。本条不陈述其他后续环节。"
+      }
+    ],
+    "completed": true,
+    "status": "insufficient_evidence",
+    "insufficient_evidence": true,
+    "answer": "现有证据不足以完整回答该问题。",
+    "reason": "现有证据未通过回答支持性或问题覆盖检查，无法给出完整结论。",
+    "claims": []
+  },
+  {
+    "submission_id": "8f136b6a2c1a33",
+    "question_id": "cq-03",
+    "group": "real",
+    "question": "这份资料能否给出所有发动机空心叶片凹痕统一适用的最大允许深度毫米数？",
+    "answerable": false,
+    "required_points": [
+      "明确不能从本资料确定统一数值",
+      "应依据特定制造商适用资料而非编造毫米值"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "d2b833ff870427e931c65e697b8ee34f92c03e7a7cb1eed7a7b113c9100e1060",
+        "start": 239,
+        "end": 253,
+        "anchor": "始终使用特定制造商的最新信息"
+      }
+    ],
+    "completed": true,
+    "status": "insufficient_evidence",
+    "insufficient_evidence": true,
+    "answer": "现有证据不足以完整回答该问题。",
+    "reason": "现有证据未通过回答支持性或问题覆盖检查，无法给出完整结论。",
+    "claims": []
+  },
+  {
+    "submission_id": "31ec68ba8e045f",
+    "question_id": "cq-11",
+    "group": "real",
+    "question": "驻留耐久性测试在通常情况下至少需要多少循环？低频导致时间过长时，缩短测试需要什么前提，并可采用什么补偿思路？",
+    "answerable": true,
+    "required_points": [
+      "至少一千万即1E7个循环",
+      "低频时间过长且采用适当补偿",
+      "可依据材料疲劳特性提高振动应力作补偿"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "f0875a594b052ba06c87a91584db617b1dab13262f422a09ddf5c8b3d46ef294",
+        "start": 85,
+        "end": 98,
+        "anchor": "驻留时间应至少相当于一千万"
+      },
+      {
+        "chunk_id": "f0875a594b052ba06c87a91584db617b1dab13262f422a09ddf5c8b3d46ef294",
+        "start": 139,
+        "end": 149,
+        "anchor": "如果应用了适当的补偿"
+      },
+      {
+        "chunk_id": "f0875a594b052ba06c87a91584db617b1dab13262f422a09ddf5c8b3d46ef294",
+        "start": 173,
+        "end": 186,
+        "anchor": "通过增加振动应力来缩短测试"
+      }
+    ],
+    "completed": true,
+    "status": "evidence_ready",
+    "insufficient_evidence": false,
+    "answer": "每当针对特定频率进行驻留耐久性测试时，驻留时间应至少相当于一千万（1E7）个循环，以证明耐久强度。\n当由于低频振动导致测试持续时间过长而不合理时，如果应用了适当的补偿，可以缩短测试。\n例如，可以根据材料疲劳特性通过增加振动应力来缩短测试。",
+    "reason": "",
+    "claims": [
+      {
+        "text": "每当针对特定频率进行驻留耐久性测试时，驻留时间应至少相当于一千万（1E7）个循环，以证明耐久强度。",
+        "support_span_ids": [
+          "c10bf30ff0fb4d1a51e7dcb0b2478b49320bf02330bc29733cb9c08f888a8be1"
+        ],
+        "evidence_ids": [
+          "f0875a594b052ba06c87a91584db617b1dab13262f422a09ddf5c8b3d46ef294"
+        ],
+        "citations": [
+          {
+            "span_id": "c10bf30ff0fb4d1a51e7dcb0b2478b49320bf02330bc29733cb9c08f888a8be1",
+            "evidence_id": "f0875a594b052ba06c87a91584db617b1dab13262f422a09ddf5c8b3d46ef294",
+            "start": 66,
+            "end": 115,
+            "text_sha256": "c4fb2788bfe410e90ff98ed99878bf78fa527dda4b7832ebac160277fd60e823",
+            "text_kind": "provided_display_text",
+            "support_quote": "每当针对特定频率进行驻留耐久性测试时，驻留时间应至少相当于一千万（1E7）个循环，以证明耐久强度。",
+            "chunk_id": "f0875a594b052ba06c87a91584db617b1dab13262f422a09ddf5c8b3d46ef294"
+          }
+        ]
+      },
+      {
+        "text": "当由于低频振动导致测试持续时间过长而不合理时，如果应用了适当的补偿，可以缩短测试。",
+        "support_span_ids": [
+          "762869c83151878727ee12efef8ee2f415090e401301175059cff28a2c5d48c1"
+        ],
+        "evidence_ids": [
+          "f0875a594b052ba06c87a91584db617b1dab13262f422a09ddf5c8b3d46ef294"
+        ],
+        "citations": [
+          {
+            "span_id": "762869c83151878727ee12efef8ee2f415090e401301175059cff28a2c5d48c1",
+            "evidence_id": "f0875a594b052ba06c87a91584db617b1dab13262f422a09ddf5c8b3d46ef294",
+            "start": 116,
+            "end": 158,
+            "text_sha256": "c4fb2788bfe410e90ff98ed99878bf78fa527dda4b7832ebac160277fd60e823",
+            "text_kind": "provided_display_text",
+            "support_quote": "当由于低频振动导致测试持续时间过长而不合理时，如果应用了适当的补偿，您可以缩短测试。",
+            "chunk_id": "f0875a594b052ba06c87a91584db617b1dab13262f422a09ddf5c8b3d46ef294"
+          }
+        ]
+      },
+      {
+        "text": "例如，可以根据材料疲劳特性通过增加振动应力来缩短测试。",
+        "support_span_ids": [
+          "11da533afb5a0dab10983ccb42e045d6ed231e96b01d2d0de5b4d63515c723cf"
+        ],
+        "evidence_ids": [
+          "f0875a594b052ba06c87a91584db617b1dab13262f422a09ddf5c8b3d46ef294"
+        ],
+        "citations": [
+          {
+            "span_id": "11da533afb5a0dab10983ccb42e045d6ed231e96b01d2d0de5b4d63515c723cf",
+            "evidence_id": "f0875a594b052ba06c87a91584db617b1dab13262f422a09ddf5c8b3d46ef294",
+            "start": 159,
+            "end": 187,
+            "text_sha256": "c4fb2788bfe410e90ff98ed99878bf78fa527dda4b7832ebac160277fd60e823",
+            "text_kind": "provided_display_text",
+            "support_quote": "例如，您可以根据材料疲劳特性通过增加振动应力来缩短测试。",
+            "chunk_id": "f0875a594b052ba06c87a91584db617b1dab13262f422a09ddf5c8b3d46ef294"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "submission_id": "69af0946aabac9",
+    "question_id": "sq-07",
+    "group": "controlled",
+    "question": "QB-75997设定下，QB-75997的喷油器雾化孔磨损最终怎样演变到QB-75997的燃烧稳定监控异常？请补全机理路径。",
+    "answerable": true,
+    "required_points": [
+      "本记录只陈述虚拟试验台QB-75997的一条设定规则：当QB-75997的喷油器雾化孔磨损发生时，引起QB-75997的雾滴尺度分布变宽。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-75997的一条设定规则：当QB-75997的雾滴尺度分布变宽发生时，引起QB-75997的蒸发完成位置后移。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-75997的一条设定规则：当QB-75997的蒸发完成位置后移发生时，引起QB-75997的燃烧稳定监控异常。本条不陈述其他后续环节。"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "1782c87e04d8f9dd6880ebd1b071a4ce17e6d6f78c7f998ac3cacbcbc0bc1fe1",
+        "start": 0,
+        "end": 81,
+        "anchor": "本记录只陈述虚拟试验台QB-75997的一条设定规则：当QB-75997的喷油器雾化孔磨损发生时，引起QB-75997的雾滴尺度分布变宽。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "73c86138b8ffe09c7f16ab6b49afc2b923d25043b061f06f2be458ad32f5185c",
+        "start": 0,
+        "end": 81,
+        "anchor": "本记录只陈述虚拟试验台QB-75997的一条设定规则：当QB-75997的雾滴尺度分布变宽发生时，引起QB-75997的蒸发完成位置后移。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "3f115a815a9a15b42deac3e8ddb82250ddf93820680a7c37c34311c524e1a6d4",
+        "start": 0,
+        "end": 81,
+        "anchor": "本记录只陈述虚拟试验台QB-75997的一条设定规则：当QB-75997的蒸发完成位置后移发生时，引起QB-75997的燃烧稳定监控异常。本条不陈述其他后续环节。"
+      }
+    ],
+    "completed": true,
+    "status": "evidence_ready",
+    "insufficient_evidence": false,
+    "answer": "规则设定：当QB-75997的喷油器雾化孔磨损发生时，引起QB-75997的雾滴尺度分布变宽。\n规则设定：当QB-75997的雾滴尺度分布变宽发生时，引起QB-75997的蒸发完成位置后移。\n规则设定：当QB-75997的蒸发完成位置后移发生时，引起QB-75997的燃烧稳定监控异常。\n仅观察到QB-75997的燃烧稳定监控异常，不足以确定QB-75997的喷油器雾化孔磨损已经发生；其他未列出的原因仍可能产生相同末端指示。\n该逆推不是充分条件。",
+    "reason": "",
+    "claims": [
+      {
+        "text": "规则设定：当QB-75997的喷油器雾化孔磨损发生时，引起QB-75997的雾滴尺度分布变宽。",
+        "support_span_ids": [
+          "5356b7ffc89dfcea89568294f7021c824e56ec51fdd13417374ac445131b962b"
+        ],
+        "evidence_ids": [
+          "1782c87e04d8f9dd6880ebd1b071a4ce17e6d6f78c7f998ac3cacbcbc0bc1fe1"
+        ],
+        "citations": [
+          {
+            "span_id": "5356b7ffc89dfcea89568294f7021c824e56ec51fdd13417374ac445131b962b",
+            "evidence_id": "1782c87e04d8f9dd6880ebd1b071a4ce17e6d6f78c7f998ac3cacbcbc0bc1fe1",
+            "start": 0,
+            "end": 69,
+            "text_sha256": "4109d87611d56be99ac2ecad89a32171cda564d80366925aac71d2df399ef7d1",
+            "text_kind": "provided_display_text",
+            "support_quote": "本记录只陈述虚拟试验台QB-75997的一条设定规则：当QB-75997的喷油器雾化孔磨损发生时，引起QB-75997的雾滴尺度分布变宽。",
+            "chunk_id": "1782c87e04d8f9dd6880ebd1b071a4ce17e6d6f78c7f998ac3cacbcbc0bc1fe1"
+          }
+        ]
+      },
+      {
+        "text": "规则设定：当QB-75997的雾滴尺度分布变宽发生时，引起QB-75997的蒸发完成位置后移。",
+        "support_span_ids": [
+          "98d209eba161b399d348eacf6bc23956ad42a1b18e852d4180bdc1e94eba881f"
+        ],
+        "evidence_ids": [
+          "73c86138b8ffe09c7f16ab6b49afc2b923d25043b061f06f2be458ad32f5185c"
+        ],
+        "citations": [
+          {
+            "span_id": "98d209eba161b399d348eacf6bc23956ad42a1b18e852d4180bdc1e94eba881f",
+            "evidence_id": "73c86138b8ffe09c7f16ab6b49afc2b923d25043b061f06f2be458ad32f5185c",
+            "start": 0,
+            "end": 69,
+            "text_sha256": "5006f3e15e880c8786057a7c9c70fd34dec9e3d18f686f09e64296396f4ae8b9",
+            "text_kind": "provided_display_text",
+            "support_quote": "本记录只陈述虚拟试验台QB-75997的一条设定规则：当QB-75997的雾滴尺度分布变宽发生时，引起QB-75997的蒸发完成位置后移。",
+            "chunk_id": "73c86138b8ffe09c7f16ab6b49afc2b923d25043b061f06f2be458ad32f5185c"
+          }
+        ]
+      },
+      {
+        "text": "规则设定：当QB-75997的蒸发完成位置后移发生时，引起QB-75997的燃烧稳定监控异常。",
+        "support_span_ids": [
+          "dc2a3a04fdade8662b5a0f5e9b8034778cbb7f10262ab0712f10e497679fe78a"
+        ],
+        "evidence_ids": [
+          "3f115a815a9a15b42deac3e8ddb82250ddf93820680a7c37c34311c524e1a6d4"
+        ],
+        "citations": [
+          {
+            "span_id": "dc2a3a04fdade8662b5a0f5e9b8034778cbb7f10262ab0712f10e497679fe78a",
+            "evidence_id": "3f115a815a9a15b42deac3e8ddb82250ddf93820680a7c37c34311c524e1a6d4",
+            "start": 0,
+            "end": 69,
+            "text_sha256": "683c9425dcf38aaae2265283e46caa0e884c542e2756c56f8669ed2ffefdbedf",
+            "text_kind": "provided_display_text",
+            "support_quote": "本记录只陈述虚拟试验台QB-75997的一条设定规则：当QB-75997的蒸发完成位置后移发生时，引起QB-75997的燃烧稳定监控异常。",
+            "chunk_id": "3f115a815a9a15b42deac3e8ddb82250ddf93820680a7c37c34311c524e1a6d4"
+          }
+        ]
+      },
+      {
+        "text": "仅观察到QB-75997的燃烧稳定监控异常，不足以确定QB-75997的喷油器雾化孔磨损已经发生；其他未列出的原因仍可能产生相同末端指示。",
+        "support_span_ids": [
+          "3f9180ac44824315998e1ba1bd4f9f23167fc894a4b965b6f241214ccb34cc49"
+        ],
+        "evidence_ids": [
+          "194098b5b4f89f960b4228726f779b8cb3e3ffaef163ac066fe062453baabda5"
+        ],
+        "citations": [
+          {
+            "span_id": "3f9180ac44824315998e1ba1bd4f9f23167fc894a4b965b6f241214ccb34cc49",
+            "evidence_id": "194098b5b4f89f960b4228726f779b8cb3e3ffaef163ac066fe062453baabda5",
+            "start": 0,
+            "end": 95,
+            "text_sha256": "65ac90faee60db03290b10067c8228e7c80ed86abf79d6a8911fba8b8d689709",
+            "text_kind": "provided_display_text",
+            "support_quote": "边界记录：本场景明确规定，虚拟试验台QB-75997仅观察到QB-75997的燃烧稳定监控异常，不足以确定QB-75997的喷油器雾化孔磨损已经发生；其他未列出的原因仍可能产生相同末端指示。",
+            "chunk_id": "194098b5b4f89f960b4228726f779b8cb3e3ffaef163ac066fe062453baabda5"
+          }
+        ]
+      },
+      {
+        "text": "该逆推不是充分条件。",
+        "support_span_ids": [
+          "49ef17c632d95b52f6ef70393ac6ac82d10426e20f615fecf2281fdcdef059cc"
+        ],
+        "evidence_ids": [
+          "194098b5b4f89f960b4228726f779b8cb3e3ffaef163ac066fe062453baabda5"
+        ],
+        "citations": [
+          {
+            "span_id": "49ef17c632d95b52f6ef70393ac6ac82d10426e20f615fecf2281fdcdef059cc",
+            "evidence_id": "194098b5b4f89f960b4228726f779b8cb3e3ffaef163ac066fe062453baabda5",
+            "start": 95,
+            "end": 105,
+            "text_sha256": "65ac90faee60db03290b10067c8228e7c80ed86abf79d6a8911fba8b8d689709",
+            "text_kind": "provided_display_text",
+            "support_quote": "该逆推不是充分条件。",
+            "chunk_id": "194098b5b4f89f960b4228726f779b8cb3e3ffaef163ac066fe062453baabda5"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "submission_id": "7f4518f4e07fbd",
+    "question_id": "sq-06",
+    "group": "controlled",
+    "question": "QB-64942设定下，QB-64942的机匣局部变形最终怎样演变到QB-64942的压比波动监控触发？请补全机理路径。",
+    "answerable": true,
+    "required_points": [
+      "本记录只陈述虚拟试验台QB-64942的一条设定规则：当QB-64942的机匣局部变形发生时，引起QB-64942的叶尖间隙分布偏斜。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-64942的一条设定规则：当QB-64942的叶尖间隙分布偏斜发生时，引起QB-64942的间隙泄漏分布不均。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-64942的一条设定规则：当QB-64942的间隙泄漏分布不均发生时，引起QB-64942的压比波动监控触发。本条不陈述其他后续环节。"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "a835d8c6aade2eb1c524d0816e3149763ce4d18dc23823299150c2f00d13f71b",
+        "start": 0,
+        "end": 79,
+        "anchor": "本记录只陈述虚拟试验台QB-64942的一条设定规则：当QB-64942的机匣局部变形发生时，引起QB-64942的叶尖间隙分布偏斜。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "76cf3b672327366560e8dfdedb1663b60e3d026fe76bd736c30860e16a2ab548",
+        "start": 0,
+        "end": 81,
+        "anchor": "本记录只陈述虚拟试验台QB-64942的一条设定规则：当QB-64942的叶尖间隙分布偏斜发生时，引起QB-64942的间隙泄漏分布不均。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "70d0c19ca4ffd09587d0b6b9564b6a9d14e806b053634e472da1a33f148023d1",
+        "start": 0,
+        "end": 81,
+        "anchor": "本记录只陈述虚拟试验台QB-64942的一条设定规则：当QB-64942的间隙泄漏分布不均发生时，引起QB-64942的压比波动监控触发。本条不陈述其他后续环节。"
+      }
+    ],
+    "completed": true,
+    "status": "evidence_ready",
+    "insufficient_evidence": false,
+    "answer": "当QB-64942的机匣局部变形发生时，引起QB-64942的叶尖间隙分布偏斜。\n当QB-64942的叶尖间隙分布偏斜发生时，引起QB-64942的间隙泄漏分布不均。\n当QB-64942的间隙泄漏分布不均发生时，引起QB-64942的压比波动监控触发。\n仅观察到QB-64942的压比波动监控触发，不足以确定QB-64942的机匣局部变形已经发生；其他未列出的原因仍可能产生相同末端指示。\n该逆推不是充分条件。",
+    "reason": "",
+    "claims": [
+      {
+        "text": "当QB-64942的机匣局部变形发生时，引起QB-64942的叶尖间隙分布偏斜。",
+        "support_span_ids": [
+          "62c53db6af269fca78bf3a7c03a5aa17eb584cfdf0b9b4a23e3a9677fdf698fe"
+        ],
+        "evidence_ids": [
+          "a835d8c6aade2eb1c524d0816e3149763ce4d18dc23823299150c2f00d13f71b"
+        ],
+        "citations": [
+          {
+            "span_id": "62c53db6af269fca78bf3a7c03a5aa17eb584cfdf0b9b4a23e3a9677fdf698fe",
+            "evidence_id": "a835d8c6aade2eb1c524d0816e3149763ce4d18dc23823299150c2f00d13f71b",
+            "start": 0,
+            "end": 67,
+            "text_sha256": "9e04adadd9b2789670da48b96bae10e742bc1f11e529852864d9870f7a0e9151",
+            "text_kind": "provided_display_text",
+            "support_quote": "本记录只陈述虚拟试验台QB-64942的一条设定规则：当QB-64942的机匣局部变形发生时，引起QB-64942的叶尖间隙分布偏斜。",
+            "chunk_id": "a835d8c6aade2eb1c524d0816e3149763ce4d18dc23823299150c2f00d13f71b"
+          }
+        ]
+      },
+      {
+        "text": "当QB-64942的叶尖间隙分布偏斜发生时，引起QB-64942的间隙泄漏分布不均。",
+        "support_span_ids": [
+          "cdc9fb79b102f4c2ce73b438735c350f255fcf7e9b3da6356b5bc67bcde0282e"
+        ],
+        "evidence_ids": [
+          "76cf3b672327366560e8dfdedb1663b60e3d026fe76bd736c30860e16a2ab548"
+        ],
+        "citations": [
+          {
+            "span_id": "cdc9fb79b102f4c2ce73b438735c350f255fcf7e9b3da6356b5bc67bcde0282e",
+            "evidence_id": "76cf3b672327366560e8dfdedb1663b60e3d026fe76bd736c30860e16a2ab548",
+            "start": 0,
+            "end": 69,
+            "text_sha256": "4645dd53d26445e079782722427ec35bcc0c6990132d1710b99e9ba1f6e116ab",
+            "text_kind": "provided_display_text",
+            "support_quote": "本记录只陈述虚拟试验台QB-64942的一条设定规则：当QB-64942的叶尖间隙分布偏斜发生时，引起QB-64942的间隙泄漏分布不均。",
+            "chunk_id": "76cf3b672327366560e8dfdedb1663b60e3d026fe76bd736c30860e16a2ab548"
+          }
+        ]
+      },
+      {
+        "text": "当QB-64942的间隙泄漏分布不均发生时，引起QB-64942的压比波动监控触发。",
+        "support_span_ids": [
+          "57f8d0df7eaf392b529bf5e63d0a462c9ec285710e27834f1636c9d9c68e8475"
+        ],
+        "evidence_ids": [
+          "70d0c19ca4ffd09587d0b6b9564b6a9d14e806b053634e472da1a33f148023d1"
+        ],
+        "citations": [
+          {
+            "span_id": "57f8d0df7eaf392b529bf5e63d0a462c9ec285710e27834f1636c9d9c68e8475",
+            "evidence_id": "70d0c19ca4ffd09587d0b6b9564b6a9d14e806b053634e472da1a33f148023d1",
+            "start": 0,
+            "end": 69,
+            "text_sha256": "257dfe8d400fda9f7e8506ec2bd475625efc98c1217bcbd8983e5074873ce2d7",
+            "text_kind": "provided_display_text",
+            "support_quote": "本记录只陈述虚拟试验台QB-64942的一条设定规则：当QB-64942的间隙泄漏分布不均发生时，引起QB-64942的压比波动监控触发。",
+            "chunk_id": "70d0c19ca4ffd09587d0b6b9564b6a9d14e806b053634e472da1a33f148023d1"
+          }
+        ]
+      },
+      {
+        "text": "仅观察到QB-64942的压比波动监控触发，不足以确定QB-64942的机匣局部变形已经发生；其他未列出的原因仍可能产生相同末端指示。",
+        "support_span_ids": [
+          "a4e53991d155f9c64bd3c359846060d188c5b784ad165ad422f5bc65f704fea9"
+        ],
+        "evidence_ids": [
+          "4a55618ba66fec8723faef01cbddab0f19092217aa518de290b98d9869c579fc"
+        ],
+        "citations": [
+          {
+            "span_id": "a4e53991d155f9c64bd3c359846060d188c5b784ad165ad422f5bc65f704fea9",
+            "evidence_id": "4a55618ba66fec8723faef01cbddab0f19092217aa518de290b98d9869c579fc",
+            "start": 0,
+            "end": 93,
+            "text_sha256": "75ba6744c2b8e499d1f050bb337a1b1af3b8f1b3ad5bd96b1b2909018fbfb87c",
+            "text_kind": "provided_display_text",
+            "support_quote": "边界记录：本场景明确规定，虚拟试验台QB-64942仅观察到QB-64942的压比波动监控触发，不足以确定QB-64942的机匣局部变形已经发生；其他未列出的原因仍可能产生相同末端指示。",
+            "chunk_id": "4a55618ba66fec8723faef01cbddab0f19092217aa518de290b98d9869c579fc"
+          }
+        ]
+      },
+      {
+        "text": "该逆推不是充分条件。",
+        "support_span_ids": [
+          "66cb1c8c57e5d8a24d8fd9907d65ce5f2288a77804500aafe88df93786eb5797"
+        ],
+        "evidence_ids": [
+          "4a55618ba66fec8723faef01cbddab0f19092217aa518de290b98d9869c579fc"
+        ],
+        "citations": [
+          {
+            "span_id": "66cb1c8c57e5d8a24d8fd9907d65ce5f2288a77804500aafe88df93786eb5797",
+            "evidence_id": "4a55618ba66fec8723faef01cbddab0f19092217aa518de290b98d9869c579fc",
+            "start": 93,
+            "end": 103,
+            "text_sha256": "75ba6744c2b8e499d1f050bb337a1b1af3b8f1b3ad5bd96b1b2909018fbfb87c",
+            "text_kind": "provided_display_text",
+            "support_quote": "该逆推不是充分条件。",
+            "chunk_id": "4a55618ba66fec8723faef01cbddab0f19092217aa518de290b98d9869c579fc"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "submission_id": "6db9cd300be367",
+    "question_id": "cq-02",
+    "group": "real",
+    "question": "对于空心叶片，小而浅的凹痕在什么形状和材料状态条件下才可接受？",
+    "answerable": true,
+    "required_points": [
+      "圆形或渐变轮廓而非尖锐或V型",
+      "没有叶片材料开裂或撕裂迹象"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "d2b833ff870427e931c65e697b8ee34f92c03e7a7cb1eed7a7b113c9100e1060",
+        "start": 41,
+        "end": 50,
+        "anchor": "圆形或渐变轮廓类型"
+      },
+      {
+        "chunk_id": "d2b833ff870427e931c65e697b8ee34f92c03e7a7cb1eed7a7b113c9100e1060",
+        "start": 65,
+        "end": 79,
+        "anchor": "没有叶片材料开裂或撕裂的迹象"
+      }
+    ],
+    "completed": true,
+    "status": "insufficient_evidence",
+    "insufficient_evidence": true,
+    "answer": "由于空心叶片的薄板结构，包括前缘在内的凹面和凸面上的打磨修整受到限制。\n如果损伤为圆形或渐变轮廓类型，而非尖锐或V型，并且损伤区域没有叶片材料开裂或撕裂的迹象，则小的、浅的凹痕是可接受的。\n现有证据不足以完整回答该问题。",
+    "reason": "所给证据仅说明空心叶片打磨修整受限，以及小浅凹痕在圆形或渐变轮廓、无开裂或撕裂迹象时可接受；但未明确该凹痕可接受条件是否专门适用于空心叶片，缺少将凹痕可接受条件与空心叶片直接关联的证据。",
+    "claims": [
+      {
+        "text": "由于空心叶片的薄板结构，包括前缘在内的凹面和凸面上的打磨修整受到限制。",
+        "support_span_ids": [
+          "0fecddb1503d32019a18450fd7d783f5c1f64e5f43b30ef11a08f133f007de7a"
+        ],
+        "evidence_ids": [
+          "d2b833ff870427e931c65e697b8ee34f92c03e7a7cb1eed7a7b113c9100e1060"
+        ],
+        "citations": [
+          {
+            "span_id": "0fecddb1503d32019a18450fd7d783f5c1f64e5f43b30ef11a08f133f007de7a",
+            "evidence_id": "d2b833ff870427e931c65e697b8ee34f92c03e7a7cb1eed7a7b113c9100e1060",
+            "start": 0,
+            "end": 35,
+            "text_sha256": "da0de2d50a71bb22c7b5dc8e4dfc86c3234812a2c2b6fb2fd30848f719ff6871",
+            "text_kind": "provided_display_text",
+            "support_quote": "由于空心叶片的薄板结构，包括前缘在内的凹面和凸面上的打磨修整受到限制。",
+            "chunk_id": "d2b833ff870427e931c65e697b8ee34f92c03e7a7cb1eed7a7b113c9100e1060"
+          }
+        ]
+      },
+      {
+        "text": "如果损伤为圆形或渐变轮廓类型，而非尖锐或V型，并且损伤区域没有叶片材料开裂或撕裂的迹象，则小的、浅的凹痕是可接受的。",
+        "support_span_ids": [
+          "6c873d3049f0bb9b6aef4e0e9d75ca4f9aa215b90ce4c3e78bda20aaac49c632"
+        ],
+        "evidence_ids": [
+          "d2b833ff870427e931c65e697b8ee34f92c03e7a7cb1eed7a7b113c9100e1060"
+        ],
+        "citations": [
+          {
+            "span_id": "6c873d3049f0bb9b6aef4e0e9d75ca4f9aa215b90ce4c3e78bda20aaac49c632",
+            "evidence_id": "d2b833ff870427e931c65e697b8ee34f92c03e7a7cb1eed7a7b113c9100e1060",
+            "start": 36,
+            "end": 94,
+            "text_sha256": "da0de2d50a71bb22c7b5dc8e4dfc86c3234812a2c2b6fb2fd30848f719ff6871",
+            "text_kind": "provided_display_text",
+            "support_quote": "如果损伤为圆形或渐变轮廓类型，而非尖锐或V型，并且损伤区域没有叶片材料开裂或撕裂的迹象，则小的、浅的凹痕是可接受的。",
+            "chunk_id": "d2b833ff870427e931c65e697b8ee34f92c03e7a7cb1eed7a7b113c9100e1060"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "submission_id": "2b96a4e7e57734",
+    "question_id": "sq-01",
+    "group": "controlled",
+    "question": "QB-10726设定下，QB-10726的燃油滤芯污堵最终怎样演变到QB-10726的燃油洁净度指示变差？请补全机理路径。",
+    "answerable": true,
+    "required_points": [
+      "本记录只陈述虚拟试验台QB-10726的一条设定规则：当QB-10726的燃油滤芯污堵发生时，引起QB-10726的滤芯压差升高。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-10726的一条设定规则：当QB-10726的滤芯压差升高发生时，引起QB-10726的旁通供油比例增加。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-10726的一条设定规则：当QB-10726的旁通供油比例增加发生时，引起QB-10726的燃油洁净度指示变差。本条不陈述其他后续环节。"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "582617b3e5a9f11d5443f4d2d440667171f0d0476724bfff9e9a9be2d49ca65a",
+        "start": 0,
+        "end": 77,
+        "anchor": "本记录只陈述虚拟试验台QB-10726的一条设定规则：当QB-10726的燃油滤芯污堵发生时，引起QB-10726的滤芯压差升高。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "3b50f005334c464cd9fb2614dc192b0b6c46f5ad363227b686939e6fa4066a5d",
+        "start": 0,
+        "end": 79,
+        "anchor": "本记录只陈述虚拟试验台QB-10726的一条设定规则：当QB-10726的滤芯压差升高发生时，引起QB-10726的旁通供油比例增加。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "3dd106ed0f63a59bbb7e48a1384418863e9abf5d0712868900667cd485a52326",
+        "start": 0,
+        "end": 82,
+        "anchor": "本记录只陈述虚拟试验台QB-10726的一条设定规则：当QB-10726的旁通供油比例增加发生时，引起QB-10726的燃油洁净度指示变差。本条不陈述其他后续环节。"
+      }
+    ],
+    "completed": true,
+    "status": "insufficient_evidence",
+    "insufficient_evidence": true,
+    "answer": "现有证据不足以完整回答该问题。",
+    "reason": "现有证据未通过回答支持性或问题覆盖检查，无法给出完整结论。",
+    "claims": []
+  },
+  {
+    "submission_id": "3d5aa798e50552",
+    "question_id": "sq-05",
+    "group": "controlled",
+    "question": "QB-32054设定下，QB-32054的可调静子连杆间隙增大最终怎样演变到QB-32054的级间匹配告警？请补全机理路径。",
+    "answerable": true,
+    "required_points": [
+      "本记录只陈述虚拟试验台QB-32054的一条设定规则：当QB-32054的可调静子连杆间隙增大发生时，引起QB-32054的静子角度同步性降低。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-32054的一条设定规则：当QB-32054的静子角度同步性降低发生时，引起QB-32054的周向入射分布偏离。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-32054的一条设定规则：当QB-32054的周向入射分布偏离发生时，引起QB-32054的级间匹配告警。本条不陈述其他后续环节。"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "ac964215481bbb8f0bd0415011a3e3597edab27abb806018fa185ba8b773c130",
+        "start": 0,
+        "end": 84,
+        "anchor": "本记录只陈述虚拟试验台QB-32054的一条设定规则：当QB-32054的可调静子连杆间隙增大发生时，引起QB-32054的静子角度同步性降低。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "5a8ab56a1c398107f608f0ba62984b5224da9867451c7fd66167876dc841af02",
+        "start": 0,
+        "end": 82,
+        "anchor": "本记录只陈述虚拟试验台QB-32054的一条设定规则：当QB-32054的静子角度同步性降低发生时，引起QB-32054的周向入射分布偏离。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "aa88d5f54620277230a8086a1fc05bb59d8afe0404862f93aed20b2379a01813",
+        "start": 0,
+        "end": 79,
+        "anchor": "本记录只陈述虚拟试验台QB-32054的一条设定规则：当QB-32054的周向入射分布偏离发生时，引起QB-32054的级间匹配告警。本条不陈述其他后续环节。"
+      }
+    ],
+    "completed": true,
+    "status": "evidence_ready",
+    "insufficient_evidence": false,
+    "answer": "设定规则：当QB-32054的可调静子连杆间隙增大发生时，引起QB-32054的静子角度同步性降低。\n设定规则：当QB-32054的静子角度同步性降低发生时，引起QB-32054的周向入射分布偏离。\n设定规则：当QB-32054的周向入射分布偏离发生时，引起QB-32054的级间匹配告警。\n边界记录：仅观察到QB-32054的级间匹配告警，不足以确定可调静子连杆间隙增大已经发生；其他未列出的原因仍可能产生相同末端指示，该逆推不是充分条件。\n界面出现“静子角度同步性降低”字样仅登记为界面刷新批次380，不能据此建立因果或认定异常已发生。",
+    "reason": "",
+    "claims": [
+      {
+        "text": "设定规则：当QB-32054的可调静子连杆间隙增大发生时，引起QB-32054的静子角度同步性降低。",
+        "support_span_ids": [
+          "7bca7fc157bebdce22a0da6fba58ef53ca293379517f0f23811225ce61116ec4"
+        ],
+        "evidence_ids": [
+          "ac964215481bbb8f0bd0415011a3e3597edab27abb806018fa185ba8b773c130"
+        ],
+        "citations": [
+          {
+            "span_id": "7bca7fc157bebdce22a0da6fba58ef53ca293379517f0f23811225ce61116ec4",
+            "evidence_id": "ac964215481bbb8f0bd0415011a3e3597edab27abb806018fa185ba8b773c130",
+            "start": 0,
+            "end": 72,
+            "text_sha256": "133241d96957a7718eb6ddb5cee5778121476e0fe4409552b69732267cd78730",
+            "text_kind": "provided_display_text",
+            "support_quote": "本记录只陈述虚拟试验台QB-32054的一条设定规则：当QB-32054的可调静子连杆间隙增大发生时，引起QB-32054的静子角度同步性降低。",
+            "chunk_id": "ac964215481bbb8f0bd0415011a3e3597edab27abb806018fa185ba8b773c130"
+          }
+        ]
+      },
+      {
+        "text": "设定规则：当QB-32054的静子角度同步性降低发生时，引起QB-32054的周向入射分布偏离。",
+        "support_span_ids": [
+          "03fe0d5fbe6b6ba445bb706361b99f2314cb96c4bd1338e65dc2229686a32a34"
+        ],
+        "evidence_ids": [
+          "5a8ab56a1c398107f608f0ba62984b5224da9867451c7fd66167876dc841af02"
+        ],
+        "citations": [
+          {
+            "span_id": "03fe0d5fbe6b6ba445bb706361b99f2314cb96c4bd1338e65dc2229686a32a34",
+            "evidence_id": "5a8ab56a1c398107f608f0ba62984b5224da9867451c7fd66167876dc841af02",
+            "start": 0,
+            "end": 70,
+            "text_sha256": "a3c37a641652486430e47b238882120b65fb4f934154505f2fd5d7c8c1202ebf",
+            "text_kind": "provided_display_text",
+            "support_quote": "本记录只陈述虚拟试验台QB-32054的一条设定规则：当QB-32054的静子角度同步性降低发生时，引起QB-32054的周向入射分布偏离。",
+            "chunk_id": "5a8ab56a1c398107f608f0ba62984b5224da9867451c7fd66167876dc841af02"
+          }
+        ]
+      },
+      {
+        "text": "设定规则：当QB-32054的周向入射分布偏离发生时，引起QB-32054的级间匹配告警。",
+        "support_span_ids": [
+          "f188287a85ad6b7193bb4805ed1d9e0dbaee21a7eda75c43727f959298ebc6d8"
+        ],
+        "evidence_ids": [
+          "aa88d5f54620277230a8086a1fc05bb59d8afe0404862f93aed20b2379a01813"
+        ],
+        "citations": [
+          {
+            "span_id": "f188287a85ad6b7193bb4805ed1d9e0dbaee21a7eda75c43727f959298ebc6d8",
+            "evidence_id": "aa88d5f54620277230a8086a1fc05bb59d8afe0404862f93aed20b2379a01813",
+            "start": 0,
+            "end": 67,
+            "text_sha256": "ebd5720cdc6bac41673afe45936770da42eb8bc8f587b17a78cfbd0c932c263d",
+            "text_kind": "provided_display_text",
+            "support_quote": "本记录只陈述虚拟试验台QB-32054的一条设定规则：当QB-32054的周向入射分布偏离发生时，引起QB-32054的级间匹配告警。",
+            "chunk_id": "aa88d5f54620277230a8086a1fc05bb59d8afe0404862f93aed20b2379a01813"
+          }
+        ]
+      },
+      {
+        "text": "边界记录：仅观察到QB-32054的级间匹配告警，不足以确定可调静子连杆间隙增大已经发生；其他未列出的原因仍可能产生相同末端指示，该逆推不是充分条件。",
+        "support_span_ids": [
+          "c86f04974c6072b918c21f398bfcb4a6a3b262a0abf32fe93be0614e9898902b",
+          "881ee98e4f3f09a3f759818b25d9230c70a40149b28264296fb0f48d31dff3fa"
+        ],
+        "evidence_ids": [
+          "e2b4cb3503861d2b686b0a6b2e8efe3bbab805facdd67cb401be94aafbff6820"
+        ],
+        "citations": [
+          {
+            "span_id": "c86f04974c6072b918c21f398bfcb4a6a3b262a0abf32fe93be0614e9898902b",
+            "evidence_id": "e2b4cb3503861d2b686b0a6b2e8efe3bbab805facdd67cb401be94aafbff6820",
+            "start": 0,
+            "end": 95,
+            "text_sha256": "f58caeb03af041e7e0e7498472b2f4fd1599bdf643df91eac96db25fabf10450",
+            "text_kind": "provided_display_text",
+            "support_quote": "边界记录：本场景明确规定，虚拟试验台QB-32054仅观察到QB-32054的级间匹配告警，不足以确定QB-32054的可调静子连杆间隙增大已经发生；其他未列出的原因仍可能产生相同末端指示。",
+            "chunk_id": "e2b4cb3503861d2b686b0a6b2e8efe3bbab805facdd67cb401be94aafbff6820"
+          },
+          {
+            "span_id": "881ee98e4f3f09a3f759818b25d9230c70a40149b28264296fb0f48d31dff3fa",
+            "evidence_id": "e2b4cb3503861d2b686b0a6b2e8efe3bbab805facdd67cb401be94aafbff6820",
+            "start": 95,
+            "end": 105,
+            "text_sha256": "f58caeb03af041e7e0e7498472b2f4fd1599bdf643df91eac96db25fabf10450",
+            "text_kind": "provided_display_text",
+            "support_quote": "该逆推不是充分条件。",
+            "chunk_id": "e2b4cb3503861d2b686b0a6b2e8efe3bbab805facdd67cb401be94aafbff6820"
+          }
+        ]
+      },
+      {
+        "text": "界面出现“静子角度同步性降低”字样仅登记为界面刷新批次380，不能据此建立因果或认定异常已发生。",
+        "support_span_ids": [
+          "3127684b5d87f489d3c53bdcbd657a433c06516c16e0bf094c94fa92eb2eaf8a"
+        ],
+        "evidence_ids": [
+          "413c3e770b849fbb0b53134ee67489138fda40af97deb7b0e2617ca689b6391b"
+        ],
+        "citations": [
+          {
+            "span_id": "3127684b5d87f489d3c53bdcbd657a433c06516c16e0bf094c94fa92eb2eaf8a",
+            "evidence_id": "413c3e770b849fbb0b53134ee67489138fda40af97deb7b0e2617ca689b6391b",
+            "start": 0,
+            "end": 75,
+            "text_sha256": "8ce692b17f1f616d6c71b468746ed5855be60d84a840af3d2cd69b0b734b2bf0",
+            "text_kind": "provided_display_text",
+            "support_quote": "独立备忘6：虚拟试验台QB-32054的连杆显示页面含“静子角度同步性降低”字样，但本记录仅登记界面刷新批次380；不能据此建立因果或认定异常已发生。",
+            "chunk_id": "413c3e770b849fbb0b53134ee67489138fda40af97deb7b0e2617ca689b6391b"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "submission_id": "84019ca6ab2e19",
+    "question_id": "sq-12",
+    "group": "controlled",
+    "question": "QB-63476设定下，QB-63476的防冰分配支路受阻最终怎样演变到QB-63476的表面结冰监控触发？请补全机理路径。",
+    "answerable": true,
+    "required_points": [
+      "本记录只陈述虚拟试验台QB-63476的一条设定规则：当QB-63476的防冰分配支路受阻发生时，引起QB-63476的防冰热气分配减少。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-63476的一条设定规则：当QB-63476的防冰热气分配减少发生时，引起QB-63476的受保护表面温度降低。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-63476的一条设定规则：当QB-63476的受保护表面温度降低发生时，引起QB-63476的表面结冰监控触发。本条不陈述其他后续环节。"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "d5868e450b72d5b6364ad6ae93771a2d4f1ce2071048cafd22cf297cce71f4f9",
+        "start": 0,
+        "end": 81,
+        "anchor": "本记录只陈述虚拟试验台QB-63476的一条设定规则：当QB-63476的防冰分配支路受阻发生时，引起QB-63476的防冰热气分配减少。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "2dec9061ad9f451c06a2c7fe436fe75b56dde804dd78ac3ba9ca145922104d26",
+        "start": 0,
+        "end": 82,
+        "anchor": "本记录只陈述虚拟试验台QB-63476的一条设定规则：当QB-63476的防冰热气分配减少发生时，引起QB-63476的受保护表面温度降低。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "38492b404dd8ad0d6185774ac2d6b91000599dda3d470952b5af9021d67ed21e",
+        "start": 0,
+        "end": 82,
+        "anchor": "本记录只陈述虚拟试验台QB-63476的一条设定规则：当QB-63476的受保护表面温度降低发生时，引起QB-63476的表面结冰监控触发。本条不陈述其他后续环节。"
+      }
+    ],
+    "completed": true,
+    "status": "insufficient_evidence",
+    "insufficient_evidence": true,
+    "answer": "现有证据不足以完整回答该问题。",
+    "reason": "现有证据未通过回答支持性或问题覆盖检查，无法给出完整结论。",
+    "claims": []
+  },
+  {
+    "submission_id": "5f11dc059d1f2b",
+    "question_id": "cq-07",
+    "group": "real",
+    "question": "空气涡轮起动机可以由哪些气源供气？",
+    "answerable": true,
+    "required_points": [
+      "地面车",
+      "APU",
+      "另一台正在工作的机上发动机"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "536ad4238811bc30cfedc2cfbef37ca4294474fb154c4d2ec19eb57d1537e243",
+        "start": 13,
+        "end": 37,
+        "anchor": "由地面车、APU或另一台正在工作的机上发动机供气"
+      }
+    ],
+    "completed": true,
+    "status": "evidence_ready",
+    "insufficient_evidence": false,
+    "answer": "空气涡轮起动机由地面车、APU或另一台正在工作的机上发动机供气。",
+    "reason": "",
+    "claims": [
+      {
+        "text": "空气涡轮起动机由地面车、APU或另一台正在工作的机上发动机供气。",
+        "support_span_ids": [
+          "47c2012a4fa42767d8cf2c5f30c0276e239f062f24aea5c7b557516c5c9aa96e"
+        ],
+        "evidence_ids": [
+          "536ad4238811bc30cfedc2cfbef37ca4294474fb154c4d2ec19eb57d1537e243"
+        ],
+        "citations": [
+          {
+            "span_id": "47c2012a4fa42767d8cf2c5f30c0276e239f062f24aea5c7b557516c5c9aa96e",
+            "evidence_id": "536ad4238811bc30cfedc2cfbef37ca4294474fb154c4d2ec19eb57d1537e243",
+            "start": 6,
+            "end": 38,
+            "text_sha256": "e20df06fcba8b69117d9b10e3c33b915a7fdfa171fe60167dfce8e8d7f1c6a44",
+            "text_kind": "provided_display_text",
+            "support_quote": "空气涡轮起动机由地面车、APU或另一台正在工作的机上发动机供气。",
+            "chunk_id": "536ad4238811bc30cfedc2cfbef37ca4294474fb154c4d2ec19eb57d1537e243"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "submission_id": "9c96a244075736",
+    "question_id": "cq-09",
+    "group": "real",
+    "question": "能否仅凭这份通用指南，给出任意发动机空气涡轮起动机的准确切断转速rpm？",
+    "answerable": false,
+    "required_points": [
+      "无法确定任意型号具体转速",
+      "需要对应制造商说明而非编造rpm"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "3c43a973030b90380e11f5db1424645f22c3b1c14195006d135d820f40a1d8f1",
+        "start": 67,
+        "end": 79,
+        "anchor": "并不旨在替代制造商的说明"
+      }
+    ],
+    "completed": true,
+    "status": "insufficient_evidence",
+    "insufficient_evidence": true,
+    "answer": "资料中的故障排除程序仅应作为指南使用，并不旨在替代制造商的说明。\n图5-25中列出的故障排除程序适用于配备压力调节与关断组合阀的空气涡轮起动系统。\n资料提到起动机达到切断速度或切断转速时起动活门关闭，但未给出具体rpm数值。\n故障排除指南将“起动机切断开关设置不当”列为可能原因，补救措施为调整转子开关执行器，但未给出切断转速数值。\n现有证据不足以完整回答该问题。",
+    "reason": "所给证据中没有任何具体切断转速的rpm数值，且指南明确说明仅作参考、不替代制造商说明，因此无法仅凭这份通用指南给出任意发动机空气涡轮起动机的准确切断转速rpm。",
+    "claims": [
+      {
+        "text": "资料中的故障排除程序仅应作为指南使用，并不旨在替代制造商的说明。",
+        "support_span_ids": [
+          "0d7e25ae9321e4c6a05f70aec8513d4ebe607c650a23df9a9af6b5213765b1c5"
+        ],
+        "evidence_ids": [
+          "3c43a973030b90380e11f5db1424645f22c3b1c14195006d135d820f40a1d8f1"
+        ],
+        "citations": [
+          {
+            "span_id": "0d7e25ae9321e4c6a05f70aec8513d4ebe607c650a23df9a9af6b5213765b1c5",
+            "evidence_id": "3c43a973030b90380e11f5db1424645f22c3b1c14195006d135d820f40a1d8f1",
+            "start": 54,
+            "end": 80,
+            "text_sha256": "c8301d169f0c975b22a00db1bc94c110385b7188ce4519560d787aef97422c1f",
+            "text_kind": "provided_display_text",
+            "support_quote": "这些程序仅应作为指南使用，并不旨在替代制造商的说明。",
+            "chunk_id": "3c43a973030b90380e11f5db1424645f22c3b1c14195006d135d820f40a1d8f1"
+          }
+        ]
+      },
+      {
+        "text": "图5-25中列出的故障排除程序适用于配备压力调节与关断组合阀的空气涡轮起动系统。",
+        "support_span_ids": [
+          "3159bbffff3e408d4269b4399d69be7c025e121739859475cbe27e54ea4e2583"
+        ],
+        "evidence_ids": [
+          "3c43a973030b90380e11f5db1424645f22c3b1c14195006d135d820f40a1d8f1"
+        ],
+        "citations": [
+          {
+            "span_id": "3159bbffff3e408d4269b4399d69be7c025e121739859475cbe27e54ea4e2583",
+            "evidence_id": "3c43a973030b90380e11f5db1424645f22c3b1c14195006d135d820f40a1d8f1",
+            "start": 14,
+            "end": 54,
+            "text_sha256": "c8301d169f0c975b22a00db1bc94c110385b7188ce4519560d787aef97422c1f",
+            "text_kind": "provided_display_text",
+            "support_quote": "图5-25中列出的故障排除程序适用于配备压力调节与关断组合阀的空气涡轮起动系统。",
+            "chunk_id": "3c43a973030b90380e11f5db1424645f22c3b1c14195006d135d820f40a1d8f1"
+          }
+        ]
+      },
+      {
+        "text": "资料提到起动机达到切断速度或切断转速时起动活门关闭，但未给出具体rpm数值。",
+        "support_span_ids": [
+          "8d73abca08faed021c9870320b6a0ead79fb4729fb72b5d46b559402f6b73024",
+          "e4bbdce1bd4006571104170c599295580876679d27c6e7ca27b1491489b99575"
+        ],
+        "evidence_ids": [
+          "536ad4238811bc30cfedc2cfbef37ca4294474fb154c4d2ec19eb57d1537e243",
+          "c9621e29928661510e18b22c3199102741b63a2f2d8a86a8db77bb9af35ab4ed"
+        ],
+        "citations": [
+          {
+            "span_id": "8d73abca08faed021c9870320b6a0ead79fb4729fb72b5d46b559402f6b73024",
+            "evidence_id": "536ad4238811bc30cfedc2cfbef37ca4294474fb154c4d2ec19eb57d1537e243",
+            "start": 39,
+            "end": 49,
+            "text_sha256": "e20df06fcba8b69117d9b10e3c33b915a7fdfa171fe60167dfce8e8d7f1c6a44",
+            "text_kind": "provided_display_text",
+            "support_quote": "起动机达到切断速度。",
+            "chunk_id": "536ad4238811bc30cfedc2cfbef37ca4294474fb154c4d2ec19eb57d1537e243"
+          },
+          {
+            "span_id": "e4bbdce1bd4006571104170c599295580876679d27c6e7ca27b1491489b99575",
+            "evidence_id": "c9621e29928661510e18b22c3199102741b63a2f2d8a86a8db77bb9af35ab4ed",
+            "start": 139,
+            "end": 158,
+            "text_sha256": "f570b20b2e1991468e26219a1000d7ebec842ee6cfba53a7955c4d16b12a4ddf",
+            "text_kind": "provided_display_text",
+            "support_quote": "当达到起动机切断转速时，起动活门关闭。",
+            "chunk_id": "c9621e29928661510e18b22c3199102741b63a2f2d8a86a8db77bb9af35ab4ed"
+          }
+        ]
+      },
+      {
+        "text": "故障排除指南将“起动机切断开关设置不当”列为可能原因，补救措施为调整转子开关执行器，但未给出切断转速数值。",
+        "support_span_ids": [
+          "6e2e4f338fbcb60e94ccbc038ebfd916ecf81cd4e2fe41f638d61c7caaf22740",
+          "6a86ba71edf546098e30cede07ca578c1a697b2832663dc064fd639acb6155b1"
+        ],
+        "evidence_ids": [
+          "03d4a0a876e2acc8bf15dab1cbcbbfe969bc9125e24b3bd61c6c44b64deac8ad"
+        ],
+        "citations": [
+          {
+            "span_id": "6e2e4f338fbcb60e94ccbc038ebfd916ecf81cd4e2fe41f638d61c7caaf22740",
+            "evidence_id": "03d4a0a876e2acc8bf15dab1cbcbbfe969bc9125e24b3bd61c6c44b64deac8ad",
+            "start": 288,
+            "end": 302,
+            "text_sha256": "bd0699cd553fb9c0bfef88ef251f937ed658e02fd2dca19914997e43fc5ba36c",
+            "text_kind": "provided_display_text",
+            "support_quote": "• 起动机切断开关设置不当。",
+            "chunk_id": "03d4a0a876e2acc8bf15dab1cbcbbfe969bc9125e24b3bd61c6c44b64deac8ad"
+          },
+          {
+            "span_id": "6a86ba71edf546098e30cede07ca578c1a697b2832663dc064fd639acb6155b1",
+            "evidence_id": "03d4a0a876e2acc8bf15dab1cbcbbfe969bc9125e24b3bd61c6c44b64deac8ad",
+            "start": 378,
+            "end": 390,
+            "text_sha256": "bd0699cd553fb9c0bfef88ef251f937ed658e02fd2dca19914997e43fc5ba36c",
+            "text_kind": "provided_display_text",
+            "support_quote": "• 调整转子开关执行器。",
+            "chunk_id": "03d4a0a876e2acc8bf15dab1cbcbbfe969bc9125e24b3bd61c6c44b64deac8ad"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "submission_id": "5bd1604aa69ed2",
+    "question_id": "sq-08",
+    "group": "controlled",
+    "question": "QB-65045设定下，QB-65045的滑油冷却器散热面污染最终怎样演变到QB-65045的油温监控告警？请补全机理路径。",
+    "answerable": true,
+    "required_points": [
+      "本记录只陈述虚拟试验台QB-65045的一条设定规则：当QB-65045的滑油冷却器散热面污染发生时，引起QB-65045的滑油散热能力降低。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-65045的一条设定规则：当QB-65045的滑油散热能力降低发生时，引起QB-65045的供油温度升高。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-65045的一条设定规则：当QB-65045的供油温度升高发生时，引起QB-65045的油温监控告警。本条不陈述其他后续环节。"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "804408c3e3bd68cf6cd6ed221465fd2b12b7d0aa2d1d177c1942e3d04fefb804",
+        "start": 0,
+        "end": 83,
+        "anchor": "本记录只陈述虚拟试验台QB-65045的一条设定规则：当QB-65045的滑油冷却器散热面污染发生时，引起QB-65045的滑油散热能力降低。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "8d614a94ae7cd9f1ad5a95fec5175bc870446075ccd87b6a3fbf650d7243a141",
+        "start": 0,
+        "end": 79,
+        "anchor": "本记录只陈述虚拟试验台QB-65045的一条设定规则：当QB-65045的滑油散热能力降低发生时，引起QB-65045的供油温度升高。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "8e0ef915f66a3debc303f21c7b833b3878afee65e1c475f6ed23d345177e181e",
+        "start": 0,
+        "end": 77,
+        "anchor": "本记录只陈述虚拟试验台QB-65045的一条设定规则：当QB-65045的供油温度升高发生时，引起QB-65045的油温监控告警。本条不陈述其他后续环节。"
+      }
+    ],
+    "completed": true,
+    "status": "evidence_ready",
+    "insufficient_evidence": false,
+    "answer": "当QB-65045的滑油冷却器散热面污染发生时，引起QB-65045的滑油散热能力降低。\n当QB-65045的滑油散热能力降低发生时，引起QB-65045的供油温度升高。\n当QB-65045的供油温度升高发生时，引起QB-65045的油温监控告警。\n仅观察到QB-65045的油温监控告警，不足以确定QB-65045的滑油冷却器散热面污染已经发生；其他未列出的原因仍可能产生相同末端指示。\n该逆推不是充分条件。",
+    "reason": "",
+    "claims": [
+      {
+        "text": "当QB-65045的滑油冷却器散热面污染发生时，引起QB-65045的滑油散热能力降低。",
+        "support_span_ids": [
+          "c6c5ee6083a46f30df698808df1b8b8cd10951ac3bd24ebceb7e3845be9628cd"
+        ],
+        "evidence_ids": [
+          "804408c3e3bd68cf6cd6ed221465fd2b12b7d0aa2d1d177c1942e3d04fefb804"
+        ],
+        "citations": [
+          {
+            "span_id": "c6c5ee6083a46f30df698808df1b8b8cd10951ac3bd24ebceb7e3845be9628cd",
+            "evidence_id": "804408c3e3bd68cf6cd6ed221465fd2b12b7d0aa2d1d177c1942e3d04fefb804",
+            "start": 0,
+            "end": 71,
+            "text_sha256": "38119274fe0a519ac14aea7ccdbaa16c90a5034c9f24caa56355ee483471fe22",
+            "text_kind": "provided_display_text",
+            "support_quote": "本记录只陈述虚拟试验台QB-65045的一条设定规则：当QB-65045的滑油冷却器散热面污染发生时，引起QB-65045的滑油散热能力降低。",
+            "chunk_id": "804408c3e3bd68cf6cd6ed221465fd2b12b7d0aa2d1d177c1942e3d04fefb804"
+          }
+        ]
+      },
+      {
+        "text": "当QB-65045的滑油散热能力降低发生时，引起QB-65045的供油温度升高。",
+        "support_span_ids": [
+          "b46cb5827656f528fcd4afd4726b41c50a9eec2dda37c3d8a0636d06aa7a1fb5"
+        ],
+        "evidence_ids": [
+          "8d614a94ae7cd9f1ad5a95fec5175bc870446075ccd87b6a3fbf650d7243a141"
+        ],
+        "citations": [
+          {
+            "span_id": "b46cb5827656f528fcd4afd4726b41c50a9eec2dda37c3d8a0636d06aa7a1fb5",
+            "evidence_id": "8d614a94ae7cd9f1ad5a95fec5175bc870446075ccd87b6a3fbf650d7243a141",
+            "start": 0,
+            "end": 67,
+            "text_sha256": "d7cc70c9f2e236105b718422af2190b33818032bcbb2d1fd5260af8c308bef27",
+            "text_kind": "provided_display_text",
+            "support_quote": "本记录只陈述虚拟试验台QB-65045的一条设定规则：当QB-65045的滑油散热能力降低发生时，引起QB-65045的供油温度升高。",
+            "chunk_id": "8d614a94ae7cd9f1ad5a95fec5175bc870446075ccd87b6a3fbf650d7243a141"
+          }
+        ]
+      },
+      {
+        "text": "当QB-65045的供油温度升高发生时，引起QB-65045的油温监控告警。",
+        "support_span_ids": [
+          "5fdf75a846bf08f0271d425f8668b8a90220469d357395f25c43e0a0ca30c309"
+        ],
+        "evidence_ids": [
+          "8e0ef915f66a3debc303f21c7b833b3878afee65e1c475f6ed23d345177e181e"
+        ],
+        "citations": [
+          {
+            "span_id": "5fdf75a846bf08f0271d425f8668b8a90220469d357395f25c43e0a0ca30c309",
+            "evidence_id": "8e0ef915f66a3debc303f21c7b833b3878afee65e1c475f6ed23d345177e181e",
+            "start": 0,
+            "end": 65,
+            "text_sha256": "6406fca3f106046175947fe4a30e7c32e142a7f1c8654a7a97aecbfb9c12fa77",
+            "text_kind": "provided_display_text",
+            "support_quote": "本记录只陈述虚拟试验台QB-65045的一条设定规则：当QB-65045的供油温度升高发生时，引起QB-65045的油温监控告警。",
+            "chunk_id": "8e0ef915f66a3debc303f21c7b833b3878afee65e1c475f6ed23d345177e181e"
+          }
+        ]
+      },
+      {
+        "text": "仅观察到QB-65045的油温监控告警，不足以确定QB-65045的滑油冷却器散热面污染已经发生；其他未列出的原因仍可能产生相同末端指示。",
+        "support_span_ids": [
+          "abd15f3a390dc3a3af209595d971d19ca3b69bc5529722a1720f04f999dcff25"
+        ],
+        "evidence_ids": [
+          "433288203916ab9d55f784cede70b4a2bfc0ef379c4262a164a12c6f1136d636"
+        ],
+        "citations": [
+          {
+            "span_id": "abd15f3a390dc3a3af209595d971d19ca3b69bc5529722a1720f04f999dcff25",
+            "evidence_id": "433288203916ab9d55f784cede70b4a2bfc0ef379c4262a164a12c6f1136d636",
+            "start": 0,
+            "end": 95,
+            "text_sha256": "fa3a4072f3f9b94738bc4ab57485b9633493800e142c7c7c28283258e38a25de",
+            "text_kind": "provided_display_text",
+            "support_quote": "边界记录：本场景明确规定，虚拟试验台QB-65045仅观察到QB-65045的油温监控告警，不足以确定QB-65045的滑油冷却器散热面污染已经发生；其他未列出的原因仍可能产生相同末端指示。",
+            "chunk_id": "433288203916ab9d55f784cede70b4a2bfc0ef379c4262a164a12c6f1136d636"
+          }
+        ]
+      },
+      {
+        "text": "该逆推不是充分条件。",
+        "support_span_ids": [
+          "0b46c1198970fa480286e1c821a88c7803f561de6899bfbbb5012edd88a4e1a4"
+        ],
+        "evidence_ids": [
+          "433288203916ab9d55f784cede70b4a2bfc0ef379c4262a164a12c6f1136d636"
+        ],
+        "citations": [
+          {
+            "span_id": "0b46c1198970fa480286e1c821a88c7803f561de6899bfbbb5012edd88a4e1a4",
+            "evidence_id": "433288203916ab9d55f784cede70b4a2bfc0ef379c4262a164a12c6f1136d636",
+            "start": 95,
+            "end": 105,
+            "text_sha256": "fa3a4072f3f9b94738bc4ab57485b9633493800e142c7c7c28283258e38a25de",
+            "text_kind": "provided_display_text",
+            "support_quote": "该逆推不是充分条件。",
+            "chunk_id": "433288203916ab9d55f784cede70b4a2bfc0ef379c4262a164a12c6f1136d636"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "submission_id": "3a94ba52c445a9",
+    "question_id": "cq-12",
+    "group": "real",
+    "question": "这份指导资料能否直接给出所有发动机统一适用的允许转子不平衡量具体数值？",
+    "answerable": false,
+    "required_points": [
+      "不能给出所有发动机统一数值",
+      "可接受限值通常在生产规范或发动机手册中确定"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "777f4e92735ee3734eb129ed847698971a4b1a5ba124368f724f6b1529ace56e",
+        "start": 117,
+        "end": 146,
+        "anchor": "转子不平衡的可接受限值通常在生产规范和/或发动机手册中确定"
+      }
+    ],
+    "completed": true,
+    "status": "insufficient_evidence",
+    "insufficient_evidence": true,
+    "answer": "现有证据不足以完整回答该问题。",
+    "reason": "现有证据未通过回答支持性或问题覆盖检查，无法给出完整结论。",
+    "claims": []
+  },
+  {
+    "submission_id": "ac5a38d2ba5db0",
+    "question_id": "cq-06",
+    "group": "real",
+    "question": "仅根据这份资料，能否给出某一未指定发动机燃烧室衬筒裂纹允许长度的具体毫米值？",
+    "answerable": false,
+    "required_points": [
+      "不能确定具体毫米值",
+      "需要相应发动机制造商规定及具体对象"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44",
+        "start": 95,
+        "end": 115,
+        "anchor": "应遵循相应发动机制造商大修说明书中的程序"
+      }
+    ],
+    "completed": true,
+    "status": "insufficient_evidence",
+    "insufficient_evidence": true,
+    "answer": "资料要求前衬筒中从气孔发出的裂纹可接受的前提是不超过允许极限，但未给出该极限的具体毫米值。\n资料要求从互连器和火花点火器凸台延伸出的径向裂纹可接受的前提是不超过允许极限，且不分叉或与其他裂纹相连，但未给出具体毫米值。\n资料指出可见裂纹长度可能从十六分之一英寸向上不等，但这是针对涡轮叶片应力断裂裂纹的描述，并非燃烧室衬筒裂纹的允许长度。\n资料说明修理燃烧室衬筒应遵循相应发动机制造商大修说明书中的程序，未在本文给出具体尺寸限值。\n现有证据不足以完整回答该问题。",
+    "reason": "所给资料未提供任何燃烧室衬筒裂纹允许长度的具体毫米数值；仅提及“允许极限”但未量化，且十六分之一英寸的描述针对涡轮叶片而非衬筒。",
+    "claims": [
+      {
+        "text": "资料要求前衬筒中从气孔发出的裂纹可接受的前提是不超过允许极限，但未给出该极限的具体毫米值。",
+        "support_span_ids": [
+          "d098ab33b572606cad4c70842f51ecb1c2bd1593a58ba5980c374e6f04eb0d59"
+        ],
+        "evidence_ids": [
+          "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44"
+        ],
+        "citations": [
+          {
+            "span_id": "d098ab33b572606cad4c70842f51ecb1c2bd1593a58ba5980c374e6f04eb0d59",
+            "evidence_id": "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44",
+            "start": 277,
+            "end": 308,
+            "text_sha256": "89f0056f4e42d2c940c8b086a5eb08ef185b5c07f62e04f08ee74494be859867",
+            "text_kind": "provided_display_text",
+            "support_quote": "前衬筒中从气孔发出的裂纹是可接受的，前提是它们不超过允许极限。",
+            "chunk_id": "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44"
+          }
+        ]
+      },
+      {
+        "text": "资料要求从互连器和火花点火器凸台延伸出的径向裂纹可接受的前提是不超过允许极限，且不分叉或与其他裂纹相连，但未给出具体毫米值。",
+        "support_span_ids": [
+          "0fd7cdc8b9732ee87913686937c3a498e9c0cd91a407715f3d10f652eacedbcf"
+        ],
+        "evidence_ids": [
+          "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44"
+        ],
+        "citations": [
+          {
+            "span_id": "0fd7cdc8b9732ee87913686937c3a498e9c0cd91a407715f3d10f652eacedbcf",
+            "evidence_id": "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44",
+            "start": 365,
+            "end": 422,
+            "text_sha256": "89f0056f4e42d2c940c8b086a5eb08ef185b5c07f62e04f08ee74494be859867",
+            "text_kind": "provided_display_text",
+            "support_quote": "从互连器和火花点火器凸台延伸出的径向裂纹是可接受的，前提是它们不超过允许极限，并且此类裂纹不分叉或与其他裂纹相连。",
+            "chunk_id": "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44"
+          }
+        ]
+      },
+      {
+        "text": "资料指出可见裂纹长度可能从十六分之一英寸向上不等，但这是针对涡轮叶片应力断裂裂纹的描述，并非燃烧室衬筒裂纹的允许长度。",
+        "support_span_ids": [
+          "928eabbb4fd9ac78395b1e434afc770eea07fb021a72274e9d5277b99c8dc86f",
+          "d1b8e461664a20970b67cb439782e78e6e44efc154ef1c0817addb0f097d73fc"
+        ],
+        "evidence_ids": [
+          "a084be163eb497f6682949629388a96047c35eae9f896641ed90b9e117bdcdc7"
+        ],
+        "citations": [
+          {
+            "span_id": "928eabbb4fd9ac78395b1e434afc770eea07fb021a72274e9d5277b99c8dc86f",
+            "evidence_id": "a084be163eb497f6682949629388a96047c35eae9f896641ed90b9e117bdcdc7",
+            "start": 103,
+            "end": 147,
+            "text_sha256": "7ddfcb6b4c38da8f37303a1f2977e9b7b7e54dfe507d0c2792f8aa50532fec50",
+            "text_kind": "provided_display_text",
+            "support_quote": "应力断裂裂纹通常表现为在前缘或后缘上或横跨前缘或后缘的微小发丝状裂纹，与边缘长度成直角。",
+            "chunk_id": "a084be163eb497f6682949629388a96047c35eae9f896641ed90b9e117bdcdc7"
+          },
+          {
+            "span_id": "d1b8e461664a20970b67cb439782e78e6e44efc154ef1c0817addb0f097d73fc",
+            "evidence_id": "a084be163eb497f6682949629388a96047c35eae9f896641ed90b9e117bdcdc7",
+            "start": 148,
+            "end": 170,
+            "text_sha256": "7ddfcb6b4c38da8f37303a1f2977e9b7b7e54dfe507d0c2792f8aa50532fec50",
+            "text_kind": "provided_display_text",
+            "support_quote": "可见裂纹的长度可能从十六分之一英寸向上不等。",
+            "chunk_id": "a084be163eb497f6682949629388a96047c35eae9f896641ed90b9e117bdcdc7"
+          }
+        ]
+      },
+      {
+        "text": "资料说明修理燃烧室衬筒应遵循相应发动机制造商大修说明书中的程序，未在本文给出具体尺寸限值。",
+        "support_span_ids": [
+          "de7f87fcc752a9d005ca9119651a266b2dfc71a28abcafc8bec01dd0917329bd"
+        ],
+        "evidence_ids": [
+          "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44"
+        ],
+        "citations": [
+          {
+            "span_id": "de7f87fcc752a9d005ca9119651a266b2dfc71a28abcafc8bec01dd0917329bd",
+            "evidence_id": "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44",
+            "start": 86,
+            "end": 116,
+            "text_sha256": "89f0056f4e42d2c940c8b086a5eb08ef185b5c07f62e04f08ee74494be859867",
+            "text_kind": "provided_display_text",
+            "support_quote": "修理燃烧室衬筒时，应遵循相应发动机制造商大修说明书中的程序。",
+            "chunk_id": "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "submission_id": "0298fb71f5b021",
+    "question_id": "cq-10",
+    "group": "real",
+    "question": "转子质量不平衡与转子质心、旋转轴线之间有什么关系，会产生哪种频率特征的振动？",
+    "answerable": true,
+    "required_points": [
+      "质心相对于旋转轴线偏心",
+      "在转子转速频率下的同步振动"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "777f4e92735ee3734eb129ed847698971a4b1a5ba124368f724f6b1529ace56e",
+        "start": 19,
+        "end": 39,
+        "anchor": "是由于转子质心相对于其旋转轴线的偏心所致"
+      },
+      {
+        "chunk_id": "777f4e92735ee3734eb129ed847698971a4b1a5ba124368f724f6b1529ace56e",
+        "start": 102,
+        "end": 115,
+        "anchor": "在转子转速频率下的同步振动"
+      }
+    ],
+    "completed": true,
+    "status": "evidence_ready",
+    "insufficient_evidence": false,
+    "answer": "转子质量不平衡（通常称为不平衡）是由于转子质心相对于其旋转轴线的偏心所致。\n旋转质量不平衡会导致在转子转速频率下的同步振动。\n这种不平衡通常是转子制造和装配的结果，尽管不可避免，但可以通过补偿技术减少。\n需要限制转子不平衡，因为旋转质量不平衡会导致在转子转速频率下的同步振动。",
+    "reason": "",
+    "claims": [
+      {
+        "text": "转子质量不平衡（通常称为不平衡）是由于转子质心相对于其旋转轴线的偏心所致。",
+        "support_span_ids": [
+          "f5944a43ccbd99ef39374d673111b2d2ac91a30ef8b58c67ae0adb265e3cadb8"
+        ],
+        "evidence_ids": [
+          "777f4e92735ee3734eb129ed847698971a4b1a5ba124368f724f6b1529ace56e"
+        ],
+        "citations": [
+          {
+            "span_id": "f5944a43ccbd99ef39374d673111b2d2ac91a30ef8b58c67ae0adb265e3cadb8",
+            "evidence_id": "777f4e92735ee3734eb129ed847698971a4b1a5ba124368f724f6b1529ace56e",
+            "start": 3,
+            "end": 40,
+            "text_sha256": "0dfaf02295cd65d9cc64224c6839d4faee17bea442f21f8605b25711c387930b",
+            "text_kind": "provided_display_text",
+            "support_quote": "转子质量不平衡，通常称为不平衡，是由于转子质心相对于其旋转轴线的偏心所致。",
+            "chunk_id": "777f4e92735ee3734eb129ed847698971a4b1a5ba124368f724f6b1529ace56e"
+          }
+        ]
+      },
+      {
+        "text": "旋转质量不平衡会导致在转子转速频率下的同步振动。",
+        "support_span_ids": [
+          "655a0813ba9c63a91507afe9c063c3c17789071f333e3175cf4b03fe7caa5a91"
+        ],
+        "evidence_ids": [
+          "777f4e92735ee3734eb129ed847698971a4b1a5ba124368f724f6b1529ace56e"
+        ],
+        "citations": [
+          {
+            "span_id": "655a0813ba9c63a91507afe9c063c3c17789071f333e3175cf4b03fe7caa5a91",
+            "evidence_id": "777f4e92735ee3734eb129ed847698971a4b1a5ba124368f724f6b1529ace56e",
+            "start": 80,
+            "end": 116,
+            "text_sha256": "0dfaf02295cd65d9cc64224c6839d4faee17bea442f21f8605b25711c387930b",
+            "text_kind": "provided_display_text",
+            "support_quote": "需要限制转子不平衡，因为旋转质量不平衡会导致在转子转速频率下的同步振动。",
+            "chunk_id": "777f4e92735ee3734eb129ed847698971a4b1a5ba124368f724f6b1529ace56e"
+          }
+        ]
+      },
+      {
+        "text": "这种不平衡通常是转子制造和装配的结果，尽管不可避免，但可以通过补偿技术减少。",
+        "support_span_ids": [
+          "3ea108eebbfe90177a9ff17b7b067bb754bae1030ac863ae2556aceb5738ccc4"
+        ],
+        "evidence_ids": [
+          "777f4e92735ee3734eb129ed847698971a4b1a5ba124368f724f6b1529ace56e"
+        ],
+        "citations": [
+          {
+            "span_id": "3ea108eebbfe90177a9ff17b7b067bb754bae1030ac863ae2556aceb5738ccc4",
+            "evidence_id": "777f4e92735ee3734eb129ed847698971a4b1a5ba124368f724f6b1529ace56e",
+            "start": 41,
+            "end": 79,
+            "text_sha256": "0dfaf02295cd65d9cc64224c6839d4faee17bea442f21f8605b25711c387930b",
+            "text_kind": "provided_display_text",
+            "support_quote": "这种不平衡通常是转子制造和装配的结果，尽管不可避免，但可以通过补偿技术减少。",
+            "chunk_id": "777f4e92735ee3734eb129ed847698971a4b1a5ba124368f724f6b1529ace56e"
+          }
+        ]
+      },
+      {
+        "text": "需要限制转子不平衡，因为旋转质量不平衡会导致在转子转速频率下的同步振动。",
+        "support_span_ids": [
+          "655a0813ba9c63a91507afe9c063c3c17789071f333e3175cf4b03fe7caa5a91"
+        ],
+        "evidence_ids": [
+          "777f4e92735ee3734eb129ed847698971a4b1a5ba124368f724f6b1529ace56e"
+        ],
+        "citations": [
+          {
+            "span_id": "655a0813ba9c63a91507afe9c063c3c17789071f333e3175cf4b03fe7caa5a91",
+            "evidence_id": "777f4e92735ee3734eb129ed847698971a4b1a5ba124368f724f6b1529ace56e",
+            "start": 80,
+            "end": 116,
+            "text_sha256": "0dfaf02295cd65d9cc64224c6839d4faee17bea442f21f8605b25711c387930b",
+            "text_kind": "provided_display_text",
+            "support_quote": "需要限制转子不平衡，因为旋转质量不平衡会导致在转子转速频率下的同步振动。",
+            "chunk_id": "777f4e92735ee3734eb129ed847698971a4b1a5ba124368f724f6b1529ace56e"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "submission_id": "02abed21b00c98",
+    "question_id": "sq-09",
+    "group": "controlled",
+    "question": "QB-28700设定下，QB-28700的回油管路局部阻塞最终怎样演变到QB-28700的腔压监控异常？请补全机理路径。",
+    "answerable": true,
+    "required_points": [
+      "本记录只陈述虚拟试验台QB-28700的一条设定规则：当QB-28700的回油管路局部阻塞发生时，引起QB-28700的回油排出能力降低。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-28700的一条设定规则：当QB-28700的回油排出能力降低发生时，引起QB-28700的轴承腔油量积聚。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-28700的一条设定规则：当QB-28700的轴承腔油量积聚发生时，引起QB-28700的腔压监控异常。本条不陈述其他后续环节。"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "a41db7d9c8e182e41d96d7aaac60df89c056114d16779d03fd7b5062cd2cb3ff",
+        "start": 0,
+        "end": 81,
+        "anchor": "本记录只陈述虚拟试验台QB-28700的一条设定规则：当QB-28700的回油管路局部阻塞发生时，引起QB-28700的回油排出能力降低。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "c7251e8b2056a1cf6a1d7e98458524e6c1030cd4e33c651dec087908c4af8b88",
+        "start": 0,
+        "end": 80,
+        "anchor": "本记录只陈述虚拟试验台QB-28700的一条设定规则：当QB-28700的回油排出能力降低发生时，引起QB-28700的轴承腔油量积聚。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "dd703779ac0000784ebfa464a60b4f1fbdcbb5e769297aebbd0d2d0ee5e704c7",
+        "start": 0,
+        "end": 78,
+        "anchor": "本记录只陈述虚拟试验台QB-28700的一条设定规则：当QB-28700的轴承腔油量积聚发生时，引起QB-28700的腔压监控异常。本条不陈述其他后续环节。"
+      }
+    ],
+    "completed": true,
+    "status": "evidence_ready",
+    "insufficient_evidence": false,
+    "answer": "当QB-28700的回油管路局部阻塞发生时，引起QB-28700的回油排出能力降低。\n当QB-28700的回油排出能力降低发生时，引起QB-28700的轴承腔油量积聚。\n当QB-28700的轴承腔油量积聚发生时，引起QB-28700的腔压监控异常。\n仅观察到QB-28700的腔压监控异常，不足以确定QB-28700的回油管路局部阻塞已经发生；其他未列出的原因仍可能产生相同末端指示。\n该逆推不是充分条件。",
+    "reason": "",
+    "claims": [
+      {
+        "text": "当QB-28700的回油管路局部阻塞发生时，引起QB-28700的回油排出能力降低。",
+        "support_span_ids": [
+          "de4ba5dc27dcb08d6857ccbd49d6f8da8d49108febceaefac5c21d3c85ae8dfb"
+        ],
+        "evidence_ids": [
+          "a41db7d9c8e182e41d96d7aaac60df89c056114d16779d03fd7b5062cd2cb3ff"
+        ],
+        "citations": [
+          {
+            "span_id": "de4ba5dc27dcb08d6857ccbd49d6f8da8d49108febceaefac5c21d3c85ae8dfb",
+            "evidence_id": "a41db7d9c8e182e41d96d7aaac60df89c056114d16779d03fd7b5062cd2cb3ff",
+            "start": 0,
+            "end": 69,
+            "text_sha256": "fb6dafed253d79c506f46817c42e532e08d9aee045597bed51c56126711164e9",
+            "text_kind": "provided_display_text",
+            "support_quote": "本记录只陈述虚拟试验台QB-28700的一条设定规则：当QB-28700的回油管路局部阻塞发生时，引起QB-28700的回油排出能力降低。",
+            "chunk_id": "a41db7d9c8e182e41d96d7aaac60df89c056114d16779d03fd7b5062cd2cb3ff"
+          }
+        ]
+      },
+      {
+        "text": "当QB-28700的回油排出能力降低发生时，引起QB-28700的轴承腔油量积聚。",
+        "support_span_ids": [
+          "5214ecea1b9ef5762da171797ee39661169365048b462ae8d2373923fbfaf804"
+        ],
+        "evidence_ids": [
+          "c7251e8b2056a1cf6a1d7e98458524e6c1030cd4e33c651dec087908c4af8b88"
+        ],
+        "citations": [
+          {
+            "span_id": "5214ecea1b9ef5762da171797ee39661169365048b462ae8d2373923fbfaf804",
+            "evidence_id": "c7251e8b2056a1cf6a1d7e98458524e6c1030cd4e33c651dec087908c4af8b88",
+            "start": 0,
+            "end": 68,
+            "text_sha256": "b0328b534e1b69d31f06f39ba23920114bb51369867ee76380b4880511b09caa",
+            "text_kind": "provided_display_text",
+            "support_quote": "本记录只陈述虚拟试验台QB-28700的一条设定规则：当QB-28700的回油排出能力降低发生时，引起QB-28700的轴承腔油量积聚。",
+            "chunk_id": "c7251e8b2056a1cf6a1d7e98458524e6c1030cd4e33c651dec087908c4af8b88"
+          }
+        ]
+      },
+      {
+        "text": "当QB-28700的轴承腔油量积聚发生时，引起QB-28700的腔压监控异常。",
+        "support_span_ids": [
+          "6c4e6b45aeac30c81d5e590924f26eec0adcc26047415bc38ec0ebad2b813739"
+        ],
+        "evidence_ids": [
+          "dd703779ac0000784ebfa464a60b4f1fbdcbb5e769297aebbd0d2d0ee5e704c7"
+        ],
+        "citations": [
+          {
+            "span_id": "6c4e6b45aeac30c81d5e590924f26eec0adcc26047415bc38ec0ebad2b813739",
+            "evidence_id": "dd703779ac0000784ebfa464a60b4f1fbdcbb5e769297aebbd0d2d0ee5e704c7",
+            "start": 0,
+            "end": 66,
+            "text_sha256": "040034704a0ba2bd15fe69221251dad37947366427f1517d2b06926e20c06ce9",
+            "text_kind": "provided_display_text",
+            "support_quote": "本记录只陈述虚拟试验台QB-28700的一条设定规则：当QB-28700的轴承腔油量积聚发生时，引起QB-28700的腔压监控异常。",
+            "chunk_id": "dd703779ac0000784ebfa464a60b4f1fbdcbb5e769297aebbd0d2d0ee5e704c7"
+          }
+        ]
+      },
+      {
+        "text": "仅观察到QB-28700的腔压监控异常，不足以确定QB-28700的回油管路局部阻塞已经发生；其他未列出的原因仍可能产生相同末端指示。",
+        "support_span_ids": [
+          "6170cc52ae0743e0d7c33487cd4478b41a301c407e82292aecb92751a0d2d063"
+        ],
+        "evidence_ids": [
+          "f920d41b8bf63262d726d9a7fa0acb0806fc7f0418fb7eebf5f265516e2e7b55"
+        ],
+        "citations": [
+          {
+            "span_id": "6170cc52ae0743e0d7c33487cd4478b41a301c407e82292aecb92751a0d2d063",
+            "evidence_id": "f920d41b8bf63262d726d9a7fa0acb0806fc7f0418fb7eebf5f265516e2e7b55",
+            "start": 0,
+            "end": 93,
+            "text_sha256": "3f37478f5c5dfb0ec0e7cfded3e9c26964dd057b595337a560241339ed07ae91",
+            "text_kind": "provided_display_text",
+            "support_quote": "边界记录：本场景明确规定，虚拟试验台QB-28700仅观察到QB-28700的腔压监控异常，不足以确定QB-28700的回油管路局部阻塞已经发生；其他未列出的原因仍可能产生相同末端指示。",
+            "chunk_id": "f920d41b8bf63262d726d9a7fa0acb0806fc7f0418fb7eebf5f265516e2e7b55"
+          }
+        ]
+      },
+      {
+        "text": "该逆推不是充分条件。",
+        "support_span_ids": [
+          "f50d9dbb27bdd320695789a3d284be39ff2295f5d3961c76cc081a3fc71990ae"
+        ],
+        "evidence_ids": [
+          "f920d41b8bf63262d726d9a7fa0acb0806fc7f0418fb7eebf5f265516e2e7b55"
+        ],
+        "citations": [
+          {
+            "span_id": "f50d9dbb27bdd320695789a3d284be39ff2295f5d3961c76cc081a3fc71990ae",
+            "evidence_id": "f920d41b8bf63262d726d9a7fa0acb0806fc7f0418fb7eebf5f265516e2e7b55",
+            "start": 93,
+            "end": 103,
+            "text_sha256": "3f37478f5c5dfb0ec0e7cfded3e9c26964dd057b595337a560241339ed07ae91",
+            "text_kind": "provided_display_text",
+            "support_quote": "该逆推不是充分条件。",
+            "chunk_id": "f920d41b8bf63262d726d9a7fa0acb0806fc7f0418fb7eebf5f265516e2e7b55"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "submission_id": "9ef1244c5ea7eb",
+    "question_id": "sq-10",
+    "group": "controlled",
+    "question": "QB-39610设定下，QB-39610的热电偶接线接触不良最终怎样演变到QB-39610的温控指令频繁变化？请补全机理路径。",
+    "answerable": true,
+    "required_points": [
+      "本记录只陈述虚拟试验台QB-39610的一条设定规则：当QB-39610的热电偶接线接触不良发生时，引起QB-39610的温度信号间歇波动。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-39610的一条设定规则：当QB-39610的温度信号间歇波动发生时，引起QB-39610的温控输入不稳定。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-39610的一条设定规则：当QB-39610的温控输入不稳定发生时，引起QB-39610的温控指令频繁变化。本条不陈述其他后续环节。"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "a9bae5efb8a8a76b38ebcfa4fa4f815fb054e8bbc6aeb5aa9933848053c08ff0",
+        "start": 0,
+        "end": 82,
+        "anchor": "本记录只陈述虚拟试验台QB-39610的一条设定规则：当QB-39610的热电偶接线接触不良发生时，引起QB-39610的温度信号间歇波动。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "61a54792a734fe61ff1bbc71e69043b0facb8f67444e6ec96c4adb452ac204b5",
+        "start": 0,
+        "end": 80,
+        "anchor": "本记录只陈述虚拟试验台QB-39610的一条设定规则：当QB-39610的温度信号间歇波动发生时，引起QB-39610的温控输入不稳定。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "b25988b135b00602164bc36cf97addaeea5028dd037cbf48cefa8cebc6476584",
+        "start": 0,
+        "end": 80,
+        "anchor": "本记录只陈述虚拟试验台QB-39610的一条设定规则：当QB-39610的温控输入不稳定发生时，引起QB-39610的温控指令频繁变化。本条不陈述其他后续环节。"
+      }
+    ],
+    "completed": true,
+    "status": "insufficient_evidence",
+    "insufficient_evidence": true,
+    "answer": "现有证据不足以完整回答该问题。",
+    "reason": "现有证据未通过回答支持性或问题覆盖检查，无法给出完整结论。",
+    "claims": []
+  },
+  {
+    "submission_id": "c4650fd1607323",
+    "question_id": "cq-11",
+    "group": "real",
+    "question": "驻留耐久性测试在通常情况下至少需要多少循环？低频导致时间过长时，缩短测试需要什么前提，并可采用什么补偿思路？",
+    "answerable": true,
+    "required_points": [
+      "至少一千万即1E7个循环",
+      "低频时间过长且采用适当补偿",
+      "可依据材料疲劳特性提高振动应力作补偿"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "f0875a594b052ba06c87a91584db617b1dab13262f422a09ddf5c8b3d46ef294",
+        "start": 85,
+        "end": 98,
+        "anchor": "驻留时间应至少相当于一千万"
+      },
+      {
+        "chunk_id": "f0875a594b052ba06c87a91584db617b1dab13262f422a09ddf5c8b3d46ef294",
+        "start": 139,
+        "end": 149,
+        "anchor": "如果应用了适当的补偿"
+      },
+      {
+        "chunk_id": "f0875a594b052ba06c87a91584db617b1dab13262f422a09ddf5c8b3d46ef294",
+        "start": 173,
+        "end": 186,
+        "anchor": "通过增加振动应力来缩短测试"
+      }
+    ],
+    "completed": true,
+    "status": "evidence_ready",
+    "insufficient_evidence": false,
+    "answer": "每当针对特定频率进行驻留耐久性测试时，驻留时间应至少相当于一千万（1E7）个循环，以证明耐久强度。\n当由于低频振动导致测试持续时间过长而不合理时，如果应用了适当的补偿，可以缩短测试。\n例如，可以根据材料疲劳特性通过增加振动应力来缩短测试。",
+    "reason": "",
+    "claims": [
+      {
+        "text": "每当针对特定频率进行驻留耐久性测试时，驻留时间应至少相当于一千万（1E7）个循环，以证明耐久强度。",
+        "support_span_ids": [
+          "c10bf30ff0fb4d1a51e7dcb0b2478b49320bf02330bc29733cb9c08f888a8be1"
+        ],
+        "evidence_ids": [
+          "f0875a594b052ba06c87a91584db617b1dab13262f422a09ddf5c8b3d46ef294"
+        ],
+        "citations": [
+          {
+            "span_id": "c10bf30ff0fb4d1a51e7dcb0b2478b49320bf02330bc29733cb9c08f888a8be1",
+            "evidence_id": "f0875a594b052ba06c87a91584db617b1dab13262f422a09ddf5c8b3d46ef294",
+            "start": 66,
+            "end": 115,
+            "text_sha256": "c4fb2788bfe410e90ff98ed99878bf78fa527dda4b7832ebac160277fd60e823",
+            "text_kind": "provided_display_text",
+            "support_quote": "每当针对特定频率进行驻留耐久性测试时，驻留时间应至少相当于一千万（1E7）个循环，以证明耐久强度。",
+            "chunk_id": "f0875a594b052ba06c87a91584db617b1dab13262f422a09ddf5c8b3d46ef294"
+          }
+        ]
+      },
+      {
+        "text": "当由于低频振动导致测试持续时间过长而不合理时，如果应用了适当的补偿，可以缩短测试。",
+        "support_span_ids": [
+          "762869c83151878727ee12efef8ee2f415090e401301175059cff28a2c5d48c1"
+        ],
+        "evidence_ids": [
+          "f0875a594b052ba06c87a91584db617b1dab13262f422a09ddf5c8b3d46ef294"
+        ],
+        "citations": [
+          {
+            "span_id": "762869c83151878727ee12efef8ee2f415090e401301175059cff28a2c5d48c1",
+            "evidence_id": "f0875a594b052ba06c87a91584db617b1dab13262f422a09ddf5c8b3d46ef294",
+            "start": 116,
+            "end": 158,
+            "text_sha256": "c4fb2788bfe410e90ff98ed99878bf78fa527dda4b7832ebac160277fd60e823",
+            "text_kind": "provided_display_text",
+            "support_quote": "当由于低频振动导致测试持续时间过长而不合理时，如果应用了适当的补偿，您可以缩短测试。",
+            "chunk_id": "f0875a594b052ba06c87a91584db617b1dab13262f422a09ddf5c8b3d46ef294"
+          }
+        ]
+      },
+      {
+        "text": "例如，可以根据材料疲劳特性通过增加振动应力来缩短测试。",
+        "support_span_ids": [
+          "11da533afb5a0dab10983ccb42e045d6ed231e96b01d2d0de5b4d63515c723cf"
+        ],
+        "evidence_ids": [
+          "f0875a594b052ba06c87a91584db617b1dab13262f422a09ddf5c8b3d46ef294"
+        ],
+        "citations": [
+          {
+            "span_id": "11da533afb5a0dab10983ccb42e045d6ed231e96b01d2d0de5b4d63515c723cf",
+            "evidence_id": "f0875a594b052ba06c87a91584db617b1dab13262f422a09ddf5c8b3d46ef294",
+            "start": 159,
+            "end": 187,
+            "text_sha256": "c4fb2788bfe410e90ff98ed99878bf78fa527dda4b7832ebac160277fd60e823",
+            "text_kind": "provided_display_text",
+            "support_quote": "例如，您可以根据材料疲劳特性通过增加振动应力来缩短测试。",
+            "chunk_id": "f0875a594b052ba06c87a91584db617b1dab13262f422a09ddf5c8b3d46ef294"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "submission_id": "d733214db976a0",
+    "question_id": "cq-09",
+    "group": "real",
+    "question": "能否仅凭这份通用指南，给出任意发动机空气涡轮起动机的准确切断转速rpm？",
+    "answerable": false,
+    "required_points": [
+      "无法确定任意型号具体转速",
+      "需要对应制造商说明而非编造rpm"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "3c43a973030b90380e11f5db1424645f22c3b1c14195006d135d820f40a1d8f1",
+        "start": 67,
+        "end": 79,
+        "anchor": "并不旨在替代制造商的说明"
+      }
+    ],
+    "completed": true,
+    "status": "insufficient_evidence",
+    "insufficient_evidence": true,
+    "answer": "资料中的故障排除程序仅应作为指南使用，并不旨在替代制造商的说明。\n图5-25中列出的故障排除程序适用于配备压力调节与关断组合阀的空气涡轮起动系统。\n资料提到起动机达到切断速度或切断转速时起动活门关闭，但未给出具体rpm数值。\n故障排除指南将“起动机切断开关设置不当”列为可能原因，补救措施为调整转子开关执行器，但未给出切断转速数值。\n现有证据不足以完整回答该问题。",
+    "reason": "所给证据中没有任何具体切断转速的rpm数值，且指南明确说明仅作参考、不替代制造商说明，因此无法仅凭这份通用指南给出任意发动机空气涡轮起动机的准确切断转速rpm。",
+    "claims": [
+      {
+        "text": "资料中的故障排除程序仅应作为指南使用，并不旨在替代制造商的说明。",
+        "support_span_ids": [
+          "0d7e25ae9321e4c6a05f70aec8513d4ebe607c650a23df9a9af6b5213765b1c5"
+        ],
+        "evidence_ids": [
+          "3c43a973030b90380e11f5db1424645f22c3b1c14195006d135d820f40a1d8f1"
+        ],
+        "citations": [
+          {
+            "span_id": "0d7e25ae9321e4c6a05f70aec8513d4ebe607c650a23df9a9af6b5213765b1c5",
+            "evidence_id": "3c43a973030b90380e11f5db1424645f22c3b1c14195006d135d820f40a1d8f1",
+            "start": 54,
+            "end": 80,
+            "text_sha256": "c8301d169f0c975b22a00db1bc94c110385b7188ce4519560d787aef97422c1f",
+            "text_kind": "provided_display_text",
+            "support_quote": "这些程序仅应作为指南使用，并不旨在替代制造商的说明。",
+            "chunk_id": "3c43a973030b90380e11f5db1424645f22c3b1c14195006d135d820f40a1d8f1"
+          }
+        ]
+      },
+      {
+        "text": "图5-25中列出的故障排除程序适用于配备压力调节与关断组合阀的空气涡轮起动系统。",
+        "support_span_ids": [
+          "3159bbffff3e408d4269b4399d69be7c025e121739859475cbe27e54ea4e2583"
+        ],
+        "evidence_ids": [
+          "3c43a973030b90380e11f5db1424645f22c3b1c14195006d135d820f40a1d8f1"
+        ],
+        "citations": [
+          {
+            "span_id": "3159bbffff3e408d4269b4399d69be7c025e121739859475cbe27e54ea4e2583",
+            "evidence_id": "3c43a973030b90380e11f5db1424645f22c3b1c14195006d135d820f40a1d8f1",
+            "start": 14,
+            "end": 54,
+            "text_sha256": "c8301d169f0c975b22a00db1bc94c110385b7188ce4519560d787aef97422c1f",
+            "text_kind": "provided_display_text",
+            "support_quote": "图5-25中列出的故障排除程序适用于配备压力调节与关断组合阀的空气涡轮起动系统。",
+            "chunk_id": "3c43a973030b90380e11f5db1424645f22c3b1c14195006d135d820f40a1d8f1"
+          }
+        ]
+      },
+      {
+        "text": "资料提到起动机达到切断速度或切断转速时起动活门关闭，但未给出具体rpm数值。",
+        "support_span_ids": [
+          "8d73abca08faed021c9870320b6a0ead79fb4729fb72b5d46b559402f6b73024",
+          "e4bbdce1bd4006571104170c599295580876679d27c6e7ca27b1491489b99575"
+        ],
+        "evidence_ids": [
+          "536ad4238811bc30cfedc2cfbef37ca4294474fb154c4d2ec19eb57d1537e243",
+          "c9621e29928661510e18b22c3199102741b63a2f2d8a86a8db77bb9af35ab4ed"
+        ],
+        "citations": [
+          {
+            "span_id": "8d73abca08faed021c9870320b6a0ead79fb4729fb72b5d46b559402f6b73024",
+            "evidence_id": "536ad4238811bc30cfedc2cfbef37ca4294474fb154c4d2ec19eb57d1537e243",
+            "start": 39,
+            "end": 49,
+            "text_sha256": "e20df06fcba8b69117d9b10e3c33b915a7fdfa171fe60167dfce8e8d7f1c6a44",
+            "text_kind": "provided_display_text",
+            "support_quote": "起动机达到切断速度。",
+            "chunk_id": "536ad4238811bc30cfedc2cfbef37ca4294474fb154c4d2ec19eb57d1537e243"
+          },
+          {
+            "span_id": "e4bbdce1bd4006571104170c599295580876679d27c6e7ca27b1491489b99575",
+            "evidence_id": "c9621e29928661510e18b22c3199102741b63a2f2d8a86a8db77bb9af35ab4ed",
+            "start": 139,
+            "end": 158,
+            "text_sha256": "f570b20b2e1991468e26219a1000d7ebec842ee6cfba53a7955c4d16b12a4ddf",
+            "text_kind": "provided_display_text",
+            "support_quote": "当达到起动机切断转速时，起动活门关闭。",
+            "chunk_id": "c9621e29928661510e18b22c3199102741b63a2f2d8a86a8db77bb9af35ab4ed"
+          }
+        ]
+      },
+      {
+        "text": "故障排除指南将“起动机切断开关设置不当”列为可能原因，补救措施为调整转子开关执行器，但未给出切断转速数值。",
+        "support_span_ids": [
+          "6e2e4f338fbcb60e94ccbc038ebfd916ecf81cd4e2fe41f638d61c7caaf22740",
+          "6a86ba71edf546098e30cede07ca578c1a697b2832663dc064fd639acb6155b1"
+        ],
+        "evidence_ids": [
+          "03d4a0a876e2acc8bf15dab1cbcbbfe969bc9125e24b3bd61c6c44b64deac8ad"
+        ],
+        "citations": [
+          {
+            "span_id": "6e2e4f338fbcb60e94ccbc038ebfd916ecf81cd4e2fe41f638d61c7caaf22740",
+            "evidence_id": "03d4a0a876e2acc8bf15dab1cbcbbfe969bc9125e24b3bd61c6c44b64deac8ad",
+            "start": 288,
+            "end": 302,
+            "text_sha256": "bd0699cd553fb9c0bfef88ef251f937ed658e02fd2dca19914997e43fc5ba36c",
+            "text_kind": "provided_display_text",
+            "support_quote": "• 起动机切断开关设置不当。",
+            "chunk_id": "03d4a0a876e2acc8bf15dab1cbcbbfe969bc9125e24b3bd61c6c44b64deac8ad"
+          },
+          {
+            "span_id": "6a86ba71edf546098e30cede07ca578c1a697b2832663dc064fd639acb6155b1",
+            "evidence_id": "03d4a0a876e2acc8bf15dab1cbcbbfe969bc9125e24b3bd61c6c44b64deac8ad",
+            "start": 378,
+            "end": 390,
+            "text_sha256": "bd0699cd553fb9c0bfef88ef251f937ed658e02fd2dca19914997e43fc5ba36c",
+            "text_kind": "provided_display_text",
+            "support_quote": "• 调整转子开关执行器。",
+            "chunk_id": "03d4a0a876e2acc8bf15dab1cbcbbfe969bc9125e24b3bd61c6c44b64deac8ad"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "submission_id": "fe938593013358",
+    "question_id": "sq-08",
+    "group": "controlled",
+    "question": "QB-65045设定下，QB-65045的滑油冷却器散热面污染最终怎样演变到QB-65045的油温监控告警？请补全机理路径。",
+    "answerable": true,
+    "required_points": [
+      "本记录只陈述虚拟试验台QB-65045的一条设定规则：当QB-65045的滑油冷却器散热面污染发生时，引起QB-65045的滑油散热能力降低。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-65045的一条设定规则：当QB-65045的滑油散热能力降低发生时，引起QB-65045的供油温度升高。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-65045的一条设定规则：当QB-65045的供油温度升高发生时，引起QB-65045的油温监控告警。本条不陈述其他后续环节。"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "804408c3e3bd68cf6cd6ed221465fd2b12b7d0aa2d1d177c1942e3d04fefb804",
+        "start": 0,
+        "end": 83,
+        "anchor": "本记录只陈述虚拟试验台QB-65045的一条设定规则：当QB-65045的滑油冷却器散热面污染发生时，引起QB-65045的滑油散热能力降低。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "8d614a94ae7cd9f1ad5a95fec5175bc870446075ccd87b6a3fbf650d7243a141",
+        "start": 0,
+        "end": 79,
+        "anchor": "本记录只陈述虚拟试验台QB-65045的一条设定规则：当QB-65045的滑油散热能力降低发生时，引起QB-65045的供油温度升高。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "8e0ef915f66a3debc303f21c7b833b3878afee65e1c475f6ed23d345177e181e",
+        "start": 0,
+        "end": 77,
+        "anchor": "本记录只陈述虚拟试验台QB-65045的一条设定规则：当QB-65045的供油温度升高发生时，引起QB-65045的油温监控告警。本条不陈述其他后续环节。"
+      }
+    ],
+    "completed": true,
+    "status": "insufficient_evidence",
+    "insufficient_evidence": true,
+    "answer": "现有证据不足以完整回答该问题。",
+    "reason": "现有证据未通过回答支持性或问题覆盖检查，无法给出完整结论。",
+    "claims": []
+  },
+  {
+    "submission_id": "86d7a3869c2917",
+    "question_id": "sq-02",
+    "group": "controlled",
+    "question": "QB-49712设定下，QB-49712的计量活门开度不足最终怎样演变到QB-49712的转速建立延迟？请补全机理路径。",
+    "answerable": true,
+    "required_points": [
+      "本记录只陈述虚拟试验台QB-49712的一条设定规则：当QB-49712的计量活门开度不足发生时，引起QB-49712的计量截面减小。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-49712的一条设定规则：当QB-49712的计量截面减小发生时，引起QB-49712的供油响应受限。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-49712的一条设定规则：当QB-49712的供油响应受限发生时，引起QB-49712的转速建立延迟。本条不陈述其他后续环节。"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "bd3a2b19cab68b46076147e733730513348125e24301a841e6d2356b78010120",
+        "start": 0,
+        "end": 79,
+        "anchor": "本记录只陈述虚拟试验台QB-49712的一条设定规则：当QB-49712的计量活门开度不足发生时，引起QB-49712的计量截面减小。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "079fb20bfc611f43c8e2e56be03e300ee388e7fd67134b9bbe36df8c5745f73b",
+        "start": 0,
+        "end": 77,
+        "anchor": "本记录只陈述虚拟试验台QB-49712的一条设定规则：当QB-49712的计量截面减小发生时，引起QB-49712的供油响应受限。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "7e28c5020bb94f1d163adf273cfdaba5a7694eb1e92992e982e8c327a0f34c77",
+        "start": 0,
+        "end": 77,
+        "anchor": "本记录只陈述虚拟试验台QB-49712的一条设定规则：当QB-49712的供油响应受限发生时，引起QB-49712的转速建立延迟。本条不陈述其他后续环节。"
+      }
+    ],
+    "completed": true,
+    "status": "insufficient_evidence",
+    "insufficient_evidence": true,
+    "answer": "现有证据不足以完整回答该问题。",
+    "reason": "现有证据未通过回答支持性或问题覆盖检查，无法给出完整结论。",
+    "claims": []
+  },
+  {
+    "submission_id": "2951ad8eecef2e",
+    "question_id": "sq-11",
+    "group": "controlled",
+    "question": "QB-57868设定下，QB-57868的供气调压器阀芯粘滞最终怎样演变到QB-57868的执行端到位延迟？请补全机理路径。",
+    "answerable": true,
+    "required_points": [
+      "本记录只陈述虚拟试验台QB-57868的一条设定规则：当QB-57868的供气调压器阀芯粘滞发生时，引起QB-57868的供气调压滞后。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-57868的一条设定规则：当QB-57868的供气调压滞后发生时，引起QB-57868的气动执行端压力偏离。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-57868的一条设定规则：当QB-57868的气动执行端压力偏离发生时，引起QB-57868的执行端到位延迟。本条不陈述其他后续环节。"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "9b2edccf19c256198e0a67048156bfcac44a8be2c0d1a127003067cb2876f37c",
+        "start": 0,
+        "end": 80,
+        "anchor": "本记录只陈述虚拟试验台QB-57868的一条设定规则：当QB-57868的供气调压器阀芯粘滞发生时，引起QB-57868的供气调压滞后。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "e65b2599494cc43b541741d1c5830709b444a129a2355e750b5fc6ee112f0db4",
+        "start": 0,
+        "end": 80,
+        "anchor": "本记录只陈述虚拟试验台QB-57868的一条设定规则：当QB-57868的供气调压滞后发生时，引起QB-57868的气动执行端压力偏离。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "5095d114ad87658adefa7b3af8dc7244ef3345b5b00753cd5be9d754f4009506",
+        "start": 0,
+        "end": 81,
+        "anchor": "本记录只陈述虚拟试验台QB-57868的一条设定规则：当QB-57868的气动执行端压力偏离发生时，引起QB-57868的执行端到位延迟。本条不陈述其他后续环节。"
+      }
+    ],
+    "completed": true,
+    "status": "insufficient_evidence",
+    "insufficient_evidence": true,
+    "answer": "现有证据不足以完整回答该问题。",
+    "reason": "现有证据未通过回答支持性或问题覆盖检查，无法给出完整结论。",
+    "claims": []
+  },
+  {
+    "submission_id": "1089d019200ea8",
+    "question_id": "sq-03",
+    "group": "controlled",
+    "question": "QB-64182设定下，QB-64182的引气管路接头松动最终怎样演变到QB-64182的气源监控告警？请补全机理路径。",
+    "answerable": true,
+    "required_points": [
+      "本记录只陈述虚拟试验台QB-64182的一条设定规则：当QB-64182的引气管路接头松动发生时，引起QB-64182的管路漏气增大。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-64182的一条设定规则：当QB-64182的管路漏气增大发生时，引起QB-64182的用气端压力下降。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-64182的一条设定规则：当QB-64182的用气端压力下降发生时，引起QB-64182的气源监控告警。本条不陈述其他后续环节。"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "8662ab342c9470d339599087f8bc0345b11db288d5487e3f3554e85a2562b048",
+        "start": 0,
+        "end": 79,
+        "anchor": "本记录只陈述虚拟试验台QB-64182的一条设定规则：当QB-64182的引气管路接头松动发生时，引起QB-64182的管路漏气增大。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "9eb18f1b62768ddaa89c1a63eb3cf8264c9b7671d5a40efaddaf5aa01e5eadac",
+        "start": 0,
+        "end": 78,
+        "anchor": "本记录只陈述虚拟试验台QB-64182的一条设定规则：当QB-64182的管路漏气增大发生时，引起QB-64182的用气端压力下降。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "64b25b9388e79e90f8ed63ab7883e6f921d6f3b4732b9cc907cf7a978a417a35",
+        "start": 0,
+        "end": 78,
+        "anchor": "本记录只陈述虚拟试验台QB-64182的一条设定规则：当QB-64182的用气端压力下降发生时，引起QB-64182的气源监控告警。本条不陈述其他后续环节。"
+      }
+    ],
+    "completed": true,
+    "status": "evidence_ready",
+    "insufficient_evidence": false,
+    "answer": "当QB-64182的引气管路接头松动发生时，引起QB-64182的管路漏气增大。\n当QB-64182的管路漏气增大发生时，引起QB-64182的用气端压力下降。\n当QB-64182的用气端压力下降发生时，引起QB-64182的气源监控告警。\n仅观察到QB-64182的气源监控告警，不足以确定QB-64182的引气管路接头松动已经发生；其他未列出的原因仍可能产生相同末端指示。\n该逆推不是充分条件。",
+    "reason": "",
+    "claims": [
+      {
+        "text": "当QB-64182的引气管路接头松动发生时，引起QB-64182的管路漏气增大。",
+        "support_span_ids": [
+          "a75d28738950f11356145313557157983a09f988dcbdc8e6703ab32fbf0b7a68"
+        ],
+        "evidence_ids": [
+          "8662ab342c9470d339599087f8bc0345b11db288d5487e3f3554e85a2562b048"
+        ],
+        "citations": [
+          {
+            "span_id": "a75d28738950f11356145313557157983a09f988dcbdc8e6703ab32fbf0b7a68",
+            "evidence_id": "8662ab342c9470d339599087f8bc0345b11db288d5487e3f3554e85a2562b048",
+            "start": 0,
+            "end": 67,
+            "text_sha256": "3b515ef31622b3df19be7390519fb2991b231f430f44a149d8524ccc2ba7145d",
+            "text_kind": "provided_display_text",
+            "support_quote": "本记录只陈述虚拟试验台QB-64182的一条设定规则：当QB-64182的引气管路接头松动发生时，引起QB-64182的管路漏气增大。",
+            "chunk_id": "8662ab342c9470d339599087f8bc0345b11db288d5487e3f3554e85a2562b048"
+          }
+        ]
+      },
+      {
+        "text": "当QB-64182的管路漏气增大发生时，引起QB-64182的用气端压力下降。",
+        "support_span_ids": [
+          "5516fb8946cba591ec4276ddd1edec33dbeb2f6e433e06bf6f945f62c7f4691e"
+        ],
+        "evidence_ids": [
+          "9eb18f1b62768ddaa89c1a63eb3cf8264c9b7671d5a40efaddaf5aa01e5eadac"
+        ],
+        "citations": [
+          {
+            "span_id": "5516fb8946cba591ec4276ddd1edec33dbeb2f6e433e06bf6f945f62c7f4691e",
+            "evidence_id": "9eb18f1b62768ddaa89c1a63eb3cf8264c9b7671d5a40efaddaf5aa01e5eadac",
+            "start": 0,
+            "end": 66,
+            "text_sha256": "93513935781dab4823bf503be6c337121a5fa34482bdc1b974da47012c73d624",
+            "text_kind": "provided_display_text",
+            "support_quote": "本记录只陈述虚拟试验台QB-64182的一条设定规则：当QB-64182的管路漏气增大发生时，引起QB-64182的用气端压力下降。",
+            "chunk_id": "9eb18f1b62768ddaa89c1a63eb3cf8264c9b7671d5a40efaddaf5aa01e5eadac"
+          }
+        ]
+      },
+      {
+        "text": "当QB-64182的用气端压力下降发生时，引起QB-64182的气源监控告警。",
+        "support_span_ids": [
+          "4dc84994f45c107eda7b0f6732b1af7fec5ebe2c2f4ed2c6216ce8e1d160fe0f"
+        ],
+        "evidence_ids": [
+          "64b25b9388e79e90f8ed63ab7883e6f921d6f3b4732b9cc907cf7a978a417a35"
+        ],
+        "citations": [
+          {
+            "span_id": "4dc84994f45c107eda7b0f6732b1af7fec5ebe2c2f4ed2c6216ce8e1d160fe0f",
+            "evidence_id": "64b25b9388e79e90f8ed63ab7883e6f921d6f3b4732b9cc907cf7a978a417a35",
+            "start": 0,
+            "end": 66,
+            "text_sha256": "a77d34bbdb24f70c838e353dc5ca3cd0f2828a8ce9fe5c031a4bed526dbdb7cf",
+            "text_kind": "provided_display_text",
+            "support_quote": "本记录只陈述虚拟试验台QB-64182的一条设定规则：当QB-64182的用气端压力下降发生时，引起QB-64182的气源监控告警。",
+            "chunk_id": "64b25b9388e79e90f8ed63ab7883e6f921d6f3b4732b9cc907cf7a978a417a35"
+          }
+        ]
+      },
+      {
+        "text": "仅观察到QB-64182的气源监控告警，不足以确定QB-64182的引气管路接头松动已经发生；其他未列出的原因仍可能产生相同末端指示。",
+        "support_span_ids": [
+          "1ccb83fd30e670e7b02682777c291e89f1e6c64df361b2587490c7070d502e1c"
+        ],
+        "evidence_ids": [
+          "f0f5b64924370a0500cdc5c07e5269a775f45fec42637c36825269d533aa3798"
+        ],
+        "citations": [
+          {
+            "span_id": "1ccb83fd30e670e7b02682777c291e89f1e6c64df361b2587490c7070d502e1c",
+            "evidence_id": "f0f5b64924370a0500cdc5c07e5269a775f45fec42637c36825269d533aa3798",
+            "start": 0,
+            "end": 93,
+            "text_sha256": "9f8e2ecf8134727aa5a6c8d7a1f02783e2f3fd56203952b7d343b85f654962e3",
+            "text_kind": "provided_display_text",
+            "support_quote": "边界记录：本场景明确规定，虚拟试验台QB-64182仅观察到QB-64182的气源监控告警，不足以确定QB-64182的引气管路接头松动已经发生；其他未列出的原因仍可能产生相同末端指示。",
+            "chunk_id": "f0f5b64924370a0500cdc5c07e5269a775f45fec42637c36825269d533aa3798"
+          }
+        ]
+      },
+      {
+        "text": "该逆推不是充分条件。",
+        "support_span_ids": [
+          "763ed4377f122469e739f77c53a97a9d0ae2806754879956b8c0f12316081474"
+        ],
+        "evidence_ids": [
+          "f0f5b64924370a0500cdc5c07e5269a775f45fec42637c36825269d533aa3798"
+        ],
+        "citations": [
+          {
+            "span_id": "763ed4377f122469e739f77c53a97a9d0ae2806754879956b8c0f12316081474",
+            "evidence_id": "f0f5b64924370a0500cdc5c07e5269a775f45fec42637c36825269d533aa3798",
+            "start": 93,
+            "end": 103,
+            "text_sha256": "9f8e2ecf8134727aa5a6c8d7a1f02783e2f3fd56203952b7d343b85f654962e3",
+            "text_kind": "provided_display_text",
+            "support_quote": "该逆推不是充分条件。",
+            "chunk_id": "f0f5b64924370a0500cdc5c07e5269a775f45fec42637c36825269d533aa3798"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "submission_id": "f89c1e732745e2",
+    "question_id": "cq-08",
+    "group": "real",
+    "question": "起动机运转但发动机不转动时，指南列出的可能原因与处置是什么？若联轴器在异常短周期内持续断裂，还应怎样处理？",
+    "answerable": true,
+    "required_points": [
+      "可能为驱动联轴器剪切断裂而非确定诊断",
+      "拆下起动机并更换驱动联轴器",
+      "异常短周期持续断裂时拆下并更换起动机"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "31f970f79593afe086f83955e9e76111c7d573295db582124cf185d2a4a9f66a",
+        "start": 162,
+        "end": 175,
+        "anchor": "起动机运转，但发动机不转动"
+      },
+      {
+        "chunk_id": "31f970f79593afe086f83955e9e76111c7d573295db582124cf185d2a4a9f66a",
+        "start": 269,
+        "end": 286,
+        "anchor": "如果联轴器在异常短的周期内持续断裂"
+      }
+    ],
+    "completed": true,
+    "status": "evidence_ready",
+    "insufficient_evidence": false,
+    "answer": "故障现象为“起动机运转，但发动机不转动”。\n可能原因为驱动联轴器剪切断裂。\n补救措施为拆下起动机并更换驱动联轴器。\n如果联轴器在异常短的周期内持续断裂，则拆下并更换起动机。",
+    "reason": "",
+    "claims": [
+      {
+        "text": "故障现象为“起动机运转，但发动机不转动”。",
+        "support_span_ids": [
+          "a87eccfeeb00e2f216ae8244ca85d8993fc6ab1212110a0820b8d4fd28b7f9f7",
+          "52a103a2416027525bb10c8036a305900138ab866e3fb3a7ea704183e4143d71"
+        ],
+        "evidence_ids": [
+          "31f970f79593afe086f83955e9e76111c7d573295db582124cf185d2a4a9f66a"
+        ],
+        "citations": [
+          {
+            "span_id": "a87eccfeeb00e2f216ae8244ca85d8993fc6ab1212110a0820b8d4fd28b7f9f7",
+            "evidence_id": "31f970f79593afe086f83955e9e76111c7d573295db582124cf185d2a4a9f66a",
+            "start": 160,
+            "end": 176,
+            "text_sha256": "bdc40f0ca88d159d2d079fb91a86157dc37479cc123a986b91bfbb0a1679cb56",
+            "text_kind": "provided_display_text",
+            "support_quote": "• 起动机运转，但发动机不转动。",
+            "chunk_id": "31f970f79593afe086f83955e9e76111c7d573295db582124cf185d2a4a9f66a"
+          },
+          {
+            "span_id": "52a103a2416027525bb10c8036a305900138ab866e3fb3a7ea704183e4143d71",
+            "evidence_id": "31f970f79593afe086f83955e9e76111c7d573295db582124cf185d2a4a9f66a",
+            "start": 213,
+            "end": 229,
+            "text_sha256": "bdc40f0ca88d159d2d079fb91a86157dc37479cc123a986b91bfbb0a1679cb56",
+            "text_kind": "provided_display_text",
+            "support_quote": "• 起动机运转，但发动机不转动。",
+            "chunk_id": "31f970f79593afe086f83955e9e76111c7d573295db582124cf185d2a4a9f66a"
+          }
+        ]
+      },
+      {
+        "text": "可能原因为驱动联轴器剪切断裂。",
+        "support_span_ids": [
+          "1a139354ce438146ccf152cdf851fe40cc773190a08820a111ff05ff5cae8560"
+        ],
+        "evidence_ids": [
+          "31f970f79593afe086f83955e9e76111c7d573295db582124cf185d2a4a9f66a"
+        ],
+        "citations": [
+          {
+            "span_id": "1a139354ce438146ccf152cdf851fe40cc773190a08820a111ff05ff5cae8560",
+            "evidence_id": "31f970f79593afe086f83955e9e76111c7d573295db582124cf185d2a4a9f66a",
+            "start": 193,
+            "end": 212,
+            "text_sha256": "bdc40f0ca88d159d2d079fb91a86157dc37479cc123a986b91bfbb0a1679cb56",
+            "text_kind": "provided_display_text",
+            "support_quote": "可能原因 = • 驱动联轴器剪切断裂。",
+            "chunk_id": "31f970f79593afe086f83955e9e76111c7d573295db582124cf185d2a4a9f66a"
+          }
+        ]
+      },
+      {
+        "text": "补救措施为拆下起动机并更换驱动联轴器。",
+        "support_span_ids": [
+          "a2252d4f15ce846206f36f436d7e753558f0d0137303073c8577a1c5fbe0c873"
+        ],
+        "evidence_ids": [
+          "31f970f79593afe086f83955e9e76111c7d573295db582124cf185d2a4a9f66a"
+        ],
+        "citations": [
+          {
+            "span_id": "a2252d4f15ce846206f36f436d7e753558f0d0137303073c8577a1c5fbe0c873",
+            "evidence_id": "31f970f79593afe086f83955e9e76111c7d573295db582124cf185d2a4a9f66a",
+            "start": 246,
+            "end": 269,
+            "text_sha256": "bdc40f0ca88d159d2d079fb91a86157dc37479cc123a986b91bfbb0a1679cb56",
+            "text_kind": "provided_display_text",
+            "support_quote": "补救措施 = • 拆下起动机并更换驱动联轴器。",
+            "chunk_id": "31f970f79593afe086f83955e9e76111c7d573295db582124cf185d2a4a9f66a"
+          }
+        ]
+      },
+      {
+        "text": "如果联轴器在异常短的周期内持续断裂，则拆下并更换起动机。",
+        "support_span_ids": [
+          "f33f9473c215aa1b56b39834f6ab7e0d21876e69f4beb30ced8843d28f1aa7e5"
+        ],
+        "evidence_ids": [
+          "31f970f79593afe086f83955e9e76111c7d573295db582124cf185d2a4a9f66a"
+        ],
+        "citations": [
+          {
+            "span_id": "f33f9473c215aa1b56b39834f6ab7e0d21876e69f4beb30ced8843d28f1aa7e5",
+            "evidence_id": "31f970f79593afe086f83955e9e76111c7d573295db582124cf185d2a4a9f66a",
+            "start": 269,
+            "end": 297,
+            "text_sha256": "bdc40f0ca88d159d2d079fb91a86157dc37479cc123a986b91bfbb0a1679cb56",
+            "text_kind": "provided_display_text",
+            "support_quote": "如果联轴器在异常短的周期内持续断裂，则拆下并更换起动机。",
+            "chunk_id": "31f970f79593afe086f83955e9e76111c7d573295db582124cf185d2a4a9f66a"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "submission_id": "a8c3721effd088",
+    "question_id": "cq-01",
+    "group": "real",
+    "question": "在叶片维护术语中，金属粘着的外观特征是什么，常见原因是什么？",
+    "answerable": true,
+    "required_points": [
+      "金属从一个表面转移到另一个表面",
+      "严重摩擦"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "13c9ba29cc34f9e419f0bf01ab8647535dde9910566f75e9519b927b15a060cf",
+        "start": 42,
+        "end": 57,
+        "anchor": "金属从一个表面转移到另一个表面"
+      },
+      {
+        "chunk_id": "13c9ba29cc34f9e419f0bf01ab8647535dde9910566f75e9519b927b15a060cf",
+        "start": 63,
+        "end": 67,
+        "anchor": "严重摩擦"
+      }
+    ],
+    "completed": true,
+    "status": "evidence_ready",
+    "insufficient_evidence": false,
+    "answer": "金属粘着的外观特征是金属从一个表面转移到另一个表面。\n金属粘着的常见原因是严重摩擦。",
+    "reason": "",
+    "claims": [
+      {
+        "text": "金属粘着的外观特征是金属从一个表面转移到另一个表面。",
+        "support_span_ids": [
+          "f11ae16819a4239fdbb9cdc7728f217ea73a2f331aa841550189241edaccee19"
+        ],
+        "evidence_ids": [
+          "13c9ba29cc34f9e419f0bf01ab8647535dde9910566f75e9519b927b15a060cf"
+        ],
+        "citations": [
+          {
+            "span_id": "f11ae16819a4239fdbb9cdc7728f217ea73a2f331aa841550189241edaccee19",
+            "evidence_id": "13c9ba29cc34f9e419f0bf01ab8647535dde9910566f75e9519b927b15a060cf",
+            "start": 31,
+            "end": 58,
+            "text_sha256": "1fd40537dc89f9bf895b28581ce42f1206b0b2f9bd35f871a17a88c44b8871a3",
+            "text_kind": "provided_display_text",
+            "support_quote": "• 金属粘着 | • 金属从一个表面转移到另一个表面。",
+            "chunk_id": "13c9ba29cc34f9e419f0bf01ab8647535dde9910566f75e9519b927b15a060cf"
+          }
+        ]
+      },
+      {
+        "text": "金属粘着的常见原因是严重摩擦。",
+        "support_span_ids": [
+          "8b9d7cc287b76629155634734152ec65c2ad60fd3f52e80a254ecab23bc30b0e"
+        ],
+        "evidence_ids": [
+          "13c9ba29cc34f9e419f0bf01ab8647535dde9910566f75e9519b927b15a060cf"
+        ],
+        "citations": [
+          {
+            "span_id": "8b9d7cc287b76629155634734152ec65c2ad60fd3f52e80a254ecab23bc30b0e",
+            "evidence_id": "13c9ba29cc34f9e419f0bf01ab8647535dde9910566f75e9519b927b15a060cf",
+            "start": 59,
+            "end": 68,
+            "text_sha256": "1fd40537dc89f9bf895b28581ce42f1206b0b2f9bd35f871a17a88c44b8871a3",
+            "text_kind": "provided_display_text",
+            "support_quote": "| • 严重摩擦。",
+            "chunk_id": "13c9ba29cc34f9e419f0bf01ab8647535dde9910566f75e9519b927b15a060cf"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "submission_id": "40fad72a9dc68d",
+    "question_id": "cq-05",
+    "group": "real",
+    "question": "燃烧室衬筒前部从气孔发出的裂纹，允许接受的前提是什么，发生分叉或相连时又应如何处理？",
+    "answerable": true,
+    "required_points": [
+      "不超过允许极限时可接受",
+      "分叉或与其他裂纹相连必须修理"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44",
+        "start": 277,
+        "end": 294,
+        "anchor": "前衬筒中从气孔发出的裂纹是可接受的"
+      },
+      {
+        "chunk_id": "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44",
+        "start": 309,
+        "end": 325,
+        "anchor": "如果此类裂纹分叉或与其他裂纹相连"
+      }
+    ],
+    "completed": true,
+    "status": "evidence_ready",
+    "insufficient_evidence": false,
+    "answer": "前衬筒中从气孔发出的裂纹是可接受的，前提是它们不超过允许极限。\n如果此类裂纹分叉或与其他裂纹相连，则必须修理衬筒。\n如果从同一气孔发出的两条裂纹正好相对，则该衬筒是可接受的。",
+    "reason": "",
+    "claims": [
+      {
+        "text": "前衬筒中从气孔发出的裂纹是可接受的，前提是它们不超过允许极限。",
+        "support_span_ids": [
+          "d098ab33b572606cad4c70842f51ecb1c2bd1593a58ba5980c374e6f04eb0d59"
+        ],
+        "evidence_ids": [
+          "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44"
+        ],
+        "citations": [
+          {
+            "span_id": "d098ab33b572606cad4c70842f51ecb1c2bd1593a58ba5980c374e6f04eb0d59",
+            "evidence_id": "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44",
+            "start": 277,
+            "end": 308,
+            "text_sha256": "89f0056f4e42d2c940c8b086a5eb08ef185b5c07f62e04f08ee74494be859867",
+            "text_kind": "provided_display_text",
+            "support_quote": "前衬筒中从气孔发出的裂纹是可接受的，前提是它们不超过允许极限。",
+            "chunk_id": "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44"
+          }
+        ]
+      },
+      {
+        "text": "如果此类裂纹分叉或与其他裂纹相连，则必须修理衬筒。",
+        "support_span_ids": [
+          "d55c0f4f3a77cfce724870b02d1eccf71b7c17e73f4a254db9c5255a3076a6b7"
+        ],
+        "evidence_ids": [
+          "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44"
+        ],
+        "citations": [
+          {
+            "span_id": "d55c0f4f3a77cfce724870b02d1eccf71b7c17e73f4a254db9c5255a3076a6b7",
+            "evidence_id": "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44",
+            "start": 309,
+            "end": 334,
+            "text_sha256": "89f0056f4e42d2c940c8b086a5eb08ef185b5c07f62e04f08ee74494be859867",
+            "text_kind": "provided_display_text",
+            "support_quote": "如果此类裂纹分叉或与其他裂纹相连，则必须修理衬筒。",
+            "chunk_id": "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44"
+          }
+        ]
+      },
+      {
+        "text": "如果从同一气孔发出的两条裂纹正好相对，则该衬筒是可接受的。",
+        "support_span_ids": [
+          "50d4043bd4c62cf27a7a0cce759b3a28d5c70f145b1ce82ef774cf678a0525bd"
+        ],
+        "evidence_ids": [
+          "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44"
+        ],
+        "citations": [
+          {
+            "span_id": "50d4043bd4c62cf27a7a0cce759b3a28d5c70f145b1ce82ef774cf678a0525bd",
+            "evidence_id": "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44",
+            "start": 335,
+            "end": 364,
+            "text_sha256": "89f0056f4e42d2c940c8b086a5eb08ef185b5c07f62e04f08ee74494be859867",
+            "text_kind": "provided_display_text",
+            "support_quote": "如果从同一气孔发出的两条裂纹正好相对，则该衬筒是可接受的。",
+            "chunk_id": "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44"
+          }
+        ]
+      }
+    ]
+  }
+]

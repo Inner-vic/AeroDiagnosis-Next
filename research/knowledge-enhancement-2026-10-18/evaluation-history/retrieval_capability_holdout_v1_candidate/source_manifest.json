@@ -1,0 +1,2300 @@
+{
+  "schema": "capability-holdout-source-candidates@1",
+  "created_at_utc": "2026-10-15T07:38:27.674292+00:00",
+  "status": "source_only_pending_scope_review_translation_graph_and_question_freeze",
+  "sources": [
+    {
+      "document_id": "2026-20869",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; Rolls-Royce Deutschland Ltd & Co KG Engines",
+      "url": "https://www.federalregister.gov/documents/2026/10/13/2026-20869/airworthiness-directives-rolls-royce-deutschland-ltd-and-co-kg-engines",
+      "publication_date": "2026-10-13",
+      "effective_on": "2026-11-17",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2026-20869.full.txt",
+      "full_text_sha256": "d68d5d8f48689933599f7d025b5cb8c2ce81de22bbc91d871c2f6129208ac9e5",
+      "saved_source_path": "sources/2026-20869.selected.txt",
+      "saved_source_sha256": "197389732108081c345316f2d73e8ebc78cbb6e3760cb14fcd3fcb709bcae55c",
+      "saved_characters": 1539,
+      "full_characters": 16389,
+      "selection_segments": [
+        {
+          "full_start": 11490,
+          "full_end": 13029,
+          "saved_start": 0,
+          "saved_end": 1539
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier MCAI-2025-01834-E"
+      ],
+      "related_ad_ids": [
+        "2026-20-11"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2026-20869",
+      "selected_for_scope_review": true
+    },
+    {
+      "document_id": "2026-20666",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; Engine Alliance Engines",
+      "url": "https://www.federalregister.gov/documents/2026/10/08/2026-20666/airworthiness-directives-engine-alliance-engines",
+      "publication_date": "2026-10-08",
+      "effective_on": "2026-10-23",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2026-20666.full.txt",
+      "full_text_sha256": "4c82890f368262c3eab19352f28c5005c2befd4ad70c599e7924748e38e07252",
+      "saved_source_path": "sources/2026-20666.selected.txt",
+      "saved_source_sha256": "e77fde12f1d1a2306e440481e65baa17e79e6c488bb06cadbceb59c35bb8720f",
+      "saved_characters": 2106,
+      "full_characters": 18958,
+      "selection_segments": [
+        {
+          "full_start": 13512,
+          "full_end": 15618,
+          "saved_start": 0,
+          "saved_end": 2106
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier AD-2026-00946-E"
+      ],
+      "related_ad_ids": [
+        "2026-20-12"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2026-20666",
+      "selected_for_scope_review": true
+    },
+    {
+      "document_id": "2026-19762",
+      "status": "excluded_outside_engine_fault_scope"
+    },
+    {
+      "document_id": "2026-19172",
+      "status": "excluded_outside_engine_fault_scope"
+    },
+    {
+      "document_id": "2026-19171",
+      "status": "excluded_outside_engine_fault_scope"
+    },
+    {
+      "document_id": "2026-18559",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; Rolls-Royce Deutschland Ltd & Co KG Engines",
+      "url": "https://www.federalregister.gov/documents/2026/09/11/2026-18559/airworthiness-directives-rolls-royce-deutschland-ltd-and-co-kg-engines",
+      "publication_date": "2026-09-11",
+      "effective_on": "2026-10-16",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2026-18559.full.txt",
+      "full_text_sha256": "6b53e8dcdd5db21208dc1b455af755ffb93d2f92f6542851842c35c3d7591d36",
+      "saved_source_path": "sources/2026-18559.selected.txt",
+      "saved_source_sha256": "95b65abca745001caab00019caa1a5e8aa8880445cef5b2c39c1f5090ce7bf4f",
+      "saved_characters": 2188,
+      "full_characters": 21535,
+      "selection_segments": [
+        {
+          "full_start": 16003,
+          "full_end": 18191,
+          "saved_start": 0,
+          "saved_end": 2188
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier MCAI-2025-01208-E"
+      ],
+      "related_ad_ids": [
+        "2020-06-16",
+        "2026-18-04"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2026-18559",
+      "selected_for_scope_review": true
+    },
+    {
+      "document_id": "2026-18019",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; Pratt & Whitney Division Engines",
+      "url": "https://www.federalregister.gov/documents/2026/09/03/2026-18019/airworthiness-directives-pratt-and-whitney-division-engines",
+      "publication_date": "2026-09-03",
+      "effective_on": "2026-10-08",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2026-18019.full.txt",
+      "full_text_sha256": "d4dd08d4da97ad7475cb325befb319af184b96b9bfd690cf75bb2a2a0d13970e",
+      "saved_source_path": "sources/2026-18019.selected.txt",
+      "saved_source_sha256": "2b4ee502b8a45ec6eb1d006b3a47d79426829f8821730caf70fb634b5a4ab19a",
+      "saved_characters": 2450,
+      "full_characters": 20489,
+      "selection_segments": [
+        {
+          "full_start": 14715,
+          "full_end": 17165,
+          "saved_start": 0,
+          "saved_end": 2450
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier AD-2025-01606-E"
+      ],
+      "related_ad_ids": [
+        "2026-17-08"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2026-18019",
+      "selected_for_scope_review": true
+    },
+    {
+      "document_id": "2026-17582",
+      "status": "excluded_outside_engine_fault_scope"
+    },
+    {
+      "document_id": "2026-16954",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; International Aero Engines AG Engines",
+      "url": "https://www.federalregister.gov/documents/2026/08/20/2026-16954/airworthiness-directives-international-aero-engines-ag-engines",
+      "publication_date": "2026-08-20",
+      "effective_on": "2026-09-24",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2026-16954.full.txt",
+      "full_text_sha256": "479b80083e5f9fd388185aa8e85639ac79fd95782ede5ac979938cfd86ba756b",
+      "saved_source_path": "sources/2026-16954.selected.txt",
+      "saved_source_sha256": "5417e4550d0e1c2c521fbc65e4e39fe5812386d5763751679f2d4b366f5778ae",
+      "saved_characters": 1723,
+      "full_characters": 32413,
+      "selection_segments": [
+        {
+          "full_start": 28946,
+          "full_end": 30669,
+          "saved_start": 0,
+          "saved_end": 1723
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier AD-2025-00433-E"
+      ],
+      "related_ad_ids": [
+        "2026-17-03"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2026-16954",
+      "selected_for_scope_review": true
+    },
+    {
+      "document_id": "2026-16655",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; Pratt & Whitney Canada Corp. Engines",
+      "url": "https://www.federalregister.gov/documents/2026/08/14/2026-16655/airworthiness-directives-pratt-and-whitney-canada-corp-engines",
+      "publication_date": "2026-08-14",
+      "effective_on": "2026-08-31",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2026-16655.full.txt",
+      "full_text_sha256": "ca7949e66e2a8c191875cd7eb578cbde76206dd52be296e8ce52dfd9e3dfcc3b",
+      "saved_source_path": "sources/2026-16655.selected.txt",
+      "saved_source_sha256": "972290dcd785686c444754787a6ca3c23ae0b3b3cd1ee9b3171af06707f74ed6",
+      "saved_characters": 1776,
+      "full_characters": 23476,
+      "selection_segments": [
+        {
+          "full_start": 18105,
+          "full_end": 19881,
+          "saved_start": 0,
+          "saved_end": 1776
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier MCAI-2026-00764-E"
+      ],
+      "related_ad_ids": [
+        "2026-13-09",
+        "2026-16-13"
+      ],
+      "detailed_actions_present": false,
+      "limited_incorporation_by_reference": true,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2026-16655",
+      "selected_for_scope_review": true
+    },
+    {
+      "document_id": "2026-16636",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; Rolls-Royce Deutschland Ltd & Co KG Engines",
+      "url": "https://www.federalregister.gov/documents/2026/08/14/2026-16636/airworthiness-directives-rolls-royce-deutschland-ltd-and-co-kg-engines",
+      "publication_date": "2026-08-14",
+      "effective_on": "2026-09-18",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2026-16636.full.txt",
+      "full_text_sha256": "e881756956c9db6e330c36ed5a7c6beed665959497ee832512691fd718d8e2f3",
+      "saved_source_path": "sources/2026-16636.selected.txt",
+      "saved_source_sha256": "8be0cdf5512caa1f7f5a1d8f107671c3837d62b1c4dcd7d5411939b12d063fbd",
+      "saved_characters": 1738,
+      "full_characters": 18190,
+      "selection_segments": [
+        {
+          "full_start": 13094,
+          "full_end": 14832,
+          "saved_start": 0,
+          "saved_end": 1738
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier MCAI-2025-00011-E"
+      ],
+      "related_ad_ids": [
+        "2026-16-08"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2026-16636",
+      "selected_for_scope_review": true
+    },
+    {
+      "document_id": "2026-15369",
+      "status": "excluded_outside_engine_fault_scope"
+    },
+    {
+      "document_id": "2026-14478",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; General Electric Company Engines",
+      "url": "https://www.federalregister.gov/documents/2026/07/17/2026-14478/airworthiness-directives-general-electric-company-engines",
+      "publication_date": "2026-07-17",
+      "effective_on": "2026-08-21",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2026-14478.full.txt",
+      "full_text_sha256": "b68dd5d9072b63c45b980cd02bdd418fd7b389ae3f5f78ef345ff0d6f106d4f2",
+      "saved_source_path": "sources/2026-14478.selected.txt",
+      "saved_source_sha256": "a053dc46a76a13e8440b03f140d3cbd616f52c28a99fbc35b8bfafe6b2bebd67",
+      "saved_characters": 3436,
+      "full_characters": 22982,
+      "selection_segments": [
+        {
+          "full_start": 16250,
+          "full_end": 19686,
+          "saved_start": 0,
+          "saved_end": 3436
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier AD-2025-01668-E"
+      ],
+      "related_ad_ids": [
+        "2026-14-03"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2026-14478",
+      "selected_for_scope_review": true
+    },
+    {
+      "document_id": "2026-13979",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; CFM International, S.A. Engines",
+      "url": "https://www.federalregister.gov/documents/2026/07/10/2026-13979/airworthiness-directives-cfm-international-sa-engines",
+      "publication_date": "2026-07-10",
+      "effective_on": "2026-07-27",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2026-13979.full.txt",
+      "full_text_sha256": "cdbb791e414634780b0abd18820c7d1bef89e21add95680a18d847ba8fd1460c",
+      "saved_source_path": "sources/2026-13979.selected.txt",
+      "saved_source_sha256": "29aad72757f39bc8b5737730f3ce217dee8e3e6c78af8f810c14f0e17ee9842b",
+      "saved_characters": 6091,
+      "full_characters": 26012,
+      "selection_segments": [
+        {
+          "full_start": 16438,
+          "full_end": 22529,
+          "saved_start": 0,
+          "saved_end": 6091
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier AD-2026-00225-E"
+      ],
+      "related_ad_ids": [
+        "2022-17-12",
+        "2025-21-03",
+        "2026-14-06"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2026-13979",
+      "selected_for_scope_review": true
+    },
+    {
+      "document_id": "2026-13481",
+      "status": "excluded_no_anchored_applicability"
+    },
+    {
+      "document_id": "2026-13058",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; Pratt & Whitney Canada Corp. Engines",
+      "url": "https://www.federalregister.gov/documents/2026/06/29/2026-13058/airworthiness-directives-pratt-and-whitney-canada-corp-engines",
+      "publication_date": "2026-06-29",
+      "effective_on": "2026-07-14",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2026-13058.full.txt",
+      "full_text_sha256": "b217be79337817913d2d9e52526ffc186a24de4261266392483dffcabfb25d3e",
+      "saved_source_path": "sources/2026-13058.selected.txt",
+      "saved_source_sha256": "336d5a0bdaa447eb21bb1ba922d5804d6d9c10485ebafd0eb15b853c1729629a",
+      "saved_characters": 1724,
+      "full_characters": 21640,
+      "selection_segments": [
+        {
+          "full_start": 16327,
+          "full_end": 18051,
+          "saved_start": 0,
+          "saved_end": 1724
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier MCAI-2026-00553-E"
+      ],
+      "related_ad_ids": [
+        "2026-13-09"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2026-16655",
+      "selected_for_scope_review": false
+    },
+    {
+      "document_id": "2026-11965",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; Rolls-Royce Deutschland Ltd & Co KG Engines",
+      "url": "https://www.federalregister.gov/documents/2026/06/15/2026-11965/airworthiness-directives-rolls-royce-deutschland-ltd-and-co-kg-engines",
+      "publication_date": "2026-06-15",
+      "effective_on": "2026-06-30",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2026-11965.full.txt",
+      "full_text_sha256": "504b1e046deadd4c13ecb415b6b880184719d76e608e25bfe02b2730c102a53a",
+      "saved_source_path": "sources/2026-11965.selected.txt",
+      "saved_source_sha256": "9c5a4da9176767d8d867c05dbe49b4016639d2c33b81a27d10f1ec78b8824132",
+      "saved_characters": 1837,
+      "full_characters": 21811,
+      "selection_segments": [
+        {
+          "full_start": 16659,
+          "full_end": 18496,
+          "saved_start": 0,
+          "saved_end": 1837
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier MCAI-2025-01553-E"
+      ],
+      "related_ad_ids": [
+        "2020-05-01",
+        "2026-12-06"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2026-11965",
+      "selected_for_scope_review": true
+    },
+    {
+      "document_id": "2026-11179",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; Rolls-Royce Deutschland Ltd & Co KG Engines",
+      "url": "https://www.federalregister.gov/documents/2026/06/04/2026-11179/airworthiness-directives-rolls-royce-deutschland-ltd-and-co-kg-engines",
+      "publication_date": "2026-06-04",
+      "effective_on": "2026-07-09",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2026-11179.full.txt",
+      "full_text_sha256": "badbf07e02fcb958b110d2f97bb3633313f8d4b86c86d0fcbae6fa0ccbc018de",
+      "saved_source_path": "sources/2026-11179.selected.txt",
+      "saved_source_sha256": "004c97f0ea3323b84aa3273d8f7e86397c913e3136cd223a4dd2e4fb430318ef",
+      "saved_characters": 2092,
+      "full_characters": 18636,
+      "selection_segments": [
+        {
+          "full_start": 13184,
+          "full_end": 15276,
+          "saved_start": 0,
+          "saved_end": 2092
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier MCAI-2025-01337-E"
+      ],
+      "related_ad_ids": [
+        "2023-26-04",
+        "2026-10-21"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2026-11179",
+      "selected_for_scope_review": true
+    },
+    {
+      "document_id": "2026-10360",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; Pratt & Whitney RTX Corporation (Type Certificate Previously Held by Pratt & Whitney Division United Technologies Corporation) Engines",
+      "url": "https://www.federalregister.gov/documents/2026/05/22/2026-10360/airworthiness-directives-pratt-and-whitney-rtx-corporation-type-certificate-previously-held-by-pratt",
+      "publication_date": "2026-05-22",
+      "effective_on": "2026-06-26",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2026-10360.full.txt",
+      "full_text_sha256": "ed497163dd3da9b99f4a5301d76ac34a56b8286c74e35c69fe27509b4f78cf0e",
+      "saved_source_path": "sources/2026-10360.selected.txt",
+      "saved_source_sha256": "dc0552b2fc0dbb71d4f5e400b39ac4919fc057d56c1f5f6d0730083d1169bc83",
+      "saved_characters": 10631,
+      "full_characters": 42717,
+      "selection_segments": [
+        {
+          "full_start": 28550,
+          "full_end": 39181,
+          "saved_start": 0,
+          "saved_end": 10631
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier AD-2024-00529-E"
+      ],
+      "related_ad_ids": [
+        "2026-09-02"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2026-10360",
+      "selected_for_scope_review": true
+    },
+    {
+      "document_id": "2026-08225",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; Safran Helicopter Engines, S.A. (Type Certificate Previously Held by Turbomeca, S.A.) Engines",
+      "url": "https://www.federalregister.gov/documents/2026/04/28/2026-08225/airworthiness-directives-safran-helicopter-engines-sa-type-certificate-previously-held-by-turbomeca",
+      "publication_date": "2026-04-28",
+      "effective_on": "2026-06-02",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2026-08225.full.txt",
+      "full_text_sha256": "e1541e10488fca0781e492e98e4aeea45c23ebaf04361c3828b33160a52579d2",
+      "saved_source_path": "sources/2026-08225.selected.txt",
+      "saved_source_sha256": "b64818c31612a8d339517db25630bd781bee00d8481177973a69e20c0a29d91e",
+      "saved_characters": 2228,
+      "full_characters": 15591,
+      "selection_segments": [
+        {
+          "full_start": 10082,
+          "full_end": 12310,
+          "saved_start": 0,
+          "saved_end": 2228
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier MCAI-2025-01450-E"
+      ],
+      "related_ad_ids": [
+        "2024-24-02",
+        "2026-08-12"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2026-08225",
+      "selected_for_scope_review": true
+    },
+    {
+      "document_id": "2026-08106",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; Pratt & Whitney Engines",
+      "url": "https://www.federalregister.gov/documents/2026/04/24/2026-08106/airworthiness-directives-pratt-and-whitney-engines",
+      "publication_date": "2026-04-24",
+      "effective_on": "2026-05-29",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2026-08106.full.txt",
+      "full_text_sha256": "061ff7afc2ac3315106b01b6d72c3eb3455f319d01e8bc658a1721cf9c8c724d",
+      "saved_source_path": "sources/2026-08106.selected.txt",
+      "saved_source_sha256": "22ab5030ac0e2b9212a51ac15ea6b8123f23ae8f7633edff75aef75b25c640c0",
+      "saved_characters": 11833,
+      "full_characters": 41724,
+      "selection_segments": [
+        {
+          "full_start": 26403,
+          "full_end": 38236,
+          "saved_start": 0,
+          "saved_end": 11833
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier AD-2024-00526-E"
+      ],
+      "related_ad_ids": [
+        "2026-07-06"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2026-08106",
+      "selected_for_scope_review": true
+    },
+    {
+      "document_id": "2026-04448",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; Rolls-Royce Deutschland Ltd & Co KG Engines",
+      "url": "https://www.federalregister.gov/documents/2026/03/06/2026-04448/airworthiness-directives-rolls-royce-deutschland-ltd-and-co-kg-engines",
+      "publication_date": "2026-03-06",
+      "effective_on": "2026-04-10",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2026-04448.full.txt",
+      "full_text_sha256": "7179a176ed7a170a00a02db74745ee067f9196504eb943b8c6b7756b3bc2e9f8",
+      "saved_source_path": "sources/2026-04448.selected.txt",
+      "saved_source_sha256": "c7132a837dd452439c5c2afc73c64112b1d524cbde64a02141f339d1fbf57cb6",
+      "saved_characters": 1911,
+      "full_characters": 17716,
+      "selection_segments": [
+        {
+          "full_start": 12457,
+          "full_end": 14368,
+          "saved_start": 0,
+          "saved_end": 1911
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier MCAI-2023-01122-E"
+      ],
+      "related_ad_ids": [
+        "2026-04-13"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2026-04448",
+      "selected_for_scope_review": true
+    },
+    {
+      "document_id": "2026-03613",
+      "status": "excluded_outside_engine_fault_scope"
+    },
+    {
+      "document_id": "2026-01152",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; CFM International, S.A. Engines",
+      "url": "https://www.federalregister.gov/documents/2026/01/22/2026-01152/airworthiness-directives-cfm-international-sa-engines",
+      "publication_date": "2026-01-22",
+      "effective_on": "2026-02-26",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2026-01152.full.txt",
+      "full_text_sha256": "d156c7840b44e863656e1e2801e563b0b711d2d05fd129dd6c02441e62fac326",
+      "saved_source_path": "sources/2026-01152.selected.txt",
+      "saved_source_sha256": "d708fdfbe080cdcc3d5155391b009a8ae78b594fa1890cf03c8293350ca03daa",
+      "saved_characters": 5635,
+      "full_characters": 27419,
+      "selection_segments": [
+        {
+          "full_start": 17147,
+          "full_end": 22782,
+          "saved_start": 0,
+          "saved_end": 5635
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier AD-2024-00797-E"
+      ],
+      "related_ad_ids": [
+        "2024-07-06",
+        "2026-02-04"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2026-01152",
+      "selected_for_scope_review": true
+    },
+    {
+      "document_id": "2026-01094",
+      "status": "excluded_outside_engine_fault_scope"
+    },
+    {
+      "document_id": "2026-00333",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; Rolls-Royce Deutschland Ltd & Co KG Engines",
+      "url": "https://www.federalregister.gov/documents/2026/01/12/2026-00333/airworthiness-directives-rolls-royce-deutschland-ltd-and-co-kg-engines",
+      "publication_date": "2026-01-12",
+      "effective_on": "2026-01-27",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2026-00333.full.txt",
+      "full_text_sha256": "b25b5e95c5d27f6408f173f632bddead5e69395550a56411cde90612dc59d996",
+      "saved_source_path": "sources/2026-00333.selected.txt",
+      "saved_source_sha256": "921f8c8307c0afec89b97176afbef57ab8cd4238dba0b4374517973fdc49f089",
+      "saved_characters": 2391,
+      "full_characters": 21005,
+      "selection_segments": [
+        {
+          "full_start": 15328,
+          "full_end": 17719,
+          "saved_start": 0,
+          "saved_end": 2391
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier MCAI-2024-00370-E"
+      ],
+      "related_ad_ids": [
+        "2025-26-03"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2026-00333",
+      "selected_for_scope_review": true
+    },
+    {
+      "document_id": "2026-00330",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; International Aero Engines LLC Engines",
+      "url": "https://www.federalregister.gov/documents/2026/01/12/2026-00330/airworthiness-directives-international-aero-engines-llc-engines",
+      "publication_date": "2026-01-12",
+      "effective_on": "2026-02-17",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2026-00330.full.txt",
+      "full_text_sha256": "40c6cdebbe9e0482fe3282a9de590fb809c48dcc7ad887fcd351cbd78bc7c2f6",
+      "saved_source_path": "sources/2026-00330.selected.txt",
+      "saved_source_sha256": "24de0111c80260a4dffcd28d86681c3b313ba077c8a19f6a29d86b841e9220c7",
+      "saved_characters": 3534,
+      "full_characters": 27518,
+      "selection_segments": [
+        {
+          "full_start": 20392,
+          "full_end": 23926,
+          "saved_start": 0,
+          "saved_end": 3534
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier AD-2024-00546-E"
+      ],
+      "related_ad_ids": [
+        "2025-26-04"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2026-00330",
+      "selected_for_scope_review": true
+    },
+    {
+      "document_id": "2025-24173",
+      "status": "excluded_outside_engine_fault_scope"
+    },
+    {
+      "document_id": "2025-22684",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; CFM International, S.A. Engines",
+      "url": "https://www.federalregister.gov/documents/2025/12/12/2025-22684/airworthiness-directives-cfm-international-sa-engines",
+      "publication_date": "2025-12-12",
+      "effective_on": "2025-12-29",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2025-22684.full.txt",
+      "full_text_sha256": "1d33ce0d1c9f567cce190a507bbab6db36723bf4d99d9bb42fc315bf52892b4a",
+      "saved_source_path": "sources/2025-22684.selected.txt",
+      "saved_source_sha256": "431212ac4b6dbdacb29d6cf04a7fe7ed7827d761d50eb79cb81baefab98e19b0",
+      "saved_characters": 5933,
+      "full_characters": 24157,
+      "selection_segments": [
+        {
+          "full_start": 14911,
+          "full_end": 20844,
+          "saved_start": 0,
+          "saved_end": 5933
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier AD-2025-00473-E"
+      ],
+      "related_ad_ids": [
+        "2022-17-12",
+        "2025-21-03"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2026-13979",
+      "selected_for_scope_review": false
+    },
+    {
+      "document_id": "2025-20598",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; Rolls-Royce Deutschland Ltd & Co KG Engines",
+      "url": "https://www.federalregister.gov/documents/2025/11/21/2025-20598/airworthiness-directives-rolls-royce-deutschland-ltd-and-co-kg-engines",
+      "publication_date": "2025-11-21",
+      "effective_on": "2025-12-08",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2025-20598.full.txt",
+      "full_text_sha256": "cdfcf7f7a923289b119f86f34e30910fcbc1a6e86e44ccd8145983b0a4e24be2",
+      "saved_source_path": "sources/2025-20598.selected.txt",
+      "saved_source_sha256": "6beb097e48194f5c70b68e278a9198da9bbd20ca52baebabdc0b1b965ee0c844",
+      "saved_characters": 1970,
+      "full_characters": 21805,
+      "selection_segments": [
+        {
+          "full_start": 16501,
+          "full_end": 18471,
+          "saved_start": 0,
+          "saved_end": 1970
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier MCAI-2025-01205-E"
+      ],
+      "related_ad_ids": [
+        "2025-23-10"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2025-20598",
+      "selected_for_scope_review": true
+    },
+    {
+      "document_id": "2025-18469",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; International Aero Engines AG Engines",
+      "url": "https://www.federalregister.gov/documents/2025/09/24/2025-18469/airworthiness-directives-international-aero-engines-ag-engines",
+      "publication_date": "2025-09-24",
+      "effective_on": "2025-10-29",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2025-18469.full.txt",
+      "full_text_sha256": "693bb67921b7cdf1e6b4f1e2b48b6a9a32c84069f4bb0f275ceacedb7fcb30c7",
+      "saved_source_path": "sources/2025-18469.selected.txt",
+      "saved_source_sha256": "8e67ae08750795fa0f28bbb8653dfe65b0bf6912b50edccc92089c6bf7d107bf",
+      "saved_characters": 3930,
+      "full_characters": 16363,
+      "selection_segments": [
+        {
+          "full_start": 10679,
+          "full_end": 14609,
+          "saved_start": 0,
+          "saved_end": 3930
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier AD-2025-00200-E"
+      ],
+      "related_ad_ids": [
+        "2025-19-13"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2025-18469",
+      "selected_for_scope_review": true
+    },
+    {
+      "document_id": "2025-17852",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; GE Aviation Czech s.r.o. (Type Certificate Previously Held by WALTER Engines a.s., Walter a.s., and MOTORLET a.s.) Engines",
+      "url": "https://www.federalregister.gov/documents/2025/09/16/2025-17852/airworthiness-directives-ge-aviation-czech-sro-type-certificate-previously-held-by-walter-engines-as",
+      "publication_date": "2025-09-16",
+      "effective_on": "2025-10-21",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2025-17852.full.txt",
+      "full_text_sha256": "3e248301249ac2b1e93fc2810fcb4120e4c22c156920f46c61652e473d7dcd51",
+      "saved_source_path": "sources/2025-17852.selected.txt",
+      "saved_source_sha256": "a648d3fa9ade22dbbede8a1b4bd1063306ef44ed6afc0fcd3a4f825d459cb801",
+      "saved_characters": 2363,
+      "full_characters": 19241,
+      "selection_segments": [
+        {
+          "full_start": 13778,
+          "full_end": 16141,
+          "saved_start": 0,
+          "saved_end": 2363
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier MCAI-2024-00608-E"
+      ],
+      "related_ad_ids": [
+        "2024-06-02",
+        "2025-18-08"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2025-17852",
+      "selected_for_scope_review": true
+    },
+    {
+      "document_id": "2025-17066",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; International Aero Engines AG Engines",
+      "url": "https://www.federalregister.gov/documents/2025/09/05/2025-17066/airworthiness-directives-international-aero-engines-ag-engines",
+      "publication_date": "2025-09-05",
+      "effective_on": "2025-10-10",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2025-17066.full.txt",
+      "full_text_sha256": "b8bbc6bd9a8d64bd856ab7a970aad04282de0e329ea5cb2560e0f93968559514",
+      "saved_source_path": "sources/2025-17066.selected.txt",
+      "saved_source_sha256": "9458deb1f1f5fd1502616a8592a1ee6729995cd6396de7b0e1633ed3f6718e37",
+      "saved_characters": 2922,
+      "full_characters": 19967,
+      "selection_segments": [
+        {
+          "full_start": 15306,
+          "full_end": 18228,
+          "saved_start": 0,
+          "saved_end": 2922
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier AD-2024-00320-E"
+      ],
+      "related_ad_ids": [
+        "2004-12-08",
+        "2025-17-16"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2025-17066",
+      "selected_for_scope_review": true
+    },
+    {
+      "document_id": "2025-13660",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; CFM International, S.A. Engines",
+      "url": "https://www.federalregister.gov/documents/2025/07/21/2025-13660/airworthiness-directives-cfm-international-sa-engines",
+      "publication_date": "2025-07-21",
+      "effective_on": "2025-08-25",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2025-13660.full.txt",
+      "full_text_sha256": "355264db4d3a592367e5c98a9beabe6b4098e6eb4bec6c84fc8c4395fab5b57c",
+      "saved_source_path": "sources/2025-13660.selected.txt",
+      "saved_source_sha256": "a1e5929f50caf608ccadb536587414852ffeae5695aaa9eb95b5b24ebfc4f10d",
+      "saved_characters": 4965,
+      "full_characters": 19854,
+      "selection_segments": [
+        {
+          "full_start": 11042,
+          "full_end": 16007,
+          "saved_start": 0,
+          "saved_end": 4965
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier AD-2024-00796-E"
+      ],
+      "related_ad_ids": [
+        "2023-23-12",
+        "2025-14-08"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2025-13660",
+      "selected_for_scope_review": true
+    },
+    {
+      "document_id": "2025-13644",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; General Electric Company Engines",
+      "url": "https://www.federalregister.gov/documents/2025/07/21/2025-13644/airworthiness-directives-general-electric-company-engines",
+      "publication_date": "2025-07-21",
+      "effective_on": "2025-08-25",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2025-13644.full.txt",
+      "full_text_sha256": "142c01fc6d83cced4aa369a34c34552969f683b2cfeb617b7dfde18dfbbafc9e",
+      "saved_source_path": "sources/2025-13644.selected.txt",
+      "saved_source_sha256": "f4cddac70f443ba84becdbf1f01e251fdcceaca3c9b29fe6ced91b1a72d2e9c9",
+      "saved_characters": 3481,
+      "full_characters": 17554,
+      "selection_segments": [
+        {
+          "full_start": 10797,
+          "full_end": 14278,
+          "saved_start": 0,
+          "saved_end": 3481
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier AD-2023-00995-E"
+      ],
+      "related_ad_ids": [
+        "2025-14-03"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2025-13644",
+      "selected_for_scope_review": true
+    },
+    {
+      "document_id": "2025-12332",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; Safran Helicopter Engines, S.A. (Type Certificate Previously Held by Turbomeca, S.A.) Engines",
+      "url": "https://www.federalregister.gov/documents/2025/07/02/2025-12332/airworthiness-directives-safran-helicopter-engines-sa-type-certificate-previously-held-by-turbomeca",
+      "publication_date": "2025-07-02",
+      "effective_on": "2025-08-06",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2025-12332.full.txt",
+      "full_text_sha256": "a715dc44ece7a644e594426137b3cd9da33bceadac81f58795e374af72cb175b",
+      "saved_source_path": "sources/2025-12332.selected.txt",
+      "saved_source_sha256": "8f54ed46e75217dedb6163ae1bb0ba73baaa348633b31334a5f932b1b7847ed5",
+      "saved_characters": 1731,
+      "full_characters": 17729,
+      "selection_segments": [
+        {
+          "full_start": 12713,
+          "full_end": 14444,
+          "saved_start": 0,
+          "saved_end": 1731
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier MCAI-2024-00636-E"
+      ],
+      "related_ad_ids": [
+        "2025-13-07"
+      ],
+      "detailed_actions_present": false,
+      "limited_incorporation_by_reference": true,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2025-12332",
+      "selected_for_scope_review": true
+    },
+    {
+      "document_id": "2025-11340",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; CFM International, S.A. Engines",
+      "url": "https://www.federalregister.gov/documents/2025/06/20/2025-11340/airworthiness-directives-cfm-international-sa-engines",
+      "publication_date": "2025-06-20",
+      "effective_on": "2025-07-25",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2025-11340.full.txt",
+      "full_text_sha256": "dd285e5921747594cb60dc2ca38ea2c6157c93e02c0fabc52f57d7956f24e342",
+      "saved_source_path": "sources/2025-11340.selected.txt",
+      "saved_source_sha256": "c4d7a50f1adebf1ef375d14d6a82b1a3d2608b1bd54ccf0292d04082988657b2",
+      "saved_characters": 5668,
+      "full_characters": 22851,
+      "selection_segments": [
+        {
+          "full_start": 13281,
+          "full_end": 18949,
+          "saved_start": 0,
+          "saved_end": 5668
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier AD-2024-00561-E"
+      ],
+      "related_ad_ids": [
+        "2023-09-06",
+        "2025-12-03"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2025-11340",
+      "selected_for_scope_review": true
+    },
+    {
+      "document_id": "2025-11206",
+      "status": "excluded_outside_engine_fault_scope"
+    },
+    {
+      "document_id": "2025-10024",
+      "status": "excluded_outside_engine_fault_scope"
+    },
+    {
+      "document_id": "2025-09205",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; General Electric Company Engines",
+      "url": "https://www.federalregister.gov/documents/2025/05/22/2025-09205/airworthiness-directives-general-electric-company-engines",
+      "publication_date": "2025-05-22",
+      "effective_on": "2025-06-26",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2025-09205.full.txt",
+      "full_text_sha256": "f7c2f4cc0341ed482b7189128838d93cc64a7d9429430f453c1452f9d8da16d5",
+      "saved_source_path": "sources/2025-09205.selected.txt",
+      "saved_source_sha256": "f4c76253507c1d35c607a276e1f8259a74fa4ba3ea1dc6d96985b729c71688f3",
+      "saved_characters": 2251,
+      "full_characters": 18768,
+      "selection_segments": [
+        {
+          "full_start": 13265,
+          "full_end": 15516,
+          "saved_start": 0,
+          "saved_end": 2251
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier AD-2023-01120-E"
+      ],
+      "related_ad_ids": [
+        "2025-10-04"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2025-09205",
+      "selected_for_scope_review": true
+    },
+    {
+      "document_id": "2025-09007",
+      "status": "excluded_outside_engine_fault_scope"
+    },
+    {
+      "document_id": "2025-06420",
+      "status": "excluded_outside_engine_fault_scope"
+    },
+    {
+      "document_id": "2025-04445",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; Rolls-Royce Deutschland Ltd & Co KG Engines",
+      "url": "https://www.federalregister.gov/documents/2025/03/19/2025-04445/airworthiness-directives-rolls-royce-deutschland-ltd-and-co-kg-engines",
+      "publication_date": "2025-03-19",
+      "effective_on": "2025-04-23",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2025-04445.full.txt",
+      "full_text_sha256": "5d43b00477cfd3b872a90bda607fc6037d93d258fa198747b7a2df8a645c1c9d",
+      "saved_source_path": "sources/2025-04445.selected.txt",
+      "saved_source_sha256": "551fcf2c3c066df50b83fabb982a88829fe77966981330cfcd5d828c0a882d56",
+      "saved_characters": 2026,
+      "full_characters": 16913,
+      "selection_segments": [
+        {
+          "full_start": 11536,
+          "full_end": 13562,
+          "saved_start": 0,
+          "saved_end": 2026
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier MCAI-2023-01211-E"
+      ],
+      "related_ad_ids": [
+        "2022-24-06",
+        "2022-26-02",
+        "2025-06-03"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2025-04445",
+      "selected_for_scope_review": true
+    },
+    {
+      "document_id": "2025-04441",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; Pratt & Whitney Canada Corp. Engines",
+      "url": "https://www.federalregister.gov/documents/2025/03/19/2025-04441/airworthiness-directives-pratt-and-whitney-canada-corp-engines",
+      "publication_date": "2025-03-19",
+      "effective_on": "2025-04-23",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2025-04441.full.txt",
+      "full_text_sha256": "368433f7f2524276060c344b3c000071ecd49a85472b9ec5bde51e49e1061180",
+      "saved_source_path": "sources/2025-04441.selected.txt",
+      "saved_source_sha256": "fef5262aec298e660007e573c59e6d81be3eb527750fb2caccff690e6b6cbc2d",
+      "saved_characters": 2910,
+      "full_characters": 17708,
+      "selection_segments": [
+        {
+          "full_start": 11285,
+          "full_end": 14195,
+          "saved_start": 0,
+          "saved_end": 2910
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier MCAI-2023-00971-E"
+      ],
+      "related_ad_ids": [
+        "2025-05-13"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2025-04441",
+      "selected_for_scope_review": true
+    },
+    {
+      "document_id": "2025-04214",
+      "status": "excluded_outside_engine_fault_scope"
+    },
+    {
+      "document_id": "2025-03988",
+      "status": "excluded_outside_engine_fault_scope"
+    },
+    {
+      "document_id": "2025-03987",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; General Electric Company Engines",
+      "url": "https://www.federalregister.gov/documents/2025/03/13/2025-03987/airworthiness-directives-general-electric-company-engines",
+      "publication_date": "2025-03-13",
+      "effective_on": "2025-04-17",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2025-03987.full.txt",
+      "full_text_sha256": "7432f531a14fcb441cf4dca57cc6d76c301c3ba04969c280ac4f1c5433bd9341",
+      "saved_source_path": "sources/2025-03987.selected.txt",
+      "saved_source_sha256": "641728cd514a757ec3c78bc8ad0a0493f7f4c26569e32c8748b4572db6931c02",
+      "saved_characters": 1535,
+      "full_characters": 10521,
+      "selection_segments": [
+        {
+          "full_start": 7209,
+          "full_end": 8744,
+          "saved_start": 0,
+          "saved_end": 1535
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier AD-2024-00334-E"
+      ],
+      "related_ad_ids": [],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2025-03987",
+      "selected_for_scope_review": true
+    },
+    {
+      "document_id": "2025-03459",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; CFM International, S.A. Engines",
+      "url": "https://www.federalregister.gov/documents/2025/03/04/2025-03459/airworthiness-directives-cfm-international-sa-engines",
+      "publication_date": "2025-03-04",
+      "effective_on": "2025-04-08",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2025-03459.full.txt",
+      "full_text_sha256": "b6bccf3dec43cb664fb45dd272e80a19e6757e76bcacbe7846ef2b454430016c",
+      "saved_source_path": "sources/2025-03459.selected.txt",
+      "saved_source_sha256": "490667a9516a85ddc82434917540003679e437e24f2ee75b3dbe66c8a01a12fe",
+      "saved_characters": 4549,
+      "full_characters": 17773,
+      "selection_segments": [
+        {
+          "full_start": 9739,
+          "full_end": 14288,
+          "saved_start": 0,
+          "saved_end": 4549
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier AD-2024-00416-E"
+      ],
+      "related_ad_ids": [
+        "2025-04-12"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2025-03459",
+      "selected_for_scope_review": true
+    },
+    {
+      "document_id": "2025-03441",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; Pratt & Whitney Engines",
+      "url": "https://www.federalregister.gov/documents/2025/03/04/2025-03441/airworthiness-directives-pratt-and-whitney-engines",
+      "publication_date": "2025-03-04",
+      "effective_on": "2025-04-08",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2025-03441.full.txt",
+      "full_text_sha256": "8e1fde3aa973f5136f23e6db246b9797da7385a8ba0a2e9e82de76ef87cf9eed",
+      "saved_source_path": "sources/2025-03441.selected.txt",
+      "saved_source_sha256": "765f5050f164c401aae5ef8c0947b2fe6cde5a3f6b1456585f5eff559f883cab",
+      "saved_characters": 5141,
+      "full_characters": 27029,
+      "selection_segments": [
+        {
+          "full_start": 18301,
+          "full_end": 23442,
+          "saved_start": 0,
+          "saved_end": 5141
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier AD-2024-00163-E"
+      ],
+      "related_ad_ids": [
+        "2025-04-13"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2025-03441",
+      "selected_for_scope_review": true
+    },
+    {
+      "document_id": "2025-03383",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; General Electric Company Engines",
+      "url": "https://www.federalregister.gov/documents/2025/03/04/2025-03383/airworthiness-directives-general-electric-company-engines",
+      "publication_date": "2025-03-04",
+      "effective_on": "2025-04-08",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2025-03383.full.txt",
+      "full_text_sha256": "e60b0eeb25b8a4c3e7d701a7c33aeb72fcf422f8266bc5d5d4a25bfdd769aa23",
+      "saved_source_path": "sources/2025-03383.selected.txt",
+      "saved_source_sha256": "b4eedf3b8e8a39bad4f59ce1ab428f592deddc649e6c88fda7c33188f29080d4",
+      "saved_characters": 4242,
+      "full_characters": 13244,
+      "selection_segments": [
+        {
+          "full_start": 7251,
+          "full_end": 11493,
+          "saved_start": 0,
+          "saved_end": 4242
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier AD-2024-00343-E"
+      ],
+      "related_ad_ids": [
+        "2025-05-02"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2025-03383",
+      "selected_for_scope_review": true
+    },
+    {
+      "document_id": "2025-03009",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; Rolls-Royce Deutschland Ltd & Co KG Engines",
+      "url": "https://www.federalregister.gov/documents/2025/02/25/2025-03009/airworthiness-directives-rolls-royce-deutschland-ltd-and-co-kg-engines",
+      "publication_date": "2025-02-25",
+      "effective_on": "2025-04-01",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2025-03009.full.txt",
+      "full_text_sha256": "eca40adbf721a9445f92d5b566283aeca9ecb4bc3aa0f831c8f5f63eb99cf5c5",
+      "saved_source_path": "sources/2025-03009.selected.txt",
+      "saved_source_sha256": "9e27eb2c6d95f26f1628bcddd239fdca0ceaff4f898e99ad6bb2bd30b32b2122",
+      "saved_characters": 2008,
+      "full_characters": 16477,
+      "selection_segments": [
+        {
+          "full_start": 11134,
+          "full_end": 13142,
+          "saved_start": 0,
+          "saved_end": 2008
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier MCAI-2024-00530-E"
+      ],
+      "related_ad_ids": [
+        "2025-02-14"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2025-03009",
+      "selected_for_scope_review": true
+    },
+    {
+      "document_id": "2025-02204",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; CFM International, S.A. Engines",
+      "url": "https://www.federalregister.gov/documents/2025/02/04/2025-02204/airworthiness-directives-cfm-international-sa-engines",
+      "publication_date": "2025-02-04",
+      "effective_on": "2025-03-11",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2025-02204.full.txt",
+      "full_text_sha256": "6621951b735b82954c1d3c4bc5db9b9bef66d55ea231a7d6a2ace106bc1502bb",
+      "saved_source_path": "sources/2025-02204.selected.txt",
+      "saved_source_sha256": "5c99ca61f7c6799c72e632a4dba70a81dc688df86a3d164b835929da2fb19daa",
+      "saved_characters": 4167,
+      "full_characters": 16804,
+      "selection_segments": [
+        {
+          "full_start": 9261,
+          "full_end": 13428,
+          "saved_start": 0,
+          "saved_end": 4167
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier AD-2024-00412-E"
+      ],
+      "related_ad_ids": [
+        "2025-01-03"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2025-02204",
+      "selected_for_scope_review": true
+    },
+    {
+      "document_id": "2025-02031",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; Rolls-Royce Deutschland Ltd & Co KG Engines",
+      "url": "https://www.federalregister.gov/documents/2025/01/31/2025-02031/airworthiness-directives-rolls-royce-deutschland-ltd-and-co-kg-engines",
+      "publication_date": "2025-01-31",
+      "effective_on": "2025-02-18",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2025-02031.full.txt",
+      "full_text_sha256": "03fa22c368d3059de02f711c9851425c847873902eb9e2ea3c49f9c0e9923d8e",
+      "saved_source_path": "sources/2025-02031.selected.txt",
+      "saved_source_sha256": "93924aa9db60409b006957c4184e819243457812c7a2cefa263f0ae651787fe3",
+      "saved_characters": 1485,
+      "full_characters": 19136,
+      "selection_segments": [
+        {
+          "full_start": 14403,
+          "full_end": 15888,
+          "saved_start": 0,
+          "saved_end": 1485
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier MCAI-2024-00518-E"
+      ],
+      "related_ad_ids": [
+        "2024-25-10"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2025-02031",
+      "selected_for_scope_review": true
+    },
+    {
+      "document_id": "2025-00208",
+      "status": "excluded_no_anchored_applicability"
+    },
+    {
+      "document_id": "2025-00207",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; CFM International, S.A. Engines",
+      "url": "https://www.federalregister.gov/documents/2025/01/08/2025-00207/airworthiness-directives-cfm-international-sa-engines",
+      "publication_date": "2025-01-08",
+      "effective_on": "2025-02-12",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2025-00207.full.txt",
+      "full_text_sha256": "fa076e188bca6198bfdcc8ea8a9b005ff547ecaafabeb8bd8c21a07620a3fb92",
+      "saved_source_path": "sources/2025-00207.selected.txt",
+      "saved_source_sha256": "8b2d823120e4c2ec6c8c2ca265263c60d081e71c8eecb46f25d450601a3a4e12",
+      "saved_characters": 4364,
+      "full_characters": 26793,
+      "selection_segments": [
+        {
+          "full_start": 19104,
+          "full_end": 23468,
+          "saved_start": 0,
+          "saved_end": 4364
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier AD-2023-01013-E"
+      ],
+      "related_ad_ids": [
+        "2024-25-02"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2025-00207",
+      "selected_for_scope_review": true
+    },
+    {
+      "document_id": "2024-28094",
+      "status": "excluded_outside_engine_fault_scope"
+    },
+    {
+      "document_id": "2024-27641",
+      "status": "excluded_no_anchored_applicability"
+    },
+    {
+      "document_id": "2024-24505",
+      "status": "excluded_no_anchored_applicability"
+    },
+    {
+      "document_id": "2024-24365",
+      "status": "excluded_outside_engine_fault_scope"
+    },
+    {
+      "document_id": "2024-21408",
+      "status": "excluded_outside_engine_fault_scope"
+    },
+    {
+      "document_id": "2024-15466",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; International Aero Engines, LLC",
+      "url": "https://www.federalregister.gov/documents/2024/07/16/2024-15466/airworthiness-directives-international-aero-engines-llc",
+      "publication_date": "2024-07-16",
+      "effective_on": "2024-08-20",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2024-15466.full.txt",
+      "full_text_sha256": "5953ee8495da8ff111cceb544d7234ffeff95a9f19f0f8fa6378e5d835def964",
+      "saved_source_path": "sources/2024-15466.selected.txt",
+      "saved_source_sha256": "444348387c029955fb9f8e9abe0451042902963b0c54410fb4f2fb2c3af0e0cb",
+      "saved_characters": 2360,
+      "full_characters": 18674,
+      "selection_segments": [
+        {
+          "full_start": 14562,
+          "full_end": 16922,
+          "saved_start": 0,
+          "saved_end": 2360
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier AD-2023-00924-E"
+      ],
+      "related_ad_ids": [
+        "2024-14-04"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2024-15466",
+      "selected_for_scope_review": true
+    },
+    {
+      "document_id": "2024-14939",
+      "status": "excluded_outside_engine_fault_scope"
+    },
+    {
+      "document_id": "2024-14936",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; Pratt & Whitney Engines",
+      "url": "https://www.federalregister.gov/documents/2024/07/09/2024-14936/airworthiness-directives-pratt-and-whitney-engines",
+      "publication_date": "2024-07-09",
+      "effective_on": "2024-08-13",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2024-14936.full.txt",
+      "full_text_sha256": "83325bdb224683bf271308b2ccad180972201a1e56327ddd25d5c68ae4dae3ff",
+      "saved_source_path": "sources/2024-14936.selected.txt",
+      "saved_source_sha256": "1af1d77c07ae08331d4ca1467726e0c5917335ab35b85d20f64a3af6186c6010",
+      "saved_characters": 2117,
+      "full_characters": 36776,
+      "selection_segments": [
+        {
+          "full_start": 30553,
+          "full_end": 32670,
+          "saved_start": 0,
+          "saved_end": 2117
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier AD-2022-00283-E"
+      ],
+      "related_ad_ids": [
+        "2024-12-04"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2024-14936",
+      "selected_for_scope_review": true
+    },
+    {
+      "document_id": "2024-12594",
+      "status": "excluded_technical_length",
+      "characters": 13479
+    },
+    {
+      "document_id": "2024-11326",
+      "status": "excluded_outside_engine_fault_scope"
+    },
+    {
+      "document_id": "2024-10093",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; General Electric Company Engines",
+      "url": "https://www.federalregister.gov/documents/2024/05/13/2024-10093/airworthiness-directives-general-electric-company-engines",
+      "publication_date": "2024-05-13",
+      "effective_on": "2024-05-14",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2024-10093.full.txt",
+      "full_text_sha256": "c8ad2a9de693c48d454a379d1cfccf83db6a7b4c7eab0de59674e3cb0c7526e2",
+      "saved_source_path": "sources/2024-10093.selected.txt",
+      "saved_source_sha256": "d29a6aa34b25802135c2e13bef69dd8651a63c10068e5ce5b983bbc7fe6c387b",
+      "saved_characters": 2456,
+      "full_characters": 14018,
+      "selection_segments": [
+        {
+          "full_start": 8160,
+          "full_end": 10616,
+          "saved_start": 0,
+          "saved_end": 2456
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier AD-2023-01251-E"
+      ],
+      "related_ad_ids": [
+        "2024-06-15"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2024-10093",
+      "selected_for_scope_review": true
+    },
+    {
+      "document_id": "2024-09564",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; CFM International, S.A. Engines",
+      "url": "https://www.federalregister.gov/documents/2024/05/06/2024-09564/airworthiness-directives-cfm-international-sa-engines",
+      "publication_date": "2024-05-06",
+      "effective_on": "2024-06-10",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2024-09564.full.txt",
+      "full_text_sha256": "c2c6e7341c22cd08a65f33420a18107d0073ed1bed73283a85ebd9d2220315bf",
+      "saved_source_path": "sources/2024-09564.selected.txt",
+      "saved_source_sha256": "d8c89dcfcfa35b8385fa93330ef38291f463ee020d37bfd4407615ee449c87f9",
+      "saved_characters": 2125,
+      "full_characters": 14280,
+      "selection_segments": [
+        {
+          "full_start": 8478,
+          "full_end": 10603,
+          "saved_start": 0,
+          "saved_end": 2125
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier AD-2023-01066-E"
+      ],
+      "related_ad_ids": [
+        "2024-07-02"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2024-09564",
+      "selected_for_scope_review": false
+    },
+    {
+      "document_id": "2024-09110",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; CFM International, S.A. Engines",
+      "url": "https://www.federalregister.gov/documents/2024/04/29/2024-09110/airworthiness-directives-cfm-international-sa-engines",
+      "publication_date": "2024-04-29",
+      "effective_on": "2024-06-03",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2024-09110.full.txt",
+      "full_text_sha256": "a9c5d05441341635ad596857ccf695ad663894fe93007ae18e41241313ae7d81",
+      "saved_source_path": "sources/2024-09110.selected.txt",
+      "saved_source_sha256": "02b77e20e9ea7d2a13c9505e506dc41728f747c985148b0dcf13609e16288c28",
+      "saved_characters": 4569,
+      "full_characters": 32350,
+      "selection_segments": [
+        {
+          "full_start": 23301,
+          "full_end": 27870,
+          "saved_start": 0,
+          "saved_end": 4569
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier AD-2023-00700-E"
+      ],
+      "related_ad_ids": [
+        "2024-07-06"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2026-01152",
+      "selected_for_scope_review": false
+    },
+    {
+      "document_id": "2024-09109",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; General Electric Company Engines",
+      "url": "https://www.federalregister.gov/documents/2024/04/29/2024-09109/airworthiness-directives-general-electric-company-engines",
+      "publication_date": "2024-04-29",
+      "effective_on": "2024-05-14",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2024-09109.full.txt",
+      "full_text_sha256": "fccef33adbfaf3257cd7eb20cb4c20392c4a0810124e74061b69aa702be49e00",
+      "saved_source_path": "sources/2024-09109.selected.txt",
+      "saved_source_sha256": "060dfdae21bc7af38c731cb12dc7724c0b53b9442fbada95d9a292ea30e29d01",
+      "saved_characters": 2462,
+      "full_characters": 19528,
+      "selection_segments": [
+        {
+          "full_start": 13663,
+          "full_end": 16125,
+          "saved_start": 0,
+          "saved_end": 2462
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier AD-2023-01251-E"
+      ],
+      "related_ad_ids": [
+        "2019-21-51",
+        "2020-01-55",
+        "2020-10-04",
+        "2024-06-15"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2024-10093",
+      "selected_for_scope_review": false
+    },
+    {
+      "document_id": "2024-09104",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; International Aero Engines, LLC Engines",
+      "url": "https://www.federalregister.gov/documents/2024/04/29/2024-09104/airworthiness-directives-international-aero-engines-llc-engines",
+      "publication_date": "2024-04-29",
+      "effective_on": "2024-06-03",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2024-09104.full.txt",
+      "full_text_sha256": "5ae47c1de5deda3fcb118fffd3328e206a8560eecf11ef5eca3a105cb8cc4340",
+      "saved_source_path": "sources/2024-09104.selected.txt",
+      "saved_source_sha256": "891a9d579755f40386b340f90508af429cfe1848133fe0cb7d27de03b5d2beb7",
+      "saved_characters": 2958,
+      "full_characters": 18789,
+      "selection_segments": [
+        {
+          "full_start": 12110,
+          "full_end": 15068,
+          "saved_start": 0,
+          "saved_end": 2958
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier AD-2023-00512-E"
+      ],
+      "related_ad_ids": [
+        "2024-06-14"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2024-09104",
+      "selected_for_scope_review": false
+    },
+    {
+      "document_id": "2024-07872",
+      "status": "excluded_outside_engine_fault_scope"
+    },
+    {
+      "document_id": "2024-07433",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; Rolls-Royce Deutschland Ltd & Co KG Engines",
+      "url": "https://www.federalregister.gov/documents/2024/04/09/2024-07433/airworthiness-directives-rolls-royce-deutschland-ltd-and-co-kg-engines",
+      "publication_date": "2024-04-09",
+      "effective_on": "2024-04-15",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2024-07433.full.txt",
+      "full_text_sha256": "84c804e6e176a6ee43ec1b885f50e46637a3efc5751a92f30c9bb5dce5ac4fbc",
+      "saved_source_path": "sources/2024-07433.selected.txt",
+      "saved_source_sha256": "d2e8fe357be3555c895514d65c3a7d9e0e81ee3c724afbc83e3b99911746f236",
+      "saved_characters": 2121,
+      "full_characters": 19405,
+      "selection_segments": [
+        {
+          "full_start": 14194,
+          "full_end": 16315,
+          "saved_start": 0,
+          "saved_end": 2121
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier MCAI-2024-00178-E"
+      ],
+      "related_ad_ids": [
+        "2024-07-04"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2024-07433",
+      "selected_for_scope_review": false
+    },
+    {
+      "document_id": "2024-07438",
+      "status": "excluded_outside_engine_fault_scope"
+    },
+    {
+      "document_id": "2024-06433",
+      "status": "excluded_technical_length",
+      "characters": 19374
+    },
+    {
+      "document_id": "2024-06430",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; GE Aviation Czech s.r.o. (Type Certificate Previously Held by WALTER Engines a.s., Walter a.s., and MOTORLET a.s.) Engines",
+      "url": "https://www.federalregister.gov/documents/2024/03/27/2024-06430/airworthiness-directives-ge-aviation-czech-sro-type-certificate-previously-held-by-walter-engines-as",
+      "publication_date": "2024-03-27",
+      "effective_on": "2024-04-11",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2024-06430.full.txt",
+      "full_text_sha256": "d4d1a6dcdc70e785240c48d93a897e5de4da62452e4365d598b92fbe61ee67dd",
+      "saved_source_path": "sources/2024-06430.selected.txt",
+      "saved_source_sha256": "28fd1c42c093648ca286521502d474a9d5c4307a1cef783b28449beed7162623",
+      "saved_characters": 1599,
+      "full_characters": 21715,
+      "selection_segments": [
+        {
+          "full_start": 16768,
+          "full_end": 18367,
+          "saved_start": 0,
+          "saved_end": 1599
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier MCAI-2024-00095-E"
+      ],
+      "related_ad_ids": [
+        "2024-06-02"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2025-17852",
+      "selected_for_scope_review": false
+    },
+    {
+      "document_id": "2024-06419",
+      "status": "excluded_technical_length",
+      "characters": 24263
+    },
+    {
+      "document_id": "2024-06080",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; CFM International, S.A. Engines",
+      "url": "https://www.federalregister.gov/documents/2024/03/22/2024-06080/airworthiness-directives-cfm-international-sa-engines",
+      "publication_date": "2024-03-22",
+      "effective_on": "2024-03-25",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2024-06080.full.txt",
+      "full_text_sha256": "d32a632debbc989c4978df14f9c4bff7477d87ce0e023a2c48e13b9581d49d92",
+      "saved_source_path": "sources/2024-06080.selected.txt",
+      "saved_source_sha256": "799e9d2675cb86adaf0301189d7c67e7b7727e752beac23cd63e10c80af8ed00",
+      "saved_characters": 10715,
+      "full_characters": 25647,
+      "selection_segments": [
+        {
+          "full_start": 13172,
+          "full_end": 23887,
+          "saved_start": 0,
+          "saved_end": 10715
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier AD-2024-00175-E"
+      ],
+      "related_ad_ids": [
+        "2024-06-09"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2024-06080",
+      "selected_for_scope_review": false
+    },
+    {
+      "document_id": "2024-05547",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; General Electric Company Engines, and Various Restricted Category Rotorcraft",
+      "url": "https://www.federalregister.gov/documents/2024/03/15/2024-05547/airworthiness-directives-general-electric-company-engines-and-various-restricted-category-rotorcraft",
+      "publication_date": "2024-03-15",
+      "effective_on": "2024-04-01",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2024-05547.full.txt",
+      "full_text_sha256": "84875188874ebadc986ab0e654cf61e31eac37aeaea603f96fe46d49a5bd90e5",
+      "saved_source_path": "sources/2024-05547.selected.txt",
+      "saved_source_sha256": "bed68cee669c5de2db9e2dfbf894c3ccf3e7afcd83d928494d896d815f2a9586",
+      "saved_characters": 5277,
+      "full_characters": 25915,
+      "selection_segments": [
+        {
+          "full_start": 17158,
+          "full_end": 22435,
+          "saved_start": 0,
+          "saved_end": 5277
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier AD-2024-00139-E,R"
+      ],
+      "related_ad_ids": [
+        "2024-05-51"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2024-05547",
+      "selected_for_scope_review": false
+    },
+    {
+      "document_id": "2024-05247",
+      "status": "excluded_outside_engine_fault_scope"
+    },
+    {
+      "document_id": "2024-05238",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; Pratt & Whitney Canada Corp. Engines",
+      "url": "https://www.federalregister.gov/documents/2024/03/13/2024-05238/airworthiness-directives-pratt-and-whitney-canada-corp-engines",
+      "publication_date": "2024-03-13",
+      "effective_on": "2024-03-28",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2024-05238.full.txt",
+      "full_text_sha256": "845471926ded032b293b89f807753fe39f38f74418cb8e701ac8b647f152a960",
+      "saved_source_path": "sources/2024-05238.selected.txt",
+      "saved_source_sha256": "be7c839e2d99e5d5c51a53211d2fea82f96e2d7450bbadd732f2b53fd56b4c36",
+      "saved_characters": 1678,
+      "full_characters": 22093,
+      "selection_segments": [
+        {
+          "full_start": 16856,
+          "full_end": 18534,
+          "saved_start": 0,
+          "saved_end": 1678
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier MCAI-2024-00116-E"
+      ],
+      "related_ad_ids": [
+        "2024-04-51"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2024-05238",
+      "selected_for_scope_review": false
+    },
+    {
+      "document_id": "2024-03562",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; GE Aviation Czech s.r.o. (Type Certificate Previously Held by WALTER Engines a.s., Walter a.s., and MOTORLET a.s.) Engines",
+      "url": "https://www.federalregister.gov/documents/2024/02/22/2024-03562/airworthiness-directives-ge-aviation-czech-sro-type-certificate-previously-held-by-walter-engines-as",
+      "publication_date": "2024-02-22",
+      "effective_on": "2024-03-28",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2024-03562.full.txt",
+      "full_text_sha256": "e485693ea73666cde2b9a5f5628184737cd49936a5f13b65857a2b39b0994e9a",
+      "saved_source_path": "sources/2024-03562.selected.txt",
+      "saved_source_sha256": "1dd529e77af1e06f584e8c4944d34d2e64f18ee504704fcac972379cd2cdbe4d",
+      "saved_characters": 1594,
+      "full_characters": 16126,
+      "selection_segments": [
+        {
+          "full_start": 11173,
+          "full_end": 12767,
+          "saved_start": 0,
+          "saved_end": 1594
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier MCAI-2023-00176-E"
+      ],
+      "related_ad_ids": [
+        "2021-13-07",
+        "2024-02-04"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2024-03562",
+      "selected_for_scope_review": false
+    },
+    {
+      "document_id": "2024-03442",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; Pratt & Whitney Canada Corp. Engines",
+      "url": "https://www.federalregister.gov/documents/2024/02/21/2024-03442/airworthiness-directives-pratt-and-whitney-canada-corp-engines",
+      "publication_date": "2024-02-21",
+      "effective_on": "2024-03-27",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2024-03442.full.txt",
+      "full_text_sha256": "cac7292be30a239b725e0e4ae5cc40ef928262e35dd91ab036d25428e736beea",
+      "saved_source_path": "sources/2024-03442.selected.txt",
+      "saved_source_sha256": "cb0e7c6a40c8ce39208262c3dfefddd4610bf6d00fc41120f3d0d476826c6dfb",
+      "saved_characters": 2591,
+      "full_characters": 16660,
+      "selection_segments": [
+        {
+          "full_start": 10534,
+          "full_end": 13125,
+          "saved_start": 0,
+          "saved_end": 2591
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier MCAI-2023-00663-E"
+      ],
+      "related_ad_ids": [
+        "2020-07-51",
+        "2024-03-01"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2024-03442",
+      "selected_for_scope_review": false
+    },
+    {
+      "document_id": "2024-01218",
+      "status": "excluded_outside_engine_fault_scope"
+    },
+    {
+      "document_id": "2024-01166",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; General Electric Company Engines",
+      "url": "https://www.federalregister.gov/documents/2024/01/23/2024-01166/airworthiness-directives-general-electric-company-engines",
+      "publication_date": "2024-01-23",
+      "effective_on": "2024-02-27",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2024-01166.full.txt",
+      "full_text_sha256": "92dae1d9c8f6e788c19fae1e6ab43b4b5bde5079833009bd53b4bbc0c577572b",
+      "saved_source_path": "sources/2024-01166.selected.txt",
+      "saved_source_sha256": "8da4fc98500d3bd7b231bad1fc89c1e6abf4aa27e597eeb8bc903faa353bb726",
+      "saved_characters": 3509,
+      "full_characters": 20405,
+      "selection_segments": [
+        {
+          "full_start": 13512,
+          "full_end": 17021,
+          "saved_start": 0,
+          "saved_end": 3509
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier AD-2023-00487-E"
+      ],
+      "related_ad_ids": [
+        "2023-26-07"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2024-01166",
+      "selected_for_scope_review": false
+    },
+    {
+      "document_id": "2023-28861",
+      "source_agency": "FAA/FederalRegister",
+      "source_type": "historical_final_airworthiness_directive",
+      "title": "Airworthiness Directives; Rolls-Royce Deutschland Ltd & Co KG Engines",
+      "url": "https://www.federalregister.gov/documents/2024/01/03/2023-28861/airworthiness-directives-rolls-royce-deutschland-ltd-and-co-kg-engines",
+      "publication_date": "2024-01-03",
+      "effective_on": "2024-02-07",
+      "status": "source_candidate_pending_independent_scope_review",
+      "candidate_used": false,
+      "questions_authored": false,
+      "full_text_path": "sources/2023-28861.full.txt",
+      "full_text_sha256": "e29162982e6b5bfb9d68bd735195aec172950241314fe25ec85a68baa6986140",
+      "saved_source_path": "sources/2023-28861.selected.txt",
+      "saved_source_sha256": "a2d18fefda81a93d34ede7af02ad9d0627548cc59154b73aaa1e25ea200c745f",
+      "saved_characters": 1722,
+      "full_characters": 16709,
+      "selection_segments": [
+        {
+          "full_start": 11626,
+          "full_end": 13348,
+          "saved_start": 0,
+          "saved_end": 1722
+        }
+      ],
+      "project_identifiers": [
+        "Project Identifier MCAI-2023-00626-E"
+      ],
+      "related_ad_ids": [
+        "2023-26-04"
+      ],
+      "detailed_actions_present": true,
+      "limited_incorporation_by_reference": false,
+      "language": "en",
+      "expert_reviewed": false,
+      "limitation": "Saved clauses only; incorporated EASA/manufacturer documents not captured; do not invent absent thresholds or treat historical rule as current legal advice",
+      "source_cluster": "2026-11179",
+      "selected_for_scope_review": false
+    }
+  ],
+  "selected_candidates": 40,
+  "selected_clusters": 40,
+  "selected_characters": 133780,
+  "questions_authored": 0,
+  "independent_predictions": 0,
+  "paid_api_calls": 0,
+  "distribution": "New FAA final-rule maintenance-document retrieval; differs from accident-report development; must report domain shift separately"
+}

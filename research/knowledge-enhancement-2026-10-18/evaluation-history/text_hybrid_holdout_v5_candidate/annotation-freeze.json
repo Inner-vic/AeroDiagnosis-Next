@@ -1,0 +1,15 @@
+{
+  "created_at_utc": "2026-10-15T03:36:19.542401+00:00",
+  "status": "source_verified_labels_frozen_before_predictions_and_before_final_translation_completion",
+  "expert_reviewed": false,
+  "file_sha256": {
+    "source_manifest.json": "25c60cb7415f995de8711d8a1e174253ff2f3d2729b6fa514395babd93243f43",
+    "queries.jsonl": "7eed81ded662342f57c7361313833304c715449c66c1b5276c589233197d35ec",
+    "selection-ledger-before-questions.json": "efb10b82b6d0080afcde87f09fc78644674bdf6be5cfca33323a8558d6e944b6",
+    "source-exclusion-ledger.json": "497ad723958cc9c6557bbb9a8a3b4b63d686ae6c10ba888f1f0e53a77c1ef164",
+    "annotation-review-notes.json": "f57a843515842bb6fc20418a317f9990cec0d00d41c3c0b8f24f80654fb3814d",
+    "root-source-review.json": "eecd060c5769e46cb03d8399de8d6d57a6ddaadece8a5c3407c6c2c75e8f526c",
+    "validation.json": "8bca4ffacd55cf128b1f566308e02791ea0da56bae51d08f730586b67ecf0550"
+  },
+  "source_preparation_amendment_sha256": "080837e497309b8a6e4084e9ddd65b6f2387a07451eed6911c7b1118ed1f02c5"
+}

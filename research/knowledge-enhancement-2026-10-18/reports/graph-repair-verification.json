@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-14",
+  "active_documents": 12,
+  "active_chunks": 102,
+  "active_nodes": 144,
+  "active_relations": 72,
+  "snapshot_sha256": "25a4a19ad55485f3bcebb9c2db3f0913a021c0ce4ff46e09ef8d449b37446dd8",
+  "graph_quotes_offset_bound": true,
+  "relations_unique": true,
+  "picture_body_paragraphs_recovered": 5,
+  "original_direction_repairs": 5,
+  "original_type_repairs": 11,
+  "natural_final": {
+    "primary_n": 19,
+    "missing_source_n": 11,
+    "arms": {
+      "text": {
+        "correct": 18,
+        "mean_fact_coverage": 0.9473684210526315,
+        "unsupported_answer_count": 0,
+        "exact_citation_pass": 41,
+        "citation_claim_count": 41,
+        "all_gold_source_pages_hit": 16,
+        "page_metric_n": 17,
+        "graph_returned_questions": 0,
+        "keyword_graph_returned_questions": 0,
+        "mean_retrieval_seconds": 0.08554147894641287
+      },
+      "text_graph": {
+        "correct": 18,
+        "mean_fact_coverage": 0.9473684210526315,
+        "unsupported_answer_count": 0,
+        "exact_citation_pass": 41,
+        "citation_claim_count": 41,
+        "all_gold_source_pages_hit": 16,
+        "page_metric_n": 17,
+        "graph_returned_questions": 18,
+        "keyword_graph_returned_questions": 18,
+        "mean_retrieval_seconds": 0.295386447369023
+      }
+    },
+    "paired": {
+      "graph_wins": 0,
+      "graph_losses": 0,
+      "same_evidence_questions": 17
+    }
+  },
+  "keywords_final": {
+    "primary_n": 19,
+    "missing_source_n": 11,
+    "arms": {
+      "text": {
+        "correct": 19,
+        "mean_fact_coverage": 1.0,
+        "unsupported_answer_count": 0,
+        "exact_citation_pass": 49,
+        "citation_claim_count": 49,
+        "all_gold_source_pages_hit": 17,
+        "page_metric_n": 17,
+        "graph_returned_questions": 0,
+        "keyword_graph_returned_questions": 0,
+        "mean_retrieval_seconds": 0.08215129472879007
+      },
+      "text_graph": {
+        "correct": 19,
+        "mean_fact_coverage": 1.0,
+        "unsupported_answer_count": 0,
+        "exact_citation_pass": 46,
+        "citation_claim_count": 46,
+        "all_gold_source_pages_hit": 17,
+        "page_metric_n": 17,
+        "graph_returned_questions": 18,
+        "keyword_graph_returned_questions": 18,
+        "mean_retrieval_seconds": 0.26279698945826996
+      }
+    },
+    "paired": {
+      "graph_wins": 0,
+      "graph_losses": 0,
+      "same_evidence_questions": 14
+    }
+  },
+  "shared_budget": {
+    "provider_call_count": 947,
+    "budget_upper_estimate_cny": 4.469838,
+    "cap_cny": 5.0,
+    "pending_or_unknown_calls": 0
+  },
+  "pytest_full": 497,
+  "pytest_final_targeted": 15,
+  "ruff": "passed",
+  "mypy_files": 102,
+  "review": "AI source checking, not expert gold",
+  "formal_test": false,
+  "independent_graph_gain_observed": false,
+  "original_sources_unchanged": true,
+  "old_versions_preserved": true
+}

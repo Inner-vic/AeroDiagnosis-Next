@@ -1,0 +1,9 @@
+{
+  "real": {
+    "tie": 12
+  },
+  "controlled": {
+    "win": 11,
+    "tie": 1
+  }
+}

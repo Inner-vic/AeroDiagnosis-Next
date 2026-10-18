@@ -1,0 +1,15 @@
+{
+  "definitions": {
+    "core": "Explicit gas-path mechanism, component damage/performance, symptoms tied to it, or associated inspection/mitigation; applies to the audited passage only.",
+    "directly_related": "Controls, measurement, fuel supply, applicability or observed symptoms directly needed to interpret a gas-path problem, without proving a gas-path mechanism.",
+    "auxiliary": "Engine-health, mechanical reliability, general principles or document governance background outside the core mechanism.",
+    "distractor": "Source content outside the turbine gas-path scope that can confuse retrieval; retain separately for robustness.",
+    "needs_review": "Unreviewed scope, mixed/ambiguous content, or structure/figure quality needing independent verification."
+  },
+  "scope_unit": "evidence_span_not_whole_block",
+  "review_status": "ai_source_scope_audited",
+  "human_expert_reviewed": false,
+  "publication": "Source offsets/hashes and audit reasons only; no canonical/full raw text redistributed.",
+  "source_selection": "Use core/directly-related verified spans for primary tasks; auxiliary and distractors separately; needs_review isolated.",
+  "next_review": "Independent source review, then source-family grouping and new task/evidence-pool review before a new frozen benchmark."
+}

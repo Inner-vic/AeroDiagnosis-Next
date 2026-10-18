@@ -1,0 +1,18 @@
+{
+  "benchmark_id": "gas-path-development-pilot-v1",
+  "protocol_sha256": "eaba19cb04e07c79710e595a1d5c5625dd9ab5ab9b9f7320b5f966a3dde34b53",
+  "files": {
+    "annotation_provenance.json": "8bef6d4279b9e024f964c18192c2375f8d78311db263b4d42b25377b57ac82d0",
+    "corpus_manifest.json": "70a3846b9cbfbcfdf9125636aaee18becd9df85ae274ea00f245c108322c9f24",
+    "DATA_CARD.md": "9928f9d7a70976ba11df8b0c8c6000ed23840b7269a9708bc57fc16dec71b7f2",
+    "graph_claims.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "protocol.json": "eaba19cb04e07c79710e595a1d5c5625dd9ab5ab9b9f7320b5f966a3dde34b53",
+    "quality_audit.json": "a89d862e7129a8f26d0a121c58e1b3162691aac7f054f4f4079ab33b69285dee",
+    "queries.jsonl": "11aeaac26ab1cb784cc85d47671a2d987e3e7730f8c72f6ada4dede478378210",
+    "reconciliation.jsonl": "fe4c4e17766ab0efd7692b4fb5aa13602b7efd2ff6f8e192df61b789414913b5",
+    "review_ledger.jsonl": "29550e0e44a15f24c8c8fad443ede753019bc8dc7f45a1e2a2c10174142b04f4"
+  },
+  "builder_sha256": "f717a4848802a7eafa58c730d1c1a7f5327b7b64f0857e8b913ac701fbc60b93",
+  "review_status": "ai_cross_source_verified",
+  "human_expert_reviewed": false
+}

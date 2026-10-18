@@ -1,0 +1,37 @@
+{
+  "ALL": {
+    "n": 216,
+    "graph_open": 72,
+    "fallback": 144
+  },
+  "exact": {
+    "n": 36,
+    "graph_open": 0,
+    "fallback": 36
+  },
+  "paraphrase": {
+    "n": 36,
+    "graph_open": 0,
+    "fallback": 36
+  },
+  "conditions": {
+    "n": 36,
+    "graph_open": 0,
+    "fallback": 36
+  },
+  "chain2": {
+    "n": 36,
+    "graph_open": 36,
+    "fallback": 0
+  },
+  "chain3": {
+    "n": 36,
+    "graph_open": 36,
+    "fallback": 0
+  },
+  "boundary": {
+    "n": 36,
+    "graph_open": 0,
+    "fallback": 36
+  }
+}

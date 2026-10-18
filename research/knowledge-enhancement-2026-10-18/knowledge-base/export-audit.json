@@ -1,0 +1,33 @@
+{
+  "counts": {
+    "documents": 9,
+    "chunks": 82,
+    "lexical_chunks": 82,
+    "parent_contexts": 80,
+    "graph_nodes": 144,
+    "graph_edges": 72,
+    "metadata_only_documents": 3
+  },
+  "graph_primary_check": {
+    "verified": true,
+    "backend": "Neo4j external-primary",
+    "all_nodes": 1594,
+    "all_edges": 797,
+    "export_node_ids_equal_mirror": false,
+    "export_edge_ids_equal_mirror": false,
+    "export_source": "external primary snapshot; SQLite mirror discrepancy recorded, not silently substituted"
+  },
+  "source": "read-only active-version logical export",
+  "embeddings": "omitted; regenerate with the recorded multilingual E5 implementation",
+  "machine_translation": "Chinese display text and translation metadata retained in chunk metadata; source hash and original text retained for audit",
+  "excluded_runtime_tables": [
+    "sessions",
+    "messages",
+    "cases",
+    "checkpoints",
+    "tool_ledger",
+    "jobs",
+    "outbox",
+    "provider_requests"
+  ]
+}

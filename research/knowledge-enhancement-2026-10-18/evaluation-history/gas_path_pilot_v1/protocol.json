@@ -1,0 +1,43 @@
+{
+  "benchmark_id": "gas-path-development-pilot-v1",
+  "protocol_version": "1.0",
+  "frozen_before_results": true,
+  "evaluation_role": "development_debugging_only_no_test_or_generalization_claim",
+  "dev_families": [
+    "aaib-g-pown-2020",
+    "airbus-thrust-management",
+    "faa-amtp-32b",
+    "fr-cfm-pss-icing"
+  ],
+  "source_dependency_groups": [],
+  "upstream_snapshot_sha256": "c5cdfb152482071b131472670d0a392c1df1d7b28e296b9635129fa8452c0df7",
+  "shared_corpus": "All 21 frozen source files retained, including background and distractors; only source text is indexed.",
+  "prior_exposure": "Author read old scope audit and sources; review answers hidden from independent AI reviewer.",
+  "review_policy": "AI source reconstruction; not human or expert gold",
+  "pilot_only": true,
+  "statistical_independence": "25 fact IDs grouped by four source families; not IID observations",
+  "scope_counts": {
+    "core": 20,
+    "directly_related": 5
+  },
+  "registered_parameters": {
+    "chunk_chars": 800,
+    "overlap_chars": 100,
+    "parent_chars": 3200,
+    "candidate_k": 100,
+    "rrf_k": 60,
+    "context_tokens": 2048,
+    "max_chunks": 10
+  },
+  "main_comparison": "Twelve dev configurations: three chunkers times BM25/E5/RRF plus paired hierarchical parent completion.",
+  "rank_qrels_exhaustive": false,
+  "graph_extraction_gold": false,
+  "missing_tasks": [
+    "insufficient_evidence",
+    "wrong_premise",
+    "condition_conflict",
+    "independent_new_source_test"
+  ],
+  "input_review_sha256": "19e011cc5e02d09896fb150399c86db14394a97d0d17d701ab923d20dfc460e9",
+  "review_provenance_sha256": "28f0887f284d980b98e7125aaeb8d2d7e8f29812691e12d65d500515e9de2f09"
+}

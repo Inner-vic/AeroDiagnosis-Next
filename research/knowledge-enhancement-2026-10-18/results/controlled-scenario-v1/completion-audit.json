@@ -1,0 +1,14 @@
+{
+  "rows": 1152,
+  "questions": 144,
+  "methods": 8,
+  "all_source_quotes_verified": true,
+  "all_metrics_recomputed": true,
+  "frozen_inputs_unchanged": true,
+  "index_unchanged": true,
+  "predictions_sha256": "d46222c3a25cdaca44f8659cfcbfcb167848dcdb0692b6979b85baacfdeb0da0",
+  "paid_api_calls": 0,
+  "production_promoted": false,
+  "origin": "synthetic_rule_generated",
+  "expert_reviewed": false
+}

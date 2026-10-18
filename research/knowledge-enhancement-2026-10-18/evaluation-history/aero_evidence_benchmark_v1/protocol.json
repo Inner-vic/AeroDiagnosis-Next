@@ -1,0 +1,122 @@
+{
+  "benchmark_id": "aero-evidence-benchmark-v1",
+  "protocol_version": "1.2",
+  "frozen_before_results": "2026-10-13",
+  "scope": "Source-conditioned information retrieval and qualified claim verification; not airworthiness or diagnostic decision validation",
+  "upstream_snapshot_sha256": "c5cdfb152482071b131472670d0a392c1df1d7b28e296b9635129fa8452c0df7",
+  "dev_families": [
+    "faa-ac-33-63",
+    "fr-cfm-lpt-disk",
+    "aaib-g-euoe-2013"
+  ],
+  "test_policy": "All other declared document families; revisions, translations and query variants remain grouped. Corpus is shared at retrieval time; development and test information needs are separated.",
+  "annotation": "AI authored and independently source reconstructed by another agent, followed by reconciliation; no human aviation expert annotation",
+  "unit_of_analysis": "Distinct query fact_id; translation/scenario pairs are stress tests, not independent facts. Graph polarity variants share claim_group_id; claims within source families remain dependent.",
+  "evidence": "UTF-8 NFC/LF canonical text offsets in Unicode code points, end exclusive; document hash and individual span hash; all/any evidence semantics; no chunk identifiers in ground truth",
+  "relevance": "Selected exact evidence supports are not exhaustive passage qrels. Unjudged passages must not be silently scored irrelevant. Report strict evidence coverage and declared source hit separately; build and adjudicate alternative evidence pools before publication-grade nDCG/MRR claims.",
+  "answerability": "Insufficient evidence means unavailable within this frozen corpus for the specified scope, not false in the real world. Review searches are recorded.",
+  "graph_task": "Qualified claim verification over selected claims; not exhaustive extraction gold. Extraction recall requires full predicate-restricted annotation of selected passages.",
+  "fixed_metrics": [
+    "required_evidence_hit_at_5",
+    "required_evidence_hit_at_10",
+    "source_hit_at_5",
+    "source_hit_at_10",
+    "evidence_coverage_at_5",
+    "evidence_coverage_at_10",
+    "abstention_precision",
+    "abstention_recall",
+    "qualified_claim_macro_f1"
+  ],
+  "report_strata": [
+    "source_type",
+    "publisher_id",
+    "language",
+    "task_type",
+    "answerability",
+    "evidence_count",
+    "document_family",
+    "native_vs_translated",
+    "query_variant_type"
+  ],
+  "statistics": "Use paired fact-level differences and document-family connected-component bootstrap, not query-level IID bootstrap. Show effect size and uncertainty. Small family counts restrict generalization. Retrieval repeats on a deterministic index are timing measurements, not independent experiments.",
+  "ablation": "Same frozen corpus, queries, filters and evidence labels; one variable at a time. Fixed/structure/hierarchical chunking crossed with BM25/real dense/hybrid RRF; reranking separately. Equal context token budgets plus latency and memory. Do not tune on test.",
+  "model_policy": "Offline token-vector or hashing baselines must be identified as lexical; they cannot substantiate semantic dense or hybrid benefits. Log model revision, tokenizer, dimensionality, settings and seed for real dense/reranker runs.",
+  "publication_gates": [
+    "portable source and annotation fingerprints",
+    "cross-author reconstruction reconciled",
+    "all evidence hashes match frozen sources",
+    "fact/revision/translation family split checks pass",
+    "alternative qrels reviewed for rank metrics",
+    "human domain spot review required before calling expert gold",
+    "no current maintenance applicability claim from historical sources"
+  ],
+  "references": [
+    {
+      "name": "BEIR (2021)",
+      "url": "https://arxiv.org/abs/2104.08663",
+      "use": "Heterogeneous information needs and robust sparse baseline; no expected winner"
+    },
+    {
+      "name": "RGB (AAAI 2024)",
+      "url": "https://arxiv.org/abs/2309.01431",
+      "use": "Noise, negative rejection, evidence integration and counterfactual stress"
+    },
+    {
+      "name": "RAGBench (2024/2025)",
+      "url": "https://arxiv.org/abs/2407.11005",
+      "use": "Separate source/answer grounding and transparent evaluation labels"
+    },
+    {
+      "name": "NIST pooling bias (2007)",
+      "url": "https://www.nist.gov/publications/bias-and-limits-pooling-large-collections",
+      "use": "Incomplete judgments and lexical pooling biases must be disclosed"
+    }
+  ],
+  "source_dependency_groups": [
+    [
+      "caac-ac33-aa",
+      "caac-ccar33"
+    ]
+  ],
+  "pre_results_amendment": {
+    "previous_protocol_sha256": "e29a862c9cbca1733a5135439f13c346d7735b6d43290b106718a69646f451ce",
+    "date": "2026-10-13",
+    "reason": "Independent source overlap audit found extensive CAAC AC reuse of CCAR33 text. Keep both Chinese families entirely test; add one AAIB investigation family to development before any metric is run."
+  },
+  "pre_results_excluded_samples": [
+    {
+      "sample_id": "eng-q044",
+      "reason": "Crosses development FAA AC and test CAAC required-evidence families; retained in local draft only, excluded from comparative evaluation before any metric."
+    }
+  ],
+  "canonical_source_refresh": {
+    "reason": "Preserve XML GPOTABLE title and BOXHD/CHED headers discovered during independent numeric-question review; immutable older snapshot retained",
+    "previous_snapshot_sha256": "7d24b70a7cce6c4fc9c0bc3a7001ca72753c1ce1813f6505b1be629691b1be09",
+    "new_snapshot_sha256": "c5cdfb152482071b131472670d0a392c1df1d7b28e296b9635129fa8452c0df7",
+    "changed_documents": [
+      {
+        "document_id": "fr-2025-03459",
+        "old_sha256": "2bf26badf8edeb6379e3735027f8bcbef5984a2b92456d7c9a204b99f042ff84",
+        "new_sha256": "86d1fa49a66c8e44d62badbec823b5585a4d30b75dec2dc842876367395f8bf8"
+      },
+      {
+        "document_id": "fr-2026-01094",
+        "old_sha256": "59439d721120a31cca400e187f4a1a12e1345daf7d3c19e872dcd5f56d3bf966",
+        "new_sha256": "041f03270f289cbe653f0a5b81caf42bc8474ba56fe04a08e75eb54369a342cb"
+      }
+    ],
+    "before_results": true,
+    "repeated_build_canonical_documents_identical": 21
+  },
+  "graph_stress_amendment": {
+    "date": "2026-10-13",
+    "before_model_results": true,
+    "reason": "Independent audit found all five native negative claims supported. Add six independently source-reconstructed negative contradicted pairs as a separate negation stress stratum; do not inflate independent claim groups.",
+    "native_claim_count": 66,
+    "negation_stress_count": 6,
+    "claim_group_count": 66,
+    "require_polarity_label_confusion": true
+  },
+  "all_any_scope": "All 126 current queries require all declared spans; any semantics are tool support only and have no evaluated samples.",
+  "shared_concept_disclosure": "FAA AC development facts recur in CAAC test source text. Current target information needs do not duplicate these development targets; corpus and concepts are not claimed wholly unseen."
+}

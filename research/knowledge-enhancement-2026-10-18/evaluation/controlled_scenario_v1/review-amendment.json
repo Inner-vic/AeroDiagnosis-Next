@@ -1,0 +1,5 @@
+{
+  "before_any_rankings": true,
+  "reason": "Independent source-only review: correct graph coverage and equal-compute wording; add provenance and freeze guards. Corpus, graph and all216 questions unchanged.",
+  "origin": "synthetic_rule_generated"
+}

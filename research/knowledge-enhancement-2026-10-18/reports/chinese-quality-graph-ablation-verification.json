@@ -1,0 +1,105 @@
+{
+  "date": "2026-10-14",
+  "snapshot_sha256": "553532d1f7b5700695ab655b6cf30d1f6382b5f45bdb2d0d07a6a170aa29a41d",
+  "active_documents": 12,
+  "active_chunks": 104,
+  "active_nodes": 144,
+  "active_edges": 72,
+  "confirmed_direction_errors": 5,
+  "entity_review_candidates": 12,
+  "natural_controlled": {
+    "primary_n": 19,
+    "missing_source_n": 11,
+    "arms": {
+      "text": {
+        "correct": 16,
+        "mean_fact_coverage": 0.8331578947368421,
+        "unsupported_answer_count": 0,
+        "exact_citation_pass": 34,
+        "citation_claim_count": 34,
+        "all_gold_source_pages_hit": 14,
+        "page_metric_n": 17,
+        "graph_returned_questions": 0,
+        "keyword_graph_returned_questions": 0,
+        "mean_retrieval_seconds": 0.08276309473072424
+      },
+      "text_graph": {
+        "correct": 16,
+        "mean_fact_coverage": 0.8331578947368421,
+        "unsupported_answer_count": 0,
+        "exact_citation_pass": 34,
+        "citation_claim_count": 34,
+        "all_gold_source_pages_hit": 14,
+        "page_metric_n": 17,
+        "graph_returned_questions": 0,
+        "keyword_graph_returned_questions": 12,
+        "mean_retrieval_seconds": 0.13483450001742886
+      }
+    },
+    "paired": {
+      "graph_wins": 0,
+      "graph_losses": 0,
+      "same_evidence_questions": 19
+    }
+  },
+  "keyword_source_adjudicated": {
+    "primary_n": 19,
+    "missing_source_n": 11,
+    "arms": {
+      "text": {
+        "correct": 16,
+        "unsupported_answer_count": 0,
+        "exact_citation_pass": 36,
+        "citation_claim_count": 36,
+        "all_gold_source_pages_hit": 15,
+        "page_metric_n": 17,
+        "graph_returned_questions": 0,
+        "keyword_graph_returned_questions": 0,
+        "mean_retrieval_seconds": 0.0778518631613176
+      },
+      "text_graph": {
+        "correct": 14,
+        "unsupported_answer_count": 0,
+        "exact_citation_pass": 36,
+        "citation_claim_count": 37,
+        "all_gold_source_pages_hit": 14,
+        "page_metric_n": 17,
+        "graph_returned_questions": 12,
+        "keyword_graph_returned_questions": 12,
+        "mean_retrieval_seconds": 0.18897106840985975
+      }
+    },
+    "paired": {
+      "graph_wins": 0,
+      "graph_losses": 2,
+      "same_evidence_questions": 7
+    },
+    "adjudication": [
+      {
+        "id": "gp-q006",
+        "arm": "text_graph",
+        "machine_correct": true,
+        "adjudicated_correct": false,
+        "reason": "题目与参考答案要求分支/分叉裂纹可能释放金属进入压气机；图谱答案却为旋流叶片裂纹导致衬套拒收，属于另一事实和对象。"
+      },
+      {
+        "id": "gp-q006",
+        "arm": "text",
+        "adjudicated_correct": false,
+        "sensitivity_correct": true,
+        "reason": "正文覆盖参考事实，但答案错误拒答，严格判定保留false；若只评必要事实，文本分数可加1。"
+      }
+    ]
+  },
+  "shared_budget": {
+    "provider_call_count": 482,
+    "budget_upper_estimate_cny": 2.188007,
+    "cap_cny": 5.0,
+    "pending_or_unknown_calls": 0
+  },
+  "semantic_review": "AI source review, not human expert",
+  "formal_test": false,
+  "production_data_modified": false,
+  "targeted_tests_passed": 14,
+  "ruff": "passed"
+}

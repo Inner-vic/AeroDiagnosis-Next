@@ -1,0 +1,27 @@
+{
+  "vectors_recomputed": 576,
+  "dimensions": 384,
+  "max_abs_error": 0.0,
+  "lexical_and_vector_source_rows_equal": true,
+  "index_unchanged": true,
+  "distinct_benches": 36,
+  "scenarios": 36,
+  "old_freezes": [
+    {
+      "freeze": "evaluation/strict_graph_holdout_v1_candidate",
+      "files": 283,
+      "changed": []
+    },
+    {
+      "freeze": "evaluation/graph_supplement_v2_holdout_candidate",
+      "files": 299,
+      "changed": []
+    },
+    {
+      "freeze": "evaluation/strict_source_pilot_v3_candidate",
+      "files": 276,
+      "changed": []
+    }
+  ],
+  "paid_api_calls": 0
+}

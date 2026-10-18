@@ -1,0 +1,11 @@
+{
+  "created_at_utc": "2026-10-16T02:21:44.233640+00:00",
+  "before_graph_and_questions": true,
+  "source_catalog_sha256": "8d74953749e90c491555ac2d99c07509dd2f8111dfc6d803d61ef52afa41ee2f",
+  "source_selection_sha256": "bc6622d8361d4c253fa800ac542b01c103763e23e62059fa31bce7d635e1251d",
+  "strategy_sha256": "1ca75f6769368d1405f7ab8ca4b3b4bedca9fc505b9fef50e46d7c37a92eb936",
+  "documents": 20,
+  "chunks": 645,
+  "families": 20,
+  "expert_reviewed": false
+}

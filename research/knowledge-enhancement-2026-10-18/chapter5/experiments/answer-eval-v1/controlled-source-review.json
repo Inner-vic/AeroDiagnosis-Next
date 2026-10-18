@@ -1,0 +1,536 @@
+{
+  "approved": true,
+  "expert_reviewed": false,
+  "answers_seen": false,
+  "reviewer": "Independent AI nonexpert reviewer",
+  "stage": "pre-answer controlled source and sampling review",
+  "review_date": "2026-10-17",
+  "question_count": 12,
+  "template_count": 12,
+  "source_document_count": 12,
+  "questions": [
+    {
+      "approved": true,
+      "required_modifications": [],
+      "issues": [],
+      "document_matches": true,
+      "original_question_id": "new2-00-0:chain3",
+      "id": "sq-01",
+      "original_query_identical": true,
+      "required_point_count": 3,
+      "points": [
+        {
+          "valid": true,
+          "point_index": 0
+        },
+        {
+          "valid": true,
+          "point_index": 1
+        },
+        {
+          "valid": true,
+          "point_index": 2
+        }
+      ],
+      "sample_is_first_chain3": true,
+      "chain_contiguous": true,
+      "original_reference_chain_matches": true,
+      "semantic_edges": [
+        {
+          "cause": "QB-10726的燃油滤芯污堵",
+          "effect": "QB-10726的滤芯压差升高"
+        },
+        {
+          "cause": "QB-10726的滤芯压差升高",
+          "effect": "QB-10726的旁通供油比例增加"
+        },
+        {
+          "cause": "QB-10726的旁通供油比例增加",
+          "effect": "QB-10726的燃油洁净度指示变差"
+        }
+      ]
+    },
+    {
+      "approved": true,
+      "required_modifications": [],
+      "issues": [],
+      "document_matches": true,
+      "original_question_id": "new2-01-0:chain3",
+      "id": "sq-02",
+      "original_query_identical": true,
+      "required_point_count": 3,
+      "points": [
+        {
+          "valid": true,
+          "point_index": 0
+        },
+        {
+          "valid": true,
+          "point_index": 1
+        },
+        {
+          "valid": true,
+          "point_index": 2
+        }
+      ],
+      "sample_is_first_chain3": true,
+      "chain_contiguous": true,
+      "original_reference_chain_matches": true,
+      "semantic_edges": [
+        {
+          "cause": "QB-49712的计量活门开度不足",
+          "effect": "QB-49712的计量截面减小"
+        },
+        {
+          "cause": "QB-49712的计量截面减小",
+          "effect": "QB-49712的供油响应受限"
+        },
+        {
+          "cause": "QB-49712的供油响应受限",
+          "effect": "QB-49712的转速建立延迟"
+        }
+      ]
+    },
+    {
+      "approved": true,
+      "required_modifications": [],
+      "issues": [],
+      "document_matches": true,
+      "original_question_id": "new2-02-0:chain3",
+      "id": "sq-03",
+      "original_query_identical": true,
+      "required_point_count": 3,
+      "points": [
+        {
+          "valid": true,
+          "point_index": 0
+        },
+        {
+          "valid": true,
+          "point_index": 1
+        },
+        {
+          "valid": true,
+          "point_index": 2
+        }
+      ],
+      "sample_is_first_chain3": true,
+      "chain_contiguous": true,
+      "original_reference_chain_matches": true,
+      "semantic_edges": [
+        {
+          "cause": "QB-64182的引气管路接头松动",
+          "effect": "QB-64182的管路漏气增大"
+        },
+        {
+          "cause": "QB-64182的管路漏气增大",
+          "effect": "QB-64182的用气端压力下降"
+        },
+        {
+          "cause": "QB-64182的用气端压力下降",
+          "effect": "QB-64182的气源监控告警"
+        }
+      ]
+    },
+    {
+      "approved": true,
+      "required_modifications": [],
+      "issues": [],
+      "document_matches": true,
+      "original_question_id": "new2-03-0:chain3",
+      "id": "sq-04",
+      "original_query_identical": true,
+      "required_point_count": 3,
+      "points": [
+        {
+          "valid": true,
+          "point_index": 0
+        },
+        {
+          "valid": true,
+          "point_index": 1
+        },
+        {
+          "valid": true,
+          "point_index": 2
+        }
+      ],
+      "sample_is_first_chain3": true,
+      "chain_contiguous": true,
+      "original_reference_chain_matches": true,
+      "semantic_edges": [
+        {
+          "cause": "QB-42465的压气机静子表面沉积",
+          "effect": "QB-42465的静子流道粗糙度升高"
+        },
+        {
+          "cause": "QB-42465的静子流道粗糙度升高",
+          "effect": "QB-42465的叶栅流动损失增加"
+        },
+        {
+          "cause": "QB-42465的叶栅流动损失增加",
+          "effect": "QB-42465的级效率监控下降"
+        }
+      ]
+    },
+    {
+      "approved": true,
+      "required_modifications": [],
+      "issues": [],
+      "document_matches": true,
+      "original_question_id": "new2-04-0:chain3",
+      "id": "sq-05",
+      "original_query_identical": true,
+      "required_point_count": 3,
+      "points": [
+        {
+          "valid": true,
+          "point_index": 0
+        },
+        {
+          "valid": true,
+          "point_index": 1
+        },
+        {
+          "valid": true,
+          "point_index": 2
+        }
+      ],
+      "sample_is_first_chain3": true,
+      "chain_contiguous": true,
+      "original_reference_chain_matches": true,
+      "semantic_edges": [
+        {
+          "cause": "QB-32054的可调静子连杆间隙增大",
+          "effect": "QB-32054的静子角度同步性降低"
+        },
+        {
+          "cause": "QB-32054的静子角度同步性降低",
+          "effect": "QB-32054的周向入射分布偏离"
+        },
+        {
+          "cause": "QB-32054的周向入射分布偏离",
+          "effect": "QB-32054的级间匹配告警"
+        }
+      ]
+    },
+    {
+      "approved": true,
+      "required_modifications": [],
+      "issues": [],
+      "document_matches": true,
+      "original_question_id": "new2-05-0:chain3",
+      "id": "sq-06",
+      "original_query_identical": true,
+      "required_point_count": 3,
+      "points": [
+        {
+          "valid": true,
+          "point_index": 0
+        },
+        {
+          "valid": true,
+          "point_index": 1
+        },
+        {
+          "valid": true,
+          "point_index": 2
+        }
+      ],
+      "sample_is_first_chain3": true,
+      "chain_contiguous": true,
+      "original_reference_chain_matches": true,
+      "semantic_edges": [
+        {
+          "cause": "QB-64942的机匣局部变形",
+          "effect": "QB-64942的叶尖间隙分布偏斜"
+        },
+        {
+          "cause": "QB-64942的叶尖间隙分布偏斜",
+          "effect": "QB-64942的间隙泄漏分布不均"
+        },
+        {
+          "cause": "QB-64942的间隙泄漏分布不均",
+          "effect": "QB-64942的压比波动监控触发"
+        }
+      ]
+    },
+    {
+      "approved": true,
+      "required_modifications": [],
+      "issues": [],
+      "document_matches": true,
+      "original_question_id": "new2-06-0:chain3",
+      "id": "sq-07",
+      "original_query_identical": true,
+      "required_point_count": 3,
+      "points": [
+        {
+          "valid": true,
+          "point_index": 0
+        },
+        {
+          "valid": true,
+          "point_index": 1
+        },
+        {
+          "valid": true,
+          "point_index": 2
+        }
+      ],
+      "sample_is_first_chain3": true,
+      "chain_contiguous": true,
+      "original_reference_chain_matches": true,
+      "semantic_edges": [
+        {
+          "cause": "QB-75997的喷油器雾化孔磨损",
+          "effect": "QB-75997的雾滴尺度分布变宽"
+        },
+        {
+          "cause": "QB-75997的雾滴尺度分布变宽",
+          "effect": "QB-75997的蒸发完成位置后移"
+        },
+        {
+          "cause": "QB-75997的蒸发完成位置后移",
+          "effect": "QB-75997的燃烧稳定监控异常"
+        }
+      ]
+    },
+    {
+      "approved": true,
+      "required_modifications": [],
+      "issues": [],
+      "document_matches": true,
+      "original_question_id": "new2-07-0:chain3",
+      "id": "sq-08",
+      "original_query_identical": true,
+      "required_point_count": 3,
+      "points": [
+        {
+          "valid": true,
+          "point_index": 0
+        },
+        {
+          "valid": true,
+          "point_index": 1
+        },
+        {
+          "valid": true,
+          "point_index": 2
+        }
+      ],
+      "sample_is_first_chain3": true,
+      "chain_contiguous": true,
+      "original_reference_chain_matches": true,
+      "semantic_edges": [
+        {
+          "cause": "QB-65045的滑油冷却器散热面污染",
+          "effect": "QB-65045的滑油散热能力降低"
+        },
+        {
+          "cause": "QB-65045的滑油散热能力降低",
+          "effect": "QB-65045的供油温度升高"
+        },
+        {
+          "cause": "QB-65045的供油温度升高",
+          "effect": "QB-65045的油温监控告警"
+        }
+      ]
+    },
+    {
+      "approved": true,
+      "required_modifications": [],
+      "issues": [],
+      "document_matches": true,
+      "original_question_id": "new2-08-0:chain3",
+      "id": "sq-09",
+      "original_query_identical": true,
+      "required_point_count": 3,
+      "points": [
+        {
+          "valid": true,
+          "point_index": 0
+        },
+        {
+          "valid": true,
+          "point_index": 1
+        },
+        {
+          "valid": true,
+          "point_index": 2
+        }
+      ],
+      "sample_is_first_chain3": true,
+      "chain_contiguous": true,
+      "original_reference_chain_matches": true,
+      "semantic_edges": [
+        {
+          "cause": "QB-28700的回油管路局部阻塞",
+          "effect": "QB-28700的回油排出能力降低"
+        },
+        {
+          "cause": "QB-28700的回油排出能力降低",
+          "effect": "QB-28700的轴承腔油量积聚"
+        },
+        {
+          "cause": "QB-28700的轴承腔油量积聚",
+          "effect": "QB-28700的腔压监控异常"
+        }
+      ]
+    },
+    {
+      "approved": true,
+      "required_modifications": [],
+      "issues": [],
+      "document_matches": true,
+      "original_question_id": "new2-09-0:chain3",
+      "id": "sq-10",
+      "original_query_identical": true,
+      "required_point_count": 3,
+      "points": [
+        {
+          "valid": true,
+          "point_index": 0
+        },
+        {
+          "valid": true,
+          "point_index": 1
+        },
+        {
+          "valid": true,
+          "point_index": 2
+        }
+      ],
+      "sample_is_first_chain3": true,
+      "chain_contiguous": true,
+      "original_reference_chain_matches": true,
+      "semantic_edges": [
+        {
+          "cause": "QB-39610的热电偶接线接触不良",
+          "effect": "QB-39610的温度信号间歇波动"
+        },
+        {
+          "cause": "QB-39610的温度信号间歇波动",
+          "effect": "QB-39610的温控输入不稳定"
+        },
+        {
+          "cause": "QB-39610的温控输入不稳定",
+          "effect": "QB-39610的温控指令频繁变化"
+        }
+      ]
+    },
+    {
+      "approved": true,
+      "required_modifications": [],
+      "issues": [],
+      "document_matches": true,
+      "original_question_id": "new2-10-0:chain3",
+      "id": "sq-11",
+      "original_query_identical": true,
+      "required_point_count": 3,
+      "points": [
+        {
+          "valid": true,
+          "point_index": 0
+        },
+        {
+          "valid": true,
+          "point_index": 1
+        },
+        {
+          "valid": true,
+          "point_index": 2
+        }
+      ],
+      "sample_is_first_chain3": true,
+      "chain_contiguous": true,
+      "original_reference_chain_matches": true,
+      "semantic_edges": [
+        {
+          "cause": "QB-57868的供气调压器阀芯粘滞",
+          "effect": "QB-57868的供气调压滞后"
+        },
+        {
+          "cause": "QB-57868的供气调压滞后",
+          "effect": "QB-57868的气动执行端压力偏离"
+        },
+        {
+          "cause": "QB-57868的气动执行端压力偏离",
+          "effect": "QB-57868的执行端到位延迟"
+        }
+      ]
+    },
+    {
+      "approved": true,
+      "required_modifications": [],
+      "issues": [],
+      "document_matches": true,
+      "original_question_id": "new2-11-0:chain3",
+      "id": "sq-12",
+      "original_query_identical": true,
+      "required_point_count": 3,
+      "points": [
+        {
+          "valid": true,
+          "point_index": 0
+        },
+        {
+          "valid": true,
+          "point_index": 1
+        },
+        {
+          "valid": true,
+          "point_index": 2
+        }
+      ],
+      "sample_is_first_chain3": true,
+      "chain_contiguous": true,
+      "original_reference_chain_matches": true,
+      "semantic_edges": [
+        {
+          "cause": "QB-63476的防冰分配支路受阻",
+          "effect": "QB-63476的防冰热气分配减少"
+        },
+        {
+          "cause": "QB-63476的防冰热气分配减少",
+          "effect": "QB-63476的受保护表面温度降低"
+        },
+        {
+          "cause": "QB-63476的受保护表面温度降低",
+          "effect": "QB-63476的表面结冰监控触发"
+        }
+      ]
+    }
+  ],
+  "required_modifications": [],
+  "sampling_assessment": "原questions-test.jsonl包含12模板；12题逐一等于各模板按sample_id排序首个chain3条目，均为实例0，query和scenario_id一致，36个required_points与原support_units.quote及本地资料锚点逐字一致，三条边衔接且完整链与原reference_answer一致。",
+  "grading_guidance": "required_points应按三条因果边的语义覆盖评分，不要求逐字复述本记录只陈述等资料包装语；回答必须保留虚拟规则设定语境。",
+  "limitations": [
+    "这是已见检索基准中的固定12模板首实例，属于回答生成能力诊断，不是新独立测试或未见模板评估。",
+    "资料为AI辅助及程序化构造的虚拟规则，不是真实发动机因果机理或真实发动机多跳验证。",
+    "三条因果边分散在不同记录中，支持记录级分布证据链补全；strict_cross_block_multihop=false的保守标注合理，不能据此宣称严格跨物理块多跳。",
+    "每模板仅一个确定性样本，模板独立性及统计泛化未经验证。",
+    "该12题须独立报告，不与FAA真实资料12题混成真实世界准确率。",
+    "本次仅源文、题目、协议与原基准题对照；未读取生成答案、方法输出、缓存或实验结果。",
+    "同请求缓存可复用但需记录，不视作独立随机重复，不能据缓存墙钟时间宣称速度优势。"
+  ],
+  "protocol_assessment": "协议明确已见规则世界、按模板确定性采样、与FAA单列、共享预算上限以及缓存限制；没有需修改项。",
+  "read_file_sha256": [
+    {
+      "path": "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\evaluation\\chapter5_answer_pilot_v1\\controlled-sources.json",
+      "sha256": "89aec9e3a9a731d46782a575ef5b3717f6a95aef241ea2aef76dfe7a370928ab"
+    },
+    {
+      "path": "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\evaluation\\chapter5_answer_pilot_v1\\controlled-questions.json",
+      "sha256": "5e9cf2679102a25f08489a76576916a57b1f38ca87174c68811dab5a9eff6eac"
+    },
+    {
+      "path": "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\evaluation\\chapter5_answer_pilot_v1\\controlled-supplement-protocol.json",
+      "sha256": "cb649184c84b398be08b04994b35aec10616ff05c93a7b0f4e1f2977bb0ace45"
+    },
+    {
+      "path": "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\evaluation\\controlled_scenario_v2\\questions-test.jsonl",
+      "sha256": "66122ad2e00a0a1f111b299f16c67c4426e857aad95d7708e79dca676b7ab87d"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "input_hashes": {
+    ".runtime\\controlled-path-fusion-v2\\test-predictions.jsonl": "e765ba67b2943cd8114fdce6817fc3084b5442b1db8120e672a697c760d6efa9",
+    ".runtime\\controlled-path-fusion-v2\\strategy-freeze.json": "5c7a53f1603ac651038e355a6787425c4e1127debe54824c4f918108a79ab886",
+    ".runtime\\controlled-path-fusion-v2\\test-freeze.json": "f09e8ca0af5968c1b68d3f57ee0e0156c5c36d7b91239203602e5856eabf385b",
+    ".runtime\\controlled-path-fusion-v2\\test-candidate-freeze.json": "01539bf80944cb6aba4ce9b36a4cd3f89b757e533f1a637a2059d1573c17cb2b"
+  },
+  "outputs": {
+    "all-method-summary.json": "ca0ebdf4ef98f922befda2a5f188c5757c42357080935374bf8b39be3ad502e4",
+    "analysis-audit.json": "b82240ffbbe20f4daf3d854fd19de0878a5481ddcf7d9fbd84eff8bdefa461dc",
+    "figure-manifest.json": "abc4e612e61765e08b38bf802b2675d168b85536cdb8e6220d8e21abe7a5b18d",
+    "final-experimental-method.json": "14399b5c6d26e124d64daa363ce3004571279f870f5adeb7c4ffe83ff9706d77",
+    "gate-activation.json": "e3d9c86684102850b3829ba15e1dfd78587113473e71ce4cc99c89d92f262db3",
+    "metrics-long.jsonl": "325b075205d311a889a2b706c02070ed8d0fc78c0de124c5839ea81f9cb23b11",
+    "overall-scoped.png": "dd678121185d451c4b4c3df0a94d01f2c06d6723ace62dc5d8eb25e79501b2e7",
+    "overall-scoped.svg": "0b1e77086903a6dbbf1532e58b03beb71913f6ca2b06aebcc70f1fa8bdc88d33",
+    "paired-descriptive.json": "a024c87e6cf14118d2e8eb58b0b6bd38fdd083cb8e6b6bb07e6b27a28dee2bf5",
+    "paper_gated_analysis.py": "ff089e68e9f0563ccabea4bb2c46f67e482f2d3bb0b145318b2bde3d9526634f",
+    "plot_gated_paper.py": "b7c9be0b86fdf8f5f79e9b7e5cffc1460099401037b2456ada7a1c468ce7e98b",
+    "supplement-predictions.jsonl": "937063082f7ac7062032389dcd75d125fb39da5c4bc9d545fddae6499fbd3601",
+    "supplement-protocol.json": "0827894186a8a9632311b002a6259e20612077d4cdb6eb9bf9208f2556d377fc",
+    "THESIS-EXPERIMENT-ANALYSIS.md": "ec177f267aa594e4699e0dd6ee893506b257eadb805884fadc77c823346a9a0e",
+    "type-scoped.png": "c91deba921230fc44b9f0d442862c84aefa55f7534a4f557a344cc459cd08b56",
+    "type-scoped.svg": "dade35ede9b90a745d1ea3ed98f536a5f6e604a211877220e936d28bb0af10e1"
+  },
+  "visual_review": "Both PNGs visually inspected: labels visible, full0-100 scales, counts and failure cells retained. Provisional thesis figures, publisher unspecified."
+}

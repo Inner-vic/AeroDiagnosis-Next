@@ -1,0 +1,30 @@
+{
+  "before_model_answers": true,
+  "hashes": {
+    "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\evaluation\\chapter5_answer_pilot_v1\\controlled-questions.json": "5e9cf2679102a25f08489a76576916a57b1f38ca87174c68811dab5a9eff6eac",
+    "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\evaluation\\chapter5_answer_pilot_v1\\controlled-sources.json": "89aec9e3a9a731d46782a575ef5b3717f6a95aef241ea2aef76dfe7a370928ab",
+    "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\evaluation\\chapter5_answer_pilot_v1\\controlled-supplement-protocol.json": "cb649184c84b398be08b04994b35aec10616ff05c93a7b0f4e1f2977bb0ace45",
+    "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\evaluation\\chapter5_answer_pilot_v1\\pre-review-freeze.json": "4c82ce6bb1629b8c4bd8f2352743a19bfeb8529346dc23fa4f5c64a3d05b0029",
+    "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\evaluation\\chapter5_answer_pilot_v1\\protocol.json": "80df3e50b5b3d65066ab6620e9a328b90a6153a28a09562a08f7a4661bcbe3d5",
+    "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\evaluation\\chapter5_answer_pilot_v1\\questions.json": "0e7d41391eafb5d1528c44d914d8e68801c7bfeb5f14aff1a794cad5a9567074",
+    "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\evaluation\\chapter5_answer_pilot_v1\\sources.json": "bb2b1ea3d8e5bc4e161dac1992bbe3d356a497f1029bb18d132da745074b497f",
+    "D:\\zhaoweihao3\\Desktop\\Project\\AeroDiagnosis\\.runtime\\run_ch5_answer_eval.py": "262e3c374c48d611a0bed23305f6a42cb20f6b4936472a2916616adb74a46f73",
+    "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\src\\aerodiagnosis\\application\\knowledge_qa_live.py": "7d74602b3978256ceed813113c4126d7cba9103e1f27532b0a3e1a04d345e6c1",
+    "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\src\\aerodiagnosis\\retrieval\\fusion_policy.py": "4f453f5d31cf360affa7167c9b14dd1be667fc1db5b05c4ff723851cd1226169",
+    "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\src\\aerodiagnosis\\retrieval\\atomic_path_fusion.py": "7e65258e4cf11b9be3004eddb91b6fb82b5b3014ea63563cc62e55e044978dd9",
+    "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\src\\aerodiagnosis\\retrieval\\graph_paths.py": "4725c052fe06063eb37909d42c2198ccea5f06866bd41fd9b00206e2da9cc165",
+    "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\src\\aerodiagnosis\\adapters\\llm\\openai_compatible.py": "ab9303242c5d63bf2dec2ff07dc5ed8615d1d6fb8212108088964d48a384881d",
+    "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\.runtime\\chapter5-answer-eval-v1\\source-review.json": "36ccd98bf06f1d1ed944dc1880d9cf2338ef0fe71d6691119db413810b979a8b",
+    "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\.runtime\\chapter5-answer-eval-v1\\controlled-source-review.json": "c92320931058ab950a8833c0701d82963f18baf7bba3087b43f4ffbf12cdc2a1"
+  },
+  "budget_before": {
+    "provider_calls": 6449,
+    "upper_cny": 41.477348,
+    "unresolved_calls": 15
+  },
+  "groups_separate": true,
+  "same_payload_cache_reuse": true,
+  "cache_timing_not_speed_evidence": true,
+  "model_max_tokens": 1024,
+  "ordered_pairs": "for i0..11: real_i,controlled_i; order BD/GATED if i even, reverse if odd"
+}

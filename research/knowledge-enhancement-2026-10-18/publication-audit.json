@@ -1,0 +1,15 @@
+{
+  "secret_scan_passed": true,
+  "local_credential_values_checked": 4,
+  "excluded_binary_types": [
+    "pdf",
+    "sqlite",
+    "sqlite3",
+    "db",
+    "docx",
+    "model weights"
+  ],
+  "primary_chapter_image_links_valid": true,
+  "historical_report_image_link_warnings": [],
+  "normalization": "Relocated two chapter Markdown sibling image links and removed workstation absolute image paths in reference-complete copy; original hashes retained in original freeze records; use release MANIFEST hashes for these relocated copies."
+}

@@ -1,0 +1,1685 @@
+{
+  "documents": [
+    {
+      "document_id": "faa-amtp-ch2",
+      "logical_document_id": "faa-amtp-32b-ch2",
+      "family_id": "faa-amtp-32b",
+      "title": "FAA-H-8083-32B Chapter 2: Engine Fuel & Fuel Metering Systems",
+      "publisher_id": "FAA",
+      "language": "en",
+      "source_type": "maintenance_training",
+      "canonical_sha256": "75bf3a7c1fd46e4a011bd5f436956273242aaecf5841c02df826f2df0455bd7b",
+      "source_url": "https://www.faa.gov/sites/faa.gov/files/04_amtp_ch2.pdf",
+      "raw_sha256": "7abd86a293695abba20ea47ecf788c350c13ccacd3498423dd6aae1ab992b826",
+      "raw_bytes": 20790656,
+      "rights": {
+        "status": "public_domain",
+        "license_name": "US government-authored text; excludes third-party material",
+        "license_url": "https://www.copyright.gov/title17/92chap1.html#105",
+        "scope": "government-authored text only; raw images not redistributed"
+      },
+      "document_description": {
+        "document_id": "faa-amtp-32b-ch2",
+        "title": "FAA-H-8083-32B Chapter 2: Engine Fuel & Fuel Metering Systems",
+        "publisher": "FAA",
+        "jurisdiction": "US",
+        "language": "en",
+        "source_type": "maintenance_training",
+        "landing_url": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/faa-h-8083-32b-chapter-2-engine-fuel-fuel-metering",
+        "rights": {
+          "status": "public_domain",
+          "license_name": "US government-authored text; excludes third-party material",
+          "license_url": "https://www.copyright.gov/title17/92chap1.html#105",
+          "scope": "government-authored text only; raw images not redistributed"
+        },
+        "engine_models": [],
+        "flight_phases": [],
+        "scope_status": "candidate",
+        "document_family_id": "faa-amtp-32b",
+        "review_status": "machine_candidate",
+        "revision": "32B",
+        "revision_status": "training_reference_not_model_specific",
+        "topic_tags": [
+          "fuel_system",
+          "fuel_metering"
+        ],
+        "content_scope": "aviation_engine",
+        "completeness": "chapter",
+        "publisher_id": "FAA",
+        "task_coverage": [
+          "symptom_to_inspection",
+          "maintenance_reference"
+        ],
+        "task_coverage_status": "source_intent_candidate_not_evaluation_labels"
+      },
+      "artifact_description": {
+        "name": "faa-amtp-ch2.pdf",
+        "url": "https://www.faa.gov/sites/faa.gov/files/04_amtp_ch2.pdf",
+        "processor": "pdf",
+        "media_type": "application/pdf",
+        "role": "content",
+        "selector": null,
+        "field_paths": [],
+        "include_patterns": [],
+        "exclude_patterns": []
+      },
+      "processed_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/faa-amtp-32b-ch2/faa-amtp-ch2.pdf.txt",
+      "blocks_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/faa-amtp-32b-ch2/faa-amtp-ch2.pdf.blocks.jsonl",
+      "blocks_sha256": "6a039fc7a19696d15183b87215cd6d96183d56b880cb4ec65af8a7701a105ed4",
+      "raw_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/raw/faa-amtp-ch2.pdf",
+      "canonical_character_count": 161045,
+      "split": "dev"
+    },
+    {
+      "document_id": "faa-amtp-ch5",
+      "logical_document_id": "faa-amtp-32b-ch5",
+      "family_id": "faa-amtp-32b",
+      "title": "FAA-H-8083-32B Chapter 5: Engine Starting Systems",
+      "publisher_id": "FAA",
+      "language": "en",
+      "source_type": "maintenance_training",
+      "canonical_sha256": "5a919cd07d729010f49f7d0e600bdca60bf824d2f478f7c52dd975e060f57c3b",
+      "source_url": "https://www.faa.gov/sites/faa.gov/files/07_amtp_ch5.pdf",
+      "raw_sha256": "1c2919d3bde315831fc25c617844978b8a09641631a3c68e9445857ae1b23ba5",
+      "raw_bytes": 6253957,
+      "rights": {
+        "status": "public_domain",
+        "license_name": "US government-authored text; excludes third-party material",
+        "license_url": "https://www.copyright.gov/title17/92chap1.html#105",
+        "scope": "government-authored text only; raw images not redistributed"
+      },
+      "document_description": {
+        "document_id": "faa-amtp-32b-ch5",
+        "title": "FAA-H-8083-32B Chapter 5: Engine Starting Systems",
+        "publisher": "FAA",
+        "jurisdiction": "US",
+        "language": "en",
+        "source_type": "maintenance_training",
+        "landing_url": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/faa-h-8083-32b-chapter-5-engine-starting-systems",
+        "rights": {
+          "status": "public_domain",
+          "license_name": "US government-authored text; excludes third-party material",
+          "license_url": "https://www.copyright.gov/title17/92chap1.html#105",
+          "scope": "government-authored text only; raw images not redistributed"
+        },
+        "engine_models": [],
+        "flight_phases": [],
+        "scope_status": "candidate",
+        "document_family_id": "faa-amtp-32b",
+        "review_status": "machine_candidate",
+        "revision": "32B",
+        "revision_status": "training_reference_not_model_specific",
+        "topic_tags": [
+          "starting",
+          "starter_systems",
+          "pneumatic_starter"
+        ],
+        "content_scope": "aviation_engine",
+        "completeness": "chapter",
+        "publisher_id": "FAA",
+        "task_coverage": [
+          "symptom_to_inspection",
+          "maintenance_reference"
+        ],
+        "task_coverage_status": "source_intent_candidate_not_evaluation_labels",
+        "topic_validation_notes": "Hot/hung start phrases appear in chapter 10, not chapter 5; corrected after local text audit."
+      },
+      "artifact_description": {
+        "name": "faa-amtp-ch5.pdf",
+        "url": "https://www.faa.gov/sites/faa.gov/files/07_amtp_ch5.pdf",
+        "processor": "pdf",
+        "media_type": "application/pdf",
+        "role": "content",
+        "selector": null,
+        "field_paths": [],
+        "include_patterns": [],
+        "exclude_patterns": []
+      },
+      "processed_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/faa-amtp-32b-ch5/faa-amtp-ch5.pdf.txt",
+      "blocks_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/faa-amtp-32b-ch5/faa-amtp-ch5.pdf.blocks.jsonl",
+      "blocks_sha256": "bd0209f1eacc329f8351665dfbbd28239cc1bf39457e62a26f464a301cf77f37",
+      "raw_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/raw/faa-amtp-ch5.pdf",
+      "canonical_character_count": 47819,
+      "split": "dev"
+    },
+    {
+      "document_id": "faa-amtp-ch6",
+      "logical_document_id": "faa-amtp-32b-ch6",
+      "family_id": "faa-amtp-32b",
+      "title": "FAA-H-8083-32B Chapter 6: Lubrication & Cooling Systems",
+      "publisher_id": "FAA",
+      "language": "en",
+      "source_type": "maintenance_training",
+      "canonical_sha256": "18ccc8512094a89854ce6642a81797dfada4a7b351cf01caed9116da19bab53f",
+      "source_url": "https://www.faa.gov/sites/faa.gov/files/08_amtp_ch6.pdf",
+      "raw_sha256": "75f275d7ce07032eb3cd154c4406d71140b2d0ffc82b52319cfac05f4a96e8de",
+      "raw_bytes": 19072507,
+      "rights": {
+        "status": "public_domain",
+        "license_name": "US government-authored text; excludes third-party material",
+        "license_url": "https://www.copyright.gov/title17/92chap1.html#105",
+        "scope": "government-authored text only; raw images not redistributed"
+      },
+      "document_description": {
+        "document_id": "faa-amtp-32b-ch6",
+        "title": "FAA-H-8083-32B Chapter 6: Lubrication & Cooling Systems",
+        "publisher": "FAA",
+        "jurisdiction": "US",
+        "language": "en",
+        "source_type": "maintenance_training",
+        "landing_url": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/faa-h-8083-32b-chapter-6-lubrication-cooling-systems",
+        "rights": {
+          "status": "public_domain",
+          "license_name": "US government-authored text; excludes third-party material",
+          "license_url": "https://www.copyright.gov/title17/92chap1.html#105",
+          "scope": "government-authored text only; raw images not redistributed"
+        },
+        "engine_models": [],
+        "flight_phases": [],
+        "scope_status": "candidate",
+        "document_family_id": "faa-amtp-32b",
+        "review_status": "machine_candidate",
+        "revision": "32B",
+        "revision_status": "training_reference_not_model_specific",
+        "topic_tags": [
+          "oil_pressure",
+          "lubrication",
+          "cooling"
+        ],
+        "content_scope": "aviation_engine",
+        "completeness": "chapter",
+        "publisher_id": "FAA",
+        "task_coverage": [
+          "symptom_to_inspection",
+          "maintenance_reference"
+        ],
+        "task_coverage_status": "source_intent_candidate_not_evaluation_labels"
+      },
+      "artifact_description": {
+        "name": "faa-amtp-ch6.pdf",
+        "url": "https://www.faa.gov/sites/faa.gov/files/08_amtp_ch6.pdf",
+        "processor": "pdf",
+        "media_type": "application/pdf",
+        "role": "content",
+        "selector": null,
+        "field_paths": [],
+        "include_patterns": [],
+        "exclude_patterns": []
+      },
+      "processed_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/faa-amtp-32b-ch6/faa-amtp-ch6.pdf.txt",
+      "blocks_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/faa-amtp-32b-ch6/faa-amtp-ch6.pdf.blocks.jsonl",
+      "blocks_sha256": "6cd5990d4fcf45fd52fba7e120c0889048181cd8108dd388523677bd9816627d",
+      "raw_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/raw/faa-amtp-ch6.pdf",
+      "canonical_character_count": 132586,
+      "split": "dev"
+    },
+    {
+      "document_id": "faa-amtp-ch10",
+      "logical_document_id": "faa-amtp-32b-ch10",
+      "family_id": "faa-amtp-32b",
+      "title": "FAA-H-8083-32B Chapter 10: Engine Maintenance & Operation",
+      "publisher_id": "FAA",
+      "language": "en",
+      "source_type": "maintenance_training",
+      "canonical_sha256": "8d9b221d2ba3bc204e5e92d7c806fb208e371be51fed9b61d63fefe8f9b1a774",
+      "source_url": "https://www.faa.gov/sites/faa.gov/files/12_amtp_ch10_0.pdf",
+      "raw_sha256": "55964e589d96f657812938d932280d0502d9055c387ea07707cbc9777d3cfec8",
+      "raw_bytes": 14227775,
+      "rights": {
+        "status": "public_domain",
+        "license_name": "US government-authored text; excludes third-party material",
+        "license_url": "https://www.copyright.gov/title17/92chap1.html#105",
+        "scope": "government-authored text only; raw images not redistributed"
+      },
+      "document_description": {
+        "document_id": "faa-amtp-32b-ch10",
+        "title": "FAA-H-8083-32B Chapter 10: Engine Maintenance & Operation",
+        "publisher": "FAA",
+        "jurisdiction": "US",
+        "language": "en",
+        "source_type": "maintenance_training",
+        "landing_url": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/faa-h-8083-32b-chapter-10-engine-maintenance",
+        "rights": {
+          "status": "public_domain",
+          "license_name": "US government-authored text; excludes third-party material",
+          "license_url": "https://www.copyright.gov/title17/92chap1.html#105",
+          "scope": "government-authored text only; raw images not redistributed"
+        },
+        "engine_models": [],
+        "flight_phases": [],
+        "scope_status": "candidate",
+        "document_family_id": "faa-amtp-32b",
+        "review_status": "machine_candidate",
+        "revision": "32B",
+        "revision_status": "training_reference_not_model_specific",
+        "topic_tags": [
+          "troubleshooting",
+          "inspection",
+          "maintenance",
+          "hot_start",
+          "hung_start"
+        ],
+        "content_scope": "aviation_engine",
+        "completeness": "chapter",
+        "publisher_id": "FAA",
+        "task_coverage": [
+          "symptom_to_inspection",
+          "maintenance_reference"
+        ],
+        "task_coverage_status": "source_intent_candidate_not_evaluation_labels",
+        "topic_validation_notes": "Troubleshooting, oil pressure and hot/hung start wording verified in extracted text; not model-specific procedures."
+      },
+      "artifact_description": {
+        "name": "faa-amtp-ch10.pdf",
+        "url": "https://www.faa.gov/sites/faa.gov/files/12_amtp_ch10_0.pdf",
+        "processor": "pdf",
+        "media_type": "application/pdf",
+        "role": "content",
+        "selector": null,
+        "field_paths": [],
+        "include_patterns": [],
+        "exclude_patterns": []
+      },
+      "processed_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/faa-amtp-32b-ch10/faa-amtp-ch10.pdf.txt",
+      "blocks_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/faa-amtp-32b-ch10/faa-amtp-ch10.pdf.blocks.jsonl",
+      "blocks_sha256": "39a205a9a9f50c0270b8fa06579a63545537d99414a32e7bc06b89a5377f6dea",
+      "raw_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/raw/faa-amtp-ch10.pdf",
+      "canonical_character_count": 244069,
+      "split": "dev"
+    },
+    {
+      "document_id": "faa-ac-33-63-1",
+      "logical_document_id": "faa-ac-33-63-1",
+      "family_id": "faa-ac-33-63",
+      "title": "AC 33.63-1 Turbine Engine Vibration",
+      "publisher_id": "FAA",
+      "language": "en",
+      "source_type": "certification_guidance",
+      "canonical_sha256": "621e28a8746563d8da52666b2b3708d5e4fbb4d7628d6478072f63111480dc93",
+      "source_url": "https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_33_63-1.pdf",
+      "raw_sha256": "56d85c3585003c3a4130ee315a9fac528d4953be42fc7a86b89ecf80e1f1bbdc",
+      "raw_bytes": 112351,
+      "rights": {
+        "status": "public_domain",
+        "license_name": "US government-authored text; excludes third-party material",
+        "license_url": "https://www.copyright.gov/title17/92chap1.html#105",
+        "scope": "government-authored text only; raw images not redistributed"
+      },
+      "document_description": {
+        "document_id": "faa-ac-33-63-1",
+        "title": "AC 33.63-1 Turbine Engine Vibration",
+        "publisher": "FAA",
+        "jurisdiction": "US",
+        "language": "en",
+        "source_type": "certification_guidance",
+        "landing_url": "https://www.faa.gov/airports/resources/advisory_circulars/index.cfm/go/document.information/documentNumber/33.63-1",
+        "rights": {
+          "status": "public_domain",
+          "license_name": "US government-authored text; excludes third-party material",
+          "license_url": "https://www.copyright.gov/title17/92chap1.html#105",
+          "scope": "government-authored text only; raw images not redistributed"
+        },
+        "engine_models": [],
+        "flight_phases": [],
+        "scope_status": "candidate",
+        "document_family_id": "faa-ac-33-63",
+        "review_status": "machine_candidate",
+        "publication_date": "2007-07-25",
+        "revision_status": "active_on_landing_at_acquisition",
+        "topic_tags": [
+          "vibration",
+          "resonance",
+          "certification"
+        ],
+        "content_scope": "aviation_engine",
+        "publisher_id": "FAA",
+        "task_coverage": [
+          "failure_mechanism",
+          "certification_limits"
+        ],
+        "task_coverage_status": "source_intent_candidate_not_evaluation_labels"
+      },
+      "artifact_description": {
+        "name": "faa-ac-33-63-1.pdf",
+        "url": "https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_33_63-1.pdf",
+        "processor": "pdf",
+        "media_type": "application/pdf",
+        "role": "content",
+        "selector": null,
+        "field_paths": [],
+        "include_patterns": [],
+        "exclude_patterns": []
+      },
+      "processed_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/faa-ac-33-63-1/faa-ac-33-63-1.pdf.txt",
+      "blocks_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/faa-ac-33-63-1/faa-ac-33-63-1.pdf.blocks.jsonl",
+      "blocks_sha256": "5ae0601e1ac76de4d1ca32e473171a99b3f2a6671305e16af01ce14071cad7a7",
+      "raw_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/raw/faa-ac-33-63-1.pdf",
+      "canonical_character_count": 32865,
+      "split": "test"
+    },
+    {
+      "document_id": "caac-ccar33-r2",
+      "logical_document_id": "caac-ccar33-r2",
+      "family_id": "caac-ccar33",
+      "title": "航空发动机适航规定 CCAR-33-R2",
+      "publisher_id": "CAAC",
+      "language": "zh",
+      "source_type": "airworthiness_regulation",
+      "canonical_sha256": "3f01e4ca88bc0b272fcb8e64bf66ace45d9725653cc89ffd09d20b8848defb76",
+      "source_url": "https://www.caac.gov.cn/PHONE/XXGK_17/XXGK/MHGZ/201606/P020160622475662069139.pdf",
+      "raw_sha256": "f67297b26d68f7e56c58d28cdc52ea04beb9e6e7b60d5279eaf4c9629a4f79cf",
+      "raw_bytes": 1837910,
+      "rights": {
+        "status": "unknown",
+        "license_name": null,
+        "license_url": null
+      },
+      "document_description": {
+        "document_id": "caac-ccar33-r2",
+        "title": "航空发动机适航规定 CCAR-33-R2",
+        "publisher": "CAAC",
+        "jurisdiction": "CN",
+        "language": "zh",
+        "source_type": "airworthiness_regulation",
+        "landing_url": "https://www.caac.gov.cn/PHONE/XXGK_17/XXGK/MHGZ/201606/t20160622_38639.html",
+        "rights": {
+          "status": "unknown",
+          "license_name": null,
+          "license_url": null
+        },
+        "engine_models": [],
+        "flight_phases": [],
+        "scope_status": "candidate",
+        "document_family_id": "caac-ccar33",
+        "review_status": "machine_candidate",
+        "publication_date": "2016-03-17",
+        "revision": "R2",
+        "revision_status": "有效_on_official_landing_at_acquisition",
+        "topic_tags": [
+          "engine_airworthiness",
+          "certification",
+          "durability"
+        ],
+        "content_scope": "aviation_engine",
+        "publisher_id": "CAAC",
+        "task_coverage": [
+          "applicability_and_revision"
+        ],
+        "task_coverage_status": "source_intent_candidate_not_evaluation_labels"
+      },
+      "artifact_description": {
+        "name": "caac-ccar33-r2.pdf",
+        "url": "https://www.caac.gov.cn/PHONE/XXGK_17/XXGK/MHGZ/201606/P020160622475662069139.pdf",
+        "processor": "pdf",
+        "media_type": "application/pdf",
+        "role": "content",
+        "selector": null,
+        "field_paths": [],
+        "include_patterns": [],
+        "exclude_patterns": []
+      },
+      "processed_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/caac-ccar33-r2/caac-ccar33-r2.pdf.txt",
+      "blocks_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/caac-ccar33-r2/caac-ccar33-r2.pdf.blocks.jsonl",
+      "blocks_sha256": "224f2c84d9b07aa06b404d84ca93d0c61d59e4c9df09dd15b8e805d0d315800c",
+      "raw_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/raw/caac-ccar33-r2.pdf",
+      "canonical_character_count": 50345,
+      "split": "test"
+    },
+    {
+      "document_id": "caac-ccar33-r1",
+      "logical_document_id": "caac-ccar33-r1-historical",
+      "family_id": "caac-ccar33",
+      "title": "航空发动机适航规定 CCAR-33-R1 历史版本",
+      "publisher_id": "CAAC",
+      "language": "zh",
+      "source_type": "airworthiness_regulation",
+      "canonical_sha256": "ad36f60b5afeae41c1875a90f0745cbdbc7a81025b23777b57a2db7e4605841e",
+      "source_url": "https://www.caac.gov.cn/XXGK/XXGK/MHGZ/201511/t20151102_8523.html",
+      "raw_sha256": "0dc15000c109b7b914c63df563ad0929f556dfafa81a79427d5551ae5d8018ec",
+      "raw_bytes": 497278,
+      "rights": {
+        "status": "unknown",
+        "license_name": null,
+        "license_url": null
+      },
+      "document_description": {
+        "document_id": "caac-ccar33-r1-historical",
+        "title": "航空发动机适航规定 CCAR-33-R1 历史版本",
+        "publisher": "CAAC",
+        "jurisdiction": "CN",
+        "language": "zh",
+        "source_type": "airworthiness_regulation",
+        "landing_url": "https://www.caac.gov.cn/XXGK/XXGK/MHGZ/201511/t20151102_8523.html",
+        "rights": {
+          "status": "unknown",
+          "license_name": null,
+          "license_url": null
+        },
+        "engine_models": [],
+        "flight_phases": [],
+        "scope_status": "candidate",
+        "document_family_id": "caac-ccar33",
+        "review_status": "machine_candidate",
+        "publication_date": "2002-03-20",
+        "revision": "R1",
+        "revision_status": "historical_not_active",
+        "topic_tags": [
+          "revision_conflict",
+          "engine_airworthiness"
+        ],
+        "content_scope": "aviation_engine",
+        "retrieval_policy": "historical_comparison_only",
+        "publisher_id": "CAAC",
+        "task_coverage": [
+          "applicability_and_revision"
+        ],
+        "task_coverage_status": "source_intent_candidate_not_evaluation_labels"
+      },
+      "artifact_description": {
+        "name": "caac-ccar33-r1.html",
+        "url": "https://www.caac.gov.cn/XXGK/XXGK/MHGZ/201511/t20151102_8523.html",
+        "processor": "html",
+        "media_type": "text/html",
+        "role": "content",
+        "selector": ".a_left > .content",
+        "field_paths": [],
+        "include_patterns": [],
+        "exclude_patterns": []
+      },
+      "processed_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/caac-ccar33-r1-historical/caac-ccar33-r1.html.txt",
+      "blocks_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/caac-ccar33-r1-historical/caac-ccar33-r1.html.blocks.jsonl",
+      "blocks_sha256": "313893d74b4c8f6767a0b4640296e0660380a8aa5f5903374223d35cd0a7c482",
+      "raw_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/raw/caac-ccar33-r1.html",
+      "canonical_character_count": 62215,
+      "split": "test"
+    },
+    {
+      "document_id": "caac-ac33-aa-2022-01",
+      "logical_document_id": "caac-ac33-aa-2022-01",
+      "family_id": "caac-ac33-aa",
+      "title": "航空发动机审定 AC-33-AA-2022-01",
+      "publisher_id": "CAAC",
+      "language": "zh",
+      "source_type": "certification_guidance",
+      "canonical_sha256": "ded4b120ffded182a6a733df221df713a9bf30aeeba93c83a48e124685a4bf57",
+      "source_url": "https://www.caac.gov.cn/XXGK/XXGK/GFXWJ/202211/P020221111607931970134.pdf",
+      "raw_sha256": "89d9b98186a8bfc85988324d1b8b8734fb81181160b5c582bbe89a3728af1988",
+      "raw_bytes": 2178567,
+      "rights": {
+        "status": "unknown",
+        "license_name": null,
+        "license_url": null
+      },
+      "document_description": {
+        "document_id": "caac-ac33-aa-2022-01",
+        "title": "航空发动机审定 AC-33-AA-2022-01",
+        "publisher": "CAAC",
+        "jurisdiction": "CN",
+        "language": "zh",
+        "source_type": "certification_guidance",
+        "landing_url": "https://www.caac.gov.cn/XXGK/XXGK/GFXWJ/202211/P020221111607931970134.pdf",
+        "rights": {
+          "status": "unknown",
+          "license_name": null,
+          "license_url": null
+        },
+        "engine_models": [],
+        "flight_phases": [],
+        "scope_status": "candidate",
+        "document_family_id": "caac-ac33-aa",
+        "review_status": "machine_candidate",
+        "revision": "2022-01",
+        "publication_date": "2022-11",
+        "revision_status": "published_reference_currentness_not_verified",
+        "topic_tags": [
+          "engine_certification",
+          "failure_analysis",
+          "vibration"
+        ],
+        "content_scope": "aviation_engine",
+        "publisher_id": "CAAC",
+        "task_coverage": [
+          "failure_mechanism",
+          "certification_limits"
+        ],
+        "task_coverage_status": "source_intent_candidate_not_evaluation_labels"
+      },
+      "artifact_description": {
+        "name": "caac-ac33-aa-2022-01.pdf",
+        "url": "https://www.caac.gov.cn/XXGK/XXGK/GFXWJ/202211/P020221111607931970134.pdf",
+        "processor": "pdf",
+        "media_type": "application/pdf",
+        "role": "content",
+        "selector": null,
+        "field_paths": [],
+        "include_patterns": [],
+        "exclude_patterns": []
+      },
+      "processed_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/caac-ac33-aa-2022-01/caac-ac33-aa-2022-01.pdf.txt",
+      "blocks_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/caac-ac33-aa-2022-01/caac-ac33-aa-2022-01.pdf.blocks.jsonl",
+      "blocks_sha256": "1c541f3c2856c5fcae297af58475bffa84f7937cce00328331069fdce636e47d",
+      "raw_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/raw/caac-ac33-aa-2022-01.pdf",
+      "canonical_character_count": 226043,
+      "split": "test"
+    },
+    {
+      "document_id": "fr-2025-03459",
+      "logical_document_id": "fr-2025-03459",
+      "family_id": "fr-cfm-lpt-disk",
+      "title": "Airworthiness Directives; CFM International, S.A. Engines 2025-03459",
+      "publisher_id": "FAA",
+      "language": "en",
+      "source_type": "airworthiness_directive",
+      "canonical_sha256": "86d1fa49a66c8e44d62badbec823b5585a4d30b75dec2dc842876367395f8bf8",
+      "source_url": "https://www.federalregister.gov/documents/full_text/xml/2025/03/04/2025-03459.xml",
+      "raw_sha256": "addfd6f2ce9436c549b86b7d44d2e6140c86f70cb06d673dfdbbaf0de6dbcc33",
+      "raw_bytes": 21968,
+      "rights": {
+        "status": "public_domain",
+        "license_name": "US government-authored text; excludes third-party material",
+        "license_url": "https://www.copyright.gov/title17/92chap1.html#105",
+        "scope": "government-authored text only; raw images not redistributed"
+      },
+      "document_description": {
+        "document_id": "fr-2025-03459",
+        "title": "Airworthiness Directives; CFM International, S.A. Engines 2025-03459",
+        "publisher": "FAA / Federal Register",
+        "jurisdiction": "US",
+        "language": "en",
+        "source_type": "airworthiness_directive",
+        "landing_url": "https://www.federalregister.gov/documents/2025/03/04/2025-03459/airworthiness-directives-cfm-international-sa-engines",
+        "rights": {
+          "status": "public_domain",
+          "license_name": "US government-authored text; excludes third-party material",
+          "license_url": "https://www.copyright.gov/title17/92chap1.html#105",
+          "scope": "government-authored text only; raw images not redistributed"
+        },
+        "engine_models": [
+          "LEAP-1A",
+          "LEAP-1B",
+          "LEAP-1C"
+        ],
+        "flight_phases": [],
+        "scope_status": "candidate",
+        "document_family_id": "fr-cfm-lpt-disk",
+        "review_status": "machine_candidate",
+        "publication_date": "2025-03-04",
+        "revision_status": "published_final_rule_currentness_not_verified",
+        "topic_tags": [
+          "lpt_disk",
+          "grain_size",
+          "removal_replacement"
+        ],
+        "content_scope": "aviation_engine",
+        "applicability_notes": "Exact engine variants, software versions, serial ranges and subsequent supersession require clause-level review; family labels are candidates.",
+        "publisher_id": "FAA",
+        "task_coverage": [
+          "model_part_applicability",
+          "mandatory_action_evidence"
+        ],
+        "task_coverage_status": "source_intent_candidate_not_evaluation_labels"
+      },
+      "artifact_description": {
+        "name": "fr-2025-03459.xml",
+        "url": "https://www.federalregister.gov/documents/full_text/xml/2025/03/04/2025-03459.xml",
+        "processor": "xml",
+        "media_type": "application/xml",
+        "role": "content",
+        "selector": null,
+        "field_paths": [],
+        "include_patterns": [],
+        "exclude_patterns": []
+      },
+      "processed_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/fr-2025-03459/fr-2025-03459.xml.txt",
+      "blocks_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/fr-2025-03459/fr-2025-03459.xml.blocks.jsonl",
+      "blocks_sha256": "8f4c26c0f81c650f86f39df91a890fdd37e83a43cddab5add1168439f12134d7",
+      "raw_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/raw/fr-2025-03459.xml",
+      "canonical_character_count": 14836,
+      "split": "test"
+    },
+    {
+      "document_id": "fr-2026-01094",
+      "logical_document_id": "fr-2026-01094",
+      "family_id": "fr-cfm-pss-icing",
+      "title": "Airworthiness Directives; CFM International, S.A. Engines 2026-01094",
+      "publisher_id": "FAA",
+      "language": "en",
+      "source_type": "airworthiness_directive",
+      "canonical_sha256": "041f03270f289cbe653f0a5b81caf42bc8474ba56fe04a08e75eb54369a342cb",
+      "source_url": "https://www.federalregister.gov/documents/full_text/xml/2026/01/21/2026-01094.xml",
+      "raw_sha256": "93f0cd7c9030f5c116f3ceb16fd65bc327df86a3642265908d7077f92d11be18",
+      "raw_bytes": 20011,
+      "rights": {
+        "status": "public_domain",
+        "license_name": "US government-authored text; excludes third-party material",
+        "license_url": "https://www.copyright.gov/title17/92chap1.html#105",
+        "scope": "government-authored text only; raw images not redistributed"
+      },
+      "document_description": {
+        "document_id": "fr-2026-01094",
+        "title": "Airworthiness Directives; CFM International, S.A. Engines 2026-01094",
+        "publisher": "FAA / Federal Register",
+        "jurisdiction": "US",
+        "language": "en",
+        "source_type": "airworthiness_directive",
+        "landing_url": "https://www.federalregister.gov/documents/2026/01/21/2026-01094/airworthiness-directives-cfm-international-sa-engines",
+        "rights": {
+          "status": "public_domain",
+          "license_name": "US government-authored text; excludes third-party material",
+          "license_url": "https://www.copyright.gov/title17/92chap1.html#105",
+          "scope": "government-authored text only; raw images not redistributed"
+        },
+        "engine_models": [
+          "LEAP-1A"
+        ],
+        "flight_phases": [],
+        "scope_status": "candidate",
+        "document_family_id": "fr-cfm-pss-icing",
+        "review_status": "machine_candidate",
+        "publication_date": "2026-01-21",
+        "revision_status": "published_final_rule_currentness_not_verified",
+        "topic_tags": [
+          "FADEC",
+          "PHM",
+          "pressure_subsystem",
+          "icing"
+        ],
+        "content_scope": "aviation_engine",
+        "applicability_notes": "Exact engine variants, software versions, serial ranges and subsequent supersession require clause-level review; family labels are candidates.",
+        "publisher_id": "FAA",
+        "task_coverage": [
+          "model_part_applicability",
+          "mandatory_action_evidence"
+        ],
+        "task_coverage_status": "source_intent_candidate_not_evaluation_labels"
+      },
+      "artifact_description": {
+        "name": "fr-2026-01094.xml",
+        "url": "https://www.federalregister.gov/documents/full_text/xml/2026/01/21/2026-01094.xml",
+        "processor": "xml",
+        "media_type": "application/xml",
+        "role": "content",
+        "selector": null,
+        "field_paths": [],
+        "include_patterns": [],
+        "exclude_patterns": []
+      },
+      "processed_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/fr-2026-01094/fr-2026-01094.xml.txt",
+      "blocks_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/fr-2026-01094/fr-2026-01094.xml.blocks.jsonl",
+      "blocks_sha256": "a4272454643a2a284acf269c747114403f6ae9c75e027f5c704d324f97574422",
+      "raw_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/raw/fr-2026-01094.xml",
+      "canonical_character_count": 13403,
+      "split": "dev"
+    },
+    {
+      "document_id": "airbus-thrust-setting-takeoff",
+      "logical_document_id": "airbus-thrust-setting-takeoff",
+      "family_id": "airbus-thrust-management",
+      "title": "Engine Thrust Management – Thrust Setting at Takeoff",
+      "publisher_id": "Airbus Safety First",
+      "language": "en",
+      "source_type": "manufacturer_safety_article",
+      "canonical_sha256": "776483489a7ae65fb53d1aed0eafe0466d1a723ce7b2d44e7bff8f9b36c4a9f0",
+      "source_url": "https://mms-safetyfirst.s3.eu-west-3.amazonaws.com/pdf/safety+first/engine-thrust-management-thrust-setting-at-takeoff.pdf",
+      "raw_sha256": "413ebd26c1a4eb3374d83809b73bab88194bb1d17dbf7588cf75d1ca85ffda33",
+      "raw_bytes": 1050687,
+      "rights": {
+        "status": "unknown",
+        "license_name": null,
+        "license_url": null
+      },
+      "document_description": {
+        "document_id": "airbus-thrust-setting-takeoff",
+        "title": "Engine Thrust Management – Thrust Setting at Takeoff",
+        "publisher": "Airbus Safety First",
+        "jurisdiction": "EU",
+        "language": "en",
+        "source_type": "manufacturer_safety_article",
+        "landing_url": "https://safetyfirst.airbus.com/engine-thrust-management-thrust-setting-at-takeoff/",
+        "rights": {
+          "status": "unknown",
+          "license_name": null,
+          "license_url": null
+        },
+        "engine_models": [],
+        "flight_phases": [
+          "takeoff"
+        ],
+        "scope_status": "candidate",
+        "document_family_id": "airbus-thrust-management",
+        "review_status": "machine_candidate",
+        "topic_tags": [
+          "crosswind",
+          "tailwind",
+          "thrust_stabilization",
+          "engine_stall"
+        ],
+        "revision_status": "safety_article_not_approved_operating_manual",
+        "content_scope": "aviation_engine",
+        "rights_notes": "Public article. Reprint conditions vary by issue/third-party contents; quarantine pending rights review.",
+        "publisher_id": "Airbus Safety First",
+        "task_coverage": [
+          "operating_conditions",
+          "symptom_explanation"
+        ],
+        "task_coverage_status": "source_intent_candidate_not_evaluation_labels"
+      },
+      "artifact_description": {
+        "name": "airbus-thrust-setting-takeoff.pdf",
+        "url": "https://mms-safetyfirst.s3.eu-west-3.amazonaws.com/pdf/safety+first/engine-thrust-management-thrust-setting-at-takeoff.pdf",
+        "processor": "pdf",
+        "media_type": "application/pdf",
+        "role": "content",
+        "selector": null,
+        "field_paths": [],
+        "include_patterns": [],
+        "exclude_patterns": []
+      },
+      "processed_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/airbus-thrust-setting-takeoff/airbus-thrust-setting-takeoff.pdf.txt",
+      "blocks_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/airbus-thrust-setting-takeoff/airbus-thrust-setting-takeoff.pdf.blocks.jsonl",
+      "blocks_sha256": "04572639d1b1c94a223e02f6dab952bed8b05812846286611a837f1b725ef236",
+      "raw_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/raw/airbus-thrust-setting-takeoff.pdf",
+      "canonical_character_count": 18980,
+      "split": "dev"
+    },
+    {
+      "document_id": "faa-sdr-2024",
+      "logical_document_id": "faa-sdr-2024-engine-expanded",
+      "family_id": "faa-sdr-2024",
+      "title": "FAA Service Difficulty Reports 2024 engine-relevant records",
+      "publisher_id": "FAA",
+      "language": "en",
+      "source_type": "service_difficulty_records",
+      "canonical_sha256": "f56917a4a45c3876271260a6db71fe49ac79b5bd5a3fb8f81bfa3cbfb2a65d79",
+      "source_url": "https://external.apic4e.faa.gov/sdrs/retrieve/SDR-2024.csv",
+      "raw_sha256": "35a499853b4b41ee5a205bb18e194ca9aa41bb1e932c54e41073f87b69fa120f",
+      "raw_bytes": 33747397,
+      "rights": {
+        "status": "public_domain",
+        "license_name": "US government-authored text; excludes third-party material",
+        "license_url": "https://www.copyright.gov/title17/92chap1.html#105",
+        "scope": "government-authored text only; raw images not redistributed"
+      },
+      "document_description": {
+        "document_id": "faa-sdr-2024-engine-expanded",
+        "title": "FAA Service Difficulty Reports 2024 engine-relevant records",
+        "publisher": "FAA SDR",
+        "jurisdiction": "US",
+        "language": "en",
+        "source_type": "service_difficulty_records",
+        "landing_url": "https://external.apic4e.faa.gov/sdrs/retrieve/SDR-2024.csv",
+        "rights": {
+          "status": "public_domain",
+          "license_name": "US government-authored text; excludes third-party material",
+          "license_url": "https://www.copyright.gov/title17/92chap1.html#105",
+          "scope": "government-authored text only; raw images not redistributed"
+        },
+        "engine_models": [],
+        "flight_phases": [],
+        "scope_status": "candidate",
+        "document_family_id": "faa-sdr-2024",
+        "review_status": "machine_candidate",
+        "topic_tags": [
+          "field_defects",
+          "maintenance_actions",
+          "symptom_narratives"
+        ],
+        "content_scope": "aviation_engine",
+        "revision_status": "unverified_reported_events_not_approved_procedures",
+        "baseline_relation": "Existing full 2024 CSV; previously only 225-row derived sample. Newly select broader engine-relevant subset. No new independent source claim.",
+        "privacy_notes": "Allowlist excludes registration, operator/submitter identifiers, aircraft/engine serials. Narrative possible identifiers require review.",
+        "selection_notes": "Retain powerplant/engine subsystem JASC 70-79 and starting 80; no field-name keyword match. All reported events still require relevance review.",
+        "publisher_id": "FAA",
+        "task_coverage": [
+          "reported_symptoms",
+          "reported_maintenance_actions"
+        ],
+        "task_coverage_status": "source_intent_candidate_not_evaluation_labels",
+        "selection_reference_url": "https://www.faa.gov/sites/faa.gov/files/JASC_Code.pdf",
+        "selection_limits": "Does not cover all engine-associated discrepancies coded in other chapters; Chapter 85 reciprocating engines and Chapter 81 turbocharging not selected. Some shared subsystem rows may concern piston engines. No code-to-model or flight-phase inference."
+      },
+      "artifact_description": {
+        "name": "faa-sdr-2024.csv",
+        "url": "https://external.apic4e.faa.gov/sdrs/retrieve/SDR-2024.csv",
+        "processor": "csv",
+        "media_type": "text/csv",
+        "role": "content",
+        "selector": null,
+        "field_paths": [
+          "DifficultyDate",
+          "JASCCode",
+          "StageOfOperationCode",
+          "AircraftMake",
+          "AircraftModel",
+          "EngineMake",
+          "EngineModel",
+          "PartName",
+          "PartNumber",
+          "PartCondition",
+          "PartLocation",
+          "Discrepancy"
+        ],
+        "include_patterns": [
+          "(?m)^JASCCode: (?:7[0-9]|80)[0-9]{2}$"
+        ],
+        "exclude_patterns": []
+      },
+      "processed_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/faa-sdr-2024-engine-expanded/faa-sdr-2024.csv.txt",
+      "blocks_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/faa-sdr-2024-engine-expanded/faa-sdr-2024.csv.blocks.jsonl",
+      "blocks_sha256": "d6f24f11ae9bfa27b1edac05a73a3774aff224c92e0616bfe05dc87bf9c70af3",
+      "raw_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/raw/faa-sdr-2024.csv",
+      "canonical_character_count": 1299847,
+      "split": "test"
+    },
+    {
+      "document_id": "aaib-aar-1-2010-g-ymmm-final_report_amended",
+      "logical_document_id": "aaib-aar-1-2010-g-ymmm",
+      "family_id": "aaib-g-ymmm-2008",
+      "title": "AAIB AAR 1/2010: Boeing 777-236ER G-YMMM, fuel-ice restriction at Heathrow",
+      "publisher_id": "AAIB",
+      "language": "en",
+      "source_type": "accident_report",
+      "canonical_sha256": "132a60831df9de238a22e569e2f0baa57c7b27c7a774da343d27c31dc3206f87",
+      "source_url": "https://assets.publishing.service.gov.uk/media/5422f3dbe5274a1314000495/1-2010_G-YMMM.pdf",
+      "raw_sha256": "2e95e1018fba4f95a3d563f6f1c5c47e29f2099e5337fb2e3ed25c6e88672868",
+      "raw_bytes": 6119546,
+      "rights": {
+        "status": "unknown",
+        "license_url": "https://www.gov.uk/aaib-reports/1-2010-boeing-777-236er-g-ymmm-17-january-2008",
+        "license_name": "Report copyright permits attributed extracts; full-report and third-party rights require review"
+      },
+      "document_description": {
+        "document_id": "aaib-aar-1-2010-g-ymmm",
+        "title": "AAIB AAR 1/2010: Boeing 777-236ER G-YMMM, fuel-ice restriction at Heathrow",
+        "publisher": "UK Air Accidents Investigation Branch (AAIB)",
+        "jurisdiction": "GB",
+        "language": "en",
+        "languages": [
+          "en"
+        ],
+        "source_type": "accident_report",
+        "landing_url": "https://www.gov.uk/aaib-reports/1-2010-boeing-777-236er-g-ymmm-17-january-2008",
+        "rights": {
+          "status": "unknown",
+          "license_url": "https://www.gov.uk/aaib-reports/1-2010-boeing-777-236er-g-ymmm-17-january-2008",
+          "license_name": "Report copyright permits attributed extracts; full-report and third-party rights require review"
+        },
+        "engine_models": [
+          "Rolls-Royce RB211 Trent 895-17"
+        ],
+        "flight_phases": [
+          "approach"
+        ],
+        "scope_status": "candidate",
+        "content_scope": "aviation_engine",
+        "document_family_id": "aaib-g-ymmm-2008",
+        "related_family_id": "aaib-g-ymmm-2008",
+        "verified_on": "2026-10-13",
+        "applicability_status": "candidate_hints_not_verified_applicability",
+        "topic_tags": [
+          "fuel_icing",
+          "fuel_oil_heat_exchanger",
+          "loss_of_thrust"
+        ],
+        "event_date": "2008-01-17",
+        "source_date": "2010-02-09",
+        "revision_status": "amended_2019_correction",
+        "hold_redistribution": true,
+        "notes": [
+          "Candidate engine/phase describe the occurrence, not all engines discussed in the report.",
+          "Do not derive applicability from other Trent families mentioned in subsequent ADs."
+        ],
+        "review_status": "machine_candidate",
+        "publisher_id": "AAIB",
+        "task_coverage": [
+          "failure_mechanism",
+          "event_conditions",
+          "investigation_findings"
+        ],
+        "task_coverage_status": "source_intent_candidate_not_evaluation_labels"
+      },
+      "artifact_description": {
+        "name": "aaib-aar-1-2010-g-ymmm-final_report_amended.pdf",
+        "url": "https://assets.publishing.service.gov.uk/media/5422f3dbe5274a1314000495/1-2010_G-YMMM.pdf",
+        "media_type": "application/pdf",
+        "role": "content",
+        "processor": "pdf",
+        "selector": null,
+        "field_paths": [],
+        "include_patterns": [],
+        "exclude_patterns": [],
+        "completeness": "full_report",
+        "pages": 243,
+        "revision_status": "amended",
+        "source_date": "2010-02-09",
+        "artifact_key": "final_report_amended"
+      },
+      "processed_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/aaib-aar-1-2010-g-ymmm/aaib-aar-1-2010-g-ymmm-final_report_amended.pdf.txt",
+      "blocks_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/aaib-aar-1-2010-g-ymmm/aaib-aar-1-2010-g-ymmm-final_report_amended.pdf.blocks.jsonl",
+      "blocks_sha256": "25d98927b18720664bb1d2393270531953ab98ce712019ba9c43dd1040d9ac27",
+      "raw_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/raw/aaib-aar-1-2010-g-ymmm-final_report_amended.pdf",
+      "canonical_character_count": 446934,
+      "split": "test"
+    },
+    {
+      "document_id": "aaib-aar-1-2010-g-ymmm-correction_2019",
+      "logical_document_id": "aaib-aar-1-2010-g-ymmm",
+      "family_id": "aaib-g-ymmm-2008",
+      "title": "AAIB AAR 1/2010: Boeing 777-236ER G-YMMM, fuel-ice restriction at Heathrow",
+      "publisher_id": "AAIB",
+      "language": "en",
+      "source_type": "accident_report",
+      "canonical_sha256": "b9d79c1d4f9e989c4bf9d520e651a80ffb8c70e561ad5d1194abd904f10c9075",
+      "source_url": "https://assets.publishing.service.gov.uk/media/5cb5e6fd40f0b67496898329/AAR_1-2010_G-YMMM_Correction.pdf",
+      "raw_sha256": "4b9282299cb8a6b558b964cb5f07542124482ce44b5f3104c2f3ee99d6402f0e",
+      "raw_bytes": 103198,
+      "rights": {
+        "status": "unknown",
+        "license_url": "https://www.gov.uk/aaib-reports/1-2010-boeing-777-236er-g-ymmm-17-january-2008",
+        "license_name": "Report copyright permits attributed extracts; full-report and third-party rights require review"
+      },
+      "document_description": {
+        "document_id": "aaib-aar-1-2010-g-ymmm",
+        "title": "AAIB AAR 1/2010: Boeing 777-236ER G-YMMM, fuel-ice restriction at Heathrow",
+        "publisher": "UK Air Accidents Investigation Branch (AAIB)",
+        "jurisdiction": "GB",
+        "language": "en",
+        "languages": [
+          "en"
+        ],
+        "source_type": "accident_report",
+        "landing_url": "https://www.gov.uk/aaib-reports/1-2010-boeing-777-236er-g-ymmm-17-january-2008",
+        "rights": {
+          "status": "unknown",
+          "license_url": "https://www.gov.uk/aaib-reports/1-2010-boeing-777-236er-g-ymmm-17-january-2008",
+          "license_name": "Report copyright permits attributed extracts; full-report and third-party rights require review"
+        },
+        "engine_models": [
+          "Rolls-Royce RB211 Trent 895-17"
+        ],
+        "flight_phases": [
+          "approach"
+        ],
+        "scope_status": "candidate",
+        "content_scope": "aviation_engine",
+        "document_family_id": "aaib-g-ymmm-2008",
+        "related_family_id": "aaib-g-ymmm-2008",
+        "verified_on": "2026-10-13",
+        "applicability_status": "candidate_hints_not_verified_applicability",
+        "topic_tags": [
+          "fuel_icing",
+          "fuel_oil_heat_exchanger",
+          "loss_of_thrust"
+        ],
+        "event_date": "2008-01-17",
+        "source_date": "2010-02-09",
+        "revision_status": "amended_2019_correction",
+        "hold_redistribution": true,
+        "notes": [
+          "Candidate engine/phase describe the occurrence, not all engines discussed in the report.",
+          "Do not derive applicability from other Trent families mentioned in subsequent ADs."
+        ],
+        "review_status": "machine_candidate",
+        "publisher_id": "AAIB",
+        "task_coverage": [
+          "failure_mechanism",
+          "event_conditions",
+          "investigation_findings"
+        ],
+        "task_coverage_status": "source_intent_candidate_not_evaluation_labels"
+      },
+      "artifact_description": {
+        "name": "aaib-aar-1-2010-g-ymmm-correction_2019.pdf",
+        "url": "https://assets.publishing.service.gov.uk/media/5cb5e6fd40f0b67496898329/AAR_1-2010_G-YMMM_Correction.pdf",
+        "media_type": "application/pdf",
+        "role": "content",
+        "processor": "pdf",
+        "selector": null,
+        "field_paths": [],
+        "include_patterns": [],
+        "exclude_patterns": [],
+        "completeness": "correction_notice",
+        "pages": 1,
+        "source_date": "2019-04-17",
+        "artifact_key": "correction_2019"
+      },
+      "processed_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/aaib-aar-1-2010-g-ymmm/aaib-aar-1-2010-g-ymmm-correction_2019.pdf.txt",
+      "blocks_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/aaib-aar-1-2010-g-ymmm/aaib-aar-1-2010-g-ymmm-correction_2019.pdf.blocks.jsonl",
+      "blocks_sha256": "d8f473fcad1a8b47fabfefc9e98f6344f31be5cf58711d99b13c2037210b26c2",
+      "raw_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/raw/aaib-aar-1-2010-g-ymmm-correction_2019.pdf",
+      "canonical_character_count": 830,
+      "split": "test"
+    },
+    {
+      "document_id": "aaib-aar-1-2015-g-euoe-final_report",
+      "logical_document_id": "aaib-aar-1-2015-g-euoe",
+      "family_id": "aaib-g-euoe-2013",
+      "title": "AAIB AAR 1/2015: Airbus A319-131 G-EUOE, fan-cowl maintenance error and engine fire",
+      "publisher_id": "AAIB",
+      "language": "en",
+      "source_type": "accident_report",
+      "canonical_sha256": "d3f674137ff9c247ea18dc0502c90809cd727eeeae6bfe78534bed718f69f0e4",
+      "source_url": "https://assets.publishing.service.gov.uk/media/55a4bdb940f0b61562000001/AAR_1-2015_G-EUOE.pdf",
+      "raw_sha256": "5ba9af8f32023d2708c8bdba79084491dd2c8da7c078447abf843a9789fdfa8f",
+      "raw_bytes": 3032650,
+      "rights": {
+        "status": "unknown",
+        "license_url": "https://www.gov.uk/aaib-reports/aircraft-accident-report-1-2015-airbus-a319-131-g-euoe-24-may-2013",
+        "license_name": "Attributed extracts permitted by report; no blanket full-report open licence verified"
+      },
+      "document_description": {
+        "document_id": "aaib-aar-1-2015-g-euoe",
+        "title": "AAIB AAR 1/2015: Airbus A319-131 G-EUOE, fan-cowl maintenance error and engine fire",
+        "publisher": "UK Air Accidents Investigation Branch (AAIB)",
+        "jurisdiction": "GB",
+        "language": "en",
+        "languages": [
+          "en"
+        ],
+        "source_type": "accident_report",
+        "landing_url": "https://www.gov.uk/aaib-reports/aircraft-accident-report-1-2015-airbus-a319-131-g-euoe-24-may-2013",
+        "rights": {
+          "status": "unknown",
+          "license_url": "https://www.gov.uk/aaib-reports/aircraft-accident-report-1-2015-airbus-a319-131-g-euoe-24-may-2013",
+          "license_name": "Attributed extracts permitted by report; no blanket full-report open licence verified"
+        },
+        "engine_models": [
+          "IAE V2522-A5"
+        ],
+        "flight_phases": [
+          "takeoff",
+          "approach"
+        ],
+        "scope_status": "candidate",
+        "content_scope": "aviation_engine",
+        "document_family_id": "aaib-g-euoe-2013",
+        "related_family_id": "aaib-g-euoe-2013",
+        "verified_on": "2026-10-13",
+        "applicability_status": "candidate_hints_not_verified_applicability",
+        "topic_tags": [
+          "maintenance",
+          "fan_cowl",
+          "fuel_pipe_damage",
+          "engine_fire"
+        ],
+        "event_date": "2013-05-24",
+        "source_date": "2015-07-14",
+        "revision_status": "final",
+        "hold_redistribution": true,
+        "notes": [
+          "Engine identification is in report section 1.6.1; maintenance topic is not a flight phase."
+        ],
+        "review_status": "machine_candidate",
+        "publisher_id": "AAIB",
+        "task_coverage": [
+          "failure_mechanism",
+          "event_conditions",
+          "investigation_findings"
+        ],
+        "task_coverage_status": "source_intent_candidate_not_evaluation_labels"
+      },
+      "artifact_description": {
+        "name": "aaib-aar-1-2015-g-euoe-final_report.pdf",
+        "url": "https://assets.publishing.service.gov.uk/media/55a4bdb940f0b61562000001/AAR_1-2015_G-EUOE.pdf",
+        "media_type": "application/pdf",
+        "role": "content",
+        "processor": "pdf",
+        "selector": null,
+        "field_paths": [],
+        "include_patterns": [],
+        "exclude_patterns": [],
+        "completeness": "full_report",
+        "pages": 149,
+        "artifact_key": "final_report"
+      },
+      "processed_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/aaib-aar-1-2015-g-euoe/aaib-aar-1-2015-g-euoe-final_report.pdf.txt",
+      "blocks_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/aaib-aar-1-2015-g-euoe/aaib-aar-1-2015-g-euoe-final_report.pdf.blocks.jsonl",
+      "blocks_sha256": "9e2f62de0657ca315bb268036a254cf3e9c1f8e3a403f2f5a0786781b4191c4a",
+      "raw_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/raw/aaib-aar-1-2015-g-euoe-final_report.pdf",
+      "canonical_character_count": 300822,
+      "split": "test"
+    },
+    {
+      "document_id": "aaib-aar-1-2021-g-pown-final_report_with_2023_correction",
+      "logical_document_id": "aaib-aar-1-2021-g-pown",
+      "family_id": "aaib-g-pown-2020",
+      "title": "AAIB AAR 1/2021: Airbus A321-211 G-POWN, dual-engine malfunction after biocide treatment",
+      "publisher_id": "AAIB",
+      "language": "en",
+      "source_type": "serious_incident_report",
+      "canonical_sha256": "a8e246c470241551180c0ea8c481df8b8dc1ff5030dda1cbeb284da767a1be75",
+      "source_url": "https://assets.publishing.service.gov.uk/media/6087c670e90e076ab1e3492c/AAR_1-2021_G-POWN.pdf",
+      "raw_sha256": "bc8a91c7f32d68438e5663fca06e78e70a2702dfcda3928ed12decdd8a934978",
+      "raw_bytes": 11677719,
+      "rights": {
+        "status": "unknown",
+        "license_url": "https://www.gov.uk/aaib-reports/aircraft-accident-report-aar-1-slash-2021-airbus-a321-211-g-pown-26-february-2020",
+        "license_name": "Crown report and third-party rights: full-report reuse not verified as open licensed"
+      },
+      "document_description": {
+        "document_id": "aaib-aar-1-2021-g-pown",
+        "title": "AAIB AAR 1/2021: Airbus A321-211 G-POWN, dual-engine malfunction after biocide treatment",
+        "publisher": "UK Air Accidents Investigation Branch (AAIB)",
+        "jurisdiction": "GB",
+        "language": "en",
+        "languages": [
+          "en"
+        ],
+        "source_type": "serious_incident_report",
+        "landing_url": "https://www.gov.uk/aaib-reports/aircraft-accident-report-aar-1-slash-2021-airbus-a321-211-g-pown-26-february-2020",
+        "rights": {
+          "status": "unknown",
+          "license_url": "https://www.gov.uk/aaib-reports/aircraft-accident-report-aar-1-slash-2021-airbus-a321-211-g-pown-26-february-2020",
+          "license_name": "Crown report and third-party rights: full-report reuse not verified as open licensed"
+        },
+        "engine_models": [
+          "CFM56-5B3/3"
+        ],
+        "flight_phases": [
+          "takeoff",
+          "climb",
+          "approach"
+        ],
+        "scope_status": "candidate",
+        "content_scope": "aviation_engine",
+        "document_family_id": "aaib-g-pown-2020",
+        "related_family_id": "aaib-g-pown-2020",
+        "verified_on": "2026-10-13",
+        "applicability_status": "candidate_hints_not_verified_applicability",
+        "topic_tags": [
+          "maintenance",
+          "biocide_overdose",
+          "engine_surge",
+          "hydromechanical_unit",
+          "wrong_engine_manual"
+        ],
+        "event_date": "2020-02-26",
+        "source_date": "2021-05-06",
+        "revision_status": "amended_2023_correction",
+        "hold_redistribution": true,
+        "notes": [
+          "LEAP-1A32 is the incorrectly selected troubleshooting manual in this case; it must not become a positive applicability hint.",
+          "Final amended report takes precedence over preliminary bulletin; keep both in one family."
+        ],
+        "review_status": "machine_candidate",
+        "publisher_id": "AAIB",
+        "task_coverage": [
+          "reference_lookup"
+        ],
+        "task_coverage_status": "source_intent_candidate_not_evaluation_labels"
+      },
+      "artifact_description": {
+        "name": "aaib-aar-1-2021-g-pown-final_report_with_2023_correction.pdf",
+        "url": "https://assets.publishing.service.gov.uk/media/6087c670e90e076ab1e3492c/AAR_1-2021_G-POWN.pdf",
+        "media_type": "application/pdf",
+        "role": "content",
+        "processor": "pdf",
+        "selector": null,
+        "field_paths": [],
+        "include_patterns": [],
+        "exclude_patterns": [],
+        "completeness": "full_report",
+        "revision_status": "amended_2023",
+        "verification": "official_landing_attachment_verified; web_full_fetch_blocked_by_11.7MB_limit",
+        "artifact_key": "final_report_with_2023_correction"
+      },
+      "processed_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/aaib-aar-1-2021-g-pown/aaib-aar-1-2021-g-pown-final_report_with_2023_correction.pdf.txt",
+      "blocks_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/aaib-aar-1-2021-g-pown/aaib-aar-1-2021-g-pown-final_report_with_2023_correction.pdf.blocks.jsonl",
+      "blocks_sha256": "7e6d26af888b8756b46a8287ad4f6a7d909d9fd33691762680957f54f57ce07e",
+      "raw_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/raw/aaib-aar-1-2021-g-pown-final_report_with_2023_correction.pdf",
+      "canonical_character_count": 240892,
+      "split": "dev"
+    },
+    {
+      "document_id": "bea-bea2017-0568-final_report_french_reference",
+      "logical_document_id": "bea-bea2017-0568",
+      "family_id": "bea-bea2017-0568",
+      "title": "BEA2017-0568: Airbus A380-861 F-HPJE, GP7270 uncontained fan failure over Greenland",
+      "publisher_id": "BEA",
+      "language": "fr",
+      "source_type": "accident_report",
+      "canonical_sha256": "abc5ab912e6d6a723d436d2286f2e177f5b7eadbfc7fe70f070537beb5de26e0",
+      "source_url": "https://bea.aero/fileadmin/uploads/tx_elydbrapports/BEA2017-0568.pdf",
+      "raw_sha256": "a75c57a21e5b255d203b0f12c523467024e582751d1824d8a84692ff9b331ed9",
+      "raw_bytes": 8059452,
+      "rights": {
+        "status": "unknown",
+        "license_url": "https://bea.aero/mentions-legales/",
+        "license_name": "BEA public-information and copyright notice; no blanket open report licence verified"
+      },
+      "document_description": {
+        "document_id": "bea-bea2017-0568",
+        "title": "BEA2017-0568: Airbus A380-861 F-HPJE, GP7270 uncontained fan failure over Greenland",
+        "publisher": "Bureau d'Enquêtes et d'Analyses (BEA)",
+        "jurisdiction": "FR",
+        "language": "fr",
+        "languages": [
+          "fr",
+          "en"
+        ],
+        "source_type": "accident_report",
+        "landing_url": "https://bea.aero/en/investigation-reports/notified-events/detail/accident-to-the-airbus-a380-861-registered-f-hpje-and-operated-by-air-france-on-30-09-2017-en-route-over-greenland-investigation-delegated-to-bea-by-the-authorities-of-denmark/",
+        "rights": {
+          "status": "unknown",
+          "license_url": "https://bea.aero/mentions-legales/",
+          "license_name": "BEA public-information and copyright notice; no blanket open report licence verified"
+        },
+        "engine_models": [
+          "Engine Alliance GP7270"
+        ],
+        "flight_phases": [
+          "cruise"
+        ],
+        "scope_status": "candidate",
+        "content_scope": "aviation_engine",
+        "document_family_id": "bea-bea2017-0568",
+        "related_family_id": "bea-bea2017-0568",
+        "verified_on": "2026-10-13",
+        "applicability_status": "candidate_hints_not_verified_applicability",
+        "topic_tags": [
+          "uncontained_failure",
+          "fan_hub",
+          "titanium",
+          "cold_dwell_fatigue",
+          "engine_vibration"
+        ],
+        "event_date": "2017-09-30",
+        "source_date": "2020-09",
+        "revision_status": "final",
+        "hold_redistribution": true,
+        "notes": [
+          "English edition expressly designates French original as reference; translations belong to one accident family.",
+          "Danish occurrence investigation delegated to French BEA; jurisdiction records publisher France, occurrence over Greenland."
+        ],
+        "review_status": "machine_candidate",
+        "publisher_id": "BEA",
+        "task_coverage": [
+          "failure_mechanism",
+          "event_conditions",
+          "investigation_findings"
+        ],
+        "task_coverage_status": "source_intent_candidate_not_evaluation_labels"
+      },
+      "artifact_description": {
+        "name": "bea-bea2017-0568-final_report_french_reference.pdf",
+        "url": "https://bea.aero/fileadmin/uploads/tx_elydbrapports/BEA2017-0568.pdf",
+        "media_type": "application/pdf",
+        "role": "content",
+        "processor": "pdf",
+        "selector": null,
+        "field_paths": [],
+        "include_patterns": [],
+        "exclude_patterns": [],
+        "language": "fr",
+        "completeness": "full_report",
+        "pages": 92,
+        "translation_status": "original_reference",
+        "artifact_key": "final_report_french_reference"
+      },
+      "processed_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/bea-bea2017-0568/bea-bea2017-0568-final_report_french_reference.pdf.txt",
+      "blocks_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/bea-bea2017-0568/bea-bea2017-0568-final_report_french_reference.pdf.blocks.jsonl",
+      "blocks_sha256": "88bea3f0f4326db101df5b11afa11c66bdc4eb34e340cb858ac58ce5a79dd808",
+      "raw_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/raw/bea-bea2017-0568-final_report_french_reference.pdf",
+      "canonical_character_count": 202232,
+      "split": "test"
+    },
+    {
+      "document_id": "bea-bea2017-0568-final_report_english_translation",
+      "logical_document_id": "bea-bea2017-0568",
+      "family_id": "bea-bea2017-0568",
+      "title": "BEA2017-0568: Airbus A380-861 F-HPJE, GP7270 uncontained fan failure over Greenland",
+      "publisher_id": "BEA",
+      "language": "en",
+      "source_type": "accident_report",
+      "canonical_sha256": "e51794d83db728d8b8e07055bd0f77514a2a319f601614ddace2ba1cb0ff1871",
+      "source_url": "https://bea.aero/fileadmin/uploads/tx_elydbrapports/BEA2017-0568.en.pdf",
+      "raw_sha256": "2921a323ab683c6cc99c45c09d7b782bf96d82e415ebe6362d874ad8a941b494",
+      "raw_bytes": 7299858,
+      "rights": {
+        "status": "unknown",
+        "license_url": "https://bea.aero/mentions-legales/",
+        "license_name": "BEA public-information and copyright notice; no blanket open report licence verified"
+      },
+      "document_description": {
+        "document_id": "bea-bea2017-0568",
+        "title": "BEA2017-0568: Airbus A380-861 F-HPJE, GP7270 uncontained fan failure over Greenland",
+        "publisher": "Bureau d'Enquêtes et d'Analyses (BEA)",
+        "jurisdiction": "FR",
+        "language": "fr",
+        "languages": [
+          "fr",
+          "en"
+        ],
+        "source_type": "accident_report",
+        "landing_url": "https://bea.aero/en/investigation-reports/notified-events/detail/accident-to-the-airbus-a380-861-registered-f-hpje-and-operated-by-air-france-on-30-09-2017-en-route-over-greenland-investigation-delegated-to-bea-by-the-authorities-of-denmark/",
+        "rights": {
+          "status": "unknown",
+          "license_url": "https://bea.aero/mentions-legales/",
+          "license_name": "BEA public-information and copyright notice; no blanket open report licence verified"
+        },
+        "engine_models": [
+          "Engine Alliance GP7270"
+        ],
+        "flight_phases": [
+          "cruise"
+        ],
+        "scope_status": "candidate",
+        "content_scope": "aviation_engine",
+        "document_family_id": "bea-bea2017-0568",
+        "related_family_id": "bea-bea2017-0568",
+        "verified_on": "2026-10-13",
+        "applicability_status": "candidate_hints_not_verified_applicability",
+        "topic_tags": [
+          "uncontained_failure",
+          "fan_hub",
+          "titanium",
+          "cold_dwell_fatigue",
+          "engine_vibration"
+        ],
+        "event_date": "2017-09-30",
+        "source_date": "2020-09",
+        "revision_status": "final",
+        "hold_redistribution": true,
+        "notes": [
+          "English edition expressly designates French original as reference; translations belong to one accident family.",
+          "Danish occurrence investigation delegated to French BEA; jurisdiction records publisher France, occurrence over Greenland."
+        ],
+        "review_status": "machine_candidate",
+        "publisher_id": "BEA",
+        "task_coverage": [
+          "failure_mechanism",
+          "event_conditions",
+          "investigation_findings"
+        ],
+        "task_coverage_status": "source_intent_candidate_not_evaluation_labels"
+      },
+      "artifact_description": {
+        "name": "bea-bea2017-0568-final_report_english_translation.pdf",
+        "url": "https://bea.aero/fileadmin/uploads/tx_elydbrapports/BEA2017-0568.en.pdf",
+        "media_type": "application/pdf",
+        "role": "content",
+        "processor": "pdf",
+        "selector": null,
+        "field_paths": [],
+        "include_patterns": [],
+        "exclude_patterns": [],
+        "language": "en",
+        "completeness": "full_report",
+        "pages": 85,
+        "translation_status": "courtesy_translation_french_is_reference",
+        "artifact_key": "final_report_english_translation"
+      },
+      "processed_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/bea-bea2017-0568/bea-bea2017-0568-final_report_english_translation.pdf.txt",
+      "blocks_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/bea-bea2017-0568/bea-bea2017-0568-final_report_english_translation.pdf.blocks.jsonl",
+      "blocks_sha256": "8cb2956fefd3c7ade7b2d70cc2eef359343a290b126ab6d60dbc109c2a1e02df",
+      "raw_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/raw/bea-bea2017-0568-final_report_english_translation.pdf",
+      "canonical_character_count": 181252,
+      "split": "test"
+    },
+    {
+      "document_id": "easa-2010-0236-e-historical-superseded_emergency_ad",
+      "logical_document_id": "easa-2010-0236-e-historical",
+      "family_id": "easa-trent900-hpip-2010-0236-0242",
+      "title": "EASA Emergency AD 2010-0236-E: Trent 900 HP/IP structure inspections (superseded historical directive)",
+      "publisher_id": "EASA",
+      "language": "en",
+      "source_type": "airworthiness_directive",
+      "canonical_sha256": "1ec3f22019442f01cbbaab6ead445fd3b983b6ccb28117624f8c1813f81f47b7",
+      "source_url": "https://ad.easa.europa.eu/blob/easa_ad_2010_0236_E_superseded.pdf/EAD_2010-0236-E_1",
+      "raw_sha256": "2ef2065e4e8012939420a7ce2add23259eb676c66f0f218ab6039b01e111f014",
+      "raw_bytes": 205834,
+      "rights": {
+        "status": "unknown",
+        "license_url": "https://ad.easa.europa.eu/disclaimer",
+        "license_name": "EASA Safety Publications attribution-required reproduction notice; document-specific reuse review pending"
+      },
+      "document_description": {
+        "document_id": "easa-2010-0236-e-historical",
+        "title": "EASA Emergency AD 2010-0236-E: Trent 900 HP/IP structure inspections (superseded historical directive)",
+        "publisher": "European Union Aviation Safety Agency (EASA)",
+        "jurisdiction": "EU",
+        "language": "en",
+        "languages": [
+          "en"
+        ],
+        "source_type": "airworthiness_directive",
+        "landing_url": "https://ad.easa.europa.eu/ad/2010-0236-E",
+        "rights": {
+          "status": "unknown",
+          "license_url": "https://ad.easa.europa.eu/disclaimer",
+          "license_name": "EASA Safety Publications attribution-required reproduction notice; document-specific reuse review pending"
+        },
+        "engine_models": [
+          "Rolls-Royce RB211 Trent 900"
+        ],
+        "flight_phases": [],
+        "scope_status": "candidate",
+        "content_scope": "aviation_engine",
+        "document_family_id": "easa-trent900-hpip-2010-0236-0242",
+        "related_family_id": "atsb-ao-2010-089",
+        "verified_on": "2026-10-13",
+        "applicability_status": "candidate_hints_not_verified_applicability",
+        "topic_tags": [
+          "maintenance",
+          "inspection",
+          "oil_feed_stub_pipe",
+          "hp_ip_structure",
+          "historical_airworthiness_directive"
+        ],
+        "source_date": "2010-11-10",
+        "revision_status": "superseded_by_2010-0242-e",
+        "regulatory_use": "historical_only_not_current_maintenance_instruction",
+        "hold_redistribution": true,
+        "notes": [
+          "2010-0236-E is explicitly superseded; later 2010-0242 revision family has a 2011-03-02 cancellation notice.",
+          "No flight phase restriction inferred from inspection task.",
+          "SPT copyright permits attributed reproduction unless otherwise restricted, but current directive/reuse review is still required."
+        ],
+        "review_status": "machine_candidate",
+        "publisher_id": "EASA",
+        "task_coverage": [
+          "model_part_applicability",
+          "mandatory_action_evidence"
+        ],
+        "task_coverage_status": "source_intent_candidate_not_evaluation_labels"
+      },
+      "artifact_description": {
+        "name": "easa-2010-0236-e-historical-superseded_emergency_ad.pdf",
+        "url": "https://ad.easa.europa.eu/blob/easa_ad_2010_0236_E_superseded.pdf/EAD_2010-0236-E_1",
+        "media_type": "application/pdf",
+        "role": "content",
+        "processor": "pdf",
+        "selector": null,
+        "field_paths": [],
+        "include_patterns": [],
+        "exclude_patterns": [],
+        "completeness": "full_directive",
+        "pages": 3,
+        "revision_status": "superseded",
+        "artifact_key": "superseded_emergency_ad"
+      },
+      "processed_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/easa-2010-0236-e-historical/easa-2010-0236-e-historical-superseded_emergency_ad.pdf.txt",
+      "blocks_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/easa-2010-0236-e-historical/easa-2010-0236-e-historical-superseded_emergency_ad.pdf.blocks.jsonl",
+      "blocks_sha256": "028c13102d43a63d8d878799aa2814aa00430d8f00fbfd9e4c5bbb2309b7f08a",
+      "raw_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/raw/easa-2010-0236-e-historical-superseded_emergency_ad.pdf",
+      "canonical_character_count": 5778,
+      "split": "test"
+    },
+    {
+      "document_id": "easa-2010-0236-e-historical-official_directive_metadata",
+      "logical_document_id": "easa-2010-0236-e-historical",
+      "family_id": "easa-trent900-hpip-2010-0236-0242",
+      "title": "EASA Emergency AD 2010-0236-E: Trent 900 HP/IP structure inspections (superseded historical directive)",
+      "publisher_id": "EASA",
+      "language": "en",
+      "source_type": "airworthiness_directive",
+      "canonical_sha256": "588280775054a1361c5aafb0ceefea806b3edac52da1250a1e2d4965196f2af9",
+      "source_url": "https://ad.easa.europa.eu/ad/2010-0236-E",
+      "raw_sha256": "6a770185280231cf2d5b9a073a4e952de65f98afe937bfff30173a01d90e4211",
+      "raw_bytes": 19203,
+      "rights": {
+        "status": "unknown",
+        "license_url": "https://ad.easa.europa.eu/disclaimer",
+        "license_name": "EASA Safety Publications attribution-required reproduction notice; document-specific reuse review pending"
+      },
+      "document_description": {
+        "document_id": "easa-2010-0236-e-historical",
+        "title": "EASA Emergency AD 2010-0236-E: Trent 900 HP/IP structure inspections (superseded historical directive)",
+        "publisher": "European Union Aviation Safety Agency (EASA)",
+        "jurisdiction": "EU",
+        "language": "en",
+        "languages": [
+          "en"
+        ],
+        "source_type": "airworthiness_directive",
+        "landing_url": "https://ad.easa.europa.eu/ad/2010-0236-E",
+        "rights": {
+          "status": "unknown",
+          "license_url": "https://ad.easa.europa.eu/disclaimer",
+          "license_name": "EASA Safety Publications attribution-required reproduction notice; document-specific reuse review pending"
+        },
+        "engine_models": [
+          "Rolls-Royce RB211 Trent 900"
+        ],
+        "flight_phases": [],
+        "scope_status": "candidate",
+        "content_scope": "aviation_engine",
+        "document_family_id": "easa-trent900-hpip-2010-0236-0242",
+        "related_family_id": "atsb-ao-2010-089",
+        "verified_on": "2026-10-13",
+        "applicability_status": "candidate_hints_not_verified_applicability",
+        "topic_tags": [
+          "maintenance",
+          "inspection",
+          "oil_feed_stub_pipe",
+          "hp_ip_structure",
+          "historical_airworthiness_directive"
+        ],
+        "source_date": "2010-11-10",
+        "revision_status": "superseded_by_2010-0242-e",
+        "regulatory_use": "historical_only_not_current_maintenance_instruction",
+        "hold_redistribution": true,
+        "notes": [
+          "2010-0236-E is explicitly superseded; later 2010-0242 revision family has a 2011-03-02 cancellation notice.",
+          "No flight phase restriction inferred from inspection task.",
+          "SPT copyright permits attributed reproduction unless otherwise restricted, but current directive/reuse review is still required."
+        ],
+        "review_status": "machine_candidate",
+        "publisher_id": "EASA",
+        "task_coverage": [
+          "model_part_applicability",
+          "mandatory_action_evidence"
+        ],
+        "task_coverage_status": "source_intent_candidate_not_evaluation_labels"
+      },
+      "artifact_description": {
+        "name": "easa-2010-0236-e-historical-official_directive_metadata.html",
+        "url": "https://ad.easa.europa.eu/ad/2010-0236-E",
+        "media_type": "text/html",
+        "role": "metadata",
+        "processor": "html",
+        "selector": "#EL-ad-detail",
+        "field_paths": [],
+        "include_patterns": [],
+        "exclude_patterns": [],
+        "completeness": "directive_catalogue_metadata",
+        "artifact_key": "official_directive_metadata"
+      },
+      "processed_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/easa-2010-0236-e-historical/easa-2010-0236-e-historical-official_directive_metadata.html.txt",
+      "blocks_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/easa-2010-0236-e-historical/easa-2010-0236-e-historical-official_directive_metadata.html.blocks.jsonl",
+      "blocks_sha256": "5671a3c3469a86aa6dfbf2dcaefeff16fa84a7be36fae2f3e5cddb39133e4272",
+      "raw_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/raw/easa-2010-0236-e-historical-official_directive_metadata.html",
+      "canonical_character_count": 1163,
+      "split": "test"
+    },
+    {
+      "document_id": "easa-2010-0236-e-historical-cancellation_family_metadata",
+      "logical_document_id": "easa-2010-0236-e-historical",
+      "family_id": "easa-trent900-hpip-2010-0236-0242",
+      "title": "EASA Emergency AD 2010-0236-E: Trent 900 HP/IP structure inspections (superseded historical directive)",
+      "publisher_id": "EASA",
+      "language": "en",
+      "source_type": "airworthiness_directive",
+      "canonical_sha256": "c00caf9507fa2b62c6981bea27bef12877bbeb6e9c22c8453020001d0aa9f3ad",
+      "source_url": "https://ad.easa.europa.eu/ad/2010-0242-CN",
+      "raw_sha256": "8014a96314d9753453d9d6521edc3ae2bf43a7d1063d33a2e35925cc07d03174",
+      "raw_bytes": 19400,
+      "rights": {
+        "status": "unknown",
+        "license_url": "https://ad.easa.europa.eu/disclaimer",
+        "license_name": "EASA Safety Publications attribution-required reproduction notice; document-specific reuse review pending"
+      },
+      "document_description": {
+        "document_id": "easa-2010-0236-e-historical",
+        "title": "EASA Emergency AD 2010-0236-E: Trent 900 HP/IP structure inspections (superseded historical directive)",
+        "publisher": "European Union Aviation Safety Agency (EASA)",
+        "jurisdiction": "EU",
+        "language": "en",
+        "languages": [
+          "en"
+        ],
+        "source_type": "airworthiness_directive",
+        "landing_url": "https://ad.easa.europa.eu/ad/2010-0236-E",
+        "rights": {
+          "status": "unknown",
+          "license_url": "https://ad.easa.europa.eu/disclaimer",
+          "license_name": "EASA Safety Publications attribution-required reproduction notice; document-specific reuse review pending"
+        },
+        "engine_models": [
+          "Rolls-Royce RB211 Trent 900"
+        ],
+        "flight_phases": [],
+        "scope_status": "candidate",
+        "content_scope": "aviation_engine",
+        "document_family_id": "easa-trent900-hpip-2010-0236-0242",
+        "related_family_id": "atsb-ao-2010-089",
+        "verified_on": "2026-10-13",
+        "applicability_status": "candidate_hints_not_verified_applicability",
+        "topic_tags": [
+          "maintenance",
+          "inspection",
+          "oil_feed_stub_pipe",
+          "hp_ip_structure",
+          "historical_airworthiness_directive"
+        ],
+        "source_date": "2010-11-10",
+        "revision_status": "superseded_by_2010-0242-e",
+        "regulatory_use": "historical_only_not_current_maintenance_instruction",
+        "hold_redistribution": true,
+        "notes": [
+          "2010-0236-E is explicitly superseded; later 2010-0242 revision family has a 2011-03-02 cancellation notice.",
+          "No flight phase restriction inferred from inspection task.",
+          "SPT copyright permits attributed reproduction unless otherwise restricted, but current directive/reuse review is still required."
+        ],
+        "review_status": "machine_candidate",
+        "publisher_id": "EASA",
+        "task_coverage": [
+          "model_part_applicability",
+          "mandatory_action_evidence"
+        ],
+        "task_coverage_status": "source_intent_candidate_not_evaluation_labels"
+      },
+      "artifact_description": {
+        "name": "easa-2010-0236-e-historical-cancellation_family_metadata.html",
+        "url": "https://ad.easa.europa.eu/ad/2010-0242-CN",
+        "media_type": "text/html",
+        "role": "metadata",
+        "processor": "html",
+        "selector": "#EL-ad-detail",
+        "field_paths": [],
+        "include_patterns": [],
+        "exclude_patterns": [],
+        "completeness": "cancellation_notice_metadata",
+        "source_date": "2011-03-02",
+        "artifact_key": "cancellation_family_metadata"
+      },
+      "processed_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/easa-2010-0236-e-historical/easa-2010-0236-e-historical-cancellation_family_metadata.html.txt",
+      "blocks_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/processed/easa-2010-0236-e-historical/easa-2010-0236-e-historical-cancellation_family_metadata.html.blocks.jsonl",
+      "blocks_sha256": "a86a444c3ca838021c756882af22a9c71768fc2b9a03bbb1ff9045eb95d894c9",
+      "raw_path": ".runtime/datasets/public-aero-corpus-v2-tablefix-final/raw/easa-2010-0236-e-historical-cancellation_family_metadata.html",
+      "canonical_character_count": 1080,
+      "split": "test"
+    }
+  ],
+  "upstream_snapshot_sha256": "c5cdfb152482071b131472670d0a392c1df1d7b28e296b9635129fa8452c0df7"
+}

@@ -1,0 +1,12 @@
+{
+  "before_new_model_answers": true,
+  "n": 12,
+  "sampling": "all12 existing v2 mechanism templates, lexicographically first chain3 question per template; no observed answer results used",
+  "data_origin": "AI-assisted/programmatic rule-world, not empirical engine data",
+  "status": "seen retrieval benchmark, not new independently selected templates",
+  "same_pairing": "BD75+75 vs gated50+50+50, weights and prompts as real-source pilot",
+  "analysis": "separate from real FAA12; never pool as a single real-world accuracy",
+  "budget": "same shared42CNY hard cumulative cap; no reset",
+  "cache": "identical request caching allowed, logged; no speed superiority claim from cached pairs",
+  "no_new_api_calls_this_preparation": true
+}

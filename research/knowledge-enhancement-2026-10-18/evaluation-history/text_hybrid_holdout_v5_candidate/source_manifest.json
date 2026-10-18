@@ -1,0 +1,4540 @@
+{
+  "schema_version": "text-hybrid-holdout-sources@1",
+  "dataset_id": "text_hybrid_holdout_v5_candidate",
+  "created_at": "2026-10-15T03:19:47.927545+00:00",
+  "source_selection_policy": "Engine technical examination/analysis complete semantic paragraphs independently fixed before questions; at most7000 Unicode characters per report; exact saved/full half-open Python Unicode offsets; disjoint segments joined only by two LF characters. Retained complete official report extracted body and original fetch JSON, not binary PDF.",
+  "selection_created_at": "2026-10-15T03:19:47.927545+00:00",
+  "sources": [
+    {
+      "document_id": "a02p0261",
+      "event_id": "a02p0261",
+      "title": "Aviation Investigation Report A02P0261 - Transportation Safety Board of Canada",
+      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/2002/a02p0261/a02p0261.html",
+      "source_agency": "TSB",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/a02p0261.txt",
+      "full_text_sha256": "6f6d766c4e56049bdda3e884cf36e1d90b0957fca43c14daff4f30c45c0467e7",
+      "full_text_char_count": 28726,
+      "fetch_response_path": "sources/fetch/a02p0261.json",
+      "fetch_response_sha256": "2881b7584998ed3fcf430ffd0cd0180b63bb505e563aa4a2ba5b6e8b8314c114",
+      "saved_source_path": "sources/saved/a02p0261.txt",
+      "saved_source_sha256": "0c6505bdd1a5df70a8e5c4f991e2c9e37413c66f1be737d5370c1acec77ca2de",
+      "saved_source_char_count": 6216,
+      "selection_segments": [
+        {
+          "full_start": 14812,
+          "full_end": 21028,
+          "saved_start": 0,
+          "saved_end": 6216
+        }
+      ],
+      "selection_reason": "CFM56 PMA bearing and ECU electrical power transfer; fixed technical examination/analysis paragraphs selected before questions without retrieval results.",
+      "source_layer": "selected_body_from_full_official_report",
+      "source_completeness": {
+        "full_report_body_captured": true,
+        "capture_format": "official_html_report_body",
+        "figures_not_reconstructed": true,
+        "binary_pdf_saved": false,
+        "limitation": "Full official report HTML text retained; web navigation may remain in full capture, fixed selection uses technical report body."
+      },
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "a96o0125",
+      "event_id": "a96o0125",
+      "title": "Aviation Investigation Report A96O0125 - Transportation Safety Board of Canada",
+      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/1996/a96o0125/a96o0125.html",
+      "source_agency": "TSB",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/a96o0125.txt",
+      "full_text_sha256": "b9e5f2e220c5106f48347e785cd67f9808746f4396b203e67292cce19d3f4d64",
+      "full_text_char_count": 11837,
+      "fetch_response_path": "sources/fetch/a96o0125.json",
+      "fetch_response_sha256": "f19a6aa66148c1068fdbb5f5c2762ef36c736f7ee29dfefeff48ca5b211e48e5",
+      "saved_source_path": "sources/saved/a96o0125.txt",
+      "saved_source_sha256": "80f718e1a7a9649d25173086fffa7e6488fc209e5a6fb5a7bfd71c304e06a3d7",
+      "saved_source_char_count": 6861,
+      "selection_segments": [
+        {
+          "full_start": 3128,
+          "full_end": 9989,
+          "saved_start": 0,
+          "saved_end": 6861
+        }
+      ],
+      "selection_reason": "727 starter overspeed and oil-fed engine compartment fire; fixed technical examination/analysis paragraphs selected before questions without retrieval results.",
+      "source_layer": "selected_body_from_full_official_report",
+      "source_completeness": {
+        "full_report_body_captured": true,
+        "capture_format": "official_html_report_body",
+        "figures_not_reconstructed": true,
+        "binary_pdf_saved": false,
+        "limitation": "Full official report HTML text retained; web navigation may remain in full capture, fixed selection uses technical report body."
+      },
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "a07a0056",
+      "event_id": "a07a0056",
+      "title": "Aviation Investigation Report A07A0056 - Transportation Safety Board of Canada",
+      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/2007/a07a0056/a07a0056.html",
+      "source_agency": "TSB",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/a07a0056.txt",
+      "full_text_sha256": "c067822ae518b1eaa61fd1519ec4df115a22c0139aa042e3dcd84491b5ca7151",
+      "full_text_char_count": 14405,
+      "fetch_response_path": "sources/fetch/a07a0056.json",
+      "fetch_response_sha256": "f7b1c59bfda8a2cebce069fb45c6114c24ea5d8e6169c5a58db1a5bc732b8a78",
+      "saved_source_path": "sources/saved/a07a0056.txt",
+      "saved_source_sha256": "137cce8d0f2a9a1e4ba0adf369e58834b6f9ca7890f00bcbcccc77353d8b61e8",
+      "saved_source_char_count": 5931,
+      "selection_segments": [
+        {
+          "full_start": 2670,
+          "full_end": 8601,
+          "saved_start": 0,
+          "saved_end": 5931
+        }
+      ],
+      "selection_reason": "Bell407 engine torquemeter gear fatigue and chip detection; fixed technical examination/analysis paragraphs selected before questions without retrieval results.",
+      "source_layer": "selected_body_from_full_official_report",
+      "source_completeness": {
+        "full_report_body_captured": true,
+        "capture_format": "official_html_report_body",
+        "figures_not_reconstructed": true,
+        "binary_pdf_saved": false,
+        "limitation": "Full official report HTML text retained; web navigation may remain in full capture, fixed selection uses technical report body."
+      },
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "a11c0079",
+      "event_id": "a11c0079",
+      "title": "Aviation Investigation Report A11C0079 - Transportation Safety Board of Canada",
+      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/2011/a11c0079/a11c0079.html",
+      "source_agency": "TSB",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/a11c0079.txt",
+      "full_text_sha256": "97757a13a8946831d838017bd5f067ebf1d6009fbd86188697e9b195436cab6c",
+      "full_text_char_count": 17180,
+      "fetch_response_path": "sources/fetch/a11c0079.json",
+      "fetch_response_sha256": "0dbf3983d9fe72069bbcba45db53eb26069dee3d1163db09076e9a5b1a192a10",
+      "saved_source_path": "sources/saved/a11c0079.txt",
+      "saved_source_sha256": "99cbb839e2d0ac0345f5909e9a67284e732380bad841bc8700b9b5f67af225d2",
+      "saved_source_char_count": 6169,
+      "selection_segments": [
+        {
+          "full_start": 5735,
+          "full_end": 11904,
+          "saved_start": 0,
+          "saved_end": 6169
+        }
+      ],
+      "selection_reason": "AS350 Honeywell LTS101 spool bearing failure; fixed technical examination/analysis paragraphs selected before questions without retrieval results.",
+      "source_layer": "selected_body_from_full_official_report",
+      "source_completeness": {
+        "full_report_body_captured": true,
+        "capture_format": "official_html_report_body",
+        "figures_not_reconstructed": true,
+        "binary_pdf_saved": false,
+        "limitation": "Full official report HTML text retained; web navigation may remain in full capture, fixed selection uses technical report body."
+      },
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "a05f0001",
+      "event_id": "a05f0001",
+      "title": "Aviation Investigation Report A05F0001 - Transportation Safety Board of Canada",
+      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/2005/a05f0001/a05f0001.html",
+      "source_agency": "TSB",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/a05f0001.txt",
+      "full_text_sha256": "f21793624fb3806e94c5019a30f95845914d2f63cd779baf3c334a5c88de7265",
+      "full_text_char_count": 31986,
+      "fetch_response_path": "sources/fetch/a05f0001.json",
+      "fetch_response_sha256": "4a4867e64502aec3f96bc0b1c328bb83e45dee7ba0db968b84ffe59aa807f37e",
+      "saved_source_path": "sources/saved/a05f0001.txt",
+      "saved_source_sha256": "31b1345eb64de1642211fcde09768944d754ef5fe57dfde2f16e3ef52f70fb5f",
+      "saved_source_char_count": 5089,
+      "selection_segments": [
+        {
+          "full_start": 12361,
+          "full_end": 17450,
+          "saved_start": 0,
+          "saved_end": 5089
+        }
+      ],
+      "selection_reason": "B767 fuel quantity indication and engine fuel exhaustion; fixed technical examination/analysis paragraphs selected before questions without retrieval results.",
+      "source_layer": "selected_body_from_full_official_report",
+      "source_completeness": {
+        "full_report_body_captured": true,
+        "capture_format": "official_html_report_body",
+        "figures_not_reconstructed": true,
+        "binary_pdf_saved": false,
+        "limitation": "Full official report HTML text retained; web navigation may remain in full capture, fixed selection uses technical report body."
+      },
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "a05p0298",
+      "event_id": "a05p0298",
+      "title": "Aviation Investigation Report A05P0298 - Transportation Safety Board of Canada",
+      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/2005/a05p0298/a05p0298.html",
+      "source_agency": "TSB",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/a05p0298.txt",
+      "full_text_sha256": "7e48ccbddf2888a145818b8c3016a020731ac5a25e622bf08499d29a7c1a50fd",
+      "full_text_char_count": 24692,
+      "fetch_response_path": "sources/fetch/a05p0298.json",
+      "fetch_response_sha256": "48aa347be333f06015433e61d1ae5dbd13b887a0eed2eb8055d23142d58392d6",
+      "saved_source_path": "sources/saved/a05p0298.txt",
+      "saved_source_sha256": "2278f6501235e519edc5dbef1eff41249d7e9e2bb5fce55e3e3e69aeb4c1fb52",
+      "saved_source_char_count": 5519,
+      "selection_segments": [
+        {
+          "full_start": 9619,
+          "full_end": 15138,
+          "saved_start": 0,
+          "saved_end": 5519
+        }
+      ],
+      "selection_reason": "MU2 TPE331 combustor plenum fatigue rupture; fixed technical examination/analysis paragraphs selected before questions without retrieval results.",
+      "source_layer": "selected_body_from_full_official_report",
+      "source_completeness": {
+        "full_report_body_captured": true,
+        "capture_format": "official_html_report_body",
+        "figures_not_reconstructed": true,
+        "binary_pdf_saved": false,
+        "limitation": "Full official report HTML text retained; web navigation may remain in full capture, fixed selection uses technical report body."
+      },
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "a07w0150",
+      "event_id": "a07w0150",
+      "title": "Aviation Investigation Report A07W0150 - Transportation Safety Board of Canada",
+      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/2007/a07w0150/a07w0150.html",
+      "source_agency": "TSB",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/a07w0150.txt",
+      "full_text_sha256": "40fdf056362c99166af74a22b061ce41c008c28d5fafbd2abf39fceff4041833",
+      "full_text_char_count": 30381,
+      "fetch_response_path": "sources/fetch/a07w0150.json",
+      "fetch_response_sha256": "28c86781fe6a898c15aa78c5c2a7731435f4b8d9928b23a8d4362f070ffd589f",
+      "saved_source_path": "sources/saved/a07w0150.txt",
+      "saved_source_sha256": "7382f2e64795359383d47b7c80be4815eef199f9d78a25fdc40ebfb39a87cd99",
+      "saved_source_char_count": 5665,
+      "selection_segments": [
+        {
+          "full_start": 3921,
+          "full_end": 9586,
+          "saved_start": 0,
+          "saved_end": 5665
+        }
+      ],
+      "selection_reason": "Bell206 fuel control contamination and pneumatic/fuel leakage; fixed technical examination/analysis paragraphs selected before questions without retrieval results.",
+      "source_layer": "selected_body_from_full_official_report",
+      "source_completeness": {
+        "full_report_body_captured": true,
+        "capture_format": "official_html_report_body",
+        "figures_not_reconstructed": true,
+        "binary_pdf_saved": false,
+        "limitation": "Full official report HTML text retained; web navigation may remain in full capture, fixed selection uses technical report body."
+      },
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "a96p0064",
+      "event_id": "a96p0064",
+      "title": "Aviation Investigation Report A96P0064 - Transportation Safety Board of Canada",
+      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/1996/a96p0064/a96p0064.html",
+      "source_agency": "TSB",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/a96p0064.txt",
+      "full_text_sha256": "624ef9236e8710c7d2664b93e0cbeee8931c545ebcf36307f87f8fe2c389918b",
+      "full_text_char_count": 22078,
+      "fetch_response_path": "sources/fetch/a96p0064.json",
+      "fetch_response_sha256": "546cb8e092a5fb05fab6d51a42150eea5e423621a72227c712716b422588fc91",
+      "saved_source_path": "sources/saved/a96p0064.txt",
+      "saved_source_sha256": "61b71d40d8d3f5dac55be3cd3dcd519951606e1c07020058dec98742bac13bca",
+      "saved_source_char_count": 5951,
+      "selection_segments": [
+        {
+          "full_start": 12259,
+          "full_end": 18210,
+          "saved_start": 0,
+          "saved_end": 5951
+        }
+      ],
+      "selection_reason": "AS350 snow ingestion and uncertain flameout mechanism; fixed technical examination/analysis paragraphs selected before questions without retrieval results.",
+      "source_layer": "selected_body_from_full_official_report",
+      "source_completeness": {
+        "full_report_body_captured": true,
+        "capture_format": "official_html_report_body",
+        "figures_not_reconstructed": true,
+        "binary_pdf_saved": false,
+        "limitation": "Full official report HTML text retained; web navigation may remain in full capture, fixed selection uses technical report body."
+      },
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "a19p0142",
+      "event_id": "a19p0142",
+      "title": "Air transportation safety investigation report A19P0142",
+      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/2019/a19p0142/a19p0142.html",
+      "source_agency": "TSB",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/a19p0142.txt",
+      "full_text_sha256": "1a849ad64189284c15bd8d50e9cf0659213e72ee2db7cb48395e131ff267ffbe",
+      "full_text_char_count": 101947,
+      "fetch_response_path": "sources/fetch/a19p0142.json",
+      "fetch_response_sha256": "cd518181d7f87263cd5b339b8f65c1fdbae1d6557daf756a0b24ed5062256e30",
+      "saved_source_path": "sources/saved/a19p0142.txt",
+      "saved_source_sha256": "d084273afb17f72d6390cbc02ab95da1d3b3f1c8cd573c643bb44722232b2f32",
+      "saved_source_char_count": 4646,
+      "selection_segments": [
+        {
+          "full_start": 14087,
+          "full_end": 16986,
+          "saved_start": 0,
+          "saved_end": 2899
+        },
+        {
+          "full_start": 84874,
+          "full_end": 86619,
+          "saved_start": 2901,
+          "saved_end": 4646
+        }
+      ],
+      "selection_reason": "Bell206 fuel control pneumatic system and power anomaly; fixed technical examination/analysis paragraphs selected before questions without retrieval results.",
+      "source_layer": "selected_body_from_full_official_report",
+      "source_completeness": {
+        "full_report_body_captured": true,
+        "capture_format": "official_html_report_body",
+        "figures_not_reconstructed": true,
+        "binary_pdf_saved": false,
+        "limitation": "Full official report HTML text retained; web navigation may remain in full capture, fixed selection uses technical report body."
+      },
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "a03q0092",
+      "event_id": "a03q0092",
+      "title": "Aviation Investigation Report A03Q0092 - Transportation Safety Board of Canada",
+      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/2003/a03q0092/a03q0092.html",
+      "source_agency": "TSB",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/a03q0092.txt",
+      "full_text_sha256": "5f1a2923fd82257986de332ce20e8816123b24727e9affe529c6fa57ef61d575",
+      "full_text_char_count": 10684,
+      "fetch_response_path": "sources/fetch/a03q0092.json",
+      "fetch_response_sha256": "3f6dd38cb9abebb3d74c4f36e2998cbb212b16d0eddd1c060a588e700ac86d66",
+      "saved_source_path": "sources/saved/a03q0092.txt",
+      "saved_source_sha256": "0c4011040a08aa016e20a66081949dfac711126a8e2c1a10ff3986a67deea9f2",
+      "saved_source_char_count": 5377,
+      "selection_segments": [
+        {
+          "full_start": 3035,
+          "full_end": 8412,
+          "saved_start": 0,
+          "saved_end": 5377
+        }
+      ],
+      "selection_reason": "Bell206 engine underspeed and post-accident tests; fixed technical examination/analysis paragraphs selected before questions without retrieval results.",
+      "source_layer": "selected_body_from_full_official_report",
+      "source_completeness": {
+        "full_report_body_captured": true,
+        "capture_format": "official_html_report_body",
+        "figures_not_reconstructed": true,
+        "binary_pdf_saved": false,
+        "limitation": "Full official report HTML text retained; web navigation may remain in full capture, fixed selection uses technical report body."
+      },
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "ao-2018-046",
+      "event_id": "ao-2018-046",
+      "title": "Engine vibrations and in-flight shutdown involving Airbus A330, VH-QPI, near Sydney Airport, New South Wales, on 1 June 2018",
+      "url": "https://www.atsb.gov.au/investigations/ao-2018-046",
+      "source_agency": "ATSB",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/ao-2018-046.txt",
+      "full_text_sha256": "e994ee39a763caceac1457ec1a6e0c82c15bf28e261768564967022515039af7",
+      "full_text_char_count": 64292,
+      "fetch_response_path": "sources/fetch/ao-2018-046.json",
+      "fetch_response_sha256": "e787a1525f30b77af4858c58bd3b3c0fad1796538d23243a6b391d6e92456ce2",
+      "saved_source_path": "sources/saved/ao-2018-046.txt",
+      "saved_source_sha256": "bc84003f1638f114ba4028151a02f9dde410dc652987a0c54daec1cff3654b1c",
+      "saved_source_char_count": 6591,
+      "selection_segments": [
+        {
+          "full_start": 41738,
+          "full_end": 48329,
+          "saved_start": 0,
+          "saved_end": 6591
+        }
+      ],
+      "selection_reason": "A330 low-pressure turbine NGV oxidation and failure; fixed technical examination/analysis paragraphs selected before questions without retrieval results.",
+      "source_layer": "selected_body_from_full_official_report",
+      "source_completeness": {
+        "full_report_body_captured": true,
+        "capture_format": "official_html_report_body",
+        "figures_not_reconstructed": true,
+        "binary_pdf_saved": false,
+        "limitation": "Full official report HTML text retained; web navigation may remain in full capture, fixed selection uses technical report body."
+      },
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "ao-2018-033",
+      "event_id": "ao-2018-033",
+      "title": "Engine surge and high vibration involving Airbus A330, VH-EBR, 44 km north-east of Gold Coast Airport, Queensland, on 15 April 2018",
+      "url": "https://www.atsb.gov.au/investigations/ao-2018-033",
+      "source_agency": "ATSB",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/ao-2018-033.txt",
+      "full_text_sha256": "9b1cfc2384aa23334eedecf26fcc2a10495a5c24fe9a9c90d30a496fe1b70c90",
+      "full_text_char_count": 25670,
+      "fetch_response_path": "sources/fetch/ao-2018-033.json",
+      "fetch_response_sha256": "f2820ebc5010127977ecd2ab807fec67db3a62d7163b3c7522e952a9aae09711",
+      "saved_source_path": "sources/saved/ao-2018-033.txt",
+      "saved_source_sha256": "59fb188194483a1d31e4f46101bb369607150e19e8251faf8097a7ec86b36515",
+      "saved_source_char_count": 6748,
+      "selection_segments": [
+        {
+          "full_start": 4708,
+          "full_end": 11456,
+          "saved_start": 0,
+          "saved_end": 6748
+        }
+      ],
+      "selection_reason": "A330 variable stator lever and compressor fatigue; fixed technical examination/analysis paragraphs selected before questions without retrieval results.",
+      "source_layer": "selected_body_from_full_official_report",
+      "source_completeness": {
+        "full_report_body_captured": true,
+        "capture_format": "official_html_report_body",
+        "figures_not_reconstructed": true,
+        "binary_pdf_saved": false,
+        "limitation": "Full official report HTML text retained; web navigation may remain in full capture, fixed selection uses technical report body."
+      },
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "ao-2023-007",
+      "event_id": "ao-2023-007",
+      "title": "Engine failure involving a Boeing 737-838, VH-XZB, en route from Auckland, New Zealand to Sydney, New South Wales, on 18 January 2023",
+      "url": "https://www.atsb.gov.au/investigations/ao-2023-007",
+      "source_agency": "ATSB",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/ao-2023-007.txt",
+      "full_text_sha256": "eb84299876756104ec595033170c9f55baba9f34af27c04d1a0fc0d1166fe669",
+      "full_text_char_count": 33879,
+      "fetch_response_path": "sources/fetch/ao-2023-007.json",
+      "fetch_response_sha256": "2314f020b4c31d034ecf29b30dc0dbb73c069e692e2de1255d67f48c91d25b41",
+      "saved_source_path": "sources/saved/ao-2023-007.txt",
+      "saved_source_sha256": "3444fbd2984156234be582120f46a2ee236218f5c17cc9de27f3d3c4cfd90c66",
+      "saved_source_char_count": 5564,
+      "selection_segments": [
+        {
+          "full_start": 11665,
+          "full_end": 14364,
+          "saved_start": 0,
+          "saved_end": 2699
+        },
+        {
+          "full_start": 20560,
+          "full_end": 23423,
+          "saved_start": 2701,
+          "saved_end": 5564
+        }
+      ],
+      "selection_reason": "B737 CFM56 bevel gear failure and engine shutdown; fixed technical examination/analysis paragraphs selected before questions without retrieval results.",
+      "source_layer": "selected_body_from_full_official_report",
+      "source_completeness": {
+        "full_report_body_captured": true,
+        "capture_format": "official_html_report_body",
+        "figures_not_reconstructed": true,
+        "binary_pdf_saved": false,
+        "limitation": "Full official report HTML text retained; web navigation may remain in full capture, fixed selection uses technical report body."
+      },
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "ao-2016-095",
+      "event_id": "ao-2016-095",
+      "title": "Engine shut down involving Boeing 787, VH-VKK, about 370 km north of Guam, on 6 August 2016",
+      "url": "https://www.atsb.gov.au/investigations/ao-2016-095",
+      "source_agency": "ATSB",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/ao-2016-095.txt",
+      "full_text_sha256": "40c7ba82a76c6ab7ed121ee16384024de80f89056a1a407190688c6b141fac9d",
+      "full_text_char_count": 15191,
+      "fetch_response_path": "sources/fetch/ao-2016-095.json",
+      "fetch_response_sha256": "952e5c2a6c6e1f2232daabd0d3ee8da4cfff0ff46fc420c56b3310bb8eb8ffb6",
+      "saved_source_path": "sources/saved/ao-2016-095.txt",
+      "saved_source_sha256": "01718427a57232c10f5faab234250947e8ef79f465ab8acae44ebe41911c45a4",
+      "saved_source_char_count": 6641,
+      "selection_segments": [
+        {
+          "full_start": 3592,
+          "full_end": 10233,
+          "saved_start": 0,
+          "saved_end": 6641
+        }
+      ],
+      "selection_reason": "B787 transfer gearbox fatigue and oil loss; fixed technical examination/analysis paragraphs selected before questions without retrieval results.",
+      "source_layer": "selected_body_from_full_official_report",
+      "source_completeness": {
+        "full_report_body_captured": true,
+        "capture_format": "official_html_report_body",
+        "figures_not_reconstructed": true,
+        "binary_pdf_saved": false,
+        "limitation": "Full official report HTML text retained; web navigation may remain in full capture, fixed selection uses technical report body."
+      },
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "ao-2024-057",
+      "event_id": "ao-2024-057",
+      "title": "Engine failure involving Boeing 737, VH-VYH, at Sydney Airport, New South Wales, on 8 November 2024",
+      "url": "https://www.atsb.gov.au/investigations/ao-2024-057",
+      "source_agency": "ATSB",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/ao-2024-057.txt",
+      "full_text_sha256": "b098cbdd85bb94eeac43faaa8eb7cd7b965d3659436f165bde7848f169afcd34",
+      "full_text_char_count": 69628,
+      "fetch_response_path": "sources/fetch/ao-2024-057.json",
+      "fetch_response_sha256": "764670ac48ce60e25aa6f1e1ae7333175dcf2975e2cbbd69e564f72506ead389",
+      "saved_source_path": "sources/saved/ao-2024-057.txt",
+      "saved_source_sha256": "f101ff39a04ccf3b228dc277a52c7c2c214c7f7a233ea8066de1f028ba95e1e1",
+      "saved_source_char_count": 6273,
+      "selection_segments": [
+        {
+          "full_start": 46584,
+          "full_end": 52857,
+          "saved_start": 0,
+          "saved_end": 6273
+        }
+      ],
+      "selection_reason": "B737 turbine blade fatigue and material aging; fixed technical examination/analysis paragraphs selected before questions without retrieval results.",
+      "source_layer": "selected_body_from_full_official_report",
+      "source_completeness": {
+        "full_report_body_captured": true,
+        "capture_format": "official_html_report_body",
+        "figures_not_reconstructed": true,
+        "binary_pdf_saved": false,
+        "limitation": "Full official report HTML text retained; web navigation may remain in full capture, fixed selection uses technical report body."
+      },
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "ao-2024-001",
+      "event_id": "ao-2024-001",
+      "title": "Engine malfunction and runway overrun involving Cessna 208B, VH-NWJ, Lizard Island Airport, Queensland, on 8 January 2024",
+      "url": "https://www.atsb.gov.au/investigations/ao-2024-001",
+      "source_agency": "ATSB",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/ao-2024-001.txt",
+      "full_text_sha256": "9dcb9f4dcab6a3c75c2932d32a05e283b6fc7400428753c4cda17fbd53397598",
+      "full_text_char_count": 99942,
+      "fetch_response_path": "sources/fetch/ao-2024-001.json",
+      "fetch_response_sha256": "00be6acc7ca73fca8e2f127bde4eb6ef1e6f98b35fef795d605949fdb918f312",
+      "saved_source_path": "sources/saved/ao-2024-001.txt",
+      "saved_source_sha256": "d85675b385f031e94e1ccbbbde43366dd6922609649b2096d2acb807e2562dbf",
+      "saved_source_char_count": 6424,
+      "selection_segments": [
+        {
+          "full_start": 54198,
+          "full_end": 60622,
+          "saved_start": 0,
+          "saved_end": 6424
+        }
+      ],
+      "selection_reason": "C208 PT6 fuel control bellows and uncommanded acceleration; fixed technical examination/analysis paragraphs selected before questions without retrieval results.",
+      "source_layer": "selected_body_from_full_official_report",
+      "source_completeness": {
+        "full_report_body_captured": true,
+        "capture_format": "official_html_report_body",
+        "figures_not_reconstructed": true,
+        "binary_pdf_saved": false,
+        "limitation": "Full official report HTML text retained; web navigation may remain in full capture, fixed selection uses technical report body."
+      },
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "200004707",
+      "event_id": "200004707",
+      "title": "Boeing 737-476, VH-TJN | ATSB",
+      "url": "https://www.atsb.gov.au/investigations/200004707",
+      "source_agency": "ATSB",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/200004707.txt",
+      "full_text_sha256": "4fd92b891b12555cba60386eda792bff50146fca26b404a1994049b52b6d01a6",
+      "full_text_char_count": 7381,
+      "fetch_response_path": "sources/fetch/200004707.json",
+      "fetch_response_sha256": "8235f15182084a604bc153041c120f8e39b55849203e07a2e7e69c8b24a62cde",
+      "saved_source_path": "sources/saved/200004707.txt",
+      "saved_source_sha256": "deee7558865fb0e28ce36472273e24cf766eb4f386a7b139f41ade6052d526a1",
+      "saved_source_char_count": 4606,
+      "selection_segments": [
+        {
+          "full_start": 2095,
+          "full_end": 6701,
+          "saved_start": 0,
+          "saved_end": 4606
+        }
+      ],
+      "selection_reason": "B737 repaired HPT blade failure; fixed technical examination/analysis paragraphs selected before questions without retrieval results.",
+      "source_layer": "selected_body_from_full_official_report",
+      "source_completeness": {
+        "full_report_body_captured": true,
+        "capture_format": "official_html_report_body",
+        "figures_not_reconstructed": true,
+        "binary_pdf_saved": false,
+        "limitation": "Full official report HTML text retained; web navigation may remain in full capture, fixed selection uses technical report body."
+      },
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "200400443",
+      "event_id": "200400443",
+      "title": "Cessna 208, VH-CYC | ATSB",
+      "url": "https://www.atsb.gov.au/investigations/200400443",
+      "source_agency": "ATSB",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/200400443.txt",
+      "full_text_sha256": "0298d030dc8a7448c0f3e1153f210ec6d1a1a6db2b00ea46ecc67c4793378bca",
+      "full_text_char_count": 23683,
+      "fetch_response_path": "sources/fetch/200400443.json",
+      "fetch_response_sha256": "5e281d7c0c23bb39f011bc8df5116944b31c477ee2cd05f80104f16439e4c88e",
+      "saved_source_path": "sources/saved/200400443.txt",
+      "saved_source_sha256": "b0bd2533156d9f187bd14d4ea953a14b3cc7e5768f09752204748a057eadeeac",
+      "saved_source_char_count": 6073,
+      "selection_segments": [
+        {
+          "full_start": 10350,
+          "full_end": 12349,
+          "saved_start": 0,
+          "saved_end": 1999
+        },
+        {
+          "full_start": 16048,
+          "full_end": 20120,
+          "saved_start": 2001,
+          "saved_end": 6073
+        }
+      ],
+      "selection_reason": "C208 emergency power lever and engine overtemperature; fixed technical examination/analysis paragraphs selected before questions without retrieval results.",
+      "source_layer": "selected_body_from_full_official_report",
+      "source_completeness": {
+        "full_report_body_captured": true,
+        "capture_format": "official_html_report_body",
+        "figures_not_reconstructed": true,
+        "binary_pdf_saved": false,
+        "limitation": "Full official report HTML text retained; web navigation may remain in full capture, fixed selection uses technical report body."
+      },
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "ao-2008-008",
+      "event_id": "ao-2008-008",
+      "title": "Engine failure – Jabiru, NT – 11 February 2008 VH-VAZ Beech Aircraft Corporation 1900",
+      "url": "https://www.atsb.gov.au/sites/default/files/investigation-reports/ao2008008.pdf",
+      "source_agency": "ATSB",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/ao-2008-008.txt",
+      "full_text_sha256": "f5c80d49b39c975da9aa5451fcc23bc68b951a992b7b9b1a05a49c16cf4bbc89",
+      "full_text_char_count": 48918,
+      "fetch_response_path": "sources/fetch/ao-2008-008.json",
+      "fetch_response_sha256": "5d5196486d76d603762ad8451d6f7a4e9c1b224df301defaa88422dd95d703db",
+      "saved_source_path": "sources/saved/ao-2008-008.txt",
+      "saved_source_sha256": "ff9e007a3e635dbc02e31b98c3ac2502ec8b2f8c38eb4cb9e850fb85a79707b5",
+      "saved_source_char_count": 3603,
+      "selection_segments": [
+        {
+          "full_start": 18711,
+          "full_end": 22314,
+          "saved_start": 0,
+          "saved_end": 3603
+        }
+      ],
+      "selection_reason": "Beech1900 PT6 turbine stator failure; fixed technical examination/analysis paragraphs selected before questions without retrieval results.",
+      "source_layer": "selected_body_from_full_official_report",
+      "source_completeness": {
+        "full_report_body_captured": true,
+        "capture_format": "official_pdf_extracted_text",
+        "figures_not_reconstructed": true,
+        "binary_pdf_saved": false,
+        "limitation": "Full captured text retained verbatim; PDF layout/line breaks and textual page headers may remain. No unseen figure content used."
+      },
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "200501189",
+      "event_id": "200501189",
+      "title": "In-Flight Engine Failure and Shut-Down, 148km NNW Launceston TAS",
+      "url": "https://www.atsb.gov.au/sites/default/files/investigation-reports/aair200501189_001.pdf",
+      "source_agency": "ATSB",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/200501189.txt",
+      "full_text_sha256": "02dece7253d2eeb24871b8520877ef2e827be489d640c7083ea6ea7bab82c273",
+      "full_text_char_count": 26611,
+      "fetch_response_path": "sources/fetch/200501189.json",
+      "fetch_response_sha256": "5d6bc7b0935a1c12122e6307bd180e7386a15121fe177e64e0b2aaca7b2ce764",
+      "saved_source_path": "sources/saved/200501189.txt",
+      "saved_source_sha256": "f3012cc4d6bf992a37216777a54a036997318ff4a3e52c8e7e8508c3effffa58",
+      "saved_source_char_count": 3889,
+      "selection_segments": [
+        {
+          "full_start": 21838,
+          "full_end": 25727,
+          "saved_start": 0,
+          "saved_end": 3889
+        }
+      ],
+      "selection_reason": "B717 turbine nozzle erosion and blade fatigue; fixed technical examination/analysis paragraphs selected before questions without retrieval results.",
+      "source_layer": "selected_body_from_full_official_report",
+      "source_completeness": {
+        "full_report_body_captured": true,
+        "capture_format": "official_pdf_extracted_text",
+        "figures_not_reconstructed": true,
+        "binary_pdf_saved": false,
+        "limitation": "Full captured text retained verbatim; PDF layout/line breaks and textual page headers may remain. No unseen figure content used."
+      },
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "ao-2012-150",
+      "event_id": "ao-2012-150",
+      "title": "Engine failure involving Airbus A380, A6-EDA Near Sydney Airport, NSW, 11 November 2012",
+      "url": "https://www.atsb.gov.au/sites/default/files/investigation-reports/ao-2012-150_final.pdf",
+      "source_agency": "ATSB",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/ao-2012-150.txt",
+      "full_text_sha256": "ba9a518252d8c9b545a20541675dd50a72c1978cae4ff5d55b8afd131d841de6",
+      "full_text_char_count": 35747,
+      "fetch_response_path": "sources/fetch/ao-2012-150.json",
+      "fetch_response_sha256": "774e58238d1d8722856928805251804d99d36a4c24774c9c70b26030a72556eb",
+      "saved_source_path": "sources/saved/ao-2012-150.txt",
+      "saved_source_sha256": "0ec67d7153ee8f1669438d76430ac1807f4a6e884893a8b22d9403440b9ddc68",
+      "saved_source_char_count": 6090,
+      "selection_segments": [
+        {
+          "full_start": 18816,
+          "full_end": 24906,
+          "saved_start": 0,
+          "saved_end": 6090
+        }
+      ],
+      "selection_reason": "A380 GP7270 oil feed pipe and bearing distress; fixed technical examination/analysis paragraphs selected before questions without retrieval results.",
+      "source_layer": "selected_body_from_full_official_report",
+      "source_completeness": {
+        "full_report_body_captured": true,
+        "capture_format": "official_pdf_extracted_text",
+        "figures_not_reconstructed": true,
+        "binary_pdf_saved": false,
+        "limitation": "Full captured text retained verbatim; PDF layout/line breaks and textual page headers may remain. No unseen figure content used."
+      },
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "ao-2011-062",
+      "event_id": "ao-2011-062",
+      "title": "In-flight engine malfunction – Boeing 747-438, VH-OJH, 100km south-east of Bali International Airport, Indonesia – 9 May 2011",
+      "url": "https://www.atsb.gov.au/sites/default/files/investigation-reports/ao-2011-062_final.pdf",
+      "source_agency": "ATSB",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/ao-2011-062.txt",
+      "full_text_sha256": "e079c8eb97d1565be926320a3f25318f2b57e1f1b0a98820946c6f46d6fccdfc",
+      "full_text_char_count": 37091,
+      "fetch_response_path": "sources/fetch/ao-2011-062.json",
+      "fetch_response_sha256": "a5bbf02d5618ab3a886f4d0c9002dc41b7ed915a034bbed1ad34049838244ec9",
+      "saved_source_path": "sources/saved/ao-2011-062.txt",
+      "saved_source_sha256": "8bf4c81dc84a353ba1e97a3e7abeee9d8dd1c7bec36574eac45d7404b1419e14",
+      "saved_source_char_count": 5770,
+      "selection_segments": [
+        {
+          "full_start": 29512,
+          "full_end": 35282,
+          "saved_start": 0,
+          "saved_end": 5770
+        }
+      ],
+      "selection_reason": "B747 RB211 intermediate pressure turbine blade thermal degradation; fixed technical examination/analysis paragraphs selected before questions without retrieval results.",
+      "source_layer": "selected_body_from_full_official_report",
+      "source_completeness": {
+        "full_report_body_captured": true,
+        "capture_format": "official_pdf_extracted_text",
+        "figures_not_reconstructed": true,
+        "binary_pdf_saved": false,
+        "limitation": "Full captured text retained verbatim; PDF layout/line breaks and textual page headers may remain. No unseen figure content used."
+      },
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "199901064",
+      "event_id": "199901064",
+      "title": "Fairchild SA226-TC, VH-EEQ | ATSB",
+      "url": "https://www.atsb.gov.au/investigations/199901064",
+      "source_agency": "ATSB",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/199901064.txt",
+      "full_text_sha256": "e157f64b4289d5a2085b24e814d91b8d3f77badb54c7614cba651ac3298d6edb",
+      "full_text_char_count": 40178,
+      "fetch_response_path": "sources/fetch/199901064.json",
+      "fetch_response_sha256": "ee375584a9f38fc7d80b9990bf46d5ffa6530d736aa73354f39e7dc469abdde7",
+      "saved_source_path": "sources/saved/199901064.txt",
+      "saved_source_sha256": "b27436fc02c868dcd5e1734ff05a6bd5070fb454135ffb88830f8b19a644b8b0",
+      "saved_source_char_count": 2554,
+      "selection_segments": [
+        {
+          "full_start": 34474,
+          "full_end": 37028,
+          "saved_start": 0,
+          "saved_end": 2554
+        }
+      ],
+      "selection_reason": "MetroII TPE331 seal fatigue and wheel failure; fixed technical examination/analysis paragraphs selected before questions without retrieval results.",
+      "source_layer": "selected_body_from_full_official_report",
+      "source_completeness": {
+        "full_report_body_captured": true,
+        "capture_format": "official_html_report_body",
+        "figures_not_reconstructed": true,
+        "binary_pdf_saved": false,
+        "limitation": "Native short official web report contains analysis and occurrence details, not a safety-summary-only page."
+      },
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "ao-2006-007",
+      "event_id": "ao-2006-007",
+      "title": "In-flight engine failure 93km N of Perth Airport, WA 27 November 2006 Beechcraft King Air 200, VH-XDB",
+      "url": "https://www.atsb.gov.au/sites/default/files/investigation-reports/ao2006007.pdf",
+      "source_agency": "ATSB",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/ao-2006-007.txt",
+      "full_text_sha256": "4442218fda3028c802d1c787b36bc3bf42f22c9061f45b40d5cff4769a68d679",
+      "full_text_char_count": 37515,
+      "fetch_response_path": "sources/fetch/ao-2006-007.json",
+      "fetch_response_sha256": "45177d683303f9478d3e6f6d4146141ccec83d50fe0ccf07d076527b9b28f057",
+      "saved_source_path": "sources/saved/ao-2006-007.txt",
+      "saved_source_sha256": "bcf01bd133c1e30425174419bb55662e1e6153efc25d1074e063cc6140767c1b",
+      "saved_source_char_count": 6278,
+      "selection_segments": [
+        {
+          "full_start": 28683,
+          "full_end": 34961,
+          "saved_start": 0,
+          "saved_end": 6278
+        }
+      ],
+      "selection_reason": "KingAir200 reduction gearbox mismatch and turbine overspeed; fixed technical examination/analysis paragraphs selected before questions without retrieval results.",
+      "source_layer": "selected_body_from_full_official_report",
+      "source_completeness": {
+        "full_report_body_captured": true,
+        "capture_format": "official_pdf_extracted_text",
+        "figures_not_reconstructed": true,
+        "binary_pdf_saved": false,
+        "limitation": "Full captured text retained verbatim; PDF layout/line breaks and textual page headers may remain. No unseen figure content used."
+      },
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "aaib-n120hh",
+      "event_id": "aaib-n120hh",
+      "title": "Bell_407_N120HH_11-21",
+      "url": "https://assets.publishing.service.gov.uk/media/618ce0318fa8f5037b09c4e5/Bell_407_N120HH_11-21.pdf",
+      "source_agency": "AAIB",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/aaib-n120hh.txt",
+      "full_text_sha256": "cf0bc80b1c0789d747cb39f0a313211a3cf6568c58accb350360418c4d33a28a",
+      "full_text_char_count": 86527,
+      "fetch_response_path": "sources/fetch/aaib-n120hh.json",
+      "fetch_response_sha256": "86add20b59ed174c7cc4b3207d92f7508ff8ad4a84e4878bd5106dbfac16fffe",
+      "saved_source_path": "sources/saved/aaib-n120hh.txt",
+      "saved_source_sha256": "70241fbea6f01e043da16ccaa22267f5582fe7815366e24cc719d7bc6ab39376",
+      "saved_source_char_count": 5618,
+      "selection_segments": [
+        {
+          "full_start": 59692,
+          "full_end": 59700,
+          "saved_start": 0,
+          "saved_end": 8,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "''"
+        },
+        {
+          "full_start": 59703,
+          "full_end": 59711,
+          "saved_start": 10,
+          "saved_end": 18,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 59714,
+          "full_end": 59803,
+          "saved_start": 20,
+          "saved_end": 109,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 59806,
+          "full_end": 59895,
+          "saved_start": 110,
+          "saved_end": 199,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 59898,
+          "full_end": 59989,
+          "saved_start": 200,
+          "saved_end": 291,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 59992,
+          "full_end": 60083,
+          "saved_start": 292,
+          "saved_end": 383,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 60086,
+          "full_end": 60136,
+          "saved_start": 384,
+          "saved_end": 434,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 60139,
+          "full_end": 60231,
+          "saved_start": 436,
+          "saved_end": 528,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 60234,
+          "full_end": 60273,
+          "saved_start": 529,
+          "saved_end": 568,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 60276,
+          "full_end": 60325,
+          "saved_start": 570,
+          "saved_end": 619,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 60328,
+          "full_end": 60416,
+          "saved_start": 621,
+          "saved_end": 709,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 60419,
+          "full_end": 60515,
+          "saved_start": 710,
+          "saved_end": 806,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 60518,
+          "full_end": 60554,
+          "saved_start": 807,
+          "saved_end": 843,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 60557,
+          "full_end": 60649,
+          "saved_start": 845,
+          "saved_end": 937,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 60652,
+          "full_end": 60741,
+          "saved_start": 938,
+          "saved_end": 1027,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 60744,
+          "full_end": 60830,
+          "saved_start": 1029,
+          "saved_end": 1115,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 60833,
+          "full_end": 60872,
+          "saved_start": 1116,
+          "saved_end": 1155,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 60875,
+          "full_end": 60964,
+          "saved_start": 1157,
+          "saved_end": 1246,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 60967,
+          "full_end": 61064,
+          "saved_start": 1247,
+          "saved_end": 1344,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 61067,
+          "full_end": 61154,
+          "saved_start": 1345,
+          "saved_end": 1432,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 61157,
+          "full_end": 61248,
+          "saved_start": 1433,
+          "saved_end": 1524,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 61251,
+          "full_end": 61341,
+          "saved_start": 1525,
+          "saved_end": 1615,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 61344,
+          "full_end": 61408,
+          "saved_start": 1616,
+          "saved_end": 1680,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 61411,
+          "full_end": 61457,
+          "saved_start": 1682,
+          "saved_end": 1728,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 61460,
+          "full_end": 61545,
+          "saved_start": 1730,
+          "saved_end": 1815,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 61548,
+          "full_end": 61637,
+          "saved_start": 1816,
+          "saved_end": 1905,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 61640,
+          "full_end": 61728,
+          "saved_start": 1907,
+          "saved_end": 1995,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 61731,
+          "full_end": 61823,
+          "saved_start": 1996,
+          "saved_end": 2088,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 61826,
+          "full_end": 61916,
+          "saved_start": 2089,
+          "saved_end": 2179,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 61919,
+          "full_end": 62009,
+          "saved_start": 2180,
+          "saved_end": 2270,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 62012,
+          "full_end": 62033,
+          "saved_start": 2271,
+          "saved_end": 2292,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 62036,
+          "full_end": 62125,
+          "saved_start": 2294,
+          "saved_end": 2383,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 62128,
+          "full_end": 62219,
+          "saved_start": 2384,
+          "saved_end": 2475,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 62222,
+          "full_end": 62306,
+          "saved_start": 2476,
+          "saved_end": 2560,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 62309,
+          "full_end": 62394,
+          "saved_start": 2561,
+          "saved_end": 2646,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 62397,
+          "full_end": 62488,
+          "saved_start": 2647,
+          "saved_end": 2738,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 62491,
+          "full_end": 62580,
+          "saved_start": 2739,
+          "saved_end": 2828,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 62583,
+          "full_end": 62675,
+          "saved_start": 2829,
+          "saved_end": 2921,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 62678,
+          "full_end": 62737,
+          "saved_start": 2922,
+          "saved_end": 2981,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 62831,
+          "full_end": 62855,
+          "saved_start": 2983,
+          "saved_end": 3007,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 62858,
+          "full_end": 62945,
+          "saved_start": 3009,
+          "saved_end": 3096,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 62948,
+          "full_end": 63038,
+          "saved_start": 3097,
+          "saved_end": 3187,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 63041,
+          "full_end": 63109,
+          "saved_start": 3188,
+          "saved_end": 3256,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 63112,
+          "full_end": 63204,
+          "saved_start": 3258,
+          "saved_end": 3350,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 63207,
+          "full_end": 63298,
+          "saved_start": 3351,
+          "saved_end": 3442,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 63301,
+          "full_end": 63391,
+          "saved_start": 3443,
+          "saved_end": 3533,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 63394,
+          "full_end": 63483,
+          "saved_start": 3534,
+          "saved_end": 3623,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 63486,
+          "full_end": 63580,
+          "saved_start": 3624,
+          "saved_end": 3718,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 63583,
+          "full_end": 63591,
+          "saved_start": 3719,
+          "saved_end": 3727,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 63594,
+          "full_end": 63682,
+          "saved_start": 3729,
+          "saved_end": 3817,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 63685,
+          "full_end": 63779,
+          "saved_start": 3818,
+          "saved_end": 3912,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 63782,
+          "full_end": 63877,
+          "saved_start": 3913,
+          "saved_end": 4008,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 63880,
+          "full_end": 63940,
+          "saved_start": 4010,
+          "saved_end": 4070,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 63943,
+          "full_end": 63954,
+          "saved_start": 4072,
+          "saved_end": 4083,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 63957,
+          "full_end": 64043,
+          "saved_start": 4085,
+          "saved_end": 4171,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 64046,
+          "full_end": 64138,
+          "saved_start": 4172,
+          "saved_end": 4264,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 64141,
+          "full_end": 64231,
+          "saved_start": 4265,
+          "saved_end": 4355,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 64234,
+          "full_end": 64323,
+          "saved_start": 4356,
+          "saved_end": 4445,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 64326,
+          "full_end": 64417,
+          "saved_start": 4446,
+          "saved_end": 4537,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 64420,
+          "full_end": 64509,
+          "saved_start": 4538,
+          "saved_end": 4627,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 64512,
+          "full_end": 64603,
+          "saved_start": 4628,
+          "saved_end": 4719,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 64606,
+          "full_end": 64699,
+          "saved_start": 4720,
+          "saved_end": 4813,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 64702,
+          "full_end": 64792,
+          "saved_start": 4814,
+          "saved_end": 4904,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 64795,
+          "full_end": 64889,
+          "saved_start": 4906,
+          "saved_end": 5000,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 64892,
+          "full_end": 64968,
+          "saved_start": 5001,
+          "saved_end": 5077,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 64971,
+          "full_end": 65060,
+          "saved_start": 5079,
+          "saved_end": 5168,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 65063,
+          "full_end": 65151,
+          "saved_start": 5169,
+          "saved_end": 5257,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 65154,
+          "full_end": 65238,
+          "saved_start": 5258,
+          "saved_end": 5342,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 65241,
+          "full_end": 65328,
+          "saved_start": 5343,
+          "saved_end": 5430,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 65331,
+          "full_end": 65420,
+          "saved_start": 5431,
+          "saved_end": 5520,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 65423,
+          "full_end": 65511,
+          "saved_start": 5521,
+          "saved_end": 5609,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 65514,
+          "full_end": 65522,
+          "saved_start": 5610,
+          "saved_end": 5618,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        }
+      ],
+      "selection_reason": "Bell407 oil starvation and gas producer disc failure; fixed technical examination/analysis paragraphs selected before questions without retrieval results.",
+      "source_layer": "selected_body_from_full_official_report",
+      "source_completeness": {
+        "full_report_body_captured": true,
+        "capture_format": "official_pdf_extracted_text",
+        "figures_not_reconstructed": true,
+        "binary_pdf_saved": false,
+        "limitation": "Full captured text retained verbatim; PDF layout/line breaks and textual page headers may remain. No unseen figure content used."
+      },
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false,
+      "layout_normalization": {
+        "amendment": "pre-question-preparation-amendment/amendment.json",
+        "policy": "Join extracted PDF hard-wrapped lines by a space; keep explicit headings/bullets and sentence-ending boundaries; remove only exact repeated AAIB page headers and page-number/copyright/UTC footer suffixes. No body-word change.",
+        "original_selected_sha256": "b7618a27e74efb596bbf1fff237d231dea55d409ee83a30b3bcebf57428b4644",
+        "line_mapping_count": 72
+      }
+    },
+    {
+      "document_id": "aaib-g-omyt",
+      "event_id": "aaib-g-omyt",
+      "title": "Airbus_A330-243__G-OMYT_12-13_incl_add.pdf",
+      "url": "https://assets.digital.cabinet-office.gov.uk/media/54dc6b6e40f0b670f1000010/Airbus_A330-243__G-OMYT_12-13_incl_add.pdf",
+      "source_agency": "AAIB",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/aaib-g-omyt.txt",
+      "full_text_sha256": "b773b823ca59c029b0feb317c55b7024f56f5d626004b68faf3229caf4c08406",
+      "full_text_char_count": 7151,
+      "fetch_response_path": "sources/fetch/aaib-g-omyt.json",
+      "fetch_response_sha256": "3b5347630b05a466be899ec180c50ef0f2c91e9022a464942c7c52fed635f41a",
+      "saved_source_path": "sources/saved/aaib-g-omyt.txt",
+      "saved_source_sha256": "053ce20a17c46ce0eb835a1d19e5f502e62879d9ca19ce1ad9152b05e5dc5bb5",
+      "saved_source_char_count": 6014,
+      "selection_segments": [
+        {
+          "full_start": 928,
+          "full_end": 936,
+          "saved_start": 0,
+          "saved_end": 8,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "''"
+        },
+        {
+          "full_start": 939,
+          "full_end": 1035,
+          "saved_start": 10,
+          "saved_end": 106,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 1038,
+          "full_end": 1086,
+          "saved_start": 107,
+          "saved_end": 155,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 1089,
+          "full_end": 1644,
+          "saved_start": 156,
+          "saved_end": 711,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 1651,
+          "full_end": 1661,
+          "saved_start": 713,
+          "saved_end": 723,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 1662,
+          "full_end": 2282,
+          "saved_start": 725,
+          "saved_end": 1345,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 2356,
+          "full_end": 2377,
+          "saved_start": 1347,
+          "saved_end": 1368,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 2380,
+          "full_end": 2432,
+          "saved_start": 1370,
+          "saved_end": 1422,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 2435,
+          "full_end": 2852,
+          "saved_start": 1423,
+          "saved_end": 1840,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 2855,
+          "full_end": 2910,
+          "saved_start": 1841,
+          "saved_end": 1896,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 2913,
+          "full_end": 2962,
+          "saved_start": 1897,
+          "saved_end": 1946,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 2965,
+          "full_end": 3022,
+          "saved_start": 1947,
+          "saved_end": 2004,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 3025,
+          "full_end": 3212,
+          "saved_start": 2005,
+          "saved_end": 2192,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 3215,
+          "full_end": 3374,
+          "saved_start": 2193,
+          "saved_end": 2352,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 3377,
+          "full_end": 3420,
+          "saved_start": 2353,
+          "saved_end": 2396,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 3423,
+          "full_end": 3429,
+          "saved_start": 2398,
+          "saved_end": 2404,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 3432,
+          "full_end": 3485,
+          "saved_start": 2406,
+          "saved_end": 2459,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 3488,
+          "full_end": 3682,
+          "saved_start": 2460,
+          "saved_end": 2654,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 3685,
+          "full_end": 3740,
+          "saved_start": 2655,
+          "saved_end": 2710,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 3743,
+          "full_end": 3795,
+          "saved_start": 2711,
+          "saved_end": 2763,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 3798,
+          "full_end": 3823,
+          "saved_start": 2765,
+          "saved_end": 2790,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 3826,
+          "full_end": 3970,
+          "saved_start": 2792,
+          "saved_end": 2936,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 3973,
+          "full_end": 4028,
+          "saved_start": 2937,
+          "saved_end": 2992,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 4031,
+          "full_end": 4303,
+          "saved_start": 2994,
+          "saved_end": 3266,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 4306,
+          "full_end": 4360,
+          "saved_start": 3267,
+          "saved_end": 3321,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 4363,
+          "full_end": 4414,
+          "saved_start": 3322,
+          "saved_end": 3373,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 4417,
+          "full_end": 4467,
+          "saved_start": 3374,
+          "saved_end": 3424,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 4470,
+          "full_end": 4582,
+          "saved_start": 3425,
+          "saved_end": 3537,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 4585,
+          "full_end": 4640,
+          "saved_start": 3538,
+          "saved_end": 3593,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 4643,
+          "full_end": 5873,
+          "saved_start": 3594,
+          "saved_end": 4824,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 5876,
+          "full_end": 5927,
+          "saved_start": 4825,
+          "saved_end": 4876,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 5930,
+          "full_end": 6022,
+          "saved_start": 4877,
+          "saved_end": 4969,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 6099,
+          "full_end": 6173,
+          "saved_start": 4971,
+          "saved_end": 5045,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 6176,
+          "full_end": 6220,
+          "saved_start": 5047,
+          "saved_end": 5091,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 6223,
+          "full_end": 6252,
+          "saved_start": 5093,
+          "saved_end": 5122,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 6255,
+          "full_end": 6313,
+          "saved_start": 5124,
+          "saved_end": 5182,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 6316,
+          "full_end": 6356,
+          "saved_start": 5184,
+          "saved_end": 5224,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 6359,
+          "full_end": 6531,
+          "saved_start": 5226,
+          "saved_end": 5398,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 6534,
+          "full_end": 6626,
+          "saved_start": 5399,
+          "saved_end": 5491,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 6629,
+          "full_end": 7151,
+          "saved_start": 5492,
+          "saved_end": 6014,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        }
+      ],
+      "selection_reason": "A330 HP turbine sulphidation and fatigue; fixed technical examination/analysis paragraphs selected before questions without retrieval results.",
+      "source_layer": "selected_body_from_full_official_report",
+      "source_completeness": {
+        "full_report_body_captured": true,
+        "capture_format": "official_pdf_extracted_text",
+        "figures_not_reconstructed": true,
+        "binary_pdf_saved": false,
+        "limitation": "Full captured text retained verbatim; PDF layout/line breaks and textual page headers may remain. No unseen figure content used."
+      },
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false,
+      "layout_normalization": {
+        "amendment": "pre-question-preparation-amendment/amendment.json",
+        "policy": "Join extracted PDF hard-wrapped lines by a space; keep explicit headings/bullets and sentence-ending boundaries; remove only exact repeated AAIB page headers and page-number/copyright/UTC footer suffixes. No body-word change.",
+        "original_selected_sha256": "430b5f5ce7342799718f928e6b0616ab0f2f88469feabf4caa2925e9b43fc9f6",
+        "line_mapping_count": 40
+      }
+    },
+    {
+      "document_id": "aaib-g-suez",
+      "event_id": "aaib-g-suez",
+      "title": "Agusta_Bell_206B_Jet_Ranger_II_G-SUEZ_01-13.pdf",
+      "url": "https://assets.digital.cabinet-office.gov.uk/media/5422f6bc40f0b6134600066f/Agusta_Bell_206B_Jet_Ranger_II_G-SUEZ_01-13.pdf",
+      "source_agency": "AAIB",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/aaib-g-suez.txt",
+      "full_text_sha256": "84946ae51114532d3e59a7af7921ed6eff44a38ab7720e3ec389ab4d8f0a0ab1",
+      "full_text_char_count": 9537,
+      "fetch_response_path": "sources/fetch/aaib-g-suez.json",
+      "fetch_response_sha256": "13d1f77623a76d3c215083a5a46b5af670e8e55162657bb44687c5c5ccb28b9a",
+      "saved_source_path": "sources/saved/aaib-g-suez.txt",
+      "saved_source_sha256": "24c830c190cf26e5d44293b2cf637da933df9edc67407409e04c25f497fbd0ed",
+      "saved_source_char_count": 5820,
+      "selection_segments": [
+        {
+          "full_start": 1493,
+          "full_end": 1506,
+          "saved_start": 0,
+          "saved_end": 13,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "''"
+        },
+        {
+          "full_start": 1509,
+          "full_end": 1556,
+          "saved_start": 15,
+          "saved_end": 62,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 1559,
+          "full_end": 1610,
+          "saved_start": 63,
+          "saved_end": 114,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 1613,
+          "full_end": 1661,
+          "saved_start": 115,
+          "saved_end": 163,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 1664,
+          "full_end": 1717,
+          "saved_start": 164,
+          "saved_end": 217,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 1720,
+          "full_end": 1768,
+          "saved_start": 218,
+          "saved_end": 266,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 1771,
+          "full_end": 1819,
+          "saved_start": 267,
+          "saved_end": 315,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 1822,
+          "full_end": 1872,
+          "saved_start": 316,
+          "saved_end": 366,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 1875,
+          "full_end": 1927,
+          "saved_start": 367,
+          "saved_end": 419,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 1930,
+          "full_end": 1984,
+          "saved_start": 420,
+          "saved_end": 474,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 1987,
+          "full_end": 2041,
+          "saved_start": 475,
+          "saved_end": 529,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 2044,
+          "full_end": 2071,
+          "saved_start": 530,
+          "saved_end": 557,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 2074,
+          "full_end": 2127,
+          "saved_start": 559,
+          "saved_end": 612,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 2130,
+          "full_end": 2180,
+          "saved_start": 613,
+          "saved_end": 663,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 2183,
+          "full_end": 2233,
+          "saved_start": 664,
+          "saved_end": 714,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 2310,
+          "full_end": 2366,
+          "saved_start": 715,
+          "saved_end": 771,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 2369,
+          "full_end": 2422,
+          "saved_start": 772,
+          "saved_end": 825,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 2425,
+          "full_end": 2477,
+          "saved_start": 827,
+          "saved_end": 879,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 2480,
+          "full_end": 2536,
+          "saved_start": 880,
+          "saved_end": 936,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 2539,
+          "full_end": 2588,
+          "saved_start": 937,
+          "saved_end": 986,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 2591,
+          "full_end": 2644,
+          "saved_start": 987,
+          "saved_end": 1040,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 2647,
+          "full_end": 2700,
+          "saved_start": 1041,
+          "saved_end": 1094,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 2703,
+          "full_end": 2753,
+          "saved_start": 1095,
+          "saved_end": 1145,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 2756,
+          "full_end": 2808,
+          "saved_start": 1146,
+          "saved_end": 1198,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 2811,
+          "full_end": 2857,
+          "saved_start": 1199,
+          "saved_end": 1245,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 2860,
+          "full_end": 2910,
+          "saved_start": 1246,
+          "saved_end": 1296,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 2913,
+          "full_end": 2965,
+          "saved_start": 1297,
+          "saved_end": 1349,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 2968,
+          "full_end": 3021,
+          "saved_start": 1350,
+          "saved_end": 1403,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 3024,
+          "full_end": 3077,
+          "saved_start": 1404,
+          "saved_end": 1457,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 3080,
+          "full_end": 3103,
+          "saved_start": 1458,
+          "saved_end": 1481,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 3106,
+          "full_end": 3154,
+          "saved_start": 1483,
+          "saved_end": 1531,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 3157,
+          "full_end": 3210,
+          "saved_start": 1532,
+          "saved_end": 1585,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 3213,
+          "full_end": 3263,
+          "saved_start": 1586,
+          "saved_end": 1636,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 3266,
+          "full_end": 3318,
+          "saved_start": 1637,
+          "saved_end": 1689,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 3321,
+          "full_end": 3374,
+          "saved_start": 1690,
+          "saved_end": 1743,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 3377,
+          "full_end": 3430,
+          "saved_start": 1744,
+          "saved_end": 1797,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 3433,
+          "full_end": 3479,
+          "saved_start": 1798,
+          "saved_end": 1844,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 3482,
+          "full_end": 3535,
+          "saved_start": 1845,
+          "saved_end": 1898,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 3538,
+          "full_end": 3590,
+          "saved_start": 1899,
+          "saved_end": 1951,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 3593,
+          "full_end": 3610,
+          "saved_start": 1952,
+          "saved_end": 1969,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 3613,
+          "full_end": 3660,
+          "saved_start": 1971,
+          "saved_end": 2018,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 3663,
+          "full_end": 3715,
+          "saved_start": 2019,
+          "saved_end": 2071,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 3718,
+          "full_end": 3770,
+          "saved_start": 2072,
+          "saved_end": 2124,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 3773,
+          "full_end": 3824,
+          "saved_start": 2125,
+          "saved_end": 2176,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 3827,
+          "full_end": 3880,
+          "saved_start": 2177,
+          "saved_end": 2230,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 3883,
+          "full_end": 3936,
+          "saved_start": 2231,
+          "saved_end": 2284,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 3939,
+          "full_end": 3991,
+          "saved_start": 2285,
+          "saved_end": 2337,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 3994,
+          "full_end": 4047,
+          "saved_start": 2338,
+          "saved_end": 2391,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 4050,
+          "full_end": 4101,
+          "saved_start": 2392,
+          "saved_end": 2443,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 4104,
+          "full_end": 4155,
+          "saved_start": 2444,
+          "saved_end": 2495,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 4158,
+          "full_end": 4204,
+          "saved_start": 2496,
+          "saved_end": 2542,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 4207,
+          "full_end": 4261,
+          "saved_start": 2543,
+          "saved_end": 2597,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 4264,
+          "full_end": 4316,
+          "saved_start": 2598,
+          "saved_end": 2650,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 4319,
+          "full_end": 4372,
+          "saved_start": 2651,
+          "saved_end": 2704,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 4375,
+          "full_end": 4428,
+          "saved_start": 2705,
+          "saved_end": 2758,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 4431,
+          "full_end": 4462,
+          "saved_start": 2759,
+          "saved_end": 2790,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 4465,
+          "full_end": 4489,
+          "saved_start": 2792,
+          "saved_end": 2816,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 4492,
+          "full_end": 4543,
+          "saved_start": 2818,
+          "saved_end": 2869,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 4546,
+          "full_end": 4596,
+          "saved_start": 2870,
+          "saved_end": 2920,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 4599,
+          "full_end": 4652,
+          "saved_start": 2921,
+          "saved_end": 2974,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 4655,
+          "full_end": 4662,
+          "saved_start": 2975,
+          "saved_end": 2982,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 4665,
+          "full_end": 4711,
+          "saved_start": 2984,
+          "saved_end": 3030,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 4714,
+          "full_end": 4755,
+          "saved_start": 3031,
+          "saved_end": 3072,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 4758,
+          "full_end": 4808,
+          "saved_start": 3074,
+          "saved_end": 3124,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 4811,
+          "full_end": 4862,
+          "saved_start": 3125,
+          "saved_end": 3176,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 4865,
+          "full_end": 4897,
+          "saved_start": 3177,
+          "saved_end": 3209,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 4900,
+          "full_end": 4937,
+          "saved_start": 3211,
+          "saved_end": 3248,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 4940,
+          "full_end": 4987,
+          "saved_start": 3249,
+          "saved_end": 3296,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 4990,
+          "full_end": 5034,
+          "saved_start": 3297,
+          "saved_end": 3341,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 5037,
+          "full_end": 5080,
+          "saved_start": 3342,
+          "saved_end": 3385,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 5083,
+          "full_end": 5131,
+          "saved_start": 3386,
+          "saved_end": 3434,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 5134,
+          "full_end": 5179,
+          "saved_start": 3435,
+          "saved_end": 3480,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 5182,
+          "full_end": 5224,
+          "saved_start": 3481,
+          "saved_end": 3523,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 5227,
+          "full_end": 5267,
+          "saved_start": 3524,
+          "saved_end": 3564,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 5270,
+          "full_end": 5313,
+          "saved_start": 3566,
+          "saved_end": 3609,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 5316,
+          "full_end": 5361,
+          "saved_start": 3610,
+          "saved_end": 3655,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 5364,
+          "full_end": 5372,
+          "saved_start": 3656,
+          "saved_end": 3664,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 5375,
+          "full_end": 5424,
+          "saved_start": 3666,
+          "saved_end": 3715,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 5427,
+          "full_end": 5479,
+          "saved_start": 3716,
+          "saved_end": 3768,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 5482,
+          "full_end": 5529,
+          "saved_start": 3770,
+          "saved_end": 3817,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 5532,
+          "full_end": 5584,
+          "saved_start": 3818,
+          "saved_end": 3870,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 5587,
+          "full_end": 5620,
+          "saved_start": 3871,
+          "saved_end": 3904,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 5697,
+          "full_end": 5717,
+          "saved_start": 3906,
+          "saved_end": 3926,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 5720,
+          "full_end": 5774,
+          "saved_start": 3928,
+          "saved_end": 3982,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 5777,
+          "full_end": 5832,
+          "saved_start": 3983,
+          "saved_end": 4038,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 5835,
+          "full_end": 5887,
+          "saved_start": 4039,
+          "saved_end": 4091,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 5890,
+          "full_end": 5947,
+          "saved_start": 4092,
+          "saved_end": 4149,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 5950,
+          "full_end": 6009,
+          "saved_start": 4150,
+          "saved_end": 4209,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 6012,
+          "full_end": 6066,
+          "saved_start": 4210,
+          "saved_end": 4264,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 6069,
+          "full_end": 6119,
+          "saved_start": 4265,
+          "saved_end": 4315,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 6122,
+          "full_end": 6170,
+          "saved_start": 4316,
+          "saved_end": 4364,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 6173,
+          "full_end": 6221,
+          "saved_start": 4365,
+          "saved_end": 4413,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 6224,
+          "full_end": 6238,
+          "saved_start": 4414,
+          "saved_end": 4428,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 6241,
+          "full_end": 6291,
+          "saved_start": 4430,
+          "saved_end": 4480,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 6294,
+          "full_end": 6348,
+          "saved_start": 4481,
+          "saved_end": 4535,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 6351,
+          "full_end": 6360,
+          "saved_start": 4536,
+          "saved_end": 4545,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 6363,
+          "full_end": 6418,
+          "saved_start": 4547,
+          "saved_end": 4602,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 6421,
+          "full_end": 6471,
+          "saved_start": 4603,
+          "saved_end": 4653,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 6474,
+          "full_end": 6518,
+          "saved_start": 4654,
+          "saved_end": 4698,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 6521,
+          "full_end": 6570,
+          "saved_start": 4699,
+          "saved_end": 4748,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 6573,
+          "full_end": 6627,
+          "saved_start": 4749,
+          "saved_end": 4803,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 6630,
+          "full_end": 6686,
+          "saved_start": 4804,
+          "saved_end": 4860,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 6689,
+          "full_end": 6741,
+          "saved_start": 4861,
+          "saved_end": 4913,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 6744,
+          "full_end": 6796,
+          "saved_start": 4914,
+          "saved_end": 4966,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 6799,
+          "full_end": 6852,
+          "saved_start": 4967,
+          "saved_end": 5020,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 6855,
+          "full_end": 6907,
+          "saved_start": 5021,
+          "saved_end": 5073,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 6910,
+          "full_end": 6920,
+          "saved_start": 5074,
+          "saved_end": 5084,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 7411,
+          "full_end": 7419,
+          "saved_start": 5086,
+          "saved_end": 5094,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 7422,
+          "full_end": 7474,
+          "saved_start": 5096,
+          "saved_end": 5148,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 7477,
+          "full_end": 7529,
+          "saved_start": 5149,
+          "saved_end": 5201,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 7532,
+          "full_end": 7582,
+          "saved_start": 5202,
+          "saved_end": 5252,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 7585,
+          "full_end": 7634,
+          "saved_start": 5253,
+          "saved_end": 5302,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 7637,
+          "full_end": 7692,
+          "saved_start": 5303,
+          "saved_end": 5358,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 7695,
+          "full_end": 7749,
+          "saved_start": 5359,
+          "saved_end": 5413,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 7752,
+          "full_end": 7810,
+          "saved_start": 5414,
+          "saved_end": 5472,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 7813,
+          "full_end": 7868,
+          "saved_start": 5473,
+          "saved_end": 5528,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 7871,
+          "full_end": 7920,
+          "saved_start": 5529,
+          "saved_end": 5578,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 7923,
+          "full_end": 7979,
+          "saved_start": 5579,
+          "saved_end": 5635,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 7982,
+          "full_end": 8037,
+          "saved_start": 5636,
+          "saved_end": 5691,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 8040,
+          "full_end": 8095,
+          "saved_start": 5692,
+          "saved_end": 5747,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 8098,
+          "full_end": 8155,
+          "saved_start": 5748,
+          "saved_end": 5805,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 8158,
+          "full_end": 8172,
+          "saved_start": 5806,
+          "saved_end": 5820,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        }
+      ],
+      "selection_reason": "Bell206 compressor blade fatigue and pitting possibility; fixed technical examination/analysis paragraphs selected before questions without retrieval results.",
+      "source_layer": "selected_body_from_full_official_report",
+      "source_completeness": {
+        "full_report_body_captured": true,
+        "capture_format": "official_pdf_extracted_text",
+        "figures_not_reconstructed": true,
+        "binary_pdf_saved": false,
+        "limitation": "Full captured text retained verbatim; PDF layout/line breaks and textual page headers may remain. No unseen figure content used."
+      },
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false,
+      "layout_normalization": {
+        "amendment": "pre-question-preparation-amendment/amendment.json",
+        "policy": "Join extracted PDF hard-wrapped lines by a space; keep explicit headings/bullets and sentence-ending boundaries; remove only exact repeated AAIB page headers and page-number/copyright/UTC footer suffixes. No body-word change.",
+        "original_selected_sha256": "b974bdf6d610a7aee0a8a24fbc1d41342a9c814857565f658dee858b82e31c84",
+        "line_mapping_count": 122
+      }
+    },
+    {
+      "document_id": "aaib-9h-loz",
+      "event_id": "aaib-9h-loz",
+      "title": "AAIB Bulletin 6-2022",
+      "url": "https://assets.publishing.service.gov.uk/media/627a80b3e90e0712dec75274/Airbus_A320-232_9H-LOZ_06-22.pdf",
+      "source_agency": "AAIB",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/aaib-9h-loz.txt",
+      "full_text_sha256": "fbbdc447e986b9fae85dc89fbd0b3cb62ca3e005ded763b53ad5a054c7291766",
+      "full_text_char_count": 17303,
+      "fetch_response_path": "sources/fetch/aaib-9h-loz.json",
+      "fetch_response_sha256": "8f327cd91e8425a39d43dd61289d9af4622389e3e0491cf665986c585589ce10",
+      "saved_source_path": "sources/saved/aaib-9h-loz.txt",
+      "saved_source_sha256": "39f0deaee375fa3573ac38d82af53720194dd1ec4b1d3184bcb6cc62f3b8ea9b",
+      "saved_source_char_count": 5182,
+      "selection_segments": [
+        {
+          "full_start": 4839,
+          "full_end": 4872,
+          "saved_start": 0,
+          "saved_end": 33,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "''"
+        },
+        {
+          "full_start": 4875,
+          "full_end": 4966,
+          "saved_start": 35,
+          "saved_end": 126,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 4969,
+          "full_end": 5050,
+          "saved_start": 127,
+          "saved_end": 208,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 5053,
+          "full_end": 5149,
+          "saved_start": 209,
+          "saved_end": 305,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 5152,
+          "full_end": 5238,
+          "saved_start": 306,
+          "saved_end": 392,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 5241,
+          "full_end": 5334,
+          "saved_start": 394,
+          "saved_end": 487,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 5337,
+          "full_end": 5428,
+          "saved_start": 488,
+          "saved_end": 579,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 5431,
+          "full_end": 5520,
+          "saved_start": 580,
+          "saved_end": 669,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 5523,
+          "full_end": 5610,
+          "saved_start": 670,
+          "saved_end": 757,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 5613,
+          "full_end": 5705,
+          "saved_start": 758,
+          "saved_end": 850,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 5708,
+          "full_end": 5791,
+          "saved_start": 851,
+          "saved_end": 934,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 5794,
+          "full_end": 5825,
+          "saved_start": 935,
+          "saved_end": 966,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 5915,
+          "full_end": 5923,
+          "saved_start": 968,
+          "saved_end": 976,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 5926,
+          "full_end": 5944,
+          "saved_start": 978,
+          "saved_end": 996,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 5947,
+          "full_end": 6002,
+          "saved_start": 998,
+          "saved_end": 1053,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 6005,
+          "full_end": 6088,
+          "saved_start": 1055,
+          "saved_end": 1138,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 6091,
+          "full_end": 6174,
+          "saved_start": 1139,
+          "saved_end": 1222,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 6177,
+          "full_end": 6272,
+          "saved_start": 1223,
+          "saved_end": 1318,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 9521,
+          "full_end": 9612,
+          "saved_start": 1320,
+          "saved_end": 1411,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 9615,
+          "full_end": 9682,
+          "saved_start": 1412,
+          "saved_end": 1479,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 9690,
+          "full_end": 9700,
+          "saved_start": 1481,
+          "saved_end": 1491,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 9701,
+          "full_end": 9810,
+          "saved_start": 1493,
+          "saved_end": 1602,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 9811,
+          "full_end": 9853,
+          "saved_start": 1603,
+          "saved_end": 1645,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 9854,
+          "full_end": 9951,
+          "saved_start": 1647,
+          "saved_end": 1744,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 10035,
+          "full_end": 10092,
+          "saved_start": 1746,
+          "saved_end": 1803,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 10095,
+          "full_end": 10168,
+          "saved_start": 1805,
+          "saved_end": 1878,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 10171,
+          "full_end": 10244,
+          "saved_start": 1879,
+          "saved_end": 1952,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 10247,
+          "full_end": 10320,
+          "saved_start": 1954,
+          "saved_end": 2027,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 10323,
+          "full_end": 10402,
+          "saved_start": 2028,
+          "saved_end": 2107,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 10404,
+          "full_end": 10457,
+          "saved_start": 2108,
+          "saved_end": 2161,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 10460,
+          "full_end": 10534,
+          "saved_start": 2163,
+          "saved_end": 2237,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 10537,
+          "full_end": 10618,
+          "saved_start": 2238,
+          "saved_end": 2319,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 10621,
+          "full_end": 10628,
+          "saved_start": 2320,
+          "saved_end": 2327,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 14298,
+          "full_end": 14306,
+          "saved_start": 2329,
+          "saved_end": 2337,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 14309,
+          "full_end": 14397,
+          "saved_start": 2339,
+          "saved_end": 2427,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 14400,
+          "full_end": 14482,
+          "saved_start": 2428,
+          "saved_end": 2510,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 14485,
+          "full_end": 14569,
+          "saved_start": 2511,
+          "saved_end": 2595,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 14572,
+          "full_end": 14666,
+          "saved_start": 2596,
+          "saved_end": 2690,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 14669,
+          "full_end": 14758,
+          "saved_start": 2691,
+          "saved_end": 2780,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 14761,
+          "full_end": 14851,
+          "saved_start": 2781,
+          "saved_end": 2871,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 14854,
+          "full_end": 14945,
+          "saved_start": 2873,
+          "saved_end": 2964,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 14948,
+          "full_end": 15033,
+          "saved_start": 2965,
+          "saved_end": 3050,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 15036,
+          "full_end": 15113,
+          "saved_start": 3051,
+          "saved_end": 3128,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 15116,
+          "full_end": 15199,
+          "saved_start": 3130,
+          "saved_end": 3213,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 15202,
+          "full_end": 15286,
+          "saved_start": 3214,
+          "saved_end": 3298,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 15289,
+          "full_end": 15374,
+          "saved_start": 3299,
+          "saved_end": 3384,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 15377,
+          "full_end": 15461,
+          "saved_start": 3385,
+          "saved_end": 3469,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 15464,
+          "full_end": 15553,
+          "saved_start": 3470,
+          "saved_end": 3559,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 15556,
+          "full_end": 15641,
+          "saved_start": 3560,
+          "saved_end": 3645,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 15644,
+          "full_end": 15730,
+          "saved_start": 3646,
+          "saved_end": 3732,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 15733,
+          "full_end": 15821,
+          "saved_start": 3733,
+          "saved_end": 3821,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 15824,
+          "full_end": 15914,
+          "saved_start": 3823,
+          "saved_end": 3913,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 15917,
+          "full_end": 16005,
+          "saved_start": 3914,
+          "saved_end": 4002,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 16008,
+          "full_end": 16100,
+          "saved_start": 4003,
+          "saved_end": 4095,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 16103,
+          "full_end": 16117,
+          "saved_start": 4096,
+          "saved_end": 4110,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 16120,
+          "full_end": 16134,
+          "saved_start": 4112,
+          "saved_end": 4126,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 16137,
+          "full_end": 16215,
+          "saved_start": 4128,
+          "saved_end": 4206,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 16218,
+          "full_end": 16290,
+          "saved_start": 4207,
+          "saved_end": 4279,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 16293,
+          "full_end": 16376,
+          "saved_start": 4280,
+          "saved_end": 4363,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 16379,
+          "full_end": 16454,
+          "saved_start": 4364,
+          "saved_end": 4439,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 16457,
+          "full_end": 16532,
+          "saved_start": 4440,
+          "saved_end": 4515,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 16535,
+          "full_end": 16609,
+          "saved_start": 4516,
+          "saved_end": 4590,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 16612,
+          "full_end": 16689,
+          "saved_start": 4591,
+          "saved_end": 4668,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 16692,
+          "full_end": 16769,
+          "saved_start": 4669,
+          "saved_end": 4746,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 16772,
+          "full_end": 16798,
+          "saved_start": 4747,
+          "saved_end": 4773,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 16802,
+          "full_end": 16812,
+          "saved_start": 4775,
+          "saved_end": 4785,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 16813,
+          "full_end": 16893,
+          "saved_start": 4787,
+          "saved_end": 4867,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 16985,
+          "full_end": 17064,
+          "saved_start": 4869,
+          "saved_end": 4948,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 17067,
+          "full_end": 17143,
+          "saved_start": 4949,
+          "saved_end": 5025,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 17145,
+          "full_end": 17223,
+          "saved_start": 5026,
+          "saved_end": 5104,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 17226,
+          "full_end": 17303,
+          "saved_start": 5105,
+          "saved_end": 5182,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        }
+      ],
+      "selection_reason": "A320 V2500 overspeed protection valve malfunction; fixed technical examination/analysis paragraphs selected before questions without retrieval results.",
+      "source_layer": "selected_body_from_full_official_report",
+      "source_completeness": {
+        "full_report_body_captured": true,
+        "capture_format": "official_pdf_extracted_text",
+        "figures_not_reconstructed": true,
+        "binary_pdf_saved": false,
+        "limitation": "Full captured text retained verbatim; PDF layout/line breaks and textual page headers may remain. No unseen figure content used."
+      },
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false,
+      "layout_normalization": {
+        "amendment": "pre-question-preparation-amendment/amendment.json",
+        "policy": "Join extracted PDF hard-wrapped lines by a space; keep explicit headings/bullets and sentence-ending boundaries; remove only exact repeated AAIB page headers and page-number/copyright/UTC footer suffixes. No body-word change.",
+        "original_selected_sha256": "e7cde08f25acccf9e57660a1c919fdd2ba6ddefcdff6734f51abd3501aff2221",
+        "line_mapping_count": 71
+      }
+    },
+    {
+      "document_id": "aaib-g-vatl",
+      "event_id": "aaib-g-vatl",
+      "title": "4-2007_G-VATL.pdf",
+      "url": "https://assets.digital.cabinet-office.gov.uk/media/5422f72c40f0b613420005d7/4-2007_G-VATL.pdf",
+      "source_agency": "AAIB",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/aaib-g-vatl.txt",
+      "full_text_sha256": "e97259988a14172779cda9484f13e2cc97e3ad42f90e68a6135e067142560dd7",
+      "full_text_char_count": 228820,
+      "fetch_response_path": "sources/fetch/aaib-g-vatl.json",
+      "fetch_response_sha256": "3dd43ad9151631c01445d67a0d777f95b6988fcfd3f127c4fb9125abe3c53588",
+      "saved_source_path": "sources/saved/aaib-g-vatl.txt",
+      "saved_source_sha256": "8ecd9afaa643269ff64ed23a120737800a7ca92bd06e2e0b1266091a3d00ee9e",
+      "saved_source_char_count": 5982,
+      "selection_segments": [
+        {
+          "full_start": 152369,
+          "full_end": 152392,
+          "saved_start": 0,
+          "saved_end": 23,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "''"
+        },
+        {
+          "full_start": 152395,
+          "full_end": 152554,
+          "saved_start": 25,
+          "saved_end": 184,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 152557,
+          "full_end": 152722,
+          "saved_start": 185,
+          "saved_end": 350,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 152725,
+          "full_end": 152800,
+          "saved_start": 351,
+          "saved_end": 426,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 152803,
+          "full_end": 152851,
+          "saved_start": 427,
+          "saved_end": 475,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 152854,
+          "full_end": 152892,
+          "saved_start": 477,
+          "saved_end": 515,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 152895,
+          "full_end": 153442,
+          "saved_start": 517,
+          "saved_end": 1064,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 153445,
+          "full_end": 153457,
+          "saved_start": 1065,
+          "saved_end": 1077,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 153460,
+          "full_end": 153617,
+          "saved_start": 1079,
+          "saved_end": 1236,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 153620,
+          "full_end": 154252,
+          "saved_start": 1237,
+          "saved_end": 1869,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 154255,
+          "full_end": 154336,
+          "saved_start": 1870,
+          "saved_end": 1951,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 154339,
+          "full_end": 154682,
+          "saved_start": 1952,
+          "saved_end": 2295,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 154685,
+          "full_end": 154789,
+          "saved_start": 2296,
+          "saved_end": 2400,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 154792,
+          "full_end": 155796,
+          "saved_start": 2401,
+          "saved_end": 3405,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 155799,
+          "full_end": 155874,
+          "saved_start": 3407,
+          "saved_end": 3482,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 155877,
+          "full_end": 155950,
+          "saved_start": 3483,
+          "saved_end": 3556,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 155953,
+          "full_end": 156033,
+          "saved_start": 3557,
+          "saved_end": 3637,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 156036,
+          "full_end": 156192,
+          "saved_start": 3638,
+          "saved_end": 3794,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 156195,
+          "full_end": 156340,
+          "saved_start": 3795,
+          "saved_end": 3940,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 156343,
+          "full_end": 156714,
+          "saved_start": 3941,
+          "saved_end": 4312,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 156717,
+          "full_end": 156747,
+          "saved_start": 4313,
+          "saved_end": 4343,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 156750,
+          "full_end": 157451,
+          "saved_start": 4345,
+          "saved_end": 5046,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 157454,
+          "full_end": 157535,
+          "saved_start": 5047,
+          "saved_end": 5128,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 157538,
+          "full_end": 158331,
+          "saved_start": 5129,
+          "saved_end": 5922,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 158334,
+          "full_end": 158393,
+          "saved_start": 5923,
+          "saved_end": 5982,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        }
+      ],
+      "selection_reason": "A340 automatic fuel transfer and engine fuel starvation; fixed technical examination/analysis paragraphs selected before questions without retrieval results.",
+      "source_layer": "selected_body_from_full_official_report",
+      "source_completeness": {
+        "full_report_body_captured": true,
+        "capture_format": "official_pdf_extracted_text",
+        "figures_not_reconstructed": true,
+        "binary_pdf_saved": false,
+        "limitation": "Full captured text retained verbatim; PDF layout/line breaks and textual page headers may remain. No unseen figure content used."
+      },
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false,
+      "layout_normalization": {
+        "amendment": "pre-question-preparation-amendment/amendment.json",
+        "policy": "Join extracted PDF hard-wrapped lines by a space; keep explicit headings/bullets and sentence-ending boundaries; remove only exact repeated AAIB page headers and page-number/copyright/UTC footer suffixes. No body-word change.",
+        "original_selected_sha256": "b64eaa7daa7130bc6fefcdc4b7f88ed5f762ac3ada420c3c3c39a2fd776da080",
+        "line_mapping_count": 25
+      }
+    },
+    {
+      "document_id": "aaib-d-cirt",
+      "event_id": "aaib-d-cirt",
+      "title": "Dornier_328-100__D-CIRT_01-11.pdf",
+      "url": "https://assets.publishing.service.gov.uk/media/5422f83ce5274a13170006f7/Dornier_328-100__D-CIRT_01-11.pdf",
+      "source_agency": "AAIB",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/aaib-d-cirt.txt",
+      "full_text_sha256": "010a71d0ae6afb76f0eb9fa4b1fe0bedca335f5e580244d69abde3e1483a09d1",
+      "full_text_char_count": 19693,
+      "fetch_response_path": "sources/fetch/aaib-d-cirt.json",
+      "fetch_response_sha256": "7525bcd545b339daf25220f6e631281493b042ff1743aaad783167184ab409d9",
+      "saved_source_path": "sources/saved/aaib-d-cirt.txt",
+      "saved_source_sha256": "ac93c8d1d89052651c5910227c8ae8ee2b2a0f2d57c632f135fc75da748293c0",
+      "saved_source_char_count": 4869,
+      "selection_segments": [
+        {
+          "full_start": 14499,
+          "full_end": 14530,
+          "saved_start": 0,
+          "saved_end": 31,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "''"
+        },
+        {
+          "full_start": 14533,
+          "full_end": 14585,
+          "saved_start": 33,
+          "saved_end": 85,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 14588,
+          "full_end": 14640,
+          "saved_start": 86,
+          "saved_end": 138,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 14643,
+          "full_end": 14692,
+          "saved_start": 139,
+          "saved_end": 188,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 14770,
+          "full_end": 14824,
+          "saved_start": 189,
+          "saved_end": 243,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 14827,
+          "full_end": 14880,
+          "saved_start": 245,
+          "saved_end": 298,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 14883,
+          "full_end": 14939,
+          "saved_start": 299,
+          "saved_end": 355,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 14942,
+          "full_end": 15001,
+          "saved_start": 356,
+          "saved_end": 415,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 15004,
+          "full_end": 15059,
+          "saved_start": 417,
+          "saved_end": 472,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 15062,
+          "full_end": 15098,
+          "saved_start": 473,
+          "saved_end": 509,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 15101,
+          "full_end": 15152,
+          "saved_start": 511,
+          "saved_end": 562,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 15155,
+          "full_end": 15211,
+          "saved_start": 563,
+          "saved_end": 619,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 15214,
+          "full_end": 15266,
+          "saved_start": 620,
+          "saved_end": 672,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 15269,
+          "full_end": 15318,
+          "saved_start": 673,
+          "saved_end": 722,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 15321,
+          "full_end": 15371,
+          "saved_start": 723,
+          "saved_end": 773,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 15374,
+          "full_end": 15427,
+          "saved_start": 774,
+          "saved_end": 827,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 15430,
+          "full_end": 15483,
+          "saved_start": 828,
+          "saved_end": 881,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 15486,
+          "full_end": 15539,
+          "saved_start": 882,
+          "saved_end": 935,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 15542,
+          "full_end": 15593,
+          "saved_start": 936,
+          "saved_end": 987,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 15596,
+          "full_end": 15648,
+          "saved_start": 988,
+          "saved_end": 1040,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 15651,
+          "full_end": 15704,
+          "saved_start": 1041,
+          "saved_end": 1094,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 15707,
+          "full_end": 15761,
+          "saved_start": 1095,
+          "saved_end": 1149,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 15764,
+          "full_end": 15818,
+          "saved_start": 1150,
+          "saved_end": 1204,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 15821,
+          "full_end": 15871,
+          "saved_start": 1205,
+          "saved_end": 1255,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 15874,
+          "full_end": 15924,
+          "saved_start": 1256,
+          "saved_end": 1306,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 15927,
+          "full_end": 15981,
+          "saved_start": 1307,
+          "saved_end": 1361,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 15984,
+          "full_end": 16033,
+          "saved_start": 1362,
+          "saved_end": 1411,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 16036,
+          "full_end": 16090,
+          "saved_start": 1412,
+          "saved_end": 1466,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 16093,
+          "full_end": 16147,
+          "saved_start": 1467,
+          "saved_end": 1521,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 16150,
+          "full_end": 16171,
+          "saved_start": 1523,
+          "saved_end": 1544,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 16174,
+          "full_end": 16216,
+          "saved_start": 1546,
+          "saved_end": 1588,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 16219,
+          "full_end": 16274,
+          "saved_start": 1589,
+          "saved_end": 1644,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 16277,
+          "full_end": 16333,
+          "saved_start": 1645,
+          "saved_end": 1701,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 16336,
+          "full_end": 16389,
+          "saved_start": 1702,
+          "saved_end": 1755,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 16392,
+          "full_end": 16434,
+          "saved_start": 1756,
+          "saved_end": 1798,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 16437,
+          "full_end": 16490,
+          "saved_start": 1800,
+          "saved_end": 1853,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 16493,
+          "full_end": 16543,
+          "saved_start": 1854,
+          "saved_end": 1904,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 16546,
+          "full_end": 16592,
+          "saved_start": 1905,
+          "saved_end": 1951,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 16595,
+          "full_end": 16650,
+          "saved_start": 1952,
+          "saved_end": 2007,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 16653,
+          "full_end": 16703,
+          "saved_start": 2008,
+          "saved_end": 2058,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 16706,
+          "full_end": 16755,
+          "saved_start": 2059,
+          "saved_end": 2108,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 16758,
+          "full_end": 16810,
+          "saved_start": 2109,
+          "saved_end": 2161,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 16813,
+          "full_end": 16867,
+          "saved_start": 2162,
+          "saved_end": 2216,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 16870,
+          "full_end": 16923,
+          "saved_start": 2217,
+          "saved_end": 2270,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 16926,
+          "full_end": 16975,
+          "saved_start": 2271,
+          "saved_end": 2320,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 16978,
+          "full_end": 16999,
+          "saved_start": 2321,
+          "saved_end": 2342,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 17002,
+          "full_end": 17053,
+          "saved_start": 2344,
+          "saved_end": 2395,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 17056,
+          "full_end": 17110,
+          "saved_start": 2396,
+          "saved_end": 2450,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 17113,
+          "full_end": 17165,
+          "saved_start": 2451,
+          "saved_end": 2503,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 17168,
+          "full_end": 17218,
+          "saved_start": 2504,
+          "saved_end": 2554,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 17221,
+          "full_end": 17273,
+          "saved_start": 2555,
+          "saved_end": 2607,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 17276,
+          "full_end": 17330,
+          "saved_start": 2608,
+          "saved_end": 2662,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 17333,
+          "full_end": 17385,
+          "saved_start": 2663,
+          "saved_end": 2715,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 17388,
+          "full_end": 17440,
+          "saved_start": 2716,
+          "saved_end": 2768,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 17443,
+          "full_end": 17498,
+          "saved_start": 2769,
+          "saved_end": 2824,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 17501,
+          "full_end": 17556,
+          "saved_start": 2825,
+          "saved_end": 2880,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 17559,
+          "full_end": 17615,
+          "saved_start": 2881,
+          "saved_end": 2937,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 17618,
+          "full_end": 17632,
+          "saved_start": 2938,
+          "saved_end": 2952,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 17635,
+          "full_end": 17643,
+          "saved_start": 2954,
+          "saved_end": 2962,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 17646,
+          "full_end": 17698,
+          "saved_start": 2964,
+          "saved_end": 3016,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 17701,
+          "full_end": 17752,
+          "saved_start": 3017,
+          "saved_end": 3068,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 17755,
+          "full_end": 17808,
+          "saved_start": 3069,
+          "saved_end": 3122,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 17811,
+          "full_end": 17863,
+          "saved_start": 3123,
+          "saved_end": 3175,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 17866,
+          "full_end": 17916,
+          "saved_start": 3176,
+          "saved_end": 3226,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 17919,
+          "full_end": 17972,
+          "saved_start": 3227,
+          "saved_end": 3280,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 17975,
+          "full_end": 18028,
+          "saved_start": 3281,
+          "saved_end": 3334,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 18031,
+          "full_end": 18085,
+          "saved_start": 3335,
+          "saved_end": 3389,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 18088,
+          "full_end": 18142,
+          "saved_start": 3390,
+          "saved_end": 3444,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 18145,
+          "full_end": 18201,
+          "saved_start": 3445,
+          "saved_end": 3501,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 18204,
+          "full_end": 18260,
+          "saved_start": 3502,
+          "saved_end": 3558,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 18263,
+          "full_end": 18314,
+          "saved_start": 3559,
+          "saved_end": 3610,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 18317,
+          "full_end": 18327,
+          "saved_start": 3612,
+          "saved_end": 3622,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 18405,
+          "full_end": 18435,
+          "saved_start": 3624,
+          "saved_end": 3654,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 18438,
+          "full_end": 18485,
+          "saved_start": 3656,
+          "saved_end": 3703,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 18488,
+          "full_end": 18536,
+          "saved_start": 3704,
+          "saved_end": 3752,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 18539,
+          "full_end": 18596,
+          "saved_start": 3753,
+          "saved_end": 3810,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 18599,
+          "full_end": 18658,
+          "saved_start": 3811,
+          "saved_end": 3870,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 18661,
+          "full_end": 18672,
+          "saved_start": 3871,
+          "saved_end": 3882,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 18675,
+          "full_end": 18725,
+          "saved_start": 3884,
+          "saved_end": 3934,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 18728,
+          "full_end": 18782,
+          "saved_start": 3935,
+          "saved_end": 3989,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 18785,
+          "full_end": 18831,
+          "saved_start": 3990,
+          "saved_end": 4036,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 18834,
+          "full_end": 18887,
+          "saved_start": 4038,
+          "saved_end": 4091,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 18890,
+          "full_end": 18904,
+          "saved_start": 4092,
+          "saved_end": 4106,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 18907,
+          "full_end": 18917,
+          "saved_start": 4108,
+          "saved_end": 4118,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 18920,
+          "full_end": 18973,
+          "saved_start": 4120,
+          "saved_end": 4173,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 18976,
+          "full_end": 19029,
+          "saved_start": 4174,
+          "saved_end": 4227,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 19032,
+          "full_end": 19086,
+          "saved_start": 4229,
+          "saved_end": 4283,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 19089,
+          "full_end": 19142,
+          "saved_start": 4284,
+          "saved_end": 4337,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 19145,
+          "full_end": 19194,
+          "saved_start": 4338,
+          "saved_end": 4387,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 19197,
+          "full_end": 19251,
+          "saved_start": 4388,
+          "saved_end": 4442,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 19254,
+          "full_end": 19312,
+          "saved_start": 4443,
+          "saved_end": 4501,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 19315,
+          "full_end": 19370,
+          "saved_start": 4502,
+          "saved_end": 4557,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 19373,
+          "full_end": 19422,
+          "saved_start": 4559,
+          "saved_end": 4608,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "'\\n\\n'"
+        },
+        {
+          "full_start": 19425,
+          "full_end": 19475,
+          "saved_start": 4609,
+          "saved_end": 4659,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 19478,
+          "full_end": 19531,
+          "saved_start": 4660,
+          "saved_end": 4713,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 19534,
+          "full_end": 19589,
+          "saved_start": 4714,
+          "saved_end": 4769,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 19592,
+          "full_end": 19645,
+          "saved_start": 4770,
+          "saved_end": 4823,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        },
+        {
+          "full_start": 19648,
+          "full_end": 19693,
+          "saved_start": 4824,
+          "saved_end": 4869,
+          "mapping_unit": "original_text_line",
+          "preceding_separator": "' '"
+        }
+      ],
+      "selection_reason": "Dornier328 PW119 air switching valve corrosion and oil loss; fixed technical examination/analysis paragraphs selected before questions without retrieval results.",
+      "source_layer": "selected_body_from_full_official_report",
+      "source_completeness": {
+        "full_report_body_captured": true,
+        "capture_format": "official_pdf_extracted_text",
+        "figures_not_reconstructed": true,
+        "binary_pdf_saved": false,
+        "limitation": "Full captured text retained verbatim; PDF layout/line breaks and textual page headers may remain. No unseen figure content used."
+      },
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false,
+      "layout_normalization": {
+        "amendment": "pre-question-preparation-amendment/amendment.json",
+        "policy": "Join extracted PDF hard-wrapped lines by a space; keep explicit headings/bullets and sentence-ending boundaries; remove only exact repeated AAIB page headers and page-number/copyright/UTC footer suffixes. No body-word change.",
+        "original_selected_sha256": "2e7cc1ee970ba17be15b47507cf6bf3d6b4b1ff653feaf41299ab31c2d12b6c2",
+        "line_mapping_count": 98
+      }
+    }
+  ],
+  "expert_reviewed": false,
+  "questions_authored": false,
+  "predictions_seen": false,
+  "development_results_seen": false,
+  "pre_question_preparation_amendment": {
+    "created_at": "2026-10-15T03:23:11.820090+00:00",
+    "reason": "Source-only PDF layout quality inspection before translation/retrieval/predictions; original selected material and full original texts unchanged except saved layout normalization.",
+    "record": "pre-question-preparation-amendment/amendment.json"
+  }
+}

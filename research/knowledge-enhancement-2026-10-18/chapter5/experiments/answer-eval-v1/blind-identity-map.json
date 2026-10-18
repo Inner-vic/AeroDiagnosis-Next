@@ -1,0 +1,242 @@
+{
+  "ea17d9f7790fd2": {
+    "id": "cq-01",
+    "method": "BD",
+    "group": "real"
+  },
+  "a8c3721effd088": {
+    "id": "cq-01",
+    "method": "GATED",
+    "group": "real"
+  },
+  "2b96a4e7e57734": {
+    "id": "sq-01",
+    "method": "BD",
+    "group": "controlled"
+  },
+  "e98cab8589e0f8": {
+    "id": "sq-01",
+    "method": "GATED",
+    "group": "controlled"
+  },
+  "96303dab52c254": {
+    "id": "cq-02",
+    "method": "GATED",
+    "group": "real"
+  },
+  "6db9cd300be367": {
+    "id": "cq-02",
+    "method": "BD",
+    "group": "real"
+  },
+  "55d02f5297eca6": {
+    "id": "sq-02",
+    "method": "GATED",
+    "group": "controlled"
+  },
+  "86d7a3869c2917": {
+    "id": "sq-02",
+    "method": "BD",
+    "group": "controlled"
+  },
+  "8f136b6a2c1a33": {
+    "id": "cq-03",
+    "method": "BD",
+    "group": "real"
+  },
+  "25e1f646d2a4c3": {
+    "id": "cq-03",
+    "method": "GATED",
+    "group": "real"
+  },
+  "818ba9d732d1c7": {
+    "id": "sq-03",
+    "method": "BD",
+    "group": "controlled"
+  },
+  "1089d019200ea8": {
+    "id": "sq-03",
+    "method": "GATED",
+    "group": "controlled"
+  },
+  "8ec4e7db347e54": {
+    "id": "cq-04",
+    "method": "GATED",
+    "group": "real"
+  },
+  "cac1664cf567cb": {
+    "id": "cq-04",
+    "method": "BD",
+    "group": "real"
+  },
+  "367d31aeb38dbf": {
+    "id": "sq-04",
+    "method": "GATED",
+    "group": "controlled"
+  },
+  "df705ea3412762": {
+    "id": "sq-04",
+    "method": "BD",
+    "group": "controlled"
+  },
+  "d4e740cfe62bdb": {
+    "id": "cq-05",
+    "method": "BD",
+    "group": "real"
+  },
+  "40fad72a9dc68d": {
+    "id": "cq-05",
+    "method": "GATED",
+    "group": "real"
+  },
+  "3d5aa798e50552": {
+    "id": "sq-05",
+    "method": "BD",
+    "group": "controlled"
+  },
+  "ddd3ae78de6879": {
+    "id": "sq-05",
+    "method": "GATED",
+    "group": "controlled"
+  },
+  "379e07b84c41ef": {
+    "id": "cq-06",
+    "method": "GATED",
+    "group": "real"
+  },
+  "ac5a38d2ba5db0": {
+    "id": "cq-06",
+    "method": "BD",
+    "group": "real"
+  },
+  "7f4518f4e07fbd": {
+    "id": "sq-06",
+    "method": "GATED",
+    "group": "controlled"
+  },
+  "781b9208fc1523": {
+    "id": "sq-06",
+    "method": "BD",
+    "group": "controlled"
+  },
+  "e10e3b451c37b7": {
+    "id": "cq-07",
+    "method": "BD",
+    "group": "real"
+  },
+  "5f11dc059d1f2b": {
+    "id": "cq-07",
+    "method": "GATED",
+    "group": "real"
+  },
+  "9d5ddb7774499c": {
+    "id": "sq-07",
+    "method": "BD",
+    "group": "controlled"
+  },
+  "69af0946aabac9": {
+    "id": "sq-07",
+    "method": "GATED",
+    "group": "controlled"
+  },
+  "f89c1e732745e2": {
+    "id": "cq-08",
+    "method": "GATED",
+    "group": "real"
+  },
+  "414341bf54a667": {
+    "id": "cq-08",
+    "method": "BD",
+    "group": "real"
+  },
+  "5bd1604aa69ed2": {
+    "id": "sq-08",
+    "method": "GATED",
+    "group": "controlled"
+  },
+  "fe938593013358": {
+    "id": "sq-08",
+    "method": "BD",
+    "group": "controlled"
+  },
+  "9c96a244075736": {
+    "id": "cq-09",
+    "method": "BD",
+    "group": "real"
+  },
+  "d733214db976a0": {
+    "id": "cq-09",
+    "method": "GATED",
+    "group": "real"
+  },
+  "ac68f29fd5f820": {
+    "id": "sq-09",
+    "method": "BD",
+    "group": "controlled"
+  },
+  "02abed21b00c98": {
+    "id": "sq-09",
+    "method": "GATED",
+    "group": "controlled"
+  },
+  "95dd148a22f516": {
+    "id": "cq-10",
+    "method": "GATED",
+    "group": "real"
+  },
+  "0298fb71f5b021": {
+    "id": "cq-10",
+    "method": "BD",
+    "group": "real"
+  },
+  "bfe01da7527f7a": {
+    "id": "sq-10",
+    "method": "GATED",
+    "group": "controlled"
+  },
+  "9ef1244c5ea7eb": {
+    "id": "sq-10",
+    "method": "BD",
+    "group": "controlled"
+  },
+  "c4650fd1607323": {
+    "id": "cq-11",
+    "method": "BD",
+    "group": "real"
+  },
+  "31ec68ba8e045f": {
+    "id": "cq-11",
+    "method": "GATED",
+    "group": "real"
+  },
+  "2951ad8eecef2e": {
+    "id": "sq-11",
+    "method": "BD",
+    "group": "controlled"
+  },
+  "a063888cd7e147": {
+    "id": "sq-11",
+    "method": "GATED",
+    "group": "controlled"
+  },
+  "3a94ba52c445a9": {
+    "id": "cq-12",
+    "method": "GATED",
+    "group": "real"
+  },
+  "4e097e6ab2be16": {
+    "id": "cq-12",
+    "method": "BD",
+    "group": "real"
+  },
+  "693996a05c74dc": {
+    "id": "sq-12",
+    "method": "GATED",
+    "group": "controlled"
+  },
+  "84019ca6ab2e19": {
+    "id": "sq-12",
+    "method": "BD",
+    "group": "controlled"
+  }
+}

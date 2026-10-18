@@ -1,0 +1,5 @@
+{
+  "note": "Matched controls inherit weight-selection keys from the chosen atomic policy; those keys are selection provenance, not their measured scores. This replay supplies their actual old-development metrics without changing parameters.",
+  "dev_only": true,
+  "new_test_predictions_seen": false
+}

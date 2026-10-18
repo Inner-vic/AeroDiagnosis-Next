@@ -1,0 +1,37 @@
+{
+  "status": "post-test descriptive supplementary ablations; no retuning",
+  "weights": "Remove other channels from existing global B1/D2/G.25 or final scoped B1/D.25/G.25; single-channel normalization irrelevant",
+  "methods": {
+    "B_scope": {
+      "B": 1.0
+    },
+    "D_scope": {
+      "D": 1.0
+    },
+    "G_scope": {
+      "G": 1.0
+    },
+    "BG": {
+      "B": 1.0,
+      "G": 0.25
+    },
+    "DG": {
+      "D": 2.0,
+      "G": 0.25
+    },
+    "BG_scope": {
+      "B": 1.0,
+      "G": 0.25
+    },
+    "DG_scope": {
+      "D": 0.25,
+      "G": 0.25
+    }
+  },
+  "data": "same216 frozen v2 questions and frozen raw candidate caches",
+  "candidate_budget": 150,
+  "old_predictions_sha256": "e765ba67b2943cd8114fdce6817fc3084b5442b1db8120e672a697c760d6efa9",
+  "no_new_confirmatory_significance_tests": true,
+  "final_method_selection": "BDG_gated_scope selected after viewing v2; needs fresh independent confirmation for selection claim",
+  "no_api_calls": true
+}

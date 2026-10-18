@@ -1,0 +1,621 @@
+{
+  "schema_version": "text-hybrid-holdout-sources@1",
+  "dataset_id": "text_hybrid_holdout_v4_candidate",
+  "created_at": "2026-10-15T01:34:16.502279+00:00",
+  "source_selection_policy": "Continuous complete-paragraph engine technical investigation/analysis section, independently selected before questions; maximum8000 Unicode characters; retained raw fetch and full captured body.",
+  "selection_created_at": "2026-10-15T01:32:47.018632+00:00",
+  "sources": [
+    {
+      "document_id": "a96a0099",
+      "title": "Aviation Investigation Report A96A0099 - Transportation Safety Board of Canada",
+      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/1996/a96a0099/a96a0099.html",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/a96a0099.txt",
+      "full_text_sha256": "eb9aecc62942dcfada56f3b76ef551a6ac8927f908eb85c2f3064589e1437637",
+      "full_text_char_count": 8901,
+      "fetch_response_path": "sources/fetch/a96a0099.json",
+      "fetch_response_sha256": "ae702e4678a9a7eeaf8b68a9489b9ae08340a9c5d1b01c618df5d8d87117f09d",
+      "saved_source_path": "sources/saved/a96a0099.txt",
+      "saved_source_sha256": "41e8d8a9a40cbcada7685eea813bc7f34211893135c119486cd92698a4c8d5f2",
+      "saved_source_char_count": 5982,
+      "selection_segments": [
+        {
+          "full_start": 1163,
+          "full_end": 7145,
+          "saved_start": 0,
+          "saved_end": 5982
+        }
+      ],
+      "source_layer": "selected_body_from_full_official_report",
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "a10c0214",
+      "title": "Aviation Investigation Report A10C0214 - Transportation Safety Board of Canada",
+      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/2010/a10c0214/a10c0214.html",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/a10c0214.txt",
+      "full_text_sha256": "87595fc7d72193baac2aea495d3397a25acc049c72965efe523818299875d6ff",
+      "full_text_char_count": 24175,
+      "fetch_response_path": "sources/fetch/a10c0214.json",
+      "fetch_response_sha256": "8b749ca60686aae3e790072ad7df01ffc6282b5372000bd878d790c070fb00af",
+      "saved_source_path": "sources/saved/a10c0214.txt",
+      "saved_source_sha256": "7f3faf54b2edc85ed76eadc395eeb9874161ab536766ae272a6fb71e22e417b1",
+      "saved_source_char_count": 7959,
+      "selection_segments": [
+        {
+          "full_start": 7180,
+          "full_end": 15139,
+          "saved_start": 0,
+          "saved_end": 7959
+        }
+      ],
+      "source_layer": "selected_body_from_full_official_report",
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "a01a0030",
+      "title": "Aviation Investigation Report A01A0030 - Transportation Safety Board of Canada",
+      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/2001/a01a0030/a01a0030.html",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/a01a0030.txt",
+      "full_text_sha256": "e25694d18d5b7dc003b0b97dc1608154802064a6ef7913033a1e6ce0fc667f6c",
+      "full_text_char_count": 31656,
+      "fetch_response_path": "sources/fetch/a01a0030.json",
+      "fetch_response_sha256": "4d7c6691cb5b52ca0198df2d7aecac31f2b668abf955a75c3bb7b954095601db",
+      "saved_source_path": "sources/saved/a01a0030.txt",
+      "saved_source_sha256": "be2a73d04a19d4879df1ed13d9c86e4f6b97cba85d4c5fc7fc4112617e90aeac",
+      "saved_source_char_count": 7480,
+      "selection_segments": [
+        {
+          "full_start": 11011,
+          "full_end": 18491,
+          "saved_start": 0,
+          "saved_end": 7480
+        }
+      ],
+      "source_layer": "selected_body_from_full_official_report",
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "a94p0047",
+      "title": "Aviation Investigation Report A94P0047 - Transportation Safety Board of Canada",
+      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/1994/a94p0047/a94p0047.html",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/a94p0047.txt",
+      "full_text_sha256": "237638f0105ab7a6f9703034976afd9b94ab30996ba0c76145ac92486be74c80",
+      "full_text_char_count": 13478,
+      "fetch_response_path": "sources/fetch/a94p0047.json",
+      "fetch_response_sha256": "6ff1ff816306399387d58ef537553206d9fd09758c7164b740a4c92a66021be6",
+      "saved_source_path": "sources/saved/a94p0047.txt",
+      "saved_source_sha256": "57c06fea26c8c36bfb85796a3b43d30fe30c86b46888c5ef25c141a90a880580",
+      "saved_source_char_count": 3319,
+      "selection_segments": [
+        {
+          "full_start": 9397,
+          "full_end": 12716,
+          "saved_start": 0,
+          "saved_end": 3319
+        }
+      ],
+      "source_layer": "selected_body_from_full_official_report",
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "a98c0070",
+      "title": "Aviation Investigation Report A98C0070 - Transportation Safety Board of Canada",
+      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/1998/a98c0070/a98c0070.html",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/a98c0070.txt",
+      "full_text_sha256": "7b3d1c75a79f86fedf4b411ca9402e1b0a6d5f2f6105a914aa982236f4c384d1",
+      "full_text_char_count": 28469,
+      "fetch_response_path": "sources/fetch/a98c0070.json",
+      "fetch_response_sha256": "a1dfa1a14d07ea57e8c8abbbcb23ee14199fcc79ceed4aa9a78aac9586ae14a9",
+      "saved_source_path": "sources/saved/a98c0070.txt",
+      "saved_source_sha256": "d2259032fa1ee56a5125298920d0825d970574914bb0a56f92dbb133666059af",
+      "saved_source_char_count": 7599,
+      "selection_segments": [
+        {
+          "full_start": 11864,
+          "full_end": 19463,
+          "saved_start": 0,
+          "saved_end": 7599
+        }
+      ],
+      "source_layer": "selected_body_from_full_official_report",
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "a22p0067",
+      "title": "Air transportation safety investigation report A22P0067",
+      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/2022/a22p0067/a22p0067.html",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/a22p0067.txt",
+      "full_text_sha256": "7fd8b03e1f3a3d078fc31a2ceb6fb76821b649e0067d1a4586c39e492a051128",
+      "full_text_char_count": 47473,
+      "fetch_response_path": "sources/fetch/a22p0067.json",
+      "fetch_response_sha256": "3a268c97da87d008555c9ea0dfa7847d4e9d45f2b7cee19df52c384afbe17116",
+      "saved_source_path": "sources/saved/a22p0067.txt",
+      "saved_source_sha256": "6b9543f5e47856e7fc56894b853682af4cd4d70f96cafd7a848098ac6bc2bbc3",
+      "saved_source_char_count": 4086,
+      "selection_segments": [
+        {
+          "full_start": 13917,
+          "full_end": 18003,
+          "saved_start": 0,
+          "saved_end": 4086
+        }
+      ],
+      "source_layer": "selected_body_from_full_official_report",
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "a11c0047",
+      "title": "Aviation Investigation Report A11C0047 - Transportation Safety Board of Canada",
+      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/2011/a11c0047/a11c0047.html",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/a11c0047.txt",
+      "full_text_sha256": "7badcc5c961ba5617534c44f9c0dabd097c9ecddfd84fd3fe4db493705292947",
+      "full_text_char_count": 83071,
+      "fetch_response_path": "sources/fetch/a11c0047.json",
+      "fetch_response_sha256": "c1c7f7e05f5dbffc7802dfc6eaa4b8168c94716ebd233869e0e51c77f57e7dce",
+      "saved_source_path": "sources/saved/a11c0047.txt",
+      "saved_source_sha256": "9756103aa1be32871f194b522e7cc094ce17caeead066b0dac63f7746f8b02da",
+      "saved_source_char_count": 7465,
+      "selection_segments": [
+        {
+          "full_start": 41236,
+          "full_end": 48701,
+          "saved_start": 0,
+          "saved_end": 7465
+        }
+      ],
+      "source_layer": "selected_body_from_full_official_report",
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "a16w0126",
+      "title": "Aviation Investigation Report A16W0126 - Transportation Safety Board of Canada",
+      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/2016/a16w0126/a16w0126.html",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/a16w0126.txt",
+      "full_text_sha256": "1c11d10da00e8fc3989f94e64ede63d68b185ea50eff27ccd0a638af4a2abf14",
+      "full_text_char_count": 66616,
+      "fetch_response_path": "sources/fetch/a16w0126.json",
+      "fetch_response_sha256": "f5ac6e10d7f0776f95f9d6c1c875ded9796442c338a46b9663eab9926dacd892",
+      "saved_source_path": "sources/saved/a16w0126.txt",
+      "saved_source_sha256": "bb681364ce7546f5cf5aa19c1161d95464db388923b5fe44877cf0f12d0643d0",
+      "saved_source_char_count": 7887,
+      "selection_segments": [
+        {
+          "full_start": 15489,
+          "full_end": 23376,
+          "saved_start": 0,
+          "saved_end": 7887
+        }
+      ],
+      "source_layer": "selected_body_from_full_official_report",
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "a24c0042",
+      "title": "Air transportation safety investigation report A24C0042",
+      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/2024/a24c0042/a24c0042.html",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/a24c0042.txt",
+      "full_text_sha256": "1708e26ce5f5acee03442791857d92ddc8456ad051f129c285368398927295e2",
+      "full_text_char_count": 11015,
+      "fetch_response_path": "sources/fetch/a24c0042.json",
+      "fetch_response_sha256": "6f29331691c32ead78428eef20b6fe313d7e40db5c07e0bb02760d654c4bebc9",
+      "saved_source_path": "sources/saved/a24c0042.txt",
+      "saved_source_sha256": "1b10763679d2d7cabf43ff7f81aea208f50997d6862be7bb3e6bf3d46b03aac2",
+      "saved_source_char_count": 4423,
+      "selection_segments": [
+        {
+          "full_start": 6017,
+          "full_end": 10440,
+          "saved_start": 0,
+          "saved_end": 4423
+        }
+      ],
+      "source_layer": "selected_body_from_full_official_report",
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "a08p0242",
+      "title": "Aviation Investigation Report A08P0242 - Transportation Safety Board of Canada",
+      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/2008/a08p0242/a08p0242.html",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/a08p0242.txt",
+      "full_text_sha256": "0c395e489b5aecf86d142841c31e22990076bb6aec8977228b53f5999d57e095",
+      "full_text_char_count": 25422,
+      "fetch_response_path": "sources/fetch/a08p0242.json",
+      "fetch_response_sha256": "4fd3c89e584c282bdc1a0a6a80e7981583bbefedea63a31350ed1fb41d2caaef",
+      "saved_source_path": "sources/saved/a08p0242.txt",
+      "saved_source_sha256": "4f6965ec95e199688f0eaae252f588e1ea5048db101490e2351f3b33691d55a4",
+      "saved_source_char_count": 7575,
+      "selection_segments": [
+        {
+          "full_start": 6684,
+          "full_end": 14259,
+          "saved_start": 0,
+          "saved_end": 7575
+        }
+      ],
+      "source_layer": "selected_body_from_full_official_report",
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "a95c0149",
+      "title": "Aviation Investigation Report A95C0149 - Transportation Safety Board of Canada",
+      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/1995/a95c0149/a95c0149.html",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/a95c0149.txt",
+      "full_text_sha256": "27885604eee7202a1e60e8d4ae99d899847097e4f2a14cdd4df008a8d2a24c02",
+      "full_text_char_count": 15672,
+      "fetch_response_path": "sources/fetch/a95c0149.json",
+      "fetch_response_sha256": "d0ff4d4b1749004c25e13e5b5ff0973475c60fc3c14c018750cf950d8abaf32f",
+      "saved_source_path": "sources/saved/a95c0149.txt",
+      "saved_source_sha256": "82ca5d9d5e9690e942d75a324288821c7513c1928ec57cb24cfcdf74af5498ef",
+      "saved_source_char_count": 7388,
+      "selection_segments": [
+        {
+          "full_start": 2305,
+          "full_end": 9693,
+          "saved_start": 0,
+          "saved_end": 7388
+        }
+      ],
+      "source_layer": "selected_body_from_full_official_report",
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "a16p0161",
+      "title": "Aviation Investigation Report A16P0161 - Transportation Safety Board of Canada",
+      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/2016/a16p0161/a16p0161.html",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/a16p0161.txt",
+      "full_text_sha256": "2f34e5ae6004caae8ab4988739cc40339544024075f9a17cb9c5a3b8b4d7a7f0",
+      "full_text_char_count": 29236,
+      "fetch_response_path": "sources/fetch/a16p0161.json",
+      "fetch_response_sha256": "bece37596fec035c5496119ccd980fc288349d559d8ce3ab489554128d4f693d",
+      "saved_source_path": "sources/saved/a16p0161.txt",
+      "saved_source_sha256": "247a5360ca2b3c7da895b33aa0eac27ebd1b909572c2505db5842895e948a638",
+      "saved_source_char_count": 7903,
+      "selection_segments": [
+        {
+          "full_start": 9636,
+          "full_end": 17539,
+          "saved_start": 0,
+          "saved_end": 7903
+        }
+      ],
+      "source_layer": "selected_body_from_full_official_report",
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "a02p0021",
+      "title": "Aviation Investigation Report A02P0021 - Transportation Safety Board of Canada",
+      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/2002/a02p0021/a02p0021.html",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/a02p0021.txt",
+      "full_text_sha256": "223d3e2fba8e30c6070be34690e7db83b4a4d66bf1faec37c4236488eb99b566",
+      "full_text_char_count": 11499,
+      "fetch_response_path": "sources/fetch/a02p0021.json",
+      "fetch_response_sha256": "2e8a2dbd67869a050aad55317f76be1d9bd2371e35d6f791afd7f4a1a1c4c765",
+      "saved_source_path": "sources/saved/a02p0021.txt",
+      "saved_source_sha256": "fabfa5533df04e82ad29bdac2dbcc88eef88fec48756ac3f93350311d5e92629",
+      "saved_source_char_count": 7233,
+      "selection_segments": [
+        {
+          "full_start": 1167,
+          "full_end": 8400,
+          "saved_start": 0,
+          "saved_end": 7233
+        }
+      ],
+      "source_layer": "selected_body_from_full_official_report",
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "a95h0015",
+      "title": "Aviation Investigation Report A95H0015 - Transportation Safety Board of Canada",
+      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/1995/a95h0015/a95h0015.html",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/a95h0015.txt",
+      "full_text_sha256": "1da33a7c2e3e2606ffcbfd3c41988bbc3bced41f28d1fae54456a41c61a3bfcc",
+      "full_text_char_count": 130174,
+      "fetch_response_path": "sources/fetch/a95h0015.json",
+      "fetch_response_sha256": "e567b741c2776bcf0c43a14a363f1eccce78bd3eb248858c62ad802eb3b5851c",
+      "saved_source_path": "sources/saved/a95h0015.txt",
+      "saved_source_sha256": "d9f34d89e80decc75ca148587abc9588d3d88259d5f8fa6197bb204d828679ea",
+      "saved_source_char_count": 7820,
+      "selection_segments": [
+        {
+          "full_start": 14995,
+          "full_end": 22815,
+          "saved_start": 0,
+          "saved_end": 7820
+        }
+      ],
+      "source_layer": "selected_body_from_full_official_report",
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "a97w0142",
+      "title": "Aviation Investigation Report A97W0142 - Transportation Safety Board of Canada",
+      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/1997/a97w0142/a97w0142.html",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/a97w0142.txt",
+      "full_text_sha256": "9db0aa03f86a14420ece19c5debebc6c5ece6d22d6c55f64a178ac675912e153",
+      "full_text_char_count": 9621,
+      "fetch_response_path": "sources/fetch/a97w0142.json",
+      "fetch_response_sha256": "2576974882425e75fec46cec450b65d4a8b811794924cb9d1a21aff0b67204ef",
+      "saved_source_path": "sources/saved/a97w0142.txt",
+      "saved_source_sha256": "c1034e3d00706377fed208024cf57838710213d949a7c15894b8bad54743dc88",
+      "saved_source_char_count": 7801,
+      "selection_segments": [
+        {
+          "full_start": 1163,
+          "full_end": 8964,
+          "saved_start": 0,
+          "saved_end": 7801
+        }
+      ],
+      "source_layer": "selected_body_from_full_official_report",
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "a96w0185",
+      "title": "Aviation Investigation Report A96W0185 - Transportation Safety Board of Canada",
+      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/1996/a96w0185/a96w0185.html",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/a96w0185.txt",
+      "full_text_sha256": "95e8f11efd40e92245917b3420a3d8649298c655bbb24fc9161b138532cec2c9",
+      "full_text_char_count": 13471,
+      "fetch_response_path": "sources/fetch/a96w0185.json",
+      "fetch_response_sha256": "e5f1e6725507c8d01c4cab972c755b6aa522fa0ed35711e22d5977c122f3f1cb",
+      "saved_source_path": "sources/saved/a96w0185.txt",
+      "saved_source_sha256": "5f322f6c930fe963bc1ce9c8ab67350aef4296cd8911411e978a80b62affb4c5",
+      "saved_source_char_count": 7847,
+      "selection_segments": [
+        {
+          "full_start": 1167,
+          "full_end": 9014,
+          "saved_start": 0,
+          "saved_end": 7847
+        }
+      ],
+      "source_layer": "selected_body_from_full_official_report",
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "a99c0127",
+      "title": "Aviation Investigation Report A99C0127 - Transportation Safety Board of Canada",
+      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/1999/a99c0127/a99c0127.html",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/a99c0127.txt",
+      "full_text_sha256": "69b985bcd377c296227870665db15d7580ac2474eefc51c6e28fbca49945cac3",
+      "full_text_char_count": 17051,
+      "fetch_response_path": "sources/fetch/a99c0127.json",
+      "fetch_response_sha256": "ec44555d801138d17e47ab43d39d8022151575e1bbc63bfcd249fbdf04d434e0",
+      "saved_source_path": "sources/saved/a99c0127.txt",
+      "saved_source_sha256": "ce5052fcf0d644dd7b30adc5cf42b20edae5a38da31b0e7610212cff3e2ad7a6",
+      "saved_source_char_count": 6623,
+      "selection_segments": [
+        {
+          "full_start": 8854,
+          "full_end": 15477,
+          "saved_start": 0,
+          "saved_end": 6623
+        }
+      ],
+      "source_layer": "selected_body_from_full_official_report",
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "a94a0180",
+      "title": "Aviation Investigation Report A94A0180 - Transportation Safety Board of Canada",
+      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/1994/a94a0180/a94a0180.html",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/a94a0180.txt",
+      "full_text_sha256": "7887146b21c1726f2f418d4669cb257a98a826a52f75d4aa221cf7391c3aab0e",
+      "full_text_char_count": 20199,
+      "fetch_response_path": "sources/fetch/a94a0180.json",
+      "fetch_response_sha256": "4c5af67b70b196c3cb89499705351e881995ba44421ad838b5440fa9b6ed8cf2",
+      "saved_source_path": "sources/saved/a94a0180.txt",
+      "saved_source_sha256": "5476544f161742950de15747a3684b1eb2b161de1ac3874596c69476220d169c",
+      "saved_source_char_count": 7517,
+      "selection_segments": [
+        {
+          "full_start": 4832,
+          "full_end": 12349,
+          "saved_start": 0,
+          "saved_end": 7517
+        }
+      ],
+      "source_layer": "selected_body_from_full_official_report",
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "a07c0114",
+      "title": "Aviation Investigation Report A07C0114 - Transportation Safety Board of Canada",
+      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/2007/a07c0114/a07c0114.html",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/a07c0114.txt",
+      "full_text_sha256": "255f81608dadeb4b03bb049d3e20ed8921b499aa18509d423658724d190cb49d",
+      "full_text_char_count": 26116,
+      "fetch_response_path": "sources/fetch/a07c0114.json",
+      "fetch_response_sha256": "a2dc8154d7a4c4c15878dd84b21daeb846d0887b78408cfbc1875c38bcd7a994",
+      "saved_source_path": "sources/saved/a07c0114.txt",
+      "saved_source_sha256": "a1e2134677c15ef065da5b099c495778ded9cf22fce39a6829687b9202b80a10",
+      "saved_source_char_count": 4311,
+      "selection_segments": [
+        {
+          "full_start": 9121,
+          "full_end": 13432,
+          "saved_start": 0,
+          "saved_end": 4311
+        }
+      ],
+      "source_layer": "selected_body_from_full_official_report",
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    },
+    {
+      "document_id": "a01w0297",
+      "title": "Aviation Investigation Report A01W0297 - Transportation Safety Board of Canada",
+      "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/2001/a01w0297/a01w0297.html",
+      "source_type": "official_accident_investigation_report",
+      "language": "en",
+      "full_text_path": "sources/full/a01w0297.txt",
+      "full_text_sha256": "dce33cad1dbc7d37b6c02045943874727f719b5cd82faebfc1373833340a8260",
+      "full_text_char_count": 9069,
+      "fetch_response_path": "sources/fetch/a01w0297.json",
+      "fetch_response_sha256": "d67595e3c9db9dfcb349419215c9ac5351813360b31f7f6a5325e17c7129079d",
+      "saved_source_path": "sources/saved/a01w0297.txt",
+      "saved_source_sha256": "c98038abee95df32300f9c762e718701803f119263a0f8ce1ac9ae73c5bf96cf",
+      "saved_source_char_count": 3914,
+      "selection_segments": [
+        {
+          "full_start": 4977,
+          "full_end": 8891,
+          "saved_start": 0,
+          "saved_end": 3914
+        }
+      ],
+      "source_layer": "selected_body_from_full_official_report",
+      "expert_reviewed": false,
+      "questions_authored_at_selection": false
+    }
+  ],
+  "deduplication": {
+    "method": "case-insensitive TSB occurrence identity and canonical URL family; distinct source SHA",
+    "prior_manifest_files": [
+      {
+        "path": "evaluation\\aero_evidence_benchmark_v1\\corpus_manifest.json",
+        "sha256": "88dd76896f02a9e522c166a15824fba21ffc889ff6fb3dafd38f6208632ad728"
+      },
+      {
+        "path": "evaluation\\gas_path_benchmark_v2_candidate\\corpus_manifest.json",
+        "sha256": "88dd76896f02a9e522c166a15824fba21ffc889ff6fb3dafd38f6208632ad728"
+      },
+      {
+        "path": "evaluation\\gas_path_benchmark_v2_supplement\\corpus_manifest.json",
+        "sha256": "88dd76896f02a9e522c166a15824fba21ffc889ff6fb3dafd38f6208632ad728"
+      },
+      {
+        "path": "evaluation\\gas_path_holdout_v1_candidate\\source_manifest.json",
+        "sha256": "0a4e61bee3aa2dabd7bcaff5f96533bbbb99cff649141c4a389137df971bc50b"
+      },
+      {
+        "path": "evaluation\\gas_path_holdout_v2_candidate\\source_manifest.json",
+        "sha256": "791a659cbf5fc8e5595a114afe457a3eb7d9b58dbf1332de95a82204347fcf76"
+      },
+      {
+        "path": "evaluation\\gas_path_holdout_v3_candidate\\source_manifest.json",
+        "sha256": "6335be1b8f02e06606c66cef0e4d8c2a66386ca4147be5e1fceeb66bb7b819b0"
+      },
+      {
+        "path": "evaluation\\gas_path_pilot_v1\\corpus_manifest.json",
+        "sha256": "70a3846b9cbfbcfdf9125636aaee18becd9df85ae274ea00f245c108322c9f24"
+      },
+      {
+        "path": "evaluation\\public_aero_corpus_v1\\source_manifest.json",
+        "sha256": "e06ff5ef24e30855a43d921d4f9048ccd547063f3c8c8c243e91741d51b95559"
+      },
+      {
+        "path": "evaluation\\public_aero_corpus_v2\\source_manifest.json",
+        "sha256": "88b6705ce9d25174f14ec29412d87b7d1411354991b4ce8acffc44904d604b50"
+      }
+    ],
+    "prior_tsb_ids": [
+      "a00a0176",
+      "a00w0215",
+      "a01c0217",
+      "a01f0020",
+      "a02p0168",
+      "a03p0054",
+      "a03p0136",
+      "a03p0247",
+      "a04p0142",
+      "a04p0206",
+      "a05p0038",
+      "a06o0150",
+      "a06p0010",
+      "a06q0091",
+      "a06w0002",
+      "a08c0108",
+      "a08p0125",
+      "a10p0388",
+      "a10q0098",
+      "a10q0218",
+      "a11c0152",
+      "a12o0074",
+      "a12p0008",
+      "a13c0150",
+      "a13p0163",
+      "a14q0068",
+      "a15c0146",
+      "a17c0132",
+      "a19c0070",
+      "a22p0023",
+      "a23p0020",
+      "a94a0252",
+      "a94c0034",
+      "a94c0141",
+      "a94h0001",
+      "a95o0232",
+      "a97f0059",
+      "a99w0234"
+    ],
+    "overlapping_source_ids": [],
+    "effective_independent_source_count": 20
+  },
+  "limitations": [
+    "非专家AI来源整理；不宣称专家金标准或预训练未见。",
+    "全文指ept从完整官方报告网页捕获的英文正文，不是原始HTML；保留完整抓取响应。",
+    "保存正文为编题之前独立选取的连续完整段落，最多8000 Unicode字符；不补图表或抓取遗漏的脚注/引文。",
+    "报告历史事件及历史手册要求不视为当前通用维修指导。",
+    "本阶段不运行检索，不读取系统预测，不根据系统输出选择题目。"
+  ],
+  "expert_reviewed": false,
+  "predictions_seen": false
+}

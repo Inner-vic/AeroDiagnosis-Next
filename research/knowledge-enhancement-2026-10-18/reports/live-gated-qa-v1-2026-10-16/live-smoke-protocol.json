@@ -1,0 +1,48 @@
+{
+  "kind": "engineering acceptance, not independently labeled answer-quality experiment",
+  "cases": [
+    {
+      "name": "source_fact",
+      "body": {
+        "question": "压气机叶片损坏可能由什么引起？",
+        "knowledge_context": {
+          "document_id": "prebuilt-compressor-cleaning"
+        }
+      },
+      "expected": "supported_fact_with_verifiable_citations"
+    },
+    {
+      "name": "uncertainty_boundary",
+      "body": {
+        "question": "仅凭排气温度升高，是否一定能确定压气机叶片损坏？",
+        "knowledge_context": {
+          "document_id": "prebuilt-compressor-cleaning"
+        }
+      },
+      "expected": "no_certain_root_cause_from_temperature_only"
+    },
+    {
+      "name": "unknown_source",
+      "body": {
+        "question": "QB-99999999的机理路径是什么？"
+      },
+      "expected": "no_evidence_no_model_calls"
+    },
+    {
+      "name": "document_scope_empty",
+      "body": {
+        "question": "压气机效率降低的原因？",
+        "knowledge_context": {
+          "document_id": "qa-smoke-nonexistent"
+        }
+      },
+      "expected": "no_evidence_no_model_calls"
+    }
+  ],
+  "before_dispatch_budget": {
+    "calls": 6445,
+    "upper_cny": 41.454002,
+    "unresolved": 15
+  },
+  "no_result_conditioned_question_rewrites": true
+}

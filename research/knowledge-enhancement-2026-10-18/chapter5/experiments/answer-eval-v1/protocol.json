@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-17",
+  "n": 12,
+  "types": {
+    "fact": 4,
+    "conditions": 4,
+    "unanswerable": 4
+  },
+  "sources": "4 excerpt documents,3 original FAA PDF clusters; seen sources,new question pilot",
+  "design": "paired frozen B1/D.25 text75+75 vs frozen gated B1/D.25/G.25 routes50 each; same source scope, same E5, same LLM and answering/verification prompts",
+  "question_order": "predefined question id; alternate method order by odd/even question id",
+  "model": "deepseek-flash",
+  "max_output_tokens_per_call": 1024,
+  "temperature": "ResearchClient deterministic temperature0",
+  "budget_cap_cny": 42,
+  "ledger": ".runtime/thesis-research-provider-v1/calls.sqlite3",
+  "planned_new_calls_ceiling": 48,
+  "anticipated_upper_new_cny": "approx0.32-0.45 based on last6 real requests; hard42 cumulative reservation guard, no unapproved extra spend",
+  "primary": "question-level complete correct response: every required point covered with source support and preserved uncertainty; for unanswerable require explicit insufficiency and no invented numeric limit",
+  "secondary": [
+    "claim-level citation semantic support",
+    "citation identity/hash/offset validity",
+    "question-level fully citation-supported response",
+    "answerable false abstention",
+    "unanswerable safe abstention",
+    "graph gate activation",
+    "latency median/p95",
+    "budget cost and cache reuse"
+  ],
+  "review": "Independent AI nonexpert source and answer review, not expert gold; blind method labels; software offsets audited independently",
+  "incomplete_runs": "retain all predefined questions; report completed paired n and all incomplete cases, no cherry-picking",
+  "inference": "descriptive paired wins/ties/losses only;3 source clusters too few for a strong generalization/significance claim",
+  "no_result_conditioned_edits": true,
+  "runtime_changes": false
+}

@@ -1,0 +1,440 @@
+{
+  "before_predictions": true,
+  "human_expert_reviewed": false,
+  "source_reconstruction_sha256": "fc4e3ca61a835ae0b89bde03cfd5f5388272e978fe14e6f07baa6906f278d7b9",
+  "label_review_sha256": "85bd5122f92bf15bf0541d07d1b6ccc539f21f9dc3248655d737c8a4b0d9c182",
+  "question_revisions": [
+    "quality-q009",
+    "quality-q013",
+    "quality-q024",
+    "quality-q025",
+    "quality-q033",
+    "quality-q035",
+    "quality-q039",
+    "quality-q040",
+    "quality-q055",
+    "quality-q064",
+    "quality-q065",
+    "quality-q070",
+    "quality-q078",
+    "quality-q081",
+    "quality-q082",
+    "quality-q084",
+    "quality-q089",
+    "quality-q092",
+    "quality-q114",
+    "quality-q117",
+    "quality-q119",
+    "quality-q120"
+  ],
+  "annotation_revisions": [
+    "quality-q002",
+    "quality-q009",
+    "quality-q013",
+    "quality-q015",
+    "quality-q020",
+    "quality-q022",
+    "quality-q024",
+    "quality-q026",
+    "quality-q033",
+    "quality-q035",
+    "quality-q042",
+    "quality-q044",
+    "quality-q053",
+    "quality-q054",
+    "quality-q064",
+    "quality-q065",
+    "quality-q067",
+    "quality-q068",
+    "quality-q072",
+    "quality-q077",
+    "quality-q081",
+    "quality-q082",
+    "quality-q083",
+    "quality-q084",
+    "quality-q087",
+    "quality-q091",
+    "quality-q096",
+    "quality-q114",
+    "quality-q116",
+    "quality-q117",
+    "quality-q119",
+    "quality-q120"
+  ],
+  "source_resolutions": [
+    {
+      "sample_id": "quality-q002",
+      "fact_key": "quality-q002-required_facts-1",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q002",
+      "fact_key": "quality-q002-required_facts-2",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q009",
+      "fact_key": "quality-q009-required_facts-1",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q009",
+      "fact_key": "quality-q009-required_facts-2",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q013",
+      "fact_key": "quality-q013-required_facts-1",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q013",
+      "fact_key": "quality-q013-required_facts-2",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q015",
+      "fact_key": "quality-q015-required_facts-1",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q020",
+      "fact_key": "quality-q020-required_facts-1",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q020",
+      "fact_key": "quality-q020-required_facts-2",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q022",
+      "fact_key": "quality-q022-required_facts-1",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q024",
+      "fact_key": "quality-q024-required_facts-1",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q026",
+      "fact_key": "quality-q026-required_facts-1",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q033",
+      "fact_key": "quality-q033-required_facts-1",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q033",
+      "fact_key": "quality-q033-required_facts-2",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q035",
+      "fact_key": "quality-q035-required_facts-1",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q035",
+      "fact_key": "quality-q035-required_facts-2",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q042",
+      "fact_key": "quality-q042-required_facts-1",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q042",
+      "fact_key": "quality-q042-required_facts-2",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q044",
+      "fact_key": "quality-q044-required_facts-1",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q044",
+      "fact_key": "quality-q044-required_facts-2",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q053",
+      "fact_key": "quality-q053-required_facts-1",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q053",
+      "fact_key": "quality-q053-required_facts-2",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q054",
+      "fact_key": "quality-q054-required_facts-1",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q064",
+      "fact_key": "quality-q064-required_facts-1",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q065",
+      "fact_key": "quality-q065-required_facts-1",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q067",
+      "fact_key": "quality-q067-required_facts-1",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q067",
+      "fact_key": "quality-q067-required_facts-2",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q068",
+      "fact_key": "quality-q068-required_facts-1",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q072",
+      "fact_key": "quality-q072-required_facts-1",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q077",
+      "fact_key": "quality-q077-required_facts-1",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q077",
+      "fact_key": "quality-q077-required_facts-2",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q081",
+      "fact_key": "quality-q081-required_facts-1",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q082",
+      "fact_key": "quality-q082-required_facts-1",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q083",
+      "fact_key": "quality-q083-required_facts-1",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q084",
+      "fact_key": "quality-q084-required_facts-1",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q084",
+      "fact_key": "quality-q084-required_facts-2",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q087",
+      "fact_key": "quality-q087-required_facts-1",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q087",
+      "fact_key": "quality-q087-required_facts-2",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q091",
+      "fact_key": "quality-q091-required_facts-1",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q096",
+      "fact_key": "quality-q096-required_facts-1",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q096",
+      "fact_key": "quality-q096-required_facts-2",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q114",
+      "fact_key": "quality-q114-required_facts-1",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q114",
+      "fact_key": "quality-q114-required_facts-2",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q116",
+      "fact_key": "quality-q116-required_facts-1",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q116",
+      "fact_key": "quality-q116-required_facts-2",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q117",
+      "fact_key": "quality-q117-required_facts-1",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q117",
+      "fact_key": "quality-q117-required_facts-2",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q119",
+      "fact_key": "quality-q119-required_facts-1",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q120",
+      "fact_key": "quality-q120-required_facts-1",
+      "normalization": "exact"
+    },
+    {
+      "sample_id": "quality-q120",
+      "fact_key": "quality-q120-required_facts-2",
+      "normalization": "exact"
+    }
+  ],
+  "final_queries_sha256": "6938226ef6ac3e31da19f062cd2bd9fce30d18f8ff2f33e71b6d0386ff880564",
+  "accepted_sample_ids": [
+    "quality-q001",
+    "quality-q002",
+    "quality-q003",
+    "quality-q004",
+    "quality-q005",
+    "quality-q006",
+    "quality-q007",
+    "quality-q008",
+    "quality-q009",
+    "quality-q010",
+    "quality-q011",
+    "quality-q012",
+    "quality-q013",
+    "quality-q014",
+    "quality-q015",
+    "quality-q016",
+    "quality-q017",
+    "quality-q018",
+    "quality-q019",
+    "quality-q020",
+    "quality-q021",
+    "quality-q022",
+    "quality-q023",
+    "quality-q024",
+    "quality-q025",
+    "quality-q026",
+    "quality-q027",
+    "quality-q028",
+    "quality-q029",
+    "quality-q030",
+    "quality-q031",
+    "quality-q032",
+    "quality-q033",
+    "quality-q034",
+    "quality-q035",
+    "quality-q036",
+    "quality-q037",
+    "quality-q038",
+    "quality-q039",
+    "quality-q040",
+    "quality-q041",
+    "quality-q042",
+    "quality-q043",
+    "quality-q044",
+    "quality-q045",
+    "quality-q046",
+    "quality-q047",
+    "quality-q048",
+    "quality-q049",
+    "quality-q050",
+    "quality-q051",
+    "quality-q052",
+    "quality-q053",
+    "quality-q054",
+    "quality-q055",
+    "quality-q056",
+    "quality-q057",
+    "quality-q058",
+    "quality-q059",
+    "quality-q060",
+    "quality-q061",
+    "quality-q062",
+    "quality-q063",
+    "quality-q064",
+    "quality-q065",
+    "quality-q066",
+    "quality-q067",
+    "quality-q068",
+    "quality-q069",
+    "quality-q070",
+    "quality-q071",
+    "quality-q072",
+    "quality-q073",
+    "quality-q074",
+    "quality-q075",
+    "quality-q076",
+    "quality-q077",
+    "quality-q078",
+    "quality-q079",
+    "quality-q080",
+    "quality-q081",
+    "quality-q082",
+    "quality-q083",
+    "quality-q084",
+    "quality-q085",
+    "quality-q086",
+    "quality-q087",
+    "quality-q088",
+    "quality-q089",
+    "quality-q090",
+    "quality-q091",
+    "quality-q092",
+    "quality-q093",
+    "quality-q094",
+    "quality-q095",
+    "quality-q096",
+    "quality-q097",
+    "quality-q098",
+    "quality-q099",
+    "quality-q100",
+    "quality-q101",
+    "quality-q102",
+    "quality-q103",
+    "quality-q104",
+    "quality-q105",
+    "quality-q106",
+    "quality-q107",
+    "quality-q108",
+    "quality-q109",
+    "quality-q110",
+    "quality-q111",
+    "quality-q112",
+    "quality-q113",
+    "quality-q114",
+    "quality-q115",
+    "quality-q116",
+    "quality-q117",
+    "quality-q118",
+    "quality-q119",
+    "quality-q120"
+  ],
+  "unresolved": 0
+}

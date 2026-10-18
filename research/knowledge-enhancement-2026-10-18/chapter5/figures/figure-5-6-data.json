@@ -1,0 +1,31 @@
+{
+  "groups": [
+    {
+      "id": "real_faa",
+      "n_per_method": 12,
+      "correct": [
+        11,
+        11
+      ],
+      "answerable": 8,
+      "unanswerable": 4
+    },
+    {
+      "id": "controlled_seen_chain3",
+      "n_per_method": 12,
+      "correct": [
+        1,
+        12
+      ],
+      "answerable": 12,
+      "unanswerable": 0
+    }
+  ],
+  "methods": [
+    "BD",
+    "GATED"
+  ],
+  "review": "blinded independent AI nonexpert",
+  "uncertainty": "descriptive only; no pooled accuracy or independence assumption",
+  "matplotlib": "3.10.3"
+}

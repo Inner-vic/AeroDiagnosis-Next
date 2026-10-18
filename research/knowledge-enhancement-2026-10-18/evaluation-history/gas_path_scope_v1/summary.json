@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "audit_id": "gas_path_scope_v1",
+  "manifest_sha256": "88dd76896f02a9e522c166a15824fba21ffc889ff6fb3dafd38f6208632ad728",
+  "range_annotations_sha256": "dc379ca41cebd41236ebdba32da4405148792413b43cb9cdee8ebf79456e54ec",
+  "script_sha256": "f5fa1e92b6a394ea41bd79d42907f90d82bd5094be0a99add1593b0d2500fbb5",
+  "sources": 21,
+  "logical_documents": 17,
+  "families": 13,
+  "structural_blocks": 4410,
+  "canonical_characters": 3685036,
+  "audited_ranges": 49,
+  "audited_range_labels": {
+    "core": 26,
+    "directly_related": 10,
+    "needs_review": 2,
+    "auxiliary": 8,
+    "distractor": 3
+  },
+  "audited_span_characters": 7313,
+  "unreviewed_characters": 3677723,
+  "sources_with_core_ranges": [
+    "faa-amtp-ch10",
+    "caac-ccar33-r2",
+    "airbus-thrust-setting-takeoff",
+    "aaib-aar-1-2021-g-pown-final_report_with_2023_correction"
+  ],
+  "format_counts": {
+    "pdf": 15,
+    "html": 3,
+    "xml": 2,
+    "csv": 1
+  },
+  "audited_topic_counts": {
+    "compressor_fouling": 2,
+    "performance_loss": 3,
+    "egt": 2,
+    "acceleration": 1,
+    "inspection": 9,
+    "cleaning": 1,
+    "compressor_damage": 7,
+    "fod": 3,
+    "fan_damage": 1,
+    "conditional_repair": 3,
+    "negation": 1,
+    "applicability": 3,
+    "controlled_manual": 1,
+    "combustion_damage": 3,
+    "hot_section_inspection": 2,
+    "turbine_damage": 6,
+    "fuel_nozzle": 2,
+    "combustion": 3,
+    "overtemperature": 2,
+    "air_seal": 1,
+    "turbine_clearance": 1,
+    "numeric_table": 3,
+    "blade_damage": 1,
+    "surge": 2,
+    "stall": 5,
+    "inlet_distortion": 3,
+    "operating_envelope": 2,
+    "bleed_air": 1,
+    "inlet_icing": 2,
+    "conditional_test": 1,
+    "numeric_conditions": 1,
+    "fuel_control": 1,
+    "reported_case": 6,
+    "uncertainty": 1,
+    "hot_section_deposits": 1,
+    "wrong_engine_procedure": 1,
+    "wind_conditions": 1,
+    "mitigation": 1,
+    "takeoff": 2,
+    "engine_control": 1,
+    "measurement_error": 2,
+    "starting": 1,
+    "symptom_definition": 1,
+    "fan_speed": 1,
+    "pressure_sensing": 1,
+    "rotor_structural_failure": 3,
+    "grain_size": 1,
+    "compliance_cost": 1,
+    "starter": 1,
+    "oil_system": 2,
+    "chip_detector": 1,
+    "vibration": 3,
+    "rotor_unbalance": 1,
+    "document_revision": 1,
+    "ica_governance": 1,
+    "fuel_icing": 1,
+    "fuel_supply": 1,
+    "thrust_asymmetry": 1,
+    "reciprocating_fuel_metering": 1,
+    "reciprocating_vibration": 1,
+    "landing_gear": 1,
+    "cold_dwell_fatigue": 1,
+    "oil_fire": 1,
+    "historical_ad": 1
+  },
+  "old_task_mapping": {
+    "needs_reauthor_or_scope_review": 120,
+    "reuse_fact_candidate_requires_new_review": 6
+  },
+  "coverage_gaps": [
+    {
+      "topic": "quantitative_compressor_performance",
+      "status": "not_established_in_audited_spans",
+      "need": "Independent source with compressor-map/efficiency/flow-capacity shifts and corrected-speed conditions; training prose alone is insufficient."
+    },
+    {
+      "topic": "gas_path_leakage_quantification",
+      "status": "partial_inspection_only",
+      "need": "Seal-wear inspection exists; seek evidence linking a stated leak location to pressure/temperature/flow symptoms and limits."
+    },
+    {
+      "topic": "combustion_instability_mechanism",
+      "status": "inspection_and_starting_only",
+      "need": "Find combustion instability/flame-pattern mechanisms and discriminating checks, beyond liner damage and nozzle care."
+    },
+    {
+      "topic": "turbine_performance_degradation",
+      "status": "damage_inspection_only",
+      "need": "Find efficiency/clearance/erosion performance effects and operating conditions; structural disk/hub fatigue does not fill this gap."
+    },
+    {
+      "topic": "controlled_model_specific_limits",
+      "status": "not_established",
+      "need": "Current applicable approved manuals/ICA or public model-specific instructions; historical excerpts do not supply current approval."
+    },
+    {
+      "topic": "real_maintenance_ground_truth",
+      "status": "not_available",
+      "need": "Confirmed field faults and outcomes are absent; evaluate source knowledge handling rather than actual diagnosis accuracy."
+    }
+  ],
+  "limits": [
+    "AI source-scope audit, not human or expert confirmation.",
+    "Purposive seed spans; no random quality estimate or exhaustive scope coverage.",
+    "Heuristic candidate topics never assign core/directly-related/auxiliary/distractor labels.",
+    "Gas turbine and engine document tags do not imply gas-path relevance.",
+    "All unreviewed portions remain needs_review; no whole-document purity claim.",
+    "Coverage gaps describe audited spans, not proof of absence from the entire corpus.",
+    "Current model-specific maintenance limits and actual field-diagnosis truth remain unavailable.",
+    "Old tasks are mapped for review only; existing benchmark and split are unchanged."
+  ]
+}

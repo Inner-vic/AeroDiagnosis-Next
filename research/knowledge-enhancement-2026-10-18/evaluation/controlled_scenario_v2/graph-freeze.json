@@ -1,0 +1,12 @@
+{
+  "before_questions": true,
+  "created_at_utc": "2026-10-16T09:16:19.319356+00:00",
+  "corpus_sha256": "1a824833653045e011b11a718eb9f59b907ab704e0716fa3c6676fe56f1aa77d",
+  "graph_sha256": "fd271eb9c18070f6f4cccfe12ae8b4828048fe602b0af874ef7a25e46d275158",
+  "initial_corpus_sha256": "5cefb29401473e03eed0849c97f5fbe60d71b1a497ff6831204c660bafe35d94",
+  "metadata_namespace_repair": {
+    "before_any_test_rankings": true,
+    "reason": "Document template labels were namespaced after the initial builder source freeze. Only manifest hash corrected; source content, graph and all216 questions unchanged.",
+    "graph_content_frozen_before_questions": true
+  }
+}

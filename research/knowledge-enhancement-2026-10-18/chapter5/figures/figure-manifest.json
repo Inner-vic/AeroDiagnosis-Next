@@ -1,0 +1,16 @@
+{
+  "kind": "method diagrams, no quantitative result generation",
+  "font": "C:/Windows/Fonts/msyh.ttc",
+  "svg_editable_text_and_shapes": true,
+  "png_dpi": 220,
+  "publisher": "school template pending",
+  "files": {
+    "draw_chapter5_methods.py": "67ca5ff9313465dd7708483046b9e4513092c7d08ad5746944d63e80023298af",
+    "figure-5-1-architecture.png": "71a15202031cfff05b4afb21f106a23f54641fa9daec05abb6bb6275db12b347",
+    "figure-5-1-architecture.svg": "59417a0f2e45e093e4f947bdc67b32a884aaba511f74f07361a80b25a8465dfc",
+    "figure-5-2-provenance.png": "45620c1af36dd61403629c2796a4b7765984e5f69e7b2fa93dca67f3357bd058",
+    "figure-5-2-provenance.svg": "9f8db07779cd45c1cf3641d41b33f3d059d6f969aed3a2876261c18c1cca6188",
+    "figure-5-3-online-flow.png": "9e0e26a1dbdc17f862fe60786ac5ad5d4159178f9339c8153b4dc38e47b8eca2",
+    "figure-5-3-online-flow.svg": "3ad8af6984eca32c26f797bf21cfc4484453e96234dae647725b4a0d627b0f6c"
+  }
+}

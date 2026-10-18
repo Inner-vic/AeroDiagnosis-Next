@@ -1,0 +1,25 @@
+{
+  "method": "BDG_gated_scope",
+  "role": "final thesis experimental scheme; not production default",
+  "selected_after_v2_results": true,
+  "weights": {
+    "B": 1.0,
+    "D": 0.25,
+    "G": 0.25
+  },
+  "rrf_k": 60,
+  "query_only_source_scope": true,
+  "gate": "verified_bundles nonempty: query causal intent plus at least one complete valid2..3-edge source path; query-level switch, not per-candidate filtering",
+  "on_gate_open": "ordinary three-route weighted RRF",
+  "on_gate_closed": "text-only RRF with same B50/D50 candidates",
+  "candidate_allocation": {
+    "B": 50,
+    "D": 50,
+    "G": 50
+  },
+  "top_k": 10,
+  "pool": 50,
+  "tokens": 4096,
+  "per_document": 5,
+  "new_confirmatory_holdout_required_for_selection_claim": true
+}

@@ -1,0 +1,307 @@
+{
+  "dataset_name": "自建航空发动机场景评测集",
+  "origin": "synthetic_rule_generated",
+  "generation": "deterministic programmatic stipulated rules",
+  "scenarios": 36,
+  "templates": 12,
+  "records": 576,
+  "development_templates": 4,
+  "test_templates": 8,
+  "development_questions": 72,
+  "test_questions": 144,
+  "development_configurations": 31,
+  "development_rankings": 2232,
+  "test_rankings": 1152,
+  "methods": 8,
+  "graph_edges": 144,
+  "graph_mentions": 288,
+  "graph_coverage": "causal subset only, excludes parameter/condition/boundary records",
+  "source_graph_extraction_evaluated": false,
+  "expert_reviewed": false,
+  "metrics": {
+    "B": {
+      "n": 144,
+      "mrr": 0.890625,
+      "complete_mrr": 0.5609623015873015,
+      "at": {
+        "1": {
+          "complete": 0.5,
+          "recall": 0.6736111111111112,
+          "precision": 0.8541666666666666,
+          "ndcg": 0.8541666666666666
+        },
+        "3": {
+          "complete": 0.6041666666666666,
+          "recall": 0.7256944444444444,
+          "precision": 0.3194444444444444,
+          "ndcg": 0.7527837215748122
+        },
+        "5": {
+          "complete": 0.6458333333333334,
+          "recall": 0.8229166666666666,
+          "precision": 0.24583333333333332,
+          "ndcg": 0.8078292305538775
+        },
+        "10": {
+          "complete": 0.6666666666666666,
+          "recall": 0.8564814814814815,
+          "precision": 0.13194444444444445,
+          "ndcg": 0.8222602632721422
+        }
+      }
+    },
+    "D": {
+      "n": 144,
+      "mrr": 0.9155092592592591,
+      "complete_mrr": 0.5442983906525574,
+      "at": {
+        "1": {
+          "complete": 0.4375,
+          "recall": 0.6226851851851852,
+          "precision": 0.8333333333333334,
+          "ndcg": 0.8333333333333334
+        },
+        "3": {
+          "complete": 0.6527777777777778,
+          "recall": 0.8287037037037037,
+          "precision": 0.41435185185185186,
+          "ndcg": 0.8182818408051467
+        },
+        "5": {
+          "complete": 0.6666666666666666,
+          "recall": 0.8530092592592592,
+          "precision": 0.26249999999999996,
+          "ndcg": 0.8326045400212184
+        },
+        "10": {
+          "complete": 0.7013888888888888,
+          "recall": 0.8657407407407407,
+          "precision": 0.13472222222222222,
+          "ndcg": 0.8383774710082652
+        }
+      }
+    },
+    "G": {
+      "n": 144,
+      "mrr": 0.46875,
+      "complete_mrr": 0.2743055555555556,
+      "at": {
+        "1": {
+          "complete": 0.13194444444444445,
+          "recall": 0.2708333333333333,
+          "precision": 0.4652777777777778,
+          "ndcg": 0.4652777777777778
+        },
+        "3": {
+          "complete": 0.4722222222222222,
+          "recall": 0.4722222222222222,
+          "precision": 0.32407407407407407,
+          "ndcg": 0.46965923439980173
+        },
+        "5": {
+          "complete": 0.4722222222222222,
+          "recall": 0.4722222222222222,
+          "precision": 0.19444444444444445,
+          "ndcg": 0.46965923439980173
+        },
+        "10": {
+          "complete": 0.4722222222222222,
+          "recall": 0.4722222222222222,
+          "precision": 0.09722222222222222,
+          "ndcg": 0.46965923439980173
+        }
+      }
+    },
+    "BD": {
+      "n": 144,
+      "mrr": 0.9224537037037036,
+      "complete_mrr": 0.5617283950617283,
+      "at": {
+        "1": {
+          "complete": 0.4791666666666667,
+          "recall": 0.65625,
+          "precision": 0.8472222222222222,
+          "ndcg": 0.8472222222222222
+        },
+        "3": {
+          "complete": 0.6388888888888888,
+          "recall": 0.8125,
+          "precision": 0.400462962962963,
+          "ndcg": 0.8168658242432448
+        },
+        "5": {
+          "complete": 0.6666666666666666,
+          "recall": 0.8518518518518519,
+          "precision": 0.2611111111111111,
+          "ndcg": 0.8392113564648198
+        },
+        "10": {
+          "complete": 0.6805555555555556,
+          "recall": 0.8587962962962963,
+          "precision": 0.1326388888888889,
+          "ndcg": 0.8422014599453934
+        }
+      }
+    },
+    "BG": {
+      "n": 144,
+      "mrr": 0.8682539682539683,
+      "complete_mrr": 0.4451306216931217,
+      "at": {
+        "1": {
+          "complete": 0.3333333333333333,
+          "recall": 0.5555555555555556,
+          "precision": 0.8333333333333334,
+          "ndcg": 0.8333333333333334
+        },
+        "3": {
+          "complete": 0.4583333333333333,
+          "recall": 0.65625,
+          "precision": 0.3472222222222222,
+          "ndcg": 0.6896436950336197
+        },
+        "5": {
+          "complete": 0.625,
+          "recall": 0.8298611111111112,
+          "precision": 0.25833333333333336,
+          "ndcg": 0.7652856130492722
+        },
+        "10": {
+          "complete": 0.7916666666666666,
+          "recall": 0.9027777777777778,
+          "precision": 0.14583333333333334,
+          "ndcg": 0.795177776056096
+        }
+      }
+    },
+    "DG": {
+      "n": 144,
+      "mrr": 0.8379133597883599,
+      "complete_mrr": 0.45054563492063493,
+      "at": {
+        "1": {
+          "complete": 0.2986111111111111,
+          "recall": 0.5138888888888888,
+          "precision": 0.7847222222222222,
+          "ndcg": 0.7847222222222222
+        },
+        "3": {
+          "complete": 0.5416666666666666,
+          "recall": 0.7094907407407407,
+          "precision": 0.400462962962963,
+          "ndcg": 0.7146103602086322
+        },
+        "5": {
+          "complete": 0.6666666666666666,
+          "recall": 0.7824074074074073,
+          "precision": 0.2666666666666667,
+          "ndcg": 0.7491757764919476
+        },
+        "10": {
+          "complete": 0.8125,
+          "recall": 0.9097222222222222,
+          "precision": 0.14791666666666667,
+          "ndcg": 0.7955634273322896
+        }
+      }
+    },
+    "BDG": {
+      "n": 144,
+      "mrr": 0.929398148148148,
+      "complete_mrr": 0.5105682319223985,
+      "at": {
+        "1": {
+          "complete": 0.3680555555555556,
+          "recall": 0.5902777777777778,
+          "precision": 0.8680555555555556,
+          "ndcg": 0.8680555555555556
+        },
+        "3": {
+          "complete": 0.6458333333333334,
+          "recall": 0.8460648148148149,
+          "precision": 0.43287037037037035,
+          "ndcg": 0.8274183731108155
+        },
+        "5": {
+          "complete": 0.6805555555555556,
+          "recall": 0.8634259259259259,
+          "precision": 0.2680555555555556,
+          "ndcg": 0.8367019130089393
+        },
+        "10": {
+          "complete": 0.7291666666666666,
+          "recall": 0.8819444444444444,
+          "precision": 0.13958333333333334,
+          "ndcg": 0.8450425710070119
+        }
+      }
+    },
+    "BDG_entity": {
+      "n": 144,
+      "mrr": 0.9224537037037037,
+      "complete_mrr": 0.4999228395061728,
+      "at": {
+        "1": {
+          "complete": 0.3541666666666667,
+          "recall": 0.5763888888888888,
+          "precision": 0.8541666666666666,
+          "ndcg": 0.8541666666666666
+        },
+        "3": {
+          "complete": 0.625,
+          "recall": 0.8287037037037037,
+          "precision": 0.41898148148148157,
+          "ndcg": 0.809179579876408
+        },
+        "5": {
+          "complete": 0.6666666666666666,
+          "recall": 0.8599537037037037,
+          "precision": 0.2666666666666667,
+          "ndcg": 0.8259681021706444
+        },
+        "10": {
+          "complete": 0.7291666666666666,
+          "recall": 0.8819444444444444,
+          "precision": 0.13958333333333334,
+          "ndcg": 0.8361463321245924
+        }
+      }
+    }
+  },
+  "primary_comparison": {
+    "left": "BDG",
+    "right": "BD",
+    "metric": "complete@5",
+    "template_clusters": 8,
+    "difference": 0.013888888888888888,
+    "bootstrap95": [
+      0.0,
+      0.041666666666666664
+    ],
+    "seed": 20261017,
+    "samples": 20000,
+    "scope": "controlled stipulated-rule population only; small template count; not real maintenance generalization"
+  },
+  "paired_wins": [
+    "controlled-03-0:chain3",
+    "controlled-03-1:chain3"
+  ],
+  "paired_losses": [],
+  "all_zero_condition_questions_retained": 24,
+  "new_vector_recomputed": 576,
+  "vector_max_error": 0,
+  "old_freezes_unchanged": [
+    283,
+    299,
+    276
+  ],
+  "frozen_inputs": 238,
+  "all_test_and_candidate_freezes_unchanged": true,
+  "new_metric_oracle_tests": 4,
+  "api_calls_added": 0,
+  "production_promoted": false,
+  "new_test_now_seen": true,
+  "report": "docs/upgrade/execution/CONTROLLED-SCENARIO-BENCHMARK-V1-2026-10-16.md",
+  "template_authoring": "AI-assisted templates and code; deterministic programmatic expansion; no per-record external LLM calls",
+  "external_llm_generation_calls": 0
+}

@@ -1,0 +1,14 @@
+{
+  "left": "BDG",
+  "right": "BD",
+  "metric": "complete@5",
+  "template_clusters": 8,
+  "difference": 0.013888888888888888,
+  "bootstrap95": [
+    0.0,
+    0.041666666666666664
+  ],
+  "seed": 20261017,
+  "samples": 20000,
+  "scope": "controlled stipulated-rule population only; small template count; not real maintenance generalization"
+}

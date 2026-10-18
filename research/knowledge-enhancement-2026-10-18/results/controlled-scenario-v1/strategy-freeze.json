@@ -1,0 +1,104 @@
+{
+  "before_test_candidates_and_rankings": true,
+  "choices": {
+    "B": {
+      "weights": {
+        "B": 1.0
+      },
+      "selection_key": [
+        48,
+        39.85,
+        0,
+        0
+      ]
+    },
+    "D": {
+      "weights": {
+        "D": 1.0
+      },
+      "selection_key": [
+        48,
+        40.58730158730159,
+        0,
+        -1.0
+      ]
+    },
+    "G": {
+      "weights": {
+        "G": 1.0
+      },
+      "selection_key": [
+        31,
+        17.0,
+        -1.0,
+        0
+      ]
+    },
+    "BD": {
+      "weights": {
+        "B": 1.0,
+        "D": 2.0
+      },
+      "selection_key": [
+        48,
+        41.78333333333333,
+        0,
+        -2.0
+      ]
+    },
+    "BG": {
+      "weights": {
+        "B": 1.0,
+        "G": 0.25
+      },
+      "selection_key": [
+        42,
+        32.1718253968254,
+        -0.25,
+        0
+      ]
+    },
+    "DG": {
+      "weights": {
+        "D": 1.0,
+        "G": 0.25
+      },
+      "selection_key": [
+        50,
+        33.57142857142857,
+        -0.25,
+        -1.0
+      ]
+    },
+    "BDG": {
+      "weights": {
+        "B": 1.0,
+        "D": 2.0,
+        "G": 0.25
+      },
+      "selection_key": [
+        49,
+        35.884523809523806,
+        -0.25,
+        -2.0
+      ]
+    },
+    "BDG_entity": {
+      "weights": {
+        "B": 1.0,
+        "D": 2.0,
+        "G": 0.25
+      },
+      "selection_key": [
+        49,
+        35.884523809523806,
+        -0.25,
+        -2.0
+      ]
+    }
+  },
+  "development_rows": 2232,
+  "evaluator_sha256": "5dd388263ef664117377285d1dbfb7c6a1151824b88c5889a0d9a9566b6a1c98",
+  "data_freeze_sha256": "e596eeb4ec960a94a5ee13b9b1d1abcf7f7de0b85ee19940a87967e667a8d606",
+  "development_predictions_sha256": "d8ab2be4b1b92919d54e6dbd7bf92abaf353fc87419e0fdf9db6dd6b418611df"
+}

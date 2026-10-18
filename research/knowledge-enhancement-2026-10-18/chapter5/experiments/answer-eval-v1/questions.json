@@ -1,0 +1,335 @@
+[
+  {
+    "id": "cq-01",
+    "document_id": "prebuilt-compressor-damage",
+    "source_cluster": "https://www.faa.gov/sites/faa.gov/files/12_amtp_ch10_0.pdf",
+    "topic_group": "damage",
+    "scope": "engine_maintenance",
+    "kind": "fact",
+    "question": "在叶片维护术语中，金属粘着的外观特征是什么，常见原因是什么？",
+    "answerable": true,
+    "required_points": [
+      "金属从一个表面转移到另一个表面",
+      "严重摩擦"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "13c9ba29cc34f9e419f0bf01ab8647535dde9910566f75e9519b927b15a060cf",
+        "start": 42,
+        "end": 57,
+        "anchor": "金属从一个表面转移到另一个表面"
+      },
+      {
+        "chunk_id": "13c9ba29cc34f9e419f0bf01ab8647535dde9910566f75e9519b927b15a060cf",
+        "start": 63,
+        "end": 67,
+        "anchor": "严重摩擦"
+      }
+    ],
+    "origin": "AI-authored new questions over existing public FAA source excerpts, not new source holdout",
+    "strict_cross_block_multihop": false
+  },
+  {
+    "id": "cq-02",
+    "document_id": "prebuilt-compressor-damage",
+    "source_cluster": "https://www.faa.gov/sites/faa.gov/files/12_amtp_ch10_0.pdf",
+    "topic_group": "damage",
+    "scope": "engine_maintenance",
+    "kind": "conditions",
+    "question": "对于空心叶片，小而浅的凹痕在什么形状和材料状态条件下才可接受？",
+    "answerable": true,
+    "required_points": [
+      "圆形或渐变轮廓而非尖锐或V型",
+      "没有叶片材料开裂或撕裂迹象"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "d2b833ff870427e931c65e697b8ee34f92c03e7a7cb1eed7a7b113c9100e1060",
+        "start": 41,
+        "end": 50,
+        "anchor": "圆形或渐变轮廓类型"
+      },
+      {
+        "chunk_id": "d2b833ff870427e931c65e697b8ee34f92c03e7a7cb1eed7a7b113c9100e1060",
+        "start": 65,
+        "end": 79,
+        "anchor": "没有叶片材料开裂或撕裂的迹象"
+      }
+    ],
+    "origin": "AI-authored new questions over existing public FAA source excerpts, not new source holdout",
+    "strict_cross_block_multihop": false
+  },
+  {
+    "id": "cq-03",
+    "document_id": "prebuilt-compressor-damage",
+    "source_cluster": "https://www.faa.gov/sites/faa.gov/files/12_amtp_ch10_0.pdf",
+    "topic_group": "damage",
+    "scope": "engine_maintenance",
+    "kind": "unanswerable",
+    "question": "这份资料能否给出所有发动机空心叶片凹痕统一适用的最大允许深度毫米数？",
+    "answerable": false,
+    "required_points": [
+      "明确不能从本资料确定统一数值",
+      "应依据特定制造商适用资料而非编造毫米值"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "d2b833ff870427e931c65e697b8ee34f92c03e7a7cb1eed7a7b113c9100e1060",
+        "start": 239,
+        "end": 253,
+        "anchor": "始终使用特定制造商的最新信息"
+      }
+    ],
+    "origin": "AI-authored new questions over existing public FAA source excerpts, not new source holdout",
+    "strict_cross_block_multihop": false
+  },
+  {
+    "id": "cq-04",
+    "document_id": "prebuilt-combustor-inspection",
+    "source_cluster": "https://www.faa.gov/sites/faa.gov/files/12_amtp_ch10_0.pdf",
+    "topic_group": "combustor",
+    "scope": "engine_maintenance",
+    "kind": "fact",
+    "question": "清洗燃油喷嘴时，为什么不应使用硬质工具刮擦或钢丝刷擦拭？",
+    "answerable": true,
+    "required_points": [
+      "喷嘴喷雾特性可能受损",
+      "不应使用硬工具刮擦或钢丝刷"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "9d4bc15dbf2bf78eff18fc28a01b86e9172d92fc876c3b737a2dbde0bcf7af7e",
+        "start": 101,
+        "end": 115,
+        "anchor": "由于喷嘴的喷雾特性可能会受损"
+      }
+    ],
+    "origin": "AI-authored new questions over existing public FAA source excerpts, not new source holdout",
+    "strict_cross_block_multihop": false
+  },
+  {
+    "id": "cq-05",
+    "document_id": "prebuilt-combustor-inspection",
+    "source_cluster": "https://www.faa.gov/sites/faa.gov/files/12_amtp_ch10_0.pdf",
+    "topic_group": "combustor",
+    "scope": "engine_maintenance",
+    "kind": "conditions",
+    "question": "燃烧室衬筒前部从气孔发出的裂纹，允许接受的前提是什么，发生分叉或相连时又应如何处理？",
+    "answerable": true,
+    "required_points": [
+      "不超过允许极限时可接受",
+      "分叉或与其他裂纹相连必须修理"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44",
+        "start": 277,
+        "end": 294,
+        "anchor": "前衬筒中从气孔发出的裂纹是可接受的"
+      },
+      {
+        "chunk_id": "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44",
+        "start": 309,
+        "end": 325,
+        "anchor": "如果此类裂纹分叉或与其他裂纹相连"
+      }
+    ],
+    "origin": "AI-authored new questions over existing public FAA source excerpts, not new source holdout",
+    "strict_cross_block_multihop": false
+  },
+  {
+    "id": "cq-06",
+    "document_id": "prebuilt-combustor-inspection",
+    "source_cluster": "https://www.faa.gov/sites/faa.gov/files/12_amtp_ch10_0.pdf",
+    "topic_group": "combustor",
+    "scope": "engine_maintenance",
+    "kind": "unanswerable",
+    "question": "仅根据这份资料，能否给出某一未指定发动机燃烧室衬筒裂纹允许长度的具体毫米值？",
+    "answerable": false,
+    "required_points": [
+      "不能确定具体毫米值",
+      "需要相应发动机制造商规定及具体对象"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "74d8d7f90010b2b6968154fffcf482ff61b1df27698e00dcaced04b638112f44",
+        "start": 95,
+        "end": 115,
+        "anchor": "应遵循相应发动机制造商大修说明书中的程序"
+      }
+    ],
+    "origin": "AI-authored new questions over existing public FAA source excerpts, not new source holdout",
+    "strict_cross_block_multihop": false
+  },
+  {
+    "id": "cq-07",
+    "document_id": "prebuilt-air-turbine-starting",
+    "source_cluster": "https://www.faa.gov/sites/faa.gov/files/07_amtp_ch5.pdf",
+    "topic_group": "starter",
+    "scope": "engine_maintenance",
+    "kind": "fact",
+    "question": "空气涡轮起动机可以由哪些气源供气？",
+    "answerable": true,
+    "required_points": [
+      "地面车",
+      "APU",
+      "另一台正在工作的机上发动机"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "536ad4238811bc30cfedc2cfbef37ca4294474fb154c4d2ec19eb57d1537e243",
+        "start": 13,
+        "end": 37,
+        "anchor": "由地面车、APU或另一台正在工作的机上发动机供气"
+      }
+    ],
+    "origin": "AI-authored new questions over existing public FAA source excerpts, not new source holdout",
+    "strict_cross_block_multihop": false
+  },
+  {
+    "id": "cq-08",
+    "document_id": "prebuilt-air-turbine-starting",
+    "source_cluster": "https://www.faa.gov/sites/faa.gov/files/07_amtp_ch5.pdf",
+    "topic_group": "starter",
+    "scope": "engine_maintenance",
+    "kind": "conditions",
+    "question": "起动机运转但发动机不转动时，指南列出的可能原因与处置是什么？若联轴器在异常短周期内持续断裂，还应怎样处理？",
+    "answerable": true,
+    "required_points": [
+      "可能为驱动联轴器剪切断裂而非确定诊断",
+      "拆下起动机并更换驱动联轴器",
+      "异常短周期持续断裂时拆下并更换起动机"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "31f970f79593afe086f83955e9e76111c7d573295db582124cf185d2a4a9f66a",
+        "start": 162,
+        "end": 175,
+        "anchor": "起动机运转，但发动机不转动"
+      },
+      {
+        "chunk_id": "31f970f79593afe086f83955e9e76111c7d573295db582124cf185d2a4a9f66a",
+        "start": 269,
+        "end": 286,
+        "anchor": "如果联轴器在异常短的周期内持续断裂"
+      }
+    ],
+    "origin": "AI-authored new questions over existing public FAA source excerpts, not new source holdout",
+    "strict_cross_block_multihop": false
+  },
+  {
+    "id": "cq-09",
+    "document_id": "prebuilt-air-turbine-starting",
+    "source_cluster": "https://www.faa.gov/sites/faa.gov/files/07_amtp_ch5.pdf",
+    "topic_group": "starter",
+    "scope": "engine_maintenance",
+    "kind": "unanswerable",
+    "question": "能否仅凭这份通用指南，给出任意发动机空气涡轮起动机的准确切断转速rpm？",
+    "answerable": false,
+    "required_points": [
+      "无法确定任意型号具体转速",
+      "需要对应制造商说明而非编造rpm"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "3c43a973030b90380e11f5db1424645f22c3b1c14195006d135d820f40a1d8f1",
+        "start": 67,
+        "end": 79,
+        "anchor": "并不旨在替代制造商的说明"
+      }
+    ],
+    "origin": "AI-authored new questions over existing public FAA source excerpts, not new source holdout",
+    "strict_cross_block_multihop": false
+  },
+  {
+    "id": "cq-10",
+    "document_id": "prebuilt-vibration-guidance",
+    "source_cluster": "https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_33_63-1.pdf",
+    "topic_group": "vibration",
+    "scope": "auxiliary_vibration",
+    "kind": "fact",
+    "question": "转子质量不平衡与转子质心、旋转轴线之间有什么关系，会产生哪种频率特征的振动？",
+    "answerable": true,
+    "required_points": [
+      "质心相对于旋转轴线偏心",
+      "在转子转速频率下的同步振动"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "777f4e92735ee3734eb129ed847698971a4b1a5ba124368f724f6b1529ace56e",
+        "start": 19,
+        "end": 39,
+        "anchor": "是由于转子质心相对于其旋转轴线的偏心所致"
+      },
+      {
+        "chunk_id": "777f4e92735ee3734eb129ed847698971a4b1a5ba124368f724f6b1529ace56e",
+        "start": 102,
+        "end": 115,
+        "anchor": "在转子转速频率下的同步振动"
+      }
+    ],
+    "origin": "AI-authored new questions over existing public FAA source excerpts, not new source holdout",
+    "strict_cross_block_multihop": false
+  },
+  {
+    "id": "cq-11",
+    "document_id": "prebuilt-vibration-guidance",
+    "source_cluster": "https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_33_63-1.pdf",
+    "topic_group": "vibration",
+    "scope": "auxiliary_vibration",
+    "kind": "conditions",
+    "question": "驻留耐久性测试在通常情况下至少需要多少循环？低频导致时间过长时，缩短测试需要什么前提，并可采用什么补偿思路？",
+    "answerable": true,
+    "required_points": [
+      "至少一千万即1E7个循环",
+      "低频时间过长且采用适当补偿",
+      "可依据材料疲劳特性提高振动应力作补偿"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "f0875a594b052ba06c87a91584db617b1dab13262f422a09ddf5c8b3d46ef294",
+        "start": 85,
+        "end": 98,
+        "anchor": "驻留时间应至少相当于一千万"
+      },
+      {
+        "chunk_id": "f0875a594b052ba06c87a91584db617b1dab13262f422a09ddf5c8b3d46ef294",
+        "start": 139,
+        "end": 149,
+        "anchor": "如果应用了适当的补偿"
+      },
+      {
+        "chunk_id": "f0875a594b052ba06c87a91584db617b1dab13262f422a09ddf5c8b3d46ef294",
+        "start": 173,
+        "end": 186,
+        "anchor": "通过增加振动应力来缩短测试"
+      }
+    ],
+    "origin": "AI-authored new questions over existing public FAA source excerpts, not new source holdout",
+    "strict_cross_block_multihop": false
+  },
+  {
+    "id": "cq-12",
+    "document_id": "prebuilt-vibration-guidance",
+    "source_cluster": "https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_33_63-1.pdf",
+    "topic_group": "vibration",
+    "scope": "auxiliary_vibration",
+    "kind": "unanswerable",
+    "question": "这份指导资料能否直接给出所有发动机统一适用的允许转子不平衡量具体数值？",
+    "answerable": false,
+    "required_points": [
+      "不能给出所有发动机统一数值",
+      "可接受限值通常在生产规范或发动机手册中确定"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "777f4e92735ee3734eb129ed847698971a4b1a5ba124368f724f6b1529ace56e",
+        "start": 117,
+        "end": 146,
+        "anchor": "转子不平衡的可接受限值通常在生产规范和/或发动机手册中确定"
+      }
+    ],
+    "origin": "AI-authored new questions over existing public FAA source excerpts, not new source holdout",
+    "strict_cross_block_multihop": false
+  }
+]

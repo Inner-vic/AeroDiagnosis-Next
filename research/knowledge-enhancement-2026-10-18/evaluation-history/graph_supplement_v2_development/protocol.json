@@ -1,0 +1,31 @@
+{
+  "schema": "graph-supplement-v2-dev-protocol@1",
+  "role": "seen113 development only",
+  "before_v2_predictions": true,
+  "baseline": "B75 D75 RRF 1/.25 legacy dedup top10 doc5 token4096",
+  "grid": [
+    "baseline10",
+    "v1_strict",
+    "quota7_replace",
+    "focus_replace",
+    "focus_quota7_replace",
+    "append_without_focus",
+    "append_focus",
+    "text_append_control"
+  ],
+  "focus": "boundary queries abstain; causal root requires terminal query anchor; forward mechanism requires initial query anchor; source/identity/certainty proof inherited unchanged",
+  "quota": "replace controls retain protected5 and max10; append controls retain entire original10, add max2, max12/doc7/token4096",
+  "primary_selection": "Prefer append_focus if original text preserved, no complete/partial gold loss, and complete support gain at same maximum12/token4096 against text_append_control. Otherwise keep text baseline production; freeze v2 only for new independent capability study. No question-specific rule or gold input to retriever.",
+  "metrics": [
+    "complete5",
+    "complete10",
+    "complete_all_max12",
+    "coverage10",
+    "coverage_all",
+    "lost_gold_units",
+    "new_gold_units",
+    "added",
+    "budget_rejections"
+  ],
+  "independent_next": "New sources not previous events or component mechanism families; graph frozen before questions, answer-hidden independent AI nonexpert labels; source family clustered paired bootstrap20000/signflip20000 seed20261016; complete_all on all and strict multihop, Holm2. Strict under20 questions exploratory. Controls text10 and text_append12; preserve summaries/natural chunks. No production change based only development."
+}

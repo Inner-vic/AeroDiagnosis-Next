@@ -1,0 +1,209 @@
+{
+  "approved": true,
+  "expert_reviewed": false,
+  "answers_seen": false,
+  "reviewer": "Independent AI nonexpert reviewer",
+  "stage": "pre-answer source and question review",
+  "review_date": "2026-10-17",
+  "question_count": 12,
+  "source_summary": {
+    "status": "已有公开FAA摘录上的新问题试验，不是新来源独立集",
+    "excerpt_document_count": 4,
+    "original_pdf_cluster_count": 3,
+    "source_urls": [
+      "https://www.faa.gov/sites/faa.gov/files/12_amtp_ch10_0.pdf",
+      "https://www.faa.gov/sites/faa.gov/files/07_amtp_ch5.pdf",
+      "https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_33_63-1.pdf"
+    ],
+    "chunk_count": 48
+  },
+  "limitations": [
+    "仅复核本地冻结中文摘录及锚点；未重新下载FAA原PDF，不能替代航空维修专家或原PDF翻译核验。",
+    "四份摘录中压气机与燃烧室来自同一FAA原PDF，原始来源只有3簇。",
+    "全部题目可由单块局部证据或资料不足边界回答，不属于严格跨块多跳。",
+    "4道无答案题均为缺少通用或未指定型号的数值参数；测量的是数值边界拒答，不能代表广泛开放域无答案能力。",
+    "cq-04第二个required_point重复了题目中的禁用前提；有源文支持，但该项本身鉴别力较低。",
+    "12题及3来源簇规模小，只支持描述性配对试验；不是专家金标或跨来源泛化结论。",
+    "教材中的一般接受条件仅能作为本资料问答依据，不能当作当前具体发动机可直接执行的维修阈值；实际判断仍需适用型号制造商资料。"
+  ],
+  "engineering_acceptance_comparison": {
+    "duplicates_found": [],
+    "note": "旧例分别为叶片损伤原因、仅凭排温不能确定损伤、未知QB及不存在文档范围；本12题均未重复具体问题和答案目标。仅数值拒答与旧不确定性案例共享边界控制主题。",
+    "case_count": 4
+  },
+  "freeze_check": {
+    "sources_questions_protocol_match_recorded_hashes": true,
+    "runtime_code_files_not_read": true,
+    "note": "预冻结文件列出的sources/questions/protocol哈希与实读文件匹配；本次不检验代码内容，不读取模型答案或其他实验输出。"
+  },
+  "questions": [
+    {
+      "id": "cq-01",
+      "approved": true,
+      "answerable": true,
+      "answerable_label_reasonable": true,
+      "anchors_valid": true,
+      "required_points_supported": true,
+      "duplicate_of_engineering_acceptance": false,
+      "issues": [],
+      "required_modifications": [],
+      "review_note": "外观与原因均由表格直接支持。"
+    },
+    {
+      "id": "cq-02",
+      "approved": true,
+      "answerable": true,
+      "answerable_label_reasonable": true,
+      "anchors_valid": true,
+      "required_points_supported": true,
+      "duplicate_of_engineering_acceptance": false,
+      "issues": [],
+      "required_modifications": [],
+      "review_note": "形状及无开裂撕裂两条件由同一段直接支持。"
+    },
+    {
+      "id": "cq-03",
+      "approved": true,
+      "answerable": false,
+      "answerable_label_reasonable": true,
+      "anchors_valid": true,
+      "required_points_supported": true,
+      "duplicate_of_engineering_acceptance": false,
+      "issues": [],
+      "required_modifications": [],
+      "review_note": "仅缺统一深度数值；制造商适用资料边界清楚。"
+    },
+    {
+      "id": "cq-04",
+      "approved": true,
+      "answerable": true,
+      "answerable_label_reasonable": true,
+      "anchors_valid": true,
+      "required_points_supported": true,
+      "duplicate_of_engineering_acceptance": false,
+      "issues": [],
+      "required_modifications": [],
+      "review_note": "喷雾特性受损和禁用硬工具钢丝刷由同一句支持。"
+    },
+    {
+      "id": "cq-05",
+      "approved": true,
+      "answerable": true,
+      "answerable_label_reasonable": true,
+      "anchors_valid": true,
+      "required_points_supported": true,
+      "duplicate_of_engineering_acceptance": false,
+      "issues": [],
+      "required_modifications": [],
+      "review_note": "允许极限及分叉相连必须修理由相邻句支持。"
+    },
+    {
+      "id": "cq-06",
+      "approved": true,
+      "answerable": false,
+      "answerable_label_reasonable": true,
+      "anchors_valid": true,
+      "required_points_supported": true,
+      "duplicate_of_engineering_acceptance": false,
+      "issues": [],
+      "required_modifications": [],
+      "review_note": "仅缺未指定发动机具体裂纹长度；无统一毫米值。"
+    },
+    {
+      "id": "cq-07",
+      "approved": true,
+      "answerable": true,
+      "answerable_label_reasonable": true,
+      "anchors_valid": true,
+      "required_points_supported": true,
+      "duplicate_of_engineering_acceptance": false,
+      "issues": [],
+      "required_modifications": [],
+      "review_note": "三种气源由图注完整列出。"
+    },
+    {
+      "id": "cq-08",
+      "approved": true,
+      "answerable": true,
+      "answerable_label_reasonable": true,
+      "anchors_valid": true,
+      "required_points_supported": true,
+      "duplicate_of_engineering_acceptance": false,
+      "issues": [],
+      "required_modifications": [],
+      "review_note": "表格虽序列化噪声较多，症状、可能原因和两级处置的对应关系明确；必须保留可能性。"
+    },
+    {
+      "id": "cq-09",
+      "approved": true,
+      "answerable": false,
+      "answerable_label_reasonable": true,
+      "anchors_valid": true,
+      "required_points_supported": true,
+      "duplicate_of_engineering_acceptance": false,
+      "issues": [],
+      "required_modifications": [],
+      "review_note": "仅缺任意发动机通用准确rpm；指南不替代制造商说明。"
+    },
+    {
+      "id": "cq-10",
+      "approved": true,
+      "answerable": true,
+      "answerable_label_reasonable": true,
+      "anchors_valid": true,
+      "required_points_supported": true,
+      "duplicate_of_engineering_acceptance": false,
+      "issues": [],
+      "required_modifications": [],
+      "review_note": "偏心与转速频率同步振动由同段直接支持。"
+    },
+    {
+      "id": "cq-11",
+      "approved": true,
+      "answerable": true,
+      "answerable_label_reasonable": true,
+      "anchors_valid": true,
+      "required_points_supported": true,
+      "duplicate_of_engineering_acceptance": false,
+      "issues": [],
+      "required_modifications": [],
+      "review_note": "1E7循环、低频时长不合理、适当补偿、依材料疲劳提高应力均由同段支持。"
+    },
+    {
+      "id": "cq-12",
+      "approved": true,
+      "answerable": false,
+      "answerable_label_reasonable": true,
+      "anchors_valid": true,
+      "required_points_supported": true,
+      "duplicate_of_engineering_acceptance": false,
+      "issues": [],
+      "required_modifications": [],
+      "review_note": "仅缺跨发动机统一允许不平衡量；限值在生产规范或发动机手册中确定。"
+    }
+  ],
+  "required_modifications": [],
+  "read_file_sha256": [
+    {
+      "path": "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\evaluation\\chapter5_answer_pilot_v1\\sources.json",
+      "sha256": "bb2b1ea3d8e5bc4e161dac1992bbe3d356a497f1029bb18d132da745074b497f"
+    },
+    {
+      "path": "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\evaluation\\chapter5_answer_pilot_v1\\questions.json",
+      "sha256": "0e7d41391eafb5d1528c44d914d8e68801c7bfeb5f14aff1a794cad5a9567074"
+    },
+    {
+      "path": "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\evaluation\\chapter5_answer_pilot_v1\\protocol.json",
+      "sha256": "80df3e50b5b3d65066ab6620e9a328b90a6153a28a09562a08f7a4661bcbe3d5"
+    },
+    {
+      "path": "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\evaluation\\chapter5_answer_pilot_v1\\pre-review-freeze.json",
+      "sha256": "4c82ce6bb1629b8c4bd8f2352743a19bfeb8529346dc23fa4f5c64a3d05b0029"
+    },
+    {
+      "path": "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\.runtime\\qa-integration-v1\\live-smoke-protocol.json",
+      "sha256": "12efd4860653c6d01bed890eb7d8796ea1eff80d46c4bff4b6975451b033e9ed"
+    }
+  ],
+  "cache_and_timing_review_note": "同请求缓存复用可接受，但应逐次记录cache_hit；不构成独立随机重复；缓存命中墙钟时间不可用于宣称方法速度优势。此为预执行说明核对，未读取缓存或答案。"
+}

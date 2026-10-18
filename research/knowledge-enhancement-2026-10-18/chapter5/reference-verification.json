@@ -1,0 +1,68 @@
+[
+  {
+    "number": 1,
+    "entry": "LEWIS P, PEREZ E, PIKTUS A, et al. Retrieval-augmented generation for knowledge-intensive NLP tasks[C]//Advances in Neural Information Processing Systems. 2020, 33: 9459-9474.",
+    "verified_primary_source": "https://proceedings.neurips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html",
+    "verified_date": "2026-10-18"
+  },
+  {
+    "number": 2,
+    "entry": "HOGAN A, BLOMQVIST E, COCHEZ M, et al. Knowledge graphs[J]. ACM Computing Surveys, 2021, 54(4): 71:1-71:37. DOI: 10.1145/3447772.",
+    "verified_primary_source": "https://arxiv.org/abs/2003.02320",
+    "verified_date": "2026-10-18"
+  },
+  {
+    "number": 3,
+    "entry": "LIN J, CHEN C, WANG T, et al. A Multi-Agent and synergistic Knowledge Graph retrieval-augmented generation framework for intelligent maintenance[J]. Journal of Manufacturing Systems, 2026, 85: 557-570. DOI: 10.1016/j.jmsy.2026.02.016.",
+    "verified_primary_source": "https://www.sciencedirect.com/science/article/pii/S0278612526000452",
+    "verified_date": "2026-10-18"
+  },
+  {
+    "number": 4,
+    "entry": "GAO T, YEN H, YU J, et al. Enabling large language models to generate text with citations[C]//Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing. Singapore: Association for Computational Linguistics, 2023: 6465-6488. DOI: 10.18653/v1/2023.emnlp-main.398.",
+    "verified_primary_source": "https://aclanthology.org/2023.emnlp-main.398/",
+    "verified_date": "2026-10-18"
+  },
+  {
+    "number": 5,
+    "entry": "ROBERTSON S, ZARAGOZA H. The probabilistic relevance framework: BM25 and beyond[J]. Foundations and Trends in Information Retrieval, 2009, 3(4): 333-389. DOI: 10.1561/1500000019.",
+    "verified_primary_source": "https://www.staff.city.ac.uk/~sbrp622/papers/foundations_bm25_review.pdf",
+    "verified_date": "2026-10-18"
+  },
+  {
+    "number": 6,
+    "entry": "WANG L, YANG N, HUANG X, et al. Multilingual E5 text embeddings: A technical report[EB/OL]. (2024-02-08)[2026-10-18]. https://arxiv.org/abs/2402.05672. DOI: 10.48550/arXiv.2402.05672.",
+    "verified_primary_source": "https://arxiv.org/abs/2402.05672",
+    "verified_date": "2026-10-18"
+  },
+  {
+    "number": 7,
+    "entry": "CORMACK G V, CLARKE C L A, BUETTCHER S. Reciprocal rank fusion outperforms Condorcet and individual rank learning methods[C]//Proceedings of the 32nd International ACM SIGIR Conference on Research and Development in Information Retrieval. New York: ACM, 2009: 758-759. DOI: 10.1145/1571941.1572114.",
+    "verified_primary_source": "https://research.google/pubs/reciprocal-rank-fusion-outperforms-condorcet-and-individual-rank-learning-methods/",
+    "verified_date": "2026-10-18"
+  },
+  {
+    "number": 8,
+    "entry": "FEDERAL AVIATION ADMINISTRATION. Aviation maintenance technician handbook—Powerplant: FAA-H-8083-32B, Chapter 10 Engine maintenance & operation[EB/OL]. (2023-07-13)[2026-10-18]. https://www.faa.gov/sites/faa.gov/files/12_amtp_ch10_0.pdf.",
+    "verified_primary_source": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/faa-h-8083-32b-chapter-10-engine-maintenance",
+    "verified_date": "2026-10-18"
+  },
+  {
+    "number": 9,
+    "entry": "FEDERAL AVIATION ADMINISTRATION. Aviation maintenance technician handbook—Powerplant: FAA-H-8083-32B, Chapter 5 Engine starting systems[EB/OL]. (2023-07-13)[2026-10-18]. https://www.faa.gov/sites/faa.gov/files/07_amtp_ch5.pdf.",
+    "verified_primary_source": "https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/faa-h-8083-32b-chapter-5-engine-starting-systems",
+    "verified_date": "2026-10-18"
+  },
+  {
+    "number": 10,
+    "entry": "FEDERAL AVIATION ADMINISTRATION. Turbine engine vibration: AC 33.63-1[EB/OL]. (2007-07-25)[2026-10-18]. https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC33.63_1.pdf.",
+    "verified_primary_source": "https://www.faa.gov/regulations_policies/advisory_circulars/index.cfm/go/document.information/documentID/73480",
+    "verified_date": "2026-10-18"
+  },
+  {
+    "number": 11,
+    "entry": "JÄRVELIN K, KEKÄLÄINEN J. Cumulated gain-based evaluation of IR techniques[J]. ACM Transactions on Information Systems, 2002, 20(4): 422-446. DOI: 10.1145/582415.582418.",
+    "verified_primary_source": "https://researchportal.tuni.fi/en/publications/cumulated-gain-based-evaluation-of-ir-techniques/",
+    "verified_date": "2026-10-18"
+  }
+]

@@ -1,0 +1,58 @@
+{
+  "schema_version": "thesis-preflight@1",
+  "frozen_v1": {
+    "validated_samples": 198,
+    "validated_sources": 21,
+    "all_fingerprints_match": true,
+    "human_expert_reviewed": false
+  },
+  "scope": {
+    "ranges": 49,
+    "labels": {
+      "core": 26,
+      "directly_related": 10,
+      "needs_review": 2,
+      "auxiliary": 8,
+      "distractor": 3
+    },
+    "all_evidence_locators_valid": true,
+    "human_expert_reviewed": false
+  },
+  "candidates": {
+    "tasks": 25,
+    "fact_ids": 25,
+    "source_families": 4,
+    "scope_counts": {
+      "core": 20,
+      "directly_related": 5
+    },
+    "answerability_counts": {
+      "answerable": 25
+    },
+    "validated_evidence_references": 29,
+    "blind_packet_valid": true,
+    "review_dispositions": {
+      "pending": 25
+    },
+    "status": "candidate_not_frozen",
+    "statistical_independence_established": false
+  },
+  "api_calls": 0,
+  "api_spend_cny": 0,
+  "stage_gates": {
+    "S0": "protocol_registered",
+    "S1": "seed_spans_verified_not_full_quality_audit",
+    "S2": "pending_independent_review_and_dependency_split",
+    "S3": "not_started_on_new_dataset",
+    "S4": "existing_contract_checks_passed_not_full_flow_acceptance",
+    "S5": "not_authorized_by_stage_gates",
+    "S6": "results_wait_for_real_runs"
+  },
+  "next_requirements": [
+    "independent answer-hidden source reconstruction and adjudication",
+    "insufficient-evidence and condition-conflict candidate tasks",
+    "source dependency components and dev/test coverage audit",
+    "exhaustive extraction subset before recall scoring",
+    "live provider model/pricing verification and configured environment credential before paid pilot"
+  ]
+}

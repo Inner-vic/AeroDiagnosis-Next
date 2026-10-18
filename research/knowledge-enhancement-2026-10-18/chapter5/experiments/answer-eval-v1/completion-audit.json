@@ -1,0 +1,38 @@
+{
+  "questions": 24,
+  "paired_responses": 48,
+  "real_n": 12,
+  "controlled_n": 12,
+  "all_completed": true,
+  "all_reference_and_model_context_budgets_passed": true,
+  "retained_claims": 125,
+  "citations_verified": 134,
+  "frozen_code_questions_sources_unchanged": true,
+  "controlled_index_and_previous_predictions_unchanged": true,
+  "identical_response_scores_consistent": true,
+  "independent_nonexpert_method_blind_review": true,
+  "expert_reviewed": false,
+  "paired": {
+    "real": {
+      "tie": 12
+    },
+    "controlled": {
+      "win": 11,
+      "tie": 1
+    }
+  },
+  "budget_before": {
+    "provider_calls": 6449,
+    "upper_cny": 41.477348,
+    "unresolved_calls": 15
+  },
+  "budget_after": {
+    "provider_calls": 6521,
+    "upper_cny": 41.861267,
+    "unresolved_calls": 15
+  },
+  "new_cost_cny": 0.383919,
+  "remaining_cny": 0.138733,
+  "all_cached_calls": 24,
+  "no_new_unresolved_calls": true
+}

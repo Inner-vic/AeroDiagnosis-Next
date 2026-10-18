@@ -1,0 +1,84 @@
+{
+  "regression_tests_passed": 69,
+  "source_files_mypy_passed": 121,
+  "ruff_passed": true,
+  "frontend_existing_and_new_contract_tests_passed": true,
+  "node_syntax_checks_passed": true,
+  "ranking_parity": {
+    "n": 216,
+    "all_exact_top10_equal": true,
+    "graph_open": 72,
+    "with_complete_display_path": 72,
+    "seconds": 0.6906575000029989,
+    "candidate_source": "Frozen original BM25 and E5 caches; live GraphPathCandidates and live gate/fusion code; no LLM"
+  },
+  "frozen_history": [
+    {
+      "manifest": ".runtime/controlled-path-fusion-v2/test-freeze.json",
+      "files": 11,
+      "changed_live_files_with_exact_frozen_original_retained": []
+    },
+    {
+      "manifest": ".runtime/controlled-path-fusion-v2/test-candidate-freeze.json",
+      "files": 216,
+      "changed_live_files_with_exact_frozen_original_retained": []
+    },
+    {
+      "manifest": ".runtime/controlled-path-fusion-v2/strategy-freeze.json",
+      "files": 232,
+      "changed_live_files_with_exact_frozen_original_retained": [
+        "src/aerodiagnosis/adapters/api/app.py",
+        "src/aerodiagnosis/adapters/llm/openai_compatible.py"
+      ]
+    },
+    {
+      "manifest": ".runtime/controlled-scenario-v1/test-freeze.json",
+      "files": 238,
+      "changed_live_files_with_exact_frozen_original_retained": [
+        "src/aerodiagnosis/adapters/api/app.py",
+        "src/aerodiagnosis/adapters/llm/openai_compatible.py"
+      ]
+    },
+    {
+      "manifest": "evaluation/strict_graph_holdout_v1_candidate/evaluation-freeze.json",
+      "files": 283,
+      "changed_live_files_with_exact_frozen_original_retained": [
+        "src/aerodiagnosis/adapters/api/app.py",
+        "src/aerodiagnosis/adapters/llm/openai_compatible.py"
+      ]
+    },
+    {
+      "manifest": "evaluation/graph_supplement_v2_holdout_candidate/evaluation-freeze.json",
+      "files": 299,
+      "changed_live_files_with_exact_frozen_original_retained": [
+        "src/aerodiagnosis/adapters/api/app.py",
+        "src/aerodiagnosis/adapters/llm/openai_compatible.py"
+      ]
+    },
+    {
+      "manifest": "evaluation/strict_source_pilot_v3_candidate/evaluation-freeze.json",
+      "files": 276,
+      "changed_live_files_with_exact_frozen_original_retained": [
+        "src/aerodiagnosis/adapters/api/app.py",
+        "src/aerodiagnosis/adapters/llm/openai_compatible.py"
+      ]
+    }
+  ],
+  "old_and_new_predictions_unchanged": true,
+  "api_smoke_cases": 4,
+  "smoke_citation_offsets_and_hashes_verified": 9,
+  "new_provider_calls": 6,
+  "upper_increment_cny": 0.04367,
+  "budget_upper_cny": 41.477348,
+  "budget_cap_cny": 42,
+  "remaining_cny": 0.522652,
+  "historic_pending_or_unknown": 15,
+  "no_new_pending_requests": true,
+  "live_profile": {
+    "url": "http://127.0.0.1:8082/",
+    "vector": "local multilingual E5 / Chinese display embeddings",
+    "graph": "Neo4j, external-primary",
+    "active_versions_observed": 12
+  },
+  "review_restriction": "Broad-corpus paid smoke was rejected by automatic review; preflight-verified public FAA-only source scope used instead and approved; no further private-source paid verification attempted."
+}

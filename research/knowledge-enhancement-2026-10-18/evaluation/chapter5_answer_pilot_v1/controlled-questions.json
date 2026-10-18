@@ -1,0 +1,458 @@
+[
+  {
+    "id": "sq-01",
+    "original_question_id": "new2-00-0:chain3",
+    "document_id": "control2-00-0",
+    "source_cluster": "v2-template-00",
+    "scope": "controlled_rule_world",
+    "kind": "chain3",
+    "question": "QB-10726设定下，QB-10726的燃油滤芯污堵最终怎样演变到QB-10726的燃油洁净度指示变差？请补全机理路径。",
+    "answerable": true,
+    "required_points": [
+      "本记录只陈述虚拟试验台QB-10726的一条设定规则：当QB-10726的燃油滤芯污堵发生时，引起QB-10726的滤芯压差升高。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-10726的一条设定规则：当QB-10726的滤芯压差升高发生时，引起QB-10726的旁通供油比例增加。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-10726的一条设定规则：当QB-10726的旁通供油比例增加发生时，引起QB-10726的燃油洁净度指示变差。本条不陈述其他后续环节。"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "582617b3e5a9f11d5443f4d2d440667171f0d0476724bfff9e9a9be2d49ca65a",
+        "start": 0,
+        "end": 77,
+        "anchor": "本记录只陈述虚拟试验台QB-10726的一条设定规则：当QB-10726的燃油滤芯污堵发生时，引起QB-10726的滤芯压差升高。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "3b50f005334c464cd9fb2614dc192b0b6c46f5ad363227b686939e6fa4066a5d",
+        "start": 0,
+        "end": 79,
+        "anchor": "本记录只陈述虚拟试验台QB-10726的一条设定规则：当QB-10726的滤芯压差升高发生时，引起QB-10726的旁通供油比例增加。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "3dd106ed0f63a59bbb7e48a1384418863e9abf5d0712868900667cd485a52326",
+        "start": 0,
+        "end": 82,
+        "anchor": "本记录只陈述虚拟试验台QB-10726的一条设定规则：当QB-10726的旁通供油比例增加发生时，引起QB-10726的燃油洁净度指示变差。本条不陈述其他后续环节。"
+      }
+    ],
+    "origin": "previously seen retrieval benchmark; deterministic first instance per12 templates; answer-generation capability diagnostic, not independent holdout",
+    "strict_cross_block_multihop": false,
+    "record_level_distributed_evidence": true
+  },
+  {
+    "id": "sq-02",
+    "original_question_id": "new2-01-0:chain3",
+    "document_id": "control2-01-0",
+    "source_cluster": "v2-template-01",
+    "scope": "controlled_rule_world",
+    "kind": "chain3",
+    "question": "QB-49712设定下，QB-49712的计量活门开度不足最终怎样演变到QB-49712的转速建立延迟？请补全机理路径。",
+    "answerable": true,
+    "required_points": [
+      "本记录只陈述虚拟试验台QB-49712的一条设定规则：当QB-49712的计量活门开度不足发生时，引起QB-49712的计量截面减小。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-49712的一条设定规则：当QB-49712的计量截面减小发生时，引起QB-49712的供油响应受限。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-49712的一条设定规则：当QB-49712的供油响应受限发生时，引起QB-49712的转速建立延迟。本条不陈述其他后续环节。"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "bd3a2b19cab68b46076147e733730513348125e24301a841e6d2356b78010120",
+        "start": 0,
+        "end": 79,
+        "anchor": "本记录只陈述虚拟试验台QB-49712的一条设定规则：当QB-49712的计量活门开度不足发生时，引起QB-49712的计量截面减小。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "079fb20bfc611f43c8e2e56be03e300ee388e7fd67134b9bbe36df8c5745f73b",
+        "start": 0,
+        "end": 77,
+        "anchor": "本记录只陈述虚拟试验台QB-49712的一条设定规则：当QB-49712的计量截面减小发生时，引起QB-49712的供油响应受限。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "7e28c5020bb94f1d163adf273cfdaba5a7694eb1e92992e982e8c327a0f34c77",
+        "start": 0,
+        "end": 77,
+        "anchor": "本记录只陈述虚拟试验台QB-49712的一条设定规则：当QB-49712的供油响应受限发生时，引起QB-49712的转速建立延迟。本条不陈述其他后续环节。"
+      }
+    ],
+    "origin": "previously seen retrieval benchmark; deterministic first instance per12 templates; answer-generation capability diagnostic, not independent holdout",
+    "strict_cross_block_multihop": false,
+    "record_level_distributed_evidence": true
+  },
+  {
+    "id": "sq-03",
+    "original_question_id": "new2-02-0:chain3",
+    "document_id": "control2-02-0",
+    "source_cluster": "v2-template-02",
+    "scope": "controlled_rule_world",
+    "kind": "chain3",
+    "question": "QB-64182设定下，QB-64182的引气管路接头松动最终怎样演变到QB-64182的气源监控告警？请补全机理路径。",
+    "answerable": true,
+    "required_points": [
+      "本记录只陈述虚拟试验台QB-64182的一条设定规则：当QB-64182的引气管路接头松动发生时，引起QB-64182的管路漏气增大。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-64182的一条设定规则：当QB-64182的管路漏气增大发生时，引起QB-64182的用气端压力下降。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-64182的一条设定规则：当QB-64182的用气端压力下降发生时，引起QB-64182的气源监控告警。本条不陈述其他后续环节。"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "8662ab342c9470d339599087f8bc0345b11db288d5487e3f3554e85a2562b048",
+        "start": 0,
+        "end": 79,
+        "anchor": "本记录只陈述虚拟试验台QB-64182的一条设定规则：当QB-64182的引气管路接头松动发生时，引起QB-64182的管路漏气增大。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "9eb18f1b62768ddaa89c1a63eb3cf8264c9b7671d5a40efaddaf5aa01e5eadac",
+        "start": 0,
+        "end": 78,
+        "anchor": "本记录只陈述虚拟试验台QB-64182的一条设定规则：当QB-64182的管路漏气增大发生时，引起QB-64182的用气端压力下降。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "64b25b9388e79e90f8ed63ab7883e6f921d6f3b4732b9cc907cf7a978a417a35",
+        "start": 0,
+        "end": 78,
+        "anchor": "本记录只陈述虚拟试验台QB-64182的一条设定规则：当QB-64182的用气端压力下降发生时，引起QB-64182的气源监控告警。本条不陈述其他后续环节。"
+      }
+    ],
+    "origin": "previously seen retrieval benchmark; deterministic first instance per12 templates; answer-generation capability diagnostic, not independent holdout",
+    "strict_cross_block_multihop": false,
+    "record_level_distributed_evidence": true
+  },
+  {
+    "id": "sq-04",
+    "original_question_id": "new2-03-0:chain3",
+    "document_id": "control2-03-0",
+    "source_cluster": "v2-template-03",
+    "scope": "controlled_rule_world",
+    "kind": "chain3",
+    "question": "QB-42465设定下，QB-42465的压气机静子表面沉积最终怎样演变到QB-42465的级效率监控下降？请补全机理路径。",
+    "answerable": true,
+    "required_points": [
+      "本记录只陈述虚拟试验台QB-42465的一条设定规则：当QB-42465的压气机静子表面沉积发生时，引起QB-42465的静子流道粗糙度升高。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-42465的一条设定规则：当QB-42465的静子流道粗糙度升高发生时，引起QB-42465的叶栅流动损失增加。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-42465的一条设定规则：当QB-42465的叶栅流动损失增加发生时，引起QB-42465的级效率监控下降。本条不陈述其他后续环节。"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "ac822e62330a5e2a9335d2db8a943c1043701eb578ca02b668391ea4107f0464",
+        "start": 0,
+        "end": 83,
+        "anchor": "本记录只陈述虚拟试验台QB-42465的一条设定规则：当QB-42465的压气机静子表面沉积发生时，引起QB-42465的静子流道粗糙度升高。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "9a2c1c33b8942fd1f2c6a7beda8035e4b054fa90e53a6de727856ac106e0f7f7",
+        "start": 0,
+        "end": 82,
+        "anchor": "本记录只陈述虚拟试验台QB-42465的一条设定规则：当QB-42465的静子流道粗糙度升高发生时，引起QB-42465的叶栅流动损失增加。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "a8096576c2cfdaf3777aa95a7678f0518f8d5b2dcad194c173a01dad5dc72011",
+        "start": 0,
+        "end": 80,
+        "anchor": "本记录只陈述虚拟试验台QB-42465的一条设定规则：当QB-42465的叶栅流动损失增加发生时，引起QB-42465的级效率监控下降。本条不陈述其他后续环节。"
+      }
+    ],
+    "origin": "previously seen retrieval benchmark; deterministic first instance per12 templates; answer-generation capability diagnostic, not independent holdout",
+    "strict_cross_block_multihop": false,
+    "record_level_distributed_evidence": true
+  },
+  {
+    "id": "sq-05",
+    "original_question_id": "new2-04-0:chain3",
+    "document_id": "control2-04-0",
+    "source_cluster": "v2-template-04",
+    "scope": "controlled_rule_world",
+    "kind": "chain3",
+    "question": "QB-32054设定下，QB-32054的可调静子连杆间隙增大最终怎样演变到QB-32054的级间匹配告警？请补全机理路径。",
+    "answerable": true,
+    "required_points": [
+      "本记录只陈述虚拟试验台QB-32054的一条设定规则：当QB-32054的可调静子连杆间隙增大发生时，引起QB-32054的静子角度同步性降低。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-32054的一条设定规则：当QB-32054的静子角度同步性降低发生时，引起QB-32054的周向入射分布偏离。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-32054的一条设定规则：当QB-32054的周向入射分布偏离发生时，引起QB-32054的级间匹配告警。本条不陈述其他后续环节。"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "ac964215481bbb8f0bd0415011a3e3597edab27abb806018fa185ba8b773c130",
+        "start": 0,
+        "end": 84,
+        "anchor": "本记录只陈述虚拟试验台QB-32054的一条设定规则：当QB-32054的可调静子连杆间隙增大发生时，引起QB-32054的静子角度同步性降低。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "5a8ab56a1c398107f608f0ba62984b5224da9867451c7fd66167876dc841af02",
+        "start": 0,
+        "end": 82,
+        "anchor": "本记录只陈述虚拟试验台QB-32054的一条设定规则：当QB-32054的静子角度同步性降低发生时，引起QB-32054的周向入射分布偏离。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "aa88d5f54620277230a8086a1fc05bb59d8afe0404862f93aed20b2379a01813",
+        "start": 0,
+        "end": 79,
+        "anchor": "本记录只陈述虚拟试验台QB-32054的一条设定规则：当QB-32054的周向入射分布偏离发生时，引起QB-32054的级间匹配告警。本条不陈述其他后续环节。"
+      }
+    ],
+    "origin": "previously seen retrieval benchmark; deterministic first instance per12 templates; answer-generation capability diagnostic, not independent holdout",
+    "strict_cross_block_multihop": false,
+    "record_level_distributed_evidence": true
+  },
+  {
+    "id": "sq-06",
+    "original_question_id": "new2-05-0:chain3",
+    "document_id": "control2-05-0",
+    "source_cluster": "v2-template-05",
+    "scope": "controlled_rule_world",
+    "kind": "chain3",
+    "question": "QB-64942设定下，QB-64942的机匣局部变形最终怎样演变到QB-64942的压比波动监控触发？请补全机理路径。",
+    "answerable": true,
+    "required_points": [
+      "本记录只陈述虚拟试验台QB-64942的一条设定规则：当QB-64942的机匣局部变形发生时，引起QB-64942的叶尖间隙分布偏斜。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-64942的一条设定规则：当QB-64942的叶尖间隙分布偏斜发生时，引起QB-64942的间隙泄漏分布不均。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-64942的一条设定规则：当QB-64942的间隙泄漏分布不均发生时，引起QB-64942的压比波动监控触发。本条不陈述其他后续环节。"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "a835d8c6aade2eb1c524d0816e3149763ce4d18dc23823299150c2f00d13f71b",
+        "start": 0,
+        "end": 79,
+        "anchor": "本记录只陈述虚拟试验台QB-64942的一条设定规则：当QB-64942的机匣局部变形发生时，引起QB-64942的叶尖间隙分布偏斜。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "76cf3b672327366560e8dfdedb1663b60e3d026fe76bd736c30860e16a2ab548",
+        "start": 0,
+        "end": 81,
+        "anchor": "本记录只陈述虚拟试验台QB-64942的一条设定规则：当QB-64942的叶尖间隙分布偏斜发生时，引起QB-64942的间隙泄漏分布不均。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "70d0c19ca4ffd09587d0b6b9564b6a9d14e806b053634e472da1a33f148023d1",
+        "start": 0,
+        "end": 81,
+        "anchor": "本记录只陈述虚拟试验台QB-64942的一条设定规则：当QB-64942的间隙泄漏分布不均发生时，引起QB-64942的压比波动监控触发。本条不陈述其他后续环节。"
+      }
+    ],
+    "origin": "previously seen retrieval benchmark; deterministic first instance per12 templates; answer-generation capability diagnostic, not independent holdout",
+    "strict_cross_block_multihop": false,
+    "record_level_distributed_evidence": true
+  },
+  {
+    "id": "sq-07",
+    "original_question_id": "new2-06-0:chain3",
+    "document_id": "control2-06-0",
+    "source_cluster": "v2-template-06",
+    "scope": "controlled_rule_world",
+    "kind": "chain3",
+    "question": "QB-75997设定下，QB-75997的喷油器雾化孔磨损最终怎样演变到QB-75997的燃烧稳定监控异常？请补全机理路径。",
+    "answerable": true,
+    "required_points": [
+      "本记录只陈述虚拟试验台QB-75997的一条设定规则：当QB-75997的喷油器雾化孔磨损发生时，引起QB-75997的雾滴尺度分布变宽。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-75997的一条设定规则：当QB-75997的雾滴尺度分布变宽发生时，引起QB-75997的蒸发完成位置后移。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-75997的一条设定规则：当QB-75997的蒸发完成位置后移发生时，引起QB-75997的燃烧稳定监控异常。本条不陈述其他后续环节。"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "1782c87e04d8f9dd6880ebd1b071a4ce17e6d6f78c7f998ac3cacbcbc0bc1fe1",
+        "start": 0,
+        "end": 81,
+        "anchor": "本记录只陈述虚拟试验台QB-75997的一条设定规则：当QB-75997的喷油器雾化孔磨损发生时，引起QB-75997的雾滴尺度分布变宽。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "73c86138b8ffe09c7f16ab6b49afc2b923d25043b061f06f2be458ad32f5185c",
+        "start": 0,
+        "end": 81,
+        "anchor": "本记录只陈述虚拟试验台QB-75997的一条设定规则：当QB-75997的雾滴尺度分布变宽发生时，引起QB-75997的蒸发完成位置后移。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "3f115a815a9a15b42deac3e8ddb82250ddf93820680a7c37c34311c524e1a6d4",
+        "start": 0,
+        "end": 81,
+        "anchor": "本记录只陈述虚拟试验台QB-75997的一条设定规则：当QB-75997的蒸发完成位置后移发生时，引起QB-75997的燃烧稳定监控异常。本条不陈述其他后续环节。"
+      }
+    ],
+    "origin": "previously seen retrieval benchmark; deterministic first instance per12 templates; answer-generation capability diagnostic, not independent holdout",
+    "strict_cross_block_multihop": false,
+    "record_level_distributed_evidence": true
+  },
+  {
+    "id": "sq-08",
+    "original_question_id": "new2-07-0:chain3",
+    "document_id": "control2-07-0",
+    "source_cluster": "v2-template-07",
+    "scope": "controlled_rule_world",
+    "kind": "chain3",
+    "question": "QB-65045设定下，QB-65045的滑油冷却器散热面污染最终怎样演变到QB-65045的油温监控告警？请补全机理路径。",
+    "answerable": true,
+    "required_points": [
+      "本记录只陈述虚拟试验台QB-65045的一条设定规则：当QB-65045的滑油冷却器散热面污染发生时，引起QB-65045的滑油散热能力降低。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-65045的一条设定规则：当QB-65045的滑油散热能力降低发生时，引起QB-65045的供油温度升高。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-65045的一条设定规则：当QB-65045的供油温度升高发生时，引起QB-65045的油温监控告警。本条不陈述其他后续环节。"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "804408c3e3bd68cf6cd6ed221465fd2b12b7d0aa2d1d177c1942e3d04fefb804",
+        "start": 0,
+        "end": 83,
+        "anchor": "本记录只陈述虚拟试验台QB-65045的一条设定规则：当QB-65045的滑油冷却器散热面污染发生时，引起QB-65045的滑油散热能力降低。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "8d614a94ae7cd9f1ad5a95fec5175bc870446075ccd87b6a3fbf650d7243a141",
+        "start": 0,
+        "end": 79,
+        "anchor": "本记录只陈述虚拟试验台QB-65045的一条设定规则：当QB-65045的滑油散热能力降低发生时，引起QB-65045的供油温度升高。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "8e0ef915f66a3debc303f21c7b833b3878afee65e1c475f6ed23d345177e181e",
+        "start": 0,
+        "end": 77,
+        "anchor": "本记录只陈述虚拟试验台QB-65045的一条设定规则：当QB-65045的供油温度升高发生时，引起QB-65045的油温监控告警。本条不陈述其他后续环节。"
+      }
+    ],
+    "origin": "previously seen retrieval benchmark; deterministic first instance per12 templates; answer-generation capability diagnostic, not independent holdout",
+    "strict_cross_block_multihop": false,
+    "record_level_distributed_evidence": true
+  },
+  {
+    "id": "sq-09",
+    "original_question_id": "new2-08-0:chain3",
+    "document_id": "control2-08-0",
+    "source_cluster": "v2-template-08",
+    "scope": "controlled_rule_world",
+    "kind": "chain3",
+    "question": "QB-28700设定下，QB-28700的回油管路局部阻塞最终怎样演变到QB-28700的腔压监控异常？请补全机理路径。",
+    "answerable": true,
+    "required_points": [
+      "本记录只陈述虚拟试验台QB-28700的一条设定规则：当QB-28700的回油管路局部阻塞发生时，引起QB-28700的回油排出能力降低。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-28700的一条设定规则：当QB-28700的回油排出能力降低发生时，引起QB-28700的轴承腔油量积聚。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-28700的一条设定规则：当QB-28700的轴承腔油量积聚发生时，引起QB-28700的腔压监控异常。本条不陈述其他后续环节。"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "a41db7d9c8e182e41d96d7aaac60df89c056114d16779d03fd7b5062cd2cb3ff",
+        "start": 0,
+        "end": 81,
+        "anchor": "本记录只陈述虚拟试验台QB-28700的一条设定规则：当QB-28700的回油管路局部阻塞发生时，引起QB-28700的回油排出能力降低。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "c7251e8b2056a1cf6a1d7e98458524e6c1030cd4e33c651dec087908c4af8b88",
+        "start": 0,
+        "end": 80,
+        "anchor": "本记录只陈述虚拟试验台QB-28700的一条设定规则：当QB-28700的回油排出能力降低发生时，引起QB-28700的轴承腔油量积聚。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "dd703779ac0000784ebfa464a60b4f1fbdcbb5e769297aebbd0d2d0ee5e704c7",
+        "start": 0,
+        "end": 78,
+        "anchor": "本记录只陈述虚拟试验台QB-28700的一条设定规则：当QB-28700的轴承腔油量积聚发生时，引起QB-28700的腔压监控异常。本条不陈述其他后续环节。"
+      }
+    ],
+    "origin": "previously seen retrieval benchmark; deterministic first instance per12 templates; answer-generation capability diagnostic, not independent holdout",
+    "strict_cross_block_multihop": false,
+    "record_level_distributed_evidence": true
+  },
+  {
+    "id": "sq-10",
+    "original_question_id": "new2-09-0:chain3",
+    "document_id": "control2-09-0",
+    "source_cluster": "v2-template-09",
+    "scope": "controlled_rule_world",
+    "kind": "chain3",
+    "question": "QB-39610设定下，QB-39610的热电偶接线接触不良最终怎样演变到QB-39610的温控指令频繁变化？请补全机理路径。",
+    "answerable": true,
+    "required_points": [
+      "本记录只陈述虚拟试验台QB-39610的一条设定规则：当QB-39610的热电偶接线接触不良发生时，引起QB-39610的温度信号间歇波动。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-39610的一条设定规则：当QB-39610的温度信号间歇波动发生时，引起QB-39610的温控输入不稳定。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-39610的一条设定规则：当QB-39610的温控输入不稳定发生时，引起QB-39610的温控指令频繁变化。本条不陈述其他后续环节。"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "a9bae5efb8a8a76b38ebcfa4fa4f815fb054e8bbc6aeb5aa9933848053c08ff0",
+        "start": 0,
+        "end": 82,
+        "anchor": "本记录只陈述虚拟试验台QB-39610的一条设定规则：当QB-39610的热电偶接线接触不良发生时，引起QB-39610的温度信号间歇波动。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "61a54792a734fe61ff1bbc71e69043b0facb8f67444e6ec96c4adb452ac204b5",
+        "start": 0,
+        "end": 80,
+        "anchor": "本记录只陈述虚拟试验台QB-39610的一条设定规则：当QB-39610的温度信号间歇波动发生时，引起QB-39610的温控输入不稳定。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "b25988b135b00602164bc36cf97addaeea5028dd037cbf48cefa8cebc6476584",
+        "start": 0,
+        "end": 80,
+        "anchor": "本记录只陈述虚拟试验台QB-39610的一条设定规则：当QB-39610的温控输入不稳定发生时，引起QB-39610的温控指令频繁变化。本条不陈述其他后续环节。"
+      }
+    ],
+    "origin": "previously seen retrieval benchmark; deterministic first instance per12 templates; answer-generation capability diagnostic, not independent holdout",
+    "strict_cross_block_multihop": false,
+    "record_level_distributed_evidence": true
+  },
+  {
+    "id": "sq-11",
+    "original_question_id": "new2-10-0:chain3",
+    "document_id": "control2-10-0",
+    "source_cluster": "v2-template-10",
+    "scope": "controlled_rule_world",
+    "kind": "chain3",
+    "question": "QB-57868设定下，QB-57868的供气调压器阀芯粘滞最终怎样演变到QB-57868的执行端到位延迟？请补全机理路径。",
+    "answerable": true,
+    "required_points": [
+      "本记录只陈述虚拟试验台QB-57868的一条设定规则：当QB-57868的供气调压器阀芯粘滞发生时，引起QB-57868的供气调压滞后。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-57868的一条设定规则：当QB-57868的供气调压滞后发生时，引起QB-57868的气动执行端压力偏离。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-57868的一条设定规则：当QB-57868的气动执行端压力偏离发生时，引起QB-57868的执行端到位延迟。本条不陈述其他后续环节。"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "9b2edccf19c256198e0a67048156bfcac44a8be2c0d1a127003067cb2876f37c",
+        "start": 0,
+        "end": 80,
+        "anchor": "本记录只陈述虚拟试验台QB-57868的一条设定规则：当QB-57868的供气调压器阀芯粘滞发生时，引起QB-57868的供气调压滞后。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "e65b2599494cc43b541741d1c5830709b444a129a2355e750b5fc6ee112f0db4",
+        "start": 0,
+        "end": 80,
+        "anchor": "本记录只陈述虚拟试验台QB-57868的一条设定规则：当QB-57868的供气调压滞后发生时，引起QB-57868的气动执行端压力偏离。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "5095d114ad87658adefa7b3af8dc7244ef3345b5b00753cd5be9d754f4009506",
+        "start": 0,
+        "end": 81,
+        "anchor": "本记录只陈述虚拟试验台QB-57868的一条设定规则：当QB-57868的气动执行端压力偏离发生时，引起QB-57868的执行端到位延迟。本条不陈述其他后续环节。"
+      }
+    ],
+    "origin": "previously seen retrieval benchmark; deterministic first instance per12 templates; answer-generation capability diagnostic, not independent holdout",
+    "strict_cross_block_multihop": false,
+    "record_level_distributed_evidence": true
+  },
+  {
+    "id": "sq-12",
+    "original_question_id": "new2-11-0:chain3",
+    "document_id": "control2-11-0",
+    "source_cluster": "v2-template-11",
+    "scope": "controlled_rule_world",
+    "kind": "chain3",
+    "question": "QB-63476设定下，QB-63476的防冰分配支路受阻最终怎样演变到QB-63476的表面结冰监控触发？请补全机理路径。",
+    "answerable": true,
+    "required_points": [
+      "本记录只陈述虚拟试验台QB-63476的一条设定规则：当QB-63476的防冰分配支路受阻发生时，引起QB-63476的防冰热气分配减少。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-63476的一条设定规则：当QB-63476的防冰热气分配减少发生时，引起QB-63476的受保护表面温度降低。本条不陈述其他后续环节。",
+      "本记录只陈述虚拟试验台QB-63476的一条设定规则：当QB-63476的受保护表面温度降低发生时，引起QB-63476的表面结冰监控触发。本条不陈述其他后续环节。"
+    ],
+    "reference_support": [
+      {
+        "chunk_id": "d5868e450b72d5b6364ad6ae93771a2d4f1ce2071048cafd22cf297cce71f4f9",
+        "start": 0,
+        "end": 81,
+        "anchor": "本记录只陈述虚拟试验台QB-63476的一条设定规则：当QB-63476的防冰分配支路受阻发生时，引起QB-63476的防冰热气分配减少。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "2dec9061ad9f451c06a2c7fe436fe75b56dde804dd78ac3ba9ca145922104d26",
+        "start": 0,
+        "end": 82,
+        "anchor": "本记录只陈述虚拟试验台QB-63476的一条设定规则：当QB-63476的防冰热气分配减少发生时，引起QB-63476的受保护表面温度降低。本条不陈述其他后续环节。"
+      },
+      {
+        "chunk_id": "38492b404dd8ad0d6185774ac2d6b91000599dda3d470952b5af9021d67ed21e",
+        "start": 0,
+        "end": 82,
+        "anchor": "本记录只陈述虚拟试验台QB-63476的一条设定规则：当QB-63476的受保护表面温度降低发生时，引起QB-63476的表面结冰监控触发。本条不陈述其他后续环节。"
+      }
+    ],
+    "origin": "previously seen retrieval benchmark; deterministic first instance per12 templates; answer-generation capability diagnostic, not independent holdout",
+    "strict_cross_block_multihop": false,
+    "record_level_distributed_evidence": true
+  }
+]

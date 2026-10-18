@@ -1,0 +1,25 @@
+{
+  "matplotlib": "3.10.3",
+  "input_sha256": "ca0ebdf4ef98f922befda2a5f188c5757c42357080935374bf8b39be3ad502e4",
+  "methods": [
+    "B_scope",
+    "D_scope",
+    "G_scope",
+    "BD_scope",
+    "BG_scope",
+    "DG_scope",
+    "BDG_scope_matched",
+    "BDG_gated_scope"
+  ],
+  "zero_baseline": true,
+  "heatmap_scale": [
+    0,
+    100
+  ],
+  "uncertainty": "descriptive empirical proportions; no independent-binomial intervals",
+  "publisher": "unspecified thesis draft",
+  "figures": {
+    "overall-scoped.png": "dd678121185d451c4b4c3df0a94d01f2c06d6723ace62dc5d8eb25e79501b2e7",
+    "type-scoped.png": "c91deba921230fc44b9f0d442862c84aefa55f7534a4f557a344cc459cd08b56"
+  }
+}

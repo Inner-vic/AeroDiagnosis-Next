@@ -1,0 +1,50 @@
+{
+  "BD_scope:ALL": {
+    "n": 216,
+    "templates": 12,
+    "difference": 0.1574074074074074,
+    "bootstrap95": [
+      0.1388888888888889,
+      0.17592592592592593
+    ],
+    "p_exact_cluster_signflip": 0.00048828125,
+    "scope": "controlled rule-world templates, not empirical engine cases",
+    "holm4_p": 0.001953125
+  },
+  "BD_scope:chain3": {
+    "n": 36,
+    "templates": 12,
+    "difference": 0.9166666666666666,
+    "bootstrap95": [
+      0.8333333333333334,
+      1.0
+    ],
+    "p_exact_cluster_signflip": 0.00048828125,
+    "scope": "controlled rule-world templates, not empirical engine cases",
+    "holm4_p": 0.001953125
+  },
+  "BDG_gated_scope:ALL": {
+    "n": 216,
+    "templates": 12,
+    "difference": 0.0,
+    "bootstrap95": [
+      0.0,
+      0.0
+    ],
+    "p_exact_cluster_signflip": 1.0,
+    "scope": "controlled rule-world templates, not empirical engine cases",
+    "holm4_p": 1
+  },
+  "BDG_gated_scope:chain3": {
+    "n": 36,
+    "templates": 12,
+    "difference": 0.0,
+    "bootstrap95": [
+      0.0,
+      0.0
+    ],
+    "p_exact_cluster_signflip": 1.0,
+    "scope": "controlled rule-world templates, not empirical engine cases",
+    "holm4_p": 1
+  }
+}

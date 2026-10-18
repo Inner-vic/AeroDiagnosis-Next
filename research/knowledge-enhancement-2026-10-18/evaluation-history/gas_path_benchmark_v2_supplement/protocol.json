@@ -1,0 +1,12 @@
+{
+  "status": "supplemental_development_candidates_not_frozen",
+  "author": "codex:root",
+  "created_date": "2026-10-13",
+  "prior_exposure": "after 25-task developer pilot; not a blind held-out test",
+  "dependent_existing_fact_groups": {
+    "gp-q026": "gp-f007",
+    "gp-q027": "gp-f018"
+  },
+  "review_gate": "answer-hidden reconstruction required; do not infer lack of evidence from BM25 nonhit",
+  "human_expert_reviewed": false
+}

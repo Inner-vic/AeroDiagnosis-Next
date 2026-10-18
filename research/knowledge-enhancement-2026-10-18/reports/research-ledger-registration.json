@@ -1,0 +1,8 @@
+{
+  "canonical_ledger_runtime": ".runtime/thesis-research-provider-v1",
+  "initial_run": ".runtime/experiments/gas-path-api-pilot-20261013-01",
+  "initial_provider_call_count": 17,
+  "initial_peak_cost_upper_estimate_cny": 0.151283,
+  "copies_are_historical_only": "Original provider folder retained for run reconstruction; subsequent calls use canonical ledger only.",
+  "cap_policy": "All stages share ledger; pilot 5 CNY, all stages combined at most100 CNY; do not reset ledger for retries."
+}

@@ -1,0 +1,9 @@
+{
+  "before_rankings": true,
+  "unchanged_payload_hashes": {
+    "corpus.json": "1a824833653045e011b11a718eb9f59b907ab704e0716fa3c6676fe56f1aa77d",
+    "graph.json": "fd271eb9c18070f6f4cccfe12ae8b4828048fe602b0af874ef7a25e46d275158",
+    "questions-test.jsonl": "66122ad2e00a0a1f111b299f16c67c4426e857aad95d7708e79dca676b7ab87d"
+  },
+  "original_manifest_saved": "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\.runtime\\controlled-path-fusion-v2\\graph-freeze-before-namespace-repair.json"
+}

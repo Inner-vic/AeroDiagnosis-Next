@@ -1,0 +1,933 @@
+{
+  "expert_reviewed": false,
+  "method_identities_seen": false,
+  "reviewer": "Independent AI nonexpert reviewer",
+  "review_date": "2026-10-17",
+  "submission_count": 48,
+  "rows": [
+    {
+      "submission_id": "df705ea3412762",
+      "question_id": "sq-04",
+      "group": "controlled",
+      "covered_points": [
+        false,
+        false,
+        false
+      ],
+      "claim_support": [],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": null,
+      "complete_correct": false,
+      "issues": [
+        "有答案题仅返回证据不足，未覆盖任何必答点；按冻结rubric不能算完整回答。"
+      ]
+    },
+    {
+      "submission_id": "4e097e6ab2be16",
+      "question_id": "cq-12",
+      "group": "real",
+      "covered_points": [
+        true,
+        false
+      ],
+      "claim_support": [],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": true,
+      "complete_correct": true,
+      "issues": [
+        "明确表示现有证据不足且未编造数值，符合冻结rubric的无答案主指标；但未覆盖制造商资料/手册这一第二必答点，故covered_points[1]=false。"
+      ]
+    },
+    {
+      "submission_id": "a063888cd7e147",
+      "question_id": "sq-11",
+      "group": "controlled",
+      "covered_points": [
+        true,
+        true,
+        true
+      ],
+      "claim_support": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": null,
+      "complete_correct": true,
+      "issues": []
+    },
+    {
+      "submission_id": "ddd3ae78de6879",
+      "question_id": "sq-05",
+      "group": "controlled",
+      "covered_points": [
+        true,
+        true,
+        true
+      ],
+      "claim_support": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": null,
+      "complete_correct": true,
+      "issues": []
+    },
+    {
+      "submission_id": "cac1664cf567cb",
+      "question_id": "cq-04",
+      "group": "real",
+      "covered_points": [
+        true,
+        true
+      ],
+      "claim_support": [
+        true,
+        true,
+        true
+      ],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": null,
+      "complete_correct": true,
+      "issues": []
+    },
+    {
+      "submission_id": "25e1f646d2a4c3",
+      "question_id": "cq-03",
+      "group": "real",
+      "covered_points": [
+        true,
+        false
+      ],
+      "claim_support": [],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": true,
+      "complete_correct": true,
+      "issues": [
+        "明确表示现有证据不足且未编造数值，符合冻结rubric的无答案主指标；但未覆盖制造商资料/手册这一第二必答点，故covered_points[1]=false。"
+      ]
+    },
+    {
+      "submission_id": "e98cab8589e0f8",
+      "question_id": "sq-01",
+      "group": "controlled",
+      "covered_points": [
+        true,
+        true,
+        true
+      ],
+      "claim_support": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": null,
+      "complete_correct": true,
+      "issues": []
+    },
+    {
+      "submission_id": "bfe01da7527f7a",
+      "question_id": "sq-10",
+      "group": "controlled",
+      "covered_points": [
+        true,
+        true,
+        true
+      ],
+      "claim_support": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": null,
+      "complete_correct": true,
+      "issues": []
+    },
+    {
+      "submission_id": "95dd148a22f516",
+      "question_id": "cq-10",
+      "group": "real",
+      "covered_points": [
+        true,
+        true
+      ],
+      "claim_support": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": null,
+      "complete_correct": true,
+      "issues": []
+    },
+    {
+      "submission_id": "55d02f5297eca6",
+      "question_id": "sq-02",
+      "group": "controlled",
+      "covered_points": [
+        true,
+        true,
+        true
+      ],
+      "claim_support": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": null,
+      "complete_correct": true,
+      "issues": []
+    },
+    {
+      "submission_id": "ac68f29fd5f820",
+      "question_id": "sq-09",
+      "group": "controlled",
+      "covered_points": [
+        false,
+        false,
+        false
+      ],
+      "claim_support": [],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": null,
+      "complete_correct": false,
+      "issues": [
+        "有答案题仅返回证据不足，未覆盖任何必答点；按冻结rubric不能算完整回答。"
+      ]
+    },
+    {
+      "submission_id": "d4e740cfe62bdb",
+      "question_id": "cq-05",
+      "group": "real",
+      "covered_points": [
+        true,
+        true
+      ],
+      "claim_support": [
+        true,
+        true,
+        true
+      ],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": null,
+      "complete_correct": true,
+      "issues": []
+    },
+    {
+      "submission_id": "8ec4e7db347e54",
+      "question_id": "cq-04",
+      "group": "real",
+      "covered_points": [
+        true,
+        true
+      ],
+      "claim_support": [
+        true,
+        true,
+        true
+      ],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": null,
+      "complete_correct": true,
+      "issues": []
+    },
+    {
+      "submission_id": "693996a05c74dc",
+      "question_id": "sq-12",
+      "group": "controlled",
+      "covered_points": [
+        true,
+        true,
+        true
+      ],
+      "claim_support": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": null,
+      "complete_correct": true,
+      "issues": []
+    },
+    {
+      "submission_id": "781b9208fc1523",
+      "question_id": "sq-06",
+      "group": "controlled",
+      "covered_points": [
+        false,
+        false,
+        false
+      ],
+      "claim_support": [],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": null,
+      "complete_correct": false,
+      "issues": [
+        "有答案题仅返回证据不足，未覆盖任何必答点；按冻结rubric不能算完整回答。"
+      ]
+    },
+    {
+      "submission_id": "379e07b84c41ef",
+      "question_id": "cq-06",
+      "group": "real",
+      "covered_points": [
+        true,
+        true
+      ],
+      "claim_support": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": true,
+      "complete_correct": true,
+      "issues": []
+    },
+    {
+      "submission_id": "e10e3b451c37b7",
+      "question_id": "cq-07",
+      "group": "real",
+      "covered_points": [
+        true,
+        true,
+        true
+      ],
+      "claim_support": [
+        true
+      ],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": null,
+      "complete_correct": true,
+      "issues": []
+    },
+    {
+      "submission_id": "9d5ddb7774499c",
+      "question_id": "sq-07",
+      "group": "controlled",
+      "covered_points": [
+        false,
+        false,
+        false
+      ],
+      "claim_support": [],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": null,
+      "complete_correct": false,
+      "issues": [
+        "有答案题仅返回证据不足，未覆盖任何必答点；按冻结rubric不能算完整回答。"
+      ]
+    },
+    {
+      "submission_id": "ea17d9f7790fd2",
+      "question_id": "cq-01",
+      "group": "real",
+      "covered_points": [
+        true,
+        true
+      ],
+      "claim_support": [
+        true,
+        true
+      ],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": null,
+      "complete_correct": true,
+      "issues": []
+    },
+    {
+      "submission_id": "96303dab52c254",
+      "question_id": "cq-02",
+      "group": "real",
+      "covered_points": [
+        true,
+        true
+      ],
+      "claim_support": [
+        true,
+        true
+      ],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": null,
+      "complete_correct": false,
+      "issues": [
+        "复述内容覆盖两项形状及材料状态条件，但最终status为insufficient_evidence并明确拒答，因此complete_correct=false。",
+        "范围解释有歧义：理由认为凹痕句未专门关联空心叶片；冻结标注依据同段前文空心叶片语境，保持原answerable标签，未事后改题。"
+      ]
+    },
+    {
+      "submission_id": "414341bf54a667",
+      "question_id": "cq-08",
+      "group": "real",
+      "covered_points": [
+        true,
+        true,
+        true
+      ],
+      "claim_support": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": null,
+      "complete_correct": true,
+      "issues": []
+    },
+    {
+      "submission_id": "367d31aeb38dbf",
+      "question_id": "sq-04",
+      "group": "controlled",
+      "covered_points": [
+        true,
+        true,
+        true
+      ],
+      "claim_support": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": null,
+      "complete_correct": true,
+      "issues": []
+    },
+    {
+      "submission_id": "818ba9d732d1c7",
+      "question_id": "sq-03",
+      "group": "controlled",
+      "covered_points": [
+        false,
+        false,
+        false
+      ],
+      "claim_support": [],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": null,
+      "complete_correct": false,
+      "issues": [
+        "有答案题仅返回证据不足，未覆盖任何必答点；按冻结rubric不能算完整回答。"
+      ]
+    },
+    {
+      "submission_id": "8f136b6a2c1a33",
+      "question_id": "cq-03",
+      "group": "real",
+      "covered_points": [
+        true,
+        false
+      ],
+      "claim_support": [],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": true,
+      "complete_correct": true,
+      "issues": [
+        "明确表示现有证据不足且未编造数值，符合冻结rubric的无答案主指标；但未覆盖制造商资料/手册这一第二必答点，故covered_points[1]=false。"
+      ]
+    },
+    {
+      "submission_id": "31ec68ba8e045f",
+      "question_id": "cq-11",
+      "group": "real",
+      "covered_points": [
+        true,
+        true,
+        true
+      ],
+      "claim_support": [
+        true,
+        true,
+        true
+      ],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": null,
+      "complete_correct": true,
+      "issues": []
+    },
+    {
+      "submission_id": "69af0946aabac9",
+      "question_id": "sq-07",
+      "group": "controlled",
+      "covered_points": [
+        true,
+        true,
+        true
+      ],
+      "claim_support": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": null,
+      "complete_correct": true,
+      "issues": []
+    },
+    {
+      "submission_id": "7f4518f4e07fbd",
+      "question_id": "sq-06",
+      "group": "controlled",
+      "covered_points": [
+        true,
+        true,
+        true
+      ],
+      "claim_support": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": null,
+      "complete_correct": true,
+      "issues": []
+    },
+    {
+      "submission_id": "6db9cd300be367",
+      "question_id": "cq-02",
+      "group": "real",
+      "covered_points": [
+        true,
+        true
+      ],
+      "claim_support": [
+        true,
+        true
+      ],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": null,
+      "complete_correct": false,
+      "issues": [
+        "复述内容覆盖两项形状及材料状态条件，但最终status为insufficient_evidence并明确拒答，因此complete_correct=false。",
+        "范围解释有歧义：理由认为凹痕句未专门关联空心叶片；冻结标注依据同段前文空心叶片语境，保持原answerable标签，未事后改题。"
+      ]
+    },
+    {
+      "submission_id": "2b96a4e7e57734",
+      "question_id": "sq-01",
+      "group": "controlled",
+      "covered_points": [
+        false,
+        false,
+        false
+      ],
+      "claim_support": [],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": null,
+      "complete_correct": false,
+      "issues": [
+        "有答案题仅返回证据不足，未覆盖任何必答点；按冻结rubric不能算完整回答。"
+      ]
+    },
+    {
+      "submission_id": "3d5aa798e50552",
+      "question_id": "sq-05",
+      "group": "controlled",
+      "covered_points": [
+        true,
+        true,
+        true
+      ],
+      "claim_support": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": null,
+      "complete_correct": true,
+      "issues": []
+    },
+    {
+      "submission_id": "84019ca6ab2e19",
+      "question_id": "sq-12",
+      "group": "controlled",
+      "covered_points": [
+        false,
+        false,
+        false
+      ],
+      "claim_support": [],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": null,
+      "complete_correct": false,
+      "issues": [
+        "有答案题仅返回证据不足，未覆盖任何必答点；按冻结rubric不能算完整回答。"
+      ]
+    },
+    {
+      "submission_id": "5f11dc059d1f2b",
+      "question_id": "cq-07",
+      "group": "real",
+      "covered_points": [
+        true,
+        true,
+        true
+      ],
+      "claim_support": [
+        true
+      ],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": null,
+      "complete_correct": true,
+      "issues": []
+    },
+    {
+      "submission_id": "9c96a244075736",
+      "question_id": "cq-09",
+      "group": "real",
+      "covered_points": [
+        true,
+        true
+      ],
+      "claim_support": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": true,
+      "complete_correct": true,
+      "issues": []
+    },
+    {
+      "submission_id": "5bd1604aa69ed2",
+      "question_id": "sq-08",
+      "group": "controlled",
+      "covered_points": [
+        true,
+        true,
+        true
+      ],
+      "claim_support": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": null,
+      "complete_correct": true,
+      "issues": []
+    },
+    {
+      "submission_id": "3a94ba52c445a9",
+      "question_id": "cq-12",
+      "group": "real",
+      "covered_points": [
+        true,
+        false
+      ],
+      "claim_support": [],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": true,
+      "complete_correct": true,
+      "issues": [
+        "明确表示现有证据不足且未编造数值，符合冻结rubric的无答案主指标；但未覆盖制造商资料/手册这一第二必答点，故covered_points[1]=false。"
+      ]
+    },
+    {
+      "submission_id": "ac5a38d2ba5db0",
+      "question_id": "cq-06",
+      "group": "real",
+      "covered_points": [
+        true,
+        true
+      ],
+      "claim_support": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": true,
+      "complete_correct": true,
+      "issues": []
+    },
+    {
+      "submission_id": "0298fb71f5b021",
+      "question_id": "cq-10",
+      "group": "real",
+      "covered_points": [
+        true,
+        true
+      ],
+      "claim_support": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": null,
+      "complete_correct": true,
+      "issues": []
+    },
+    {
+      "submission_id": "02abed21b00c98",
+      "question_id": "sq-09",
+      "group": "controlled",
+      "covered_points": [
+        true,
+        true,
+        true
+      ],
+      "claim_support": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": null,
+      "complete_correct": true,
+      "issues": []
+    },
+    {
+      "submission_id": "9ef1244c5ea7eb",
+      "question_id": "sq-10",
+      "group": "controlled",
+      "covered_points": [
+        false,
+        false,
+        false
+      ],
+      "claim_support": [],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": null,
+      "complete_correct": false,
+      "issues": [
+        "有答案题仅返回证据不足，未覆盖任何必答点；按冻结rubric不能算完整回答。"
+      ]
+    },
+    {
+      "submission_id": "c4650fd1607323",
+      "question_id": "cq-11",
+      "group": "real",
+      "covered_points": [
+        true,
+        true,
+        true
+      ],
+      "claim_support": [
+        true,
+        true,
+        true
+      ],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": null,
+      "complete_correct": true,
+      "issues": []
+    },
+    {
+      "submission_id": "d733214db976a0",
+      "question_id": "cq-09",
+      "group": "real",
+      "covered_points": [
+        true,
+        true
+      ],
+      "claim_support": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": true,
+      "complete_correct": true,
+      "issues": []
+    },
+    {
+      "submission_id": "fe938593013358",
+      "question_id": "sq-08",
+      "group": "controlled",
+      "covered_points": [
+        false,
+        false,
+        false
+      ],
+      "claim_support": [],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": null,
+      "complete_correct": false,
+      "issues": [
+        "有答案题仅返回证据不足，未覆盖任何必答点；按冻结rubric不能算完整回答。"
+      ]
+    },
+    {
+      "submission_id": "86d7a3869c2917",
+      "question_id": "sq-02",
+      "group": "controlled",
+      "covered_points": [
+        false,
+        false,
+        false
+      ],
+      "claim_support": [],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": null,
+      "complete_correct": false,
+      "issues": [
+        "有答案题仅返回证据不足，未覆盖任何必答点；按冻结rubric不能算完整回答。"
+      ]
+    },
+    {
+      "submission_id": "2951ad8eecef2e",
+      "question_id": "sq-11",
+      "group": "controlled",
+      "covered_points": [
+        false,
+        false,
+        false
+      ],
+      "claim_support": [],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": null,
+      "complete_correct": false,
+      "issues": [
+        "有答案题仅返回证据不足，未覆盖任何必答点；按冻结rubric不能算完整回答。"
+      ]
+    },
+    {
+      "submission_id": "1089d019200ea8",
+      "question_id": "sq-03",
+      "group": "controlled",
+      "covered_points": [
+        true,
+        true,
+        true
+      ],
+      "claim_support": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": null,
+      "complete_correct": true,
+      "issues": []
+    },
+    {
+      "submission_id": "f89c1e732745e2",
+      "question_id": "cq-08",
+      "group": "real",
+      "covered_points": [
+        true,
+        true,
+        true
+      ],
+      "claim_support": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": null,
+      "complete_correct": true,
+      "issues": []
+    },
+    {
+      "submission_id": "a8c3721effd088",
+      "question_id": "cq-01",
+      "group": "real",
+      "covered_points": [
+        true,
+        true
+      ],
+      "claim_support": [
+        true,
+        true
+      ],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": null,
+      "complete_correct": true,
+      "issues": []
+    },
+    {
+      "submission_id": "40fad72a9dc68d",
+      "question_id": "cq-05",
+      "group": "real",
+      "covered_points": [
+        true,
+        true
+      ],
+      "claim_support": [
+        true,
+        true,
+        true
+      ],
+      "certainty_and_scope_preserved": true,
+      "safe_abstention": null,
+      "complete_correct": true,
+      "issues": []
+    }
+  ],
+  "scoring_notes": [
+    "逐份阅读answer/reason和每条claim及其引文，并核对blind-source-registry上下文；脚本只辅助整理及检查引文是否出现在源块中，语义判定由本评审完成。",
+    "全部已输出claims的语义均获所引文本及上下文支持；保留了条件、否定、可能性和资料/规则世界范围。空claims数组保持空，不生成引用精度分母。",
+    "有答案题的complete_correct要求所有必答点覆盖且status=evidence_ready；覆盖内容与最终拒答状态分别记录。",
+    "按本轮明确指定的冻结blind-rubric，无答案题的主指标要求明确不足且不编造要求数值，允许零claims安全拒答；因此泛化拒答可complete_correct=true，但未提制造商/生产规范手册的对应covered_point为false，未将其假记为覆盖。",
+    "cq-05第三条引用仍按此前不超过允许极限及非分叉相连的上下文理解；未改写为具体发动机可直接执行的维修阈值。",
+    "受控回答在提问的QB规则设定语境下解释；省略虚拟规则的包装前缀本身不构成将其提升为真实发动机诊断。保留逆推不充分和界面字样不构成异常的边界。",
+    "cq-06中十六分之一英寸被明确限定为涡轮叶片可见应力裂纹描述，没有被当成衬筒允许长度；cq-09对切断转速无数值的判断结合源块完整上下文。",
+    "此次最终评分仅读取列出的3个匿名文件；未读取预测文件、身份映射、计时、预算或方法轨迹，也未调用外部模型。"
+  ],
+  "limitations": [
+    "非专家AI复核，不是航空维修专家金标。",
+    "真实FAA资料组与已见受控虚拟规则组须分别报告，不能汇成真实世界准确率或独立泛化结论。"
+  ],
+  "read_file_sha256": [
+    {
+      "path": "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\.runtime\\chapter5-answer-eval-v1\\blind-rubric.json",
+      "sha256": "42fe5e3b86e7f2abe57f4db002980c6f7837ef7f52f494c96f29128bcab38e4f"
+    },
+    {
+      "path": "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\.runtime\\chapter5-answer-eval-v1\\blind-submissions.json",
+      "sha256": "b819592712ec4c6cca550f24da887400f891753c0063b3563df52b358d1ab049"
+    },
+    {
+      "path": "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\.runtime\\chapter5-answer-eval-v1\\blind-source-registry.json",
+      "sha256": "c49e8510d3f0ba90449588fa7ac65f2fc215aa574e70f7d6d1b25561a9cc4947"
+    }
+  ]
+}

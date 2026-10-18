@@ -1,0 +1,11 @@
+{
+  "provider": "DeepSeek",
+  "available_model_ids": [
+    "deepseek-flash",
+    "deepseek-v4-pro"
+  ],
+  "credential_ready": true,
+  "credential_value_persisted": false,
+  "credential_source": "user-designated local file, injected into memory only",
+  "model_list_verified_date": "2026-10-13"
+}

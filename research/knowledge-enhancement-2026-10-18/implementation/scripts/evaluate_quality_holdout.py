@@ -1,0 +1,710 @@
+"""Source-scoped paired holdout: audit, freeze, then generate without gold access."""
+
+from __future__ import annotations
+
+# ruff: noqa: RUF001 -- Chinese prompts deliberately use Chinese punctuation.
+import argparse
+import hashlib
+import importlib.metadata
+import json
+import re
+import sqlite3
+import time
+from collections import Counter
+from concurrent.futures import ThreadPoolExecutor
+from dataclasses import asdict
+from pathlib import Path
+from typing import Any
+
+from evaluate_chinese_graph_ablation import (
+    DisabledGraph,
+    NoCases,
+    checked_review,
+    digest,
+)
+from prebuild_holdout_knowledge import RetryJSONClient
+from transformers import AutoTokenizer
+
+from aerodiagnosis.adapters.llm.research_client import CompletionTruncatedError
+from aerodiagnosis.adapters.persistence import create_embedding_provider
+from aerodiagnosis.adapters.persistence.neo4j_graph import Neo4jGraphStore
+from aerodiagnosis.adapters.persistence.sqlite_context import SQLiteParentContextStore
+from aerodiagnosis.adapters.persistence.sqlite_lexical import SQLiteLexicalStore
+from aerodiagnosis.adapters.persistence.sqlite_vector import SQLiteVectorStore
+from aerodiagnosis.application.agent_models import VerificationDecision, coverage_issues
+from aerodiagnosis.application.grounded_context import assemble_selected, pack_spans
+from aerodiagnosis.config import RuntimeSettings
+from aerodiagnosis.domain import DiagnosisCommand, RetrievalStrategy
+from aerodiagnosis.ingestion import DocumentManifest
+from aerodiagnosis.retrieval.manual import ManualEvidenceRetriever, ManualRetrievalPolicy
+from aerodiagnosis.retrieval.reranker import E5SemanticReranker
+from aerodiagnosis.tools.diagnostic import DiagnosticToolset
+
+JUDGE_MODEL = "deepseek-v4-pro"
+
+GEN_INSTRUCTION = """仅使用提供的evidence回答中文问题。证据中的spans每项有可选择的id与连续原文。
+只能引用这些编号，不能自己写引用原句或拼接引文。每个claim只写一个原子事实，不能用不同事实的可能性掩盖确定性强化。
+保留每个命题的否定、可能、未能确定、对象和条件。备选原因用“可能/或/之一”，不得写成全部成立。
+回答题面每个所问部分，区分开始执行与完成，不把热损伤证据的否定写成确定无油运行。若来源只支持可能原因，就写可能；未确定就明确未确定。
+不要把一般资料、单个事故或历史建议扩展成通用维修授权。题面没有问到的细节不必扩展。
+不输出独立的answer总结，主答案由程序从claims生成。证据不足时明确不足，不可补写事实。
+返回JSON {"insufficient_evidence":false,
+"claims":[{"text":"原子中文事实","support_span_ids":["s1"]}],
+"abstention_reason":""}。insufficient_evidence=true时给中文abstention_reason；可以有支持的部分事实。"""
+
+JUDGE_INSTRUCTION = """你是匿名来源审核者，只依据题面、原子必要事实及两组提供的来源证据评分。
+X/Y方法未知。
+每个required_fact对应一个明确question_slot，逐条检查。
+allowed_alternative_texts允许本来源支持的任一等价选项，不要求列全选项。supplementary_facts不参与必答覆盖扣分；
+但答案中任何新增事实仍需来源支持。不能用证据自身的内容替答案补齐缺项。
+main answer与claims必须同样保持不确定性。
+引用原句由程序复制；原句有效不代表声明受到支持。possible必须保留可能，undetermined不能回答为已确定原因。
+返回且只返回JSON {"X":{"correct":true,"unsupported_claim":false,"uncertainty_strengthened":false,
+"required_fact_checks":[{"fact_key":"原fact_key","covered":true,"reason":"中文依据"}],
+"reason":"中文裁定"},"Y":{...同样结构...}}。没有支持的确定性强化/对象混淆为unsupported_claim。
+correct要求答对全部题面必答事实、无不支持陈述、无确定性强化。所有布尔必须为JSON布尔。"""
+
+
+VERIFY_INSTRUCTION = """只依据question、candidate与evidence独立核查，不补充外部知识。
+列出题面每一个所问部分的requirement；检查其是否已由candidate中的声明回答，覆盖必须对应从0开始的claim_indexes。
+逐条检查原子声明的对象、条件、因果方向、否定、不确定性及备选原因；引文存在不等于语义支持。
+不能凭证据替答案补全未作答部分。全部必要部分覆盖且全部声明受支持时sufficient才为true。
+返回JSON {"sufficient":true,"supported_claim_indexes":[0],"question_coverage":[
+{"requirement":"题面要求","covered":true,"claim_indexes":[0]}],"issues":[],
+"corrected_queries":[],"corrected_tools":[]}。若不足，sufficient=false并给具体issues。"""
+
+
+def verify_candidate(client, question, assembled, bundle):
+    reply = client.complete(
+        task="holdout-coverage-verification-v3",
+        instruction=VERIFY_INSTRUCTION,
+        payload={
+            "question": question,
+            "candidate": assembled["claims"],
+            "evidence": bundle["catalog"],
+        },
+        max_tokens=1200,
+    )
+    try:
+        decision = VerificationDecision.model_validate(reply.value)
+        issues = coverage_issues(decision, len(assembled["claims"]))
+        issues.extend(decision.issues)
+        if not decision.sufficient:
+            issues.append("Independent verifier found insufficient support or coverage")
+        if set(decision.supported_claim_indexes) != set(range(len(assembled["claims"]))):
+            issues.append("Not all answer claims are verified")
+    except ValueError as exc:
+        issues = ["Invalid coverage contract: " + str(exc)[:300]]
+    return reply, list(dict.fromkeys(issues))
+
+
+def save(path: Path, value: Any) -> None:
+    path.write_text(json.dumps(value, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def read(path: Path) -> Any:
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def rows(path: Path) -> list[dict[str, Any]]:
+    return [json.loads(s) for s in path.read_text(encoding="utf-8").splitlines() if s.strip()]
+
+
+class StageClient(RetryJSONClient):
+    def __init__(self, settings: RuntimeSettings, stage: str, *, model: str | None = None) -> None:
+        assert settings.default_llm_api_key is not None and settings.default_llm_model is not None
+        super().__init__(
+            api_key=settings.default_llm_api_key.get_secret_value(),
+            runtime=settings.knowledge_budget_runtime,
+            model=model or settings.default_llm_model,
+            cap_cny=settings.knowledge_api_cap_cny,
+        )
+        self.stage = stage
+
+    def complete(self, **kwargs: Any) -> Any:
+        kwargs.setdefault("stage", self.stage)
+        try:
+            return super().complete(**kwargs)
+        except CompletionTruncatedError:
+            if kwargs.get("max_tokens", 2048) >= 8192:
+                raise
+            kwargs["max_tokens"] = min(kwargs.get("max_tokens", 2048) * 2, 8192)
+            return super().complete(**kwargs)
+
+
+def snapshot(settings: RuntimeSettings, out: Path) -> tuple[dict[str, Any], Neo4jGraphStore]:
+    manifest = DocumentManifest(settings.database_path)
+    versions = sorted(manifest.active_version_ids())
+    graph = Neo4jGraphStore(
+        uri=settings.neo4j_uri,
+        user=settings.neo4j_user,
+        password=settings.neo4j_password.get_secret_value(),
+        database=settings.neo4j_database,
+    )
+    conn = sqlite3.connect("file:" + settings.database_path.as_posix() + "?mode=ro", uri=True)
+    conn.row_factory = sqlite3.Row
+    docs = [
+        dict(r)
+        for r in conn.execute("select document_id,active_version_id from documents")
+        if r["active_version_id"] in versions
+    ]
+    chunks = [
+        dict(r)
+        for r in conn.execute(
+            "select chunk_id,document_id,version_id,content,metadata_json from vector_chunks"
+        )
+        if r["version_id"] in versions
+    ]
+    conn.close()
+    if len(docs) != 24:
+        raise ValueError("All 24 source documents must be active before audit or freeze")
+    for c in chunks:
+        c["metadata"] = json.loads(c.pop("metadata_json"))
+    nodes = {}
+    edges = {}
+    for v in versions:
+        ns, es = graph.snapshot(active_version_ids=frozenset([v]), limit=2000)
+        if len(ns) >= 2000:
+            raise ValueError("Per-document graph snapshot may be truncated")
+        nodes.update({n.node_id: asdict(n) for n in ns})
+        edges.update({e.edge_id: asdict(e) for e in es})
+    data = {
+        "active_versions": versions,
+        "documents": sorted(docs, key=lambda x: x["document_id"]),
+        "chunks": sorted(chunks, key=lambda x: x["chunk_id"]),
+        "nodes": sorted(nodes.values(), key=lambda x: x["node_id"]),
+        "edges": sorted(edges.values(), key=lambda x: x["edge_id"]),
+        "concept_memberships": graph.concept_memberships(active_version_ids=frozenset(versions)),
+    }
+    p = out / "snapshot.json"
+    if p.exists() and digest(read(p)) != digest(data):
+        raise ValueError("Knowledge snapshot changed; use new experiment directory")
+    save(p, data)
+    return data, graph
+
+
+def audit(data, client, out, workers=3):
+    by_chunk = {c["chunk_id"]: c for c in data["chunks"]}
+    by_node = {n["node_id"]: n for n in data["nodes"]}
+    checks = []
+    for e in data["edges"]:
+        c = by_chunk.get(e["properties"].get("chunk_id"))
+        quote = e["properties"].get("evidence_text", "")
+        p = e["properties"]
+        coordinate = c["metadata"].get("locator", {}).get("coordinates", {}) if c else {}
+        start = p.get("canonical_start", 0) - coordinate.get("start", 0)
+        checks.append(
+            {
+                "id": e["edge_id"],
+                "endpoints_valid": e["source_id"] in by_node and e["target_id"] in by_node,
+                "source_chunk_valid": bool(c and c["version_id"] == e["version_id"]),
+                "quote_in_chunk": bool(c and quote and quote in c["content"]),
+                "exact_offset_valid": bool(
+                    c and quote and c["content"][start : start + len(quote)] == quote
+                ),
+                "translation_present": bool(p.get("evidence_text_zh")),
+            }
+        )
+    jobs = []
+    translations = []
+    instruction = (
+        "审核英文资料到中文的技术翻译，或中文原文的保存质量。仅依据original。重点检查否定、可能性、条件、数值单位、对象和步骤是否漏"
+        '译或强化。不要因保留型号/缩写而报错。返回 {"items":[{"id":"原ID","status":"pass|minor|'
+        'major","issues":[{"original_quote":"原文精确片段","chinese_quote":"对应译文'
+        '片段","reason":"中文原因","suggested_chinese":"建议修改"}]}]}。major=改变技术含义、'
+        "漏关键条件或无法理解；minor=格式或用词不自然但含义可辨；无问题issues为空。不要总结替代逐条审核。"
+    )
+    for i in range(0, len(data["chunks"]), 3):
+        batch = [
+            {
+                "id": c["chunk_id"],
+                "original": c["content"],
+                "chinese": c["metadata"].get("display_content_zh", ""),
+            }
+            for c in data["chunks"][i : i + 3]
+        ]
+        jobs.append(("translation", "zh-quality-translation-v1", instruction, batch))
+    relations = []
+    instruction = (
+        "依据source_original审核中文三元组，实体缩短后的语义和中文source_chinese。检查实体类型、方向、关系含义"
+        "、否定、可能性和条件。CAUSES为原因到结果，CAUSED_BY为结果到原因；CHECKED_BY、MITIGATED_BY等按"
+        "通常含义，不把一般训练资料变成普适维修授权。qualifiers承载条件，短实体不用重复所有条件。source_original唯"
+        '一依据。返回 {"items":[{"id":"原ID","status":"pass|minor|major","source_'
+        'entity_status":"pass|minor|major","target_entity_status":"pass|mi'
+        'nor|major","relation_status":"pass|minor|major","issues":[{"origi'
+        'nal_quote":"原文精确片段","reason":"中文说明","suggested_change":"中文具体修改"}]'
+        "}]}。major表示错误技术含义、关系方向错误、无原文支持、漏掉影响结论的条件；minor为含义仍可辨的小问题。"
+    )
+    for i in range(0, len(data["edges"]), 4):
+        batch = []
+        for e in data["edges"][i : i + 4]:
+            p = e["properties"]
+            batch.append(
+                {
+                    "id": e["edge_id"],
+                    "source_original": p.get("evidence_text"),
+                    "source_chinese": p.get("evidence_text_zh"),
+                    "source_entity": {
+                        k: by_node[e["source_id"]][k] for k in ["name", "kind", "description"]
+                    },
+                    "target_entity": {
+                        k: by_node[e["target_id"]][k] for k in ["name", "kind", "description"]
+                    },
+                    "relation": e["relation"],
+                    "certainty": p.get("certainty"),
+                    "polarity": p.get("polarity"),
+                    "qualifiers": p.get("qualifiers"),
+                }
+            )
+        jobs.append(("relation", "zh-quality-relations-v1", instruction, batch))
+
+    def review(job):
+        kind, task, instruction, batch = job
+        result = checked_review(client, task, instruction, batch, out)
+        print("Source-only audit", kind, len(batch), flush=True)
+        return kind, result
+
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        for kind, result_rows in pool.map(review, jobs):
+            (translations if kind == "translation" else relations).extend(result_rows)
+    for rows in [translations, relations]:
+        if any(x["status"] not in ["pass", "minor", "major"] for x in rows):
+            raise ValueError("Invalid review status")
+    result = {
+        "snapshot_sha256": digest(data),
+        "review_basis": (
+            "same-provider AI source review; not expert gold; flags require adjudication"
+        ),
+        "structural_checks": checks,
+        "translations": translations,
+        "entity_relations": relations,
+        "translation_counts": dict(Counter(x["status"] for x in translations)),
+        "relation_counts": dict(Counter(x["relation_status"] for x in relations)),
+        "entity_counts": dict(
+            Counter(
+                s for x in relations for s in [x["source_entity_status"], x["target_entity_status"]]
+            )
+        ),
+        "structural_pass": {k: sum(x[k] for x in checks) for k in checks[0] if k != "id"},
+    }
+    save(out / "quality-audit.json", result)
+
+
+def policy(settings: RuntimeSettings) -> ManualRetrievalPolicy:
+    return ManualRetrievalPolicy(
+        strategy=settings.manual_retrieval_strategy,
+        candidate_k=settings.manual_candidate_k,
+        rrf_k=settings.manual_rrf_k,
+        max_per_document=settings.manual_max_per_document,
+        expand_context=settings.manual_expand_context,
+    )
+
+
+def resolve_scope(question: str, documents: list[dict[str, Any]]) -> tuple[str, frozenset[str]]:
+    match = re.match(r"^依据资料「([^」]+)」[：:]\s*(.+)$", question)
+    if not match:
+        raise ValueError("Expected explicit user-supplied source reference")
+    source, body = match.groups()
+    target = "holdout-v3-" + source
+    versions = frozenset(d["active_version_id"] for d in documents if d["document_id"] == target)
+    if not versions:
+        raise ValueError("Referenced source is unavailable")
+    return body, versions
+
+
+def configuration(settings: RuntimeSettings) -> dict[str, Any]:
+    return {
+        "manual_policy": asdict(policy(settings)),
+        "requested_model": settings.default_llm_model,
+        "judge_model": JUDGE_MODEL,
+        "tokenizer_path": str(settings.knowledge_tokenizer_path.resolve()),
+        "source_guided_graph": True,
+        "local_runtime_versions": {
+            k: importlib.metadata.version(k) for k in ["onnxruntime", "tokenizers", "numpy"]
+        },
+        "embedding_backend": settings.embedding_backend,
+        "embedding_dimensions": settings.embedding_dimensions,
+        "manual_reranker": settings.manual_reranker,
+        "trained_model_path": str(settings.embedding_model_path),
+        "trained_artifact_sha256": {
+            name: hashlib.sha256((settings.embedding_model_path / name).read_bytes()).hexdigest()
+            for name in [
+                "model_qint8_avx512_vnni.onnx",
+                "tokenizer.json",
+                "config.json",
+                "model-revision.json",
+            ]
+        },
+        "embedding_model": settings.embedding_model,
+        "vector_backend": settings.vector_backend,
+        "graph_backend": settings.graph_backend,
+        "retrieval_strategy": "weighted_rrf",
+    }
+
+
+def citation_gate(arm: dict[str, Any]) -> bool:
+    checks = arm["citation_exact_checks"]
+    answer = arm["answer"]
+    if answer.get("gate_valid") is not True or arm.get("coverage_valid") is not True:
+        return False
+    # Empty citations only make sense for an explicit abstention; the blind judge
+    # still verifies that the abstention is appropriate against gold.
+    return bool(all(checks) and (checks or answer.get("insufficient_evidence") is True))
+
+
+def freeze(
+    root: Path, dataset: Path, settings: RuntimeSettings, data: dict[str, Any], out: Path
+) -> None:
+    if not (out / "quality-adjudication.json").exists():
+        raise ValueError("Complete source-only quality adjudication before freeze")
+    adjudication = read(out / "quality-adjudication.json")
+    if adjudication["snapshot_sha256"] != digest(data) or adjudication["unresolved_major"] != 0:
+        raise ValueError("Unresolved source quality issues")
+    qs = rows(dataset / "queries.jsonl")
+    reconciliation = read(dataset / "reconciliation.json")
+    if len(qs) != 120 or reconciliation["ai_source_accepted"] != 120:
+        raise ValueError("Review incomplete")
+    receipt = read(root / ".runtime/holdout-v3/application/prebuild-receipt.json")
+    if receipt["status"] != "complete":
+        raise ValueError("Ingestion incomplete")
+    file_names = [
+        "queries.jsonl",
+        "generation_queries.jsonl",
+        "source_manifest.json",
+        "reconciliation.json",
+        "protocol.json",
+        "source-binding-validation.json",
+        "question-reconciliation-draft.json",
+        "annotation-reconciliation.json",
+        "final-acceptance.json",
+    ]
+    code_files = [
+        *(root / "src/aerodiagnosis").rglob("*.py"),
+        Path(__file__).resolve(),
+        root / "scripts/prepare_holdout_knowledge.py",
+        root / "scripts/prebuild_holdout_knowledge.py",
+        root / "scripts/evaluate_chinese_graph_ablation.py",
+        root / "scripts/check_holdout_preparation.py",
+        root / "scripts/adjudicate_holdout_quality.py",
+        root / "scripts/summarize_holdout_comparison.py",
+        root / "scripts/review_holdout_corrections.py",
+        root / "scripts/finalize_holdout_quality.py",
+        root / "scripts/prepare_followup_knowledge.py",
+        root / "scripts/prebuild_followup_knowledge.py",
+        root / "scripts/author_followup_questions.py",
+        root / "scripts/evaluate_followup_holdout.py",
+        root / "scripts/adjudicate_followup_quality.py",
+        root / "scripts/finalize_followup_quality.py",
+        root / "scripts/validate_followup_annotations.py",
+        root / "scripts/summarize_followup_comparison.py",
+        root / "scripts/evaluate_quality_holdout.py",
+        root / "scripts/prebuild_quality_knowledge.py",
+        root / "scripts/prepare_quality_knowledge.py",
+        root / "scripts/author_quality_questions.py",
+        root / "scripts/collect_quality_sources.py",
+        root / "scripts/validate_quality_annotations.py",
+        root / "scripts/adopt_quality_review.py",
+    ]
+    record = {
+        "date": "2026-10-14",
+        "status": "frozen_before_system_predictions",
+        "queries_sha256": hashlib.sha256(
+            (dataset / "queries.jsonl").read_text(encoding="utf-8").encode()
+        ).hexdigest(),
+        "file_sha256_bytes": {
+            f: hashlib.sha256((dataset / f).read_bytes()).hexdigest() for f in file_names
+        },
+        "snapshot_sha256": digest(data),
+        "code_sha256_bytes": {
+            str(f.relative_to(root)): hashlib.sha256(f.read_bytes()).hexdigest() for f in code_files
+        },
+        "knowledge_coverage_verified": True,
+        "unresolved_reviews": 0,
+        "quality_adjudication_sha256": digest(adjudication),
+        "configuration": configuration(settings),
+        "protocol": {
+            "query_mode": "natural_chinese_only",
+            "source_scope": (
+                "explicit source reference parsed from question only; identical in both arms"
+            ),
+            "top_k": 5,
+            "evidence_token_budget": 2048,
+            "manual_policy": asdict(policy(settings)),
+            "ranking_policy": "grounded_source_rank@4",
+            "case_route": False,
+            "requested_model": settings.default_llm_model,
+            "judge_model": JUDGE_MODEL,
+            "temperature": 0,
+            "known_billed_truncation_retry": "one retry with double max tokens in each arm",
+            "transport_unknown_charge_retry": False,
+            "generation_instruction_sha256": hashlib.sha256(GEN_INSTRUCTION.encode()).hexdigest(),
+            "judge_instruction_sha256": hashlib.sha256(JUDGE_INSTRUCTION.encode()).hexdigest(),
+            "primary_subset": "90 source-text questions; 30 publisher-summary auxiliary separately",
+            "interval_method": (
+                "paired source-cluster bootstrap; conservative NASA correlation-group "
+                "sensitivity; conditional to curated sources"
+            ),
+            "bootstrap_repetitions": 10000,
+            "bootstrap_seed": 20261014,
+            "primary_effect": "difference in strictly correct answers (graph minus text)",
+            "test_tuning_prohibited": True,
+            "citation_policy": "source-span-and-uncertainty@2",
+            "span_selector_budget_counts_ids_and_source_metadata": True,
+            "bounded_source_only_gate_repair": 1,
+            "bounded_source_only_coverage_repair": 1,
+            "coverage_instruction_sha256": hashlib.sha256(VERIFY_INSTRUCTION.encode()).hexdigest(),
+            "judge_payload": (
+                "all answer facts and full catalogue; omit verified hash/offset repeats"
+            ),
+            "primary_judge": "independent anonymous nonexpert AI source review of all 240 answers",
+            "paid_pro_audit": "first question per source, predeclared 24 pairs",
+            "atomic_annotation_policy": "question-bound-atomic@1",
+            "not_actual_repair_diagnostic_accuracy": True,
+        },
+    }
+    p = dataset / "freeze.json"
+    if p.exists() and read(p) != record:
+        raise ValueError("Frozen protocol differs")
+    save(p, record)
+    save(out / "freeze.json", record)
+    print("Frozen", len(qs), "questions; no predictions yet", flush=True)
+
+
+def check_freeze(
+    root: Path, dataset: Path, data: dict[str, Any], settings: RuntimeSettings
+) -> dict[str, Any]:
+    frozen = read(dataset / "freeze.json")
+    if frozen["configuration"] != configuration(settings):
+        raise ValueError("Frozen runtime configuration changed")
+    if frozen["snapshot_sha256"] != digest(data):
+        raise ValueError("Frozen knowledge changed")
+    for path, sha in frozen["file_sha256_bytes"].items():
+        if hashlib.sha256((dataset / path).read_bytes()).hexdigest() != sha:
+            raise ValueError("Frozen dataset changed")
+    for path, sha in frozen["code_sha256_bytes"].items():
+        if hashlib.sha256((root / path).read_bytes()).hexdigest() != sha:
+            raise ValueError("Frozen implementation changed")
+    return frozen
+
+
+def judge_view(arm: dict[str, Any]) -> dict[str, Any]:
+    # Hashes/offsets are checked independently; do not pay to repeat them in the
+    # judge prompt. Keep every answer fact and the full supplied source catalogue.
+    selectors = [span["id"] for entry in arm["span_catalog"] for span in entry["spans"]]
+    alias = {
+        span["span_id"]: selector
+        for span, selector in zip(arm["span_records"], selectors, strict=True)
+    }
+    answer = arm["answer"]
+    return {
+        "answer": {
+            "answer": answer["answer"],
+            "insufficient_evidence": answer["insufficient_evidence"],
+            "claims": [
+                {"text": c["text"], "support_span_ids": [alias[k] for k in c["support_span_ids"]]}
+                for c in answer["claims"]
+            ],
+        },
+        "evidence": arm["span_catalog"],
+    }
+
+
+def judge_facts(question: dict[str, Any]) -> list[dict[str, Any]]:
+    keys = ["fact_key", "text", "certainty", "scope", "source_quote", "allowed_alternative_texts"]
+    return [{k: f[k] for k in keys if k in f} for f in question["required_facts"]]
+
+
+def compare(
+    root: Path,
+    dataset: Path,
+    settings: RuntimeSettings,
+    data: dict[str, Any],
+    graph: Neo4jGraphStore,
+    out: Path,
+    workers: int,
+) -> None:
+    frozen = check_freeze(root, dataset, data, settings)
+    # The generation input contains no answers, evidence ranges, task type, or answerability.
+    inputs = rows(dataset / "generation_queries.jsonl")
+    if any(set(x) != {"sample_id", "query", "query_language"} for x in inputs):
+        raise ValueError("Generation metadata leakage")
+    tokenizer = AutoTokenizer.from_pretrained(
+        str(settings.knowledge_tokenizer_path), local_files_only=True
+    )
+    manifest = DocumentManifest(settings.database_path)
+
+    def metadata(v: str) -> dict[str, Any] | None:
+        rec = manifest.get_version(v)
+        return rec.metadata.model_dump(mode="json") if rec else None
+
+    provider = create_embedding_provider(settings)
+    source_reranker = E5SemanticReranker(provider)
+    retriever = ManualEvidenceRetriever(
+        vector_store=SQLiteVectorStore(settings.database_path, embedding_provider=provider),
+        lexical_store=SQLiteLexicalStore(settings.database_path),
+        context_store=SQLiteParentContextStore(settings.database_path),
+        policy=policy(settings),
+        reranker=source_reranker,
+    )
+    tools = {
+        name: DiagnosticToolset(
+            vector_store=retriever,
+            graph_store=g,
+            case_store=NoCases(),
+            version_metadata=metadata,
+            source_guided_graph=True,
+            source_reranker=source_reranker,
+        )
+        for name, g in [("text", DisabledGraph()), ("text_graph", graph)]
+    }
+    client = StageClient(settings, "generation_evaluation")
+    answers = out / "answers"
+    answers.mkdir(exist_ok=True)
+
+    def answer(q: dict[str, Any]) -> dict[str, Any]:
+        p = answers / (q["sample_id"] + ".json")
+        if p.exists():
+            old = read(p)
+            if old["snapshot_sha256"] != digest(data) or old["query"] != q["query"]:
+                raise ValueError("Stale answer cache")
+            return old
+        query, versions = resolve_scope(q["query"], data["documents"])
+        cmd = DiagnosisCommand(session_id=q["sample_id"], question=q["query"], top_k=5)
+        arms = {}
+        for name in ["text", "text_graph"]:
+            start = time.perf_counter()
+            result = tools[name].hybrid_search(
+                command=cmd,
+                query=query,
+                active_version_ids=versions,
+                strategy=RetrievalStrategy.WEIGHTED_RRF,
+            )
+            elapsed = time.perf_counter() - start
+            evidence = [h.evidence for h in result.hits]
+            bundle = pack_spans(evidence, tokenizer, budget=2048)
+            reply = client.complete(
+                task="holdout-answer-v2",
+                instruction=GEN_INSTRUCTION,
+                payload={"question": q["query"], "evidence": bundle["catalog"]},
+                max_tokens=1800,
+            )
+            assembled = assemble_selected(reply.value, bundle)
+            receipts = [reply.receipt]
+            if not assembled["gate_valid"]:
+                # One source-only repair; no test facts, answers or answerability are supplied.
+                reply = client.complete(
+                    task="holdout-answer-span-repair-v2",
+                    instruction=GEN_INSTRUCTION,
+                    payload={
+                        "question": q["query"],
+                        "evidence": bundle["catalog"],
+                        "previous_output": reply.value,
+                        "gate_issues": assembled["gate_issues"],
+                    },
+                    max_tokens=1800,
+                )
+                receipts.append(reply.receipt)
+                assembled = assemble_selected(reply.value, bundle)
+            verification, issues = verify_candidate(client, q["query"], assembled, bundle)
+            verification_history = [
+                {"raw_reply": verification.value, "issues": issues, "receipt": verification.receipt}
+            ]
+            if issues:
+                reply = client.complete(
+                    task="holdout-coverage-repair-v3",
+                    instruction=GEN_INSTRUCTION,
+                    payload={
+                        "question": q["query"],
+                        "evidence": bundle["catalog"],
+                        "previous_output": reply.value,
+                        "coverage_issues": issues,
+                    },
+                    max_tokens=1800,
+                )
+                receipts.append(reply.receipt)
+                assembled = assemble_selected(reply.value, bundle)
+                verification, issues = verify_candidate(client, q["query"], assembled, bundle)
+                verification_history.append(
+                    {
+                        "raw_reply": verification.value,
+                        "issues": issues,
+                        "receipt": verification.receipt,
+                    }
+                )
+            packed, count = bundle["packed"], bundle["context_tokens"]
+            texts = {entry["id"]: entry["text"] for entry in packed}
+            checks = [
+                texts.get(citation["evidence_id"], "")[citation["start"] : citation["end"]]
+                == citation["support_quote"]
+                for claim in assembled["claims"]
+                for citation in claim["citations"]
+            ]
+            arms[name] = {
+                "answer": assembled,
+                "coverage_valid": not issues,
+                "verification_history": verification_history,
+                "raw_reply": reply.value,
+                "span_catalog": bundle["catalog"],
+                "span_records": bundle["span_records"],
+                "repair_calls": len(receipts) - 1,
+                "packed": packed,
+                "retrieved": [x.model_dump(mode="json") for x in evidence],
+                "context_tokens": count,
+                "citation_exact_checks": checks,
+                "retrieval_seconds": elapsed,
+                "receipts": receipts,
+            }
+        row = {
+            "id": q["sample_id"],
+            "query": q["query"],
+            "snapshot_sha256": digest(data),
+            "arms": arms,
+        }
+        save(p, row)
+        print("Generated paired", q["sample_id"], flush=True)
+        return row
+
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        list(pool.map(answer, inputs))
+    save(
+        out / "generation-complete.json",
+        {
+            "questions": len(inputs),
+            "snapshot_sha256": digest(data),
+            "freeze_sha256": digest(frozen),
+            "budget": {k: v for k, v in client.summary().items() if k != "receipts"},
+            "scoring": (
+                "independent anonymous AI full source review; "
+                "Pro audit predeclared one task per source"
+            ),
+        },
+    )
+    return
+
+
+def main() -> None:
+    cli = argparse.ArgumentParser(description=__doc__)
+    cli.add_argument("--phase", choices=["audit", "freeze", "compare"], required=True)
+    cli.add_argument("--workers", type=int, default=3, choices=[1, 2, 3, 4])
+    cli.add_argument(
+        "--output", type=Path, default=Path(".runtime/experiments/holdout-v3-final-20261014")
+    )
+    args = cli.parse_args()
+    root = Path.cwd().resolve()
+    dataset = root / "evaluation/gas_path_holdout_v3_candidate"
+    settings = RuntimeSettings.from_env(root / ".runtime/holdout-v3/profile")
+    out = args.output.resolve()
+    out.mkdir(parents=True, exist_ok=True)
+    if settings.knowledge_api_cap_cny != 35:
+        raise ValueError("Explicit cumulative cap 35 required")
+    data, graph = snapshot(settings, out)
+    if args.phase == "audit":
+        audit(data, StageClient(settings, "supplemental_review"), out, args.workers)
+    elif args.phase == "freeze":
+        freeze(root, dataset, settings, data, out)
+    else:
+        compare(root, dataset, settings, data, graph, out, args.workers)
+
+
+if __name__ == "__main__":
+    main()

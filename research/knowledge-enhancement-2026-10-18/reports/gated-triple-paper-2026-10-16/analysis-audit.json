@@ -1,0 +1,149 @@
+{
+  "rows": 4104,
+  "original_rows": 2592,
+  "supplement_rows": 1512,
+  "methods": 19,
+  "all_metrics_independently_recomputed": true,
+  "budgets_and_unique_hits_passed": true,
+  "original_predictions_unchanged": true,
+  "frozen_strategy_unchanged": true,
+  "api_calls": 0,
+  "graph_gate": {
+    "ALL": {
+      "n": 216,
+      "graph_open": 72,
+      "fallback": 144
+    },
+    "exact": {
+      "n": 36,
+      "graph_open": 0,
+      "fallback": 36
+    },
+    "paraphrase": {
+      "n": 36,
+      "graph_open": 0,
+      "fallback": 36
+    },
+    "conditions": {
+      "n": 36,
+      "graph_open": 0,
+      "fallback": 36
+    },
+    "chain2": {
+      "n": 36,
+      "graph_open": 36,
+      "fallback": 0
+    },
+    "chain3": {
+      "n": 36,
+      "graph_open": 36,
+      "fallback": 0
+    },
+    "boundary": {
+      "n": 36,
+      "graph_open": 0,
+      "fallback": 36
+    }
+  },
+  "paired": {
+    "BD_scope": {
+      "ALL": {
+        "tie": 182,
+        "win": 34
+      },
+      "exact": {
+        "tie": 36
+      },
+      "paraphrase": {
+        "tie": 36
+      },
+      "conditions": {
+        "tie": 36
+      },
+      "chain2": {
+        "tie": 35,
+        "win": 1
+      },
+      "chain3": {
+        "win": 33,
+        "tie": 3
+      },
+      "boundary": {
+        "tie": 36
+      }
+    },
+    "BDG_scope_matched": {
+      "ALL": {
+        "tie": 180,
+        "win": 36
+      },
+      "exact": {
+        "tie": 36
+      },
+      "paraphrase": {
+        "tie": 36
+      },
+      "conditions": {
+        "win": 36
+      },
+      "chain2": {
+        "tie": 36
+      },
+      "chain3": {
+        "tie": 36
+      },
+      "boundary": {
+        "tie": 36
+      }
+    },
+    "BDG_atomic_scope": {
+      "ALL": {
+        "tie": 216
+      },
+      "exact": {
+        "tie": 36
+      },
+      "paraphrase": {
+        "tie": 36
+      },
+      "conditions": {
+        "tie": 36
+      },
+      "chain2": {
+        "tie": 36
+      },
+      "chain3": {
+        "tie": 36
+      },
+      "boundary": {
+        "tie": 36
+      }
+    },
+    "D_scope": {
+      "ALL": {
+        "tie": 185,
+        "win": 31
+      },
+      "exact": {
+        "tie": 36
+      },
+      "paraphrase": {
+        "tie": 36
+      },
+      "conditions": {
+        "tie": 36
+      },
+      "chain2": {
+        "tie": 34,
+        "win": 2
+      },
+      "chain3": {
+        "tie": 7,
+        "win": 29
+      },
+      "boundary": {
+        "tie": 36
+      }
+    }
+  }
+}

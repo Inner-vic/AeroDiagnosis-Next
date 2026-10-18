@@ -1,0 +1,101 @@
+{
+  "BD_scope": {
+    "ALL": {
+      "tie": 182,
+      "win": 34
+    },
+    "exact": {
+      "tie": 36
+    },
+    "paraphrase": {
+      "tie": 36
+    },
+    "conditions": {
+      "tie": 36
+    },
+    "chain2": {
+      "tie": 35,
+      "win": 1
+    },
+    "chain3": {
+      "win": 33,
+      "tie": 3
+    },
+    "boundary": {
+      "tie": 36
+    }
+  },
+  "BDG_scope_matched": {
+    "ALL": {
+      "tie": 180,
+      "win": 36
+    },
+    "exact": {
+      "tie": 36
+    },
+    "paraphrase": {
+      "tie": 36
+    },
+    "conditions": {
+      "win": 36
+    },
+    "chain2": {
+      "tie": 36
+    },
+    "chain3": {
+      "tie": 36
+    },
+    "boundary": {
+      "tie": 36
+    }
+  },
+  "BDG_atomic_scope": {
+    "ALL": {
+      "tie": 216
+    },
+    "exact": {
+      "tie": 36
+    },
+    "paraphrase": {
+      "tie": 36
+    },
+    "conditions": {
+      "tie": 36
+    },
+    "chain2": {
+      "tie": 36
+    },
+    "chain3": {
+      "tie": 36
+    },
+    "boundary": {
+      "tie": 36
+    }
+  },
+  "D_scope": {
+    "ALL": {
+      "tie": 185,
+      "win": 31
+    },
+    "exact": {
+      "tie": 36
+    },
+    "paraphrase": {
+      "tie": 36
+    },
+    "conditions": {
+      "tie": 36
+    },
+    "chain2": {
+      "tie": 34,
+      "win": 2
+    },
+    "chain3": {
+      "tie": 7,
+      "win": 29
+    },
+    "boundary": {
+      "tie": 36
+    }
+  }
+}

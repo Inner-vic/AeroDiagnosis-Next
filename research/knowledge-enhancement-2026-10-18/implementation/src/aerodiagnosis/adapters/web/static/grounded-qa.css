@@ -1,0 +1,5 @@
+.qa-citation{padding:.3rem .55rem;margin:.2rem;border:1px solid var(--line,#667);border-radius:6px;background:transparent;color:inherit;cursor:pointer;font-size:.8rem}
+.qa-citation:hover,.qa-citation:focus-visible{outline:2px solid #508aaf;outline-offset:2px}
+.qa-path{margin:.8rem 0;padding:.7rem;border:1px solid var(--line,#667);border-radius:8px;overflow-wrap:anywhere}
+.qa-path-arrow{font-size:.8rem;font-weight:normal}.qa-source-dialog{width:min(850px,90vw);max-height:85vh;overflow:auto;background:var(--panel,#fff);color:var(--ink,#17202a);border:1px solid #789;border-radius:12px;padding:1.4rem}
+.qa-source-dialog::backdrop{background:#0008}.qa-source-close{float:right}.qa-source-text{white-space:pre-wrap;overflow-wrap:anywhere;font:inherit;line-height:1.9}.qa-source-location{font-size:.8rem;overflow-wrap:anywhere}.qa-source-notice{font-size:.85rem}.qa-source-text mark{background:#ffe08a;color:#171717}

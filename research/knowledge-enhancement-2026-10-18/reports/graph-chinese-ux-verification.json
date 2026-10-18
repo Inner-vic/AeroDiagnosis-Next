@@ -1,0 +1,22 @@
+{
+  "active_nodes": 144,
+  "active_edges": 72,
+  "max_entity_characters": 13,
+  "node_ids_preserved": true,
+  "edge_ids_preserved": true,
+  "translated_active_chunks": 101,
+  "shared_budget": {
+    "provider_call_count": 244,
+    "budget_upper_estimate_cny": 0.914127,
+    "cap_cny": 5.0,
+    "pending_or_unknown_calls": 0
+  },
+  "view": "single-page-complete-graph",
+  "type_buttons": "hide/show nodes and incident edges; restore all types",
+  "bilingual_switch": false,
+  "future_upload_translation_authorized": true,
+  "automatic_chinese_upload_verified": true,
+  "pytest_passed": 485,
+  "ruff": "passed",
+  "mypy_source_files": 99
+}

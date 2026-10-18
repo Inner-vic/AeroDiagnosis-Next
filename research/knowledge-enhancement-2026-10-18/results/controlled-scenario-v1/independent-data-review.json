@@ -1,0 +1,105 @@
+{
+  "schema": "independent-controlled-scenario-review@1",
+  "approved": true,
+  "expert_reviewed": false,
+  "predictions_seen": false,
+  "reviewer": "Independent AI non-expert reviewer",
+  "scope": "Source, data and method review only; no predictions, development search results, strategy selections, index rankings, or graph.json read. Graph construction assessed from generator source only.",
+  "reviewed_at_utc": "2026-10-16T08:35:56.751972+00:00",
+  "counts": {
+    "documents": 36,
+    "records": 576,
+    "templates": 12,
+    "dev_templates": 4,
+    "test_templates": 8,
+    "dev_questions": 72,
+    "test_questions": 144,
+    "questions_checked": 216,
+    "graph_edges_from_generator": 144
+  },
+  "checks": {
+    "synthetic_origin_disclosed": true,
+    "stipulated_rules_not_presented_as_measurements": true,
+    "template_split_disjoint": true,
+    "all_support_offsets_hashes_and_quotes_match": true,
+    "all_relevant_record_ids_match_question_kind": true,
+    "all_chain_edges_connect_reference_states": true,
+    "hidden_bridge_absent_from_query": true,
+    "no_single_retrievable_record_contains_entire_chain": true,
+    "chain_reference_answer_strings_absent_from_corpus": true,
+    "conditions_need_range_and_hold_records": true,
+    "boundary_record_explicitly_denies_sufficient_reverse_inference": true,
+    "graph_contains_no_answer_fields_by_construction": true,
+    "graph_facts_have_text_record_source_by_construction": true,
+    "graph_correct_structure_upper_bound_disclosed": true,
+    "template_and_prefix_dependence_disclosed": true,
+    "template_cluster_bootstrap_planned": true,
+    "equal_requested_candidate_and_final_context_caps_in_script": true,
+    "no_requirement_for_three_channel_victory": true
+  },
+  "findings": [
+    {
+      "id": "L1",
+      "severity": "limitation",
+      "blocking": false,
+      "detail": "Mechanism template holdout shares the same rule and question grammar across dev/test, and three parameterized instances per template. It tests lexical mechanism holdout within this stipulated generator, not unseen causal topology or natural-language question generation."
+    },
+    {
+      "id": "L2",
+      "severity": "clarification",
+      "blocking": false,
+      "detail": "The graph compiles three main-chain edges and one independent monitoring edge per scenario. Parameter, applicability, hold-time and inverse-boundary records remain text-only. Equal fact provenance means graph facts have textual counterparts; it must not be described as all 576 records fully represented in graph structure. This asymmetry may disadvantage graph-only strata and should be disclosed."
+    },
+    {
+      "id": "L3",
+      "severity": "limitation",
+      "blocking": false,
+      "detail": "150 requested candidates is divided 150/75/50 by route count, with common 50 fused pool, 10 final records, 5 per document and 4096-token caps. This is an equal candidate/output budget, not a measured equal compute/latency budget; route shortfalls and duplicates may reduce actual unique candidates."
+    },
+    {
+      "id": "L4",
+      "severity": "limitation",
+      "blocking": false,
+      "detail": "Only eight held-out template clusters support the primary bootstrap. Treat uncertainty as conditional on this small controlled population; do not interpret 144 test questions as independent real maintenance cases."
+    },
+    {
+      "id": "L5",
+      "severity": "limitation",
+      "blocking": false,
+      "detail": "Retrieval metrics score necessary evidence records, not generated answer correctness. Boundary records directly state the intended non-invertibility, which is valid under the declared record-level rule world."
+    }
+  ],
+  "decision_rationale": "Approved as an explicitly synthetic, record-level retrieval benchmark. All 216 question support assignments and chain bridges pass complete mechanical checks; the generator establishes unique main-chain paths and explicit inverse boundaries. No empirical ranking or desired winner was consulted. Approval does not establish physical validity, real-world diagnostic accuracy, or production readiness. Revised public documentation adequately addresses L1-L3 wording. Approval remains limited to source/data/method scope; initial limitations L1-L5 all still apply.",
+  "initial_review_path": "D:\\zhaoweihao3\\Desktop\\Project\\AeroDiagnosis\\.runtime\\controlled-scenario-review\\review.initial.json",
+  "initial_input_hashes": {
+    "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\evaluation\\controlled_scenario_v1\\protocol.json": "474d9575f1817537c63f38e7159e6b8e0b2b1ece06d72ca2bdd2381136542729",
+    "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\evaluation\\controlled_scenario_v1\\corpus.json": "68425375336456c03a91acdea87269d58fa514eabdeaa3ad63ffb9feeb01dc2a",
+    "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\evaluation\\controlled_scenario_v1\\questions-dev.jsonl": "8309376644a7b9685c3121e28a0783d1c2728741106da87aae3d59cc6a3c4f66",
+    "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\evaluation\\controlled_scenario_v1\\questions-test.jsonl": "0da900020a12337baf852ad09f6917b55b3dbf4a89b3582eb883a6bee0756381",
+    "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\scripts\\controlled_scenario_benchmark_v1.py": "98741c399e1c0fde46babd7d26cc9ca5a5e1aa58a0416eb87c580679c6dc2c9c"
+  },
+  "input_hashes": {
+    "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\evaluation\\controlled_scenario_v1\\protocol.json": "dbf2dd515ca866b2040e1160eee457500dc6b954e4802d7bcf1b1f16dc26fe3b",
+    "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\evaluation\\controlled_scenario_v1\\corpus.json": "68425375336456c03a91acdea87269d58fa514eabdeaa3ad63ffb9feeb01dc2a",
+    "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\evaluation\\controlled_scenario_v1\\questions-dev.jsonl": "8309376644a7b9685c3121e28a0783d1c2728741106da87aae3d59cc6a3c4f66",
+    "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\evaluation\\controlled_scenario_v1\\questions-test.jsonl": "0da900020a12337baf852ad09f6917b55b3dbf4a89b3582eb883a6bee0756381",
+    "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\evaluation\\controlled_scenario_v1\\README.md": "767e85b56673d850d52685930519f79d6346f5f6ecfb6cdac01400997891b403",
+    "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\evaluation\\controlled_scenario_v1\\dataset-freeze.json": "e596eeb4ec960a94a5ee13b9b1d1abcf7f7de0b85ee19940a87967e667a8d606",
+    "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\evaluation\\controlled_scenario_v1\\review-amendment.json": "8425ce5144e880dae03bded62f61c0b3c8135a222a952a25994aaf455210e50a"
+  },
+  "revision_review": {
+    "reviewed_at_utc": "2026-10-16T08:37:47.246056+00:00",
+    "approved": true,
+    "predictions_seen": false,
+    "expert_reviewed": false,
+    "files_reread": [
+      "protocol.json",
+      "README.md",
+      "dataset-freeze.json",
+      "review-amendment.json"
+    ],
+    "verification": "Revised protocol/README explicitly disclose graph fact subset, shared question/rule grammar, and candidate budget not equal actual computation. Corpus and dev/test hashes in revised freeze equal independently reviewed initial hashes. Graph content was never opened; its unchanged status is author-reported and the freeze records its hash. Revised generator script was not reread under this limited revision scope; initial source review and its hash remain archived.",
+    "all_initial_limitations_still_apply": true,
+    "ranking_state": "No predictions, candidate files, development outputs, strategy selections or rankings accessed; before_any_rankings is a declared provenance flag, not independently verified from forbidden runtime outputs."
+  }
+}

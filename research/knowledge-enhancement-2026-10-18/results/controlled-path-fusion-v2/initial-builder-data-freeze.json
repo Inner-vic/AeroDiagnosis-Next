@@ -1,0 +1,15 @@
+{
+  "before_any_rankings": true,
+  "hashes": {
+    "evaluation/controlled_scenario_v2/corpus.json": "5cefb29401473e03eed0849c97f5fbe60d71b1a497ff6831204c660bafe35d94",
+    "evaluation/controlled_scenario_v2/graph-freeze.json": "1d4a34f177a0d493d521255be64063a78fb4642dd1e7f5f64667f25a9a45075a",
+    "evaluation/controlled_scenario_v2/graph.json": "fd271eb9c18070f6f4cccfe12ae8b4828048fe602b0af874ef7a25e46d275158",
+    "evaluation/controlled_scenario_v2/protocol.json": "59b4ef8d862434fe18a4a21478b50dc4b63e2f2e146fca48c8b61dc78fcdb39e",
+    "evaluation/controlled_scenario_v2/questions-dev.jsonl": "1442decbb5926c97319e0b71b3a53e6e9e7aabd663211128f28a085fe767d6b8",
+    "evaluation/controlled_scenario_v2/questions-test.jsonl": "668f28f589a1329af2749774db906a22eaba91d122b64a33c1950cabf7657f83",
+    "evaluation/controlled_scenario_v2/README.md": "5aeb04f4b863f3be35c6184b01b76d0ccaf09390f03d0322febe4bb9d723e496"
+  },
+  "dev_questions": 72,
+  "test_questions": 144,
+  "paid_api_calls": 0
+}

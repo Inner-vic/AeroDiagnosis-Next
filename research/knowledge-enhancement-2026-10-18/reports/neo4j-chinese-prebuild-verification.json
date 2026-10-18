@@ -1,0 +1,31 @@
+{
+  "database": "Neo4j Community 5.26.32 via official Maven Central artifacts",
+  "deployment": "authenticated Bolt on 127.0.0.1:7687; project-local data",
+  "application_graph_backend": "neo4j",
+  "persistent_documents": 11,
+  "stored_versions": 12,
+  "active_graph_nodes": 144,
+  "active_graph_edges": 72,
+  "all_active_nodes_have_chinese": true,
+  "prebuilt_source_sections": 10,
+  "prebuilt_chunks": 96,
+  "prebuild_rerun_all_reused": true,
+  "chinese_qa_status": "evidence_ready",
+  "chinese_qa_claim_count": 3,
+  "chinese_qa_source_kinds": [
+    "document_chunk",
+    "knowledge_graph_path"
+  ],
+  "shared_budget": {
+    "provider_call_count": 150,
+    "budget_upper_estimate_cny": 0.657502,
+    "cap_cny": 5.0,
+    "pending_or_unknown_calls": 0
+  },
+  "validation": {
+    "pytest_passed": 483,
+    "ruff": "passed",
+    "mypy_source_files": 98
+  },
+  "scope": "engineering verification, not frozen evaluation results"
+}

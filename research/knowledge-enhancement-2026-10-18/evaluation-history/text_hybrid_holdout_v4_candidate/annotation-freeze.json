@@ -1,0 +1,18 @@
+{
+  "status": "annotations_frozen_before_predictions_index_incomplete",
+  "created_at": "2026-10-15T01:52:51.913343+00:00",
+  "sources": 20,
+  "questions": 80,
+  "required_facts": 86,
+  "expert_reviewed": false,
+  "predictions_run": false,
+  "file_sha256": {
+    "source_manifest.json": "5cd79c4f6370139e98c1d54a71be3a1546d2e8a68953802674bf084682653845",
+    "queries.jsonl": "8efe1cdd082f2345fb08aca26055fb7a1a45a13394727512c5fbef4bfce0f3ab",
+    "selection-ledger-before-questions.json": "0687b4fc5d2e256684fde42c020628abbe2f99148b676a7bdf5a9e64775d1c76",
+    "annotation-review-notes.json": "8ea5519f9edec67bd2bbfe8eb9c2ac8246c09f9cc7c7eb392faa35cd169f8bf2",
+    "root-source-review.json": "6eced29c766e9dccee8044dc870939ab59ae902035b5209df6298f8b1bf5deea",
+    "validation.json": "14a7e651a9b0ea3efbc27db8cbd52db86a6a8a290f771f38aaca82ea33f1c740"
+  },
+  "pending": "Finish remaining 285/415 translations, full independent quality review, index build then final input/corpus freeze before first predictions."
+}

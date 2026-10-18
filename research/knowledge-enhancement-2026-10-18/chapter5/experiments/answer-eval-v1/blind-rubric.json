@@ -1,0 +1,16 @@
+{
+  "reviewer": "Independent AI nonexpert; method identities hidden",
+  "primary": "complete_correct: for answerable, every required point is correctly covered AND no unsupported factual claim or certainty/scope error AND status evidence_ready; for unanswerable explicit insufficiency with no fabricated requested threshold and safe source-bound partial facts",
+  "per_submission_fields": [
+    "submission_id",
+    "covered_points (one bool per required point)",
+    "claim_support (one bool per output claim; every factual proposition supported by supplied cited text and context, no certainty upgrade)",
+    "certainty_and_scope_preserved (bool)",
+    "safe_abstention (bool for unanswerable, null otherwise)",
+    "complete_correct (bool)",
+    "issues (specific concise list)"
+  ],
+  "no_claim_cases": "No claims is not a correct answer to an answerable query. For unanswerable explicit safe abstention can be correct with no claims; do not invent a citation precision denominator.",
+  "sources": "Use blind-source-registry.json and q reference anchors; read additional source-pack paragraphs only when context needed. Both groups source-reviewed; controlled rules explicitly virtual, source-world question not empirical engine diagnosis.",
+  "no_real_quality_claim": "24 questions across two different groups are not pooled as real-world accuracy; source-only refs are nonexpert labels."
+}

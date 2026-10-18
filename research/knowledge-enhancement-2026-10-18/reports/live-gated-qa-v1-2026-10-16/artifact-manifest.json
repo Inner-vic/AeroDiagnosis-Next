@@ -1,0 +1,20 @@
+{
+  "files": {
+    "acceptance-audit.json": "b6738ff9171099be1796020455260421f514f0e96b95efcfa523e1f2a42a7ff0",
+    "live-smoke-protocol.json": "12efd4860653c6d01bed890eb7d8796ea1eff80d46c4bff4b6975451b033e9ed",
+    "live-smoke-results.json": "1002c2d0ca525dbbfa979526184176f19fb1f1cdd52ce308ace87ca42e9acf5a",
+    "live_qa_parity.py": "125155d1998c1a515b7def153f2dade6b96ccac3a6f3253ea1a7a47883a0cb50",
+    "live_qa_smoke.py": "171f3a0920c14b57d3026494af96a2ee8b0e5d4135ad8626efead9eeb1b5eba9",
+    "pytest.xml": "da4de95c31c19a68d108caa83908009d26b29ecef00ed163309aa2e10175d099",
+    "qa-source-view.jpg": "1039e6851af4d8c05d69bef03f7f7ef85dddd4957458f8705eb800cb2fb8beb6",
+    "ranking-parity.json": "9d6ad1d9a16e9f0c783ae3da201b502aa209d38c3be190678a9673ac0fa2562a",
+    "source-transition.json": "ee9d5be6541e0f39e60147f697bcea4cbfe2ed224939c5d91b412cc8082198ca"
+  },
+  "report_sha256": "b169f1229fc414c6021c83daaa090a4ffb94a1d59de92a030814e518ff968461",
+  "code_hashes": {
+    "src\\aerodiagnosis\\application\\knowledge_qa_live.py": "7d74602b3978256ceed813113c4126d7cba9103e1f27532b0a3e1a04d345e6c1",
+    "src\\aerodiagnosis\\adapters\\api\\qa.py": "e5b2ab44f4c8806e01c7649b1486d642579be7d1df4726a68074e28060753c9b",
+    "src\\aerodiagnosis\\adapters\\web\\static\\grounded-qa.js": "d781739b32b111930c4ad013f5e1503f9fb61cbe183a228cc27b936b25316d5d",
+    "src\\aerodiagnosis\\adapters\\web\\static\\grounded-qa.css": "e2ecb1b956c45c8acaae98cac16a6afa214dd092889c2971fafd7c214ef6fe1b"
+  }
+}

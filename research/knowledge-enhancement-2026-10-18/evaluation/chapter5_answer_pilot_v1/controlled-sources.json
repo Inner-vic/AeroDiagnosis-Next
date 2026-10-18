@@ -1,0 +1,3950 @@
+{
+  "control2-00-0": {
+    "document_id": "control2-00-0",
+    "title": "程序化构造的虚拟试验台规则资料",
+    "source_url": null,
+    "version_id": "control2-00-0-38352a8faa0457aa2cf9",
+    "origin": "synthetic_rule_generated",
+    "chunks": [
+      {
+        "chunk_id": "a3bd6871fd1b5f9decad59b357248fb201033e3a86a026958eb656ce2d5cbca2",
+        "document_id": "control2-00-0",
+        "version_id": "control2-00-0-38352a8faa0457aa2cf9",
+        "text": "边界记录：本场景明确规定，虚拟试验台QB-10726仅观察到QB-10726的燃油洁净度指示变差，不足以确定QB-10726的燃油滤芯污堵已经发生；其他未列出的原因仍可能产生相同末端指示。该逆推不是充分条件。",
+        "text_sha256": "f1b66f6d21c8a5e151207063335c503fecfaeeb7937b0cb8f3f63117e646e401",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 0,
+            "end": 104,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "38352a8faa0457aa2cf9bb94933f91d6d618d72a5c3a5a48814e56f8ae4c11cd"
+          }
+        }
+      },
+      {
+        "chunk_id": "4a4a8a8b446edd2c433ffca85e37c695130b710eb328eed0ef4203a5b4e56bc1",
+        "document_id": "control2-00-0",
+        "version_id": "control2-00-0-38352a8faa0457aa2cf9",
+        "text": "虚拟试验台QB-10726的监测规则：QB-10726的监测通道短时掉线会导致QB-10726的观察日志缺帧；这是独立于主部件链的记录质量故障。",
+        "text_sha256": "fde5dcd2dd0398f1d8f8233a62ce097fd16aef552601156ec88c9e52c72bceca",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 106,
+            "end": 178,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "38352a8faa0457aa2cf9bb94933f91d6d618d72a5c3a5a48814e56f8ae4c11cd"
+          }
+        }
+      },
+      {
+        "chunk_id": "dbfc18796ed1cacfb79cb476f78f2550021318134fcd4fe056401a36f25f679a",
+        "document_id": "control2-00-0",
+        "version_id": "control2-00-0-38352a8faa0457aa2cf9",
+        "text": "独立备忘8：虚拟试验台QB-10726的滤芯显示页面含“旁通供油比例增加”字样，但本记录仅登记界面刷新批次120；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "1f6e3bd00d0c05be1eecc1214b354753ade517f1d742a0112e75ed4ea8c0ff11",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 180,
+            "end": 254,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "38352a8faa0457aa2cf9bb94933f91d6d618d72a5c3a5a48814e56f8ae4c11cd"
+          }
+        }
+      },
+      {
+        "chunk_id": "9c6de85df1ff31bce4962f69250b54439d92b02e156661aa96828c0730501511",
+        "document_id": "control2-00-0",
+        "version_id": "control2-00-0-38352a8faa0457aa2cf9",
+        "text": "独立备忘7：虚拟试验台QB-10726的滤芯显示页面含“滤芯压差升高”字样，但本记录仅登记界面刷新批次512；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "fc43c18fdd71cfc8698302a1584811d5a39cd49320c45406118f30a8cbb25827",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 256,
+            "end": 328,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "38352a8faa0457aa2cf9bb94933f91d6d618d72a5c3a5a48814e56f8ae4c11cd"
+          }
+        }
+      },
+      {
+        "chunk_id": "651f8d2a3df51ca84d548d8891c214dcff9c75e767b6487c82a45e066539d886",
+        "document_id": "control2-00-0",
+        "version_id": "control2-00-0-38352a8faa0457aa2cf9",
+        "text": "独立备忘5：虚拟试验台QB-10726的滤芯显示页面含“旁通供油比例增加”字样，但本记录仅登记界面刷新批次335；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "bb27037291e2d796b92bb4219acf053a8f9552f427d7c6f1d2fac1dd80948003",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 330,
+            "end": 404,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "38352a8faa0457aa2cf9bb94933f91d6d618d72a5c3a5a48814e56f8ae4c11cd"
+          }
+        }
+      },
+      {
+        "chunk_id": "e5b430f2158e15bf5e773b7c534a825f369706d3e7199eac93cb20a98cf0a17b",
+        "document_id": "control2-00-0",
+        "version_id": "control2-00-0-38352a8faa0457aa2cf9",
+        "text": "独立备忘4：虚拟试验台QB-10726的滤芯显示页面含“燃油滤芯污堵”字样，但本记录仅登记界面刷新批次494；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "778b355d7d1bacb8262c1998097cb3ef138d154805ed57286bffb2bc67c7cbf2",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 406,
+            "end": 478,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "38352a8faa0457aa2cf9bb94933f91d6d618d72a5c3a5a48814e56f8ae4c11cd"
+          }
+        }
+      },
+      {
+        "chunk_id": "9230ec1fcdd549d7d12674f50c74640dafd16abf45e74b600a6cebdf45f6f408",
+        "document_id": "control2-00-0",
+        "version_id": "control2-00-0-38352a8faa0457aa2cf9",
+        "text": "独立备忘1：虚拟试验台QB-10726的滤芯显示页面含“燃油洁净度指示变差”字样，但本记录仅登记界面刷新批次758；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "64137d044ad7370869e68b0e3395eb67b1db1f1c7d86d9d3921dc1c4ce8a23df",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 480,
+            "end": 555,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "38352a8faa0457aa2cf9bb94933f91d6d618d72a5c3a5a48814e56f8ae4c11cd"
+          }
+        }
+      },
+      {
+        "chunk_id": "c4530cb3a62626b0a31b9d4abf0460f70e43730157dbe5e42cd48b09fae3877e",
+        "document_id": "control2-00-0",
+        "version_id": "control2-00-0-38352a8faa0457aa2cf9",
+        "text": "触发记录：虚拟试验台QB-10726仅在稳态保持不少于2秒后才进入试验模式；转速适用范围由单独的适用记录规定。",
+        "text_sha256": "a08cdbf42c027349977a60469705aad31180c3a22e1ce86921440772b168a924",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 557,
+            "end": 612,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "38352a8faa0457aa2cf9bb94933f91d6d618d72a5c3a5a48814e56f8ae4c11cd"
+          }
+        }
+      },
+      {
+        "chunk_id": "582617b3e5a9f11d5443f4d2d440667171f0d0476724bfff9e9a9be2d49ca65a",
+        "document_id": "control2-00-0",
+        "version_id": "control2-00-0-38352a8faa0457aa2cf9",
+        "text": "本记录只陈述虚拟试验台QB-10726的一条设定规则：当QB-10726的燃油滤芯污堵发生时，引起QB-10726的滤芯压差升高。本条不陈述其他后续环节。",
+        "text_sha256": "fbda9cf334b61962a347cba4c866f2438bb72ef06a54254da23b60c600c138ef",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 614,
+            "end": 691,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "38352a8faa0457aa2cf9bb94933f91d6d618d72a5c3a5a48814e56f8ae4c11cd"
+          }
+        }
+      },
+      {
+        "chunk_id": "a15cf52c18ab8d57ab7ddb1b716a4c1dee174e4ad2ffe43d5496b6a8c7254d22",
+        "document_id": "control2-00-0",
+        "version_id": "control2-00-0-38352a8faa0457aa2cf9",
+        "text": "适用记录：虚拟试验台QB-10726的试验模式仅用于转速指示39%至59%的闭区间；其他转速不按该模式判读。",
+        "text_sha256": "b4501ec3e8a9eaf21954402ec7138b77e15ef8fbec2310848137f5c05fec400c",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 693,
+            "end": 747,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "38352a8faa0457aa2cf9bb94933f91d6d618d72a5c3a5a48814e56f8ae4c11cd"
+          }
+        }
+      },
+      {
+        "chunk_id": "3b50f005334c464cd9fb2614dc192b0b6c46f5ad363227b686939e6fa4066a5d",
+        "document_id": "control2-00-0",
+        "version_id": "control2-00-0-38352a8faa0457aa2cf9",
+        "text": "本记录只陈述虚拟试验台QB-10726的一条设定规则：当QB-10726的滤芯压差升高发生时，引起QB-10726的旁通供油比例增加。本条不陈述其他后续环节。",
+        "text_sha256": "f28b7d79fed8253ae1272c27d450b55b31d8518bf3ef5d6714797a958510eefc",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 749,
+            "end": 828,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "38352a8faa0457aa2cf9bb94933f91d6d618d72a5c3a5a48814e56f8ae4c11cd"
+          }
+        }
+      },
+      {
+        "chunk_id": "7f87807c17e62c3f969270192f8b808b6c5044aa0a985137c43e62d35d2d430b",
+        "document_id": "control2-00-0",
+        "version_id": "control2-00-0-38352a8faa0457aa2cf9",
+        "text": "独立备忘2：虚拟试验台QB-10726的滤芯显示页面含“旁通供油比例增加”字样，但本记录仅登记界面刷新批次669；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "5c755c109e8c258311f8d0692628d5070983276678dbb04dc5b25005b3d71aeb",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 830,
+            "end": 904,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "38352a8faa0457aa2cf9bb94933f91d6d618d72a5c3a5a48814e56f8ae4c11cd"
+          }
+        }
+      },
+      {
+        "chunk_id": "3dd106ed0f63a59bbb7e48a1384418863e9abf5d0712868900667cd485a52326",
+        "document_id": "control2-00-0",
+        "version_id": "control2-00-0-38352a8faa0457aa2cf9",
+        "text": "本记录只陈述虚拟试验台QB-10726的一条设定规则：当QB-10726的旁通供油比例增加发生时，引起QB-10726的燃油洁净度指示变差。本条不陈述其他后续环节。",
+        "text_sha256": "70c1fb5d773b211aed0afafee9183daa4ff311255377b0108f7f5c69784c5c4e",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 906,
+            "end": 988,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "38352a8faa0457aa2cf9bb94933f91d6d618d72a5c3a5a48814e56f8ae4c11cd"
+          }
+        }
+      },
+      {
+        "chunk_id": "62c362545d1f0f7192b462c1276ce52619528ac46e035515103a2315daa27aa2",
+        "document_id": "control2-00-0",
+        "version_id": "control2-00-0-38352a8faa0457aa2cf9",
+        "text": "独立备忘6：虚拟试验台QB-10726的滤芯显示页面含“燃油洁净度指示变差”字样，但本记录仅登记界面刷新批次182；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "23a009fc704955e957753fc536fe76564438b47d2c67462718f91fb38edcd5dd",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 990,
+            "end": 1065,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "38352a8faa0457aa2cf9bb94933f91d6d618d72a5c3a5a48814e56f8ae4c11cd"
+          }
+        }
+      },
+      {
+        "chunk_id": "319ef1046206cd43d74199d1a487ec274577fa23306b4df7a6649bb7f241a4c6",
+        "document_id": "control2-00-0",
+        "version_id": "control2-00-0-38352a8faa0457aa2cf9",
+        "text": "参数记录：虚拟试验台QB-10726的滤芯通道采样周期固定为48毫秒。该参数不提供故障因果链。",
+        "text_sha256": "c3ffcdbdb240a97d88096f0d1c0b0c24865bb4478f1c6c3290595b6775f141bb",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 1067,
+            "end": 1114,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "38352a8faa0457aa2cf9bb94933f91d6d618d72a5c3a5a48814e56f8ae4c11cd"
+          }
+        }
+      },
+      {
+        "chunk_id": "203758e6c7caca518e3c5e1561d51499b7485797a08976992f9d8c4144e38953",
+        "document_id": "control2-00-0",
+        "version_id": "control2-00-0-38352a8faa0457aa2cf9",
+        "text": "独立备忘3：虚拟试验台QB-10726的滤芯显示页面含“旁通供油比例增加”字样，但本记录仅登记界面刷新批次179；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "364c9eba76bc03242802887ba1e673b43300e2742f0df669564e84c3010b0c41",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 1116,
+            "end": 1190,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "38352a8faa0457aa2cf9bb94933f91d6d618d72a5c3a5a48814e56f8ae4c11cd"
+          }
+        }
+      }
+    ]
+  },
+  "control2-01-0": {
+    "document_id": "control2-01-0",
+    "title": "程序化构造的虚拟试验台规则资料",
+    "source_url": null,
+    "version_id": "control2-01-0-0ce87cf72c8bba6c3b4d",
+    "origin": "synthetic_rule_generated",
+    "chunks": [
+      {
+        "chunk_id": "079fb20bfc611f43c8e2e56be03e300ee388e7fd67134b9bbe36df8c5745f73b",
+        "document_id": "control2-01-0",
+        "version_id": "control2-01-0-0ce87cf72c8bba6c3b4d",
+        "text": "本记录只陈述虚拟试验台QB-49712的一条设定规则：当QB-49712的计量截面减小发生时，引起QB-49712的供油响应受限。本条不陈述其他后续环节。",
+        "text_sha256": "dda5b09f791125d4c2e6af7c9702f14ffc2c438de4be906b49918366cfbb2937",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 0,
+            "end": 77,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "0ce87cf72c8bba6c3b4dda3b8ff8e0e63117781b0f06dcbed413184140ff5ee3"
+          }
+        }
+      },
+      {
+        "chunk_id": "e4be7cf91eb67e73f5458b5d51f6980e5fdf469252576401ceead3d9def80023",
+        "document_id": "control2-01-0",
+        "version_id": "control2-01-0-0ce87cf72c8bba6c3b4d",
+        "text": "边界记录：本场景明确规定，虚拟试验台QB-49712仅观察到QB-49712的转速建立延迟，不足以确定QB-49712的计量活门开度不足已经发生；其他未列出的原因仍可能产生相同末端指示。该逆推不是充分条件。",
+        "text_sha256": "7f3a7eb2013731aad980dac873172db93dc2d08ab759dc52c73a37dee658e815",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 79,
+            "end": 182,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "0ce87cf72c8bba6c3b4dda3b8ff8e0e63117781b0f06dcbed413184140ff5ee3"
+          }
+        }
+      },
+      {
+        "chunk_id": "bf2baa42dbad790771c27552f8eb7b6f555b265d740386377629b43b07d4fd4e",
+        "document_id": "control2-01-0",
+        "version_id": "control2-01-0-0ce87cf72c8bba6c3b4d",
+        "text": "独立备忘5：虚拟试验台QB-49712的活门显示页面含“计量活门开度不足”字样，但本记录仅登记界面刷新批次374；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "901321d75deea5cb736a509ab165dde4442d31928676ce3c49032d4304df4876",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 184,
+            "end": 258,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "0ce87cf72c8bba6c3b4dda3b8ff8e0e63117781b0f06dcbed413184140ff5ee3"
+          }
+        }
+      },
+      {
+        "chunk_id": "ff23315a4e87ef798da4dd008beb16f767f8dcf78bacd9171d381198a5e997dd",
+        "document_id": "control2-01-0",
+        "version_id": "control2-01-0-0ce87cf72c8bba6c3b4d",
+        "text": "独立备忘8：虚拟试验台QB-49712的活门显示页面含“计量截面减小”字样，但本记录仅登记界面刷新批次974；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "c962b7401f752f5985a34a1ce4c82d460acb0e252fac4db004f4fbb5ba6c096f",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 260,
+            "end": 332,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "0ce87cf72c8bba6c3b4dda3b8ff8e0e63117781b0f06dcbed413184140ff5ee3"
+          }
+        }
+      },
+      {
+        "chunk_id": "bd3a2b19cab68b46076147e733730513348125e24301a841e6d2356b78010120",
+        "document_id": "control2-01-0",
+        "version_id": "control2-01-0-0ce87cf72c8bba6c3b4d",
+        "text": "本记录只陈述虚拟试验台QB-49712的一条设定规则：当QB-49712的计量活门开度不足发生时，引起QB-49712的计量截面减小。本条不陈述其他后续环节。",
+        "text_sha256": "3a30d3b9c9be6399012522ec0b7e6f8ca3b50d848c9b56c6c14ac1893eb64e45",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 334,
+            "end": 413,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "0ce87cf72c8bba6c3b4dda3b8ff8e0e63117781b0f06dcbed413184140ff5ee3"
+          }
+        }
+      },
+      {
+        "chunk_id": "be08f485714063988e87a911efbb63c0ab0e07819179c778243e5b499a7991b2",
+        "document_id": "control2-01-0",
+        "version_id": "control2-01-0-0ce87cf72c8bba6c3b4d",
+        "text": "参数记录：虚拟试验台QB-49712的活门通道采样周期固定为32毫秒。该参数不提供故障因果链。",
+        "text_sha256": "bd713f5402c0578ff70b7e73ab57065ffa43d2156b50c93cf954971b8f620715",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 415,
+            "end": 462,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "0ce87cf72c8bba6c3b4dda3b8ff8e0e63117781b0f06dcbed413184140ff5ee3"
+          }
+        }
+      },
+      {
+        "chunk_id": "a7bbeb96bd760d7dff3d86ad520e784f09fcec19d27770f10bf40cc3f4f72eb3",
+        "document_id": "control2-01-0",
+        "version_id": "control2-01-0-0ce87cf72c8bba6c3b4d",
+        "text": "独立备忘3：虚拟试验台QB-49712的活门显示页面含“计量活门开度不足”字样，但本记录仅登记界面刷新批次123；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "51184635d6bdb8ebb1fc95d825a967f97cfcb361fa759c3f02ca0ccf7b1fdb93",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 464,
+            "end": 538,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "0ce87cf72c8bba6c3b4dda3b8ff8e0e63117781b0f06dcbed413184140ff5ee3"
+          }
+        }
+      },
+      {
+        "chunk_id": "d0a23915af6b61f6118e75a3b9c38297ba6fa413fdbee47216fdb59e276bf4e3",
+        "document_id": "control2-01-0",
+        "version_id": "control2-01-0-0ce87cf72c8bba6c3b4d",
+        "text": "独立备忘7：虚拟试验台QB-49712的活门显示页面含“供油响应受限”字样，但本记录仅登记界面刷新批次326；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "84ea1d55471283a3692bfb9b34e2141db1177a09ed33be1d0f6d8087d77f6c96",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 540,
+            "end": 612,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "0ce87cf72c8bba6c3b4dda3b8ff8e0e63117781b0f06dcbed413184140ff5ee3"
+          }
+        }
+      },
+      {
+        "chunk_id": "e50b1d17baf7bc41a5351dd25a789d8a12a994d1a797b7f36a27db6ace0b6e1d",
+        "document_id": "control2-01-0",
+        "version_id": "control2-01-0-0ce87cf72c8bba6c3b4d",
+        "text": "虚拟试验台QB-49712的监测规则：QB-49712的监测通道短时掉线会导致QB-49712的观察日志缺帧；这是独立于主部件链的记录质量故障。",
+        "text_sha256": "e5d1f5c8bcf23de26c2831b9a2acdd51f5db67286165ce3e3d854fde6420721e",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 614,
+            "end": 686,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "0ce87cf72c8bba6c3b4dda3b8ff8e0e63117781b0f06dcbed413184140ff5ee3"
+          }
+        }
+      },
+      {
+        "chunk_id": "7e28c5020bb94f1d163adf273cfdaba5a7694eb1e92992e982e8c327a0f34c77",
+        "document_id": "control2-01-0",
+        "version_id": "control2-01-0-0ce87cf72c8bba6c3b4d",
+        "text": "本记录只陈述虚拟试验台QB-49712的一条设定规则：当QB-49712的供油响应受限发生时，引起QB-49712的转速建立延迟。本条不陈述其他后续环节。",
+        "text_sha256": "4f59daafa80693ea2dda261497de64718963432ef6b72e6b061d0591f81930ec",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 688,
+            "end": 765,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "0ce87cf72c8bba6c3b4dda3b8ff8e0e63117781b0f06dcbed413184140ff5ee3"
+          }
+        }
+      },
+      {
+        "chunk_id": "b351c8f99d91f7b9f23364a1cf1a9f433ece08211909d57c8a5581d8a726fffb",
+        "document_id": "control2-01-0",
+        "version_id": "control2-01-0-0ce87cf72c8bba6c3b4d",
+        "text": "独立备忘1：虚拟试验台QB-49712的活门显示页面含“供油响应受限”字样，但本记录仅登记界面刷新批次354；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "af462ccbe8750411ae1379e2259533542fbeb93c4d38990d6633c33db343f773",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 767,
+            "end": 839,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "0ce87cf72c8bba6c3b4dda3b8ff8e0e63117781b0f06dcbed413184140ff5ee3"
+          }
+        }
+      },
+      {
+        "chunk_id": "163cc771588d29eaa4ca115b0cd90b02b7226681bf518b5274e9e2e7c2b9c8bb",
+        "document_id": "control2-01-0",
+        "version_id": "control2-01-0-0ce87cf72c8bba6c3b4d",
+        "text": "独立备忘4：虚拟试验台QB-49712的活门显示页面含“供油响应受限”字样，但本记录仅登记界面刷新批次255；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "f848e798dcf3f4522be72de8f4f16d8222128f7cfcf6419f5b0868d8190581e9",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 841,
+            "end": 913,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "0ce87cf72c8bba6c3b4dda3b8ff8e0e63117781b0f06dcbed413184140ff5ee3"
+          }
+        }
+      },
+      {
+        "chunk_id": "e8dda5286ca3ecb1826afaa648318c0b7bb121bbf378e73e4a44f3c33b8fc6a8",
+        "document_id": "control2-01-0",
+        "version_id": "control2-01-0-0ce87cf72c8bba6c3b4d",
+        "text": "适用记录：虚拟试验台QB-49712的试验模式仅用于转速指示36%至56%的闭区间；其他转速不按该模式判读。",
+        "text_sha256": "9c34316d3b13dc4f5e22088199b03aec44dca1b381ba1e02eb63053c3dfbc799",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 915,
+            "end": 969,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "0ce87cf72c8bba6c3b4dda3b8ff8e0e63117781b0f06dcbed413184140ff5ee3"
+          }
+        }
+      },
+      {
+        "chunk_id": "a27ec5d1236ec88ba9726cdb30afc363cc1eb3b2a71d5882dabab973c4f46dc5",
+        "document_id": "control2-01-0",
+        "version_id": "control2-01-0-0ce87cf72c8bba6c3b4d",
+        "text": "独立备忘2：虚拟试验台QB-49712的活门显示页面含“供油响应受限”字样，但本记录仅登记界面刷新批次318；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "63eaa6540ef533d56de3fb642ce4ad71061f5fdedcc594a98ac49842dace764e",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 971,
+            "end": 1043,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "0ce87cf72c8bba6c3b4dda3b8ff8e0e63117781b0f06dcbed413184140ff5ee3"
+          }
+        }
+      },
+      {
+        "chunk_id": "dbb260f61efdfaa943d098b56e658160cd0eba2d930fb0505872f10b039ec909",
+        "document_id": "control2-01-0",
+        "version_id": "control2-01-0-0ce87cf72c8bba6c3b4d",
+        "text": "独立备忘6：虚拟试验台QB-49712的活门显示页面含“供油响应受限”字样，但本记录仅登记界面刷新批次908；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "fb7652c1fcce73e12871a01144724d441cac19c0a013b69a83e5e1a17a5fe89c",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 1045,
+            "end": 1117,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "0ce87cf72c8bba6c3b4dda3b8ff8e0e63117781b0f06dcbed413184140ff5ee3"
+          }
+        }
+      },
+      {
+        "chunk_id": "dbf11e10d9c440cf8692c9b4b3bb85eedf7bb53ce84c9e56c2479071cde4998d",
+        "document_id": "control2-01-0",
+        "version_id": "control2-01-0-0ce87cf72c8bba6c3b4d",
+        "text": "触发记录：虚拟试验台QB-49712仅在稳态保持不少于2秒后才进入试验模式；转速适用范围由单独的适用记录规定。",
+        "text_sha256": "a4897550b9b6dca629713be5e10d247e4184e96075448ffaad51c3ebe2eea01e",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 1119,
+            "end": 1174,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "0ce87cf72c8bba6c3b4dda3b8ff8e0e63117781b0f06dcbed413184140ff5ee3"
+          }
+        }
+      }
+    ]
+  },
+  "control2-02-0": {
+    "document_id": "control2-02-0",
+    "title": "程序化构造的虚拟试验台规则资料",
+    "source_url": null,
+    "version_id": "control2-02-0-a824be6acbe2c2c0eabe",
+    "origin": "synthetic_rule_generated",
+    "chunks": [
+      {
+        "chunk_id": "4ba6c945c944bb4bfcb9519546fe23f6d4ec2bd4da492f6b49746bcca1e113c4",
+        "document_id": "control2-02-0",
+        "version_id": "control2-02-0-a824be6acbe2c2c0eabe",
+        "text": "独立备忘3：虚拟试验台QB-64182的管路显示页面含“管路漏气增大”字样，但本记录仅登记界面刷新批次416；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "341bdceeab1cc183700b6ec296b0d4467086b1460000a010db0173375ba5ac51",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 0,
+            "end": 72,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "a824be6acbe2c2c0eabead3c5f5c3dcde1c43e4b1105f8d10e44a996a8710674"
+          }
+        }
+      },
+      {
+        "chunk_id": "9eb18f1b62768ddaa89c1a63eb3cf8264c9b7671d5a40efaddaf5aa01e5eadac",
+        "document_id": "control2-02-0",
+        "version_id": "control2-02-0-a824be6acbe2c2c0eabe",
+        "text": "本记录只陈述虚拟试验台QB-64182的一条设定规则：当QB-64182的管路漏气增大发生时，引起QB-64182的用气端压力下降。本条不陈述其他后续环节。",
+        "text_sha256": "93513935781dab4823bf503be6c337121a5fa34482bdc1b974da47012c73d624",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 74,
+            "end": 152,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "a824be6acbe2c2c0eabead3c5f5c3dcde1c43e4b1105f8d10e44a996a8710674"
+          }
+        }
+      },
+      {
+        "chunk_id": "28482f8a877208456673de94fa49134767c114e397c38c4457f593d1a7223b7c",
+        "document_id": "control2-02-0",
+        "version_id": "control2-02-0-a824be6acbe2c2c0eabe",
+        "text": "触发记录：虚拟试验台QB-64182仅在稳态保持不少于2秒后才进入试验模式；转速适用范围由单独的适用记录规定。",
+        "text_sha256": "d47664e55ea1f152940722ed3df5d33fc56fd1f9211a9400860e021264594bb5",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 154,
+            "end": 209,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "a824be6acbe2c2c0eabead3c5f5c3dcde1c43e4b1105f8d10e44a996a8710674"
+          }
+        }
+      },
+      {
+        "chunk_id": "bdb6cd7ff03c9ed328e523d692094347231f7fa674fcc1818a30c0e85f9a8cf7",
+        "document_id": "control2-02-0",
+        "version_id": "control2-02-0-a824be6acbe2c2c0eabe",
+        "text": "独立备忘7：虚拟试验台QB-64182的管路显示页面含“用气端压力下降”字样，但本记录仅登记界面刷新批次724；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "546edf1174aafc26bc4aba5bd4cfede3c598a2b442be8e4fc3898dd4679ac16e",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 211,
+            "end": 284,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "a824be6acbe2c2c0eabead3c5f5c3dcde1c43e4b1105f8d10e44a996a8710674"
+          }
+        }
+      },
+      {
+        "chunk_id": "c2fa4ad6f08b07fd0091984891bf1b012da95fa76d1d9ae88e0e54ed079ba321",
+        "document_id": "control2-02-0",
+        "version_id": "control2-02-0-a824be6acbe2c2c0eabe",
+        "text": "参数记录：虚拟试验台QB-64182的管路通道采样周期固定为32毫秒。该参数不提供故障因果链。",
+        "text_sha256": "b50302e6137abc9cf3468f2c435b41ba32068762ebeab802f4b7092d30e00f38",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 286,
+            "end": 333,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "a824be6acbe2c2c0eabead3c5f5c3dcde1c43e4b1105f8d10e44a996a8710674"
+          }
+        }
+      },
+      {
+        "chunk_id": "5d0d485679f0d448bcefc39196c99417753c7bb647e0a83f9054b547e351ffff",
+        "document_id": "control2-02-0",
+        "version_id": "control2-02-0-a824be6acbe2c2c0eabe",
+        "text": "独立备忘6：虚拟试验台QB-64182的管路显示页面含“气源监控告警”字样，但本记录仅登记界面刷新批次622；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "c8840e9d99c65396d436e694362863bfeb1767b258486b1776531afd18bb374f",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 335,
+            "end": 407,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "a824be6acbe2c2c0eabead3c5f5c3dcde1c43e4b1105f8d10e44a996a8710674"
+          }
+        }
+      },
+      {
+        "chunk_id": "f70e4228f57239671eb3763c35708b59199e6b7ef7b34e09cea4cc02447290ce",
+        "document_id": "control2-02-0",
+        "version_id": "control2-02-0-a824be6acbe2c2c0eabe",
+        "text": "独立备忘1：虚拟试验台QB-64182的管路显示页面含“用气端压力下降”字样，但本记录仅登记界面刷新批次772；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "9182bd24413f28b9427a41bbe8c9ae19272f21cc3f2493e44a2b109b55278c35",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 409,
+            "end": 482,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "a824be6acbe2c2c0eabead3c5f5c3dcde1c43e4b1105f8d10e44a996a8710674"
+          }
+        }
+      },
+      {
+        "chunk_id": "9012f2f3edc30befad725877b52c9c9e212b79c402503fa021414d6550a96d13",
+        "document_id": "control2-02-0",
+        "version_id": "control2-02-0-a824be6acbe2c2c0eabe",
+        "text": "独立备忘4：虚拟试验台QB-64182的管路显示页面含“用气端压力下降”字样，但本记录仅登记界面刷新批次271；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "7a97c372b8465d1043b5d821138d9a5e8f65f1c6dcd91e2a4ba6a8d2e6a43e3b",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 484,
+            "end": 557,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "a824be6acbe2c2c0eabead3c5f5c3dcde1c43e4b1105f8d10e44a996a8710674"
+          }
+        }
+      },
+      {
+        "chunk_id": "bcef6c7b9c6db2b40dd6ac8cd1ebf33d903a4ff2e3abd2292c8752dda3cdb751",
+        "document_id": "control2-02-0",
+        "version_id": "control2-02-0-a824be6acbe2c2c0eabe",
+        "text": "适用记录：虚拟试验台QB-64182的试验模式仅用于转速指示31%至51%的闭区间；其他转速不按该模式判读。",
+        "text_sha256": "4be2c542eef33ba5bae816ba7e74ce54006cab672b85f6929a01537ba8d84c2d",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 559,
+            "end": 613,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "a824be6acbe2c2c0eabead3c5f5c3dcde1c43e4b1105f8d10e44a996a8710674"
+          }
+        }
+      },
+      {
+        "chunk_id": "8662ab342c9470d339599087f8bc0345b11db288d5487e3f3554e85a2562b048",
+        "document_id": "control2-02-0",
+        "version_id": "control2-02-0-a824be6acbe2c2c0eabe",
+        "text": "本记录只陈述虚拟试验台QB-64182的一条设定规则：当QB-64182的引气管路接头松动发生时，引起QB-64182的管路漏气增大。本条不陈述其他后续环节。",
+        "text_sha256": "3b515ef31622b3df19be7390519fb2991b231f430f44a149d8524ccc2ba7145d",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 615,
+            "end": 694,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "a824be6acbe2c2c0eabead3c5f5c3dcde1c43e4b1105f8d10e44a996a8710674"
+          }
+        }
+      },
+      {
+        "chunk_id": "cbb31a749cd8b8868df8c71b484ba4bf582b38d6730368d19d68f92997e4c317",
+        "document_id": "control2-02-0",
+        "version_id": "control2-02-0-a824be6acbe2c2c0eabe",
+        "text": "虚拟试验台QB-64182的监测规则：QB-64182的监测通道短时掉线会导致QB-64182的观察日志缺帧；这是独立于主部件链的记录质量故障。",
+        "text_sha256": "f30d47370adae0f2d9ff86e616348b8850a1aaf40f2c084aed412f2c22e0228e",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 696,
+            "end": 768,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "a824be6acbe2c2c0eabead3c5f5c3dcde1c43e4b1105f8d10e44a996a8710674"
+          }
+        }
+      },
+      {
+        "chunk_id": "64b25b9388e79e90f8ed63ab7883e6f921d6f3b4732b9cc907cf7a978a417a35",
+        "document_id": "control2-02-0",
+        "version_id": "control2-02-0-a824be6acbe2c2c0eabe",
+        "text": "本记录只陈述虚拟试验台QB-64182的一条设定规则：当QB-64182的用气端压力下降发生时，引起QB-64182的气源监控告警。本条不陈述其他后续环节。",
+        "text_sha256": "a77d34bbdb24f70c838e353dc5ca3cd0f2828a8ce9fe5c031a4bed526dbdb7cf",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 770,
+            "end": 848,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "a824be6acbe2c2c0eabead3c5f5c3dcde1c43e4b1105f8d10e44a996a8710674"
+          }
+        }
+      },
+      {
+        "chunk_id": "82e135cf42dd90e5525fd0eb312c9e3761f92a09e3559cca6009b3f29cc38331",
+        "document_id": "control2-02-0",
+        "version_id": "control2-02-0-a824be6acbe2c2c0eabe",
+        "text": "独立备忘8：虚拟试验台QB-64182的管路显示页面含“用气端压力下降”字样，但本记录仅登记界面刷新批次915；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "30830399601fb22e8e7be6af9908c3f4d4280d9bcadb595cb55994d978e42af0",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 850,
+            "end": 923,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "a824be6acbe2c2c0eabead3c5f5c3dcde1c43e4b1105f8d10e44a996a8710674"
+          }
+        }
+      },
+      {
+        "chunk_id": "a6cf7fbced1f700613757a67888c43cc64c860f01d91b531a360326081e6280b",
+        "document_id": "control2-02-0",
+        "version_id": "control2-02-0-a824be6acbe2c2c0eabe",
+        "text": "独立备忘5：虚拟试验台QB-64182的管路显示页面含“用气端压力下降”字样，但本记录仅登记界面刷新批次478；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "c16f48cec8ff695a2aa08fb321570eb1a575e4329133afe19d87b534b98e6ed7",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 925,
+            "end": 998,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "a824be6acbe2c2c0eabead3c5f5c3dcde1c43e4b1105f8d10e44a996a8710674"
+          }
+        }
+      },
+      {
+        "chunk_id": "f0f5b64924370a0500cdc5c07e5269a775f45fec42637c36825269d533aa3798",
+        "document_id": "control2-02-0",
+        "version_id": "control2-02-0-a824be6acbe2c2c0eabe",
+        "text": "边界记录：本场景明确规定，虚拟试验台QB-64182仅观察到QB-64182的气源监控告警，不足以确定QB-64182的引气管路接头松动已经发生；其他未列出的原因仍可能产生相同末端指示。该逆推不是充分条件。",
+        "text_sha256": "9f8e2ecf8134727aa5a6c8d7a1f02783e2f3fd56203952b7d343b85f654962e3",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 1000,
+            "end": 1103,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "a824be6acbe2c2c0eabead3c5f5c3dcde1c43e4b1105f8d10e44a996a8710674"
+          }
+        }
+      },
+      {
+        "chunk_id": "5c397b37e390eb16d45e8bfa33003c714152d61fa5b42a9f5f23c3ac2ad37f5c",
+        "document_id": "control2-02-0",
+        "version_id": "control2-02-0-a824be6acbe2c2c0eabe",
+        "text": "独立备忘2：虚拟试验台QB-64182的管路显示页面含“气源监控告警”字样，但本记录仅登记界面刷新批次720；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "425747b277fb9b35ed92f1ee6b96c61ce90cd03aad18af434106fd2fc6c52dde",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 1105,
+            "end": 1177,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "a824be6acbe2c2c0eabead3c5f5c3dcde1c43e4b1105f8d10e44a996a8710674"
+          }
+        }
+      }
+    ]
+  },
+  "control2-03-0": {
+    "document_id": "control2-03-0",
+    "title": "程序化构造的虚拟试验台规则资料",
+    "source_url": null,
+    "version_id": "control2-03-0-93a1caa0e64a09b35a90",
+    "origin": "synthetic_rule_generated",
+    "chunks": [
+      {
+        "chunk_id": "a8096576c2cfdaf3777aa95a7678f0518f8d5b2dcad194c173a01dad5dc72011",
+        "document_id": "control2-03-0",
+        "version_id": "control2-03-0-93a1caa0e64a09b35a90",
+        "text": "本记录只陈述虚拟试验台QB-42465的一条设定规则：当QB-42465的叶栅流动损失增加发生时，引起QB-42465的级效率监控下降。本条不陈述其他后续环节。",
+        "text_sha256": "83133111f4c45c47d898144b3e9cbc8806c9326f10a0388b6af8329b222e5011",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 0,
+            "end": 80,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "93a1caa0e64a09b35a90f600c337de533f64ed6583128b1fea1d68434ba930f1"
+          }
+        }
+      },
+      {
+        "chunk_id": "657bbf94b6638f96f12991582d039d627438352c97b00226d9bfbde15fe18e3c",
+        "document_id": "control2-03-0",
+        "version_id": "control2-03-0-93a1caa0e64a09b35a90",
+        "text": "独立备忘3：虚拟试验台QB-42465的流道显示页面含“静子流道粗糙度升高”字样，但本记录仅登记界面刷新批次561；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "df32d3edccb7ad2e85cdb5fe92059b67f3e7e35b92fa4806f8068d801f9334b0",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 82,
+            "end": 157,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "93a1caa0e64a09b35a90f600c337de533f64ed6583128b1fea1d68434ba930f1"
+          }
+        }
+      },
+      {
+        "chunk_id": "44c1c4d8e27320ea8641806075d03f1fe78c20ee313ce85124142ed49a477cd8",
+        "document_id": "control2-03-0",
+        "version_id": "control2-03-0-93a1caa0e64a09b35a90",
+        "text": "独立备忘7：虚拟试验台QB-42465的流道显示页面含“静子流道粗糙度升高”字样，但本记录仅登记界面刷新批次739；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "bdfe53c5a078d6cc313ae4599dac9a172234305ec07a87a8207767101ee44b70",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 159,
+            "end": 234,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "93a1caa0e64a09b35a90f600c337de533f64ed6583128b1fea1d68434ba930f1"
+          }
+        }
+      },
+      {
+        "chunk_id": "9a72aa5c58ffd49ceb3c26cffec29cdb9f4e30efe7f9438d166cda38bb74ae2f",
+        "document_id": "control2-03-0",
+        "version_id": "control2-03-0-93a1caa0e64a09b35a90",
+        "text": "独立备忘5：虚拟试验台QB-42465的流道显示页面含“级效率监控下降”字样，但本记录仅登记界面刷新批次720；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "9baf8cae29f64a64829d15422ecbe98d8094220bc4468a25febba08562e8be19",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 236,
+            "end": 309,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "93a1caa0e64a09b35a90f600c337de533f64ed6583128b1fea1d68434ba930f1"
+          }
+        }
+      },
+      {
+        "chunk_id": "ba89e66f0f8fb0c7e119978bb06d0cb6f0c54985be588df79f747d2ef4cfa534",
+        "document_id": "control2-03-0",
+        "version_id": "control2-03-0-93a1caa0e64a09b35a90",
+        "text": "适用记录：虚拟试验台QB-42465的试验模式仅用于转速指示43%至63%的闭区间；其他转速不按该模式判读。",
+        "text_sha256": "adffb911aff4a6eb3a44336a9f4c6d77c84f357ac025193d696db7784a53f5cb",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 311,
+            "end": 365,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "93a1caa0e64a09b35a90f600c337de533f64ed6583128b1fea1d68434ba930f1"
+          }
+        }
+      },
+      {
+        "chunk_id": "7a18a6c19fe3c0d2ed9d59eae64caccac5e0c36c2d160426567439fcdac99953",
+        "document_id": "control2-03-0",
+        "version_id": "control2-03-0-93a1caa0e64a09b35a90",
+        "text": "独立备忘8：虚拟试验台QB-42465的流道显示页面含“级效率监控下降”字样，但本记录仅登记界面刷新批次423；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "f6913287fe394598835fe1e7bd26d5682695c9ec142250bb520986326f7041e5",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 367,
+            "end": 440,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "93a1caa0e64a09b35a90f600c337de533f64ed6583128b1fea1d68434ba930f1"
+          }
+        }
+      },
+      {
+        "chunk_id": "ac822e62330a5e2a9335d2db8a943c1043701eb578ca02b668391ea4107f0464",
+        "document_id": "control2-03-0",
+        "version_id": "control2-03-0-93a1caa0e64a09b35a90",
+        "text": "本记录只陈述虚拟试验台QB-42465的一条设定规则：当QB-42465的压气机静子表面沉积发生时，引起QB-42465的静子流道粗糙度升高。本条不陈述其他后续环节。",
+        "text_sha256": "d24a7dddc14dd1deaf088524da97edda0d895b689e1943346b3dff4ddf9a6d0a",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 442,
+            "end": 525,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "93a1caa0e64a09b35a90f600c337de533f64ed6583128b1fea1d68434ba930f1"
+          }
+        }
+      },
+      {
+        "chunk_id": "be239eb885a74c969beae265f9dbc3d77145fe63e2638763f4c4f3b10f11dfc2",
+        "document_id": "control2-03-0",
+        "version_id": "control2-03-0-93a1caa0e64a09b35a90",
+        "text": "独立备忘6：虚拟试验台QB-42465的流道显示页面含“静子流道粗糙度升高”字样，但本记录仅登记界面刷新批次689；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "18602eabc584b5535c5ca4fc61c91b5635184fe452956cdc4eb39094b9afdea9",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 527,
+            "end": 602,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "93a1caa0e64a09b35a90f600c337de533f64ed6583128b1fea1d68434ba930f1"
+          }
+        }
+      },
+      {
+        "chunk_id": "675915e8b0d451fdd2acd4d2c3d506f81ed92d55fa588638b79b2cd395d07cf4",
+        "document_id": "control2-03-0",
+        "version_id": "control2-03-0-93a1caa0e64a09b35a90",
+        "text": "虚拟试验台QB-42465的监测规则：QB-42465的监测通道短时掉线会导致QB-42465的观察日志缺帧；这是独立于主部件链的记录质量故障。",
+        "text_sha256": "3e2ea3f3bee48548dbf22ecdbd363ccf2f4bee3567dbff66496694dd785ee70f",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 604,
+            "end": 676,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "93a1caa0e64a09b35a90f600c337de533f64ed6583128b1fea1d68434ba930f1"
+          }
+        }
+      },
+      {
+        "chunk_id": "9a2c1c33b8942fd1f2c6a7beda8035e4b054fa90e53a6de727856ac106e0f7f7",
+        "document_id": "control2-03-0",
+        "version_id": "control2-03-0-93a1caa0e64a09b35a90",
+        "text": "本记录只陈述虚拟试验台QB-42465的一条设定规则：当QB-42465的静子流道粗糙度升高发生时，引起QB-42465的叶栅流动损失增加。本条不陈述其他后续环节。",
+        "text_sha256": "c1d5696b38aa5dc205e6c80ada4533028e3052753e245ef9c08623219618891f",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 678,
+            "end": 760,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "93a1caa0e64a09b35a90f600c337de533f64ed6583128b1fea1d68434ba930f1"
+          }
+        }
+      },
+      {
+        "chunk_id": "c44bfdbc94aada998822184c46cdd88d79e5417720bb6467febd93d54b52f145",
+        "document_id": "control2-03-0",
+        "version_id": "control2-03-0-93a1caa0e64a09b35a90",
+        "text": "独立备忘4：虚拟试验台QB-42465的流道显示页面含“叶栅流动损失增加”字样，但本记录仅登记界面刷新批次781；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "07ea3399e7c4ee7483017e00a27a1fb9f5b2e4c9fdc0ecd72fcf8aa91ad20737",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 762,
+            "end": 836,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "93a1caa0e64a09b35a90f600c337de533f64ed6583128b1fea1d68434ba930f1"
+          }
+        }
+      },
+      {
+        "chunk_id": "d6a56ad01d3f44f6fb46eb104de90490800b701cf314d15fde7999a3173eafb4",
+        "document_id": "control2-03-0",
+        "version_id": "control2-03-0-93a1caa0e64a09b35a90",
+        "text": "参数记录：虚拟试验台QB-42465的流道通道采样周期固定为32毫秒。该参数不提供故障因果链。",
+        "text_sha256": "538ba3b66c0909dabe14f71c8afec0567dcadac6d3551bf35b7d2f7348f2eb81",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 838,
+            "end": 885,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "93a1caa0e64a09b35a90f600c337de533f64ed6583128b1fea1d68434ba930f1"
+          }
+        }
+      },
+      {
+        "chunk_id": "ec59dba55d3ad7190d50bdd65a8ffb395a54ef01fa59c4785ceac499252328fc",
+        "document_id": "control2-03-0",
+        "version_id": "control2-03-0-93a1caa0e64a09b35a90",
+        "text": "边界记录：本场景明确规定，虚拟试验台QB-42465仅观察到QB-42465的级效率监控下降，不足以确定QB-42465的压气机静子表面沉积已经发生；其他未列出的原因仍可能产生相同末端指示。该逆推不是充分条件。",
+        "text_sha256": "3157f3460a0ce1db57a73faf53c443db1b5f49e5552fc85542be10621feb6b74",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 887,
+            "end": 992,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "93a1caa0e64a09b35a90f600c337de533f64ed6583128b1fea1d68434ba930f1"
+          }
+        }
+      },
+      {
+        "chunk_id": "3a6f603f1c09c37ef6f23b215b1ed269b52dcb00bb758ecf3bd138c929f2acb8",
+        "document_id": "control2-03-0",
+        "version_id": "control2-03-0-93a1caa0e64a09b35a90",
+        "text": "独立备忘2：虚拟试验台QB-42465的流道显示页面含“压气机静子表面沉积”字样，但本记录仅登记界面刷新批次962；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "b3910b9dc184af0d3a221751f6245579bc80eab4f0d63129eb72b38401b7f476",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 994,
+            "end": 1069,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "93a1caa0e64a09b35a90f600c337de533f64ed6583128b1fea1d68434ba930f1"
+          }
+        }
+      },
+      {
+        "chunk_id": "6e0aa29107638d8d934f44d670c86e4b22391e5dafd097f122c382cf9234ea21",
+        "document_id": "control2-03-0",
+        "version_id": "control2-03-0-93a1caa0e64a09b35a90",
+        "text": "独立备忘1：虚拟试验台QB-42465的流道显示页面含“级效率监控下降”字样，但本记录仅登记界面刷新批次626；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "4e682b99e0241f1e891dd52bf407286e4e3ba22e4a30f8188d79a6f326db04d5",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 1071,
+            "end": 1144,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "93a1caa0e64a09b35a90f600c337de533f64ed6583128b1fea1d68434ba930f1"
+          }
+        }
+      },
+      {
+        "chunk_id": "cc43cf1979a05f406002323ab1cd95405184cdcea90ba2d3c6025a317338a6cf",
+        "document_id": "control2-03-0",
+        "version_id": "control2-03-0-93a1caa0e64a09b35a90",
+        "text": "触发记录：虚拟试验台QB-42465仅在稳态保持不少于2秒后才进入试验模式；转速适用范围由单独的适用记录规定。",
+        "text_sha256": "86af01e08b17e58d8a14f79a9eea387fd81e74bd031ab2feb52ced57a66e529a",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 1146,
+            "end": 1201,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "93a1caa0e64a09b35a90f600c337de533f64ed6583128b1fea1d68434ba930f1"
+          }
+        }
+      }
+    ]
+  },
+  "control2-04-0": {
+    "document_id": "control2-04-0",
+    "title": "程序化构造的虚拟试验台规则资料",
+    "source_url": null,
+    "version_id": "control2-04-0-f261bc83c7886e6273d8",
+    "origin": "synthetic_rule_generated",
+    "chunks": [
+      {
+        "chunk_id": "fdb57cdfa286cc22d3696de0260961ad235c5ca7e534bbfc70134d19fb46d384",
+        "document_id": "control2-04-0",
+        "version_id": "control2-04-0-f261bc83c7886e6273d8",
+        "text": "适用记录：虚拟试验台QB-32054的试验模式仅用于转速指示32%至52%的闭区间；其他转速不按该模式判读。",
+        "text_sha256": "732fac351626c1f663eeb46eac39ce4ba9fb6f63f248892bd324d1a4191cc89d",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 0,
+            "end": 54,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "f261bc83c7886e6273d8dcf69bbefc171fd23d53a7635609ebc6ffae6dbe5b48"
+          }
+        }
+      },
+      {
+        "chunk_id": "5a8ab56a1c398107f608f0ba62984b5224da9867451c7fd66167876dc841af02",
+        "document_id": "control2-04-0",
+        "version_id": "control2-04-0-f261bc83c7886e6273d8",
+        "text": "本记录只陈述虚拟试验台QB-32054的一条设定规则：当QB-32054的静子角度同步性降低发生时，引起QB-32054的周向入射分布偏离。本条不陈述其他后续环节。",
+        "text_sha256": "a3c37a641652486430e47b238882120b65fb4f934154505f2fd5d7c8c1202ebf",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 56,
+            "end": 138,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "f261bc83c7886e6273d8dcf69bbefc171fd23d53a7635609ebc6ffae6dbe5b48"
+          }
+        }
+      },
+      {
+        "chunk_id": "556bc7bdbea993927e585bfbddf29f0ec6796c6ac59ccd1354c1eac7337a79fd",
+        "document_id": "control2-04-0",
+        "version_id": "control2-04-0-f261bc83c7886e6273d8",
+        "text": "独立备忘1：虚拟试验台QB-32054的连杆显示页面含“级间匹配告警”字样，但本记录仅登记界面刷新批次134；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "07e90c1974a0d8e879715fbd60067772dbee34bb2e1d65ddff995792e8cb5f7d",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 140,
+            "end": 212,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "f261bc83c7886e6273d8dcf69bbefc171fd23d53a7635609ebc6ffae6dbe5b48"
+          }
+        }
+      },
+      {
+        "chunk_id": "aa88d5f54620277230a8086a1fc05bb59d8afe0404862f93aed20b2379a01813",
+        "document_id": "control2-04-0",
+        "version_id": "control2-04-0-f261bc83c7886e6273d8",
+        "text": "本记录只陈述虚拟试验台QB-32054的一条设定规则：当QB-32054的周向入射分布偏离发生时，引起QB-32054的级间匹配告警。本条不陈述其他后续环节。",
+        "text_sha256": "ebd5720cdc6bac41673afe45936770da42eb8bc8f587b17a78cfbd0c932c263d",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 214,
+            "end": 293,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "f261bc83c7886e6273d8dcf69bbefc171fd23d53a7635609ebc6ffae6dbe5b48"
+          }
+        }
+      },
+      {
+        "chunk_id": "4e2ab8eb67768ed4d7ee61c6a56abf33c95b6601a58b98b917395beb8d77e0af",
+        "document_id": "control2-04-0",
+        "version_id": "control2-04-0-f261bc83c7886e6273d8",
+        "text": "独立备忘4：虚拟试验台QB-32054的连杆显示页面含“级间匹配告警”字样，但本记录仅登记界面刷新批次724；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "4ae4f3176c4fcf4be4c0e4ea9bb2014ecb20571d290aeac361d195bdc95b6cd8",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 295,
+            "end": 367,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "f261bc83c7886e6273d8dcf69bbefc171fd23d53a7635609ebc6ffae6dbe5b48"
+          }
+        }
+      },
+      {
+        "chunk_id": "980ffbef488aa7aad066cca1aa845d7b917e0a5c0d9fb4ec522153cc637fe620",
+        "document_id": "control2-04-0",
+        "version_id": "control2-04-0-f261bc83c7886e6273d8",
+        "text": "触发记录：虚拟试验台QB-32054仅在稳态保持不少于2秒后才进入试验模式；转速适用范围由单独的适用记录规定。",
+        "text_sha256": "3d613819d485b5bbacd999af0ee8770ac5060ce1afc0e4aa117881ccc05a0eb6",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 369,
+            "end": 424,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "f261bc83c7886e6273d8dcf69bbefc171fd23d53a7635609ebc6ffae6dbe5b48"
+          }
+        }
+      },
+      {
+        "chunk_id": "1294795436051b1cdffdd9786a08d78c73bf4574cd667bb5dbc6e8efa2e7fde8",
+        "document_id": "control2-04-0",
+        "version_id": "control2-04-0-f261bc83c7886e6273d8",
+        "text": "独立备忘8：虚拟试验台QB-32054的连杆显示页面含“级间匹配告警”字样，但本记录仅登记界面刷新批次291；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "1e01ff562a9f30d66cabd295a6db2fcfebcb45acad583801d4e76df14a15ffd2",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 426,
+            "end": 498,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "f261bc83c7886e6273d8dcf69bbefc171fd23d53a7635609ebc6ffae6dbe5b48"
+          }
+        }
+      },
+      {
+        "chunk_id": "ab096d549b40e8d66e623e76481deeeb75b7b8bad2a5881d2c4867c7fdbd0265",
+        "document_id": "control2-04-0",
+        "version_id": "control2-04-0-f261bc83c7886e6273d8",
+        "text": "独立备忘5：虚拟试验台QB-32054的连杆显示页面含“级间匹配告警”字样，但本记录仅登记界面刷新批次711；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "94e51388e38b0044f0fa829075e5fe21c405b9506458e64c75b9ea141d5128ad",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 500,
+            "end": 572,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "f261bc83c7886e6273d8dcf69bbefc171fd23d53a7635609ebc6ffae6dbe5b48"
+          }
+        }
+      },
+      {
+        "chunk_id": "46035c9e80a992162fe717a1e609ceae3098b0cea68f6f3aec83631c1dcd2bf6",
+        "document_id": "control2-04-0",
+        "version_id": "control2-04-0-f261bc83c7886e6273d8",
+        "text": "独立备忘7：虚拟试验台QB-32054的连杆显示页面含“级间匹配告警”字样，但本记录仅登记界面刷新批次872；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "9f92d19dce6614fb5d639d0b45d1e850ea47bb06381155688f0a459b0b297a69",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 574,
+            "end": 646,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "f261bc83c7886e6273d8dcf69bbefc171fd23d53a7635609ebc6ffae6dbe5b48"
+          }
+        }
+      },
+      {
+        "chunk_id": "af79673ca58c963ecd786e5ab95184fad42e479401b4edb05ba05b3d14b7af0d",
+        "document_id": "control2-04-0",
+        "version_id": "control2-04-0-f261bc83c7886e6273d8",
+        "text": "参数记录：虚拟试验台QB-32054的连杆通道采样周期固定为32毫秒。该参数不提供故障因果链。",
+        "text_sha256": "5d85b91ddd964d144b7bb313084d506319f34ea7b65113bed5a2e19f8e8774e0",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 648,
+            "end": 695,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "f261bc83c7886e6273d8dcf69bbefc171fd23d53a7635609ebc6ffae6dbe5b48"
+          }
+        }
+      },
+      {
+        "chunk_id": "ac964215481bbb8f0bd0415011a3e3597edab27abb806018fa185ba8b773c130",
+        "document_id": "control2-04-0",
+        "version_id": "control2-04-0-f261bc83c7886e6273d8",
+        "text": "本记录只陈述虚拟试验台QB-32054的一条设定规则：当QB-32054的可调静子连杆间隙增大发生时，引起QB-32054的静子角度同步性降低。本条不陈述其他后续环节。",
+        "text_sha256": "133241d96957a7718eb6ddb5cee5778121476e0fe4409552b69732267cd78730",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 697,
+            "end": 781,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "f261bc83c7886e6273d8dcf69bbefc171fd23d53a7635609ebc6ffae6dbe5b48"
+          }
+        }
+      },
+      {
+        "chunk_id": "5a356ceeee8e16f4491b484f763880a115ed354db1f03c73580bddb1887f9a57",
+        "document_id": "control2-04-0",
+        "version_id": "control2-04-0-f261bc83c7886e6273d8",
+        "text": "虚拟试验台QB-32054的监测规则：QB-32054的监测通道短时掉线会导致QB-32054的观察日志缺帧；这是独立于主部件链的记录质量故障。",
+        "text_sha256": "97bf4f900dda5d6cbb63f71ddb8358fab706720f08a5a5228ccadf6b1ee9a3bf",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 783,
+            "end": 855,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "f261bc83c7886e6273d8dcf69bbefc171fd23d53a7635609ebc6ffae6dbe5b48"
+          }
+        }
+      },
+      {
+        "chunk_id": "e2b4cb3503861d2b686b0a6b2e8efe3bbab805facdd67cb401be94aafbff6820",
+        "document_id": "control2-04-0",
+        "version_id": "control2-04-0-f261bc83c7886e6273d8",
+        "text": "边界记录：本场景明确规定，虚拟试验台QB-32054仅观察到QB-32054的级间匹配告警，不足以确定QB-32054的可调静子连杆间隙增大已经发生；其他未列出的原因仍可能产生相同末端指示。该逆推不是充分条件。",
+        "text_sha256": "f58caeb03af041e7e0e7498472b2f4fd1599bdf643df91eac96db25fabf10450",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 857,
+            "end": 962,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "f261bc83c7886e6273d8dcf69bbefc171fd23d53a7635609ebc6ffae6dbe5b48"
+          }
+        }
+      },
+      {
+        "chunk_id": "413c3e770b849fbb0b53134ee67489138fda40af97deb7b0e2617ca689b6391b",
+        "document_id": "control2-04-0",
+        "version_id": "control2-04-0-f261bc83c7886e6273d8",
+        "text": "独立备忘6：虚拟试验台QB-32054的连杆显示页面含“静子角度同步性降低”字样，但本记录仅登记界面刷新批次380；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "8ce692b17f1f616d6c71b468746ed5855be60d84a840af3d2cd69b0b734b2bf0",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 964,
+            "end": 1039,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "f261bc83c7886e6273d8dcf69bbefc171fd23d53a7635609ebc6ffae6dbe5b48"
+          }
+        }
+      },
+      {
+        "chunk_id": "926950b6e0128469139715fc6c1e11abccddf494efc7910133b876d9b575d705",
+        "document_id": "control2-04-0",
+        "version_id": "control2-04-0-f261bc83c7886e6273d8",
+        "text": "独立备忘3：虚拟试验台QB-32054的连杆显示页面含“静子角度同步性降低”字样，但本记录仅登记界面刷新批次697；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "f4127f69ec3caddb2c3ff8a5a1d01a743e446eccc06e1c6948dba3f3294eaf5a",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 1041,
+            "end": 1116,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "f261bc83c7886e6273d8dcf69bbefc171fd23d53a7635609ebc6ffae6dbe5b48"
+          }
+        }
+      },
+      {
+        "chunk_id": "9cdac4a4c23a21b41da8e5352f076fbf6268fc901402146a69516b6ef29de66c",
+        "document_id": "control2-04-0",
+        "version_id": "control2-04-0-f261bc83c7886e6273d8",
+        "text": "独立备忘2：虚拟试验台QB-32054的连杆显示页面含“级间匹配告警”字样，但本记录仅登记界面刷新批次295；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "61fe2f1e5ecbfb92fba275fdc8ce31a0ec032fa957eda3287e516e31dbc6862d",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 1118,
+            "end": 1190,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "f261bc83c7886e6273d8dcf69bbefc171fd23d53a7635609ebc6ffae6dbe5b48"
+          }
+        }
+      }
+    ]
+  },
+  "control2-05-0": {
+    "document_id": "control2-05-0",
+    "title": "程序化构造的虚拟试验台规则资料",
+    "source_url": null,
+    "version_id": "control2-05-0-c9d7f581d3bd91350fd0",
+    "origin": "synthetic_rule_generated",
+    "chunks": [
+      {
+        "chunk_id": "bc4402c5e6121493251c0a159e629755053ac1a25bf6c71f9df79eaac6ef7104",
+        "document_id": "control2-05-0",
+        "version_id": "control2-05-0-c9d7f581d3bd91350fd0",
+        "text": "独立备忘7：虚拟试验台QB-64942的间隙显示页面含“压比波动监控触发”字样，但本记录仅登记界面刷新批次517；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "0c0486decdf13e2a410cbbcacbe85f97058b1fa6b9f5e9c9c04f04a667b38901",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 0,
+            "end": 74,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "c9d7f581d3bd91350fd0f23e2d996dc0f07b23c86b7863f98f44842952d635dd"
+          }
+        }
+      },
+      {
+        "chunk_id": "d8db310b7a2981e9ce06029d43667d9be25d68f4b4eebc3c2267d5bc902da44d",
+        "document_id": "control2-05-0",
+        "version_id": "control2-05-0-c9d7f581d3bd91350fd0",
+        "text": "虚拟试验台QB-64942的监测规则：QB-64942的监测通道短时掉线会导致QB-64942的观察日志缺帧；这是独立于主部件链的记录质量故障。",
+        "text_sha256": "6f490094fb5e180118e4174a2467619e2f98df277ce338111a4abc888ffa9ba1",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 76,
+            "end": 148,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "c9d7f581d3bd91350fd0f23e2d996dc0f07b23c86b7863f98f44842952d635dd"
+          }
+        }
+      },
+      {
+        "chunk_id": "f0cf835a7379ea7ef8895c8839e9e20848222a8a003747f4fb4658d5ba8356c6",
+        "document_id": "control2-05-0",
+        "version_id": "control2-05-0-c9d7f581d3bd91350fd0",
+        "text": "独立备忘8：虚拟试验台QB-64942的间隙显示页面含“叶尖间隙分布偏斜”字样，但本记录仅登记界面刷新批次392；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "e94fe89bf0f8eb8421ddf130fa8612206858dbf093fcf5f22517aa2e851c2e1d",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 150,
+            "end": 224,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "c9d7f581d3bd91350fd0f23e2d996dc0f07b23c86b7863f98f44842952d635dd"
+          }
+        }
+      },
+      {
+        "chunk_id": "1f98915fc775ff11093fb3c2881e85e0579d42ef6a603b2746cc357eeefa67cd",
+        "document_id": "control2-05-0",
+        "version_id": "control2-05-0-c9d7f581d3bd91350fd0",
+        "text": "独立备忘6：虚拟试验台QB-64942的间隙显示页面含“机匣局部变形”字样，但本记录仅登记界面刷新批次313；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "70f0d62fab7f6e3a68068aa535898a1bc7e644f77661819a28e9e0447249fb5d",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 226,
+            "end": 298,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "c9d7f581d3bd91350fd0f23e2d996dc0f07b23c86b7863f98f44842952d635dd"
+          }
+        }
+      },
+      {
+        "chunk_id": "70d0c19ca4ffd09587d0b6b9564b6a9d14e806b053634e472da1a33f148023d1",
+        "document_id": "control2-05-0",
+        "version_id": "control2-05-0-c9d7f581d3bd91350fd0",
+        "text": "本记录只陈述虚拟试验台QB-64942的一条设定规则：当QB-64942的间隙泄漏分布不均发生时，引起QB-64942的压比波动监控触发。本条不陈述其他后续环节。",
+        "text_sha256": "257dfe8d400fda9f7e8506ec2bd475625efc98c1217bcbd8983e5074873ce2d7",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 300,
+            "end": 381,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "c9d7f581d3bd91350fd0f23e2d996dc0f07b23c86b7863f98f44842952d635dd"
+          }
+        }
+      },
+      {
+        "chunk_id": "76cf3b672327366560e8dfdedb1663b60e3d026fe76bd736c30860e16a2ab548",
+        "document_id": "control2-05-0",
+        "version_id": "control2-05-0-c9d7f581d3bd91350fd0",
+        "text": "本记录只陈述虚拟试验台QB-64942的一条设定规则：当QB-64942的叶尖间隙分布偏斜发生时，引起QB-64942的间隙泄漏分布不均。本条不陈述其他后续环节。",
+        "text_sha256": "4645dd53d26445e079782722427ec35bcc0c6990132d1710b99e9ba1f6e116ab",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 383,
+            "end": 464,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "c9d7f581d3bd91350fd0f23e2d996dc0f07b23c86b7863f98f44842952d635dd"
+          }
+        }
+      },
+      {
+        "chunk_id": "de79e8745277f2355c6151256699a25319ecb9770d7b0df25b2583d6ce23e099",
+        "document_id": "control2-05-0",
+        "version_id": "control2-05-0-c9d7f581d3bd91350fd0",
+        "text": "独立备忘5：虚拟试验台QB-64942的间隙显示页面含“叶尖间隙分布偏斜”字样，但本记录仅登记界面刷新批次936；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "e47cf4907f7eb1c3e8015571e040e9fbf0848387a2811787374f09cf51685d15",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 466,
+            "end": 540,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "c9d7f581d3bd91350fd0f23e2d996dc0f07b23c86b7863f98f44842952d635dd"
+          }
+        }
+      },
+      {
+        "chunk_id": "4952f0373bcd6dcd2c3eec1750be7b2dc3c0df262f815f10853f03a3a6e37572",
+        "document_id": "control2-05-0",
+        "version_id": "control2-05-0-c9d7f581d3bd91350fd0",
+        "text": "适用记录：虚拟试验台QB-64942的试验模式仅用于转速指示36%至56%的闭区间；其他转速不按该模式判读。",
+        "text_sha256": "da706f8588ac176d3688867b4f03129b4d24f0967fbbb0c534495e515ff42214",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 542,
+            "end": 596,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "c9d7f581d3bd91350fd0f23e2d996dc0f07b23c86b7863f98f44842952d635dd"
+          }
+        }
+      },
+      {
+        "chunk_id": "9c1279d7eb03acc0cf70887f974ee08aab786f02ef6f9b1277901fdf30ec7bff",
+        "document_id": "control2-05-0",
+        "version_id": "control2-05-0-c9d7f581d3bd91350fd0",
+        "text": "独立备忘1：虚拟试验台QB-64942的间隙显示页面含“叶尖间隙分布偏斜”字样，但本记录仅登记界面刷新批次452；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "4e8339337f645c631b6f75c1a7b54877bf659e6e52267c1ac25dc4811ea2b2b3",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 598,
+            "end": 672,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "c9d7f581d3bd91350fd0f23e2d996dc0f07b23c86b7863f98f44842952d635dd"
+          }
+        }
+      },
+      {
+        "chunk_id": "20650594361ef53fc87c15d59271761d30cdeb92e0fef8c74c4de95fed2323c8",
+        "document_id": "control2-05-0",
+        "version_id": "control2-05-0-c9d7f581d3bd91350fd0",
+        "text": "独立备忘2：虚拟试验台QB-64942的间隙显示页面含“压比波动监控触发”字样，但本记录仅登记界面刷新批次913；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "e8ba9775669940a5ae98f537c5b79c0734de50265c494af92467f6630f94e453",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 674,
+            "end": 748,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "c9d7f581d3bd91350fd0f23e2d996dc0f07b23c86b7863f98f44842952d635dd"
+          }
+        }
+      },
+      {
+        "chunk_id": "cec1b7695098d83456deaf8111eb04b1cb4a94d7c9f9dfcc46afeb60dd5265cc",
+        "document_id": "control2-05-0",
+        "version_id": "control2-05-0-c9d7f581d3bd91350fd0",
+        "text": "独立备忘3：虚拟试验台QB-64942的间隙显示页面含“叶尖间隙分布偏斜”字样，但本记录仅登记界面刷新批次883；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "6ec686eb391f0bfcbcd94ebf36fc7f4707fa04ff85909176607e0c022bf6a54b",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 750,
+            "end": 824,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "c9d7f581d3bd91350fd0f23e2d996dc0f07b23c86b7863f98f44842952d635dd"
+          }
+        }
+      },
+      {
+        "chunk_id": "071b8e7737ba23e49c1d8b303b2692d5856c9abb636224ef0d59b086a4093a20",
+        "document_id": "control2-05-0",
+        "version_id": "control2-05-0-c9d7f581d3bd91350fd0",
+        "text": "参数记录：虚拟试验台QB-64942的间隙通道采样周期固定为24毫秒。该参数不提供故障因果链。",
+        "text_sha256": "5db1086932a68716f8762d886dadcf1e046bbc0dc8a31cb5dd6f7e3c8d189808",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 826,
+            "end": 873,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "c9d7f581d3bd91350fd0f23e2d996dc0f07b23c86b7863f98f44842952d635dd"
+          }
+        }
+      },
+      {
+        "chunk_id": "d43266c5e50b9c4c7df38877a09faae783a19e6b1bba98dc3502f5ef7b65f8de",
+        "document_id": "control2-05-0",
+        "version_id": "control2-05-0-c9d7f581d3bd91350fd0",
+        "text": "独立备忘4：虚拟试验台QB-64942的间隙显示页面含“压比波动监控触发”字样，但本记录仅登记界面刷新批次205；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "8617f1aba182b4390fecb26eb87d1576954a999ebe5ccb24a131975c18559688",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 875,
+            "end": 949,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "c9d7f581d3bd91350fd0f23e2d996dc0f07b23c86b7863f98f44842952d635dd"
+          }
+        }
+      },
+      {
+        "chunk_id": "66af746e359ce0953742ad388536fbd8c36128b96da9d7a69313a2cf8725330b",
+        "document_id": "control2-05-0",
+        "version_id": "control2-05-0-c9d7f581d3bd91350fd0",
+        "text": "触发记录：虚拟试验台QB-64942仅在稳态保持不少于2秒后才进入试验模式；转速适用范围由单独的适用记录规定。",
+        "text_sha256": "c4211382aca797bfd3fee7306f8f97cdd2d25597a88ddfb0cc6e419ace683715",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 951,
+            "end": 1006,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "c9d7f581d3bd91350fd0f23e2d996dc0f07b23c86b7863f98f44842952d635dd"
+          }
+        }
+      },
+      {
+        "chunk_id": "a835d8c6aade2eb1c524d0816e3149763ce4d18dc23823299150c2f00d13f71b",
+        "document_id": "control2-05-0",
+        "version_id": "control2-05-0-c9d7f581d3bd91350fd0",
+        "text": "本记录只陈述虚拟试验台QB-64942的一条设定规则：当QB-64942的机匣局部变形发生时，引起QB-64942的叶尖间隙分布偏斜。本条不陈述其他后续环节。",
+        "text_sha256": "9e04adadd9b2789670da48b96bae10e742bc1f11e529852864d9870f7a0e9151",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 1008,
+            "end": 1087,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "c9d7f581d3bd91350fd0f23e2d996dc0f07b23c86b7863f98f44842952d635dd"
+          }
+        }
+      },
+      {
+        "chunk_id": "4a55618ba66fec8723faef01cbddab0f19092217aa518de290b98d9869c579fc",
+        "document_id": "control2-05-0",
+        "version_id": "control2-05-0-c9d7f581d3bd91350fd0",
+        "text": "边界记录：本场景明确规定，虚拟试验台QB-64942仅观察到QB-64942的压比波动监控触发，不足以确定QB-64942的机匣局部变形已经发生；其他未列出的原因仍可能产生相同末端指示。该逆推不是充分条件。",
+        "text_sha256": "75ba6744c2b8e499d1f050bb337a1b1af3b8f1b3ad5bd96b1b2909018fbfb87c",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 1089,
+            "end": 1192,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "c9d7f581d3bd91350fd0f23e2d996dc0f07b23c86b7863f98f44842952d635dd"
+          }
+        }
+      }
+    ]
+  },
+  "control2-06-0": {
+    "document_id": "control2-06-0",
+    "title": "程序化构造的虚拟试验台规则资料",
+    "source_url": null,
+    "version_id": "control2-06-0-40d2a8623654a4318bd4",
+    "origin": "synthetic_rule_generated",
+    "chunks": [
+      {
+        "chunk_id": "ec74091a03f408b19dd1fab424731ac1f0b1b2ffb76046fd21f04168239fb4a1",
+        "document_id": "control2-06-0",
+        "version_id": "control2-06-0-40d2a8623654a4318bd4",
+        "text": "独立备忘2：虚拟试验台QB-75997的雾化显示页面含“雾滴尺度分布变宽”字样，但本记录仅登记界面刷新批次153；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "a553f677015b95c332dac72858274eb8495dc32cb42d1175070da552296e90f4",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 0,
+            "end": 74,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "40d2a8623654a4318bd4b2a361a263088fe4162185ec3eb09e7794aebddfdc15"
+          }
+        }
+      },
+      {
+        "chunk_id": "1782c87e04d8f9dd6880ebd1b071a4ce17e6d6f78c7f998ac3cacbcbc0bc1fe1",
+        "document_id": "control2-06-0",
+        "version_id": "control2-06-0-40d2a8623654a4318bd4",
+        "text": "本记录只陈述虚拟试验台QB-75997的一条设定规则：当QB-75997的喷油器雾化孔磨损发生时，引起QB-75997的雾滴尺度分布变宽。本条不陈述其他后续环节。",
+        "text_sha256": "4109d87611d56be99ac2ecad89a32171cda564d80366925aac71d2df399ef7d1",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 76,
+            "end": 157,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "40d2a8623654a4318bd4b2a361a263088fe4162185ec3eb09e7794aebddfdc15"
+          }
+        }
+      },
+      {
+        "chunk_id": "194098b5b4f89f960b4228726f779b8cb3e3ffaef163ac066fe062453baabda5",
+        "document_id": "control2-06-0",
+        "version_id": "control2-06-0-40d2a8623654a4318bd4",
+        "text": "边界记录：本场景明确规定，虚拟试验台QB-75997仅观察到QB-75997的燃烧稳定监控异常，不足以确定QB-75997的喷油器雾化孔磨损已经发生；其他未列出的原因仍可能产生相同末端指示。该逆推不是充分条件。",
+        "text_sha256": "65ac90faee60db03290b10067c8228e7c80ed86abf79d6a8911fba8b8d689709",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 159,
+            "end": 264,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "40d2a8623654a4318bd4b2a361a263088fe4162185ec3eb09e7794aebddfdc15"
+          }
+        }
+      },
+      {
+        "chunk_id": "aff51cb605142e6f62cc230cc21e22c4f0e03dcff726e5454f55e5c66ac67381",
+        "document_id": "control2-06-0",
+        "version_id": "control2-06-0-40d2a8623654a4318bd4",
+        "text": "适用记录：虚拟试验台QB-75997的试验模式仅用于转速指示41%至61%的闭区间；其他转速不按该模式判读。",
+        "text_sha256": "5f1177be8108edd14603d5889fcf82090cfd05d31e9aa4f8546e38a9c2f47933",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 266,
+            "end": 320,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "40d2a8623654a4318bd4b2a361a263088fe4162185ec3eb09e7794aebddfdc15"
+          }
+        }
+      },
+      {
+        "chunk_id": "a1283b18fcf8566e8d6d7e8a3d9360383adbf67ea4ad7651724ba53e7f0853e4",
+        "document_id": "control2-06-0",
+        "version_id": "control2-06-0-40d2a8623654a4318bd4",
+        "text": "独立备忘7：虚拟试验台QB-75997的雾化显示页面含“喷油器雾化孔磨损”字样，但本记录仅登记界面刷新批次238；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "7050fc9bebc4d8bd9d0032000801c74cadb040f91f5a996b168481ef8bbede55",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 322,
+            "end": 396,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "40d2a8623654a4318bd4b2a361a263088fe4162185ec3eb09e7794aebddfdc15"
+          }
+        }
+      },
+      {
+        "chunk_id": "73c86138b8ffe09c7f16ab6b49afc2b923d25043b061f06f2be458ad32f5185c",
+        "document_id": "control2-06-0",
+        "version_id": "control2-06-0-40d2a8623654a4318bd4",
+        "text": "本记录只陈述虚拟试验台QB-75997的一条设定规则：当QB-75997的雾滴尺度分布变宽发生时，引起QB-75997的蒸发完成位置后移。本条不陈述其他后续环节。",
+        "text_sha256": "5006f3e15e880c8786057a7c9c70fd34dec9e3d18f686f09e64296396f4ae8b9",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 398,
+            "end": 479,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "40d2a8623654a4318bd4b2a361a263088fe4162185ec3eb09e7794aebddfdc15"
+          }
+        }
+      },
+      {
+        "chunk_id": "84ee08c36cbba5b8dc9f6f446ecff35df2e2fa0700a74a55721587bf114c75c9",
+        "document_id": "control2-06-0",
+        "version_id": "control2-06-0-40d2a8623654a4318bd4",
+        "text": "参数记录：虚拟试验台QB-75997的雾化通道采样周期固定为32毫秒。该参数不提供故障因果链。",
+        "text_sha256": "f5bab847e7b34418d69767abd22ae2ec18fa2f2aff9454326e54c7ed5276403a",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 481,
+            "end": 528,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "40d2a8623654a4318bd4b2a361a263088fe4162185ec3eb09e7794aebddfdc15"
+          }
+        }
+      },
+      {
+        "chunk_id": "81806377c358715bb108f914b0105c1f5a480f2225b35bab988c038cbe0bcf5c",
+        "document_id": "control2-06-0",
+        "version_id": "control2-06-0-40d2a8623654a4318bd4",
+        "text": "独立备忘4：虚拟试验台QB-75997的雾化显示页面含“喷油器雾化孔磨损”字样，但本记录仅登记界面刷新批次496；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "c4fa82533d8816c17fa3329a278742be7615acc795361e54b47f0cc8be861c25",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 530,
+            "end": 604,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "40d2a8623654a4318bd4b2a361a263088fe4162185ec3eb09e7794aebddfdc15"
+          }
+        }
+      },
+      {
+        "chunk_id": "2ab2bb61c4ea1f0b6e004d6a1001cea6dca26626a658d4f063b1f7e6665985ec",
+        "document_id": "control2-06-0",
+        "version_id": "control2-06-0-40d2a8623654a4318bd4",
+        "text": "虚拟试验台QB-75997的监测规则：QB-75997的监测通道短时掉线会导致QB-75997的观察日志缺帧；这是独立于主部件链的记录质量故障。",
+        "text_sha256": "908ef2da1c64a465eea263a659f78052a0d6970f7a08a039f2888350929e2858",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 606,
+            "end": 678,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "40d2a8623654a4318bd4b2a361a263088fe4162185ec3eb09e7794aebddfdc15"
+          }
+        }
+      },
+      {
+        "chunk_id": "3f115a815a9a15b42deac3e8ddb82250ddf93820680a7c37c34311c524e1a6d4",
+        "document_id": "control2-06-0",
+        "version_id": "control2-06-0-40d2a8623654a4318bd4",
+        "text": "本记录只陈述虚拟试验台QB-75997的一条设定规则：当QB-75997的蒸发完成位置后移发生时，引起QB-75997的燃烧稳定监控异常。本条不陈述其他后续环节。",
+        "text_sha256": "683c9425dcf38aaae2265283e46caa0e884c542e2756c56f8669ed2ffefdbedf",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 680,
+            "end": 761,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "40d2a8623654a4318bd4b2a361a263088fe4162185ec3eb09e7794aebddfdc15"
+          }
+        }
+      },
+      {
+        "chunk_id": "53866b70dfab8bae003db2f9724101ba670826115e5d840526584ebc9d9a8109",
+        "document_id": "control2-06-0",
+        "version_id": "control2-06-0-40d2a8623654a4318bd4",
+        "text": "独立备忘3：虚拟试验台QB-75997的雾化显示页面含“燃烧稳定监控异常”字样，但本记录仅登记界面刷新批次721；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "401390cff4d3f262c424cee40f41f6f5a0e4893e8b6897c5121a7739b885a793",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 763,
+            "end": 837,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "40d2a8623654a4318bd4b2a361a263088fe4162185ec3eb09e7794aebddfdc15"
+          }
+        }
+      },
+      {
+        "chunk_id": "ba15965e16b4c4aa25651e6e1b215b44f98f17f54efcac8c73fe3165ffb9f907",
+        "document_id": "control2-06-0",
+        "version_id": "control2-06-0-40d2a8623654a4318bd4",
+        "text": "独立备忘6：虚拟试验台QB-75997的雾化显示页面含“喷油器雾化孔磨损”字样，但本记录仅登记界面刷新批次501；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "dfb3baa4c948c14434f2840eb0ea551ccca889531d722edd8122d67169ad484a",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 839,
+            "end": 913,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "40d2a8623654a4318bd4b2a361a263088fe4162185ec3eb09e7794aebddfdc15"
+          }
+        }
+      },
+      {
+        "chunk_id": "26b3c56a9ba7e4a40a9ec64792a927c03a48f0f3a0bea68141ba4df000090018",
+        "document_id": "control2-06-0",
+        "version_id": "control2-06-0-40d2a8623654a4318bd4",
+        "text": "独立备忘8：虚拟试验台QB-75997的雾化显示页面含“雾滴尺度分布变宽”字样，但本记录仅登记界面刷新批次947；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "21f6358fd70e3f65f5db251767728cad0c0829dfa472bbe1ad51405b28724103",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 915,
+            "end": 989,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "40d2a8623654a4318bd4b2a361a263088fe4162185ec3eb09e7794aebddfdc15"
+          }
+        }
+      },
+      {
+        "chunk_id": "787855f231918412a2c574a8ce73517ad03bda402eb24b05e8eab176475feb18",
+        "document_id": "control2-06-0",
+        "version_id": "control2-06-0-40d2a8623654a4318bd4",
+        "text": "触发记录：虚拟试验台QB-75997仅在稳态保持不少于2秒后才进入试验模式；转速适用范围由单独的适用记录规定。",
+        "text_sha256": "6d58414faae52359f885d70ec7a84fb05eb18e9c374ead796501e3f665efcff9",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 991,
+            "end": 1046,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "40d2a8623654a4318bd4b2a361a263088fe4162185ec3eb09e7794aebddfdc15"
+          }
+        }
+      },
+      {
+        "chunk_id": "57d2444ff0817a6f14a5ced5b648d62176dca2764ced0608b769451934e92230",
+        "document_id": "control2-06-0",
+        "version_id": "control2-06-0-40d2a8623654a4318bd4",
+        "text": "独立备忘1：虚拟试验台QB-75997的雾化显示页面含“燃烧稳定监控异常”字样，但本记录仅登记界面刷新批次990；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "cef48b0911fce9d1bf93597d4043e5bb473f4a20f7d24a5e6487372ee27a1cb7",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 1048,
+            "end": 1122,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "40d2a8623654a4318bd4b2a361a263088fe4162185ec3eb09e7794aebddfdc15"
+          }
+        }
+      },
+      {
+        "chunk_id": "f1640f8da18cca378fc112b82f1c9e23de2d4f4bfcf2e0a3a7dbf2aabe452c0d",
+        "document_id": "control2-06-0",
+        "version_id": "control2-06-0-40d2a8623654a4318bd4",
+        "text": "独立备忘5：虚拟试验台QB-75997的雾化显示页面含“燃烧稳定监控异常”字样，但本记录仅登记界面刷新批次720；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "04b9a04581d9b63412973d3dc653fd91b415fb7c9625442eeb4dec212d5973cb",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 1124,
+            "end": 1198,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "40d2a8623654a4318bd4b2a361a263088fe4162185ec3eb09e7794aebddfdc15"
+          }
+        }
+      }
+    ]
+  },
+  "control2-07-0": {
+    "document_id": "control2-07-0",
+    "title": "程序化构造的虚拟试验台规则资料",
+    "source_url": null,
+    "version_id": "control2-07-0-8aee5c88c3e374ccace8",
+    "origin": "synthetic_rule_generated",
+    "chunks": [
+      {
+        "chunk_id": "9b48951b808aafc12212c049b798981834bbd51df1125d068379ba8ed3f241bb",
+        "document_id": "control2-07-0",
+        "version_id": "control2-07-0-8aee5c88c3e374ccace8",
+        "text": "适用记录：虚拟试验台QB-65045的试验模式仅用于转速指示42%至62%的闭区间；其他转速不按该模式判读。",
+        "text_sha256": "3696349f962c9a142d7a75d6860e6b768c3f707fb5bbff3e2f8f8c204043592e",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 0,
+            "end": 54,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "8aee5c88c3e374ccace821984c68535a1d20a88848a219e87e23f52a5060ecb1"
+          }
+        }
+      },
+      {
+        "chunk_id": "a083f73e4c0633f671f8a8c6e242be90c2a968c2fa2694f49584c765dc9c5042",
+        "document_id": "control2-07-0",
+        "version_id": "control2-07-0-8aee5c88c3e374ccace8",
+        "text": "独立备忘6：虚拟试验台QB-65045的滑油显示页面含“供油温度升高”字样，但本记录仅登记界面刷新批次559；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "4b76c42e749de823bb0f065286158fc8f65ff04291b6faac2d00678b3360f007",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 56,
+            "end": 128,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "8aee5c88c3e374ccace821984c68535a1d20a88848a219e87e23f52a5060ecb1"
+          }
+        }
+      },
+      {
+        "chunk_id": "8e0ef915f66a3debc303f21c7b833b3878afee65e1c475f6ed23d345177e181e",
+        "document_id": "control2-07-0",
+        "version_id": "control2-07-0-8aee5c88c3e374ccace8",
+        "text": "本记录只陈述虚拟试验台QB-65045的一条设定规则：当QB-65045的供油温度升高发生时，引起QB-65045的油温监控告警。本条不陈述其他后续环节。",
+        "text_sha256": "6406fca3f106046175947fe4a30e7c32e142a7f1c8654a7a97aecbfb9c12fa77",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 130,
+            "end": 207,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "8aee5c88c3e374ccace821984c68535a1d20a88848a219e87e23f52a5060ecb1"
+          }
+        }
+      },
+      {
+        "chunk_id": "09181518e9ab9fc9bfd62265a3cb5ba70134f51d682387d9817f2292217cd29d",
+        "document_id": "control2-07-0",
+        "version_id": "control2-07-0-8aee5c88c3e374ccace8",
+        "text": "独立备忘4：虚拟试验台QB-65045的滑油显示页面含“滑油冷却器散热面污染”字样，但本记录仅登记界面刷新批次126；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "adcccf70155c40ab7214773c1a8782bd60f1f0039eb4db8584aa562257f2aab9",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 209,
+            "end": 285,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "8aee5c88c3e374ccace821984c68535a1d20a88848a219e87e23f52a5060ecb1"
+          }
+        }
+      },
+      {
+        "chunk_id": "98674041fa6d50034f725eab50be970d500dedc483565e4a8393531256ef841c",
+        "document_id": "control2-07-0",
+        "version_id": "control2-07-0-8aee5c88c3e374ccace8",
+        "text": "参数记录：虚拟试验台QB-65045的滑油通道采样周期固定为18毫秒。该参数不提供故障因果链。",
+        "text_sha256": "33d399addf7a18e2a1b633b7c3a5b504446bd3cd3e7b7771199d8560663f2cc9",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 287,
+            "end": 334,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "8aee5c88c3e374ccace821984c68535a1d20a88848a219e87e23f52a5060ecb1"
+          }
+        }
+      },
+      {
+        "chunk_id": "8d614a94ae7cd9f1ad5a95fec5175bc870446075ccd87b6a3fbf650d7243a141",
+        "document_id": "control2-07-0",
+        "version_id": "control2-07-0-8aee5c88c3e374ccace8",
+        "text": "本记录只陈述虚拟试验台QB-65045的一条设定规则：当QB-65045的滑油散热能力降低发生时，引起QB-65045的供油温度升高。本条不陈述其他后续环节。",
+        "text_sha256": "d7cc70c9f2e236105b718422af2190b33818032bcbb2d1fd5260af8c308bef27",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 336,
+            "end": 415,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "8aee5c88c3e374ccace821984c68535a1d20a88848a219e87e23f52a5060ecb1"
+          }
+        }
+      },
+      {
+        "chunk_id": "cef3f8450db38cd0aa38316d7b760eea3c9cd1e9559b8cd05cd96e75c51aa042",
+        "document_id": "control2-07-0",
+        "version_id": "control2-07-0-8aee5c88c3e374ccace8",
+        "text": "独立备忘5：虚拟试验台QB-65045的滑油显示页面含“滑油散热能力降低”字样，但本记录仅登记界面刷新批次378；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "d99d71aa0a2495b6c6bc3c3ddaa2b7130b1ee9f7a602363d4b4a4c21b1d4f89a",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 417,
+            "end": 491,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "8aee5c88c3e374ccace821984c68535a1d20a88848a219e87e23f52a5060ecb1"
+          }
+        }
+      },
+      {
+        "chunk_id": "433288203916ab9d55f784cede70b4a2bfc0ef379c4262a164a12c6f1136d636",
+        "document_id": "control2-07-0",
+        "version_id": "control2-07-0-8aee5c88c3e374ccace8",
+        "text": "边界记录：本场景明确规定，虚拟试验台QB-65045仅观察到QB-65045的油温监控告警，不足以确定QB-65045的滑油冷却器散热面污染已经发生；其他未列出的原因仍可能产生相同末端指示。该逆推不是充分条件。",
+        "text_sha256": "fa3a4072f3f9b94738bc4ab57485b9633493800e142c7c7c28283258e38a25de",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 493,
+            "end": 598,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "8aee5c88c3e374ccace821984c68535a1d20a88848a219e87e23f52a5060ecb1"
+          }
+        }
+      },
+      {
+        "chunk_id": "19f104aa0e091e6b474a107694a6038857e6c9cc8147dc46ec90b98b206a24b2",
+        "document_id": "control2-07-0",
+        "version_id": "control2-07-0-8aee5c88c3e374ccace8",
+        "text": "独立备忘3：虚拟试验台QB-65045的滑油显示页面含“滑油冷却器散热面污染”字样，但本记录仅登记界面刷新批次407；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "55a0e60de2aae95969b8c7935422197b3610b9769903c45c981ab1602e2cc0d1",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 600,
+            "end": 676,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "8aee5c88c3e374ccace821984c68535a1d20a88848a219e87e23f52a5060ecb1"
+          }
+        }
+      },
+      {
+        "chunk_id": "3b04138afa090764863e55782cee7ca32a4a00142d3665ff1423c3dbf81c1d0f",
+        "document_id": "control2-07-0",
+        "version_id": "control2-07-0-8aee5c88c3e374ccace8",
+        "text": "虚拟试验台QB-65045的监测规则：QB-65045的监测通道短时掉线会导致QB-65045的观察日志缺帧；这是独立于主部件链的记录质量故障。",
+        "text_sha256": "f46b53bae730b81663623b176415bc946a48bf297f63617685803f2ec2f5883b",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 678,
+            "end": 750,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "8aee5c88c3e374ccace821984c68535a1d20a88848a219e87e23f52a5060ecb1"
+          }
+        }
+      },
+      {
+        "chunk_id": "3908c72cb616abfb37099521ec77473a43c0093cdb96677ff87383735d3d85dc",
+        "document_id": "control2-07-0",
+        "version_id": "control2-07-0-8aee5c88c3e374ccace8",
+        "text": "独立备忘1：虚拟试验台QB-65045的滑油显示页面含“滑油冷却器散热面污染”字样，但本记录仅登记界面刷新批次940；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "ee26cab3b8a85737f96551c37bc20cd63f243ae892704ebcbfac4145a19ce71d",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 752,
+            "end": 828,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "8aee5c88c3e374ccace821984c68535a1d20a88848a219e87e23f52a5060ecb1"
+          }
+        }
+      },
+      {
+        "chunk_id": "616a44b905984d9f385ac57f47600b381d6bddaed6c79d92262c280aaa326721",
+        "document_id": "control2-07-0",
+        "version_id": "control2-07-0-8aee5c88c3e374ccace8",
+        "text": "独立备忘2：虚拟试验台QB-65045的滑油显示页面含“供油温度升高”字样，但本记录仅登记界面刷新批次745；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "94c82492768343975e24f61ad91f73d5f75c1bf28f1b775ee694703133bbae9a",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 830,
+            "end": 902,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "8aee5c88c3e374ccace821984c68535a1d20a88848a219e87e23f52a5060ecb1"
+          }
+        }
+      },
+      {
+        "chunk_id": "2cc891a3d050b0ee0d94908e0f1ad00b46f532b6df113bbd1acc67dddb224f3b",
+        "document_id": "control2-07-0",
+        "version_id": "control2-07-0-8aee5c88c3e374ccace8",
+        "text": "触发记录：虚拟试验台QB-65045仅在稳态保持不少于2秒后才进入试验模式；转速适用范围由单独的适用记录规定。",
+        "text_sha256": "82e65d8df5a4f6ace57e88fa0d564670874725579e4a357cd27b8186f79e4fd5",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 904,
+            "end": 959,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "8aee5c88c3e374ccace821984c68535a1d20a88848a219e87e23f52a5060ecb1"
+          }
+        }
+      },
+      {
+        "chunk_id": "212b9ea5f0eabbac15441e296f30555e96cf4b315d26b0013a3ebb40e3f8965a",
+        "document_id": "control2-07-0",
+        "version_id": "control2-07-0-8aee5c88c3e374ccace8",
+        "text": "独立备忘7：虚拟试验台QB-65045的滑油显示页面含“滑油散热能力降低”字样，但本记录仅登记界面刷新批次948；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "4577267b1597a9473af5fcb01992702512dc0715578fdd5ed2fd63d199400a8b",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 961,
+            "end": 1035,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "8aee5c88c3e374ccace821984c68535a1d20a88848a219e87e23f52a5060ecb1"
+          }
+        }
+      },
+      {
+        "chunk_id": "804408c3e3bd68cf6cd6ed221465fd2b12b7d0aa2d1d177c1942e3d04fefb804",
+        "document_id": "control2-07-0",
+        "version_id": "control2-07-0-8aee5c88c3e374ccace8",
+        "text": "本记录只陈述虚拟试验台QB-65045的一条设定规则：当QB-65045的滑油冷却器散热面污染发生时，引起QB-65045的滑油散热能力降低。本条不陈述其他后续环节。",
+        "text_sha256": "38119274fe0a519ac14aea7ccdbaa16c90a5034c9f24caa56355ee483471fe22",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 1037,
+            "end": 1120,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "8aee5c88c3e374ccace821984c68535a1d20a88848a219e87e23f52a5060ecb1"
+          }
+        }
+      },
+      {
+        "chunk_id": "08ba4b6e5d2813bb4881ca1878eb8c6c7b361be475dd4de83a203ba18bea6830",
+        "document_id": "control2-07-0",
+        "version_id": "control2-07-0-8aee5c88c3e374ccace8",
+        "text": "独立备忘8：虚拟试验台QB-65045的滑油显示页面含“供油温度升高”字样，但本记录仅登记界面刷新批次297；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "8801da3baed65c8068507013670499b01d3684b53efefda9b545cf0c14fc0f3f",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 1122,
+            "end": 1194,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "8aee5c88c3e374ccace821984c68535a1d20a88848a219e87e23f52a5060ecb1"
+          }
+        }
+      }
+    ]
+  },
+  "control2-08-0": {
+    "document_id": "control2-08-0",
+    "title": "程序化构造的虚拟试验台规则资料",
+    "source_url": null,
+    "version_id": "control2-08-0-0c6d8284b9cff7e045a0",
+    "origin": "synthetic_rule_generated",
+    "chunks": [
+      {
+        "chunk_id": "0f8d0b81ef000848cb33ec2590c7ac6ec60638b58ab11ac52ad15837c31a95ee",
+        "document_id": "control2-08-0",
+        "version_id": "control2-08-0-0c6d8284b9cff7e045a0",
+        "text": "独立备忘3：虚拟试验台QB-28700的回油显示页面含“腔压监控异常”字样，但本记录仅登记界面刷新批次158；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "76769411c99c6f9a6a6bf02b88df56d5d5e384036785c9837bffc218577df07c",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 0,
+            "end": 72,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "0c6d8284b9cff7e045a0d9f1a35c8844632e8412c7217fade1e7e6729bbfb9ad"
+          }
+        }
+      },
+      {
+        "chunk_id": "ed39cd380bdcf174b0a60df082d5a5670aa906fb5e0ecc74e8045bffe1a6cc20",
+        "document_id": "control2-08-0",
+        "version_id": "control2-08-0-0c6d8284b9cff7e045a0",
+        "text": "适用记录：虚拟试验台QB-28700的试验模式仅用于转速指示32%至52%的闭区间；其他转速不按该模式判读。",
+        "text_sha256": "ed78e6042c5349ba3eb1db4e7079f6eaa557c0797411843039f878a3c2c75f92",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 74,
+            "end": 128,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "0c6d8284b9cff7e045a0d9f1a35c8844632e8412c7217fade1e7e6729bbfb9ad"
+          }
+        }
+      },
+      {
+        "chunk_id": "f920d41b8bf63262d726d9a7fa0acb0806fc7f0418fb7eebf5f265516e2e7b55",
+        "document_id": "control2-08-0",
+        "version_id": "control2-08-0-0c6d8284b9cff7e045a0",
+        "text": "边界记录：本场景明确规定，虚拟试验台QB-28700仅观察到QB-28700的腔压监控异常，不足以确定QB-28700的回油管路局部阻塞已经发生；其他未列出的原因仍可能产生相同末端指示。该逆推不是充分条件。",
+        "text_sha256": "3f37478f5c5dfb0ec0e7cfded3e9c26964dd057b595337a560241339ed07ae91",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 130,
+            "end": 233,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "0c6d8284b9cff7e045a0d9f1a35c8844632e8412c7217fade1e7e6729bbfb9ad"
+          }
+        }
+      },
+      {
+        "chunk_id": "a6aacf3574f044dde7f2c75f04eef2aac0cd116310641fdba80fe1542c151948",
+        "document_id": "control2-08-0",
+        "version_id": "control2-08-0-0c6d8284b9cff7e045a0",
+        "text": "参数记录：虚拟试验台QB-28700的回油通道采样周期固定为32毫秒。该参数不提供故障因果链。",
+        "text_sha256": "1ec8b3aeeb076d8461c6e3ac16c970c847903bb653c4c3997d9e5d377cbff1d2",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 235,
+            "end": 282,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "0c6d8284b9cff7e045a0d9f1a35c8844632e8412c7217fade1e7e6729bbfb9ad"
+          }
+        }
+      },
+      {
+        "chunk_id": "a41db7d9c8e182e41d96d7aaac60df89c056114d16779d03fd7b5062cd2cb3ff",
+        "document_id": "control2-08-0",
+        "version_id": "control2-08-0-0c6d8284b9cff7e045a0",
+        "text": "本记录只陈述虚拟试验台QB-28700的一条设定规则：当QB-28700的回油管路局部阻塞发生时，引起QB-28700的回油排出能力降低。本条不陈述其他后续环节。",
+        "text_sha256": "fb6dafed253d79c506f46817c42e532e08d9aee045597bed51c56126711164e9",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 284,
+            "end": 365,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "0c6d8284b9cff7e045a0d9f1a35c8844632e8412c7217fade1e7e6729bbfb9ad"
+          }
+        }
+      },
+      {
+        "chunk_id": "dd703779ac0000784ebfa464a60b4f1fbdcbb5e769297aebbd0d2d0ee5e704c7",
+        "document_id": "control2-08-0",
+        "version_id": "control2-08-0-0c6d8284b9cff7e045a0",
+        "text": "本记录只陈述虚拟试验台QB-28700的一条设定规则：当QB-28700的轴承腔油量积聚发生时，引起QB-28700的腔压监控异常。本条不陈述其他后续环节。",
+        "text_sha256": "040034704a0ba2bd15fe69221251dad37947366427f1517d2b06926e20c06ce9",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 367,
+            "end": 445,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "0c6d8284b9cff7e045a0d9f1a35c8844632e8412c7217fade1e7e6729bbfb9ad"
+          }
+        }
+      },
+      {
+        "chunk_id": "6d2e28588be3c49a14c10ec9b6fa9712a85b419ee0faa3071eb037a34d9ad3cd",
+        "document_id": "control2-08-0",
+        "version_id": "control2-08-0-0c6d8284b9cff7e045a0",
+        "text": "独立备忘6：虚拟试验台QB-28700的回油显示页面含“轴承腔油量积聚”字样，但本记录仅登记界面刷新批次710；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "dc3a646d43d9a849457219d3a0092e258ab5b26e9e26eeccf63c3730f64b9916",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 447,
+            "end": 520,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "0c6d8284b9cff7e045a0d9f1a35c8844632e8412c7217fade1e7e6729bbfb9ad"
+          }
+        }
+      },
+      {
+        "chunk_id": "3ee0f38014b872d57eee8bbe6e8ae02c0203c17ec535093ab6ebccb3bb216d10",
+        "document_id": "control2-08-0",
+        "version_id": "control2-08-0-0c6d8284b9cff7e045a0",
+        "text": "独立备忘2：虚拟试验台QB-28700的回油显示页面含“腔压监控异常”字样，但本记录仅登记界面刷新批次846；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "b56163fa1a06da9776fa4b39041b24c595d4a3e49e5bfea9d74fcba11384dad6",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 522,
+            "end": 594,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "0c6d8284b9cff7e045a0d9f1a35c8844632e8412c7217fade1e7e6729bbfb9ad"
+          }
+        }
+      },
+      {
+        "chunk_id": "cc2d52b909c6f76dfecc9f581c72c9f574876ca9188e5fd407254492bb4558bb",
+        "document_id": "control2-08-0",
+        "version_id": "control2-08-0-0c6d8284b9cff7e045a0",
+        "text": "独立备忘4：虚拟试验台QB-28700的回油显示页面含“轴承腔油量积聚”字样，但本记录仅登记界面刷新批次274；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "8b0a700dcbc5dcb046e060e3542a0643b4a0bc0eb08018f3ef766ea17dc9b23a",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 596,
+            "end": 669,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "0c6d8284b9cff7e045a0d9f1a35c8844632e8412c7217fade1e7e6729bbfb9ad"
+          }
+        }
+      },
+      {
+        "chunk_id": "411f2fae88a86889a4ec11207d2691bbf3b2f05751c87b4adf3666b92304f618",
+        "document_id": "control2-08-0",
+        "version_id": "control2-08-0-0c6d8284b9cff7e045a0",
+        "text": "虚拟试验台QB-28700的监测规则：QB-28700的监测通道短时掉线会导致QB-28700的观察日志缺帧；这是独立于主部件链的记录质量故障。",
+        "text_sha256": "16035431aff9db02fc8cb7364365dd1702f6dee8700f15b35f025ef498b68c48",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 671,
+            "end": 743,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "0c6d8284b9cff7e045a0d9f1a35c8844632e8412c7217fade1e7e6729bbfb9ad"
+          }
+        }
+      },
+      {
+        "chunk_id": "313035826eb63233f41ca9b746daa2ca8dd0dc9d0bdd7331ef0269199550fecd",
+        "document_id": "control2-08-0",
+        "version_id": "control2-08-0-0c6d8284b9cff7e045a0",
+        "text": "触发记录：虚拟试验台QB-28700仅在稳态保持不少于2秒后才进入试验模式；转速适用范围由单独的适用记录规定。",
+        "text_sha256": "7d4c12bcfff6d3ee6606586cdb26070e7624fc574ca02e91004408fa7564fa74",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 745,
+            "end": 800,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "0c6d8284b9cff7e045a0d9f1a35c8844632e8412c7217fade1e7e6729bbfb9ad"
+          }
+        }
+      },
+      {
+        "chunk_id": "dcbf86614831bab2d659bb0995120bb36eab2a295b0e4d7923a40fa49d5412df",
+        "document_id": "control2-08-0",
+        "version_id": "control2-08-0-0c6d8284b9cff7e045a0",
+        "text": "独立备忘1：虚拟试验台QB-28700的回油显示页面含“腔压监控异常”字样，但本记录仅登记界面刷新批次152；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "af417065da3b9f5f3caeba59d68dbc25d7288c8283365e08d603b1f1065a4d84",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 802,
+            "end": 874,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "0c6d8284b9cff7e045a0d9f1a35c8844632e8412c7217fade1e7e6729bbfb9ad"
+          }
+        }
+      },
+      {
+        "chunk_id": "c7251e8b2056a1cf6a1d7e98458524e6c1030cd4e33c651dec087908c4af8b88",
+        "document_id": "control2-08-0",
+        "version_id": "control2-08-0-0c6d8284b9cff7e045a0",
+        "text": "本记录只陈述虚拟试验台QB-28700的一条设定规则：当QB-28700的回油排出能力降低发生时，引起QB-28700的轴承腔油量积聚。本条不陈述其他后续环节。",
+        "text_sha256": "b0328b534e1b69d31f06f39ba23920114bb51369867ee76380b4880511b09caa",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 876,
+            "end": 956,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "0c6d8284b9cff7e045a0d9f1a35c8844632e8412c7217fade1e7e6729bbfb9ad"
+          }
+        }
+      },
+      {
+        "chunk_id": "b48b2e4cc847ac6df125d2617bfa2e3b4a122a952bdd42dd9f02d16440c56742",
+        "document_id": "control2-08-0",
+        "version_id": "control2-08-0-0c6d8284b9cff7e045a0",
+        "text": "独立备忘5：虚拟试验台QB-28700的回油显示页面含“轴承腔油量积聚”字样，但本记录仅登记界面刷新批次456；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "7556a341c674ac763c0c0ffe3b6fb5ffcd3658c17b406c4beedc190831c5e153",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 958,
+            "end": 1031,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "0c6d8284b9cff7e045a0d9f1a35c8844632e8412c7217fade1e7e6729bbfb9ad"
+          }
+        }
+      },
+      {
+        "chunk_id": "15a355059e963a668028a7c4b185400b5d529885994730be5c0d2bbdc287ac36",
+        "document_id": "control2-08-0",
+        "version_id": "control2-08-0-0c6d8284b9cff7e045a0",
+        "text": "独立备忘8：虚拟试验台QB-28700的回油显示页面含“轴承腔油量积聚”字样，但本记录仅登记界面刷新批次760；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "6716aa9039fff30b9549311da62a61d53a143fd88d922ffbef6b45588b3116bf",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 1033,
+            "end": 1106,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "0c6d8284b9cff7e045a0d9f1a35c8844632e8412c7217fade1e7e6729bbfb9ad"
+          }
+        }
+      },
+      {
+        "chunk_id": "5238f47428b8974f1680ade832f9c73d65867ccab7d2070eac700c6199f64b8e",
+        "document_id": "control2-08-0",
+        "version_id": "control2-08-0-0c6d8284b9cff7e045a0",
+        "text": "独立备忘7：虚拟试验台QB-28700的回油显示页面含“轴承腔油量积聚”字样，但本记录仅登记界面刷新批次662；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "f5eb4fd20233b21b080acdf7f206f15e7fb1d4d6a25a684cb431a4c6c3d3cc90",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 1108,
+            "end": 1181,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "0c6d8284b9cff7e045a0d9f1a35c8844632e8412c7217fade1e7e6729bbfb9ad"
+          }
+        }
+      }
+    ]
+  },
+  "control2-09-0": {
+    "document_id": "control2-09-0",
+    "title": "程序化构造的虚拟试验台规则资料",
+    "source_url": null,
+    "version_id": "control2-09-0-4464c6efdbfd1980af7a",
+    "origin": "synthetic_rule_generated",
+    "chunks": [
+      {
+        "chunk_id": "b25988b135b00602164bc36cf97addaeea5028dd037cbf48cefa8cebc6476584",
+        "document_id": "control2-09-0",
+        "version_id": "control2-09-0-4464c6efdbfd1980af7a",
+        "text": "本记录只陈述虚拟试验台QB-39610的一条设定规则：当QB-39610的温控输入不稳定发生时，引起QB-39610的温控指令频繁变化。本条不陈述其他后续环节。",
+        "text_sha256": "6691107702ccd5793b10da46ca40bb4f52c7cce1d8ab4903f89e6a45fb2ad626",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 0,
+            "end": 80,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "4464c6efdbfd1980af7ad853b7ca20ebf2ff8c1f783c380705f981e6f34c6372"
+          }
+        }
+      },
+      {
+        "chunk_id": "c9144ba81e9e9ab0eb55d16f74ce2d5b13df6ed922310f03c6ed887fdb7d70c4",
+        "document_id": "control2-09-0",
+        "version_id": "control2-09-0-4464c6efdbfd1980af7a",
+        "text": "独立备忘2：虚拟试验台QB-39610的测温显示页面含“温控指令频繁变化”字样，但本记录仅登记界面刷新批次898；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "f5c8a2df593c137c99ba5bb4eaced5ff744f4686d5e8e7744816be869450660b",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 82,
+            "end": 156,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "4464c6efdbfd1980af7ad853b7ca20ebf2ff8c1f783c380705f981e6f34c6372"
+          }
+        }
+      },
+      {
+        "chunk_id": "47f3c8b0d6d6d3594a8d457beb8659e42550c188245cf4f56b65d9f6e8e9d59f",
+        "document_id": "control2-09-0",
+        "version_id": "control2-09-0-4464c6efdbfd1980af7a",
+        "text": "独立备忘7：虚拟试验台QB-39610的测温显示页面含“热电偶接线接触不良”字样，但本记录仅登记界面刷新批次909；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "90383b3b7d507369959c29b7f7f2e983e23b9ea0c104f3dac6d942bfb6953477",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 158,
+            "end": 233,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "4464c6efdbfd1980af7ad853b7ca20ebf2ff8c1f783c380705f981e6f34c6372"
+          }
+        }
+      },
+      {
+        "chunk_id": "7bf7f1eceba0eb59a9241e0ab956ec603154accf1188d428403cc54df8311e60",
+        "document_id": "control2-09-0",
+        "version_id": "control2-09-0-4464c6efdbfd1980af7a",
+        "text": "触发记录：虚拟试验台QB-39610仅在稳态保持不少于2秒后才进入试验模式；转速适用范围由单独的适用记录规定。",
+        "text_sha256": "db39e5b3e8e3b6cdba0de8b0be179df11cbe9c8b62ec54df64dc22a0511805eb",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 235,
+            "end": 290,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "4464c6efdbfd1980af7ad853b7ca20ebf2ff8c1f783c380705f981e6f34c6372"
+          }
+        }
+      },
+      {
+        "chunk_id": "466d9acf56de3c1ab61e7969bd073b20092d7578ad34f634e075ec7e0593f340",
+        "document_id": "control2-09-0",
+        "version_id": "control2-09-0-4464c6efdbfd1980af7a",
+        "text": "独立备忘3：虚拟试验台QB-39610的测温显示页面含“热电偶接线接触不良”字样，但本记录仅登记界面刷新批次244；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "13b29c7aaafefbd992cfc5561b034b85ec2efadf995088e8b4572ff6aaf26ac9",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 292,
+            "end": 367,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "4464c6efdbfd1980af7ad853b7ca20ebf2ff8c1f783c380705f981e6f34c6372"
+          }
+        }
+      },
+      {
+        "chunk_id": "884c67d25dddcd322369bf0091834be096ed78a0df318e8c92e43e2c72b702f2",
+        "document_id": "control2-09-0",
+        "version_id": "control2-09-0-4464c6efdbfd1980af7a",
+        "text": "独立备忘1：虚拟试验台QB-39610的测温显示页面含“热电偶接线接触不良”字样，但本记录仅登记界面刷新批次835；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "5138f384195ff24ab13ad0c856d73992c781c8c29e754ff53446159812ad7f24",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 369,
+            "end": 444,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "4464c6efdbfd1980af7ad853b7ca20ebf2ff8c1f783c380705f981e6f34c6372"
+          }
+        }
+      },
+      {
+        "chunk_id": "61a54792a734fe61ff1bbc71e69043b0facb8f67444e6ec96c4adb452ac204b5",
+        "document_id": "control2-09-0",
+        "version_id": "control2-09-0-4464c6efdbfd1980af7a",
+        "text": "本记录只陈述虚拟试验台QB-39610的一条设定规则：当QB-39610的温度信号间歇波动发生时，引起QB-39610的温控输入不稳定。本条不陈述其他后续环节。",
+        "text_sha256": "cbbef2071573a0b0530ae85223dd773aa12d3314c4d8f74d003ef05d44347ecd",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 446,
+            "end": 526,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "4464c6efdbfd1980af7ad853b7ca20ebf2ff8c1f783c380705f981e6f34c6372"
+          }
+        }
+      },
+      {
+        "chunk_id": "c75219575a221818bee918d209f55fd5d8b7b7919054ea64bde2b598636897bf",
+        "document_id": "control2-09-0",
+        "version_id": "control2-09-0-4464c6efdbfd1980af7a",
+        "text": "虚拟试验台QB-39610的监测规则：QB-39610的监测通道短时掉线会导致QB-39610的观察日志缺帧；这是独立于主部件链的记录质量故障。",
+        "text_sha256": "b12c4fd0032689c1902c3c6ea7de0a7feac4df6404fb4221eebab43ab752778d",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 528,
+            "end": 600,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "4464c6efdbfd1980af7ad853b7ca20ebf2ff8c1f783c380705f981e6f34c6372"
+          }
+        }
+      },
+      {
+        "chunk_id": "fa952e9b58a0fafae5d843b69cf7ac3a7b5ddbd30ca388a00f6a1a4dfe5b7a92",
+        "document_id": "control2-09-0",
+        "version_id": "control2-09-0-4464c6efdbfd1980af7a",
+        "text": "独立备忘4：虚拟试验台QB-39610的测温显示页面含“温度信号间歇波动”字样，但本记录仅登记界面刷新批次398；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "cbad1befc1020650cbebd1ae2b5fc459a1eb8cd1d76168a21fbdbe7e6ecd22d0",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 602,
+            "end": 676,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "4464c6efdbfd1980af7ad853b7ca20ebf2ff8c1f783c380705f981e6f34c6372"
+          }
+        }
+      },
+      {
+        "chunk_id": "eeae3d88f21fc8d498e969d765fff8f519f7afd22e2d743ea6d4831cca60126a",
+        "document_id": "control2-09-0",
+        "version_id": "control2-09-0-4464c6efdbfd1980af7a",
+        "text": "参数记录：虚拟试验台QB-39610的测温通道采样周期固定为12毫秒。该参数不提供故障因果链。",
+        "text_sha256": "cbafdb60e2abed63edb6a30eb3397b00879502e776512ee6da059b5f07721e8f",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 678,
+            "end": 725,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "4464c6efdbfd1980af7ad853b7ca20ebf2ff8c1f783c380705f981e6f34c6372"
+          }
+        }
+      },
+      {
+        "chunk_id": "a9bae5efb8a8a76b38ebcfa4fa4f815fb054e8bbc6aeb5aa9933848053c08ff0",
+        "document_id": "control2-09-0",
+        "version_id": "control2-09-0-4464c6efdbfd1980af7a",
+        "text": "本记录只陈述虚拟试验台QB-39610的一条设定规则：当QB-39610的热电偶接线接触不良发生时，引起QB-39610的温度信号间歇波动。本条不陈述其他后续环节。",
+        "text_sha256": "f9ed4a8aea5ddc5553eaab52673aa1d37bc1e06c3933305cfab7c7dcabc4d674",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 727,
+            "end": 809,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "4464c6efdbfd1980af7ad853b7ca20ebf2ff8c1f783c380705f981e6f34c6372"
+          }
+        }
+      },
+      {
+        "chunk_id": "2a8a927c11d8d4e74623bd1cca201809c22c31260e8f10550a98baeca42c196b",
+        "document_id": "control2-09-0",
+        "version_id": "control2-09-0-4464c6efdbfd1980af7a",
+        "text": "独立备忘5：虚拟试验台QB-39610的测温显示页面含“温度信号间歇波动”字样，但本记录仅登记界面刷新批次455；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "f6d39fa962daa77e8bf535701bf0bd24c9bf6590198884ea52d83700fd438f5d",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 811,
+            "end": 885,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "4464c6efdbfd1980af7ad853b7ca20ebf2ff8c1f783c380705f981e6f34c6372"
+          }
+        }
+      },
+      {
+        "chunk_id": "aa3eb03d17cdd7ce3fa2f392c0af066efcbf10917c7cd2096a401556b0abaaea",
+        "document_id": "control2-09-0",
+        "version_id": "control2-09-0-4464c6efdbfd1980af7a",
+        "text": "边界记录：本场景明确规定，虚拟试验台QB-39610仅观察到QB-39610的温控指令频繁变化，不足以确定QB-39610的热电偶接线接触不良已经发生；其他未列出的原因仍可能产生相同末端指示。该逆推不是充分条件。",
+        "text_sha256": "8ab7c8e4909f9ed40904ef3d71354db05d4b1b81c2a929d7a59727a08862eecd",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 887,
+            "end": 993,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "4464c6efdbfd1980af7ad853b7ca20ebf2ff8c1f783c380705f981e6f34c6372"
+          }
+        }
+      },
+      {
+        "chunk_id": "4d838a1f8e730700b438ea700c91bd3be891cd37f3bde91d67c706a656d61aef",
+        "document_id": "control2-09-0",
+        "version_id": "control2-09-0-4464c6efdbfd1980af7a",
+        "text": "独立备忘6：虚拟试验台QB-39610的测温显示页面含“热电偶接线接触不良”字样，但本记录仅登记界面刷新批次957；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "f580aff9f8e03dd684bb39c724c2c5a28753f85d84db0a269cd4789ad25bacd6",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 995,
+            "end": 1070,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "4464c6efdbfd1980af7ad853b7ca20ebf2ff8c1f783c380705f981e6f34c6372"
+          }
+        }
+      },
+      {
+        "chunk_id": "07df3d38c8906607c6bc82126aa54ae1127bd016f6d3483d34b80a63b2c4850b",
+        "document_id": "control2-09-0",
+        "version_id": "control2-09-0-4464c6efdbfd1980af7a",
+        "text": "适用记录：虚拟试验台QB-39610的试验模式仅用于转速指示36%至56%的闭区间；其他转速不按该模式判读。",
+        "text_sha256": "ce23b382fe1354b723b75a52047403b407181404c930eaa31ebeb7738253e747",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 1072,
+            "end": 1126,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "4464c6efdbfd1980af7ad853b7ca20ebf2ff8c1f783c380705f981e6f34c6372"
+          }
+        }
+      },
+      {
+        "chunk_id": "3eb8bcb20c8f495603e26067182be45fa06af0aa4a4b943bc2c31501db803169",
+        "document_id": "control2-09-0",
+        "version_id": "control2-09-0-4464c6efdbfd1980af7a",
+        "text": "独立备忘8：虚拟试验台QB-39610的测温显示页面含“温控指令频繁变化”字样，但本记录仅登记界面刷新批次883；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "f24e2a5b0509e69ffcf9b7e7b8f2c12937a764bb069b39a8dba32028d9487ed6",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 1128,
+            "end": 1202,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "4464c6efdbfd1980af7ad853b7ca20ebf2ff8c1f783c380705f981e6f34c6372"
+          }
+        }
+      }
+    ]
+  },
+  "control2-10-0": {
+    "document_id": "control2-10-0",
+    "title": "程序化构造的虚拟试验台规则资料",
+    "source_url": null,
+    "version_id": "control2-10-0-cf22d574555b7c264da2",
+    "origin": "synthetic_rule_generated",
+    "chunks": [
+      {
+        "chunk_id": "8be97e88a35942bf031f8ea0aef81eb347f9ead3779647ba8d8bc718d8edb4d0",
+        "document_id": "control2-10-0",
+        "version_id": "control2-10-0-cf22d574555b7c264da2",
+        "text": "独立备忘6：虚拟试验台QB-57868的调压显示页面含“执行端到位延迟”字样，但本记录仅登记界面刷新批次315；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "13983a43f44de996b5a3f62f43ea1b80b3202fbe55f14bb93c25ce312e7a4f85",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 0,
+            "end": 73,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "cf22d574555b7c264da2ac1d92db8428adeb541fd555b9889aa2718dd8853021"
+          }
+        }
+      },
+      {
+        "chunk_id": "c61045efc757d523018e4a9472a080d84c04c6ae2c72db60ca0ecc8ee7267837",
+        "document_id": "control2-10-0",
+        "version_id": "control2-10-0-cf22d574555b7c264da2",
+        "text": "独立备忘5：虚拟试验台QB-57868的调压显示页面含“气动执行端压力偏离”字样，但本记录仅登记界面刷新批次729；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "5dbb1d78004c43166648e7e2cbf596faba5b6a1eddd0a0131e2f876bfc0ecf86",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 75,
+            "end": 150,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "cf22d574555b7c264da2ac1d92db8428adeb541fd555b9889aa2718dd8853021"
+          }
+        }
+      },
+      {
+        "chunk_id": "1f2a1764100d5a2c84f2dc90a1c4f64756e7d4ac6236d544f4c4bcecea2f4852",
+        "document_id": "control2-10-0",
+        "version_id": "control2-10-0-cf22d574555b7c264da2",
+        "text": "参数记录：虚拟试验台QB-57868的调压通道采样周期固定为32毫秒。该参数不提供故障因果链。",
+        "text_sha256": "72419c34205aa3de7ae85be93966b46b2d5a71e7e0c087df43774cc5f89e76bf",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 152,
+            "end": 199,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "cf22d574555b7c264da2ac1d92db8428adeb541fd555b9889aa2718dd8853021"
+          }
+        }
+      },
+      {
+        "chunk_id": "9b2edccf19c256198e0a67048156bfcac44a8be2c0d1a127003067cb2876f37c",
+        "document_id": "control2-10-0",
+        "version_id": "control2-10-0-cf22d574555b7c264da2",
+        "text": "本记录只陈述虚拟试验台QB-57868的一条设定规则：当QB-57868的供气调压器阀芯粘滞发生时，引起QB-57868的供气调压滞后。本条不陈述其他后续环节。",
+        "text_sha256": "bf0c76072165b9e4e35d573d3acdc3c9097dbc53b90bf0d8733058641fc3faa9",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 201,
+            "end": 281,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "cf22d574555b7c264da2ac1d92db8428adeb541fd555b9889aa2718dd8853021"
+          }
+        }
+      },
+      {
+        "chunk_id": "518c37ac2e964a3a381b8080364e308316ded5f5338080bb632e6e4f682884ed",
+        "document_id": "control2-10-0",
+        "version_id": "control2-10-0-cf22d574555b7c264da2",
+        "text": "独立备忘3：虚拟试验台QB-57868的调压显示页面含“供气调压滞后”字样，但本记录仅登记界面刷新批次403；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "0b489e4985a9cdad07d44ad07bb001a7a19a15bdb1e06dbe0a952384ebbe6b48",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 283,
+            "end": 355,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "cf22d574555b7c264da2ac1d92db8428adeb541fd555b9889aa2718dd8853021"
+          }
+        }
+      },
+      {
+        "chunk_id": "3580e781db5e3439bb338f64c92dcbbb7d8d9fb4add88986d76a5b15304af03d",
+        "document_id": "control2-10-0",
+        "version_id": "control2-10-0-cf22d574555b7c264da2",
+        "text": "虚拟试验台QB-57868的监测规则：QB-57868的监测通道短时掉线会导致QB-57868的观察日志缺帧；这是独立于主部件链的记录质量故障。",
+        "text_sha256": "1ddb1b4f5a4329a6529a50a7ad1078ea5cc6a91bcde3ac99531ea5bcec84822c",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 357,
+            "end": 429,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "cf22d574555b7c264da2ac1d92db8428adeb541fd555b9889aa2718dd8853021"
+          }
+        }
+      },
+      {
+        "chunk_id": "8c3f735c226d3299a4b4ed70e5ca44eba32248ac66adfc2fe304bc2d9140d7f8",
+        "document_id": "control2-10-0",
+        "version_id": "control2-10-0-cf22d574555b7c264da2",
+        "text": "独立备忘4：虚拟试验台QB-57868的调压显示页面含“供气调压滞后”字样，但本记录仅登记界面刷新批次314；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "e5079fdadd37a68408f4565d45e62fa81091ca4550608006b93c792dfda0ac04",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 431,
+            "end": 503,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "cf22d574555b7c264da2ac1d92db8428adeb541fd555b9889aa2718dd8853021"
+          }
+        }
+      },
+      {
+        "chunk_id": "67135db12e8950e664de0d7b60fd03e5b3fedf8e06c4b928665db78858f061dd",
+        "document_id": "control2-10-0",
+        "version_id": "control2-10-0-cf22d574555b7c264da2",
+        "text": "触发记录：虚拟试验台QB-57868仅在稳态保持不少于2秒后才进入试验模式；转速适用范围由单独的适用记录规定。",
+        "text_sha256": "746533ec84e4c718b760ee349f97bceb437be2c042136dc9d43723c5b174254e",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 505,
+            "end": 560,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "cf22d574555b7c264da2ac1d92db8428adeb541fd555b9889aa2718dd8853021"
+          }
+        }
+      },
+      {
+        "chunk_id": "bd0f5af7b7483426e9af35a991b7277bf92e271fd19ab5590016d909f4b8c3d2",
+        "document_id": "control2-10-0",
+        "version_id": "control2-10-0-cf22d574555b7c264da2",
+        "text": "适用记录：虚拟试验台QB-57868的试验模式仅用于转速指示30%至50%的闭区间；其他转速不按该模式判读。",
+        "text_sha256": "8f09603fc9812dd0ec74b55a20497e42d09632b08b334220689567ab46195cb8",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 562,
+            "end": 616,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "cf22d574555b7c264da2ac1d92db8428adeb541fd555b9889aa2718dd8853021"
+          }
+        }
+      },
+      {
+        "chunk_id": "741c8286d521d30e96be1262d6cc13c00301b90348f341603d3c5e15c62551b4",
+        "document_id": "control2-10-0",
+        "version_id": "control2-10-0-cf22d574555b7c264da2",
+        "text": "独立备忘2：虚拟试验台QB-57868的调压显示页面含“供气调压器阀芯粘滞”字样，但本记录仅登记界面刷新批次972；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "dde7dbc45b19c8d5c404b5c7fb4e93f7e1126265660e8dd7b5627918f5a95bdb",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 618,
+            "end": 693,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "cf22d574555b7c264da2ac1d92db8428adeb541fd555b9889aa2718dd8853021"
+          }
+        }
+      },
+      {
+        "chunk_id": "5095d114ad87658adefa7b3af8dc7244ef3345b5b00753cd5be9d754f4009506",
+        "document_id": "control2-10-0",
+        "version_id": "control2-10-0-cf22d574555b7c264da2",
+        "text": "本记录只陈述虚拟试验台QB-57868的一条设定规则：当QB-57868的气动执行端压力偏离发生时，引起QB-57868的执行端到位延迟。本条不陈述其他后续环节。",
+        "text_sha256": "4babc163dcfef1f1b84728d57205734ca8a9caa771630b68ecef3032587125b3",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 695,
+            "end": 776,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "cf22d574555b7c264da2ac1d92db8428adeb541fd555b9889aa2718dd8853021"
+          }
+        }
+      },
+      {
+        "chunk_id": "276574782db12764fcaaa3c6f1d00f8ecfa9d299233158368720a9a4ea5cb1b0",
+        "document_id": "control2-10-0",
+        "version_id": "control2-10-0-cf22d574555b7c264da2",
+        "text": "独立备忘1：虚拟试验台QB-57868的调压显示页面含“气动执行端压力偏离”字样，但本记录仅登记界面刷新批次816；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "882b47f81ab84bbb122be4e2c918ba5be8492395057dcb0d444044ede01c3138",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 778,
+            "end": 853,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "cf22d574555b7c264da2ac1d92db8428adeb541fd555b9889aa2718dd8853021"
+          }
+        }
+      },
+      {
+        "chunk_id": "4d5e005b8a5b4ecd407a9bd9ce80e18ad8e7b7157760ec298aff7f4bfc9339c1",
+        "document_id": "control2-10-0",
+        "version_id": "control2-10-0-cf22d574555b7c264da2",
+        "text": "独立备忘7：虚拟试验台QB-57868的调压显示页面含“供气调压滞后”字样，但本记录仅登记界面刷新批次387；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "a5dbe73713411c02bf81471ca45a94bfd6acc62229150bb49e2654447494c3b5",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 855,
+            "end": 927,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "cf22d574555b7c264da2ac1d92db8428adeb541fd555b9889aa2718dd8853021"
+          }
+        }
+      },
+      {
+        "chunk_id": "e3bb57b6f67ca21dcfb1360f398b231f3126509b06d673e4acddf83ad583e050",
+        "document_id": "control2-10-0",
+        "version_id": "control2-10-0-cf22d574555b7c264da2",
+        "text": "独立备忘8：虚拟试验台QB-57868的调压显示页面含“气动执行端压力偏离”字样，但本记录仅登记界面刷新批次400；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "093e457fe927dc76951a0bd81e8c98d3cc4c40499d1df1a1652cb4b260b3c8c6",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 929,
+            "end": 1004,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "cf22d574555b7c264da2ac1d92db8428adeb541fd555b9889aa2718dd8853021"
+          }
+        }
+      },
+      {
+        "chunk_id": "118ce77bc5f3646449cdfe968b2d2a56cda3c2b279ce88bada4c042521c43aa1",
+        "document_id": "control2-10-0",
+        "version_id": "control2-10-0-cf22d574555b7c264da2",
+        "text": "边界记录：本场景明确规定，虚拟试验台QB-57868仅观察到QB-57868的执行端到位延迟，不足以确定QB-57868的供气调压器阀芯粘滞已经发生；其他未列出的原因仍可能产生相同末端指示。该逆推不是充分条件。",
+        "text_sha256": "cc3b6114bd805624dd7219a75bbee3ce602ae0026a9f4cff4a4e0e19f7bc24ca",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 1006,
+            "end": 1111,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "cf22d574555b7c264da2ac1d92db8428adeb541fd555b9889aa2718dd8853021"
+          }
+        }
+      },
+      {
+        "chunk_id": "e65b2599494cc43b541741d1c5830709b444a129a2355e750b5fc6ee112f0db4",
+        "document_id": "control2-10-0",
+        "version_id": "control2-10-0-cf22d574555b7c264da2",
+        "text": "本记录只陈述虚拟试验台QB-57868的一条设定规则：当QB-57868的供气调压滞后发生时，引起QB-57868的气动执行端压力偏离。本条不陈述其他后续环节。",
+        "text_sha256": "3846ab119973079d6fe5cf4d601cbc6bdb82e8ec7fc2bf59774e4b3a4d135055",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 1113,
+            "end": 1193,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "cf22d574555b7c264da2ac1d92db8428adeb541fd555b9889aa2718dd8853021"
+          }
+        }
+      }
+    ]
+  },
+  "control2-11-0": {
+    "document_id": "control2-11-0",
+    "title": "程序化构造的虚拟试验台规则资料",
+    "source_url": null,
+    "version_id": "control2-11-0-65f23adfc30330a48baa",
+    "origin": "synthetic_rule_generated",
+    "chunks": [
+      {
+        "chunk_id": "a1f17f289e91d958988b96ede3a4a8bbccf349ee03d984781f07814e0527de01",
+        "document_id": "control2-11-0",
+        "version_id": "control2-11-0-65f23adfc30330a48baa",
+        "text": "独立备忘5：虚拟试验台QB-63476的防冰显示页面含“防冰热气分配减少”字样，但本记录仅登记界面刷新批次960；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "c44e34cacc9cec9d680ac30ab3183b1d2cba37e7f6d0a63038bba10cd86ab54e",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 0,
+            "end": 74,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "65f23adfc30330a48baa7e1161e64a569a78e3abadf1f4436a47e1a1fabbef6b"
+          }
+        }
+      },
+      {
+        "chunk_id": "421f97e55246a278c26d760febc19d56f6e077f39830e3740496aa4c35fd6dc3",
+        "document_id": "control2-11-0",
+        "version_id": "control2-11-0-65f23adfc30330a48baa",
+        "text": "独立备忘6：虚拟试验台QB-63476的防冰显示页面含“表面结冰监控触发”字样，但本记录仅登记界面刷新批次837；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "cca73ee9681d19f9a4dcbcda4e45357de5fcabe9dc91f8e54be1b2cd095a2392",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 76,
+            "end": 150,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "65f23adfc30330a48baa7e1161e64a569a78e3abadf1f4436a47e1a1fabbef6b"
+          }
+        }
+      },
+      {
+        "chunk_id": "e236d0a81d7c822f817b45d7833bfca985da061dc9c888fecfc6645669bf9a29",
+        "document_id": "control2-11-0",
+        "version_id": "control2-11-0-65f23adfc30330a48baa",
+        "text": "虚拟试验台QB-63476的监测规则：QB-63476的监测通道短时掉线会导致QB-63476的观察日志缺帧；这是独立于主部件链的记录质量故障。",
+        "text_sha256": "76f7365271fb80bb63bb1856ebcf95914dbf50a015480a8a96fa269b48a740a8",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 152,
+            "end": 224,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "65f23adfc30330a48baa7e1161e64a569a78e3abadf1f4436a47e1a1fabbef6b"
+          }
+        }
+      },
+      {
+        "chunk_id": "cf52825b18835dc6398405e3d241b9ac876acf6d5facd960bfcde35e0dba186c",
+        "document_id": "control2-11-0",
+        "version_id": "control2-11-0-65f23adfc30330a48baa",
+        "text": "独立备忘8：虚拟试验台QB-63476的防冰显示页面含“受保护表面温度降低”字样，但本记录仅登记界面刷新批次590；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "b041ae8612f8c4fcd82276e5c9a1d45b949efc4792dd0d8e5b9d6489b42d4cb2",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 226,
+            "end": 301,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "65f23adfc30330a48baa7e1161e64a569a78e3abadf1f4436a47e1a1fabbef6b"
+          }
+        }
+      },
+      {
+        "chunk_id": "d090d8f9dcf9f61402f46ffd20a8f7ebbcb8dfff885d0ccc0f11551988f4aed9",
+        "document_id": "control2-11-0",
+        "version_id": "control2-11-0-65f23adfc30330a48baa",
+        "text": "独立备忘7：虚拟试验台QB-63476的防冰显示页面含“受保护表面温度降低”字样，但本记录仅登记界面刷新批次876；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "ae5839c6fa5c2af9a2a20608c147153a820be303efbaa268f6bca0c4a35c5276",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 303,
+            "end": 378,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "65f23adfc30330a48baa7e1161e64a569a78e3abadf1f4436a47e1a1fabbef6b"
+          }
+        }
+      },
+      {
+        "chunk_id": "41a12d09dbef467f52e2a18c1bf96f1e9bd754f5bc5102fbf4bc1c7088a105b4",
+        "document_id": "control2-11-0",
+        "version_id": "control2-11-0-65f23adfc30330a48baa",
+        "text": "适用记录：虚拟试验台QB-63476的试验模式仅用于转速指示36%至56%的闭区间；其他转速不按该模式判读。",
+        "text_sha256": "09b32c49ce0e4191aaf72373f840a42efd3ca90ce5a6363f4390ac3f211076b4",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 380,
+            "end": 434,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "65f23adfc30330a48baa7e1161e64a569a78e3abadf1f4436a47e1a1fabbef6b"
+          }
+        }
+      },
+      {
+        "chunk_id": "15438390163511253d971e78332294824a4e279750ed63a918b691160dac22d2",
+        "document_id": "control2-11-0",
+        "version_id": "control2-11-0-65f23adfc30330a48baa",
+        "text": "独立备忘3：虚拟试验台QB-63476的防冰显示页面含“受保护表面温度降低”字样，但本记录仅登记界面刷新批次117；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "d5e16f485544f3df7b059679fedf2257def6c6fb5f3d7625b1f803cce26fb2d2",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 436,
+            "end": 511,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "65f23adfc30330a48baa7e1161e64a569a78e3abadf1f4436a47e1a1fabbef6b"
+          }
+        }
+      },
+      {
+        "chunk_id": "a9ccf825fcf4280f77e1bf3dff2316169340d126e32ef69e54b4561200b78e28",
+        "document_id": "control2-11-0",
+        "version_id": "control2-11-0-65f23adfc30330a48baa",
+        "text": "边界记录：本场景明确规定，虚拟试验台QB-63476仅观察到QB-63476的表面结冰监控触发，不足以确定QB-63476的防冰分配支路受阻已经发生；其他未列出的原因仍可能产生相同末端指示。该逆推不是充分条件。",
+        "text_sha256": "a6d9e3d38b9f5fdc313e85ffe5b781af174e1b75b78cfd5de4826876941d2799",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 513,
+            "end": 618,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "65f23adfc30330a48baa7e1161e64a569a78e3abadf1f4436a47e1a1fabbef6b"
+          }
+        }
+      },
+      {
+        "chunk_id": "38492b404dd8ad0d6185774ac2d6b91000599dda3d470952b5af9021d67ed21e",
+        "document_id": "control2-11-0",
+        "version_id": "control2-11-0-65f23adfc30330a48baa",
+        "text": "本记录只陈述虚拟试验台QB-63476的一条设定规则：当QB-63476的受保护表面温度降低发生时，引起QB-63476的表面结冰监控触发。本条不陈述其他后续环节。",
+        "text_sha256": "9904b3b67ecbacb26078c43e70436e54e06f5ed7f42e05b62c7a017ecbe962f3",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 620,
+            "end": 702,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "65f23adfc30330a48baa7e1161e64a569a78e3abadf1f4436a47e1a1fabbef6b"
+          }
+        }
+      },
+      {
+        "chunk_id": "8542bdcd3e85c957635fe9de60e55529dd84709a8aed26dcfb783263226ccf60",
+        "document_id": "control2-11-0",
+        "version_id": "control2-11-0-65f23adfc30330a48baa",
+        "text": "独立备忘1：虚拟试验台QB-63476的防冰显示页面含“受保护表面温度降低”字样，但本记录仅登记界面刷新批次487；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "42ac5d23773309c92aa4a22ff1e85199d665fef9cc40b8be9dcb0a3f3a608f78",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 704,
+            "end": 779,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "65f23adfc30330a48baa7e1161e64a569a78e3abadf1f4436a47e1a1fabbef6b"
+          }
+        }
+      },
+      {
+        "chunk_id": "747c6277ee2f9fa08bd3152fe6e9a1a36fb8dd2bd224cd83c6911ef5ab26db1d",
+        "document_id": "control2-11-0",
+        "version_id": "control2-11-0-65f23adfc30330a48baa",
+        "text": "独立备忘2：虚拟试验台QB-63476的防冰显示页面含“表面结冰监控触发”字样，但本记录仅登记界面刷新批次297；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "1260addf62f17ae206ec90815612d3c0ab1bfdcda8bf4cc81c2528105b1e7e0b",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 781,
+            "end": 855,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "65f23adfc30330a48baa7e1161e64a569a78e3abadf1f4436a47e1a1fabbef6b"
+          }
+        }
+      },
+      {
+        "chunk_id": "372771eb79f7fde0c74b6241f68f91deb74f5e6533e50819b2784b9bd9c8dad4",
+        "document_id": "control2-11-0",
+        "version_id": "control2-11-0-65f23adfc30330a48baa",
+        "text": "参数记录：虚拟试验台QB-63476的防冰通道采样周期固定为48毫秒。该参数不提供故障因果链。",
+        "text_sha256": "4a0add9e730329d1d856c82e1f623511b1a07cd3bb172843c318dfebfc8c89d4",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 857,
+            "end": 904,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "65f23adfc30330a48baa7e1161e64a569a78e3abadf1f4436a47e1a1fabbef6b"
+          }
+        }
+      },
+      {
+        "chunk_id": "b953485bb7de3cfa8b1c8ce04dde8b58c638aa0e1efb2893b9c3888268881773",
+        "document_id": "control2-11-0",
+        "version_id": "control2-11-0-65f23adfc30330a48baa",
+        "text": "独立备忘4：虚拟试验台QB-63476的防冰显示页面含“表面结冰监控触发”字样，但本记录仅登记界面刷新批次729；不能据此建立因果或认定异常已发生。",
+        "text_sha256": "b42c752378a2e961109fa1e9d4f530337d2f2c57cbd0e07b0d569521a8a358b1",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 906,
+            "end": 980,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "65f23adfc30330a48baa7e1161e64a569a78e3abadf1f4436a47e1a1fabbef6b"
+          }
+        }
+      },
+      {
+        "chunk_id": "2dec9061ad9f451c06a2c7fe436fe75b56dde804dd78ac3ba9ca145922104d26",
+        "document_id": "control2-11-0",
+        "version_id": "control2-11-0-65f23adfc30330a48baa",
+        "text": "本记录只陈述虚拟试验台QB-63476的一条设定规则：当QB-63476的防冰热气分配减少发生时，引起QB-63476的受保护表面温度降低。本条不陈述其他后续环节。",
+        "text_sha256": "c16bf7dfef5f50ef7644408ad3aaa9e6fde32348b7b8ca221f03e29c76cbc625",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 982,
+            "end": 1064,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "65f23adfc30330a48baa7e1161e64a569a78e3abadf1f4436a47e1a1fabbef6b"
+          }
+        }
+      },
+      {
+        "chunk_id": "26d09aaab8de13a4e7232f55cd500c1f28f03beb2a053d2b4c926730e50ef3fe",
+        "document_id": "control2-11-0",
+        "version_id": "control2-11-0-65f23adfc30330a48baa",
+        "text": "触发记录：虚拟试验台QB-63476仅在稳态保持不少于2秒后才进入试验模式；转速适用范围由单独的适用记录规定。",
+        "text_sha256": "3653873cc7f0683fac1dfcdd525098be8a6bad398483ae0c54b094ce41f075c9",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 1066,
+            "end": 1121,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "65f23adfc30330a48baa7e1161e64a569a78e3abadf1f4436a47e1a1fabbef6b"
+          }
+        }
+      },
+      {
+        "chunk_id": "d5868e450b72d5b6364ad6ae93771a2d4f1ce2071048cafd22cf297cce71f4f9",
+        "document_id": "control2-11-0",
+        "version_id": "control2-11-0-65f23adfc30330a48baa",
+        "text": "本记录只陈述虚拟试验台QB-63476的一条设定规则：当QB-63476的防冰分配支路受阻发生时，引起QB-63476的防冰热气分配减少。本条不陈述其他后续环节。",
+        "text_sha256": "19429b6d7f6acd706f85facfc9d3c1cf140c7198778b69a91603d52637ed2c34",
+        "locator": {
+          "kind": "character_range",
+          "coordinates": {
+            "start": 1123,
+            "end": 1204,
+            "section_path": [],
+            "unit_type": "paragraph",
+            "oversized": false,
+            "hierarchy_level": "child",
+            "fallback_window": false,
+            "canonical_sha256": "65f23adfc30330a48baa7e1161e64a569a78e3abadf1f4436a47e1a1fabbef6b"
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "python": "3.13.14 (main, Aug  5 2026, 16:10:10) [MSC v.1944 64 bit (AMD64)]",
+  "dependencies": {
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "tokenizers": "0.23.3",
+    "pydantic": "2.13.5",
+    "pytest": "8.4.2"
+  },
+  "template_authoring": "AI-assisted templates and code, deterministic seeded expansion",
+  "external_llm_generation_calls": 0,
+  "origin": "synthetic_rule_generated"
+}

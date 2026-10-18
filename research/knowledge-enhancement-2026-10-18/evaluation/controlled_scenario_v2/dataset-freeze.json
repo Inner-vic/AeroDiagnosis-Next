@@ -1,0 +1,13 @@
+{
+  "before_rankings": true,
+  "hashes": {
+    "evaluation/controlled_scenario_v2/corpus.json": "1a824833653045e011b11a718eb9f59b907ab704e0716fa3c6676fe56f1aa77d",
+    "evaluation/controlled_scenario_v2/graph-freeze.json": "2cae503de678e7f721e74feb565f5abb3c3f12eb979b20781446cdecc0929735",
+    "evaluation/controlled_scenario_v2/graph.json": "fd271eb9c18070f6f4cccfe12ae8b4828048fe602b0af874ef7a25e46d275158",
+    "evaluation/controlled_scenario_v2/manifest-namespace-repair.json": "021b19d5ae5abd46f60b9a1e80e3b3776cea539ff47e1f3808173b96ecb154dc",
+    "evaluation/controlled_scenario_v2/protocol.json": "201dc70ff3ac11805474be59c17cf71d0b4693c6e51ed4e0c4e12d89d47ee771",
+    "evaluation/controlled_scenario_v2/questions-test.jsonl": "66122ad2e00a0a1f111b299f16c67c4426e857aad95d7708e79dca676b7ab87d",
+    "evaluation/controlled_scenario_v2/README.md": "61e4fa60a4ff4a2a436d71808262c3a08a8a12bdabfd5dde7bfaeca4fbefd0b9"
+  },
+  "strategy_sha256": "5c7a53f1603ac651038e355a6787425c4e1127debe54824c4f918108a79ab886"
+}

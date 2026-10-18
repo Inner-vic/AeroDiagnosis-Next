@@ -1,0 +1,38 @@
+{
+  "approved": true,
+  "expert_reviewed": false,
+  "predictions_seen": false,
+  "strategy_results_seen": false,
+  "coverage_complete": true,
+  "checked_questions": 216,
+  "checked_templates": 12,
+  "problems": [],
+  "limitations": [
+    "AI nonexpert review; no empirical engine-rule or expert validation.",
+    "12 shared construction templates and shared chain prefixes; cluster by template, not by individual questions.",
+    "Record-level synthetic evidence separation is not real-source cross-paragraph certification.",
+    "Graph covers only asserted causal subset (144/576 records); exact, condition and inverse-boundary evidence is outside graph.",
+    "Temporal before-ranking claims and strategy implementation hashes cannot independently be proven under the intentionally restricted read scope.",
+    "Legacy protocol primary text says all8/10-method metrics although methods enumerates12; reporting must include all12.",
+    "Initial builder contains obsolete dev/test split documentation; final v2 protocol and question file define all216 as test."
+  ],
+  "verification_file_sha256": {
+    "corpus.json": "1a824833653045e011b11a718eb9f59b907ab704e0716fa3c6676fe56f1aa77d",
+    "dataset-freeze.json": "fa5bc0b59443177bfba2de5aa7e7ee2a4c321c0983a9fae591bdc645566e827a",
+    "graph-freeze.json": "2cae503de678e7f721e74feb565f5abb3c3f12eb979b20781446cdecc0929735",
+    "graph.json": "fd271eb9c18070f6f4cccfe12ae8b4828048fe602b0af874ef7a25e46d275158",
+    "manifest-namespace-repair.json": "021b19d5ae5abd46f60b9a1e80e3b3776cea539ff47e1f3808173b96ecb154dc",
+    "protocol.json": "201dc70ff3ac11805474be59c17cf71d0b4693c6e51ed4e0c4e12d89d47ee771",
+    "questions-test.jsonl": "66122ad2e00a0a1f111b299f16c67c4426e857aad95d7708e79dca676b7ab87d",
+    "README.md": "61e4fa60a4ff4a2a436d71808262c3a08a8a12bdabfd5dde7bfaeca4fbefd0b9"
+  },
+  "checks": [
+    "576 source and chunk locators/hashes",
+    "216 question citations, necessary records, hidden bridges and support sets",
+    "144 graph edge and288 node citations",
+    "new versus old full mechanism state phrases, bench IDs, question IDs and question text",
+    "six balanced types and three wording variants",
+    "dataset and graph freeze hashes; namespace-only reconstruction of initial corpus"
+  ],
+  "method": "Independent AI nonexpert static data and construction-logic audit; no ranking, prediction, candidate, selected strategy or external model access"
+}

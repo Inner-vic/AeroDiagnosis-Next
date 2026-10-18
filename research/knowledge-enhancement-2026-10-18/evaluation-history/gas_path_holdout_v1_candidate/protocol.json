@@ -1,0 +1,52 @@
+{
+  "status": "ready_for_freeze_after_source_only_quality_adjudication",
+  "date": "2026-10-14",
+  "arms": [
+    "text_only",
+    "text_plus_graph"
+  ],
+  "top_k": 5,
+  "evidence_token_budget": 2048,
+  "case_route": false,
+  "ranking_policy": "grounded_source_rank@2",
+  "generation_model": "deepseek-flash",
+  "temperature": 0,
+  "paired_task_set": "same generation_queries.jsonl; only sample_id/query/query_language",
+  "gold_access": "scoring_only",
+  "stratification": [
+    "investigation",
+    "research",
+    "teaching",
+    "abstract_auxiliary"
+  ],
+  "statistical_units": [
+    "source_family",
+    "conservative_correlation_group"
+  ],
+  "test_tuning_prohibited": true,
+  "live_knowledge_ingested": false,
+  "paid_comparison_run": false,
+  "reference_code_sha256": {
+    "src/aerodiagnosis/application/graph_quality.py": "2f74d444894466c9f1e26e4a77016e5471b60b66c35f612d975775cb7e5930c0",
+    "src/aerodiagnosis/retrieval/chinese.py": "c8ab00cad0e8ce68ea13cccb4ec9f13d97076c46d1cc4e6b5cf443bd27092b51",
+    "src/aerodiagnosis/tools/diagnostic.py": "844ea0adc5bfacfe4e940d8c1ab61db37fdbb3a18a05d04cb3976645df47ae4d",
+    "src/aerodiagnosis/adapters/docling_structure.py": "dec7d9005c1ac5b0f45c3747c867255bc3a50a4594c3a84bb0aad8e0c1fd5d72",
+    "src/aerodiagnosis/adapters/llm/langextract_graph.py": "ad099236b3a02a7fc4658c24bdde44438c4e1938f15659a55dc3659f89f97728"
+  },
+  "isolated_knowledge_ingested": true,
+  "source_scope": "explicit source reference parsed from query only; same active document in both arms",
+  "primary_subset": "97 source_text",
+  "summary_auxiliary_subset": "23",
+  "interval_method": "paired whole-source cluster bootstrap",
+  "bootstrap_repetitions": 10000,
+  "bootstrap_seed": 20261014,
+  "question_weighted_effect": "strict correct proportion graph minus text",
+  "limitations": [
+    "answer-hidden AI source review, no domain expert",
+    "source scoped; not cross-document source discovery",
+    "captured text not original full PDF completeness",
+    "NASA/MIT equation and figure extraction not fully restored",
+    "single response per arm; same-provider blind AI judge"
+  ],
+  "judge_model": "deepseek-v4-pro"
+}

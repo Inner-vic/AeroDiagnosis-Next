@@ -1,0 +1,43 @@
+{
+  "version": "gas-path-v2-candidate@1",
+  "status": "candidate_not_frozen",
+  "scope": "gas-path evidence knowledge services",
+  "split_policy": "source-family, revision, event, repeated fact and derivative connected components; select coverage before approximately 30/70 dev/test",
+  "review_mode": "independent answer-hidden source reconstruction required before freeze",
+  "human_expert_reviewed": false,
+  "prior_exposure": "old labels and scope audit read by author; reused sources are not unseen knowledge",
+  "prohibited_ingestion_inputs": [
+    "tasks.jsonl",
+    "blind_queries.jsonl",
+    "review_ledger.jsonl",
+    "gold relations",
+    "scoring feedback"
+  ],
+  "metrics_before_pool_review": [
+    "specified evidence hit@5",
+    "specified evidence hit@10",
+    "all-required evidence hit",
+    "span-union coverage"
+  ],
+  "not_enabled": [
+    "complete relevance nDCG",
+    "extraction recall without exhaustive subset",
+    "real fault diagnostic accuracy"
+  ],
+  "main_comparisons": [
+    "R1 three chunkers times BM25/E5/RRF",
+    "R2 paired parent completion",
+    "R5 applicability conditions",
+    "R6 local graph expansion"
+  ],
+  "api_budget_cny": {
+    "pilot": 5,
+    "total": 100
+  },
+  "authoring_limits": [
+    "25 task candidates, not 25 established statistically independent observations",
+    "all candidates currently answerable; insufficient-evidence and new-source tasks remain to be authored",
+    "no human or expert confirmation",
+    "numeric tolerance and individual fact evidence require reviewer adjudication"
+  ]
+}
