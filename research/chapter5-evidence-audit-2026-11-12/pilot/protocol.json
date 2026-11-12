@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-12",
+  "status": "source-disjoint excerpt pilot, not final confirmatory test",
+  "source_clusters": 2,
+  "questions": 16,
+  "answerable_questions": 14,
+  "strict_cross_block_questions": 4,
+  "primary_K": 5,
+  "secondary_K": [
+    3,
+    10
+  ],
+  "primary_scope": "explicit document selection supplied equally to every method",
+  "secondary_scope": "all 16 excerpts",
+  "baseline": "BD",
+  "same_text_quota_control": "BD_matched50",
+  "methods": [
+    "B",
+    "D",
+    "G",
+    "BD",
+    "BG",
+    "DG",
+    "BDG",
+    "GATED",
+    "BD_matched50"
+  ],
+  "weights": {
+    "B": 1.0,
+    "D": 0.25,
+    "G": 0.25
+  },
+  "RRF_constant": 60,
+  "budget": {
+    "single": 150,
+    "dual_each": 75,
+    "triple_each": 50,
+    "gate_closed_text_each": 50,
+    "pool": 50,
+    "evidence": 10,
+    "max_per_document": 5,
+    "tokens": 4096
+  },
+  "primary_metrics": [
+    "ECR@5",
+    "EDR@5",
+    "paired gains/losses/ties",
+    "complete@5"
+  ],
+  "zero_denominator": "null, never zero or one",
+  "insufficient_questions": "reported as diagnostic cases, excluded from evidence-completeness metrics; no generation or refusal claim",
+  "annotation": "single AI authored and checked; not independent/expert gold",
+  "graph": "source-curated six assertions; measures retrieval mechanism conditional on graph availability, not automatic extraction accuracy or Neo4j throughput",
+  "translation": "AI translation, source excerpts retained; no provider calls",
+  "limits": [
+    "Only two source clusters",
+    "One piston-engine report is a domain-extension control, not turbine-generalization evidence",
+    "Indexed excerpts rather than full official report capture; summaries elsewhere may answer the question",
+    "Strict cross-block status is relative to the captured excerpt set only",
+    "Some exact-endpoint and some natural paraphrase queries retained; no post-result rewriting"
+  ],
+  "source_acquisition_failures": [
+    "official direct download HTTP403",
+    "ept webfetch department quota exhausted"
+  ],
+  "paid_calls": 0,
+  "post_result_tuning": false
+}

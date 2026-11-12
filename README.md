@@ -410,3 +410,6 @@ code/python/                # 旧版原型，仅用于迁移期行为参考
 
 知识集、活动知识库逻辑导出、自建与历史评测集、逐题实验结果及论文正文见 [研究资料包](research/knowledge-enhancement-2026-10-18/README.md)。包含来源与数据性质说明、离线复算脚本及文件哈希清单。
 
+
+
+研究更新（2026-11-12）：[第五章论证核对与真实来源摘录先导验证](research/chapter5-evidence-audit-2026-11-12/README.md)。

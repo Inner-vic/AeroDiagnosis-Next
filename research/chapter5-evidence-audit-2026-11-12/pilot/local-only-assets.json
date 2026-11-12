@@ -1,0 +1,28 @@
+{
+  "reason": "Full report and translation redistribution basis not established; source excerpts and Chinese translated corpus remain local, consistent with prior archive policy",
+  "files": {
+    "corpus.json": {
+      "sha256": "96f94d7e8ca89b1f5a0fddb69083a9a2a3c34c109fee2cab59e7b46f2f2e7fa0",
+      "bytes": 18854
+    },
+    "graph.json": {
+      "sha256": "8e5751b1f9b25acef93a4edc31059c9bad55dc02f56c49458828e4908b719666",
+      "bytes": 14473
+    },
+    "questions.json": {
+      "sha256": "bfefb851536b51dc560a288d18966b0968f68fb5f32ed230e0d0e8cf0363a840",
+      "bytes": 8177
+    },
+    "predictions.jsonl": {
+      "sha256": "18617322a78fd1193f8532b40a896cf03231ef1b8af64b8008a140e7b9b057bc",
+      "bytes": 192378
+    },
+    "build_pilot.py": {
+      "sha256": "eaaada71c83e2962e768decf6207c27ba70e79eb96fdb625c031d3a34bf26b52",
+      "bytes": 12057
+    }
+  },
+  "public_rankings": "Source quote field removed. Public-file SHA256 differs from original execution receipt. Use package MANIFEST for published bytes.",
+  "public_question_file": "Reference answer field omitted; question, type and sufficient evidence IDs preserved.",
+  "reproduction_limit": "Exact E5 retrieval requires local-only corpus and original code/model. Published support IDs and rankings suffice for completeness and paired ECR/EDR recomputation."
+}

@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-12",
+  "original": "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\docs\\upgrade\\chapter5-draft\\CHAPTER-5-DRAFT.md",
+  "original_sha256": "312b79eb9f9d212b0f7fa83b2eda653f4cfdb9ae8b46ff788ef532926f06e07b",
+  "revised_sha256": "a182d634b4c63d1e1627bf4d3930da8d6bef715eb881b089d13c3aa359367055",
+  "paid_calls": 0,
+  "original_preserved": true,
+  "new_independent_results_inserted": "source-disjoint excerpt pilot only; full-document confirmatory test pending",
+  "formulas": 19,
+  "tables": 12,
+  "figures": 7,
+  "references": 13
+}

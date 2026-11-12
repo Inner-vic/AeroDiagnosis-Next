@@ -1,0 +1,17 @@
+{
+  "before_any_retrieval": true,
+  "files": {
+    "D:\\zhaoweihao3\\Desktop\\Project\\AeroDiagnosis\\evaluation\\real_evidence_holdout_v1\\corpus.json": "96f94d7e8ca89b1f5a0fddb69083a9a2a3c34c109fee2cab59e7b46f2f2e7fa0",
+    "D:\\zhaoweihao3\\Desktop\\Project\\AeroDiagnosis\\evaluation\\real_evidence_holdout_v1\\graph.json": "8e5751b1f9b25acef93a4edc31059c9bad55dc02f56c49458828e4908b719666",
+    "D:\\zhaoweihao3\\Desktop\\Project\\AeroDiagnosis\\evaluation\\real_evidence_holdout_v1\\questions.json": "bfefb851536b51dc560a288d18966b0968f68fb5f32ed230e0d0e8cf0363a840",
+    "D:\\zhaoweihao3\\Desktop\\Project\\AeroDiagnosis\\evaluation\\real_evidence_holdout_v1\\sources.json": "14f143062d9426836c7f0397834d1c12ff84d2149f3602e767f9feae8467f7de",
+    "D:\\zhaoweihao3\\Desktop\\Project\\AeroDiagnosis\\evaluation\\real_evidence_holdout_v1\\protocol.json": "2a037035e18115e673f6cfe25b0a71ecdb21a51b7c2b6f2aa2761a6a03b9a608",
+    "D:\\zhaoweihao3\\Desktop\\Project\\AeroDiagnosis\\evaluation\\real_evidence_holdout_v1\\source-overlap-audit.json": "723f4a97c8888296fb74dd6643898d89f41211723b4b3d7361c3b4e4492ff1eb",
+    "D:\\zhaoweihao3\\Desktop\\Project\\AeroDiagnosis\\evaluation\\real_evidence_holdout_v1\\build_pilot.py": "eaaada71c83e2962e768decf6207c27ba70e79eb96fdb625c031d3a34bf26b52",
+    "D:\\zhaoweihao3\\Desktop\\Project\\AeroDiagnosis\\evaluation\\real_evidence_holdout_v1\\run_pilot.py": "12d62d88c5cf379d3d09052ba898eac52e9db9d343dccab495ea4139bc327755",
+    "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\src\\aerodiagnosis\\application\\knowledge_qa_live.py": "7d74602b3978256ceed813113c4126d7cba9103e1f27532b0a3e1a04d345e6c1",
+    "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\src\\aerodiagnosis\\retrieval\\atomic_path_fusion.py": "7e65258e4cf11b9be3004eddb91b6fb82b5b3014ea63563cc62e55e044978dd9",
+    "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\src\\aerodiagnosis\\retrieval\\graph_paths.py": "4725c052fe06063eb37909d42c2198ccea5f06866bd41fd9b00206e2da9cc165",
+    "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\src\\aerodiagnosis\\retrieval\\fusion_policy.py": "4f453f5d31cf360affa7167c9b14dd1be667fc1db5b05c4ff723851cd1226169"
+  }
+}

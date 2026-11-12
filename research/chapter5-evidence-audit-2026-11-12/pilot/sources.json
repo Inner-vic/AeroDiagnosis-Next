@@ -1,0 +1,20 @@
+[
+  {
+    "id": "a05p0137",
+    "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/2005/a05p0137/a05p0137.html",
+    "acquisition": "official-site indexed text retrieved through web search; direct HTML/PDF download returned 403",
+    "capture_completeness": "selected numbered findings and associated actions only; not full report",
+    "translation": "AI authored, single-agent nonexpert check",
+    "normalization": "No superscript flattened; punctuation standardized; not raw HTML bytes",
+    "domain": "turboprop"
+  },
+  {
+    "id": "a00o0214",
+    "url": "https://www.tsb.gc.ca/eng/rapports-reports/aviation/2000/a00o0214/a00o0214.html",
+    "acquisition": "official-site indexed text retrieved through web search; direct HTML/PDF download returned 403",
+    "capture_completeness": "selected numbered findings and associated actions only; not full report",
+    "translation": "AI authored, single-agent nonexpert check",
+    "normalization": "No superscript flattened; punctuation standardized; not raw HTML bytes",
+    "domain": "piston engine auxiliary-domain control"
+  }
+]

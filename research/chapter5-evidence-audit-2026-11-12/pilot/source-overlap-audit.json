@@ -1,0 +1,10 @@
+{
+  "checked_files": 720,
+  "historical_root": "D:\\codex\\worktrees\\knowledge-upgrade-integration\\AeroDiagnosis\\evaluation",
+  "report_id_matches": {
+    "a05p0137": [],
+    "a00o0214": []
+  },
+  "method": "case-insensitive report identifier scan; not semantic near-duplicate detection",
+  "expert_review": false
+}

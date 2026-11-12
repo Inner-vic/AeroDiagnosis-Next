@@ -1,0 +1,224 @@
+[
+  {
+    "sample_id": "a05p0137:q1",
+    "document_id": "a05p0137",
+    "kind": "fact",
+    "question": "该事件的塔轴怎样与高压压气机轴脱开？",
+    "acceptable_support_sets": [
+      [
+        "a05p0137:finding3"
+      ]
+    ],
+    "answerable": true,
+    "strict_cross_block": false,
+    "annotation_review": "single AI author; not independent expert review"
+  },
+  {
+    "sample_id": "a05p0137:q2",
+    "document_id": "a05p0137",
+    "kind": "fact",
+    "question": "附件齿轮箱驱动哪些供油部件？",
+    "acceptable_support_sets": [
+      [
+        "a05p0137:finding4"
+      ]
+    ],
+    "answerable": true,
+    "strict_cross_block": false,
+    "annotation_review": "single AI author; not independent expert review"
+  },
+  {
+    "sample_id": "a05p0137:q3",
+    "document_id": "a05p0137",
+    "kind": "fact",
+    "question": "飞行机组为何未提前获知磁屑探测器记录的故障？",
+    "acceptable_support_sets": [
+      [
+        "a05p0137:risk2"
+      ]
+    ],
+    "answerable": true,
+    "strict_cross_block": false,
+    "annotation_review": "single AI author; not independent expert review"
+  },
+  {
+    "sample_id": "a05p0137:q4",
+    "document_id": "a05p0137",
+    "kind": "paraphrase",
+    "question": "事件飞行后，为什么没有取得驾驶舱的录音信息？",
+    "acceptable_support_sets": [
+      [
+        "a05p0137:other1"
+      ]
+    ],
+    "answerable": true,
+    "strict_cross_block": false,
+    "annotation_review": "single AI author; not independent expert review"
+  },
+  {
+    "sample_id": "a05p0137:q5",
+    "document_id": "a05p0137",
+    "kind": "paraphrase",
+    "question": "对停用动力装置的保存环境采取了什么改进？",
+    "acceptable_support_sets": [
+      [
+        "a05p0137:action"
+      ]
+    ],
+    "answerable": true,
+    "strict_cross_block": false,
+    "annotation_review": "single AI author; not independent expert review"
+  },
+  {
+    "sample_id": "a05p0137:q6",
+    "document_id": "a05p0137",
+    "kind": "chain",
+    "question": "从腐蚀损伤到发动机空中停车的演变路径是什么？请补全轴承、传动和供油环节。",
+    "acceptable_support_sets": [
+      [
+        "a05p0137:finding2",
+        "a05p0137:finding3",
+        "a05p0137:finding4"
+      ]
+    ],
+    "answerable": true,
+    "strict_cross_block": true,
+    "annotation_review": "single AI author; not independent expert review"
+  },
+  {
+    "sample_id": "a05p0137:q7",
+    "document_id": "a05p0137",
+    "kind": "chain_paraphrase",
+    "question": "腐蚀以后，这台发动机经过哪些机械和燃油环节才停止工作？",
+    "acceptable_support_sets": [
+      [
+        "a05p0137:finding2",
+        "a05p0137:finding3",
+        "a05p0137:finding4"
+      ]
+    ],
+    "answerable": true,
+    "strict_cross_block": true,
+    "annotation_review": "single AI author; not independent expert review"
+  },
+  {
+    "sample_id": "a05p0137:q8",
+    "document_id": "a05p0137",
+    "kind": "insufficient",
+    "question": "仅凭上述报告，能否确定所有同型发动机都应每多少小时更换30号轴承？",
+    "acceptable_support_sets": [],
+    "answerable": false,
+    "strict_cross_block": false,
+    "annotation_review": "single AI author; not independent expert review"
+  },
+  {
+    "sample_id": "a00o0214:q1",
+    "document_id": "a00o0214",
+    "kind": "fact",
+    "question": "该事件中，活塞碎屑怎样影响发动机滑油供应？",
+    "acceptable_support_sets": [
+      [
+        "a00o0214:finding2"
+      ]
+    ],
+    "answerable": true,
+    "strict_cross_block": false,
+    "annotation_review": "single AI author; not independent expert review"
+  },
+  {
+    "sample_id": "a00o0214:q2",
+    "document_id": "a00o0214",
+    "kind": "fact",
+    "question": "事件后螺旋桨平衡检查改为多长间隔？",
+    "acceptable_support_sets": [
+      [
+        "a00o0214:action3"
+      ]
+    ],
+    "answerable": true,
+    "strict_cross_block": false,
+    "annotation_review": "single AI author; not independent expert review"
+  },
+  {
+    "sample_id": "a00o0214:q3",
+    "document_id": "a00o0214",
+    "kind": "fact",
+    "question": "滑油分析结果延迟造成了什么后果？",
+    "acceptable_support_sets": [
+      [
+        "a00o0214:finding3"
+      ]
+    ],
+    "answerable": true,
+    "strict_cross_block": false,
+    "annotation_review": "single AI author; not independent expert review"
+  },
+  {
+    "sample_id": "a00o0214:q4",
+    "document_id": "a00o0214",
+    "kind": "paraphrase",
+    "question": "厂家建议在哪里维护螺旋桨？",
+    "acceptable_support_sets": [
+      [
+        "a00o0214:manufacturer"
+      ]
+    ],
+    "answerable": true,
+    "strict_cross_block": false,
+    "annotation_review": "single AI author; not independent expert review"
+  },
+  {
+    "sample_id": "a00o0214:q5",
+    "document_id": "a00o0214",
+    "kind": "paraphrase",
+    "question": "为避免进一步缺陷，运营人预防性换了多少台动力装置？",
+    "acceptable_support_sets": [
+      [
+        "a00o0214:action1"
+      ]
+    ],
+    "answerable": true,
+    "strict_cross_block": false,
+    "annotation_review": "single AI author; not independent expert review"
+  },
+  {
+    "sample_id": "a00o0214:q6",
+    "document_id": "a00o0214",
+    "kind": "chain",
+    "question": "从螺旋桨不平衡到发动机失效的作用路径是什么？请补齐振动、活塞和回油环节。",
+    "acceptable_support_sets": [
+      [
+        "a00o0214:finding1",
+        "a00o0214:finding2"
+      ]
+    ],
+    "answerable": true,
+    "strict_cross_block": true,
+    "annotation_review": "single AI author; not independent expert review"
+  },
+  {
+    "sample_id": "a00o0214:q7",
+    "document_id": "a00o0214",
+    "kind": "chain_paraphrase",
+    "question": "桨叶旋转失衡后，振动经过什么零件损伤和润滑变化使动力装置失效？",
+    "acceptable_support_sets": [
+      [
+        "a00o0214:finding1",
+        "a00o0214:finding2"
+      ]
+    ],
+    "answerable": true,
+    "strict_cross_block": true,
+    "annotation_review": "single AI author; not independent expert review"
+  },
+  {
+    "sample_id": "a00o0214:q8",
+    "document_id": "a00o0214",
+    "kind": "insufficient",
+    "question": "这份报告是否给出了适用于所有航空发动机的螺旋桨允许振动上限数值？",
+    "acceptable_support_sets": [],
+    "answerable": false,
+    "strict_cross_block": false,
+    "annotation_review": "single AI author; not independent expert review"
+  }
+]
