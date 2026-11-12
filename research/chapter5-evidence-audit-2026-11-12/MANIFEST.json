@@ -148,8 +148,8 @@
     },
     {
       "path": "revision-audit.json",
-      "bytes": 586,
-      "sha256": "9a5f052c511f5baa1dd4b130f7673e63d19cd46647e4dc0892affcc484cf7f8e"
+      "bytes": 731,
+      "sha256": "765b9dce035e00cf070b06f7e8d51f3e616775ef82654af798410ff1851fd23e"
     },
     {
       "path": "verify_public_pilot.py",
